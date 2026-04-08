@@ -1,0 +1,1315 @@
+{
+  "id": "dolmen_de_la_frebouch_ere",
+  "name": "Dolmen de la Frébouchère",
+  "name_google": "Dolmen de la Frébouchère",
+  "category": "Patrimoine",
+  "subcategory": "Villages & Sites",
+  "commune": "Le Bernard",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.448283599999996,
+  "lng": -1.4689952,
+  "address": "85560 Le Bernard",
+  "phone": "+33251333069",
+  "website": "https://www.lebernard.fr/tourisme-loisirs/les-megalithes/",
+  "rating": 4.7,
+  "reviews_count": 116,
+  "rating_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 4,
+    "4": 24,
+    "5": 88
+  },
+  "opening_hours": null,
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 33
+        }
+      ],
+      "monday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 93
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 33
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 33
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 46
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 46
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 93
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 60
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 86
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 86
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 53
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [
+    "images/dolmen_de_la_frebouch_ere/photo_1.jpg",
+    "images/dolmen_de_la_frebouch_ere/photo_2.jpg",
+    "images/dolmen_de_la_frebouch_ere/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Toujours impressionnant. Respect . Tant d'imagination, d'inventivité pour en arriver là.",
+      "rating": 5,
+      "date": "2026-02-09 11:45:00 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Un lieu qui vaut le coup de venir voir, ce dolmen est impressionnant 7,20 Longueur /3.5 M de H seulement 2 pierres aux dessus.\nIl y a pas heures de visite, les panneaux indique très bien sont emplacement quand vous entrée dans la commune \" Le Bernard \".",
+      "rating": 5,
+      "date": "2023-11-03 21:20:33 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très beau site à visiter. Dans un rayon de 1 kilomètre, vous pourrez voir des dolmens datant d'environ 4000 ans ( avant JC)...curiosité de Vendée à le bernard...!..je recommande",
+      "rating": 5,
+      "date": "2025-03-09 13:25:26 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Un petit détour intéressant à faire entre deux activités. Si vous appréciez les témoignages du passé, cette mégalithe ne vous laissera pas de marbre , c'est l'un des dolmens des plus imposants et mieux préserver que j'ai pu voir. Très bel endroit paisible et peu fréquenté.",
+      "rating": 5,
+      "date": "2024-08-19 20:00:10 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très joli dolmen dont l'emplacement est bien aménagé.",
+      "rating": 5,
+      "date": "2024-09-13 21:09:17 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "valeur": 4,
+    "vélo": 3,
+    "menhirs": 2,
+    "champs": 45,
+    "PMR": 2,
+    "pique-nique": 2,
+    "parking": 2
+  },
+  "booking_url": null,
+  "cid": "1906995295458140950",
+  "place_id": "ChIJc1TEjWAXBEgRFqMfFh4Cdxo",
+  "wikipedia_description": null,
+  "description_short": "L'un des dolmens les plus imposants de Vendée : 7,20 m de long, 3,50 m de haut, couvert de seulement 2 pierres colossales. Un voyage 6000 ans en arrière !",
+  "description_long": "Le dolmen de la Frébouchère, niché près du bourg de Le Bernard, est l'un des mégalithes les plus impressionnants de Vendée. Datant d'environ 4000 ans avant J.-C., il se distingue par ses dimensions remarquables : 7,20 mètres de longueur et 3,50 mètres de hauteur, couverts par seulement deux pierres de couverture. Le site est parfaitement aménagé, avec une signalétique claire et un parking à proximité. Dans un rayon d'un kilomètre, plusieurs autres dolmens complètent la visite, faisant de ce secteur un véritable sanctuaire mégalithique vendéen accessible à tous, y compris aux personnes à mobilité réduite.",
+  "tags": [
+    "mégalithe",
+    "dolmen",
+    "préhistoire",
+    "patrimoine",
+    "Vendée"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 30,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Combinez la visite avec les autres dolmens du secteur dans un rayon d'1 km — idéal à vélo pour les familles ! Prévoyez une belle journée pour profiter pleinement du site en plein air.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-04-06T15:02:19.642732+00:00",
+  "enriched_at": "2026-04-06T15:02:19.642732+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bernard_fr%C3%A9bouch%C3%A8re_02.jpg",
+    "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2018/05/randonnee-frebouchere-le-bernard-avrille-800x600.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/le-bernard-dolmen-frebouchere.JPG"
+  ]
+}

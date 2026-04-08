@@ -1,0 +1,1442 @@
+{
+  "id": "plage_de_l_aubraie",
+  "name": "Plage de l'Aubraie",
+  "category": "Nature & Grand Air",
+  "subcategory": "Plages & Côte",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.5134848,
+  "lng": -1.8183638,
+  "address": "85100 Les Sables-d'Olonne",
+  "phone": null,
+  "website": "https://www.lessablesdolonne.fr/plages/plage-des-graviers-laubraie-pnapdl085v511n53/",
+  "rating": 4.7,
+  "reviews_count": 170,
+  "rating_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 10,
+    "4": 38,
+    "5": 122
+  },
+  "opening_hours": null,
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 32
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 39
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 69
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 89
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 78
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 17
+        }
+      ],
+      "monday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 32
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 15
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 32
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 69
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 41
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 13
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 39
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 39
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 41
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 41
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 39
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 32
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 15
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 41
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 17
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 34
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 34
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 45
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 41
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 34
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 19
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 39
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 71
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 58
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 10
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [
+    "images/plage_de_l_aubraie/photo_1.jpg",
+    "images/plage_de_l_aubraie/photo_2.jpg",
+    "images/plage_de_l_aubraie/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Très belle plage... Hiver comme été.\nJe suis du coin donc la seule chose est qu'il faut parfois se méfier avant de se mettre a l'eau 😉\nMais si vous voulez vous poser et admirer un paysage vibrant, allez y!\nA l'arrière, une balade dans les dunes et vous vous retrouvez dans un paysage quasi lunaire 😊",
+      "rating": 5,
+      "date": "2026-01-03 13:49:54 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très belle plage au cadre naturel et préservé. L’eau est superbe, mais attention : baignade interdite à cause des courants dangereux. Ce n’est pas du sable fin mais plutôt des petits cailloux doux sous les pieds, ce qui change un peu. Mention spéciale pour le coucher de soleil, absolument magnifique !",
+      "rating": 5,
+      "date": "2025-08-04 20:20:27 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Magnifique plage sauvage avec peu de monde même en plein mois d août. Attention le sable est très grossier mais cela ne gêne en rien à la beauté du lieu",
+      "rating": 4,
+      "date": "2025-08-05 06:45:43 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très belle plage que j’ai pu visiter plusieurs fois.\nLa plage est propre le paysage est magnifique et peu de monde seul point négatif très rocheux avec beaucoup de cailloux donc ça fait mal aux pieds.\nDepuis le camping accès direct sinon accès en voiture avec place de parking et piste cyclable.",
+      "rating": 5,
+      "date": "2024-07-27 15:56:17 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très jolie plage découverte au hasard d une sortie à bicyclette",
+      "rating": 5,
+      "date": "2025-09-30 16:48:30 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "baignade": 8,
+    "coucher de soleil": 26,
+    "vagues": 6,
+    "parking": 6,
+    "pieds": 9,
+    "laisse": 4,
+    "piste cyclable": 3,
+    "foule": 3,
+    "crabes": 2,
+    "dunes": 5
+  },
+  "booking_url": null,
+  "cid": "13619986452917069817",
+  "place_id": "ChIJZQDPKwBdBEgR-SfBY4TpA70",
+  "wikipedia_description": null,
+  "description_short": "Plage sauvage et préservée aux airs de bout du monde. Un cadre naturel vibrant, idéal pour les couchers de soleil et les balades loin des foules.",
+  "description_long": "La plage de l'Aubraie est un véritable écrin naturel vendéen, peu fréquenté même en plein été. Son caractère sauvage séduit les amateurs de paysages authentiques : galets doux, dunes et horizons dégagés offrent un cadre visuel saisissant. Accessible à vélo via une piste cyclable, elle se prête à merveille aux pique-niques et aux contemplations face à l'océan. Attention toutefois : la baignade y est déconseillée, voire interdite, en raison de courants dangereux. On y observe crabes et petite faune littorale, et les couchers de soleil y sont tout simplement spectaculaires.",
+  "tags": [
+    "plage sauvage",
+    "coucher de soleil",
+    "nature préservée",
+    "balade vélo",
+    "hors des sentiers battus"
+  ],
+  "audience": [
+    "couple",
+    "solo",
+    "famille"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Venez en fin d'après-midi pour admirer un coucher de soleil époustouflant et évitez la baignade — profitez plutôt d'un pique-nique face aux vagues. En famille, apportez de bonnes chaussures pour marcher confortablement sur les galets.",
+  "specific": {
+    "beach_type": "sable",
+    "supervised": false,
+    "showers": false,
+    "wave_profile": "sportif",
+    "naturist": false,
+    "beach_bar": false,
+    "water_activity": null,
+    "supervised_start": null,
+    "supervised_end": null,
+    "supervised_hours": null,
+    "tide_sensitive": null,
+    "dogs_allowed_beach": null,
+    "facilities_kids_club": null,
+    "facilities_playground": null,
+    "facilities_beach_games": null,
+    "facilities_sun_loungers": null,
+    "facilities_beach_shop": null
+  },
+  "specific_status": {
+    "beach_type": "auto",
+    "supervised": "auto",
+    "supervised_start": "empty",
+    "supervised_end": "empty",
+    "supervised_hours": "empty",
+    "showers": "manual",
+    "wave_profile": "auto",
+    "naturist": "auto",
+    "beach_bar": "manual",
+    "water_activity": "empty",
+    "tide_sensitive": "empty",
+    "dogs_allowed_beach": "empty",
+    "facilities_kids_club": "empty",
+    "facilities_playground": "empty",
+    "facilities_beach_games": "empty",
+    "facilities_sun_loungers": "empty",
+    "facilities_beach_shop": "empty"
+  },
+  "scraped_at": "2026-04-01T08:45:59.534927+00:00",
+  "enriched_at": "2026-04-01T08:45:59.534927+00:00",
+  "status": "complete",
+  "parking_main": {
+    "nom": "Parking sans nom",
+    "lat": 46.513239,
+    "lng": -1.8180866,
+    "distance_meters": 35,
+    "is_free": true,
+    "disabled_spaces": null
+  },
+  "parking_others": [
+    {
+      "nom": "Parking sans nom",
+      "lat": 46.513138,
+      "lng": -1.8158416,
+      "distance_meters": 197,
+      "is_free": null
+    }
+  ],
+  "name_google": null,
+  "affluence_profile": null,
+  "price_range": "gratuit",
+  "price_adult": 0,
+  "price_child": 0,
+  "seating_available": null,
+  "_labels": {
+    "id": "Identifiant unique (slug)",
+    "name": "Nom du lieu",
+    "name_google": "Nom tel qu'affiché sur Google",
+    "category": "Catégorie principale (ex: Nature & Grand Air)",
+    "subcategory": "Sous-catégorie (ex: Plages & Côte)",
+    "commune": "Commune du lieu",
+    "zone": "Zone géographique : nord · centre · sud",
+    "poi_format": "Format : poi (lieu précis) ou destination (zone à explorer)",
+    "lat": "Latitude GPS",
+    "lng": "Longitude GPS",
+    "address": "Adresse postale complète",
+    "phone": "Numéro de téléphone",
+    "website": "Site web officiel",
+    "rating": "Note Google (ex: 4.7)",
+    "reviews_count": "Nombre d'avis Google",
+    "rating_distribution": "Répartition des notes (1 à 5 étoiles)",
+    "affluence_profile": "Niveau d'affluence : calme · animé · très fréquenté",
+    "popular_times": "Affluence heure par heure par jour de la semaine",
+    "photos": "URLs des photos",
+    "opening_hours": "Horaires d'ouverture par jour",
+    "booking_url": "URL de réservation",
+    "reviews": "Avis Google (texte, note, date)",
+    "place_topics": "Sujets fréquents dans les avis",
+    "cid": "Identifiant Google CID",
+    "place_id": "Identifiant Google Place",
+    "wikipedia_description": "Résumé Wikipedia FR",
+    "description_short": "Accroche courte (2 lignes, pour la card swipe)",
+    "description_long": "Description complète (80-120 mots, page détail)",
+    "tags": "Mots-clés contextuels (ex: randonnée, plage, famille)",
+    "conseil_planly": "Conseil personnalisé selon le profil utilisateur",
+    "audience": "Publics cibles : famille · couple · solo · ados",
+    "age_min": "Âge minimum recommandé",
+    "weather_ok": "Météo compatible : sunny · cloudy · rainy",
+    "duration_min": "Durée estimée en minutes",
+    "accessibility": "Accessibilité (fauteuil, marche difficile, poussette)",
+    "dogs_allowed": "Animaux acceptés",
+    "notoriety": "Notoriété : incontournable · pepite",
+    "price_range": "Gamme de prix : gratuit · eco · equilibre · plaisir",
+    "price_adult": "Prix adulte en €",
+    "price_child": "Prix enfant en €",
+    "is_indoor": "Activité en intérieur",
+    "has_height": "Implique hauteur/vertige",
+    "animals_captive": "Animaux en captivité",
+    "seating_available": "Bancs, tables, espace assis disponible",
+    "rainy_day_activity": "Activité possible par temps de pluie",
+    "parking_main": "Parking principal le plus proche",
+    "parking_others": "Autres parkings à proximité",
+    "scraped_at": "Date du scraping",
+    "enriched_at": "Date de l'enrichissement IA",
+    "status": "Statut : complete · partial · empty",
+    "specific.beach_type": "Type de plage : sable · galets · rochers · mixte",
+    "specific.water_activity": "Activités nautiques : baignade · surf · paddle · kayak",
+    "specific.supervised": "Plage surveillée (oui/non)",
+    "specific.supervised_start": "Date début surveillance (ex: 01-07)",
+    "specific.supervised_end": "Date fin surveillance (ex: 31-08)",
+    "specific.supervised_hours": "Horaires surveillance (ex: 10h-19h)",
+    "specific.showers": "Douches disponibles sur la plage",
+    "specific.tide_sensitive": "Dépend des marées",
+    "specific.wave_profile": "Profil des vagues : calme · modéré · fort",
+    "specific.dogs_allowed_beach": "Chiens autorisés sur la plage",
+    "specific.naturist": "Plage naturiste",
+    "specific.beach_bar": "Bar ou buvette sur place",
+    "specific.facilities_kids_club": "Club enfants",
+    "specific.facilities_playground": "Jeux enfants fixes",
+    "specific.facilities_beach_games": "Pétanque, volley, ping-pong...",
+    "specific.facilities_sun_loungers": "Transats/parasols à louer",
+    "specific.facilities_beach_shop": "Location matériel nautique"
+  },
+  "photos_original_urls": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoAOz4Az_a5QC8Ujm9hjOzhzcHQj1srX9IsayQsPY2dj4-tqKi6OHD2NFar6RUhfDAywPbRVa8MbyIBbK-TFF4B3rWog1Rj3iXXjeNtvy-PK1GInm8emzGmR1iEQTy9tepAERRW=w408-h307-k-no",
+    "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PlagedesGraviers-Aubraie---ALamoureux.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/2023-LS-PlagedesGraviers---SBourcierVendeeExpansion.jpg"
+  ]
+}

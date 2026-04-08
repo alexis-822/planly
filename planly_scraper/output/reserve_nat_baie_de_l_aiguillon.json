@@ -1,0 +1,1424 @@
+{
+  "id": "reserve_nat_baie_de_l_aiguillon",
+  "name": "Réserve Nat. Baie de l'Aiguillon",
+  "name_google": "Réserve Naturelle Nationale de la Baie de l'Aiguillon",
+  "category": "Nature & Grand Air",
+  "subcategory": "Forêts & Nature",
+  "commune": "L'Aiguillon-sur-Mer",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.330201699999996,
+  "lng": -1.1012231,
+  "address": "La Prée Mizotière, 85450 Sainte-Radégonde-des-Noyers",
+  "phone": "02 51 56 90 01",
+  "website": "http://www.reserve-baie-aiguillon.fr/",
+  "rating": 4.5,
+  "reviews_count": 461,
+  "rating_distribution": {
+    "1": 9,
+    "2": 3,
+    "3": 26,
+    "4": 148,
+    "5": 275
+  },
+  "opening_hours": null,
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 31
+        }
+      ],
+      "monday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 81
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 31
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 12
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 81
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 93
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 81
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 81
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 81
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 56
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 81
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 75
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 68
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 87
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 75
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 81
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 43
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 75
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 81
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 87
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 87
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 87
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 68
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [
+    "images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg",
+    "images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg",
+    "images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Un endroit magnifique calme et reposant pour se promener et méditer le paysage avec un coucher de soleil exceptionnel . Il y a un grand parking et table d'orientation. Un site remarquable par les couleurs des paysages quelque soit la saison .",
+      "rating": 5,
+      "date": "2025-08-10 07:51:00 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Espace naturel assez protégé presque à l’identique. Le mouvement des marées le rend vivant !",
+      "rating": 5,
+      "date": "2025-08-30 18:27:43 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Un peu déçu par ce lieu où nous comptions y voir des oiseaux. Reste une petite balade au bord de mer, facile et sympa à faire.",
+      "rating": 3,
+      "date": "2025-06-03 12:30:08 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Lieu magnifique et encore sauvage.\nSi vous venez en marée descendante, vous pourrez admirer le repas des oiseaux avec la faune marine échouée sur le sable.\nLieu non adapté à la baignade.",
+      "rating": 5,
+      "date": "2018-04-30 13:23:53 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Superbe coin qui mérite le détour et un peu d'infrastructures informatives",
+      "rating": 4,
+      "date": "2024-08-20 14:12:29 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "oiseaux": 46,
+    "sauvage": 15,
+    "calme": 14,
+    "marée": 11,
+    "ballades": 7,
+    "observation": 6,
+    "pêche": 4,
+    "vue": 4,
+    "magique": 4,
+    "huitres": 9
+  },
+  "booking_url": null,
+  "cid": "16859763053808213517",
+  "place_id": "ChIJ00j1BSWwBkgRDV5-qyvp-ek",
+  "wikipedia_description": null,
+  "description_short": "Un sanctuaire sauvage où ciel et mer se rejoignent, bercé par les marées et habité par des milliers d'oiseaux migrateurs.",
+  "description_long": "La Réserve Naturelle de la Baie de l'Aiguillon est l'un des sites ornithologiques les plus importants de la façade atlantique française. Vasières, marais salants et prés salés forment un écosystème riche et préservé, rythmé par le ballet incessant des marées. À marée descendante, les oiseaux limicoles et anatidés se rassemblent par milliers pour se nourrir, offrant un spectacle naturel époustouflant. Un chemin de randonnée accessible longe la baie et permet d'observer ce milieu sauvage en toute quiétude, au lever comme au coucher du soleil. Un lieu encore authentique, loin de l'agitation touristique.",
+  "tags": [
+    "oiseaux",
+    "nature sauvage",
+    "marée",
+    "randonnée",
+    "ornithologie"
+  ],
+  "audience": [
+    "couple",
+    "solo",
+    "famille"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Consultez les horaires des marées avant votre visite : à marée descendante, les oiseaux sont au rendez-vous en nombre. Apportez des jumelles pour profiter pleinement du spectacle !",
+  "specific": {
+    "terrain_type": "plat, chemin de digue, vasières et prés salés",
+    "difficulty": "facile",
+    "stroller_ok": true,
+    "bike_allowed": true,
+    "shade_level": "très faible",
+    "surface_ha": null,
+    "wildlife_observation": null,
+    "wildlife_description": null,
+    "guided_tour": null,
+    "guided_tour_info": null,
+    "free_access": null,
+    "picnic_area": null,
+    "trails": null,
+    "trail_link": null,
+    "tide_sensitive": null,
+    "ferry_pricing": null
+  },
+  "specific_status": {
+    "terrain_type": "manual",
+    "difficulty": "manual",
+    "stroller_ok": "manual",
+    "bike_allowed": "manual",
+    "shade_level": "manual",
+    "surface_ha": "empty",
+    "wildlife_observation": "empty",
+    "wildlife_description": "empty",
+    "guided_tour": "empty",
+    "guided_tour_info": "empty",
+    "free_access": "empty",
+    "picnic_area": "empty",
+    "trails": "empty",
+    "trail_link": "empty",
+    "tide_sensitive": "empty",
+    "ferry_pricing": "empty"
+  },
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-04-03T09:29:18.975870+00:00",
+  "enriched_at": "2026-04-03T09:29:18.975870+00:00",
+  "status": "complete",
+  "affluence_profile": null,
+  "price_range": "gratuit",
+  "price_adult": 0,
+  "price_child": 0,
+  "seating_available": null,
+  "_labels": {
+    "id": "Identifiant unique (slug)",
+    "name": "Nom du lieu",
+    "name_google": "Nom tel qu'affiché sur Google",
+    "category": "Catégorie principale (ex: Nature & Grand Air)",
+    "subcategory": "Sous-catégorie (ex: Plages & Côte)",
+    "commune": "Commune du lieu",
+    "zone": "Zone géographique : nord · centre · sud",
+    "poi_format": "Format : poi (lieu précis) ou destination (zone à explorer)",
+    "lat": "Latitude GPS",
+    "lng": "Longitude GPS",
+    "address": "Adresse postale complète",
+    "phone": "Numéro de téléphone",
+    "website": "Site web officiel",
+    "rating": "Note Google (ex: 4.7)",
+    "reviews_count": "Nombre d'avis Google",
+    "rating_distribution": "Répartition des notes (1 à 5 étoiles)",
+    "affluence_profile": "Niveau d'affluence : calme · animé · très fréquenté",
+    "popular_times": "Affluence heure par heure par jour de la semaine",
+    "photos": "URLs des photos",
+    "opening_hours": "Horaires d'ouverture par jour",
+    "booking_url": "URL de réservation",
+    "reviews": "Avis Google (texte, note, date)",
+    "place_topics": "Sujets fréquents dans les avis",
+    "cid": "Identifiant Google CID",
+    "place_id": "Identifiant Google Place",
+    "wikipedia_description": "Résumé Wikipedia FR",
+    "description_short": "Accroche courte (2 lignes, pour la card swipe)",
+    "description_long": "Description complète (80-120 mots, page détail)",
+    "tags": "Mots-clés contextuels (ex: randonnée, plage, famille)",
+    "conseil_planly": "Conseil personnalisé selon le profil utilisateur",
+    "audience": "Publics cibles : famille · couple · solo · ados",
+    "age_min": "Âge minimum recommandé",
+    "weather_ok": "Météo compatible : sunny · cloudy · rainy",
+    "duration_min": "Durée estimée en minutes",
+    "accessibility": "Accessibilité (fauteuil, marche difficile, poussette)",
+    "dogs_allowed": "Animaux acceptés",
+    "notoriety": "Notoriété : incontournable · pepite",
+    "price_range": "Gamme de prix : gratuit · eco · equilibre · plaisir",
+    "price_adult": "Prix adulte en €",
+    "price_child": "Prix enfant en €",
+    "is_indoor": "Activité en intérieur",
+    "has_height": "Implique hauteur/vertige",
+    "animals_captive": "Animaux en captivité",
+    "seating_available": "Bancs, tables, espace assis disponible",
+    "rainy_day_activity": "Activité possible par temps de pluie",
+    "parking_main": "Parking principal le plus proche",
+    "parking_others": "Autres parkings à proximité",
+    "scraped_at": "Date du scraping",
+    "enriched_at": "Date de l'enrichissement IA",
+    "status": "Statut : complete · partial · empty",
+    "specific.terrain_type": "Type de terrain : forêt · marais · lac · dune · bocage · île · réserve",
+    "specific.surface_ha": "Superficie en hectares",
+    "specific.difficulty": "Difficulté du parcours : facile · modéré · difficile",
+    "specific.stroller_ok": "Accessible en poussette",
+    "specific.bike_allowed": "Vélo autorisé",
+    "specific.wildlife_observation": "Observation faune/flore notable",
+    "specific.wildlife_description": "Espèces observables (ex: hérons, aigrettes, avocettes)",
+    "specific.guided_tour": "Visite guidée disponible",
+    "specific.guided_tour_info": "Horaires, prix, contact visite guidée",
+    "specific.free_access": "Accès libre et gratuit",
+    "specific.shade_level": "Niveau d'ombre : ombragé · semi-ombragé · exposé",
+    "specific.picnic_area": "Aires pique-nique disponibles",
+    "specific.trails": "Sentiers : [{nom, km, difficulté, dénivelé, lien_gpx}]",
+    "specific.trail_link": "URL Komoot/AllTrails",
+    "specific.tide_sensitive": "Accès dépendant des marées",
+    "specific.ferry_pricing": "Tarifs ferry (spécifique Île d'Yeu)"
+  },
+  "photos_original_urls": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoAAg3DmNc8XF4l1nVQWXLQas5psoMyx7pOinUPDrPzgF4MUuU4zu-mH2iFcMxO2UNEDVGP18SBEArqBq8kVABORjqUqII7Pf3uTNpl2gyNIAE5oew_4H0vHVfqRaWJOKQtz3rk=w408-h306-k-no",
+    "https://www.guide-charente-maritime.com/_bibli/annonces/12704/hd/pointe-de-l-aiguillon-panoramique.jpg",
+    "https://www.lpo.fr/var/site/storage/images/_aliases/reference/8/7/2/4/54278-1-fre-FR/Carte%20points%20d'observations.jpg"
+  ]
+}

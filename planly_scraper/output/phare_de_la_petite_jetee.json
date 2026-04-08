@@ -1,0 +1,1411 @@
+{
+  "id": "phare_de_la_petite_jetee",
+  "name": "Phare de la Petite Jetée",
+  "name_google": "La Petite Jetée et le Phare des Sables (Vert)",
+  "category": "Nature & Grand Air",
+  "subcategory": "Points de vue",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.491704299999995,
+  "lng": -1.7927727,
+  "address": "Prom. Wilson, 85100 Les Sables-d'Olonne",
+  "phone": null,
+  "website": "https://www.lessablesdolonne.fr/sit/la-petite-jetee-et-le-phare-vert-pcupdl085v50h3j7/",
+  "rating": 4.7,
+  "reviews_count": 7,
+  "rating_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 2,
+    "5": 5
+  },
+  "opening_hours": null,
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 93
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "monday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 33
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 93
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 33
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 53
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 86
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 40
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 40
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 33
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [
+    "images/phare_de_la_petite_jetee/photo_1.jpg",
+    "images/phare_de_la_petite_jetee/photo_2.jpg",
+    "images/phare_de_la_petite_jetee/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "La petite jetée a été construite au XVIIIe siècle\nelle protège le port de l'ensablement\nau 19e siècle avec la grande jetée elle servait de chemin du halage\naujourd'hui elle est le lieu de rendez-vous de nombreux pêcheurs également de jeunes plongeur à marée haute",
+      "rating": 5,
+      "date": "2018-09-01 19:08:20 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très bel endroit avec une belle vue sur le Remblai et la Grande Plage.",
+      "rating": 5,
+      "date": "2025-07-12 08:31:44 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Belle promenade\nFacile pour la poussette\nBelle vue sur la ville",
+      "rating": 4,
+      "date": "2025-10-23 12:22:18 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Joli spot mais simple",
+      "rating": 4,
+      "date": "2025-06-07 10:32:45 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": null,
+      "rating": 5,
+      "date": "2018-09-05 12:07:03 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "11947358466803184082",
+  "place_id": "ChIJq8IkBk9nBEgR0jEPyjmLzaU",
+  "wikipedia_description": null,
+  "description_short": "Un phare historique au bout de la jetée des Sables-d'Olonne, offrant une vue panoramique sur le Remblai et la Grande Plage.",
+  "description_long": "Érigée au XVIIIe siècle, la Petite Jetée des Sables-d'Olonne est bien plus qu'un simple ouvrage portuaire : elle incarne des siècles d'histoire maritime vendéenne. Protégeant le port de l'ensablement, elle fut au XIXe siècle un chemin de halage aux côtés de la Grande Jetée. Aujourd'hui, la promenade le long de cette digue est devenue un incontournable de la ville. Au bout du chemin, le phare offre une vue imprenable sur le Remblai, la Grande Plage et l'horizon atlantique. Accessible aux poussettes et accessible à pied, c'est l'endroit idéal pour une balade en famille ou en amoureux.",
+  "tags": [
+    "phare",
+    "jetée",
+    "vue panoramique",
+    "patrimoine maritime",
+    "promenade bord de mer"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 30,
+  "notoriety": "pépite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Venez en fin de journée pour admirer le coucher de soleil sur l'Atlantique depuis le phare : un moment magique en famille ou en amoureux. Pensez à vous couvrir, la brise marine peut être vive même en été !",
+  "specific": {
+    "terrain_type": "promenade bitumée, jetée",
+    "difficulty": "très facile",
+    "best_time": "coucher de soleil",
+    "panoramic": true,
+    "view_type": null,
+    "altitude_m": null,
+    "access_type": null,
+    "walk_distance_m": null,
+    "tripod_useful": null,
+    "tide_sensitive": null
+  },
+  "specific_status": {
+    "terrain_type": "manual",
+    "difficulty": "manual",
+    "best_time": "manual",
+    "panoramic": "manual",
+    "view_type": "empty",
+    "altitude_m": "empty",
+    "access_type": "empty",
+    "walk_distance_m": "empty",
+    "tripod_useful": "empty",
+    "tide_sensitive": "empty"
+  },
+  "parking_main": {
+    "nom": "Parking sans nom",
+    "lat": 46.4911267,
+    "lng": -1.794865,
+    "distance_meters": 173,
+    "is_free": null,
+    "disabled_spaces": null
+  },
+  "parking_others": [
+    {
+      "nom": "Parking sans nom",
+      "lat": 46.4912003,
+      "lng": -1.7949755,
+      "distance_meters": 178,
+      "is_free": null
+    }
+  ],
+  "scraped_at": "2026-04-03T09:44:05.268480+00:00",
+  "enriched_at": "2026-04-03T09:44:05.268480+00:00",
+  "status": "complete",
+  "affluence_profile": null,
+  "price_range": "gratuit",
+  "price_adult": 0,
+  "price_child": 0,
+  "seating_available": null,
+  "_labels": {
+    "id": "Identifiant unique (slug)",
+    "name": "Nom du lieu",
+    "name_google": "Nom tel qu'affiché sur Google",
+    "category": "Catégorie principale (ex: Nature & Grand Air)",
+    "subcategory": "Sous-catégorie (ex: Plages & Côte)",
+    "commune": "Commune du lieu",
+    "zone": "Zone géographique : nord · centre · sud",
+    "poi_format": "Format : poi (lieu précis) ou destination (zone à explorer)",
+    "lat": "Latitude GPS",
+    "lng": "Longitude GPS",
+    "address": "Adresse postale complète",
+    "phone": "Numéro de téléphone",
+    "website": "Site web officiel",
+    "rating": "Note Google (ex: 4.7)",
+    "reviews_count": "Nombre d'avis Google",
+    "rating_distribution": "Répartition des notes (1 à 5 étoiles)",
+    "affluence_profile": "Niveau d'affluence : calme · animé · très fréquenté",
+    "popular_times": "Affluence heure par heure par jour de la semaine",
+    "photos": "URLs des photos",
+    "opening_hours": "Horaires d'ouverture par jour",
+    "booking_url": "URL de réservation",
+    "reviews": "Avis Google (texte, note, date)",
+    "place_topics": "Sujets fréquents dans les avis",
+    "cid": "Identifiant Google CID",
+    "place_id": "Identifiant Google Place",
+    "wikipedia_description": "Résumé Wikipedia FR",
+    "description_short": "Accroche courte (2 lignes, pour la card swipe)",
+    "description_long": "Description complète (80-120 mots, page détail)",
+    "tags": "Mots-clés contextuels (ex: randonnée, plage, famille)",
+    "conseil_planly": "Conseil personnalisé selon le profil utilisateur",
+    "audience": "Publics cibles : famille · couple · solo · ados",
+    "age_min": "Âge minimum recommandé",
+    "weather_ok": "Météo compatible : sunny · cloudy · rainy",
+    "duration_min": "Durée estimée en minutes",
+    "accessibility": "Accessibilité (fauteuil, marche difficile, poussette)",
+    "dogs_allowed": "Animaux acceptés",
+    "notoriety": "Notoriété : incontournable · pepite",
+    "price_range": "Gamme de prix : gratuit · eco · equilibre · plaisir",
+    "price_adult": "Prix adulte en €",
+    "price_child": "Prix enfant en €",
+    "is_indoor": "Activité en intérieur",
+    "has_height": "Implique hauteur/vertige",
+    "animals_captive": "Animaux en captivité",
+    "seating_available": "Bancs, tables, espace assis disponible",
+    "rainy_day_activity": "Activité possible par temps de pluie",
+    "parking_main": "Parking principal le plus proche",
+    "parking_others": "Autres parkings à proximité",
+    "scraped_at": "Date du scraping",
+    "enriched_at": "Date de l'enrichissement IA",
+    "status": "Statut : complete · partial · empty",
+    "specific.view_type": "Type de vue : mer · campagne · ville · coucher_soleil · port",
+    "specific.terrain_type": "Type de terrain : plat · falaise · colline · rocheux",
+    "specific.altitude_m": "Hauteur en mètres si notable",
+    "specific.access_type": "Accès : pied · voiture · vélo · tous",
+    "specific.walk_distance_m": "Distance à pied depuis le parking (m)",
+    "specific.difficulty": "Difficulté d'accès : facile · modéré · difficile",
+    "specific.best_time": "Meilleur moment : lever · journée · coucher · nuit",
+    "specific.panoramic": "Vue panoramique (oui/non)",
+    "specific.tripod_useful": "Trépied utile pour photographes",
+    "specific.tide_sensitive": "Accès dépendant des marées"
+  },
+  "photos_original_urls": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo2QRU3vJu9FYEc-SIuAeILiW9XdBJkugDbn2gLDbhjBcAYwF_lZh9NrcRn0J2Mprv2Z4BWXFB_thSmtD5Bttriwctj7D_OYfXJkSgZ_kTgQ5x1wqhggXJF5WLtERt1ZUeJB8rrOX_fIEs=w408-h544-k-no",
+    "https://ville.lessablesdolonne.fr/media/grandeplage2013_15__073214000_1518_27092013.jpg",
+    "https://static.actu.fr/uploads/2024/05/ace420b5a7266eb3520b5a726c9a52v-960x640.jpg"
+  ]
+}

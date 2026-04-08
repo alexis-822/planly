@@ -1,0 +1,114 @@
+{
+  "id": "l_ile_penotte",
+  "name": "L'Île Penotte",
+  "name_google": "L'Île Penotte",
+  "category": "Patrimoine",
+  "subcategory": "Villages & Sites",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4953424,
+  "lng": -1.7840546,
+  "address": "5-7 Rue d'Assas, 85100 Les Sables-d'Olonne",
+  "phone": null,
+  "website": "https://www.lessablesdolonne.fr/plages/lile-penotte-pcupdl085v50h3j4/",
+  "rating": 4.7,
+  "reviews_count": 12463,
+  "rating_distribution": {
+    "1": 73,
+    "2": 63,
+    "3": 459,
+    "4": 2853,
+    "5": 9015
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/l_ile_penotte/photo_1.jpg",
+    "images/l_ile_penotte/photo_2.jpg",
+    "images/l_ile_penotte/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Un véritable coup de cœur !\nSe promener dans le quartier de L’Île Penotte est une expérience à part entière. J’ai adoré me perdre dans ces petites ruelles pleines de charme, où chaque façade décorée de coquillages raconte une histoire. Le travail est minutieux, poétique et vraiment impressionnant. On sent toute la passion et la créativité qui se dégagent de ce lieu unique.\nLa balade est très agréable, calme et dépaysante, tout près de la plage, ce qui rend la visite encore plus plaisante. C’est un endroit qui invite à prendre son temps, à observer chaque détail et à profiter de l’instant. Une parenthèse artistique et authentique que je recommande vivement à tous ceux qui passent aux Sables-d’Olonne.",
+      "rating": 5,
+      "date": "2026-01-19 08:05:50 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très jolie découverte ! Ce petit quartier, accessible gratuitement, mérite vraiment le détour. On peut y admirer de nombreux dessins réalisés en coquillages sur les murs, tous très bien faits et originaux. L’endroit a beaucoup de charme et vaut la balade. À noter toutefois que des habitants vivent dans les maisons environnantes : il est donc important de respecter les lieux en évitant de faire trop de bruit.",
+      "rating": 5,
+      "date": "2025-09-08 06:51:23 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Île Penotte 🐚🎨 — un quartier incontournable !\nSuperbe balade dans ce quartier plein de charme, célèbre pour ses magnifiques mosaïques en coquillages 🌊✨\nChaque ruelle est une œuvre d’art à ciel ouvert, colorée et poétique 😍\nIncontournable si vous êtes de passage aux Sables-d’Olonne 🏖️👏",
+      "rating": 5,
+      "date": "2025-10-30 14:37:42 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Merci pour cette belle parenthèse ! Un quartier magnifique, avec de superbes fresques en coquillages sur les façades. Bravo pour cette créativité",
+      "rating": 5,
+      "date": "2026-02-08 12:42:13 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Des œuvres d'art à chaques coins de rue.\nOn est émerveillé à chaque changement de rue, très bien fait.\nSi vous cherchez un endroit calme et où vous voulez être surpris par chaques oeuvres d'art, c'est pour vous !\nVous retrouverez de belles créations ainsi qu'un tout petit magasin de rue (Avec une dame très gentille et accueillante) où vous pourrez acheter des magnétique et autres objets.\nJe vous invite a y aller pour de belles photos.",
+      "rating": 5,
+      "date": "2025-09-05 15:38:26 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "16127349148363554146",
+  "place_id": "ChIJMYbztPNnBEgRYn3opJraz98",
+  "wikipedia_description": null,
+  "description_short": "Un musée à ciel ouvert où les façades s'habillent de mosaïques en coquillages. Un quartier unique à ne pas manquer aux Sables-d'Olonne !",
+  "description_long": "Niché dans le cœur des Sables-d'Olonne, le quartier de l'Île Penotte est un véritable bijou artistique et populaire. Ses ruelles pittoresques dévoilent des façades entièrement recouvertes de mosaïques réalisées en coquillages, fruits d'un travail patient et créatif des habitants. Chaque coin de rue réserve une nouvelle surprise : scènes marines, animaux, paysages... Tout est prétexte à l'émerveillement. La balade, accessible gratuitement, séduit petits et grands. Un quartier vivant, authentique et hors du commun, symbole de l'identité maritime et artistique sablaise.",
+  "tags": [
+    "mosaïques",
+    "coquillages",
+    "balade",
+    "art urbain",
+    "quartier historique"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 45,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Venez tôt le matin pour profiter des ruelles au calme et photographier les mosaïques sans trop de monde. En famille, lancez un jeu de piste en comptant les animaux cachés sur les façades !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-04-06T15:02:19.637358+00:00",
+  "enriched_at": "2026-04-06T15:02:19.637358+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqj-U9S08ABF6FslHNE2yI19wftjs9WeDfWd0B-NR5y-nr4C_3qbt0Zndmk0wRAxZy4g7Zve-PnT9H1BoNhKv9PYgQVywu7EvCjs_bidDOfBRdoc0_jadTrbueKZN-QIHDJ52OS=w408-h306-k-no",
+    "https://www.lessablesdolonne.com/media/7183106625_358eb8559c_b1min__044721900_1740_13012017.jpg",
+    "https://www.lessablesdolonne.fr/wp-content/uploads/sit/41282930fc28bacfb864e753a835b433-2024-LS-IlePenotte-Famille---ALamoureux-470x300.jpg"
+  ]
+}

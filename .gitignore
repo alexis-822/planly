@@ -1,0 +1,19 @@
+# Secrets
+.env
+~$*
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Images (trop lourd pour git, 40 Mo)
+planly_scraper/images/
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
+
+# Claude
+.claude/

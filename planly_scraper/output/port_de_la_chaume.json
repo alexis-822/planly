@@ -1,0 +1,115 @@
+{
+  "id": "port_de_la_chaume",
+  "name": "Port de La Chaume",
+  "name_google": "Port des Sables-d'Olonne",
+  "category": "Patrimoine",
+  "subcategory": "Villages & Sites",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.5003031,
+  "lng": -1.7955303999999999,
+  "address": "1 Quai Alain Gerbaud, 85100 Les Sables-d'Olonne",
+  "phone": "+33251325116",
+  "website": "http://www.portolona.fr/",
+  "rating": 4.5,
+  "reviews_count": 5226,
+  "rating_distribution": {
+    "1": 63,
+    "2": 72,
+    "3": 376,
+    "4": 1617,
+    "5": 3098
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/port_de_la_chaume/photo_1.jpg",
+    "images/port_de_la_chaume/photo_2.jpg",
+    "images/port_de_la_chaume/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Parking gratuit au port Olona et navette à 1,10 € par personne pour traverser les Sables-d’Olonne. Pratique avec les vélos ! Magnifique feu d’artifice ce 17 août 2025 pour clôturer la Grande Bordée.",
+      "rating": 5,
+      "date": "2025-08-17 22:48:22 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Notre visite au port des Sables d'Olonne lors du retour des bateaux du Vendée Globe a été un moment inoubliable. Nous avons eu la chance d'être présents lors du retour des navigateurs du Vendée Globe et de profiter de l'ambiance particulièrement animée dans le port. Les commerces et tous les services sont tout proches. Le cadre est magnifique, offrant des vues spectaculaires sur la jetée, le célèbre chenal et l'activité portuaire. Le passeur, un petit bac qui permet de traverser le chenal, est très pratique ! Ensuite, il faut faire preuve de patience pour voir les skippers à leur retour et accéder aux pontons pour admirer les bateaux lorsque cela est autorisé, mais l'attente en vaut vraiment la peine.",
+      "rating": 5,
+      "date": "2025-03-06 21:23:29 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Super moment que l'arrivée des bateaux et pas que les premiers. Nous sommes allés voir pour la a3 ème place. Stationnement compliqué, bénévoles investis et sérieux . Le reportage sur la course actuelle est passionnant ( à  voir sur écran dans l'espace Vendée globe). De belles émotions et chapeau aux participants, à tous!",
+      "rating": 5,
+      "date": "2025-02-03 22:43:06 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Sur les conseils d'une personne nous nous sommes garés sur le parking gratuit près du port Olona et avons utilisé la navette maritime pour 1.10€ par personne pour joindre l autre côté des Sables d olonne c'était tres agréable. De plus vous pouvez embarquer les vélos",
+      "rating": 5,
+      "date": "2025-08-02 11:26:58 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Super , j ai pu assister à l arrivée de Yohan richaume Vendée Globe 10 eme édition\nUne visite week end aux sables d olonne , ville très sympa, grande plages , beaucoup de commerces et très commerçants très agréable\nUn site vraiment magnifique",
+      "rating": 5,
+      "date": "2025-01-16 06:50:16 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "11839075614039228854",
+  "place_id": "ChIJfehhlvRnBEgRtkHMe4vYTKQ",
+  "wikipedia_description": null,
+  "description_short": "Le cœur battant de la voile vendéenne, berceau du Vendée Globe et port historique de La Chaume face aux Sables-d'Olonne.",
+  "description_long": "Le port de La Chaume, niché à l'entrée du chenal des Sables-d'Olonne, est un lieu chargé d'histoire maritime et d'émotions sportives. C'est ici que les skippers du Vendée Globe franchissent la ligne d'arrivée après leur tour du monde en solitaire, sous les acclamations de milliers de spectateurs. Le quai Alain Gerbaud rend hommage aux grands navigateurs qui ont marqué l'histoire de la voile. Entre bateaux de pêche colorés, odeurs iodées et animations nautiques, le port offre une atmosphère authentique et vivante. Une navette maritime à prix modique permet de rejoindre facilement le centre des Sables-d'Olonne, parfaite pour explorer les deux rives.",
+  "tags": [
+    "port",
+    "voile",
+    "vendée globe",
+    "maritime",
+    "patrimoine"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Garez-vous gratuitement au parking du port Olona et empruntez la navette maritime à 1,10 € par personne pour rejoindre les Sables-d'Olonne — idéal avec poussette ou vélo ! Si vous visitez pendant le Vendée Globe, arrivez tôt pour profiter des meilleurs spots sur le quai.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-04-06T15:02:19.632468+00:00",
+  "enriched_at": "2026-04-06T15:02:19.632468+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoh3mm2ruOuf8Zjbq0te8tfgSvZ5M1s00MNVPGeVwyOeDNKkHDzY8xUbQjBTpv4LM2Zf1mYyqe7gxFhCo0kSGW3igtLZcAuTAyHyuvQAik32P6_BkrAIkPWqEfJiFsCZLrZ3HAm=w426-h240-k-no",
+    "https://www.lessablesdolonne.fr/wp-content/uploads/sit/527c3f30db2e49a75d686af0bc1be9b5-2024-LS-LaChaume-Quai-Chenal-Bateau---ALamoureux-470x300.jpg",
+    "https://www.lessablesdolonne.com/media/copyright_alamoureux_les_sables_olonne_14min__041655200_1057_09062016.jpg"
+  ]
+}

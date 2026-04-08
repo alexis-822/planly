@@ -1,0 +1,76 @@
+{
+  "id": "vouvant",
+  "name": "Vouvant",
+  "name_google": "Vouvant",
+  "category": "Patrimoine",
+  "subcategory": "Villages & Sites",
+  "commune": "Vouvant",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.571937,
+  "lng": -0.769589,
+  "address": "85120",
+  "phone": null,
+  "website": null,
+  "rating": null,
+  "reviews_count": null,
+  "rating_distribution": null,
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/vouvant/photo_1.jpg",
+    "images/vouvant/photo_2.webp",
+    "images/vouvant/photo_3.webp"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "291950376679746592",
+  "place_id": "ChIJj1-LllPmBkgRIKwJHlI3DQQ",
+  "wikipedia_description": "Vouvant (prononcé [vu.vɑ̃]) est une commune française située dans le département de la Vendée, dans la région Pays de la Loire.\nAncienne place forte médiévale d'importance, elle possède encore une grande partie de ses fortifications. Ses habitants sont appelés les Vouvantaises et Vouvantais.\nLe village est classé parmi Les Plus Beaux Villages de France depuis 1988.",
+  "description_short": "Village médiéval classé parmi Les Plus Beaux Villages de France, avec ses remparts et son atmosphère hors du temps.",
+  "description_long": "Vouvant est un joyau médiéval niché au cœur du bocage vendéen, classé parmi Les Plus Beaux Villages de France depuis 1988. Ancienne place forte, le village a conservé une grande partie de ses fortifications, ses ruelles pavées et son architecture d'antan. Dominé par la tour Mélusine, vestige imposant d'un château du XIe siècle, Vouvant offre un voyage dans le temps saisissant. Flânez entre les maisons de pierre, découvrez l'église romane Notre-Dame et profitez des panoramas sur les vallées boisées environnantes. Un village à vivre lentement, au fil des saisons.",
+  "tags": [
+    "village_medieval",
+    "patrimoine",
+    "plus_beaux_villages",
+    "fortifications",
+    "bocage_vendeen"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Partez à la découverte de Vouvant en fin de matinée pour profiter des ruelles encore tranquilles, et montez jusqu'à la tour Mélusine pour un panorama exceptionnel sur le bocage vendéen.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-04-06T15:02:19.650727+00:00",
+  "enriched_at": "2026-04-06T15:02:19.650727+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoOXogyewZ4N3hRcywWBSEAauf99ksjKjUIPdWLbM5MMcJhgMnhvG7BNqYluYIHxgm-kl8HQxDa_RyHhZ0xxGXXynTqgUCjmCjEfd8huPjS_qozLxDkvrGPPIXMzEkRdlSGObK3cw=w408-h306-k-no",
+    "https://media.les-plus-beaux-villages-de-france.org/photos/s1611/vouvant-vue-du-ciel.webp",
+    "https://media.les-plus-beaux-villages-de-france.org/photos/s1611/vouvant-vue-depuis-la-riviere.webp"
+  ]
+}

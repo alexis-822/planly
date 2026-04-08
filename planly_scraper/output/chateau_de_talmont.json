@@ -1,0 +1,114 @@
+{
+  "id": "chateau_de_talmont",
+  "name": "Château de Talmont",
+  "name_google": "Château de Talmont",
+  "category": "Patrimoine",
+  "subcategory": "Villages & Sites",
+  "commune": "Talmont-Saint-Hilaire",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.467509799999995,
+  "lng": -1.6184505999999999,
+  "address": "8 Rue du Château, 85440 Talmont-Saint-Hilaire",
+  "phone": "+33251902743",
+  "website": "http://www.chateaudetalmont.com/",
+  "rating": 4.4,
+  "reviews_count": 5087,
+  "rating_distribution": {
+    "1": 96,
+    "2": 100,
+    "3": 386,
+    "4": 1516,
+    "5": 2989
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/chateau_de_talmont/photo_1.jpg",
+    "images/chateau_de_talmont/photo_2.png",
+    "images/chateau_de_talmont/photo_3.webp"
+  ],
+  "reviews": [
+    {
+      "text": "Une belle journée en famille ! Le chateau en lui même est assez rapide à visiter, mais à l'intérieur se trouve un village médiévale avec un atelier de costume, des stands de calligraphie, tir à l'arbalète, de tissage, animaux de la ferme, etc qui vont ravir petits et grands ! Deux spectacles sont proposés : chevalerie et fauconnerie qu'il faut absolument voir ! Les chiens sont autorisés ce qui est un vrai plus (sauf pour le spectacle de fauconnerie où il faut rester à l'arrière). Et en plus il y a des tarifs étudiants !",
+      "rating": 5,
+      "date": "2025-09-13 10:29:19 +00:00",
+      "owner_response": "Merci pour ce beau commentaire, nous sommes ravis que vous ayez appréciés notre programmation estivale !"
+    },
+    {
+      "text": "Spectacle de fauconnerie au top, sauf si les oiseaux ne sont pas décidés 😅 mais la présentatrice est là. Le château est agréable à visiter , il y a une fermette pour les enfants, des activités à faire ( tissage, tir à l'arbalète...). On peut également porter des costumes d'époque qui nous sont prêtés le temps de la visite. Beaucoup de lieux pour pique-niquer et une cabane pour se restaurer.\nC'est une visite qui mérite d'être faite.",
+      "rating": 5,
+      "date": "2025-08-08 16:27:27 +00:00",
+      "owner_response": "Merci pour ce bel avis ! En effet, les rapaces peuvent avoir leur petit caractère, ce qui fait la beauté du spectacle !  <br>Nous sommes ravis que cela vous ait plu, <br>L'équipe du château"
+    },
+    {
+      "text": "Très joli endroit chargé d histoire & 2 spectacles très agréables et enchanteurs. (Chevaliers et oiseaux) Ainsi que des ateliers gratuits. Le personnel est très gentil et bravo aux acteurs. Un beau moment le temps d' un après midi",
+      "rating": 4,
+      "date": "2025-08-20 15:17:51 +00:00",
+      "owner_response": "Ravis que la visite du château vous ait conquis, merci pour ce bel avis !"
+    },
+    {
+      "text": "Très bonne surprise ! Spectacle qui nous tiens attentif, celui des oiseaux également.\nLes ateliers sont intéressants et disponibles. Les enfants sont ravis de se déguiser ou de tirer à l'arbalète.\nJe n'ai pas vu le temps passer de 12h a 19h.\nPetit bémol,  je n'ai pas pu accéder au souterrain  car l'accès y est interdit pdt ́la préparation et le spectacle.",
+      "rating": 5,
+      "date": "2025-08-30 12:04:25 +00:00",
+      "owner_response": "Merci Lionel pour cette belle note! <br>L'équipe du château <br>"
+    },
+    {
+      "text": "Un joli château avec de belles animations (tir à l'arbalète,  écriture à la plume et tissage) , tout ça compris dans le prix. Plus les 2 spectacles ( chevaliers et oiseaux) avec des personnes très sympathiques. Le clou, c'est le petit coin restauration très abordable.  Trop bien",
+      "rating": 5,
+      "date": "2025-07-23 08:27:30 +00:00",
+      "owner_response": "Nous sommes ravis que votre expérience au château vous ait plu !"
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "10438256166207473266",
+  "place_id": "ChIJMXpfad9qBEgRcsZTza0i3JA",
+  "wikipedia_description": "Le château de Talmont est un château médiéval en ruines qui se trouve sur la commune de Talmont-Saint-Hilaire, dans le département de la Vendée.",
+  "description_short": "Un château médiéval en ruines plein de vie, avec spectacles de chevaliers, fauconnerie et ateliers pour petits et grands !",
+  "description_long": "Plongez au cœur du Moyen Âge au Château de Talmont, forteresse médiévale en ruines perchée sur les hauteurs de Talmont-Saint-Hilaire en Vendée. À l'intérieur de ses murailles, un véritable village médiéval prend vie : essayez le tir à l'arbalète, la calligraphie à la plume ou le tissage, tous inclus dans le prix d'entrée. Deux spectacles époustouflants sont au programme : un combat de chevaliers et un show de fauconnerie avec des rapaces en vol libre. Une fermette pour les enfants complète cette expérience immersive et inoubliable en famille.",
+  "tags": [
+    "château médiéval",
+    "fauconnerie",
+    "chevaliers",
+    "ateliers médiévaux",
+    "famille"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 3,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 120,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": true,
+  "rainy_day_activity": false,
+  "conseil_planly": "Arrivez en avance pour profiter des ateliers avant les spectacles, et ne ratez surtout pas le show de fauconnerie en fin de matinée — les enfants en seront bouche bée !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-04-06T15:02:19.639796+00:00",
+  "enriched_at": "2026-04-06T15:02:19.639796+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://lh3.googleusercontent.com/gps-cs-s/AHVAweopy41dXyspWtdo4nxYdxp0rtPX9gTkB6i28tT70_7FzJClYL5yjMCsqF5RCH4Esgfc8ypeSqcT0WML4sBn95E9svpAZRSnrL98V8BOvzwlL2GPAw4hjl-2fcJzc2ZlsDblvSid3Q=w408-h272-k-no",
+    "https://chateaudetalmont.com/wp-content/uploads/2022/07/chateau-talmon-home.png",
+    "https://chateaudetalmont.com/wp-content/uploads/2022/09/chateau-talmont.webp"
+  ]
+}
