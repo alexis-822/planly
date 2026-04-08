@@ -300,7 +300,8 @@ body{
 /* PILLS */
 .pills-row{padding:10px 0 0 0;pointer-events:none;}
 .pills-row>*{pointer-events:auto;}
-.pills-scroll{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 16px 0 10px;}
+.pills-scroll{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-left:10px;}
+.pills-scroll::after{content:'';flex-shrink:0;width:16px;}
 .pills-scroll::-webkit-scrollbar{display:none;}
 .pill{display:inline-flex;align-items:center;padding:6px 12px;border-radius:20px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:500;color:#fff;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:all .18s;}
 .pill.active,.pill.tous{background:#fff;border-color:#fff;color:#1a1a18;font-weight:500;padding:6px 14px;}
@@ -360,7 +361,7 @@ body{
 /* ── INFOS BAS DE CARD ── */
 .card-body{
   position:absolute;
-  bottom:68px; /* au-dessus de la barre d'actions */
+  bottom:85px; /* au-dessus de la barre d'actions */
   left:0;right:0;
   z-index:6;
   padding:0 18px 12px;
@@ -409,7 +410,7 @@ body{
   bottom:0;left:0;right:0;
   display:flex;align-items:center;justify-content:center;
   gap:22px;
-  padding:12px 24px 16px;
+  padding:6px 24px 14px;
   background:transparent;
   z-index:7;
 }
