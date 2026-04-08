@@ -299,7 +299,7 @@ body{
 .hdr-btn:active{background:rgba(255,255,255,.15);}
 
 /* PILLS */
-.pills-row{padding:10px 0 0 0;pointer-events:none;}
+.pills-row{padding:10px 0 0 0;pointer-events:none;margin-left:-16px;margin-right:-16px;}
 .pills-row>*{pointer-events:auto;}
 .pills-scroll{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-left:10px;}
 .pills-scroll::after{content:'';flex-shrink:0;width:16px;}
@@ -430,13 +430,33 @@ body{
 .t-btn.info svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;}
 .t-btn.like{width:48px;height:48px;background:rgba(34,197,94,.15);border:2px solid #22c55e;}
 .t-btn.like svg{width:20px;height:20px;stroke:none;fill:#22c55e;}
+.t-btn.like.liked{background:rgba(239,68,68,.25);border-color:#ef4444;}
+.t-btn.like.liked svg{fill:#ef4444;}
 .t-lbl{font-size:9px;color:rgba(255,255,255,.5);font-weight:500;}
+.t-lbl.liked-lbl{color:#ef4444;font-weight:600;}
 
 /* ── LISTE ── */
 /* ── LISTE style Airbnb ── */
 .list-zone{position:absolute;inset:0;overflow-y:auto;padding:120px 16px 80px;scrollbar-width:none;display:none;background:var(--bg);}
 .list-zone.active{display:block;z-index:8;}
 .list-zone::-webkit-scrollbar{display:none;}
+
+/* ── VUE ACTIVITÉS ── */
+.activites-view{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg);min-height:0;}
+.activites-view.open{display:flex;}
+.act-header{flex-shrink:0;padding:calc(16px + env(safe-area-inset-top,0px)) 16px 12px;background:#fff;border-bottom:1px solid var(--br);}
+.act-header-row{display:flex;align-items:center;justify-content:space-between;}
+.act-title{font-family:'Fraunces',serif;font-size:22px;font-weight:300;color:var(--tx);}
+.act-badge{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;padding:0 7px;border-radius:12px;background:var(--brand);color:#fff;font-size:12px;font-weight:600;}
+.act-scroll{flex:1;overflow-y:auto;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));scrollbar-width:none;}
+.act-scroll::-webkit-scrollbar{display:none;}
+.act-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;padding:40px 20px;}
+.act-empty-icon{font-size:48px;opacity:.3;}
+.act-empty-title{font-family:'Fraunces',serif;font-size:20px;font-weight:300;color:var(--tx);text-align:center;}
+.act-empty-sub{font-size:13px;color:var(--txm);text-align:center;line-height:1.5;}
+.act-subtitle{font-size:13px;color:var(--txm);margin-top:4px;line-height:1.4;}
+.act-clear-btn{font-size:12px;color:#ef4444;font-weight:500;cursor:pointer;padding:4px 8px;border-radius:8px;border:1px solid rgba(239,68,68,.3);background:rgba(239,68,68,.07);-webkit-tap-highlight-color:transparent;}
+.lcard-remove{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;border:none;line-height:1;}
 .lcard{border-radius:14px;overflow:hidden;margin-bottom:16px;cursor:pointer;background:var(--wh);box-shadow:0 2px 10px rgba(0,0,0,.08);}
 .lcard img{width:100%;height:180px;object-fit:cover;display:block;}
 .lcard-overlay{display:none;}
@@ -1034,9 +1054,9 @@ body{
               <div class="t-btn info"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></div>
               <div class="t-lbl">Détail</div>
             </div>
-            <div class="t-act" onclick="doSwipeBtn('like');event.stopPropagation()">
-              <div class="t-btn like"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div>
-              <div class="t-lbl">J'aime</div>
+            <div class="t-act" onclick="toggleLikeCard();event.stopPropagation()">
+              <div class="t-btn like" id="card-like-btn"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div>
+              <div class="t-lbl" id="card-like-lbl">J'aime</div>
             </div>
           </div>
         </div>
@@ -1071,13 +1091,28 @@ body{
     <div class="header-dots" id="header-dots"></div>
   </div>
 
+  <!-- VUE ACTIVITÉS -->
+  <div class="activites-view" id="activites-view">
+    <div class="act-header">
+      <div class="act-header-row">
+        <div class="act-title">Mes activités</div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div class="act-badge" id="act-badge">0</div>
+          <div class="act-clear-btn" id="act-clear-btn" onclick="clearLikes()" style="display:none">Vider</div>
+        </div>
+      </div>
+      <div class="act-subtitle">Les endroits que tu as aimés et ajoutés à ton séjour.</div>
+    </div>
+    <div class="act-scroll" id="act-scroll"></div>
+  </div>
+
   <!-- NAV BOTTOM -->
   <div class="bottom-nav">
-    <div class="nav-item active">
+    <div class="nav-item active" id="nav-explorer" onclick="navShow('explorer')">
       <div class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></div>
       <div class="nav-lbl">Explorer</div>
     </div>
-    <div class="nav-item">
+    <div class="nav-item" id="nav-activites" onclick="navShow('activites')">
       <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div>
       <div class="nav-lbl">Activités</div>
     </div>
@@ -4854,6 +4889,29 @@ function updateCard(idx){
   document.getElementById('card-desc').textContent=p.desc;
   document.getElementById('card-note').textContent='\u2b50 '+p.note;
   updateCardTrajet(p);
+  updateLikeBtn(isLiked(p.name));
+}
+
+function updateLikeBtn(liked){
+  var btn=document.getElementById('card-like-btn');
+  var lbl=document.getElementById('card-like-lbl');
+  if(!btn)return;
+  btn.classList.toggle('liked',liked);
+  lbl.textContent=liked?'Liké':'J\'aime';
+  lbl.classList.toggle('liked-lbl',liked);
+}
+
+function toggleLikeCard(){
+  var p=POIS[currentIdx];
+  if(isLiked(p.name)){
+    likedPois=likedPois.filter(function(n){return n!==p.name;});
+    localStorage.setItem('planly_likes',JSON.stringify(likedPois));
+    var badge=document.getElementById('act-badge');if(badge)badge.textContent=likedPois.length;
+    updateLikeBtn(false);
+  } else {
+    // doSwipeBtn appelle saveLike + avance la card
+    doSwipeBtn('like');
+  }
 }
 
 // Badge trajet adaptatif selon le filtre actif
@@ -5061,18 +5119,54 @@ function setView(v){
 var pillLevel=0,activeTuile=null,activeL1=null;
 var TUILES=[{id:'air',label:'Nature & Grand Air',emoji:'🌿'},{id:'sport',label:'Sport & Aventure',emoji:'🏃'},{id:'patri',label:'Patrimoine',emoji:'🏛️'},{id:'vivre',label:'Art de vivre',emoji:'🍽️'},{id:'parcs',label:'Parcs & Loisirs',emoji:'🎡'},{id:'sorties',label:'Sorties & Détente',emoji:'🎬'},{id:'events',label:'Événements',emoji:'🎪'}];
 var PL1={air:['Toutes','🏖️ Plages & Côte','🌲 Forêts & Nature','📸 Points de vue','🚶 Balades & Promenades'],sport:['Toutes','🥾 Randonnée','🚲 Vélo','🛶 Nautisme','➕ Autres sports'],patri:['Toutes','🏘️ Villages & Sites','🏰 Châteaux & Monuments','🏛️ Musées & Culture'],vivre:['Toutes','🍽️ Restaurants','🛒 Marchés & Terroir','🍷 Dégustations'],parcs:['Toutes','<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 5v2m0 10v2" stroke-dasharray="2 2"/><path d="M2 10a3 3 0 010 4"/><path d="M22 10a3 3 0 000 4"/></svg> Jeux & Divertissement','🦁 Parcs animaliers','🐠 Aquariums','🌺 Parcs botaniques'],sorties:['Toutes','🎬 Cinéma','🍸 Bars & Ambiance','🎰 Casino & Jeux','🏊 Piscines & Spa'],events:['Toutes','🎵 Concerts & Spectacles','🎉 Fêtes & Foires','🌙 Marchés nocturnes']};
+
+// Mapping tuile/L1 → catégorie POI
+var TUILE_CATS={air:['plage','nature','pointdevue','balade'],sport:[],patri:['patrimoine'],vivre:[],parcs:[],sorties:[],events:[]};
+var L1_CATS={'🏖️ Plages & Côte':['plage'],'🌲 Forêts & Nature':['nature'],'📸 Points de vue':['pointdevue'],'🚶 Balades & Promenades':['balade'],'🏘️ Villages & Sites':['patrimoine'],'🏰 Châteaux & Monuments':['patrimoine'],'🏛️ Musées & Culture':['patrimoine']};
+
+function getFilteredPois(){
+  if(!activeTuile)return POIS;
+  var cats=activeL1?L1_CATS[activeL1]||[]:TUILE_CATS[activeTuile]||[];
+  if(!cats.length)return POIS; // tuile sans données = affiche tout
+  return POIS.filter(function(p){return cats.indexOf(p.category)!==-1;});
+}
+
+// Index swipe filtré
+var swipeFiltered=POIS.map(function(_,i){return i;});
+var swipePos=0;
+
+function applyFilter(){
+  var fp=getFilteredPois();
+  swipeFiltered=fp.map(function(p){return POIS.indexOf(p);});
+  if(!swipeFiltered.length)swipeFiltered=POIS.map(function(_,i){return i;});
+  swipePos=0;
+  currentIdx=swipeFiltered[0];
+  updateCard(currentIdx);
+  renderList();
+}
+
 function mk(cls,txt){var e=document.createElement('div');e.className=cls;if(txt.indexOf('<')!==-1)e.innerHTML=txt;else e.textContent=txt;return e;}
-function selectTous(){activeTuile=null;activeL1=null;pillLevel=0;renderPillsL0();}
+function selectTous(){activeTuile=null;activeL1=null;pillLevel=0;renderPillsL0();applyFilter();}
+function scrollPillIntoView(el){
+  var w=document.getElementById('pills-scroll');
+  if(!w||!el)return;
+  var wRect=w.getBoundingClientRect();
+  var eRect=el.getBoundingClientRect();
+  var offset=eRect.left-wRect.left+w.scrollLeft-wRect.width/2+eRect.width/2;
+  w.scrollTo({left:offset,behavior:'smooth'});
+}
 function renderPillsL0(){
   var w=document.getElementById('pills-scroll');w.innerHTML='';
   var t=mk('pill tous','Tous');t.onclick=selectTous;w.appendChild(t);
+  var activeEl=null;
   TUILES.forEach(function(tu){
     var isActive=activeTuile===tu.id;
     var e=mk('pill'+(isActive?' active':''),tu.emoji+' '+tu.label);
     e.onclick=(function(id){return function(){drillDown(id);};})(tu.id);
     w.appendChild(e);
+    if(isActive)activeEl=e;
   });
-  w.scrollLeft=0;
+  if(activeEl)scrollPillIntoView(activeEl);else w.scrollLeft=0;
 }
 function drillDown(id){
   if(activeTuile!==id)activeL1=null;
@@ -5081,13 +5175,16 @@ function drillDown(id){
   var back=mk('pill-back','← Retour');
   back.onclick=function(){selectTous();};
   w.appendChild(back);
+  var activeEl=null;
   (PL1[id]||[]).forEach(function(lbl){
     var isA=(lbl==='Toutes'&&!activeL1)||activeL1===lbl;
     var e=mk('pill'+(isA?' active':''),lbl);
-    e.onclick=(function(l){return function(){activeL1=l==='Toutes'?null:l;drillDown(activeTuile);};})(lbl);
+    e.onclick=(function(l){return function(){activeL1=l==='Toutes'?null:l;drillDown(activeTuile);applyFilter();};})(lbl);
     w.appendChild(e);
+    if(isA)activeEl=e;
   });
-  w.scrollLeft=0;
+  if(activeEl)scrollPillIntoView(activeEl);else w.scrollLeft=0;
+  applyFilter();
 }
 
 // ── SWIPE (rewritten) ──
@@ -5143,7 +5240,8 @@ function dragEnd(e){
       card.style.transition='none';
       card.style.transform='';
       card.style.opacity='1';
-      currentIdx=(currentIdx+1)%POIS.length;
+      swipePos=(swipePos+1)%swipeFiltered.length;
+      currentIdx=swipeFiltered[swipePos];
       updateCard(currentIdx);
       drag.swiping=false;
     },260);
@@ -5191,12 +5289,17 @@ function toggleAddPoi(btn){
     likedPois=likedPois.filter(function(n){return n!==p.name;});
     localStorage.setItem('planly_likes',JSON.stringify(likedPois));
   }
+  // Mettre à jour badge activités
+  var badge=document.getElementById('act-badge');
+  if(badge)badge.textContent=likedPois.length;
 }
 
 // ── RENDER LIST DYNAMIQUE ──
 function renderList(){
   var zone=document.getElementById('list-zone');
-  zone.innerHTML=POIS.map(function(p,i){
+  var fp=getFilteredPois();
+  zone.innerHTML=fp.map(function(p){
+    var i=POIS.indexOf(p);
     var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
     var inco=p.inco?'<div class="lcard-inco">⭐ Incontournable</div>':'';
     return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
@@ -5226,7 +5329,8 @@ function doSwipeBtn(dir){
     card.style.transition='none';
     card.style.transform='';
     card.style.opacity='1';
-    currentIdx=(currentIdx+1)%POIS.length;
+    swipePos=(swipePos+1)%swipeFiltered.length;
+    currentIdx=swipeFiltered[swipePos];
     updateCard(currentIdx);
     drag.swiping=false;
   },260);
@@ -5236,14 +5340,85 @@ function doSwipeBtn(dir){
 var likedPois=JSON.parse(localStorage.getItem('planly_likes')||'[]');
 function saveLike(idx){
   var name=POIS[idx].name;
-  if(likedPois.indexOf(name)===-1){likedPois.push(name);localStorage.setItem('planly_likes',JSON.stringify(likedPois));}
+  if(likedPois.indexOf(name)===-1){
+    likedPois.push(name);
+    localStorage.setItem('planly_likes',JSON.stringify(likedPois));
+    var badge=document.getElementById('act-badge');
+    if(badge)badge.textContent=likedPois.length;
+  }
 }
 function isLiked(name){return likedPois.indexOf(name)!==-1;}
+
+// ── NAVIGATION VUES ──
+var currentNav='explorer';
+function navShow(view){
+  currentNav=view;
+  var isAct=view==='activites';
+  document.getElementById('nav-explorer').classList.toggle('active',!isAct);
+  document.getElementById('nav-activites').classList.toggle('active',isAct);
+  document.getElementById('activites-view').classList.toggle('open',isAct);
+  document.getElementById('app-header').style.display=isAct?'none':'';
+  var mz=document.querySelector('.main-zone');if(mz)mz.style.display=isAct?'none':'';
+  if(isAct)renderActivites();
+}
+
+// ── VUE ACTIVITÉS ──
+function removeLike(name){
+  likedPois=likedPois.filter(function(n){return n!==name;});
+  localStorage.setItem('planly_likes',JSON.stringify(likedPois));
+  var badge=document.getElementById('act-badge');if(badge)badge.textContent=likedPois.length;
+  if(POIS[currentIdx]&&POIS[currentIdx].name===name)updateLikeBtn(false);
+  renderActivites();
+}
+
+function clearLikes(){
+  if(!confirm('Vider toutes tes activités ?'))return;
+  likedPois=[];
+  localStorage.setItem('planly_likes','[]');
+  var badge=document.getElementById('act-badge');if(badge)badge.textContent=0;
+  updateLikeBtn(false);
+  renderActivites();
+}
+
+function renderActivites(){
+  var liked=POIS.filter(function(p){return likedPois.indexOf(p.name)!==-1;});
+  document.getElementById('act-badge').textContent=liked.length;
+  var cb=document.getElementById('act-clear-btn');if(cb)cb.style.display=liked.length>0?'':'none';
+  var scroll=document.getElementById('act-scroll');
+  if(liked.length===0){
+    scroll.innerHTML='<div class="act-empty">'
+      +'<div class="act-empty-icon">♡</div>'
+      +'<div class="act-empty-title">Aucune activité pour l\'instant</div>'
+      +'<div class="act-empty-sub">Swipe et appuie sur ♥ ou "Ajouter à mes activités" pour sauvegarder des endroits.</div>'
+      +'</div>';
+    return;
+  }
+  scroll.innerHTML=liked.map(function(p){
+    var i=POIS.indexOf(p);
+    var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
+    var inco=p.inco?'<div class="lcard-inco">⭐ Incontournable</div>':'';
+    var safeName=p.name.replace(/'/g,'\\\'');
+    return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
+      +'<img src="'+img+'" alt="" loading="lazy">'
+      +'<div class="lcard-cat">'+p.cat+'</div>'
+      +'<button class="lcard-remove" onclick="event.stopPropagation();removeLike(\''+safeName+'\')">✕</button>'
+      +inco
+      +'<div class="lcard-body">'
+      +'<div class="lcard-name">'+p.name+'</div>'
+      +'<div class="lcard-desc">'+p.desc+'</div>'
+      +'<div class="lcard-pills">'
+      +'<div class="lcard-pill'+(p.budgetClass==='free'?' green':'')+'">'+p.budgetBadge+'</div>'
+      +'<div class="lcard-pill">⭐ '+p.note+'</div>'
+      +'</div></div></div>';
+  }).join('');
+}
 
 // ── INIT ──
 updateSlider(4);
 renderList();
 updateCard(0);
+// Initialiser le badge activités
+(function(){var b=document.getElementById('act-badge');if(b)b.textContent=likedPois.length;})();
 
 // PWA
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js');}
