@@ -1837,6 +1837,7 @@ function toggleLikeCard(){
     localStorage.setItem('planly_likes',JSON.stringify(likedPois));
     var badge=document.getElementById('act-badge');if(badge)badge.textContent=likedPois.length;
     updateLikeBtn(false);
+    rebuildSwipeDeck(false); // réintègre le POI déliké dans le deck
   } else {
     // doSwipeBtn appelle saveLike + avance la card
     doSwipeBtn('like');
@@ -2060,17 +2061,30 @@ function getFilteredPois(){
 }
 
 // Index swipe filtré
-var swipeFiltered=POIS.map(function(_,i){return i;});
+var swipeFiltered=[];
 var swipePos=0;
 
-function applyFilter(){
+// Source unique de vérité pour le deck swipe
+// resetPos=true → revenir au début (changement de pill)
+// resetPos=false → garder la position courante (après like/unlike)
+function rebuildSwipeDeck(resetPos){
   var fp=getFilteredPois();
-  // Exclure les POIs déjà likés du deck de swipe
-  var unliked=fp.filter(function(p){return likedPois.indexOf(p.name)===-1;});
-  swipeFiltered=(unliked.length?unliked:fp).map(function(p){return POIS.indexOf(p);});
-  if(!swipeFiltered.length)swipeFiltered=POIS.map(function(_,i){return i;});
-  swipePos=0;
-  currentIdx=swipeFiltered[0];
+  var deck=fp.filter(function(p){return likedPois.indexOf(p.name)===-1;});
+  if(!deck.length)deck=fp; // tous likés → les montrer quand même
+  var newFiltered=deck.map(function(p){return POIS.indexOf(p);});
+  if(!newFiltered.length)newFiltered=POIS.map(function(_,i){return i;});
+  swipeFiltered=newFiltered;
+  if(resetPos){
+    swipePos=0;
+  } else {
+    // Garder swipePos dans les bornes (après suppression d'un item)
+    if(swipePos>=swipeFiltered.length)swipePos=0;
+  }
+  currentIdx=swipeFiltered[swipePos];
+}
+
+function applyFilter(){
+  rebuildSwipeDeck(true); // changement de pill = recommencer au début
   updateCard(currentIdx);
   renderList();
 }
@@ -2109,7 +2123,7 @@ function drillDown(id){
   (PL1[id]||[]).forEach(function(lbl){
     var isA=(lbl==='Toutes'&&!activeL1)||activeL1===lbl;
     var e=mk('pill'+(isA?' active':''),lbl);
-    e.onclick=(function(l){return function(){activeL1=l==='Toutes'?null:l;drillDown(activeTuile);applyFilter();};})(lbl);
+    e.onclick=(function(l){return function(){activeL1=l==='Toutes'?null:l;drillDown(activeTuile);};})(lbl);
     w.appendChild(e);
     if(isA)activeEl=e;
   });
@@ -2171,15 +2185,11 @@ function dragEnd(e){
       card.style.transform='';
       card.style.opacity='1';
       if(dir==='like'){
-        var fp=getFilteredPois();
-        var unliked=fp.filter(function(p){return likedPois.indexOf(p.name)===-1;});
-        swipeFiltered=(unliked.length?unliked:fp).map(function(p){return POIS.indexOf(p);});
-        if(!swipeFiltered.length)swipeFiltered=POIS.map(function(_,i){return i;});
-        swipePos=swipePos%swipeFiltered.length;
+        rebuildSwipeDeck(false); // retire le liké, garde la position
       } else {
         swipePos=(swipePos+1)%swipeFiltered.length;
+        currentIdx=swipeFiltered[swipePos];
       }
-      currentIdx=swipeFiltered[swipePos];
       updateCard(currentIdx);
       drag.swiping=false;
     },260);
@@ -2267,17 +2277,12 @@ function doSwipeBtn(dir){
     card.style.transition='none';
     card.style.transform='';
     card.style.opacity='1';
-    // Reconstruire le deck filtré (retire les POIs likés) et avancer
     if(dir==='like'){
-      var fp=getFilteredPois();
-      var unliked=fp.filter(function(p){return likedPois.indexOf(p.name)===-1;});
-      swipeFiltered=(unliked.length?unliked:fp).map(function(p){return POIS.indexOf(p);});
-      if(!swipeFiltered.length)swipeFiltered=POIS.map(function(_,i){return i;});
-      swipePos=swipePos%swipeFiltered.length;
+      rebuildSwipeDeck(false);
     } else {
       swipePos=(swipePos+1)%swipeFiltered.length;
+      currentIdx=swipeFiltered[swipePos];
     }
-    currentIdx=swipeFiltered[swipePos];
     updateCard(currentIdx);
     drag.swiping=false;
   },260);
@@ -2540,8 +2545,9 @@ function renderActivites(){
 
 // ── INIT ──
 updateSlider(4);
+rebuildSwipeDeck(true); // initialise swipeFiltered après que likedPois soit chargé
 renderList();
-updateCard(0);
+updateCard(currentIdx);
 // Initialiser le badge activités
 (function(){var b=document.getElementById('act-badge');if(b)b.textContent=likedPois.length;})();
 
