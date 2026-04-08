@@ -5166,9 +5166,14 @@ function cleanDragListeners(){
 }
 function handleCardClick(e){
   if(e.target.closest('.t-btn')||e.target.closest('.t-act'))return;
-  if(e.target.closest('.car-tap-left')||e.target.closest('.car-tap-right'))return;
   if(e.target.closest('.card-detail-btn'))return;
-  if(Math.abs(drag.x)<5&&!drag.swiping)openPoiSheet(currentIdx);
+  if(Math.abs(drag.x)>5||drag.swiping)return;
+  // Tap gauche/droite pour naviguer les photos
+  var card=document.getElementById('poi-card');
+  var rect=card.getBoundingClientRect();
+  var x=e.clientX||((e.touches&&e.touches[0])?e.touches[0].clientX:0);
+  var half=rect.left+rect.width/2;
+  if(x<half){carMove(-1);}else{carMove(1);}
 }
 
 // ── TOGGLE AJOUTER POI ──
