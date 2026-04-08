@@ -431,20 +431,21 @@ body{
 .t-lbl{font-size:9px;color:rgba(255,255,255,.5);font-weight:500;}
 
 /* ── LISTE ── */
-.list-zone{position:absolute;inset:0;overflow-y:auto;padding:90px 14px 80px;scrollbar-width:none;display:none;background:#111;}
+/* ── LISTE style Airbnb ── */
+.list-zone{position:absolute;inset:0;overflow-y:auto;padding:120px 16px 80px;scrollbar-width:none;display:none;background:var(--bg);}
 .list-zone.active{display:block;z-index:8;}
 .list-zone::-webkit-scrollbar{display:none;}
-.lcard{border-radius:16px;overflow:hidden;margin-bottom:10px;position:relative;box-shadow:0 3px 12px rgba(0,0,0,.3);cursor:pointer;height:170px;}
-.lcard img{width:100%;height:100%;object-fit:cover;display:block;}
-.lcard-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 15%,rgba(8,8,6,.85) 100%);}
-.lcard-cat{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);border-radius:16px;padding:4px 10px;font-size:10px;font-weight:500;color:#fff;}
-.lcard-inco{position:absolute;top:10px;right:10px;background:rgba(212,168,67,.85);border-radius:16px;padding:4px 10px;font-size:10px;font-weight:600;color:#fff;}
-.lcard-body{position:absolute;bottom:0;left:0;right:0;padding:10px 14px 12px;}
-.lcard-name{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;color:#fff;margin-bottom:4px;}
-.lcard-desc{font-size:10px;color:rgba(255,255,255,.7);line-height:1.4;margin-bottom:5px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;}
-.lcard-pills{display:flex;gap:5px;flex-wrap:wrap;}
-.lcard-pill{padding:3px 9px;border-radius:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-size:9px;font-weight:500;color:rgba(255,255,255,.85);}
-.lcard-pill.green{background:rgba(34,197,94,.2);border-color:rgba(34,197,94,.35);}
+.lcard{border-radius:14px;overflow:hidden;margin-bottom:16px;cursor:pointer;background:var(--wh);box-shadow:0 2px 10px rgba(0,0,0,.08);}
+.lcard img{width:100%;height:180px;object-fit:cover;display:block;}
+.lcard-overlay{display:none;}
+.lcard-cat{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);border-radius:12px;padding:4px 10px;font-size:10px;font-weight:500;color:#fff;}
+.lcard-inco{position:absolute;top:10px;right:10px;background:rgba(212,168,67,.9);border-radius:12px;padding:4px 10px;font-size:10px;font-weight:600;color:#fff;}
+.lcard-body{position:relative;padding:12px 14px 14px;}
+.lcard-name{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--tx);margin-bottom:4px;}
+.lcard-desc{font-size:12px;color:var(--txm);line-height:1.4;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.lcard-pills{display:flex;gap:6px;flex-wrap:wrap;}
+.lcard-pill{padding:4px 10px;border-radius:10px;background:var(--bg);border:1px solid var(--br);font-size:10px;font-weight:500;color:var(--txm);}
+.lcard-pill.green{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#16a34a;}
 
 /* ── NAV BOTTOM — Style C rounded square ── */
 .bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:8px 8px 12px;background:#111;flex-shrink:0;border-top:1px solid rgba(255,255,255,.08);}
@@ -5051,9 +5052,7 @@ function ssToggleChip(el){el.classList.toggle('active');}
 function setView(v){
   document.getElementById('swipe-zone').style.display=v==='swipe'?'block':'none';
   document.getElementById('list-zone').classList.toggle('active',v==='liste');
-  // Hide/show action bar header in list mode
-  var hdr=document.getElementById('app-header');
-  if(hdr)hdr.style.display=v==='liste'?'none':'block';
+  // Header always visible
 }
 
 // ── PILLS ──
@@ -5198,9 +5197,8 @@ function renderList(){
   zone.innerHTML=POIS.map(function(p,i){
     var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
     var inco=p.inco?'<div class="lcard-inco">⭐ Incontournable</div>':'';
-    return '<div class="lcard" onclick="openPoiSheet('+i+')">'
-      +'<img src="'+img+'" alt="">'
-      +'<div class="lcard-overlay"></div>'
+    return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
+      +'<img src="'+img+'" alt="" loading="lazy">'
       +'<div class="lcard-cat">'+p.cat+'</div>'
       +inco
       +'<div class="lcard-body">'
@@ -5208,7 +5206,7 @@ function renderList(){
       +'<div class="lcard-desc">'+p.desc+'</div>'
       +'<div class="lcard-pills">'
       +'<div class="lcard-pill'+(p.budgetClass==='free'?' green':'')+'">'+p.budgetBadge+'</div>'
-      +'<div class="lcard-pill">⭐ '+p.note+'</div>'
+      +'<div class="lcard-pill">\u2b50 '+p.note+'</div>'
       +'</div></div></div>';
   }).join('');
 }
