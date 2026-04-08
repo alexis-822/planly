@@ -1086,7 +1086,7 @@ body{
   <!-- OVERLAY pour panneaux -->
   <div class="overlay" id="overlay" onclick="closeAll()"></div>
 
-  <!-- PANNEAU SETTINGS (roue crantée) -->
+  <!-- PANNEAU SETTINGS — mode vue + accès filtres -->
   <div class="settings-sheet" id="settings-sheet">
     <div class="bs-handle-row" onclick="closeSettingsSheet()"><div class="bs-handle"></div></div>
     <div class="ss-title">Mode de vue</div>
@@ -1095,29 +1095,52 @@ body{
       <div class="ss-mode-btn" id="ss-liste" onclick="ssSetMode('liste')">≡ Liste</div>
     </div>
     <div class="ss-title">Filtres</div>
-    <div class="es-label">Budget</div>
-    <div class="ss-chips" id="ss-budget">
-      <div class="ss-chip active" onclick="ssToggleChip(this)">Gratuit</div>
-      <div class="ss-chip" onclick="ssToggleChip(this)">Éco</div>
-      <div class="ss-chip" onclick="ssToggleChip(this)">Équilibre</div>
-      <div class="ss-chip" onclick="ssToggleChip(this)">Plaisir</div>
+    <button class="ss-apply-btn" onclick="closeSettingsSheet();openSheet('filters')">Ouvrir les filtres</button>
+  </div>
+
+  <!-- PANNEAU FILTRES (restauré) -->
+  <div class="bsheet" id="sheet-filters">
+    <div class="bs-handle-row" onclick="closeAll()"><div class="bs-handle"></div></div>
+    <div class="bs-f-header"><div class="bs-f-title">Filtres</div><div class="bs-f-reset" onclick="resetAll()">Tout effacer</div></div>
+    <div class="bs-f-scroll">
+      <div class="f-section">
+        <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><line x1="7" y1="7" x2="13" y2="13"/><line x1="13" y1="7" x2="7" y2="13"/></svg></div>Je veux éviter…</div>
+        <div class="excl-list">
+          <div class="excl-row" onclick="toggleExcl(this,0)"><div class="excl-left"><div class="excl-icon">🧗</div><div><div class="excl-main">Vertige / Hauteur</div><div class="excl-sub">Falaises, phares, tours</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
+          <div class="excl-row" onclick="toggleExcl(this,1)"><div class="excl-left"><div class="excl-icon">👥</div><div><div class="excl-main">Foule</div><div class="excl-sub">Sites très touristiques</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
+          <div class="excl-row" onclick="toggleExcl(this,2)"><div class="excl-left"><div class="excl-icon">📦</div><div><div class="excl-main">Espaces clos</div><div class="excl-sub">Grottes, souterrains</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
+          <div class="excl-row" onclick="toggleExcl(this,3)"><div class="excl-left"><div class="excl-icon">🐾</div><div><div class="excl-main">Animaux en captivité</div><div class="excl-sub">Zoos, aquariums</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
+        </div>
+        <div class="excl-summary" id="excl-summary"></div>
+      </div>
+      <div class="f-divider"></div>
+      <div class="f-section">
+        <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 1l7 4v6a8 8 0 01-4 7l-4 2-4-2a8 8 0 01-4-7V5l7-4z"/><line x1="7" y1="10" x2="13" y2="10"/></svg></div>Quel type de lieu ?</div>
+        <div class="noto-grid">
+          <div class="noto-card" id="noto-inco" onclick="toggleNoto('inco')"><div class="noto-icon">⭐</div><div class="noto-lbl">Incontournables</div><div class="noto-sub">Les classiques</div></div>
+          <div class="noto-card" id="noto-pepite" onclick="toggleNoto('pepite')"><div class="noto-icon">🔍</div><div class="noto-lbl">Pépites</div><div class="noto-sub">Lieux secrets</div></div>
+        </div>
+      </div>
+      <div class="f-divider"></div>
+      <div class="f-section" style="padding-bottom:8px;">
+        <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="16" height="11" rx="2"/><path d="M2 10h16"/><path d="M6 2h8l2 4H4l2-4z"/></svg></div>Budget</div>
+        <div class="budget-grid">
+          <div class="budget-card" id="bud-eco" onclick="selectBudget('eco')"><div class="budget-icon">🌿</div><div class="budget-lbl">Éco</div><div class="budget-sub">Gratuit ou &lt;5€</div></div>
+          <div class="budget-card" id="bud-equil" onclick="selectBudget('equil')"><div class="budget-icon">⚖️</div><div class="budget-lbl">Équilibré</div><div class="budget-sub">5 à 20€</div></div>
+          <div class="budget-card" id="bud-plaisir" onclick="selectBudget('plaisir')"><div class="budget-icon">✨</div><div class="budget-lbl">Plaisir</div><div class="budget-sub">+20€</div></div>
+        </div>
+      </div>
     </div>
-    <div class="es-label">Météo</div>
-    <div class="ss-chips">
-      <div class="ss-chip active" onclick="ssToggleChip(this)">☀️ Soleil</div>
-      <div class="ss-chip" onclick="ssToggleChip(this)">☁️ Nuageux</div>
-      <div class="ss-chip" onclick="ssToggleChip(this)">🌧️ Pluie</div>
+    <div class="bs-f-footer">
+      <button class="f-btn-cancel" onclick="closeAll()">Annuler</button>
+      <button class="f-btn-apply" onclick="closeAll()">Voir les résultats</button>
     </div>
-    <div class="ss-toggle-row"><span class="ss-toggle-label">PMR</span><div class="ss-toggle" onclick="this.classList.toggle('on')"></div></div>
-    <div class="ss-toggle-row"><span class="ss-toggle-label">Chiens acceptés</span><div class="ss-toggle" onclick="this.classList.toggle('on')"></div></div>
-    <div class="ss-toggle-row"><span class="ss-toggle-label">Pépites uniquement</span><div class="ss-toggle" onclick="this.classList.toggle('on')"></div></div>
-    <button class="ss-apply-btn" onclick="closeSettingsSheet()">Appliquer</button>
   </div>
 
   <!-- PANNEAU EDIT SEJOUR (crayon) -->
   <div class="edit-sheet" id="edit-sheet">
     <div class="bs-handle-row" onclick="closeEditSheet()"><div class="bs-handle"></div></div>
-    <div class="ss-title">Mon séjour</div>
+    <div class="ss-title">Modifier le séjour</div>
     <div class="es-field"><div class="es-label">Destination</div><div class="es-value"><input type="text" id="es-dest" placeholder="Ex: Les Sables-d'Olonne"></div></div>
     <div class="es-field"><div class="es-label">Dates</div><div class="es-value"><input type="text" id="es-dates" placeholder="Ex: 15-22 juillet"></div></div>
     <div class="es-field"><div class="es-label">Groupe</div><div class="es-value"><input type="text" id="es-group" placeholder="Ex: Famille, 2 enfants"></div></div>
@@ -1236,96 +1259,6 @@ body{
     </div>
   </div>
 
-  <!-- BS FILTRES -->
-  <div class="bsheet" id="sheet-filters">
-    <div class="bs-handle-row" onclick="closeAll()"><div class="bs-handle"></div></div>
-    <div class="bs-f-header"><div class="bs-f-title">Filtres</div><div class="bs-f-reset" onclick="resetAll()">Tout effacer</div></div>
-    <div class="bs-f-scroll">
-      <div class="f-section">
-        <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><line x1="7" y1="7" x2="13" y2="13"/><line x1="13" y1="7" x2="7" y2="13"/></svg></div>Je veux éviter…</div>
-        <div class="excl-list">
-          <div class="excl-row" onclick="toggleExcl(this,0)"><div class="excl-left"><div class="excl-icon">🧗</div><div><div class="excl-main">Vertige / Hauteur</div><div class="excl-sub">Falaises, phares, tours</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
-          <div class="excl-row" onclick="toggleExcl(this,1)"><div class="excl-left"><div class="excl-icon">👥</div><div><div class="excl-main">Foule</div><div class="excl-sub">Sites très touristiques</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
-          <div class="excl-row" onclick="toggleExcl(this,2)"><div class="excl-left"><div class="excl-icon">📦</div><div><div class="excl-main">Espaces clos</div><div class="excl-sub">Grottes, souterrains</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
-          <div class="excl-row" onclick="toggleExcl(this,3)"><div class="excl-left"><div class="excl-icon">🐾</div><div><div class="excl-main">Animaux en captivité</div><div class="excl-sub">Zoos, aquariums</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
-        </div>
-        <div class="excl-summary" id="excl-summary"></div>
-      </div>
-      <div class="f-divider"></div>
-      <div class="f-section">
-        <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 1l7 4v6a8 8 0 01-4 7l-4 2-4-2a8 8 0 01-4-7V5l7-4z"/><line x1="7" y1="10" x2="13" y2="10"/></svg></div>Quel type de lieu je veux visiter ?</div>
-        <div class="noto-grid">
-          <div class="noto-card" id="noto-inco" onclick="toggleNoto('inco')"><div class="noto-icon">⭐</div><div class="noto-lbl">Incontournables</div><div class="noto-sub">Les classiques à ne pas rater</div></div>
-          <div class="noto-card" id="noto-pepite" onclick="toggleNoto('pepite')"><div class="noto-icon">🔍</div><div class="noto-lbl">Pépites</div><div class="noto-sub">Lieux secrets des locaux</div></div>
-        </div>
-      </div>
-      <div class="f-divider"></div>
-      <div class="f-section" style="padding-bottom:8px;">
-        <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="16" height="11" rx="2"/><path d="M2 10h16"/><path d="M6 2h8l2 4H4l2-4z"/></svg></div>Budget</div>
-        <div class="budget-grid">
-          <div class="budget-card" id="bud-eco" onclick="selectBudget('eco')"><div class="budget-icon">🌿</div><div class="budget-lbl">Éco</div><div class="budget-sub">Gratuit ou moins de 5€ / pers.</div></div>
-          <div class="budget-card" id="bud-equil" onclick="selectBudget('equil')"><div class="budget-icon">⚖️</div><div class="budget-lbl">Équilibré</div><div class="budget-sub">5 à 20€ / pers.</div></div>
-          <div class="budget-card" id="bud-plaisir" onclick="selectBudget('plaisir')"><div class="budget-icon">✨</div><div class="budget-lbl">Plaisir</div><div class="budget-sub">+20€ / pers.</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="bs-f-footer">
-      <button class="f-btn-cancel" onclick="closeAll()">Annuler</button>
-      <button class="f-btn-apply" onclick="closeAll()">Voir les résultats</button>
-    </div>
-  </div>
-
-  <!-- BS CTX -->
-  <div class="bsheet" id="sheet-ctx" style="max-height:80%;">
-    <div class="bs-handle-row" onclick="closeAll()"><div class="bs-handle"></div></div>
-    <div class="bs-ctx-body" style="overflow-y:auto;padding-bottom:24px;">
-      <div class="bs-ctx-title">Modifier le séjour</div>
-
-      <div class="sec-label" style="margin-top:0">Destination</div>
-      <div class="sheet-dest-wrap">
-        <input type="text" class="sheet-dest-input" id="sheet-dest-input" placeholder="Rechercher une commune..." oninput="onSheetDestInput()" autocomplete="off">
-        <div class="sheet-dest-suggestions" id="sheet-dest-suggestions"></div>
-      </div>
-
-      <div class="sec-label">Groupe</div>
-      <div class="group-grid">
-        <div class="group-card" id="sg-solo" onclick="sheetSelectGroup('solo')"><div class="group-emoji">🎒</div><div class="group-name">Solo</div></div>
-        <div class="group-card" id="sg-couple" onclick="sheetSelectGroup('couple')"><div class="group-emoji">💑</div><div class="group-name">En couple</div></div>
-        <div class="group-card" id="sg-famille" onclick="sheetSelectGroup('famille')"><div class="group-emoji">👨‍👩‍👧</div><div class="group-name">En famille</div></div>
-        <div class="group-card" id="sg-amis" onclick="sheetSelectGroup('amis')"><div class="group-emoji">🎉</div><div class="group-name">Entre amis</div></div>
-      </div>
-
-      <div id="sheet-children-block" style="display:none;">
-        <div class="sec-label">Enfants</div>
-        <div class="children-list" id="sheet-children-list"></div>
-        <div class="add-child" onclick="sheetAddChild()">
-          <span style="font-size:20px;color:var(--txm)">＋</span>
-          <span>Ajouter un enfant</span>
-        </div>
-      </div>
-
-      <div class="simple-row">
-        <span style="font-size:24px">🐕</span>
-        <div class="simple-row-txt"><div class="simple-row-main">On vient avec un animal</div><div class="simple-row-sub">On filtre les lieux pet-friendly</div></div>
-        <div class="toggle" id="sheet-tog-animal" onclick="toggleSmall('sheet-tog-animal')"><div class="toggle-thumb"></div></div>
-      </div>
-
-      <div class="simple-row" style="border-top:1px solid var(--bg-d);">
-        <span style="font-size:24px">⚡</span>
-        <div class="simple-row-txt"><div class="simple-row-main">Mobilité réduite ou fatigue facile</div><div class="simple-row-sub">Contraintes de mobilité</div></div>
-        <div class="toggle" id="sheet-tog-pmr" onclick="toggleSmall('sheet-tog-pmr')"><div class="toggle-thumb"></div></div>
-      </div>
-
-      <div class="sec-label">Mobilité</div>
-      <div class="mob-onboard">
-        <div class="mob-onboard-card" id="sm-voiture" onclick="sheetSelectMob('voiture')"><div class="mob-onboard-emoji">🚗</div><div class="mob-onboard-name">Voiture</div></div>
-        <div class="mob-onboard-card" id="sm-velo" onclick="sheetSelectMob('velo')"><div class="mob-onboard-emoji">🚲</div><div class="mob-onboard-name">Vélo</div></div>
-        <div class="mob-onboard-card" id="sm-pied" onclick="sheetSelectMob('pied')"><div class="mob-onboard-emoji">🚶</div><div class="mob-onboard-name">À pied</div></div>
-      </div>
-
-      <button class="bs-ctx-cta" onclick="applySheetCtx()">Mettre à jour</button>
-    </div>
-  </div>
 
 </div>
 </div>
