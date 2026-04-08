@@ -6,8 +6,7 @@
 __pycache__/
 *.pyc
 
-# Images (trop lourd pour git, 40 Mo)
-planly_scraper/images/
+# Images commitées pour GitHub Pages
 
 # Logs
 *.log
