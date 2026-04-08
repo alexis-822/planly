@@ -1086,7 +1086,7 @@ body{
   <!-- OVERLAY pour panneaux -->
   <div class="overlay" id="overlay" onclick="closeAll()"></div>
 
-  <!-- PANNEAU SETTINGS — mode vue + accès filtres -->
+  <!-- PANNEAU SETTINGS — mode vue + filtres -->
   <div class="settings-sheet" id="settings-sheet">
     <div class="bs-handle-row" onclick="closeSettingsSheet()"><div class="bs-handle"></div></div>
     <div class="ss-title">Mode de vue</div>
@@ -1094,13 +1094,7 @@ body{
       <div class="ss-mode-btn active" id="ss-swipe" onclick="ssSetMode('swipe')">🃏 Swipe</div>
       <div class="ss-mode-btn" id="ss-liste" onclick="ssSetMode('liste')">≡ Liste</div>
     </div>
-    <div class="ss-title">Filtres</div>
-    <button class="ss-apply-btn" onclick="closeSettingsSheet();openSheet('filters')">Ouvrir les filtres</button>
-  </div>
-
-  <!-- PANNEAU FILTRES (restauré) -->
-  <div class="bsheet" id="sheet-filters">
-    <div class="bs-handle-row" onclick="closeAll()"><div class="bs-handle"></div></div>
+    <div class="f-divider" style="margin:10px 0;"></div>
     <div class="bs-f-header"><div class="bs-f-title">Filtres</div><div class="bs-f-reset" onclick="resetAll()">Tout effacer</div></div>
     <div class="bs-f-scroll">
       <div class="f-section">
@@ -1132,8 +1126,8 @@ body{
       </div>
     </div>
     <div class="bs-f-footer">
-      <button class="f-btn-cancel" onclick="closeAll()">Annuler</button>
-      <button class="f-btn-apply" onclick="closeAll()">Voir les résultats</button>
+      <button class="f-btn-cancel" onclick="closeSettingsSheet()">Annuler</button>
+      <button class="f-btn-apply" onclick="closeSettingsSheet()">Appliquer</button>
     </div>
   </div>
 
