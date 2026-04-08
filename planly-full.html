@@ -403,31 +403,31 @@ body{
 .card-metric{font-size:12px;font-weight:500;color:rgba(255,255,255,.9);}
 .card-metric-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.4);}
 
-/* ── BARRE D'ACTIONS style Tinder ── */
+/* ── BARRE D'ACTIONS — Style B amélioré ── */
 .tinder-actions{
   position:absolute;
   bottom:0;left:0;right:0;
-  display:flex;align-items:flex-end;justify-content:center;
-  gap:18px;
+  display:flex;align-items:center;justify-content:center;
+  gap:22px;
   padding:12px 24px 16px;
-  background:linear-gradient(0deg,rgba(0,0,0,.65) 0%,rgba(0,0,0,.25) 85%,transparent 100%);
+  background:rgba(0,0,0,.55);
   z-index:7;
 }
 .t-spacer{display:none;}
 .t-act{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .t-btn{
   display:flex;align-items:center;justify-content:center;
-  border-radius:50%;background:transparent;
+  border-radius:50%;
   cursor:pointer;transition:transform .15s;
 }
 .t-btn:active{transform:scale(1.15);}
-.t-btn svg{stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;fill:none;}
-.t-btn.pass{width:50px;height:50px;border:2.5px solid #ef4444;}
-.t-btn.pass svg{width:22px;height:22px;stroke:#ef4444;}
-.t-btn.info{width:38px;height:38px;border:2px solid rgba(255,255,255,.5);}
-.t-btn.info svg{width:18px;height:18px;stroke:#fff;}
-.t-btn.like{width:50px;height:50px;border:2.5px solid #22c55e;}
-.t-btn.like svg{width:22px;height:22px;stroke:#22c55e;}
+.t-btn svg{stroke-linecap:round;stroke-linejoin:round;}
+.t-btn.pass{width:48px;height:48px;background:rgba(239,68,68,.15);border:2px solid #ef4444;}
+.t-btn.pass svg{width:20px;height:20px;stroke:#ef4444;fill:none;stroke-width:2.5;}
+.t-btn.info{width:40px;height:40px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.5);}
+.t-btn.info svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;}
+.t-btn.like{width:48px;height:48px;background:rgba(34,197,94,.15);border:2px solid #22c55e;}
+.t-btn.like svg{width:20px;height:20px;stroke:none;fill:#22c55e;}
 .t-lbl{font-size:9px;color:rgba(255,255,255,.5);font-weight:500;}
 
 /* ── LISTE ── */
@@ -446,14 +446,15 @@ body{
 .lcard-pill{padding:3px 9px;border-radius:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-size:9px;font-weight:500;color:rgba(255,255,255,.85);}
 .lcard-pill.green{background:rgba(34,197,94,.2);border-color:rgba(34,197,94,.35);}
 
-/* ── NAV BOTTOM ── */
+/* ── NAV BOTTOM — Style C rounded square ── */
 .bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:8px 8px 12px;background:#111;flex-shrink:0;border-top:1px solid rgba(255,255,255,.08);}
 .nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
-.nav-icon{width:22px;height:22px;display:flex;align-items:center;justify-content:center;}
-.nav-icon svg{width:22px;height:22px;stroke:rgba(255,255,255,.4);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-.nav-lbl{font-size:9px;color:rgba(255,255,255,.4);font-weight:500;}
-.nav-item.active .nav-icon svg{stroke:var(--brand);}
-.nav-item.active .nav-lbl{color:var(--brand);}
+.nav-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;transition:background .2s;}
+.nav-icon svg{width:20px;height:20px;stroke:rgba(255,255,255,.35);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.nav-lbl{font-size:11px;color:rgba(255,255,255,.35);font-weight:400;}
+.nav-item.active .nav-icon{background:var(--brand);}
+.nav-item.active .nav-icon svg{stroke:#fff;}
+.nav-item.active .nav-lbl{color:var(--brand);font-weight:500;}
 
 /* ── OVERLAY + BOTTOM SHEETS ── */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,0);pointer-events:none;transition:background .3s;z-index:19;}
@@ -1072,7 +1073,7 @@ body{
   <!-- NAV BOTTOM -->
   <div class="bottom-nav">
     <div class="nav-item active">
-      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M8 5v2m8-2v2"/></svg></div>
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg></div>
       <div class="nav-lbl">Explorer</div>
     </div>
     <div class="nav-item">
