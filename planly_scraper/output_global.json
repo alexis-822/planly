@@ -5501,7 +5501,7 @@
     "price_level": null,
     "photos": [
       "images/marais_salants_de_l_ile_d_olonne/photo_1.jpg",
-      "images/marais_salants_de_l_ile_d_olonne/photo_2.webp",
+      "images/marais_salants_de_l_ile_d_olonne/photo_2.jpg",
       "images/marais_salants_de_l_ile_d_olonne/photo_3.jpg"
     ],
     "reviews": [
@@ -12290,9 +12290,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/sentier_cotier_foret_plages_d_olonne/photo_1.webp",
-      "images/sentier_cotier_foret_plages_d_olonne/photo_2.png",
-      "images/sentier_cotier_foret_plages_d_olonne/photo_3.webp"
+      "images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg",
+      "images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg",
+      "images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg"
     ],
     "reviews": [],
     "place_topics": null,
@@ -12718,7 +12718,7 @@
     "photos": [
       "images/circuit_des_marais_salants/photo_1.jpg",
       "images/circuit_des_marais_salants/photo_2.jpg",
-      "images/circuit_des_marais_salants/photo_3.webp"
+      "images/circuit_des_marais_salants/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -15038,8 +15038,8 @@
     "price_level": null,
     "photos": [
       "images/chateau_de_talmont/photo_1.jpg",
-      "images/chateau_de_talmont/photo_2.png",
-      "images/chateau_de_talmont/photo_3.webp"
+      "images/chateau_de_talmont/photo_2.jpg",
+      "images/chateau_de_talmont/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -16529,8 +16529,8 @@
     "price_level": null,
     "photos": [
       "images/vouvant/photo_1.jpg",
-      "images/vouvant/photo_2.webp",
-      "images/vouvant/photo_3.webp"
+      "images/vouvant/photo_2.jpg",
+      "images/vouvant/photo_3.jpg"
     ],
     "reviews": [],
     "place_topics": null,
