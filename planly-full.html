@@ -297,10 +297,10 @@ body{
 .hdr-btn{width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 4px 12px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;font-size:15px;color:#fff;transition:background .2s;-webkit-tap-highlight-color:transparent;}
 .hdr-btn:active{background:rgba(255,255,255,.15);}
 
-/* PILLS (glassmorphism) */
-.pills-row{padding:10px 0 0 16px;pointer-events:none;}
+/* PILLS */
+.pills-row{padding:10px 0 0 0;pointer-events:none;}
 .pills-row>*{pointer-events:auto;}
-.pills-scroll{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-right:16px;}
+.pills-scroll{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding:0 16px 0 10px;}
 .pills-scroll::-webkit-scrollbar{display:none;}
 .pill{display:inline-flex;align-items:center;padding:6px 12px;border-radius:20px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:500;color:#fff;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:all .18s;}
 .pill.active,.pill.tous{background:#fff;border-color:#fff;color:#1a1a18;font-weight:500;padding:6px 14px;}
@@ -410,7 +410,7 @@ body{
   display:flex;align-items:center;justify-content:center;
   gap:22px;
   padding:12px 24px 16px;
-  background:rgba(0,0,0,.55);
+  background:transparent;
   z-index:7;
 }
 .t-spacer{display:none;}
@@ -998,8 +998,6 @@ body{
 
           <div class="card-carousel">
             <div class="car-track" id="car-track"></div>
-            <div class="car-tap-left" onclick="carMove(-1,event)"></div>
-            <div class="car-tap-right" onclick="carMove(1,event)"></div>
           </div>
 
           <div class="card-grad-top"></div>
@@ -5096,7 +5094,6 @@ var drag={active:false,startX:0,startY:0,x:0,locked:false,swiping:false};
 function dragStart(e){
   if(drag.swiping)return;
   if(e.target.closest('.t-btn')||e.target.closest('.t-act'))return;
-  if(e.target.closest('.car-tap-left')||e.target.closest('.car-tap-right'))return;
   if(e.target.closest('.card-detail-btn'))return;
   var pt=e.touches?e.touches[0]:e;
   drag.active=true;drag.locked=false;drag.startX=pt.clientX;drag.startY=pt.clientY;drag.x=0;
