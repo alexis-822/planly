@@ -307,11 +307,11 @@ body{
 .hdr-btn:active{background:rgba(255,255,255,.3);}
 
 /* PILLS (glassmorphism) */
-.pills-row{padding:12px 16px 0;pointer-events:none;}
+.pills-row{padding:10px 0 0 16px;pointer-events:none;}
 .pills-row>*{pointer-events:auto;}
-.pills-scroll{display:flex;align-items:center;gap:7px;overflow-x:auto;scrollbar-width:none;}
+.pills-scroll{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-right:16px;}
 .pills-scroll::-webkit-scrollbar{display:none;}
-.pill{display:inline-flex;align-items:center;padding:7px 14px;border-radius:18px;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);font-size:12px;font-weight:500;color:#fff;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:all .18s;}
+.pill{display:inline-flex;align-items:center;padding:8px 16px;border-radius:20px;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);font-size:13px;font-weight:500;color:#fff;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:all .18s;}
 .pill.active,.pill.tous{background:#fff;border-color:#fff;color:#111;}
 .pill-back{display:inline-flex;align-items:center;padding:7px 14px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:12px;font-weight:500;color:rgba(255,255,255,.7);white-space:nowrap;cursor:pointer;flex-shrink:0;}
 
@@ -416,25 +416,28 @@ body{
 .tinder-actions{
   position:absolute;
   bottom:0;left:0;right:0;
-  display:flex;align-items:center;justify-content:center;
-  gap:20px;
-  padding:10px 20px 14px;
-  background:linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.3) 80%,transparent 100%);
+  display:flex;align-items:flex-end;justify-content:center;
+  gap:18px;
+  padding:12px 24px 16px;
+  background:linear-gradient(0deg,rgba(0,0,0,.65) 0%,rgba(0,0,0,.25) 85%,transparent 100%);
   z-index:7;
 }
 .t-spacer{display:none;}
-.t-act{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;}
+.t-act{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .t-btn{
   display:flex;align-items:center;justify-content:center;
   border-radius:50%;background:transparent;
   cursor:pointer;transition:transform .15s;
-  -webkit-tap-highlight-color:transparent;
 }
-.t-btn:active{transform:scale(1.2);}
-.t-btn.pass{width:52px;height:52px;border:2px solid #ef4444;color:#ef4444;font-size:22px;background:rgba(239,68,68,.08);}
-.t-btn.info{width:40px;height:40px;border:1.5px solid rgba(255,255,255,.45);color:#fff;font-size:16px;background:rgba(255,255,255,.08);}
-.t-btn.like{width:52px;height:52px;border:2px solid #22c55e;color:#22c55e;font-size:24px;background:rgba(34,197,94,.08);}
-.t-lbl{font-size:9px;color:rgba(255,255,255,.55);font-weight:500;letter-spacing:.02em;}
+.t-btn:active{transform:scale(1.15);}
+.t-btn svg{stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;fill:none;}
+.t-btn.pass{width:50px;height:50px;border:2.5px solid #ef4444;}
+.t-btn.pass svg{width:22px;height:22px;stroke:#ef4444;}
+.t-btn.info{width:38px;height:38px;border:2px solid rgba(255,255,255,.5);}
+.t-btn.info svg{width:18px;height:18px;stroke:#fff;}
+.t-btn.like{width:50px;height:50px;border:2.5px solid #22c55e;}
+.t-btn.like svg{width:22px;height:22px;stroke:#22c55e;}
+.t-lbl{font-size:9px;color:rgba(255,255,255,.5);font-weight:500;}
 
 /* ── LISTE ── */
 .list-zone{position:absolute;inset:0;overflow-y:auto;padding:90px 14px 80px;scrollbar-width:none;display:none;background:#111;}
@@ -453,11 +456,12 @@ body{
 .lcard-pill.green{background:rgba(34,197,94,.2);border-color:rgba(34,197,94,.35);}
 
 /* ── NAV BOTTOM ── */
-.bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:6px 8px 10px;background:#111;flex-shrink:0;}
-.nav-item{display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;}
-.nav-icon{font-size:16px;color:rgba(255,255,255,.4);}
-.nav-lbl{font-size:7px;color:rgba(255,255,255,.4);font-weight:500;}
-.nav-item.active .nav-icon{color:var(--brand);}
+.bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:8px 8px 12px;background:#111;flex-shrink:0;border-top:1px solid rgba(255,255,255,.08);}
+.nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.nav-icon{width:22px;height:22px;display:flex;align-items:center;justify-content:center;}
+.nav-icon svg{width:22px;height:22px;stroke:rgba(255,255,255,.4);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.nav-lbl{font-size:9px;color:rgba(255,255,255,.4);font-weight:500;}
+.nav-item.active .nav-icon svg{stroke:var(--brand);}
 .nav-item.active .nav-lbl{color:var(--brand);}
 
 /* ── OVERLAY + BOTTOM SHEETS ── */
@@ -1030,15 +1034,15 @@ body{
           <!-- Barre d'actions -->
           <div class="tinder-actions">
             <div class="t-act" onclick="doSwipeBtn('pass');event.stopPropagation()">
-              <div class="t-btn pass">✕</div>
+              <div class="t-btn pass"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
               <div class="t-lbl">Passer</div>
             </div>
             <div class="t-act" onclick="openPoiSheet(currentIdx);event.stopPropagation()">
-              <div class="t-btn info">ℹ</div>
+              <div class="t-btn info"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></div>
               <div class="t-lbl">Détail</div>
             </div>
             <div class="t-act" onclick="doSwipeBtn('like');event.stopPropagation()">
-              <div class="t-btn like">♥</div>
+              <div class="t-btn like"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div>
               <div class="t-lbl">J'aime</div>
             </div>
           </div>
@@ -1076,10 +1080,22 @@ body{
 
   <!-- NAV BOTTOM -->
   <div class="bottom-nav">
-    <div class="nav-item active"><div class="nav-icon">🃏</div><div class="nav-lbl">Explorer</div></div>
-    <div class="nav-item"><div class="nav-icon">❤️</div><div class="nav-lbl">Activités</div></div>
-    <div class="nav-item"><div class="nav-icon">🛒</div><div class="nav-lbl">Commerces</div></div>
-    <div class="nav-item"><div class="nav-icon">👤</div><div class="nav-lbl">Profil</div></div>
+    <div class="nav-item active">
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M8 5v2m8-2v2"/></svg></div>
+      <div class="nav-lbl">Explorer</div>
+    </div>
+    <div class="nav-item">
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div>
+      <div class="nav-lbl">Activités</div>
+    </div>
+    <div class="nav-item">
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+      <div class="nav-lbl">Commerces</div>
+    </div>
+    <div class="nav-item">
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+      <div class="nav-lbl">Profil</div>
+    </div>
   </div>
 
   <!-- OVERLAY pour panneaux -->
