@@ -159,6 +159,7 @@ def convert_poi(p):
     return {
         "imgs": imgs,
         "name": p.get("name", ""),
+        "commune": p.get("commune", ""),
         "cat": cat_label,
         "note": str(p.get("rating") or "?"),
         "budgetBadge": budget_badge,
@@ -171,6 +172,7 @@ def convert_poi(p):
         "accroche": desc_short[:80],
         "descLong": desc_long,
         "category": SUBCAT_CAT_MAP.get(p.get("subcategory", ""), "autre"),
+        "subcategory": p.get("subcategory", ""),
         "pricing": {
             "adult": p.get("price_adult", 0) or 0,
             "child": p.get("price_child", 0) or 0,

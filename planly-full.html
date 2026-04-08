@@ -291,10 +291,29 @@ body{
 }
 .app-header>*{pointer-events:auto;}
 .header-row{display:flex;align-items:center;gap:10px;}
-.search-bar-explorer{flex:1;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:28px;height:42px;padding:0 14px;min-width:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 24px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.3);}
+.search-bar-explorer{flex:1;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:28px;height:42px;padding:0 14px;min-width:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 24px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.3);transition:background .2s,border-color .2s,box-shadow .2s;}
+.app-header.searching{background:#fff!important;border-bottom:1px solid var(--br);padding-bottom:10px;}
+.app-header.searching .search-bar-explorer{background:var(--bg-d,#f0ece0);border-color:var(--br);box-shadow:none;}
+.app-header.searching .search-bar-explorer svg{stroke:var(--txm);}
+.app-header.searching .search-input-explorer{color:var(--tx);}
+.app-header.searching .search-input-explorer::placeholder{color:var(--txl,#aaa);}
+.app-header.searching .srch-clear{color:var(--txm);}
+.app-header.searching .hdr-btn{background:var(--bg-d,#f0ece0);border-color:var(--br);}
+.app-header.searching .hdr-btn svg{stroke:var(--tx);}
 .search-bar-explorer svg{flex-shrink:0;width:16px;height:16px;stroke:rgba(255,255,255,.6);fill:none;stroke-width:2;stroke-linecap:round;}
 .search-input-explorer{border:none;outline:none;background:transparent;font-family:'DM Sans',sans-serif;font-size:13px;color:#fff;width:100%;}
 .search-input-explorer::placeholder{color:rgba(255,255,255,.4);}
+.srch-clear{font-size:14px;color:rgba(255,255,255,.5);cursor:pointer;flex-shrink:0;padding:0 2px;}
+/* VUE RÉSULTATS RECHERCHE */
+.srch-view{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg);min-height:0;position:relative;}
+.srch-view.open{display:flex;}
+/* Le scroll commence sous le app-header (hauteur approx 66px + safe-area) */
+.srch-view-scroll{flex:1;overflow-y:auto;padding:calc(72px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));scrollbar-width:none;}
+.srch-view-scroll::-webkit-scrollbar{display:none;}
+.srch-view-title{font-family:'Fraunces',serif;font-size:17px;font-weight:400;color:var(--tx);margin-bottom:14px;}
+.srch-empty-page{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:10px;padding:40px 20px;text-align:center;}
+.srch-empty-icon{font-size:40px;opacity:.25;}
+.srch-empty-txt{font-size:14px;color:var(--txm);line-height:1.5;}
 .hdr-btn{width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 4px 12px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;font-size:15px;color:#fff;transition:background .2s;-webkit-tap-highlight-color:transparent;}
 .hdr-btn:active{background:rgba(255,255,255,.15);}
 
@@ -501,24 +520,6 @@ body{
 .ss-mode-btn.active{background:var(--brand);border-color:var(--brand);color:#fff;}
 .ss-apply-btn{width:100%;padding:12px;border:none;border-radius:14px;background:var(--brand);color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;margin-top:10px;}
 
-/* ── PANNEAU EDIT SEJOUR (crayon) ── */
-.edit-sheet{
-  position:fixed;bottom:0;left:0;right:0;
-  background:var(--wh);border-radius:24px 24px 0 0;
-  transform:translateY(100%);transition:transform .42s cubic-bezier(.32,0,.18,1);
-  z-index:21;max-height:80vh;overflow-y:auto;
-  padding:0 20px 20px;
-  box-shadow:0 -4px 20px rgba(0,0,0,.12);
-}
-.edit-sheet.open{transform:translateY(0);}
-.edit-sheet .bs-handle-row{padding:10px 0 6px;display:flex;justify-content:center;}
-.edit-sheet .bs-handle{width:36px;height:4px;border-radius:2px;background:var(--bg-d);}
-.es-field{margin-bottom:14px;}
-.es-label{font-size:10px;font-weight:600;color:var(--txl);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;}
-.es-value{font-size:13px;color:var(--tx);padding:10px 14px;background:var(--bg);border:1.5px solid var(--br);border-radius:12px;}
-.es-value input{background:transparent;border:none;outline:none;color:var(--tx);font-family:'DM Sans',sans-serif;font-size:13px;width:100%;}
-.es-value input::placeholder{color:var(--txl);}
-.es-apply-btn{width:100%;padding:12px;border:none;border-radius:14px;background:var(--brand);color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;margin-top:10px;}
 .bsheet{position:fixed;bottom:0;left:0;right:0;background:var(--wh);border-radius:24px 24px 0 0;transform:translateY(100%);transition:transform .42s cubic-bezier(.32,0,.18,1);z-index:21;display:flex;flex-direction:column;max-height:88%;}
 .bsheet.open{transform:translateY(0);}
 .bs-handle-row{padding:10px 0 6px;display:flex;justify-content:center;cursor:pointer;flex-shrink:0;}
@@ -1072,10 +1073,10 @@ body{
     <div class="header-row">
       <div class="search-bar-explorer">
         <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><line x1="14" y1="14" x2="18" y2="18"/></svg>
-        <input type="text" class="search-input-explorer" id="search-input-explorer" placeholder="Rechercher...">
+        <input type="text" class="search-input-explorer" id="search-input-explorer" placeholder="Rechercher..." oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)" autocomplete="off">
+        <div class="srch-clear" id="srch-clear" onclick="clearSearch()" style="display:none">✕</div>
       </div>
-      <div class="hdr-btn" onclick="openEditSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
-      <div class="hdr-btn" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
+<div class="hdr-btn" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
     </div>
     <div class="pills-row">
       <div class="pills-scroll" id="pills-scroll">
@@ -1089,6 +1090,11 @@ body{
       </div>
     </div>
     <div class="header-dots" id="header-dots"></div>
+  </div>
+
+  <!-- VUE RECHERCHE -->
+  <div class="srch-view" id="srch-view">
+    <div class="srch-view-scroll" id="srch-view-scroll"></div>
   </div>
 
   <!-- VUE ACTIVITÉS -->
@@ -1174,16 +1180,6 @@ body{
     </div>
   </div>
 
-  <!-- PANNEAU EDIT SEJOUR (crayon) -->
-  <div class="edit-sheet" id="edit-sheet">
-    <div class="bs-handle-row" onclick="closeEditSheet()"><div class="bs-handle"></div></div>
-    <div class="ss-title">Modifier le séjour</div>
-    <div class="es-field"><div class="es-label">Destination</div><div class="es-value"><input type="text" id="es-dest" placeholder="Ex: Les Sables-d'Olonne"></div></div>
-    <div class="es-field"><div class="es-label">Dates</div><div class="es-value"><input type="text" id="es-dates" placeholder="Ex: 15-22 juillet"></div></div>
-    <div class="es-field"><div class="es-label">Groupe</div><div class="es-value"><input type="text" id="es-group" placeholder="Ex: Famille, 2 enfants"></div></div>
-    <div class="es-field"><div class="es-label">Ambiance</div><div class="es-value"><input type="text" id="es-ambiance" placeholder="Ex: Nature, détente"></div></div>
-    <button class="es-apply-btn" onclick="closeEditSheet()">Mettre à jour</button>
-  </div>
 
   <!-- BS POI — Version premium sobre -->
   <div class="bsheet" id="sheet-poi">
@@ -1798,6 +1794,7 @@ var POIS=[
       "planly_scraper/images/grande_plage_du_remblai/photo_3.jpg"
     ],
     "name": "Grande Plage du Remblai",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -1814,6 +1811,7 @@ var POIS=[
     "accroche": "L'emblématique promenade face à l'océan des Sables-d'Olonne. Une grande plage do",
     "descLong": "La Grande Plage du Remblai est le joyau des Sables-d'Olonne : une immense étendue de sable fin bordée par la célèbre promenade du Remblai, idéale pour flâner en bord d'océan à toute heure. Face à l'Atlantique, elle offre des panoramas spectaculaires, particulièrement saisissants au lever du soleil. Délimitée par la jetée au nord, elle invite à la baignade en saison, aux promenades à pied ou à vélo, et à la détente sur les bancs face aux vagues. Restaurants, glaciers et commerces jalonnent la promenade pour compléter l'expérience balnéaire vendéenne par excellence.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -1898,6 +1896,7 @@ var POIS=[
       "planly_scraper/images/plage_de_sauveterre/photo_3.jpg"
     ],
     "name": "Plage de Sauveterre",
+    "commune": "L'Île-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.5",
     "budgetBadge": "€ Gratuit",
@@ -1914,6 +1913,7 @@ var POIS=[
     "accroche": "Plage sauvage et immense au souffle océanique, entre surf, dunes et liberté à pe",
     "descLong": "La plage de Sauveterre, aux Sables-d'Olonne, est une vaste étendue de sable sauvage accessible après une courte marche dans les dunes depuis le parking. Spot prisé des surfeurs grâce à ses vagues puissantes, elle offre également une zone de baignade surveillée en saison. Son caractère naturel et son immensité séduisent les amateurs de grand air et d'espace. Une partie de la plage est dédiée au naturisme, à environ 700 mètres. Les animaux y sont les bienvenus. À marée haute, la plage se réduit considérablement : mieux vaut venir à marée basse pour en profiter pleinement.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -1983,6 +1983,7 @@ var POIS=[
       "planly_scraper/images/plage_des_granges/photo_3.jpg"
     ],
     "name": "Plage des Granges",
+    "commune": "L'Île-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.4",
     "budgetBadge": "€ Gratuit",
@@ -1999,6 +2000,7 @@ var POIS=[
     "accroche": "Plage sauvage entre sable fin et rochers, ouverte aux chiens et aux surfeurs. Un",
     "descLong": "La Plage des Granges est une belle plage de sable fin bordée d'espaces naturels préservés, appréciée pour son cadre sauvage et authentique. Idéale pour les familles avec la présence d'une surveillance entre drapeaux jaune et rouge, elle accueille également les chiens en laisse, ce qui en fait un spot prisé des vacanciers voyageant avec leurs animaux. Le mélange de sable et de cailloux lui confère un caractère naturel unique. À proximité, des cours et locations de surf permettent aux amateurs de glisse de profiter des vagues. Un parking spacieux facilite l'accès, et la paillote Le Margouillat vous attend pour vous désaltérer.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2066,6 +2068,7 @@ var POIS=[
       "planly_scraper/images/plage_de_tanchet/photo_1.jpg"
     ],
     "name": "Plage de Tanchet",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.6",
     "budgetBadge": "€ Gratuit",
@@ -2082,6 +2085,7 @@ var POIS=[
     "accroche": "Plage urbaine des Sables-d'Olonne, idéale pour une journée en famille ou entre a",
     "descLong": "La plage de Tanchet est une adresse incontournable aux Sables-d'Olonne, appréciée pour son ambiance conviviale et sa situation pratique. Bien équipée, elle dispose de toilettes gratuites à proximité, de petits bars et restaurants accessibles depuis le sable, parfaits pour un apéro au coucher de soleil. La baignade y est surveillée en saison, rassurant les familles avec enfants. Bien que fréquentée en été, elle conserve tout son charme. Le 14 juillet y est particulièrement festif. Des places de parking gratuites se trouvent dans les petites rues alentour, un vrai plus en pleine saison vendéenne.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2161,6 +2165,7 @@ var POIS=[
       "planly_scraper/images/baie_de_cayola/photo_3.jpg"
     ],
     "name": "Baie de Cayola",
+    "commune": "Château-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.2",
     "budgetBadge": "€ Gratuit",
@@ -2177,6 +2182,7 @@ var POIS=[
     "accroche": "Une baie sauvage et préservée aux portes des Sables-d'Olonne, entre falaises dor",
     "descLong": "Nichée entre les Sables-d'Olonne et Talmont-Saint-Hilaire, la Baie de Cayola est l'une des plus belles criques de la côte vendéenne. Ses eaux claires et sa plage de sable fin, encadrée par des rochers et une végétation verdoyante, en font un lieu prisé pour la baignade, le farniente et la plongée en apnée. Le sentier côtier longeant la baie offre de superbes panoramas sur l'Atlantique. Idéale pour les familles comme pour les amoureux de nature, la baie se découvre également depuis le camping éponyme, bien réputé pour son accueil chaleureux et ses animations estivales.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2261,6 +2267,7 @@ var POIS=[
       "planly_scraper/images/plage_de_la_mine/photo_3.jpg"
     ],
     "name": "Plage de la Mine",
+    "commune": "Jard-sur-Mer",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.6",
     "budgetBadge": "€ Gratuit",
@@ -2277,6 +2284,7 @@ var POIS=[
     "accroche": "Plage sauvage et préservée à Jard-sur-Mer, moins fréquentée que ses voisines, av",
     "descLong": "Nichée à Jard-sur-Mer, la Plage de la Mine séduit par son caractère sauvage et sa tranquillité relative. On y accède à pied depuis un parking ombragé en forêt, en empruntant une allée agréable qui réserve une petite surprise : un snack sur le chemin. La plage est surveillée en saison, avec des indications claires sur les zones de baignade autorisées. Les conditions de mer peuvent être toniques, rendant la vigilance des maîtres-nageurs précieuse. Propreté exemplaire, toilettes sur place et accès vélo possible : une belle alternative aux plages bondées du secteur.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2351,6 +2359,7 @@ var POIS=[
       "planly_scraper/images/plage_de_la_paree/photo_3.jpg"
     ],
     "name": "Plage de la Parée",
+    "commune": "Brétignolles-sur-Mer",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.4",
     "budgetBadge": "€ Gratuit",
@@ -2367,6 +2376,7 @@ var POIS=[
     "accroche": "Une plage familiale au sable fin à Bretignolles-sur-Mer, où la marée sculpte à c",
     "descLong": "La plage de la Parée, nichée à Bretignolles-sur-Mer en Vendée, est une plage de sable fin facilement accessible, appréciée des familles comme des amateurs de nature. Bordée d'hôtels et de restaurants, elle offre tout le confort nécessaire pour une journée réussie au bord de l'Atlantique. À marée basse, les rochers se découvrent pour la pêche à pied et les jeux des enfants ; à marée haute, l'océan reprend ses droits avec ses vagues idéales pour les activités nautiques. Un lieu apaisant, propre et vivant, à vivre absolument selon le rythme des marées.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2446,6 +2456,7 @@ var POIS=[
       "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg"
     ],
     "name": "Plage & Dunes du Veillon",
+    "commune": "Talmont-Saint-Hilaire",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -2462,6 +2473,7 @@ var POIS=[
     "accroche": "L'une des plus belles plages d'Europe, sauvage et préservée, avec ses dunes maje",
     "descLong": "La Plage & Dunes du Veillon, à Talmont-Saint-Hilaire, est un joyau naturel de la côte vendéenne. Avec son immense étendue de sable fin, ses dunes sauvages classées et ses panoramas préservés, elle figure parmi les plus belles plages d'Europe. Idéale pour la baignade surveillée en été, la surf, ou simplement pour se promener le long des falaises jusqu'au port de Bourgenay. Le coucher de soleil depuis la plage est absolument époustouflant. Un grand parking facilite l'accès, et une petite restauration est disponible sur place pour se ravitailler après une belle journée en plein air.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2536,6 +2548,7 @@ var POIS=[
       "planly_scraper/images/plage_des_dunes/photo_3.jpg"
     ],
     "name": "Plage des Dunes",
+    "commune": "Brétignolles-sur-Mer",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.5",
     "budgetBadge": "€ Gratuit",
@@ -2552,6 +2565,7 @@ var POIS=[
     "accroche": "Sable fin, vagues douces et air iodé : la Plage des Dunes s'impose comme un écri",
     "descLong": "La Plage des Dunes est une longue étendue de sable fin nichée au cœur d'un cadre naturel préservé, typique du littoral vendéen. Ses vagues légères en font un spot parfait pour les familles avec enfants en bas âge et les maîtres accompagnés de leurs chiens. Baignade surveillée en saison, parking gratuit à quelques minutes à pied et une propreté remarquable contribuent à son succès. En dehors de l'été, l'endroit offre une atmosphère plus sauvage et dépaysante, idéale pour les balades ressourçantes face à l'océan. Une plage complète, accessible et sincèrement attachante.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2629,6 +2643,7 @@ var POIS=[
       "planly_scraper/images/plage_des_conches/photo_1.jpg"
     ],
     "name": "Plage des Conches",
+    "commune": "Longeville-sur-Mer",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.6",
     "budgetBadge": "€ Gratuit",
@@ -2645,6 +2660,7 @@ var POIS=[
     "accroche": "Une plage sauvage au bout des dunes, entre vagues généreuses et couchers de sole",
     "descLong": "La Plage des Conches à Longeville-sur-Mer se mérite : après avoir traversé les dunes de sable fin, une immense plage dorée se dévoile, baignée par l'Atlantique. Surveillée en saison, propre et familiale, elle offre de belles vagues pour les bodyboarders et surfeurs, tandis que les enfants profitent des rouleaux plus doux en bord de shore. Les amateurs de photographie seront comblés par des couchers de soleil spectaculaires. Les chiens y sont les bienvenus. Situées à la limite nord du marais Poitevin, les Conches constituent un cadre naturel exceptionnel, entre dunes, cairns de pierre et horizon infini.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2724,6 +2740,7 @@ var POIS=[
       "planly_scraper/images/plage_de_l_aubraie/photo_3.jpg"
     ],
     "name": "Plage de l'Aubraie",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -2740,6 +2757,7 @@ var POIS=[
     "accroche": "Plage sauvage et préservée aux airs de bout du monde. Un cadre naturel vibrant, ",
     "descLong": "La plage de l'Aubraie est un véritable écrin naturel vendéen, peu fréquenté même en plein été. Son caractère sauvage séduit les amateurs de paysages authentiques : galets doux, dunes et horizons dégagés offrent un cadre visuel saisissant. Accessible à vélo via une piste cyclable, elle se prête à merveille aux pique-niques et aux contemplations face à l'océan. Attention toutefois : la baignade y est déconseillée, voire interdite, en raison de courants dangereux. On y observe crabes et petite faune littorale, et les couchers de soleil y sont tout simplement spectaculaires.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2824,6 +2842,7 @@ var POIS=[
       "planly_scraper/images/plage_des_belugas/photo_3.jpg"
     ],
     "name": "Plage des Bélugas",
+    "commune": "L'Aiguillon-la-Presqu'île",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -2840,6 +2859,7 @@ var POIS=[
     "accroche": "Plage familiale de sable fin surveillée, accessible à tous et bien équipée pour ",
     "descLong": "La Plage des Bélugas, à L'Aiguillon-la-Presqu'île, est une adresse incontournable pour les amoureux du littoral vendéen. Avec son sable fin naturel, elle séduit familles et vacanciers grâce à une surveillance assurée par des secouristes, des sanitaires propres et des parkings à proximité. Entièrement pensée pour l'accessibilité, elle propose des fauteuils roulants adaptés pour accéder à l'eau. Un espace restauration (frites, glaces) complète l'expérience. Les chiens sont acceptés dans les zones non surveillées. Tri sélectif sur place, propreté exemplaire : une plage où il fait bon revenir.",
     "category": "plage",
+    "subcategory": "Plages & Côte",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2924,6 +2944,7 @@ var POIS=[
       "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpg"
     ],
     "name": "Forêt Domaniale d'Olonne",
+    "commune": "Olonne-sur-Mer",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -2940,6 +2961,7 @@ var POIS=[
     "accroche": "Échappée verte aux portes des Sables-d'Olonne, entre pins maritimes et côte sauv",
     "descLong": "La Forêt Domaniale d'Olonne s'étend sur plusieurs centaines d'hectares de pinèdes et de sous-bois entre les Sables-d'Olonne et le littoral atlantique. Ses nombreux sentiers balisés partent de plusieurs aires d'accueil aménagées — l'Aire du Menhir, l'Acalmie, Grande Pointe — et permettent de rejoindre à pied la côte sauvage et ses plages préservées. Idéale pour les randonneurs, les familles et les promeneurs du dimanche, cette forêt offre calme, fraîcheur et une faune discrète à observer. Un véritable poumon vert accessible depuis le cœur de la station balnéaire.",
     "category": "nature",
+    "subcategory": "Forêts & Nature",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3014,6 +3036,7 @@ var POIS=[
       "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpg"
     ],
     "name": "Marais Salants de l'Île d'Olonne",
+    "commune": "L'Île-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -3030,6 +3053,7 @@ var POIS=[
     "accroche": "Entre reflets d'eau et teintes salines, une balade apaisante de 7 km au cœur des",
     "descLong": "Les Marais Salants de l'Île d'Olonne offrent une escapade naturelle hors du temps, à deux pas des Sables-d'Olonne. Parcourez plus de 7 km de sentiers faciles longeant les anciennes salines, avec pour décor des reflets d'eau, des teintes ocre et rose des bassins, et une faune locale surprenante. La balade débute près d'un magnifique moulin rénové et se prolonge selon les envies grâce à plusieurs itinéraires balisés. Une exposition photo à ciel ouvert enrichit la découverte. Lieu idéal pour se ressourcer dans le calme, accessible à tous, animaux de compagnie bienvenus.",
     "category": "nature",
+    "subcategory": "Forêts & Nature",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3109,6 +3133,7 @@ var POIS=[
       "planly_scraper/images/lac_de_tanchet/photo_3.jpg"
     ],
     "name": "Lac de Tanchet",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.4",
     "budgetBadge": "€ Gratuit",
@@ -3125,6 +3150,7 @@ var POIS=[
     "accroche": "Un petit lac paisible niché entre forêt et océan, idéal pour une balade ressourç",
     "descLong": "Le Lac de Tanchet est un écrin de nature surprenant, blotti entre la forêt domaniale et les dunes de l'Atlantique, à deux pas du remblai des Sables-d'Olonne. Ce plan d'eau accueille une colonie de goélands et offre un tour à pied accessible à tous, dans un cadre verdoyant et bien entretenu. Idéal pour s'initier à la voile ou simplement flâner au grand air, la balade se conclut naturellement sur le célèbre remblai face à l'océan. Un spot nature rare en plein cœur d'une station balnéaire animée.",
     "category": "nature",
+    "subcategory": "Forêts & Nature",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3209,6 +3235,7 @@ var POIS=[
       "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg"
     ],
     "name": "Réserve Nat. Baie de l'Aiguillon",
+    "commune": "L'Aiguillon-sur-Mer",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.5",
     "budgetBadge": "€ Gratuit",
@@ -3225,6 +3252,7 @@ var POIS=[
     "accroche": "Un sanctuaire sauvage où ciel et mer se rejoignent, bercé par les marées et habi",
     "descLong": "La Réserve Naturelle de la Baie de l'Aiguillon est l'un des sites ornithologiques les plus importants de la façade atlantique française. Vasières, marais salants et prés salés forment un écosystème riche et préservé, rythmé par le ballet incessant des marées. À marée descendante, les oiseaux limicoles et anatidés se rassemblent par milliers pour se nourrir, offrant un spectacle naturel époustouflant. Un chemin de randonnée accessible longe la baie et permet d'observer ce milieu sauvage en toute quiétude, au lever comme au coucher du soleil. Un lieu encore authentique, loin de l'agitation touristique.",
     "category": "nature",
+    "subcategory": "Forêts & Nature",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3304,6 +3332,7 @@ var POIS=[
       "https://www.vendee-tourisme.com/sites/www.vendee-tourisme.com/files/styles/paragraphes_media_50/public/thumbnails/image/yeu-continent-570x430.jpg?itok=dbGFm99b"
     ],
     "name": "Île d'Yeu",
+    "commune": "Saint-Gilles (ferry)",
     "cat": "🌊 Nature & Grand Air",
     "note": "?",
     "budgetBadge": "€€€ Premium",
@@ -3320,6 +3349,7 @@ var POIS=[
     "accroche": "Une île sauvage au large de la Vendée, entre côte rocheuse battue par les vents ",
     "descLong": "Perle du golfe de Gascogne, l'île d'Yeu séduit par ses paysages contrastés : côte sauvage et déchiquetée au nord, plages de sable fin au sud. À seulement une heure de bateau depuis Fromentine ou Saint-Gilles-Croix-de-Vie, cette île de 23 km² invite à explorer ses sentiers côtiers à vélo ou à pied, à découvrir le vieux château médiéval, les villages pittoresques aux maisons blanches et les criques secrètes. Un véritable dépaysement, loin de l'agitation du continent, où le temps semble suspendu entre terre, mer et ciel.",
     "category": "nature",
+    "subcategory": "Forêts & Nature",
     "pricing": {
       "adult": 43.6,
       "child": 24.0,
@@ -3381,6 +3411,7 @@ var POIS=[
       "https://www.vendee-tourisme.com/sites/www.vendee-tourisme.com/files/styles/paragraphes_mosaique_horizontal/public/thumbnails/image/le-gois_noirmoutier_570x430.jpg?itok=GDo5QaXq"
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
+    "commune": "Noirmoutier-en-l'Île",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.8",
     "budgetBadge": "€ Gratuit",
@@ -3397,6 +3428,7 @@ var POIS=[
     "accroche": "Une route engloutie par l'océan : le Passage du Gois ne se découvre qu'à marée b",
     "descLong": "Le Passage du Gois est une chaussée submersible de 4,5 km reliant l'île de Noirmoutier au continent, praticable uniquement à marée basse. Deux fois par jour, la mer se retire et dévoile cette route mythique que l'océan recouvre ensuite de 3 à 4 mètres d'eau. Le spectacle est saisissant : des balises-refuges jalonnent la route pour rappeler la puissance des marées. Les amateurs de pêche à pied s'y retrouvent en nombre pour ramasser huîtres, moules et bigorneaux. Vérifiez impérativement les horaires des marées avant de vous lancer sur cette route hors du commun.",
     "category": "nature",
+    "subcategory": "Forêts & Nature",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3481,6 +3513,7 @@ var POIS=[
       "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpg"
     ],
     "name": "Phare de la Petite Jetée",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -3497,6 +3530,7 @@ var POIS=[
     "accroche": "Un phare historique au bout de la jetée des Sables-d'Olonne, offrant une vue pan",
     "descLong": "Érigée au XVIIIe siècle, la Petite Jetée des Sables-d'Olonne est bien plus qu'un simple ouvrage portuaire : elle incarne des siècles d'histoire maritime vendéenne. Protégeant le port de l'ensablement, elle fut au XIXe siècle un chemin de halage aux côtés de la Grande Jetée. Aujourd'hui, la promenade le long de cette digue est devenue un incontournable de la ville. Au bout du chemin, le phare offre une vue imprenable sur le Remblai, la Grande Plage et l'horizon atlantique. Accessible aux poussettes et accessible à pied, c'est l'endroit idéal pour une balade en famille ou en amoureux.",
     "category": "pointdevue",
+    "subcategory": "Points de vue",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3576,6 +3610,7 @@ var POIS=[
       "planly_scraper/images/belvedere_arrondeau/photo_3.jpg"
     ],
     "name": "Belvédère Arrondeau",
+    "commune": "Saint-Hilaire-de-Riez",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.8",
     "budgetBadge": "€ Gratuit",
@@ -3592,6 +3627,7 @@ var POIS=[
     "accroche": "Un belvédère spectaculaire sur la corniche vendéenne, où la mer se déchaîne cont",
     "descLong": "Perché sur la corniche de Riez à Saint-Hilaire-de-Riez, le Belvédère Arrondeau offre l'un des panoramas les plus saisissants du littoral vendéen. Une plateforme aménagée permet d'admirer la côte sauvage et, par temps clair, d'apercevoir les côtes de l'île d'Yeu. Des panneaux d'orientation vous aident à identifier les points remarquables du paysage. L'expérience atteint son paroxysme lors des grandes tempêtes : les vagues se fracassent sur les rochers avec une puissance spectaculaire. À deux pas, le célèbre Trou du Diable et son geyser naturel complètent parfaitement cette escapade sur la corniche. Accessible aux poussettes et fauteuils roulants.",
     "category": "pointdevue",
+    "subcategory": "Points de vue",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3666,6 +3702,7 @@ var POIS=[
       "planly_scraper/images/le_puits_d_enfer/photo_3.jpg"
     ],
     "name": "Le Puits d'Enfer",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.6",
     "budgetBadge": "€ Gratuit",
@@ -3682,6 +3719,7 @@ var POIS=[
     "accroche": "Une faille naturelle où l'océan se déchaîne avec une puissance spectaculaire. Un",
     "descLong": "Le Puits d'Enfer est une curiosité naturelle saisissante de la côte vendéenne : une faille creusée dans la roche où les vagues s'engouffrent avec une force impressionnante. Le spectacle change radicalement selon le coefficient de marée — plus il est élevé (au-delà de 90), plus la houle gronde, l'écume jaillit et les embruns envahissent l'air. Idéal à observer à marée montante ou haute par fort coefficient, ce site chargé de légendes offre aussi une belle promenade sur les rochers par temps calme. Un lieu où la nature vendéenne révèle toute sa puissance brute.",
     "category": "pointdevue",
+    "subcategory": "Points de vue",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3756,6 +3794,7 @@ var POIS=[
       "planly_scraper/images/pointe_du_payre/photo_3.jpg"
     ],
     "name": "Pointe du Payré",
+    "commune": "Jard-sur-Mer",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.8",
     "budgetBadge": "€ Gratuit",
@@ -3772,6 +3811,7 @@ var POIS=[
     "accroche": "Falaises, forêt et mer en un seul sentier magique. Une boucle facile et sauvage ",
     "descLong": "La Pointe du Payré, à Jard-sur-Mer, offre une balade enchantée d'environ 5 km entre forêt de pins, falaises dominant l'océan et rivage vendéen. Le sentier bien balisé se parcourt en 1h30 à 2h, sans dénivelé significatif, ce qui le rend accessible à presque tous. Le départ s'effectue depuis un parking gratuit et facile d'accès. Les paysages alternent atmosphères intimes sous les frondaisons et panoramas grandioses sur l'Atlantique. Les chiens sont acceptés en laisse. Un incontournable pour les amateurs de nature à deux pas des plages de Vendée.",
     "category": "pointdevue",
+    "subcategory": "Points de vue",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3841,6 +3881,7 @@ var POIS=[
       "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg"
     ],
     "name": "Sentier côtier Forêt–Plages d'Olonne",
+    "commune": "Olonne-sur-Mer",
     "cat": "🌊 Nature & Grand Air",
     "note": "?",
     "budgetBadge": "€ Gratuit",
@@ -3857,6 +3898,7 @@ var POIS=[
     "accroche": "Un sentier côtier sauvage entre forêt de pins et plages de sable fin, face à l'A",
     "descLong": "Le sentier côtier Forêt–Plages d'Olonne est une randonnée incontournable qui longe le littoral vendéen entre le massif forestier des Olonnes et ses grandes plages atlantiques. Sur plusieurs kilomètres, le chemin alterne entre sous-bois ombragés de pins maritimes, dunes préservées et panoramas ouverts sur l'océan. Idéal pour s'évader en toute saison, ce parcours accessible et varié offre des points de vue exceptionnels, des espaces naturels protégés et la possibilité de rejoindre facilement les plages pour une baignade. Un véritable bol d'air iodé au cœur du patrimoine naturel vendéen.",
     "category": "balade",
+    "subcategory": "Balades & Promenades",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -3918,6 +3960,7 @@ var POIS=[
       "planly_scraper/images/le_remblai/photo_3.jpg"
     ],
     "name": "Le Remblai",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -3934,6 +3977,7 @@ var POIS=[
     "accroche": "La promenade iconique des Sables-d'Olonne face à l'océan Atlantique. Vue spectac",
     "descLong": "Le Remblai est la promenade emblématique des Sables-d'Olonne, s'étirant sur plus de 2 kilomètres en bord de mer. Face à l'immensité de l'océan Atlantique, ce boulevard animé offre une vue à couper le souffle sur les vagues et la Grande Plage. Bordé de restaurants, glaciers et boutiques, il est le cœur battant de la ville estivale. Au nord, la jetée ferme l'horizon tandis qu'au sud le quartier de la Chaume apporte une touche authentique. Idéal pour flâner au lever du soleil, profiter d'un coucher de soleil enflammé ou simplement savourer une glace les pieds dans le sable.",
     "category": "balade",
+    "subcategory": "Balades & Promenades",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4018,6 +4062,7 @@ var POIS=[
       "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg"
     ],
     "name": "Circuit des Marais Salants",
+    "commune": "L'Île-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -4034,6 +4079,7 @@ var POIS=[
     "accroche": "Balade apaisante de 7 km au cœur des marais salants de L'Île-d'Olonne, entre ref",
     "descLong": "Partez à la découverte du Circuit des Marais Salants à L'Île-d'Olonne, une balade de plus de 7 km accessible à tous. Le parcours débute par un magnifique moulin rénové avant de vous emmener au fil des chenaux salants, entre teintes iodées et paysages apaisants. Une exposition photo à ciel ouvert jalonne le chemin, offrant une dimension culturelle à cette escapade nature. Idéal pour observer la faune locale, notamment les oiseaux des zones humides. Deux sentiers de randonnée se croisent également sur le circuit, parfait pour prolonger l'aventure en toute tranquillité.",
     "category": "balade",
+    "subcategory": "Balades & Promenades",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4113,6 +4159,7 @@ var POIS=[
       "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg"
     ],
     "name": "Chemin des Douaniers Cayola–Bourgenay",
+    "commune": "Talmont-Saint-Hilaire",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.6",
     "budgetBadge": "€ Gratuit",
@@ -4129,6 +4176,7 @@ var POIS=[
     "accroche": "Un sentier côtier spectaculaire entre falaises, vignes et panoramas sur l'Atlant",
     "descLong": "Le Chemin des Douaniers relie Cayola à Bourgenay le long d'une côte sauvage et préservée de la Vendée. Ce sentier longe les falaises qui surplombent l'océan Atlantique, offrant des panoramas à couper le souffle sur la mer et les paysages littoraux. Balisé et bien stabilisé, il se parcourt facilement en famille ou en couple. Les amateurs de nature apprécieront la végétation côtière typique, les points de vue sur les rochers et les criques, ainsi que la quiétude des lieux, surtout en dehors de la haute saison. Un incontournable de la côte sud-vendéenne, accessible aux chiens en laisse.",
     "category": "balade",
+    "subcategory": "Balades & Promenades",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4211,6 +4259,7 @@ var POIS=[
       "planly_scraper/images/port_olona/photo_1.jpg"
     ],
     "name": "Port Olona",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🌊 Nature & Grand Air",
     "note": "4.5",
     "budgetBadge": "€ Gratuit",
@@ -4227,6 +4276,7 @@ var POIS=[
     "accroche": "Le port de plaisance emblématique des Sables-d'Olonne, point de départ et d'arri",
     "descLong": "Port Olona est le port de plaisance des Sables-d'Olonne, mondialement connu pour être le départ et l'arrivée du Vendée Globe, la course à la voile en solitaire autour du monde sans escale. Situé quai Alain Gerbaud, ce port vivant accueille des centaines de bateaux et offre une promenade agréable le long des pontons. Lors des grandes éditions du Vendée Globe, l'atmosphère y est électrique et les arrivées des navigateurs deviennent de véritables événements populaires. Une navette maritime bon marché permet de rejoindre facilement le centre-ville des Sables-d'Olonne, rendant la visite encore plus pratique.",
     "category": "balade",
+    "subcategory": "Balades & Promenades",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4311,6 +4361,7 @@ var POIS=[
       "planly_scraper/images/port_de_bourgenay/photo_3.jpg"
     ],
     "name": "Port de Bourgenay",
+    "commune": "Talmont-Saint-Hilaire",
     "cat": "🌊 Nature & Grand Air",
     "note": "4",
     "budgetBadge": "€ Gratuit",
@@ -4327,6 +4378,7 @@ var POIS=[
     "accroche": "Un port de plaisance authentique niché au cœur de la côte vendéenne, où l'air io",
     "descLong": "Le port de Bourgenay est un havre de paix situé sur la commune de Talmont-Saint-Hilaire, en Vendée. Bordé par les marais salants et les dunes boisées, ce port de plaisance mêle ambiance maritime et nature préservée. On y flâne le long des pontons pour admirer les voiliers et bateaux de pêche, avant de s'élancer sur les sentiers côtiers qui relient le port à la plage. La lumière dorée du littoral vendéen en fait un lieu idéal pour la photographie, la promenade en famille ou simplement pour s'évader au grand air. Une escale ressourçante entre terre et mer.",
     "category": "balade",
+    "subcategory": "Balades & Promenades",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4398,6 +4450,7 @@ var POIS=[
       "planly_scraper/images/port_de_la_chaume/photo_3.jpg"
     ],
     "name": "Port de La Chaume",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🏛️ Patrimoine",
     "note": "4.5",
     "budgetBadge": "€ Gratuit",
@@ -4414,6 +4467,7 @@ var POIS=[
     "accroche": "Le cœur battant de la voile vendéenne, berceau du Vendée Globe et port historiqu",
     "descLong": "Le port de La Chaume, niché à l'entrée du chenal des Sables-d'Olonne, est un lieu chargé d'histoire maritime et d'émotions sportives. C'est ici que les skippers du Vendée Globe franchissent la ligne d'arrivée après leur tour du monde en solitaire, sous les acclamations de milliers de spectateurs. Le quai Alain Gerbaud rend hommage aux grands navigateurs qui ont marqué l'histoire de la voile. Entre bateaux de pêche colorés, odeurs iodées et animations nautiques, le port offre une atmosphère authentique et vivante. Une navette maritime à prix modique permet de rejoindre facilement le centre des Sables-d'Olonne, parfaite pour explorer les deux rives.",
     "category": "patrimoine",
+    "subcategory": "Villages & Sites",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4493,6 +4547,7 @@ var POIS=[
       "planly_scraper/images/l_ile_penotte/photo_3.jpg"
     ],
     "name": "L'Île Penotte",
+    "commune": "Les Sables-d'Olonne",
     "cat": "🏛️ Patrimoine",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -4509,6 +4564,7 @@ var POIS=[
     "accroche": "Un musée à ciel ouvert où les façades s'habillent de mosaïques en coquillages. U",
     "descLong": "Niché dans le cœur des Sables-d'Olonne, le quartier de l'Île Penotte est un véritable bijou artistique et populaire. Ses ruelles pittoresques dévoilent des façades entièrement recouvertes de mosaïques réalisées en coquillages, fruits d'un travail patient et créatif des habitants. Chaque coin de rue réserve une nouvelle surprise : scènes marines, animaux, paysages... Tout est prétexte à l'émerveillement. La balade, accessible gratuitement, séduit petits et grands. Un quartier vivant, authentique et hors du commun, symbole de l'identité maritime et artistique sablaise.",
     "category": "patrimoine",
+    "subcategory": "Villages & Sites",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4588,6 +4644,7 @@ var POIS=[
       "planly_scraper/images/chateau_de_talmont/photo_3.jpg"
     ],
     "name": "Château de Talmont",
+    "commune": "Talmont-Saint-Hilaire",
     "cat": "🏛️ Patrimoine",
     "note": "4.4",
     "budgetBadge": "€ Gratuit",
@@ -4604,6 +4661,7 @@ var POIS=[
     "accroche": "Un château médiéval en ruines plein de vie, avec spectacles de chevaliers, fauco",
     "descLong": "Plongez au cœur du Moyen Âge au Château de Talmont, forteresse médiévale en ruines perchée sur les hauteurs de Talmont-Saint-Hilaire en Vendée. À l'intérieur de ses murailles, un véritable village médiéval prend vie : essayez le tir à l'arbalète, la calligraphie à la plume ou le tissage, tous inclus dans le prix d'entrée. Deux spectacles époustouflants sont au programme : un combat de chevaliers et un show de fauconnerie avec des rapaces en vol libre. Une fermette pour les enfants complète cette expérience immersive et inoubliable en famille.",
     "category": "patrimoine",
+    "subcategory": "Villages & Sites",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4683,6 +4741,7 @@ var POIS=[
       "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_3.jpg"
     ],
     "name": "Dolmen de la Frébouchère",
+    "commune": "Le Bernard",
     "cat": "🏛️ Patrimoine",
     "note": "4.7",
     "budgetBadge": "€ Gratuit",
@@ -4699,6 +4758,7 @@ var POIS=[
     "accroche": "L'un des dolmens les plus imposants de Vendée : 7,20 m de long, 3,50 m de haut, ",
     "descLong": "Le dolmen de la Frébouchère, niché près du bourg de Le Bernard, est l'un des mégalithes les plus impressionnants de Vendée. Datant d'environ 4000 ans avant J.-C., il se distingue par ses dimensions remarquables : 7,20 mètres de longueur et 3,50 mètres de hauteur, couverts par seulement deux pierres de couverture. Le site est parfaitement aménagé, avec une signalétique claire et un parking à proximité. Dans un rayon d'un kilomètre, plusieurs autres dolmens complètent la visite, faisant de ce secteur un véritable sanctuaire mégalithique vendéen accessible à tous, y compris aux personnes à mobilité réduite.",
     "category": "patrimoine",
+    "subcategory": "Villages & Sites",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -4778,6 +4838,7 @@ var POIS=[
       "planly_scraper/images/vouvant/photo_3.jpg"
     ],
     "name": "Vouvant",
+    "commune": "Vouvant",
     "cat": "🏛️ Patrimoine",
     "note": "?",
     "budgetBadge": "€ Gratuit",
@@ -4794,6 +4855,7 @@ var POIS=[
     "accroche": "Village médiéval classé parmi Les Plus Beaux Villages de France, avec ses rempar",
     "descLong": "Vouvant est un joyau médiéval niché au cœur du bocage vendéen, classé parmi Les Plus Beaux Villages de France depuis 1988. Ancienne place forte, le village a conservé une grande partie de ses fortifications, ses ruelles pavées et son architecture d'antan. Dominé par la tour Mélusine, vestige imposant d'un château du XIe siècle, Vouvant offre un voyage dans le temps saisissant. Flânez entre les maisons de pierre, découvrez l'église romane Notre-Dame et profitez des panoramas sur les vallées boisées environnantes. Un village à vivre lentement, au fil des saisons.",
     "category": "patrimoine",
+    "subcategory": "Villages & Sites",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -5093,13 +5155,12 @@ function closeAll(){
   ['poi','filters','ctx'].forEach(function(k){var el=document.getElementById('sheet-'+k);if(el)el.classList.remove('open');});
   var ss=document.getElementById('settings-sheet');if(ss)ss.classList.remove('open');
   var es=document.getElementById('edit-sheet');if(es)es.classList.remove('open');
+  clearSearch();
 }
 
 // ── PANNEAUX SETTINGS & EDIT ──
 function openSettingsSheet(){document.getElementById('overlay').classList.add('open');document.getElementById('settings-sheet').classList.add('open');}
 function closeSettingsSheet(){document.getElementById('overlay').classList.remove('open');document.getElementById('settings-sheet').classList.remove('open');}
-function openEditSheet(){document.getElementById('overlay').classList.add('open');document.getElementById('edit-sheet').classList.add('open');}
-function closeEditSheet(){document.getElementById('overlay').classList.remove('open');document.getElementById('edit-sheet').classList.remove('open');}
 function ssSetMode(mode){
   document.getElementById('ss-swipe').classList.toggle('active',mode==='swipe');
   document.getElementById('ss-liste').classList.toggle('active',mode==='liste');
@@ -5137,7 +5198,9 @@ var swipePos=0;
 
 function applyFilter(){
   var fp=getFilteredPois();
-  swipeFiltered=fp.map(function(p){return POIS.indexOf(p);});
+  // Exclure les POIs déjà likés du deck de swipe
+  var unliked=fp.filter(function(p){return likedPois.indexOf(p.name)===-1;});
+  swipeFiltered=(unliked.length?unliked:fp).map(function(p){return POIS.indexOf(p);});
   if(!swipeFiltered.length)swipeFiltered=POIS.map(function(_,i){return i;});
   swipePos=0;
   currentIdx=swipeFiltered[0];
@@ -5240,7 +5303,15 @@ function dragEnd(e){
       card.style.transition='none';
       card.style.transform='';
       card.style.opacity='1';
-      swipePos=(swipePos+1)%swipeFiltered.length;
+      if(dir==='like'){
+        var fp=getFilteredPois();
+        var unliked=fp.filter(function(p){return likedPois.indexOf(p.name)===-1;});
+        swipeFiltered=(unliked.length?unliked:fp).map(function(p){return POIS.indexOf(p);});
+        if(!swipeFiltered.length)swipeFiltered=POIS.map(function(_,i){return i;});
+        swipePos=swipePos%swipeFiltered.length;
+      } else {
+        swipePos=(swipePos+1)%swipeFiltered.length;
+      }
       currentIdx=swipeFiltered[swipePos];
       updateCard(currentIdx);
       drag.swiping=false;
@@ -5329,7 +5400,16 @@ function doSwipeBtn(dir){
     card.style.transition='none';
     card.style.transform='';
     card.style.opacity='1';
-    swipePos=(swipePos+1)%swipeFiltered.length;
+    // Reconstruire le deck filtré (retire les POIs likés) et avancer
+    if(dir==='like'){
+      var fp=getFilteredPois();
+      var unliked=fp.filter(function(p){return likedPois.indexOf(p.name)===-1;});
+      swipeFiltered=(unliked.length?unliked:fp).map(function(p){return POIS.indexOf(p);});
+      if(!swipeFiltered.length)swipeFiltered=POIS.map(function(_,i){return i;});
+      swipePos=swipePos%swipeFiltered.length;
+    } else {
+      swipePos=(swipePos+1)%swipeFiltered.length;
+    }
     currentIdx=swipeFiltered[swipePos];
     updateCard(currentIdx);
     drag.swiping=false;
@@ -5349,6 +5429,182 @@ function saveLike(idx){
 }
 function isLiked(name){return likedPois.indexOf(name)!==-1;}
 
+// ── MOTEUR DE RECHERCHE ──
+var STOPWORDS=['le','la','les','de','du','des','l','un','une','au','aux','en','et','a'];
+
+// Mots-clés → catégories POI (matching partiel suffisant)
+var SRCH_CATS=[
+  {kw:['plage','plages','sable','bain','baignade'],cats:['plage']},
+  {kw:['port','ports','marina','bateau','voilier'],cats:['port']},
+  {kw:['nature','foret','forets','marais','lac','reserve'],cats:['nature']},
+  {kw:['balade','balades','promenade','rando','randonnee','sentier','chemin'],cats:['balade']},
+  {kw:['point','vue','belvedere','panorama','sommet'],cats:['pointdevue']},
+  {kw:['patrimoine','village','chateau','monument','dolmen','histoire','historique','eglise','abbaye'],cats:['patrimoine']},
+  {kw:['mer','ocean','littoral','cote','cotier'],cats:['plage','port','nature']},
+  {kw:['ile','island','noirmoutier','yeu'],cats:['nature','plage']},
+];
+
+function normalize(s){return(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ');}
+
+function tokenize(s){
+  return normalize(s).split(/\s+/).filter(function(t){return t.length>=2&&STOPWORDS.indexOf(t)===-1;});
+}
+
+// Score de matching d'un token contre un texte (préfixe = partiel OK)
+function tokenScore(token,text){
+  if(!text)return 0;
+  var nt=normalize(text);
+  if(nt===token)return 3;
+  if(nt.indexOf(' '+token)!==-1||nt.startsWith(token))return 2;
+  if(nt.indexOf(token)!==-1)return 1;
+  return 0;
+}
+
+function searchPois(q){
+  if(!q||q.length<1)return[];
+  var tokens=tokenize(q);
+  if(!tokens.length)return[];
+
+  // Détecter les tokens qui sont des mots-clés de catégorie
+  var catTokens=[],freeTokens=[];
+  tokens.forEach(function(tok){
+    var matched=false;
+    for(var i=0;i<SRCH_CATS.length;i++){
+      var entry=SRCH_CATS[i];
+      for(var j=0;j<entry.kw.length;j++){
+        if(entry.kw[j].startsWith(tok)||tok.startsWith(entry.kw[j])){
+          catTokens.push(entry.cats);matched=true;break;
+        }
+      }
+      if(matched)break;
+    }
+    if(!matched)freeTokens.push(tok);
+  });
+
+  // Catégories cibles (union si plusieurs mots-clés cat)
+  var targetCats=null;
+  if(catTokens.length){
+    targetCats=[];
+    catTokens.forEach(function(cats){cats.forEach(function(c){if(targetCats.indexOf(c)===-1)targetCats.push(c);});});
+  }
+
+  var results=[];
+  POIS.forEach(function(p,i){
+    var score=0;
+    var nName=normalize(p.name);
+    var nCommune=normalize(p.commune||'');
+    var nSubcat=normalize(p.subcategory||'');
+    var nDesc=normalize(p.desc||'');
+    var haystack=nName+' '+nCommune+' '+nSubcat+' '+nDesc;
+
+    // Filtre catégorie
+    if(targetCats&&targetCats.indexOf(p.category)===-1)return;
+    if(targetCats)score+=15;
+
+    // Tokens libres (ville, nom partiel) — TOUS doivent matcher
+    var allMatch=true;
+    freeTokens.forEach(function(tok){
+      var s=tokenScore(tok,p.name)*3+tokenScore(tok,p.commune)*2+tokenScore(tok,p.subcategory)+tokenScore(tok,p.desc);
+      if(s===0)allMatch=false;
+      else score+=s;
+    });
+    if(freeTokens.length&&!allMatch)return;
+
+    // Bonus nom exact
+    if(nName.indexOf(normalize(q))!==-1)score+=10;
+
+    results.push({p:p,i:i,score:score});
+  });
+
+  results.sort(function(a,b){return b.score-a.score;});
+  return results;
+}
+
+var _srchTimer=null;
+function handleSearch(q){
+  var clr=document.getElementById('srch-clear');
+  if(clr)clr.style.display=q?'block':'none';
+  clearTimeout(_srchTimer);
+  _srchTimer=setTimeout(function(){doSearch(q);},180);
+}
+
+function srchSetSearchMode(on){
+  var pr=document.querySelector('.pills-row');
+  var hd=document.getElementById('header-dots');
+  var ah=document.getElementById('app-header');
+  if(pr)pr.style.display=on?'none':'';
+  if(hd)hd.style.display=on?'none':'';
+  if(ah)ah.classList.toggle('searching',on);
+}
+
+function doSearch(q){
+  var view=document.getElementById('srch-view');
+  if(!q||q.trim().length<1){
+    view.classList.remove('open');
+    srchSetSearchMode(false);
+    var mz=document.querySelector('.main-zone');
+    if(currentNav==='explorer'&&mz)mz.style.display='';
+    if(currentNav==='activites')document.getElementById('activites-view').classList.add('open');
+    return;
+  }
+
+  // Ouvrir la vue recherche — garder app-header visible, cacher pills+main
+  srchSetSearchMode(true);
+  view.classList.add('open');
+  document.getElementById('activites-view').classList.remove('open');
+  var mz=document.querySelector('.main-zone');if(mz)mz.style.display='none';
+
+  var results=searchPois(q.trim());
+  var scroll=document.getElementById('srch-view-scroll');
+  var titleTxt=results.length
+    ? results.length+' résultat'+(results.length>1?'s':'')+' pour <em>"'+q+'"</em>'
+    : 'Aucun résultat pour <em>"'+q+'"</em>';
+
+  if(!results.length){
+    scroll.innerHTML='<div class="srch-view-title">'+titleTxt+'</div>'
+      +'<div class="srch-empty-page">'
+      +'<div class="srch-empty-icon">🔍</div>'
+      +'<div class="srch-empty-txt">Essaie avec un autre mot : le nom d\'un lieu, une ville, ou un type d\'activité (plage, port, balade…)</div>'
+      +'</div>';
+    return;
+  }
+
+  scroll.innerHTML='<div class="srch-view-title">'+titleTxt+'</div>'
+    +results.map(function(r){
+    var p=r.p;var i=r.i;
+    var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
+    var inco=p.inco?'<div class="lcard-inco">⭐ Incontournable</div>':'';
+    return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
+      +'<img src="'+img+'" alt="" loading="lazy">'
+      +'<div class="lcard-cat">'+p.cat+'</div>'
+      +inco
+      +'<div class="lcard-body">'
+      +'<div class="lcard-name">'+p.name+'</div>'
+      +'<div style="font-size:11px;color:var(--txm);margin-bottom:4px;">📍 '+(p.commune||'')+'</div>'
+      +'<div class="lcard-desc">'+p.desc+'</div>'
+      +'<div class="lcard-pills">'
+      +'<div class="lcard-pill'+(p.budgetClass==='free'?' green':'')+'">'+p.budgetBadge+'</div>'
+      +'<div class="lcard-pill">⭐ '+p.note+'</div>'
+      +'</div></div></div>';
+  }).join('');
+}
+
+function clearSearch(){
+  var inp=document.getElementById('search-input-explorer');
+  var view=document.getElementById('srch-view');
+  var clr=document.getElementById('srch-clear');
+  if(inp)inp.value='';
+  if(clr)clr.style.display='none';
+  view.classList.remove('open');
+  srchSetSearchMode(false);
+  if(currentNav==='activites'){
+    document.getElementById('activites-view').classList.add('open');
+  } else {
+    var mz=document.querySelector('.main-zone');if(mz)mz.style.display='';
+  }
+  if(inp)inp.blur();
+}
+
 // ── NAVIGATION VUES ──
 var currentNav='explorer';
 function navShow(view){
@@ -5359,6 +5615,8 @@ function navShow(view){
   document.getElementById('activites-view').classList.toggle('open',isAct);
   document.getElementById('app-header').style.display=isAct?'none':'';
   var mz=document.querySelector('.main-zone');if(mz)mz.style.display=isAct?'none':'';
+  document.getElementById('srch-view').classList.remove('open'); // fermer recherche
+  clearSearch();
   if(isAct)renderActivites();
 }
 
