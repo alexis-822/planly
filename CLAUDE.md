@@ -137,6 +137,11 @@ Prototype mobile avec :
 - `planly_poi_types.xlsx` — source de vérité, modifier uniquement si demandé explicitement
 - Les données `output/*.json` et `output_global.json` — ne pas écraser sans backup
 
+## Règle de sauvegarde (git)
+Avant chaque modification significative de planly-full.html ou des scripts Python :
+1. Faire un `git add` + `git commit` avec un message descriptif AVANT de modifier
+2. Comme ça on peut toujours revenir en arrière avec `git checkout`
+
 ## Règle de mise à jour
 Après chaque modification significative :
 1. Mettre à jour la section "État actuel" de ce fichier
