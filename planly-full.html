@@ -25,7 +25,7 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;overflow:hidden;}
 body{
-  background:#111;
+  background:var(--bg);
   font-family:'DM Sans',sans-serif;
   display:flex;flex-direction:column;
   align-items:center;
@@ -449,7 +449,7 @@ body{
 .lcard-pill.green{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:#16a34a;}
 
 /* ── NAV BOTTOM — Style C rounded square ── */
-.bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:8px 8px calc(12px + env(safe-area-inset-bottom, 0px));background:#111;flex-shrink:0;border-top:1px solid rgba(255,255,255,.08);}
+.bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:8px 8px 12px;background:#111;flex-shrink:0;border-top:1px solid rgba(255,255,255,.08);}
 .nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .nav-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;transition:background .2s;}
 .nav-icon svg{width:20px;height:20px;stroke:rgba(255,255,255,.35);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
