@@ -1,4 +1,4 @@
-const CACHE_NAME = 'planly-v6';
+const CACHE_NAME = 'planly-v7';
 
 self.addEventListener('install', function(e) {
   self.skipWaiting();
