@@ -9,6 +9,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 GLOBAL_JSON = os.path.join(SCRIPT_DIR, "output_global.json")
 PLANLY_HTML = os.path.join(SCRIPT_DIR, "..", "planly-full.html")
+POIS_JS = os.path.join(SCRIPT_DIR, "..", "pois.js")
 
 CAT_MAP = {
     "Nature & Grand Air": "🌊",
@@ -206,22 +207,13 @@ def main():
 
     # Build JS
     js_data = json.dumps(converted, ensure_ascii=False, indent=2)
-    js_block = "var POIS=" + js_data + ";"
+    js_block = "var POIS=" + js_data + ";\n"
 
-    # Read planly-full.html
-    with open(PLANLY_HTML, "r", encoding="utf-8") as f:
-        html = f.read()
+    # Écrire dans pois.js (séparé du HTML pour optimiser le chargement)
+    with open(POIS_JS, "w", encoding="utf-8") as f:
+        f.write(js_block)
 
-    # Replace POIS array
-    start_marker = "var POIS=["
-    start = html.index(start_marker)
-    end = html.index("];", start) + 2
-    html = html[:start] + js_block + html[end:]
-
-    with open(PLANLY_HTML, "w", encoding="utf-8") as f:
-        f.write(html)
-
-    print(f"{len(converted)} POIs injectes dans planly-full.html")
+    print(f"{len(converted)} POIs injectes dans pois.js")
     for c in converted:
         print(f"  {c['name']}")
 
