@@ -1073,7 +1073,7 @@ body{
     <div class="header-row">
       <div class="search-bar-explorer">
         <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><line x1="14" y1="14" x2="18" y2="18"/></svg>
-        <input type="text" class="search-input-explorer" id="search-input-explorer" placeholder="Rechercher..." oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)" autocomplete="off">
+        <input type="text" class="search-input-explorer" id="search-input-explorer" placeholder="Rechercher..." oninput="handleSearch(this.value)" onfocus="enterSearchMode()" autocomplete="off">
         <div class="srch-clear" id="srch-clear" onclick="clearSearch()" style="display:none">✕</div>
       </div>
 <div class="hdr-btn" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
@@ -2552,9 +2552,9 @@ function buildAutocomplete(q){
   var tok=normalize(q.trim());
   var suggestions=[],seenNames={},seenCommunes={},seenGen={};
 
-  // 1. Noms de lieux (POIs matchés avec bon score)
+  // 1. Noms de lieux (POIs matchés avec bon score — max 3)
   searchPois(q).forEach(function(r){
-    if(suggestions.length>=2)return;
+    if(suggestions.length>=3)return;
     if(r.score>8&&!seenNames[r.p.name]){
       seenNames[r.p.name]=true;
       suggestions.push({icon:'🔍',label:r.p.name,sub:r.p.commune||'',value:r.p.name});
@@ -2600,10 +2600,53 @@ function srchSetSearchMode(on){
   var hd=document.getElementById('header-dots');
   var ah=document.getElementById('app-header');
   var bn=document.querySelector('.bottom-nav');
+  var sv=document.getElementById('srch-view');
   if(pr)pr.style.display=on?'none':'';
   if(hd)hd.style.display=on?'none':'';
-  if(ah)ah.classList.toggle('searching',on);
+  if(ah){
+    ah.classList.toggle('searching',on);
+    ah.style.zIndex=on?'200':'';
+  }
   if(bn)bn.style.display=on?'none':'';
+  // Plein écran Airbnb
+  if(sv){
+    if(on){
+      sv.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;overflow:hidden;';
+    } else {
+      sv.style.cssText='';
+    }
+  }
+}
+
+// Appelé au focus input — active le mode plein écran immédiatement
+function enterSearchMode(){
+  var q=document.getElementById('search-input-explorer');
+  var val=q?q.value:'';
+  srchSetSearchMode(true);
+  var view=document.getElementById('srch-view');
+  view.classList.add('open');
+  var mz=document.querySelector('.main-zone');if(mz)mz.style.display='none';
+  document.getElementById('activites-view').classList.remove('open');
+  if(val&&val.trim().length>=2){
+    handleSearch(val);
+  } else {
+    // État initial : suggestions populaires
+    var scroll=document.getElementById('srch-view-scroll');
+    var incos=POIS.filter(function(p){return p.inco;}).slice(0,4);
+    scroll.innerHTML='<div class="srch-view-title" style="padding-top:calc(60px + env(safe-area-inset-top,0px))">Incontournables</div>'
+      +incos.map(function(p){
+        var i=POIS.indexOf(p);
+        var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
+        return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
+          +'<img src="'+img+'" alt="" loading="lazy">'
+          +'<div class="lcard-cat">'+p.cat+'</div>'
+          +'<div class="lcard-inco">⭐ Incontournable</div>'
+          +'<div class="lcard-body"><div class="lcard-name">'+p.name+'</div>'
+          +'<div style="font-size:11px;color:var(--txm);margin-bottom:4px">📍 '+(p.commune||'')+'</div>'
+          +'<div class="lcard-desc">'+p.desc+'</div></div></div>';
+      }).join('');
+    buildAutocomplete('');
+  }
 }
 
 function doSearch(q){
@@ -2645,7 +2688,7 @@ function doSearch(q){
         +'style="color:var(--brand);text-decoration:underline">'+suggestion+'</a> ?</div>';
     }
     sugHtml+='<div onclick="clearSearch()" style="display:inline-block;margin-top:14px;padding:8px 18px;background:var(--brand);color:#fff;border-radius:20px;font-size:13px;font-family:DM Sans,sans-serif;cursor:pointer;">Voir tous les POIs</div>';
-    scroll.innerHTML='<div class="srch-view-title">'+titleTxt+'</div>'
+    scroll.innerHTML='<div class="srch-view-title" style="padding-top:calc(60px + env(safe-area-inset-top,0px))">'+titleTxt+'</div>'
       +'<div class="srch-empty-page">'
       +'<div class="srch-empty-icon">🔍</div>'
       +'<div class="srch-empty-txt">Essaie avec un autre mot : le nom d\'un lieu, une ville, ou un type d\'activité (plage, port, balade…)</div>'
@@ -2654,7 +2697,7 @@ function doSearch(q){
     return;
   }
 
-  scroll.innerHTML='<div class="srch-view-title">'+titleTxt+'</div>'
+  scroll.innerHTML='<div class="srch-view-title" style="padding-top:calc(60px + env(safe-area-inset-top,0px))">'+titleTxt+'</div>'
     +results.map(function(r){
     var p=r.p;var i=r.i;
     var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
