@@ -2589,10 +2589,13 @@ var _srchTimer=null;
 function handleSearch(q){
   var clr=document.getElementById('srch-clear');
   if(clr)clr.style.display=q?'block':'none';
-  if(!q||q.trim().length<2){hideAutocomplete();if(!q||!q.trim()){clearTimeout(_srchTimer);doSearch('');}return;}
-  buildAutocomplete(q);
+  hideAutocomplete(); // le dropdown flottant n'est plus utilisé en mode plein écran
   clearTimeout(_srchTimer);
-  _srchTimer=setTimeout(function(){doSearch(q);},180);
+  if(!q||!q.trim()||q.trim().length<2){
+    showSearchInitial();
+    return;
+  }
+  _srchTimer=setTimeout(function(){doSearch(q);},150);
 }
 
 function srchSetSearchMode(on){
@@ -2618,49 +2621,61 @@ function srchSetSearchMode(on){
   }
 }
 
+// Contenu initial plein écran : chips rapides + incontournables
+function showSearchInitial(){
+  var scroll=document.getElementById('srch-view-scroll');
+  if(!scroll)return;
+  var chips=[
+    {label:'🏖️ Plage',val:'plage'},{label:'🌿 Forêt',val:'foret'},
+    {label:'⚓ Port',val:'port'},{label:'🏛️ Patrimoine',val:'patrimoine'},
+    {label:'🥾 Balade',val:'balade'},{label:'🔭 Vue',val:'vue'},
+    {label:'⭐ Incontournable',val:'incontournable'},{label:'€ Gratuit',val:'gratuit'}
+  ];
+  var incos=POIS.filter(function(p){return p.inco;}).slice(0,4);
+  scroll.innerHTML=
+    '<div style="padding-top:calc(56px + env(safe-area-inset-top,0px));padding-bottom:20px">'
+    +'<div style="font-size:11px;color:var(--txm);margin-bottom:10px;font-family:\'DM Sans\',sans-serif;font-weight:600;letter-spacing:.6px;text-transform:uppercase">Recherches rapides</div>'
+    +'<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px">'
+    +chips.map(function(c){
+      return '<div onclick="var inp=document.getElementById(\'search-input-explorer\');inp.value=\''+c.val+'\';handleSearch(\''+c.val+'\');" '
+        +'style="padding:7px 14px;background:var(--bg-d,#f0ece0);border-radius:20px;font-size:13px;color:var(--tx);cursor:pointer;font-family:\'DM Sans\',sans-serif;-webkit-tap-highlight-color:transparent">'+c.label+'</div>';
+    }).join('')
+    +'</div>'
+    +'<div class="srch-view-title">Incontournables</div>'
+    +incos.map(function(p){
+      var i=POIS.indexOf(p);
+      var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
+      return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
+        +'<img src="'+img+'" alt="" loading="lazy">'
+        +'<div class="lcard-cat">'+p.cat+'</div>'
+        +'<div class="lcard-inco">⭐ Incontournable</div>'
+        +'<div class="lcard-body"><div class="lcard-name">'+p.name+'</div>'
+        +'<div style="font-size:11px;color:var(--txm);margin-bottom:4px">📍 '+(p.commune||'')+'</div>'
+        +'<div class="lcard-desc">'+p.desc+'</div></div></div>';
+    }).join('')
+    +'</div>';
+}
+
 // Appelé au focus input — active le mode plein écran immédiatement
 function enterSearchMode(){
-  var q=document.getElementById('search-input-explorer');
-  var val=q?q.value:'';
+  var inp=document.getElementById('search-input-explorer');
+  var val=inp?inp.value:'';
   srchSetSearchMode(true);
   var view=document.getElementById('srch-view');
   view.classList.add('open');
   var mz=document.querySelector('.main-zone');if(mz)mz.style.display='none';
   document.getElementById('activites-view').classList.remove('open');
   if(val&&val.trim().length>=2){
-    handleSearch(val);
+    doSearch(val);
   } else {
-    // État initial : suggestions populaires
-    var scroll=document.getElementById('srch-view-scroll');
-    var incos=POIS.filter(function(p){return p.inco;}).slice(0,4);
-    scroll.innerHTML='<div class="srch-view-title" style="padding-top:calc(60px + env(safe-area-inset-top,0px))">Incontournables</div>'
-      +incos.map(function(p){
-        var i=POIS.indexOf(p);
-        var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
-        return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
-          +'<img src="'+img+'" alt="" loading="lazy">'
-          +'<div class="lcard-cat">'+p.cat+'</div>'
-          +'<div class="lcard-inco">⭐ Incontournable</div>'
-          +'<div class="lcard-body"><div class="lcard-name">'+p.name+'</div>'
-          +'<div style="font-size:11px;color:var(--txm);margin-bottom:4px">📍 '+(p.commune||'')+'</div>'
-          +'<div class="lcard-desc">'+p.desc+'</div></div></div>';
-      }).join('');
-    buildAutocomplete('');
+    showSearchInitial();
   }
 }
 
 function doSearch(q){
-  var view=document.getElementById('srch-view');
-  if(!q||q.trim().length<1){
-    view.classList.remove('open');
-    srchSetSearchMode(false);
-    var mz=document.querySelector('.main-zone');
-    if(currentNav==='explorer'&&mz)mz.style.display='';
-    if(currentNav==='activites')document.getElementById('activites-view').classList.add('open');
-    return;
-  }
+  if(!q||q.trim().length<1){showSearchInitial();return;}
 
-  // Ouvrir la vue recherche — garder app-header visible, cacher pills+main
+  var view=document.getElementById('srch-view');
   srchSetSearchMode(true);
   view.classList.add('open');
   document.getElementById('activites-view').classList.remove('open');
