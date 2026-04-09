@@ -1859,6 +1859,47 @@ function updateCardTrajet(p){
   trajetEl.className='card-metric trajet '+color;
 }
 
+// ── API MARINE (plages uniquement) ──
+function fetchMarineData(p,inst){
+  var lat=(p.location&&p.location.lat)||46.4952;
+  var lng=(p.location&&p.location.lng)||-1.7888;
+  var url='https://marine-api.open-meteo.com/v1/marine?latitude='+lat+'&longitude='+lng
+    +'&hourly=wave_height,wave_direction,wave_period,sea_level_height&timezone=Europe%2FParis&forecast_days=2';
+  fetch(url)
+    .then(function(r){if(!r.ok)throw new Error();return r.json();})
+    .then(function(d){
+      var times=d.hourly.time,wH=d.hourly.wave_height,wDir=d.hourly.wave_direction,sl=d.hourly.sea_level_height;
+      // Index heure courante
+      var now=new Date(),idx=0;
+      var nowStr=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0')+'T'+String(now.getHours()).padStart(2,'0');
+      for(var i=0;i<times.length;i++){if(times[i].startsWith(nowStr)){idx=i;break;}}
+      // Vagues
+      var h=wH[idx]||0;
+      var waveLabel=h<0.5?'Mer calme':h<1?'Faibles vagues':h<2?'Vagues modérées':'Forte houle ⚠️';
+      var dirs=['N','NE','E','SE','S','SO','O','NO'];
+      var dirLabel=dirs[Math.round(((wDir[idx]||0)%360)/45)%8];
+      // Marée : montante ou descendante
+      var trend=(idx+1<sl.length&&sl[idx+1]>sl[idx])?'montante':'descendante';
+      // Prochain pic (pleine mer) ou creux (basse mer)
+      var nextTime='';
+      if(trend==='montante'){
+        for(var j=idx+1;j<sl.length-1;j++){if(sl[j]>=sl[j-1]&&sl[j]>=sl[j+1]){nextTime=times[j].slice(11,16);break;}}
+      } else {
+        for(var j=idx+1;j<sl.length-1;j++){if(sl[j]<=sl[j-1]&&sl[j]<=sl[j+1]){nextTime=times[j].slice(11,16);break;}}
+      }
+      var tideLabel=trend==='montante'
+        ?('Marée montante'+(nextTime?' · Pleine mer à '+nextTime:''))
+        :('Marée descendante'+(nextTime?' · Basse mer à '+nextTime:''));
+      inst.className='bs-instant time';
+      inst.innerHTML='<div style="line-height:1.6">'
+        +'<div style="font-weight:500">🌊 '+tideLabel+'</div>'
+        +'<div style="opacity:.8">Vagues '+h.toFixed(1)+'m · Direction '+dirLabel+'  •  '+waveLabel+'</div>'
+        +'</div>';
+      inst.style.display='flex';
+    })
+    .catch(function(){if(inst)inst.style.display='none';});
+}
+
 // ── BS POI — DATA-DRIVEN ──
 var bsCarIdx=0,bsImgs=[];
 function bsCarMove(dir){bsCarIdx=(bsCarIdx+dir+bsImgs.length)%bsImgs.length;document.getElementById('bs-car-track').style.transform='translateX(-'+(bsCarIdx*100)+'%)';document.querySelectorAll('.bs-car-dot').forEach(function(d,i){d.classList.toggle('active',i===bsCarIdx);});}
@@ -1875,8 +1916,14 @@ function openPoiSheet(idx){
   document.getElementById('bs-notoriety').textContent=p.inco?'⭐ Incontournable':'💎 Pépite locale';
   // Instant T
   var inst=document.getElementById('bs-instant');
-  if(p.instant){inst.style.display='flex';inst.textContent=p.instant;inst.className='bs-instant '+(p.instant.includes('🌅')?'sun':'time');}
-  else{inst.style.display='none';}
+  if(p.subcategory==='Plages & Côte'){
+    inst.style.display='none'; // masqué pendant le chargement
+    fetchMarineData(p,inst);
+  } else if(p.instant){
+    inst.style.display='flex';inst.innerHTML=p.instant;inst.className='bs-instant '+(p.instant.includes('🌅')?'sun':'time');
+  } else {
+    inst.style.display='none';
+  }
   // Ruban
   var nbAdultes={solo:1,couple:2,famille:2,amis:4}[USER_PROFILE.groupe]||2;
   var nbEnfants=USER_PROFILE.enfants?USER_PROFILE.enfants.length:0;
@@ -2604,20 +2651,33 @@ function srchSetSearchMode(on){
   var ah=document.getElementById('app-header');
   var bn=document.querySelector('.bottom-nav');
   var sv=document.getElementById('srch-view');
+  var sc=document.getElementById('srch-view-scroll');
   if(pr)pr.style.display=on?'none':'';
   if(hd)hd.style.display=on?'none':'';
-  if(ah){
-    ah.classList.toggle('searching',on);
-    ah.style.zIndex=on?'200':'';
-  }
+  if(ah){ah.classList.toggle('searching',on);ah.style.zIndex=on?'200':'';}
   if(bn)bn.style.display=on?'none':'';
-  // Plein écran Airbnb
+  // 85% bottom sheet
   if(sv){
     if(on){
-      sv.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;overflow:hidden;';
+      sv.style.cssText='position:fixed;top:15vh;left:0;right:0;bottom:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;overflow:hidden;border-radius:20px 20px 0 0;box-shadow:0 -4px 24px rgba(0,0,0,.13);';
     } else {
       sv.style.cssText='';
     }
+  }
+  if(sc)sc.style.paddingTop=on?'14px':'';
+  // Overlay transparent top 15% → clic = retour explorer
+  var ov=document.getElementById('srch-bg-overlay');
+  if(on){
+    if(!ov){
+      ov=document.createElement('div');
+      ov.id='srch-bg-overlay';
+      ov.style.cssText='position:fixed;top:0;left:0;right:0;height:15vh;z-index:99;cursor:pointer;';
+      ov.addEventListener('click',function(){clearSearch();});
+      document.body.appendChild(ov);
+    }
+    ov.style.display='block';
+  } else {
+    if(ov)ov.style.display='none';
   }
 }
 
@@ -2633,7 +2693,7 @@ function showSearchInitial(){
   ];
   var incos=POIS.filter(function(p){return p.inco;}).slice(0,4);
   scroll.innerHTML=
-    '<div style="padding-top:calc(56px + env(safe-area-inset-top,0px));padding-bottom:20px">'
+    '<div style="padding-bottom:20px">'
     +'<div style="font-size:11px;color:var(--txm);margin-bottom:10px;font-family:\'DM Sans\',sans-serif;font-weight:600;letter-spacing:.6px;text-transform:uppercase">Recherches rapides</div>'
     +'<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px">'
     +chips.map(function(c){
@@ -2703,7 +2763,7 @@ function doSearch(q){
         +'style="color:var(--brand);text-decoration:underline">'+suggestion+'</a> ?</div>';
     }
     sugHtml+='<div onclick="clearSearch()" style="display:inline-block;margin-top:14px;padding:8px 18px;background:var(--brand);color:#fff;border-radius:20px;font-size:13px;font-family:DM Sans,sans-serif;cursor:pointer;">Voir tous les POIs</div>';
-    scroll.innerHTML='<div class="srch-view-title" style="padding-top:calc(60px + env(safe-area-inset-top,0px))">'+titleTxt+'</div>'
+    scroll.innerHTML='<div class="srch-view-title">'+titleTxt+'</div>'
       +'<div class="srch-empty-page">'
       +'<div class="srch-empty-icon">🔍</div>'
       +'<div class="srch-empty-txt">Essaie avec un autre mot : le nom d\'un lieu, une ville, ou un type d\'activité (plage, port, balade…)</div>'
@@ -2712,7 +2772,7 @@ function doSearch(q){
     return;
   }
 
-  scroll.innerHTML='<div class="srch-view-title" style="padding-top:calc(60px + env(safe-area-inset-top,0px))">'+titleTxt+'</div>'
+  scroll.innerHTML='<div class="srch-view-title">'+titleTxt+'</div>'
     +results.map(function(r){
     var p=r.p;var i=r.i;
     var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
