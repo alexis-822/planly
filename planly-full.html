@@ -1078,6 +1078,7 @@ body{
       </div>
 <div class="hdr-btn" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
     </div>
+    <div id="srch-autocomplete" style="position:fixed;z-index:9999;background:rgba(20,20,20,0.93);backdrop-filter:blur(12px);border-radius:0 0 14px 14px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.4);display:none;"></div>
     <div class="pills-row">
       <div class="pills-scroll" id="pills-scroll">
         <div class="pill tous" onclick="selectTous()">Tous</div>
@@ -2301,89 +2302,188 @@ function saveLike(idx){
 }
 function isLiked(name){return likedPois.indexOf(name)!==-1;}
 
-// ── MOTEUR DE RECHERCHE ──
-var STOPWORDS=['le','la','les','de','du','des','l','un','une','au','aux','en','et','a'];
+// ── MOTEUR DE RECHERCHE v2 ──
+var STOPWORDS=['le','la','les','de','du','des','l','un','une','au','aux','en','et','a','sur','dans'];
 
-// Mots-clés → catégories POI (matching partiel suffisant)
-var SRCH_CATS=[
-  {kw:['plage','plages','sable','bain','baignade'],cats:['plage']},
-  {kw:['port','ports','marina','bateau','voilier'],cats:['port']},
-  {kw:['nature','foret','forets','marais','lac','reserve'],cats:['nature']},
-  {kw:['balade','balades','promenade','rando','randonnee','sentier','chemin'],cats:['balade']},
-  {kw:['point','vue','belvedere','panorama','sommet'],cats:['pointdevue']},
-  {kw:['patrimoine','village','chateau','monument','dolmen','histoire','historique','eglise','abbaye'],cats:['patrimoine']},
-  {kw:['mer','ocean','littoral','cote','cotier'],cats:['plage','port','nature']},
-  {kw:['ile','island','noirmoutier','yeu'],cats:['nature','plage']},
-];
+// Synonymes sémantiques → intention (cat POI ou filtre _xxx)
+var SYNONYMES={
+  'mer':'plage','ocean':'plage','bain':'plage','nage':'plage',
+  'baignade':'plage','sable':'plage','dune':'plage','cote':'plage',
+  'littoral':'plage','remblai':'plage','tanchet':'plage','cayola':'plage',
+  'veillon':'plage','conches':'plage','granges':'plage',
+  'foret':'nature','bois':'nature','arbre':'nature',
+  'marais':'nature','lac':'nature','etang':'nature',
+  'reserve':'nature','salant':'nature','sel':'nature',
+  'oiseau':'nature','faune':'nature',
+  'gois':'nature','noirmoutier':'nature','yeu':'nature',
+  'marche':'balade','promenade':'balade','sentier':'balade',
+  'chemin':'balade','douanier':'balade','circuit':'balade',
+  'rando':'balade','trek':'balade','randonner':'balade',
+  'velo':'balade','vtt':'balade','cyclisme':'balade',
+  'surf':'activite','paddle':'activite','kayak':'activite',
+  'voile':'activite','kite':'activite','nautique':'activite',
+  'glisse':'activite','planche':'activite',
+  'golf':'activite','tennis':'activite','equitation':'activite','cheval':'activite',
+  'phare':'pointdevue','belvedere':'pointdevue','panorama':'pointdevue',
+  'pointe':'pointdevue','sommet':'pointdevue',
+  'chateau':'patrimoine','abbaye':'patrimoine','eglise':'patrimoine',
+  'prieure':'patrimoine','fort':'patrimoine','dolmen':'patrimoine',
+  'monument':'patrimoine','village':'patrimoine','penotte':'patrimoine',
+  'musee':'culture','expo':'culture','historial':'culture','coquillage':'culture',
+  'port':'port','marina':'port','bateau':'port','voilier':'port',
+  'enfant':'_famille','kid':'_famille','poussette':'_famille','bebe':'_famille',
+  'chien':'_animaux','dog':'_animaux','toutou':'_animaux',
+  'gratuit':'_gratuit','free':'_gratuit',
+  'pmr':'_pmr','handicap':'_pmr','fauteuil':'_pmr',
+  'incontournable':'_inco','top':'_inco',
+};
 
-function normalize(s){return(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ');}
+// Intentions → catégories POI
+var INTENT_TO_CAT={
+  'plage':['plage'],'nature':['nature'],'balade':['balade'],
+  'activite':['activite'],'pointdevue':['pointdevue'],
+  'patrimoine':['patrimoine'],'culture':['culture'],'port':['port'],
+};
 
+var CAT_LABELS={
+  'plage':'Plages & Côte','nature':'Forêts & Nature','balade':'Balades & Promenades',
+  'activite':'Nautisme & Sport','pointdevue':'Points de vue',
+  'patrimoine':'Patrimoine','culture':'Musées & Culture','port':'Ports',
+};
+
+function normalize(s){
+  return(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ');
+}
 function tokenize(s){
   return normalize(s).split(/\s+/).filter(function(t){return t.length>=2&&STOPWORDS.indexOf(t)===-1;});
 }
 
-// Score de matching d'un token contre un texte (préfixe = partiel OK)
-function tokenScore(token,text){
+// Levenshtein distance
+function levenshtein(a,b){
+  var m=a.length,n=b.length,i,j,dp=[];
+  for(i=0;i<=m;i++){dp[i]=[];for(j=0;j<=n;j++)dp[i][j]=i===0?j:j===0?i:0;}
+  for(i=1;i<=m;i++)for(j=1;j<=n;j++)
+    dp[i][j]=a[i-1]===b[j-1]?dp[i-1][j-1]:1+Math.min(dp[i-1][j],dp[i][j-1],dp[i-1][j-1]);
+  return dp[m][n];
+}
+
+// Score exact/substring uniquement (utilisé pour les filtres critiques — pas de fuzzy)
+function tokenScoreDirect(token,text){
   if(!text)return 0;
   var nt=normalize(text);
   if(nt===token)return 3;
-  if(nt.indexOf(' '+token)!==-1||nt.startsWith(token))return 2;
+  if(nt.startsWith(token))return 2.5;
+  if(nt.indexOf(' '+token)!==-1)return 2;
   if(nt.indexOf(token)!==-1)return 1;
   return 0;
 }
 
+// Score token vs texte — exact + fuzzy Levenshtein pour freeTokens (amél. 2 + 5)
+function tokenScore(token,text){
+  var direct=tokenScoreDirect(token,text);
+  if(direct>0)return direct;
+  if(token.length>=4){
+    var nt=normalize(text||'');
+    var words=nt.split(/\s+/),best=99;
+    for(var i=0;i<words.length;i++){
+      if(Math.abs(words[i].length-token.length)<=3){var d=levenshtein(token,words[i]);if(d<best)best=d;}
+    }
+    if(best===1)return 1.4;
+    if(best===2)return 0.8;
+  }
+  return 0;
+}
+
+// Suggestion "did you mean" — closest keyword via Levenshtein
+function findClosestKw(token){
+  if(token.length<3)return null;
+  var allKw=Object.keys(SYNONYMES);
+  POIS.forEach(function(p){
+    tokenize(p.name).forEach(function(t){if(allKw.indexOf(t)===-1)allKw.push(t);});
+    tokenize(p.commune||'').forEach(function(t){if(allKw.indexOf(t)===-1)allKw.push(t);});
+  });
+  var best=null,bestD=99;
+  for(var i=0;i<allKw.length;i++){
+    if(Math.abs(allKw[i].length-token.length)>3)continue;
+    var d=levenshtein(token,allKw[i]);
+    if(d>0&&d<=2&&d<bestD){bestD=d;best=allKw[i];}
+  }
+  return best;
+}
+
 function searchPois(q){
-  if(!q||q.length<1)return[];
+  if(!q||q.length<2)return[];
   var tokens=tokenize(q);
   if(!tokens.length)return[];
 
-  // Détecter les tokens qui sont des mots-clés de catégorie
-  var catTokens=[],freeTokens=[];
+  // Expansion SYNONYMES + classification
+  var targetCats=null,freeTokens=[],filters={},catKeywords=[];
   tokens.forEach(function(tok){
-    var matched=false;
-    for(var i=0;i<SRCH_CATS.length;i++){
-      var entry=SRCH_CATS[i];
-      for(var j=0;j<entry.kw.length;j++){
-        if(entry.kw[j].startsWith(tok)||tok.startsWith(entry.kw[j])){
-          catTokens.push(entry.cats);matched=true;break;
-        }
-      }
-      if(matched)break;
+    var intent=SYNONYMES[tok]||tok;
+    if(intent.indexOf('_')===0){
+      filters[intent]=true;
+    } else if(INTENT_TO_CAT[intent]){
+      if(!targetCats)targetCats=[];
+      INTENT_TO_CAT[intent].forEach(function(c){if(targetCats.indexOf(c)===-1)targetCats.push(c);});
+      catKeywords.push(tok);
+    } else {
+      freeTokens.push(intent!==tok?intent:tok);
     }
-    if(!matched)freeTokens.push(tok);
   });
-
-  // Catégories cibles (union si plusieurs mots-clés cat)
-  var targetCats=null;
-  if(catTokens.length){
-    targetCats=[];
-    catTokens.forEach(function(cats){cats.forEach(function(c){if(targetCats.indexOf(c)===-1)targetCats.push(c);});});
-  }
 
   var results=[];
   POIS.forEach(function(p,i){
     var score=0;
-    var nName=normalize(p.name);
-    var nCommune=normalize(p.commune||'');
-    var nSubcat=normalize(p.subcategory||'');
-    var nDesc=normalize(p.desc||'');
-    var haystack=nName+' '+nCommune+' '+nSubcat+' '+nDesc;
 
-    // Filtre catégorie
-    if(targetCats&&targetCats.indexOf(p.category)===-1)return;
-    if(targetCats)score+=15;
+    // Filtres profil (amél. 1)
+    if(filters['_famille']){
+      var famOk=(p.quickSpecs&&p.quickSpecs.some(function(s){return /poussette|enfant|famille/i.test(s.label);}))
+        ||normalize(p.desc||'').indexOf('enfant')!==-1||normalize(p.desc||'').indexOf('famille')!==-1;
+      if(!famOk)return;
+    }
+    if(filters['_animaux']){
+      if(normalize(p.desc||'').indexOf('chien')===-1&&normalize(p.desc||'').indexOf('animal')===-1)return;
+    }
+    if(filters['_gratuit']){if(!p.pricing||!p.pricing.is_free)return;score+=5;}
+    if(filters['_pmr']){
+      var pmrOk=p.quickSpecs&&p.quickSpecs.some(function(s){return /pmr|wheelchair|handicap/i.test(s.label);});
+      if(!pmrOk)return;score+=5;
+    }
+    if(filters['_inco']){if(!p.inco)return;score+=10;}
 
-    // Tokens libres (ville, nom partiel) — TOUS doivent matcher
+    // Filtre catégorie + fallback textuel sur nom/sous-cat
+    if(targetCats){
+      var catMatch=targetCats.indexOf(p.category)!==-1;
+      var textFallback=false;
+      if(!catMatch)catKeywords.forEach(function(kw){
+        if(tokenScoreDirect(kw,p.name)>0||tokenScoreDirect(kw,p.subcategory)>0)textFallback=true;
+      });
+      if(!catMatch&&!textFallback)return;
+      if(catMatch)score+=15;else score+=8;
+    }
+
+    // Tokens libres
     var allMatch=true;
     freeTokens.forEach(function(tok){
-      var s=tokenScore(tok,p.name)*3+tokenScore(tok,p.commune)*2+tokenScore(tok,p.subcategory)+tokenScore(tok,p.desc);
-      if(s===0)allMatch=false;
-      else score+=s;
+      var sName=tokenScore(tok,p.name);
+      var sCommune=tokenScore(tok,p.commune);
+      var sSubcat=tokenScore(tok,p.subcategory);
+      // amél.3 : desc uniquement si token apparaît >= 2 fois
+      var descNorm=normalize(p.desc||'');
+      var descCount=(descNorm.match(new RegExp(tok.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'))||[]).length;
+      var sDesc=descCount>=2?tokenScore(tok,p.desc):0;
+      // amél.4 : quickSpecs labels
+      var sSpecs=0;
+      if(p.quickSpecs)p.quickSpecs.forEach(function(sp){if(tokenScore(tok,sp.label)>0)sSpecs+=2;});
+      var s=sName*3+sCommune*2+sSubcat+sDesc+sSpecs;
+      if(s===0)allMatch=false;else score+=s;
     });
     if(freeTokens.length&&!allMatch)return;
 
-    // Bonus nom exact
-    if(nName.indexOf(normalize(q))!==-1)score+=10;
+    // Bonus nom exact + prefix
+    var nName=normalize(p.name),nQ=normalize(q);
+    if(nName.indexOf(nQ)!==-1)score+=10;
+    tokens.forEach(function(tok){if(nName.startsWith(normalize(tok)))score+=5;});
 
     results.push({p:p,i:i,score:score});
   });
@@ -2392,10 +2492,105 @@ function searchPois(q){
   return results;
 }
 
+// ── AUTOCOMPLETE style Airbnb (amél. 6) ──
+// Mots génériques affichables dans l'autocomplete
+var GENERICS_DISPLAY={
+  'plage':'Plage','mer':'Mer & Côte','ocean':'Océan','dune':'Dune',
+  'foret':'Forêt','nature':'Nature','marais':'Marais','lac':'Lac',
+  'balade':'Balade','sentier':'Sentier','rando':'Randonnée','velo':'Vélo',
+  'surf':'Surf','kayak':'Kayak','paddle':'Paddle','voile':'Voile',
+  'chateau':'Château','village':'Village','musee':'Musée','abbaye':'Abbaye',
+  'port':'Port','phare':'Phare','vue':'Point de vue','panorama':'Panorama',
+  'incontournable':'Incontournable','gratuit':'Gratuit','pmr':'Accessible PMR',
+};
+
+function showAutocomplete(items){
+  var ac=document.getElementById('srch-autocomplete');
+  if(!ac)return;
+  if(!items||!items.length){ac.style.display='none';return;}
+  var inp=document.getElementById('search-input-explorer');
+  if(inp){
+    var rect=inp.getBoundingClientRect();
+    ac.style.top=(rect.bottom+4)+'px';
+    ac.style.left=rect.left+'px';
+    ac.style.width=rect.width+'px';
+    ac.style.background='#fff';
+    ac.style.border='1px solid #e8e8e8';
+    ac.style.borderRadius='0 0 14px 14px';
+    ac.style.boxShadow='0 6px 20px rgba(0,0,0,.13)';
+    ac.style.backdropFilter='none';
+  }
+  ac.innerHTML=items.map(function(item,idx){
+    var isLast=idx===items.length-1;
+    var borderStyle=isLast?'none':'1px solid #f0f0f0';
+    var iconHtml='<span style="width:28px;height:28px;border-radius:50%;background:#f5f5f5;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0">'+item.icon+'</span>';
+    return '<div onclick="autocompleteSelect(\''+item.value.replace(/'/g,"\\'")+'\')" '
+      +'style="padding:11px 14px;color:#222;font-size:13px;font-family:\'DM Sans\',sans-serif;cursor:pointer;border-bottom:'+borderStyle+';display:flex;align-items:center;gap:10px;-webkit-tap-highlight-color:transparent">'
+      +iconHtml
+      +'<div style="display:flex;flex-direction:column;gap:1px">'
+      +'<span style="font-weight:500;color:#111">'+item.label+'</span>'
+      +(item.sub?'<span style="font-size:11px;color:#888">'+item.sub+'</span>':'')
+      +'</div></div>';
+  }).join('');
+  ac.style.display='block';
+}
+function hideAutocomplete(){var ac=document.getElementById('srch-autocomplete');if(ac)ac.style.display='none';}
+function autocompleteSelect(val){
+  var inp=document.getElementById('search-input-explorer');
+  if(inp){inp.value=val;handleSearch(val);}
+  hideAutocomplete();
+}
+document.addEventListener('click',function(e){
+  var ac=document.getElementById('srch-autocomplete');
+  var inp=document.getElementById('search-input-explorer');
+  if(ac&&inp&&!ac.contains(e.target)&&e.target!==inp)hideAutocomplete();
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')hideAutocomplete();});
+
+function buildAutocomplete(q){
+  if(!q||q.length<2){hideAutocomplete();return;}
+  var tok=normalize(q.trim());
+  var suggestions=[],seenNames={},seenCommunes={},seenGen={};
+
+  // 1. Noms de lieux (POIs matchés avec bon score)
+  searchPois(q).forEach(function(r){
+    if(suggestions.length>=2)return;
+    if(r.score>8&&!seenNames[r.p.name]){
+      seenNames[r.p.name]=true;
+      suggestions.push({icon:'🔍',label:r.p.name,sub:r.p.commune||'',value:r.p.name});
+    }
+  });
+
+  // 2. Villes (communes matchées)
+  POIS.forEach(function(p){
+    if(suggestions.length>=3)return;
+    if(!p.commune||seenCommunes[p.commune])return;
+    if(tokenScoreDirect(tok,p.commune)>0){
+      seenCommunes[p.commune]=true;
+      suggestions.push({icon:'📍',label:p.commune,sub:'Ville',value:p.commune});
+    }
+  });
+
+  // 3. Génériques (plage, forêt…) — sans icône dossier
+  var genKeys=Object.keys(GENERICS_DISPLAY);
+  for(var ki=0;ki<genKeys.length;ki++){
+    if(suggestions.length>=4)break;
+    var gk=genKeys[ki];
+    if((gk.startsWith(tok)||tok.startsWith(gk))&&!seenGen[gk]){
+      seenGen[gk]=true;
+      suggestions.push({icon:'🔍',label:GENERICS_DISPLAY[gk],sub:'Type de lieu',value:gk});
+    }
+  }
+
+  showAutocomplete(suggestions.slice(0,4));
+}
+
 var _srchTimer=null;
 function handleSearch(q){
   var clr=document.getElementById('srch-clear');
   if(clr)clr.style.display=q?'block':'none';
+  if(!q||q.trim().length<2){hideAutocomplete();if(!q||!q.trim()){clearTimeout(_srchTimer);doSearch('');}return;}
+  buildAutocomplete(q);
   clearTimeout(_srchTimer);
   _srchTimer=setTimeout(function(){doSearch(q);},180);
 }
@@ -2404,9 +2599,11 @@ function srchSetSearchMode(on){
   var pr=document.querySelector('.pills-row');
   var hd=document.getElementById('header-dots');
   var ah=document.getElementById('app-header');
+  var bn=document.querySelector('.bottom-nav');
   if(pr)pr.style.display=on?'none':'';
   if(hd)hd.style.display=on?'none':'';
   if(ah)ah.classList.toggle('searching',on);
+  if(bn)bn.style.display=on?'none':'';
 }
 
 function doSearch(q){
@@ -2433,10 +2630,26 @@ function doSearch(q){
     : 'Aucun résultat pour <em>"'+q+'"</em>';
 
   if(!results.length){
+    // amél.7 — suggestion "did you mean"
+    var toks=tokenize(q.trim());
+    var suggestion=null,sugTok=null;
+    for(var ti=0;ti<toks.length;ti++){
+      var cl=findClosestKw(toks[ti]);
+      if(cl&&cl!==toks[ti]){suggestion=cl;sugTok=toks[ti];break;}
+    }
+    var sugHtml='';
+    if(suggestion){
+      var sugQ=q.trim().replace(sugTok,suggestion);
+      sugHtml='<div style="margin-top:8px;color:var(--txm);font-size:12px;font-family:DM Sans,sans-serif">Vous cherchiez peut-être : '
+        +'<a href="#" onclick="var i=document.getElementById(\'search-input-explorer\');i.value=\''+suggestion+'\';handleSearch(\''+suggestion+'\');return false;" '
+        +'style="color:var(--brand);text-decoration:underline">'+suggestion+'</a> ?</div>';
+    }
+    sugHtml+='<div onclick="clearSearch()" style="display:inline-block;margin-top:14px;padding:8px 18px;background:var(--brand);color:#fff;border-radius:20px;font-size:13px;font-family:DM Sans,sans-serif;cursor:pointer;">Voir tous les POIs</div>';
     scroll.innerHTML='<div class="srch-view-title">'+titleTxt+'</div>'
       +'<div class="srch-empty-page">'
       +'<div class="srch-empty-icon">🔍</div>'
       +'<div class="srch-empty-txt">Essaie avec un autre mot : le nom d\'un lieu, une ville, ou un type d\'activité (plage, port, balade…)</div>'
+      +sugHtml
       +'</div>';
     return;
   }
@@ -2467,6 +2680,7 @@ function clearSearch(){
   var clr=document.getElementById('srch-clear');
   if(inp)inp.value='';
   if(clr)clr.style.display='none';
+  hideAutocomplete();
   view.classList.remove('open');
   srchSetSearchMode(false);
   if(currentNav==='activites'){
