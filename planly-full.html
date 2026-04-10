@@ -2496,7 +2496,37 @@ function bsCarMove(dir){
     if(Math.abs(dx)>40)bsCarMove(dx<0?1:-1);
   },{passive:true});
 })();
+// Sauvegarde état recherche pour restaurer au retour
+var _srchStateBeforePoi={active:false,query:''};
+function _hideSrchForPoi(){
+  var sv=document.getElementById('srch-view');
+  var inp=document.getElementById('search-input-explorer');
+  _srchStateBeforePoi.active=sv&&sv.classList.contains('open');
+  _srchStateBeforePoi.query=inp?inp.value:'';
+  if(_srchStateBeforePoi.active){
+    // Masque visuellement sans effacer la query
+    if(sv)sv.style.display='none';
+    var ah=document.getElementById('app-header');
+    if(ah){ah.classList.remove('searching');ah.style.zIndex='';}
+    var pr=document.querySelector('.pills-row');if(pr)pr.style.display='';
+    var hd=document.getElementById('header-dots');if(hd)hd.style.display='';
+    var bn=document.querySelector('.bottom-nav');if(bn)bn.style.display='';
+    var ov=document.getElementById('srch-bg-overlay');if(ov)ov.style.display='none';
+    var mz=document.querySelector('.main-zone');if(mz)mz.style.display='none';
+  }
+}
+function _restoreSrchAfterPoi(){
+  if(!_srchStateBeforePoi.active)return;
+  _srchStateBeforePoi.active=false;
+  var sv=document.getElementById('srch-view');
+  var inp=document.getElementById('search-input-explorer');
+  if(inp)inp.value=_srchStateBeforePoi.query;
+  if(sv){sv.style.display='';sv.classList.add('open');}
+  srchSetSearchMode(true);
+}
+
 function openPoiSheet(idx){
+  _hideSrchForPoi();
   var p=POIS[idx];
   bsCarIdx=0;bsImgs=p.imgs;
   var isBeach=p.subcategory==='Plages & Côte';
@@ -2595,7 +2625,11 @@ function closeAll(){
   ['poi','filters','ctx'].forEach(function(k){var el=document.getElementById('sheet-'+k);if(el)el.classList.remove('open');});
   var ss=document.getElementById('settings-sheet');if(ss)ss.classList.remove('open');
   var es=document.getElementById('edit-sheet');if(es)es.classList.remove('open');
-  clearSearch();
+  if(_srchStateBeforePoi&&_srchStateBeforePoi.active){
+    _restoreSrchAfterPoi();
+  } else {
+    clearSearch();
+  }
 }
 
 // ── PANNEAUX SETTINGS & EDIT ──
