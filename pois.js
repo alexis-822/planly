@@ -16,7 +16,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Venez tôt le matin pour profiter du lever de soleil sur l'oc",
+    "iaPill": "💡 Venez tôt le matin pour profiter du lever de soleil sur l'océan sans la foule, et…",
     "iaWarn": false,
     "desc": "L'emblématique promenade face à l'océan des Sables-d'Olonne. Une grande plage dorée à couper le souf",
     "inco": true,
@@ -128,7 +128,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Vérifiez les horaires de marée avant de partir : à marée bas",
+    "iaPill": "💡 Vérifiez les horaires de marée avant de partir : à marée basse, la plage est immense et…",
     "iaWarn": false,
     "desc": "Plage sauvage et immense au souffle océanique, entre surf, dunes et liberté à perte de vue.",
     "inco": false,
@@ -195,7 +195,7 @@ var POIS=[
       "lng": -1.8334051
     },
     "conseil": {
-      "positif": "Vérifiez les horaires de marée avant de partir : à marée basse, la plage est immense et idéale pour les familles. Les surfeurs et amateurs de vagues préféreront les matinées venteuses pour des conditi",
+      "positif": "Vérifiez les horaires de marée avant de partir : à marée basse, la plage est immense et idéale pour les familles. Les surfeurs et amateurs de vagues préféreront les matinées venteuses pour des conditions optimales.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -230,7 +230,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Venez tôt le matin pour profiter de la plage au calme avant ",
+    "iaPill": "💡 Venez tôt le matin pour profiter de la plage au calme avant l'affluence, et pensez à…",
     "iaWarn": false,
     "desc": "Plage sauvage entre sable fin et rochers, ouverte aux chiens et aux surfeurs. Un écrin naturel prése",
     "inco": false,
@@ -297,7 +297,7 @@ var POIS=[
       "lng": -1.846879
     },
     "conseil": {
-      "positif": "Venez tôt le matin pour profiter de la plage au calme avant l'affluence, et pensez à amener votre chien en laisse pour une balade sur le sable. Les amateurs de surf trouveront facilement cours et loca",
+      "positif": "Venez tôt le matin pour profiter de la plage au calme avant l'affluence, et pensez à amener votre chien en laisse pour une balade sur le sable. Les amateurs de surf trouveront facilement cours et location à proximité.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -330,7 +330,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, profitez de la baignade surveillée en matinée av",
+    "iaPill": "💡 En famille, profitez de la baignade surveillée en matinée avant l'affluence. En couple,…",
     "iaWarn": false,
     "desc": "Plage urbaine des Sables-d'Olonne, idéale pour une journée en famille ou entre amis, avec baignades ",
     "inco": true,
@@ -442,7 +442,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, arrivez tôt le matin pour profiter de la plage a",
+    "iaPill": "💡 En famille, arrivez tôt le matin pour profiter de la plage avant l'affluence et explorer…",
     "iaWarn": false,
     "desc": "Une baie sauvage et préservée aux portes des Sables-d'Olonne, entre falaises dorées et eaux turquois",
     "inco": false,
@@ -554,7 +554,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, vérifiez les conditions de mer avant de vous bai",
+    "iaPill": "💡 En famille, vérifiez les conditions de mer avant de vous baigner et suivez les consignes…",
     "iaWarn": false,
     "desc": "Plage sauvage et préservée à Jard-sur-Mer, moins fréquentée que ses voisines, avec un parking ombrag",
     "inco": false,
@@ -626,7 +626,7 @@ var POIS=[
       "lng": -1.628356
     },
     "conseil": {
-      "positif": "En famille, vérifiez les conditions de mer avant de vous baigner et suivez les consignes des maîtres-nageurs. Venez tôt le matin pour profiter de la plage au calme et garer facilement votre vélo ou vo",
+      "positif": "En famille, vérifiez les conditions de mer avant de vous baigner et suivez les consignes des maîtres-nageurs. Venez tôt le matin pour profiter de la plage au calme et garer facilement votre vélo ou voiture sous les arbres.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -661,7 +661,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Consultez les horaires des marées avant de venir : à marée b",
+    "iaPill": "💡 Consultez les horaires des marées avant de venir : à marée basse, les enfants adorent…",
     "iaWarn": false,
     "desc": "Une plage familiale au sable fin à Bretignolles-sur-Mer, où la marée sculpte à chaque heure un paysa",
     "inco": true,
@@ -733,7 +733,7 @@ var POIS=[
       "lng": -1.8784129999999999
     },
     "conseil": {
-      "positif": "Consultez les horaires des marées avant de venir : à marée basse, les enfants adorent explorer les rochers pour la pêche à pied, tandis que la marée haute transforme la plage en spot idéal pour les sp",
+      "positif": "Consultez les horaires des marées avant de venir : à marée basse, les enfants adorent explorer les rochers pour la pêche à pied, tandis que la marée haute transforme la plage en spot idéal pour les sports nautiques !",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -768,7 +768,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, prévoyez la matinée pour la baignade surveillée ",
+    "iaPill": "💡 En famille, prévoyez la matinée pour la baignade surveillée et partez randonner vers les…",
     "iaWarn": false,
     "desc": "L'une des plus belles plages d'Europe, sauvage et préservée, avec ses dunes majestueuses et ses pays",
     "inco": true,
@@ -840,7 +840,7 @@ var POIS=[
       "lng": -1.6544857
     },
     "conseil": {
-      "positif": "En famille, prévoyez la matinée pour la baignade surveillée et partez randonner vers les falaises après le déjeuner. En couple, ne manquez surtout pas le coucher de soleil depuis les dunes, un moment ",
+      "positif": "En famille, prévoyez la matinée pour la baignade surveillée et partez randonner vers les falaises après le déjeuner. En couple, ne manquez surtout pas le coucher de soleil depuis les dunes, un moment magique à immortaliser !",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -875,7 +875,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, privilégiez la zone surveillée pour les petits e",
+    "iaPill": "💡 En famille, privilégiez la zone surveillée pour les petits et profitez des vagues douces…",
     "iaWarn": false,
     "desc": "Sable fin, vagues douces et air iodé : la Plage des Dunes s'impose comme un écrin naturel idéal pour",
     "inco": false,
@@ -952,7 +952,7 @@ var POIS=[
       "lng": -1.8597409999999999
     },
     "conseil": {
-      "positif": "En famille, privilégiez la zone surveillée pour les petits et profitez des vagues douces pour des heures de jeux en toute sérénité. En couple ou en solo, venez à l'automne pour découvrir une plage qua",
+      "positif": "En famille, privilégiez la zone surveillée pour les petits et profitez des vagues douces pour des heures de jeux en toute sérénité. En couple ou en solo, venez à l'automne pour découvrir une plage quasi déserte et vraiment ressourçante.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -985,7 +985,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, arrivez avant midi pour trouver facilement à vou",
+    "iaPill": "💡 En famille, arrivez avant midi pour trouver facilement à vous garer et profitez des…",
     "iaWarn": false,
     "desc": "Une plage sauvage au bout des dunes, entre vagues généreuses et couchers de soleil inoubliables. Le ",
     "inco": true,
@@ -1062,7 +1062,7 @@ var POIS=[
       "lng": -1.4937099999999999
     },
     "conseil": {
-      "positif": "En famille, arrivez avant midi pour trouver facilement à vous garer et profitez des vagues en matinée. En couple ou en solo, attardez-vous en fin de journée pour vivre un coucher de soleil magique loi",
+      "positif": "En famille, arrivez avant midi pour trouver facilement à vous garer et profitez des vagues en matinée. En couple ou en solo, attardez-vous en fin de journée pour vivre un coucher de soleil magique loin de la foule.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -1097,7 +1097,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Venez en fin d'après-midi pour admirer un coucher de soleil ",
+    "iaPill": "💡 Venez en fin d'après-midi pour admirer un coucher de soleil époustouflant et évitez la…",
     "iaWarn": false,
     "desc": "Plage sauvage et préservée aux airs de bout du monde. Un cadre naturel vibrant, idéal pour les couch",
     "inco": false,
@@ -1164,7 +1164,7 @@ var POIS=[
       "lng": -1.8183638
     },
     "conseil": {
-      "positif": "Venez en fin d'après-midi pour admirer un coucher de soleil époustouflant et évitez la baignade — profitez plutôt d'un pique-nique face aux vagues. En famille, apportez de bonnes chaussures pour march",
+      "positif": "Venez en fin d'après-midi pour admirer un coucher de soleil époustouflant et évitez la baignade — profitez plutôt d'un pique-nique face aux vagues. En famille, apportez de bonnes chaussures pour marcher confortablement sur les galets.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -1199,7 +1199,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, profitez du fauteuil nautique mis à disposition ",
+    "iaPill": "💡 En famille, profitez du fauteuil nautique mis à disposition pour que tout le monde puisse…",
     "iaWarn": false,
     "desc": "Plage familiale de sable fin surveillée, accessible à tous et bien équipée pour une journée les pied",
     "inco": false,
@@ -1276,7 +1276,7 @@ var POIS=[
       "lng": -1.327061
     },
     "conseil": {
-      "positif": "En famille, profitez du fauteuil nautique mis à disposition pour que tout le monde puisse profiter de l'eau, et installez-vous près du poste de secours pour rester dans la zone surveillée. Arrivez tôt",
+      "positif": "En famille, profitez du fauteuil nautique mis à disposition pour que tout le monde puisse profiter de l'eau, et installez-vous près du poste de secours pour rester dans la zone surveillée. Arrivez tôt le matin pour trouver facilement une place de parking et profiter de la plage au calme avant l'affluence.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -1311,7 +1311,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, partez tôt le matin depuis l'Aire du Menhir pour",
+    "iaPill": "💡 En famille, partez tôt le matin depuis l'Aire du Menhir pour profiter de la fraîcheur et…",
     "iaWarn": false,
     "desc": "Échappée verte aux portes des Sables-d'Olonne, entre pins maritimes et côte sauvage. Balades balisée",
     "inco": true,
@@ -1378,7 +1378,7 @@ var POIS=[
       "lng": -1.823029
     },
     "conseil": {
-      "positif": "En famille, partez tôt le matin depuis l'Aire du Menhir pour profiter de la fraîcheur et atteindre la plage sauvage avant l'affluence. En couple ou en solo, optez pour les sentiers les plus éloignés d",
+      "positif": "En famille, partez tôt le matin depuis l'Aire du Menhir pour profiter de la fraîcheur et atteindre la plage sauvage avant l'affluence. En couple ou en solo, optez pour les sentiers les plus éloignés des parkings pour trouver une vraie sérénité.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -1402,7 +1402,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Venez tôt le matin pour profiter des reflets dorés sur les b",
+    "iaPill": "💡 Venez tôt le matin pour profiter des reflets dorés sur les bassins et observer les…",
     "iaWarn": false,
     "desc": "Entre reflets d'eau et teintes salines, une balade apaisante de 7 km au cœur des marais salants de l",
     "inco": true,
@@ -1498,7 +1498,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Combinez la balade autour du lac avec une promenade sur le r",
+    "iaPill": "💡 Combinez la balade autour du lac avec une promenade sur le remblai des Sables-d'Olonne…",
     "iaWarn": false,
     "desc": "Un petit lac paisible niché entre forêt et océan, idéal pour une balade ressourçante aux Sables-d'Ol",
     "inco": false,
@@ -1599,7 +1599,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Consultez les horaires des marées avant votre visite : à mar",
+    "iaPill": "💡 Consultez les horaires des marées avant votre visite : à marée descendante, les oiseaux…",
     "iaWarn": false,
     "desc": "Un sanctuaire sauvage où ciel et mer se rejoignent, bercé par les marées et habité par des milliers ",
     "inco": true,
@@ -1695,7 +1695,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Privilégiez une visite en semaine hors juillet-août pour pro",
+    "iaPill": "💡 Privilégiez une visite en semaine hors juillet-août pour profiter de l'île sans foule.…",
     "iaWarn": false,
     "desc": "Une île sauvage au large de la Vendée, entre côte rocheuse battue par les vents et plages de sable d",
     "inco": true,
@@ -1749,7 +1749,7 @@ var POIS=[
       "lng": -1.9404
     },
     "conseil": {
-      "positif": "Privilégiez une visite en semaine hors juillet-août pour profiter de l'île sans foule. Louez des vélos dès votre arrivée au port de Port-Joinville pour rayonner facilement vers les plages et les senti",
+      "positif": "Privilégiez une visite en semaine hors juillet-août pour profiter de l'île sans foule. Louez des vélos dès votre arrivée au port de Port-Joinville pour rayonner facilement vers les plages et les sentiers côtiers.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -1773,7 +1773,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Consultez les tables des marées avant votre visite et prévoy",
+    "iaPill": "💡 Consultez les tables des marées avant votre visite et prévoyez d'arriver 1h30 avant la…",
     "iaWarn": false,
     "desc": "Une route engloutie par l'océan : le Passage du Gois ne se découvre qu'à marée basse. Un phénomène n",
     "inco": true,
@@ -1850,7 +1850,7 @@ var POIS=[
       "lng": -2.1040636999999998
     },
     "conseil": {
-      "positif": "Consultez les tables des marées avant votre visite et prévoyez d'arriver 1h30 avant la marée basse pour profiter pleinement du site et faire de la pêche à pied en famille. En été, anticipez l'affluenc",
+      "positif": "Consultez les tables des marées avant votre visite et prévoyez d'arriver 1h30 avant la marée basse pour profiter pleinement du site et faire de la pêche à pied en famille. En été, anticipez l'affluence et garez-vous tôt !",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -1874,7 +1874,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Venez en fin de journée pour admirer le coucher de soleil su",
+    "iaPill": "💡 Venez en fin de journée pour admirer le coucher de soleil sur l'Atlantique depuis le…",
     "iaWarn": false,
     "desc": "Un phare historique au bout de la jetée des Sables-d'Olonne, offrant une vue panoramique sur le Remb",
     "inco": false,
@@ -1946,7 +1946,7 @@ var POIS=[
       "lng": -1.7927727
     },
     "conseil": {
-      "positif": "Venez en fin de journée pour admirer le coucher de soleil sur l'Atlantique depuis le phare : un moment magique en famille ou en amoureux. Pensez à vous couvrir, la brise marine peut être vive même en ",
+      "positif": "Venez en fin de journée pour admirer le coucher de soleil sur l'Atlantique depuis le phare : un moment magique en famille ou en amoureux. Pensez à vous couvrir, la brise marine peut être vive même en été !",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -1970,7 +1970,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Venez par grand vent ou en période de tempête pour vivre une",
+    "iaPill": "💡 Venez par grand vent ou en période de tempête pour vivre une expérience inoubliable !…",
     "iaWarn": false,
     "desc": "Un belvédère spectaculaire sur la corniche vendéenne, où la mer se déchaîne contre les rochers. Vue ",
     "inco": false,
@@ -2061,7 +2061,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Consultez les tables des marées avant votre visite et privil",
+    "iaPill": "💡 Consultez les tables des marées avant votre visite et privilégiez un coefficient…",
     "iaWarn": false,
     "desc": "Une faille naturelle où l'océan se déchaîne avec une puissance spectaculaire. Un phénomène géologiqu",
     "inco": true,
@@ -2128,7 +2128,7 @@ var POIS=[
       "lng": -1.7468842
     },
     "conseil": {
-      "positif": "Consultez les tables des marées avant votre visite et privilégiez un coefficient supérieur à 90 à marée montante ou haute pour un spectacle à couper le souffle. Gardez un œil attentif sur les enfants,",
+      "positif": "Consultez les tables des marées avant votre visite et privilégiez un coefficient supérieur à 90 à marée montante ou haute pour un spectacle à couper le souffle. Gardez un œil attentif sur les enfants, les rochers peuvent être glissants et les vagues imprévisibles.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -2152,7 +2152,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, partez tôt le matin pour profiter du calme et de",
+    "iaPill": "💡 En famille, partez tôt le matin pour profiter du calme et des lumières dorées sur les…",
     "iaWarn": false,
     "desc": "Falaises, forêt et mer en un seul sentier magique. Une boucle facile et sauvage à couper le souffle ",
     "inco": true,
@@ -2238,7 +2238,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, partez tôt le matin pour profiter de la fraîcheu",
+    "iaPill": "💡 En famille, partez tôt le matin pour profiter de la fraîcheur de la forêt et terminez sur…",
     "iaWarn": false,
     "desc": "Un sentier côtier sauvage entre forêt de pins et plages de sable fin, face à l'Atlantique.",
     "inco": false,
@@ -2292,7 +2292,7 @@ var POIS=[
       "lng": -1.8288
     },
     "conseil": {
-      "positif": "En famille, partez tôt le matin pour profiter de la fraîcheur de la forêt et terminez sur la plage pour une baignade bien méritée. En couple, le coucher de soleil depuis les dunes est absolument magiq",
+      "positif": "En famille, partez tôt le matin pour profiter de la fraîcheur de la forêt et terminez sur la plage pour une baignade bien méritée. En couple, le coucher de soleil depuis les dunes est absolument magique.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -2316,7 +2316,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Pour une expérience magique, venez au lever du soleil : la l",
+    "iaPill": "💡 Pour une expérience magique, venez au lever du soleil : la lumière dorée sur l'océan est…",
     "iaWarn": false,
     "desc": "La promenade iconique des Sables-d'Olonne face à l'océan Atlantique. Vue spectaculaire, air iodé et ",
     "inco": true,
@@ -2393,7 +2393,7 @@ var POIS=[
       "lng": -1.786038
     },
     "conseil": {
-      "positif": "Pour une expérience magique, venez au lever du soleil : la lumière dorée sur l'océan est époustouflante et la promenade est encore calme. En famille, prévoyez un arrêt glace obligatoire avant de desce",
+      "positif": "Pour une expérience magique, venez au lever du soleil : la lumière dorée sur l'océan est époustouflante et la promenade est encore calme. En famille, prévoyez un arrêt glace obligatoire avant de descendre sur la Grande Plage !",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -2417,7 +2417,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Venez tôt le matin pour profiter de la lumière dorée sur les",
+    "iaPill": "💡 Venez tôt le matin pour profiter de la lumière dorée sur les salines et observer les…",
     "iaWarn": false,
     "desc": "Balade apaisante de 7 km au cœur des marais salants de L'Île-d'Olonne, entre reflets d'eau, salines ",
     "inco": false,
@@ -2513,7 +2513,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Privilégiez une sortie tôt le matin ou en fin d'après-midi p",
+    "iaPill": "💡 Privilégiez une sortie tôt le matin ou en fin d'après-midi pour profiter des lumières…",
     "iaWarn": false,
     "desc": "Un sentier côtier spectaculaire entre falaises, vignes et panoramas sur l'Atlantique. La balade natu",
     "inco": false,
@@ -2590,7 +2590,7 @@ var POIS=[
       "lng": -0.901822
     },
     "conseil": {
-      "positif": "Privilégiez une sortie tôt le matin ou en fin d'après-midi pour profiter des lumières dorées sur les falaises et éviter la foule estivale. Pensez à emporter de l'eau et des jumelles pour observer les ",
+      "positif": "Privilégiez une sortie tôt le matin ou en fin d'après-midi pour profiter des lumières dorées sur les falaises et éviter la foule estivale. Pensez à emporter de l'eau et des jumelles pour observer les oiseaux marins !",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -2612,7 +2612,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Garez-vous gratuitement au parking Port Olona et profitez de",
+    "iaPill": "💡 Garez-vous gratuitement au parking Port Olona et profitez de la navette maritime à 1,10 €…",
     "iaWarn": false,
     "desc": "Le port de plaisance emblématique des Sables-d'Olonne, point de départ et d'arrivée du mythique Vend",
     "inco": true,
@@ -2689,7 +2689,7 @@ var POIS=[
       "lng": -1.7955303999999999
     },
     "conseil": {
-      "positif": "Garez-vous gratuitement au parking Port Olona et profitez de la navette maritime à 1,10 € pour rejoindre le centre des Sables-d'Olonne. En famille, les enfants seront fascinés par les grands voiliers ",
+      "positif": "Garez-vous gratuitement au parking Port Olona et profitez de la navette maritime à 1,10 € pour rejoindre le centre des Sables-d'Olonne. En famille, les enfants seront fascinés par les grands voiliers de course amarrés aux pontons !",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -2713,7 +2713,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : En famille, profitez des pontons pour observer les bateaux p",
+    "iaPill": "💡 En famille, profitez des pontons pour observer les bateaux puis enchaînez sur le sentier…",
     "iaWarn": false,
     "desc": "Un port de plaisance authentique niché au cœur de la côte vendéenne, où l'air iodé et l'horizon mari",
     "inco": false,
@@ -2777,7 +2777,7 @@ var POIS=[
       "lng": -1.673
     },
     "conseil": {
-      "positif": "En famille, profitez des pontons pour observer les bateaux puis enchaînez sur le sentier côtier jusqu'à la plage. En couple, venez en fin de journée pour saisir le coucher de soleil sur les mâts — un ",
+      "positif": "En famille, profitez des pontons pour observer les bateaux puis enchaînez sur le sentier côtier jusqu'à la plage. En couple, venez en fin de journée pour saisir le coucher de soleil sur les mâts — un moment suspendu et romantique.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -2801,7 +2801,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Garez-vous gratuitement au parking du port Olona et emprunte",
+    "iaPill": "💡 Garez-vous gratuitement au parking du port Olona et empruntez la navette maritime à 1,10…",
     "iaWarn": false,
     "desc": "Le cœur battant de la voile vendéenne, berceau du Vendée Globe et port historique de La Chaume face ",
     "inco": true,
@@ -2873,7 +2873,7 @@ var POIS=[
       "lng": -1.7955303999999999
     },
     "conseil": {
-      "positif": "Garez-vous gratuitement au parking du port Olona et empruntez la navette maritime à 1,10 € par personne pour rejoindre les Sables-d'Olonne — idéal avec poussette ou vélo ! Si vous visitez pendant le V",
+      "positif": "Garez-vous gratuitement au parking du port Olona et empruntez la navette maritime à 1,10 € par personne pour rejoindre les Sables-d'Olonne — idéal avec poussette ou vélo ! Si vous visitez pendant le Vendée Globe, arrivez tôt pour profiter des meilleurs spots sur le quai.",
       "attention": null,
       "verdict": "Bonne visite !"
     },
@@ -2897,7 +2897,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Venez tôt le matin pour profiter des ruelles au calme et pho",
+    "iaPill": "💡 Venez tôt le matin pour profiter des ruelles au calme et photographier les mosaïques sans…",
     "iaWarn": false,
     "desc": "Un musée à ciel ouvert où les façades s'habillent de mosaïques en coquillages. Un quartier unique à ",
     "inco": true,
@@ -2993,7 +2993,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Arrivez en avance pour profiter des ateliers avant les spect",
+    "iaPill": "💡 Arrivez en avance pour profiter des ateliers avant les spectacles, et ne ratez surtout…",
     "iaWarn": false,
     "desc": "Un château médiéval en ruines plein de vie, avec spectacles de chevaliers, fauconnerie et ateliers p",
     "inco": true,
@@ -3089,7 +3089,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Combinez la visite avec les autres dolmens du secteur dans u",
+    "iaPill": "💡 Combinez la visite avec les autres dolmens du secteur dans un rayon d'1 km — idéal à vélo…",
     "iaWarn": false,
     "desc": "L'un des dolmens les plus imposants de Vendée : 7,20 m de long, 3,50 m de haut, couvert de seulement",
     "inco": false,
@@ -3185,7 +3185,7 @@ var POIS=[
       "pied": "? min",
       "velo": "? min"
     },
-    "iaPill": "💡 Planly : Partez à la découverte de Vouvant en fin de matinée pour pro",
+    "iaPill": "💡 Partez à la découverte de Vouvant en fin de matinée pour profiter des ruelles encore…",
     "iaWarn": false,
     "desc": "Village médiéval classé parmi Les Plus Beaux Villages de France, avec ses remparts et son atmosphère",
     "inco": true,

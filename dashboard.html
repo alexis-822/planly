@@ -542,7 +542,14 @@ let activeStatusFilter = 'all'; // 'all' | 'to_verify' | 'to_fill'
 // Specific fields per subcategory
 const SPECIFIC_FIELDS = {
   'Plages & Côte': [
-    { key: 'beach_type', label: 'Type de plage', type: 'select', options: ['sable', 'galets', 'rochers', 'mixte'] },
+    { key: 'beach_type', label: 'Type de plage', type: 'select', options: [
+        {value:'sable_fin',label:'Sable fin'},
+        {value:'sable_normal',label:'Sable'},
+        {value:'galets',label:'Galets'},
+        {value:'sable_galets',label:'Sable & galets'},
+        {value:'rochers',label:'Rochers'},
+        {value:'sable_rochers',label:'Sable & rochers'},
+      ] },
     { key: 'supervised', label: 'Surveillée', type: 'bool' },
     { key: 'supervised_start', label: 'Surveillance début', type: 'text', placeholder: 'ex: 2026-07-01' },
     { key: 'supervised_end', label: 'Surveillance fin', type: 'text', placeholder: 'ex: 2026-08-31' },
@@ -1107,7 +1114,7 @@ function renderForm(index) {
         <div class="form-label">${field.label}</div>
         <select class="form-select" onchange="updateField(${index},'${field.key}',this.value)">
           <option value="">—</option>
-          ${field.options.map(o => `<option value="${o}" ${poi[field.key] === o ? 'selected' : ''}>${o}</option>`).join('')}
+          ${field.options.map(o => {const v=o.value??o,l=o.label??o;return `<option value="${v}" ${poi[field.key]===v?'selected':''}>${l}</option>`;}).join('')}
         </select>
       </div>`;
     } else if (field.type === 'number') {
@@ -1160,7 +1167,7 @@ function renderForm(index) {
           <div class="form-label">${field.label} <span class="field-status-tag ${tagClass}">${tagLabel}</span></div>
           <select class="form-select" onchange="updateSpecific(${index},'${field.key}',this.value)">
             <option value="">—</option>
-            ${field.options.map(o => `<option value="${o}" ${val === o ? 'selected' : ''}>${o}</option>`).join('')}
+            ${field.options.map(o => {const v=o.value??o,l=o.label??o;return `<option value="${v}" ${val===v?'selected':''}>${l}</option>`;}).join('')}
           </select>
         </div>`;
       } else {

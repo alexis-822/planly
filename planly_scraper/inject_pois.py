@@ -243,7 +243,7 @@ def convert_poi(p):
     # Conseil
     conseil_txt = p.get("conseil_planly", "") or ""
     conseil = {
-        "positif": conseil_txt[:200] if conseil_txt else "Un lieu \u00e0 d\u00e9couvrir.",
+        "positif": conseil_txt if conseil_txt else "Un lieu \u00e0 d\u00e9couvrir.",
         "attention": None,
         "verdict": "Bonne visite !",
     }
@@ -257,7 +257,10 @@ def convert_poi(p):
 
     ia_pill = None
     if conseil_txt:
-        ia_pill = "\U0001f4a1 Planly : " + conseil_txt[:60]
+        # Tronque à 90 chars sur limite de mot, sans couper en plein milieu
+        pill_max = 90
+        pill_txt = conseil_txt if len(conseil_txt) <= pill_max else conseil_txt[:pill_max].rsplit(" ", 1)[0] + "…"
+        ia_pill = "\U0001f4a1 " + pill_txt
 
     specific = p.get("specific", {}) or {}
     beach = make_beach_data(specific) if p.get("subcategory") == "Plages & Côte" else None
