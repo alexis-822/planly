@@ -297,6 +297,7 @@ def convert_poi(p):
         "location": {"lat": p.get("lat") or 0, "lng": p.get("lng") or 0},
         "conseil": conseil,
         "beach": beach,
+        "specific": specific,
         "veto": None,
     }
 

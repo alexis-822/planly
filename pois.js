@@ -109,6 +109,25 @@ var POIS=[
       "tide_sensitive": false,
       "showers": true
     },
+    "specific": {
+      "beach_type": "sable_fin",
+      "supervised": true,
+      "supervised_start": "1er mai",
+      "supervised_end": "début septembre",
+      "supervised_hours": "10h30-19h en juillet-août, 14h-18h30 en juin",
+      "showers": true,
+      "wave_profile": "modéré",
+      "naturist": false,
+      "beach_bar": true,
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
+    },
     "veto": null
   },
   {
@@ -211,6 +230,25 @@ var POIS=[
       "tide_sensitive": false,
       "showers": false
     },
+    "specific": {
+      "beach_type": "sable_rochers",
+      "supervised": true,
+      "supervised_start": "15 juin",
+      "supervised_end": "15 septembre",
+      "supervised_hours": "Juin : 14h-18h30 ; Juillet-Août : 10h30-19h",
+      "showers": false,
+      "wave_profile": "sportif",
+      "naturist": true,
+      "beach_bar": true,
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
+    },
     "veto": null
   },
   {
@@ -312,6 +350,25 @@ var POIS=[
       "dogs": false,
       "tide_sensitive": false,
       "showers": false
+    },
+    "specific": {
+      "beach_type": "sable_normal",
+      "supervised": true,
+      "supervised_start": "mi-juin (16 juin environ)",
+      "supervised_end": "début septembre (2 septembre environ)",
+      "showers": false,
+      "wave_profile": "sportif",
+      "naturist": true,
+      "beach_bar": true,
+      "supervised_hours": "Juin : week-ends 12h-19h, semaine 14h-18h30 ; Juillet-Août : 12h-19h",
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
     },
     "veto": null
   },
@@ -422,6 +479,25 @@ var POIS=[
       "dogs": false,
       "tide_sensitive": false,
       "showers": false
+    },
+    "specific": {
+      "beach_type": "sable_rochers",
+      "supervised": true,
+      "supervised_start": "20 avril (week-ends), 3 juin (quotidien)",
+      "supervised_end": "1er septembre",
+      "supervised_hours": "14h à 18h30 (week-ends avril-mai), horaires élargis en semaine juin-septembre",
+      "showers": false,
+      "wave_profile": "sportif",
+      "naturist": false,
+      "beach_bar": true,
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
     },
     "veto": null
   },
@@ -535,6 +611,25 @@ var POIS=[
       "tide_sensitive": false,
       "showers": false
     },
+    "specific": {
+      "beach_type": "galets",
+      "supervised": false,
+      "showers": false,
+      "wave_profile": "variable",
+      "naturist": false,
+      "beach_bar": false,
+      "water_activity": null,
+      "supervised_start": null,
+      "supervised_end": null,
+      "supervised_hours": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
+    },
     "veto": null
   },
   {
@@ -641,6 +736,25 @@ var POIS=[
       "dogs": false,
       "tide_sensitive": false,
       "showers": false
+    },
+    "specific": {
+      "beach_type": "sable_rochers",
+      "supervised": true,
+      "supervised_start": "1er mai",
+      "supervised_end": "30 août",
+      "supervised_hours": "14h00 à 19h00",
+      "showers": false,
+      "wave_profile": "sportif",
+      "naturist": true,
+      "beach_bar": true,
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
     },
     "veto": null
   },
@@ -749,6 +863,25 @@ var POIS=[
       "tide_sensitive": false,
       "showers": true
     },
+    "specific": {
+      "beach_type": "sable_rochers",
+      "supervised": true,
+      "supervised_start": "28 juin",
+      "supervised_end": "31 août",
+      "supervised_hours": "12h à 19h",
+      "showers": true,
+      "wave_profile": "calme",
+      "naturist": false,
+      "beach_bar": true,
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
+    },
     "veto": null
   },
   {
@@ -855,6 +988,25 @@ var POIS=[
       "dogs": false,
       "tide_sensitive": false,
       "showers": true
+    },
+    "specific": {
+      "beach_type": "sable_fin",
+      "supervised": true,
+      "supervised_start": "début juillet",
+      "supervised_end": "fin août",
+      "showers": true,
+      "wave_profile": "modéré",
+      "naturist": false,
+      "beach_bar": true,
+      "supervised_hours": "Juillet-Août uniquement (horaires précis non publiés)",
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
     },
     "veto": null
   },
@@ -968,6 +1120,25 @@ var POIS=[
       "tide_sensitive": false,
       "showers": true
     },
+    "specific": {
+      "beach_type": "sable_normal",
+      "supervised": true,
+      "supervised_start": "28 juin",
+      "supervised_end": "31 août",
+      "supervised_hours": "11h30 à 19h",
+      "wave_profile": "sportif",
+      "naturist": false,
+      "beach_bar": true,
+      "showers": true,
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
+    },
     "veto": null
   },
   {
@@ -1078,6 +1249,25 @@ var POIS=[
       "tide_sensitive": false,
       "showers": true
     },
+    "specific": {
+      "beach_type": "sable_fin",
+      "supervised": true,
+      "supervised_start": "mi-juin",
+      "supervised_end": "mi-septembre",
+      "supervised_hours": "Juin (derniers WE): samedi 12h-19h, dimanche 11h-19h. Juillet-août: lundi-samedi 12h-19h, dimanche 11h-19h. Septembre (premiers WE): samedi 12h-19h, dimanche 11h-19h",
+      "wave_profile": "sportif",
+      "naturist": false,
+      "beach_bar": true,
+      "showers": true,
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
+    },
     "veto": null
   },
   {
@@ -1179,6 +1369,25 @@ var POIS=[
       "dogs": false,
       "tide_sensitive": false,
       "showers": false
+    },
+    "specific": {
+      "beach_type": "sable_rochers",
+      "supervised": false,
+      "showers": false,
+      "wave_profile": "sportif",
+      "naturist": false,
+      "beach_bar": false,
+      "water_activity": null,
+      "supervised_start": null,
+      "supervised_end": null,
+      "supervised_hours": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
     },
     "veto": null
   },
@@ -1292,6 +1501,25 @@ var POIS=[
       "tide_sensitive": false,
       "showers": true
     },
+    "specific": {
+      "beach_type": "sable_fin",
+      "supervised": true,
+      "supervised_start": "1er juillet",
+      "supervised_end": "31 août",
+      "supervised_hours": "11h à 19h (haute saison)",
+      "showers": true,
+      "wave_profile": "calme",
+      "naturist": false,
+      "beach_bar": true,
+      "water_activity": null,
+      "tide_sensitive": null,
+      "dogs_allowed_beach": null,
+      "facilities_kids_club": null,
+      "facilities_playground": null,
+      "facilities_beach_games": null,
+      "facilities_sun_loungers": null,
+      "facilities_beach_shop": null
+    },
     "veto": null
   },
   {
@@ -1383,6 +1611,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "sable, dunes, sous-bois de pins maritimes",
+      "difficulty": "facile",
+      "stroller_ok": false,
+      "bike_allowed": true,
+      "shade_level": "élevé",
+      "surface_ha": null,
+      "wildlife_observation": null,
+      "wildlife_description": null,
+      "guided_tour": null,
+      "guided_tour_info": null,
+      "free_access": null,
+      "picnic_area": null,
+      "trails": null,
+      "trail_link": null,
+      "tide_sensitive": null,
+      "ferry_pricing": null
+    },
     "veto": null
   },
   {
@@ -1479,6 +1725,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "plat, chemin de terre et sentier balisé",
+      "difficulty": "très facile",
+      "stroller_ok": true,
+      "bike_allowed": true,
+      "shade_level": "faible",
+      "surface_ha": null,
+      "wildlife_observation": null,
+      "wildlife_description": null,
+      "guided_tour": null,
+      "guided_tour_info": null,
+      "free_access": null,
+      "picnic_area": null,
+      "trails": null,
+      "trail_link": null,
+      "tide_sensitive": null,
+      "ferry_pricing": null
+    },
     "veto": null
   },
   {
@@ -1580,6 +1844,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "mixte (chemin bitumé et pelouse)",
+      "difficulty": "très facile",
+      "stroller_ok": true,
+      "bike_allowed": true,
+      "shade_level": "moyen",
+      "surface_ha": null,
+      "wildlife_observation": null,
+      "wildlife_description": null,
+      "guided_tour": null,
+      "guided_tour_info": null,
+      "free_access": null,
+      "picnic_area": null,
+      "trails": null,
+      "trail_link": null,
+      "tide_sensitive": null,
+      "ferry_pricing": null
+    },
     "veto": null
   },
   {
@@ -1676,6 +1958,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "plat, chemin de digue, vasières et prés salés",
+      "difficulty": "facile",
+      "stroller_ok": true,
+      "bike_allowed": true,
+      "shade_level": "très faible",
+      "surface_ha": null,
+      "wildlife_observation": null,
+      "wildlife_description": null,
+      "guided_tour": null,
+      "guided_tour_info": null,
+      "free_access": null,
+      "picnic_area": null,
+      "trails": null,
+      "trail_link": null,
+      "tide_sensitive": null,
+      "ferry_pricing": null
+    },
     "veto": null
   },
   {
@@ -1754,6 +2054,51 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "varié (sentier côtier, lande, plages de sable et rochers)",
+      "difficulty": "facile à modéré",
+      "stroller_ok": false,
+      "bike_allowed": true,
+      "shade_level": "faible",
+      "ferry_pricing": {
+        "compagnie": "Compagnie Vendéenne",
+        "depart_saint_gilles": {
+          "ar_journee": {
+            "adulte": 43.6,
+            "preferentiel_60_etudiant": 38.0,
+            "enfant_4_17": 24.0,
+            "bebe": 6.0
+          },
+          "aller_simple": {
+            "adulte": 21.8,
+            "preferentiel_60_etudiant": 19.0,
+            "enfant_4_17": 12.0,
+            "bebe": 3.0
+          }
+        },
+        "depart_fromentine": {
+          "ar_journee": {
+            "adulte": 45.6,
+            "enfant": 24.8
+          },
+          "aller_simple": {
+            "adulte": 22.8
+          }
+        },
+        "reduction_carte_familles_nombreuses": true,
+        "annee_tarifs": 2026
+      },
+      "surface_ha": null,
+      "wildlife_observation": null,
+      "wildlife_description": null,
+      "guided_tour": null,
+      "guided_tour_info": null,
+      "free_access": null,
+      "picnic_area": null,
+      "trails": null,
+      "trail_link": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -1855,6 +2200,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "chaussée pavée submersible (4,2 km), galets et sable latéraux",
+      "difficulty": "facile (terrain plat) — prudence marées obligatoire",
+      "stroller_ok": true,
+      "bike_allowed": true,
+      "shade_level": "aucun",
+      "surface_ha": null,
+      "wildlife_observation": null,
+      "wildlife_description": null,
+      "guided_tour": null,
+      "guided_tour_info": null,
+      "free_access": null,
+      "picnic_area": null,
+      "trails": null,
+      "trail_link": null,
+      "tide_sensitive": null,
+      "ferry_pricing": null
+    },
     "veto": null
   },
   {
@@ -1951,6 +2314,18 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "promenade bitumée, jetée",
+      "difficulty": "très facile",
+      "best_time": "coucher de soleil",
+      "panoramic": true,
+      "view_type": null,
+      "altitude_m": null,
+      "access_type": null,
+      "walk_distance_m": null,
+      "tripod_useful": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2042,6 +2417,18 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "sentier côtier, rochers",
+      "difficulty": "facile",
+      "best_time": "coucher de soleil",
+      "panoramic": true,
+      "view_type": null,
+      "altitude_m": null,
+      "access_type": null,
+      "walk_distance_m": null,
+      "tripod_useful": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2133,6 +2520,18 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "sentier côtier, rochers, falaise granitique",
+      "difficulty": "facile",
+      "best_time": "marée haute et/ou gros temps (spectacle des vagues)",
+      "panoramic": true,
+      "view_type": null,
+      "altitude_m": null,
+      "access_type": null,
+      "walk_distance_m": null,
+      "tripod_useful": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2219,6 +2618,18 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "terrain_type": "sentier côtier, forêt de chênes verts, falaises",
+      "difficulty": "facile",
+      "best_time": "matin",
+      "panoramic": true,
+      "view_type": null,
+      "altitude_m": null,
+      "access_type": null,
+      "walk_distance_m": null,
+      "tripod_useful": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2297,6 +2708,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "distance_km": "4 à 10 selon point de départ (ex. boucle Tantouille ≈ 6 km)",
+      "difficulty": "facile",
+      "stroller_ok": false,
+      "bike_allowed": true,
+      "loop": true,
+      "elevation_m": null,
+      "surface_type": null,
+      "shade_level": null,
+      "viewpoints_count": null,
+      "start_point": null,
+      "end_point": null,
+      "parking_start": null,
+      "refreshment_stop": null,
+      "trail_link": null,
+      "best_time": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2398,6 +2827,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "distance_km": 3.0,
+      "difficulty": "très facile",
+      "stroller_ok": true,
+      "bike_allowed": true,
+      "loop": false,
+      "elevation_m": null,
+      "surface_type": null,
+      "shade_level": null,
+      "viewpoints_count": null,
+      "start_point": null,
+      "end_point": null,
+      "parking_start": null,
+      "refreshment_stop": null,
+      "trail_link": null,
+      "best_time": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2494,6 +2941,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "distance_km": 4.7,
+      "difficulty": "facile",
+      "stroller_ok": true,
+      "bike_allowed": true,
+      "loop": true,
+      "elevation_m": null,
+      "surface_type": null,
+      "shade_level": null,
+      "viewpoints_count": null,
+      "start_point": null,
+      "end_point": null,
+      "parking_start": null,
+      "refreshment_stop": null,
+      "trail_link": null,
+      "best_time": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2595,6 +3060,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "distance_km": 8.0,
+      "difficulty": "modéré",
+      "stroller_ok": false,
+      "bike_allowed": false,
+      "loop": false,
+      "elevation_m": null,
+      "surface_type": null,
+      "shade_level": null,
+      "viewpoints_count": null,
+      "start_point": null,
+      "end_point": null,
+      "parking_start": null,
+      "refreshment_stop": null,
+      "trail_link": null,
+      "best_time": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2694,6 +3177,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "distance_km": 2.0,
+      "difficulty": "très facile",
+      "stroller_ok": true,
+      "bike_allowed": true,
+      "loop": true,
+      "elevation_m": null,
+      "surface_type": null,
+      "shade_level": null,
+      "viewpoints_count": null,
+      "start_point": null,
+      "end_point": null,
+      "parking_start": null,
+      "refreshment_stop": null,
+      "trail_link": null,
+      "best_time": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2782,6 +3283,24 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {
+      "distance_km": 2.0,
+      "difficulty": "très facile",
+      "stroller_ok": true,
+      "bike_allowed": true,
+      "loop": true,
+      "elevation_m": null,
+      "surface_type": null,
+      "shade_level": null,
+      "viewpoints_count": null,
+      "start_point": null,
+      "end_point": null,
+      "parking_start": null,
+      "refreshment_stop": null,
+      "trail_link": null,
+      "best_time": null,
+      "tide_sensitive": null
+    },
     "veto": null
   },
   {
@@ -2878,6 +3397,7 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {},
     "veto": null
   },
   {
@@ -2974,6 +3494,7 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {},
     "veto": null
   },
   {
@@ -3070,6 +3591,7 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {},
     "veto": null
   },
   {
@@ -3166,6 +3688,7 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {},
     "veto": null
   },
   {
@@ -3254,6 +3777,7 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
+    "specific": {},
     "veto": null
   }
 ];
