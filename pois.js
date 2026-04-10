@@ -31,11 +31,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 0.6,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 1
       }
     },
     "affluence": {
@@ -145,11 +143,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 9.4,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 13
       }
     },
     "affluence": {
@@ -249,11 +245,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 13.6,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 18
       }
     },
     "affluence": {
@@ -351,11 +345,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 3.3,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 4
       }
     },
     "affluence": {
@@ -465,11 +457,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 7.3,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 10
       }
     },
     "affluence": {
@@ -579,11 +569,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 19.3,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 26
       }
     },
     "affluence": {
@@ -688,11 +676,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 20.9,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 28
       }
     },
     "affluence": {
@@ -797,11 +783,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 16.0,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 21
       }
     },
     "affluence": {
@@ -906,11 +890,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 18.1,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 24
       }
     },
     "affluence": {
@@ -1018,11 +1000,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 32.8,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 44
       }
     },
     "affluence": {
@@ -1132,11 +1112,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 4.2,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 6
       }
     },
     "affluence": {
@@ -1236,11 +1214,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 51.6,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 69
       }
     },
     "affluence": {
@@ -1350,11 +1326,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 8.9,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 12
       }
     },
     "affluence": {
@@ -1443,11 +1417,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 9.1,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 12
       }
     },
     "affluence": {
@@ -1541,11 +1513,9 @@ var POIS=[
     },
     "duration": 60,
     "distance": {
-      "km": "?",
+      "km": 3.1,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 4
       }
     },
     "affluence": {
@@ -1644,11 +1614,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 72.1,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 96
       }
     },
     "affluence": {
@@ -1742,11 +1710,9 @@ var POIS=[
     },
     "duration": 360,
     "distance": {
-      "km": "?",
+      "km": 31.3,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 42
       }
     },
     "affluence": {
@@ -1822,11 +1788,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 69.0,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 92
       }
     },
     "affluence": {
@@ -1925,11 +1889,9 @@ var POIS=[
     },
     "duration": 30,
     "distance": {
-      "km": "?",
+      "km": 1.4,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 2
       }
     },
     "affluence": {
@@ -2023,11 +1985,9 @@ var POIS=[
     },
     "duration": 30,
     "distance": {
-      "km": "?",
+      "km": 33.9,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 45
       }
     },
     "affluence": {
@@ -2116,11 +2076,9 @@ var POIS=[
     },
     "duration": 45,
     "distance": {
-      "km": "?",
+      "km": 5.1,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 7
       }
     },
     "affluence": {
@@ -2209,11 +2167,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 16.7,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 22
       }
     },
     "affluence": {
@@ -2297,11 +2253,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 10.1,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 13
       }
     },
     "affluence": {
@@ -2377,11 +2331,9 @@ var POIS=[
     },
     "duration": 60,
     "distance": {
-      "km": "?",
+      "km": 0.6,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 1
       }
     },
     "affluence": {
@@ -2480,11 +2432,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 9.1,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 12
       }
     },
     "affluence": {
@@ -2578,11 +2528,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 165.3,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 220
       }
     },
     "affluence": {
@@ -2679,11 +2627,9 @@ var POIS=[
     },
     "duration": 60,
     "distance": {
-      "km": "?",
+      "km": 1.4,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 2
       }
     },
     "affluence": {
@@ -2782,11 +2728,9 @@ var POIS=[
     },
     "duration": 60,
     "distance": {
-      "km": "?",
+      "km": 14.8,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 20
       }
     },
     "affluence": {
@@ -2872,11 +2816,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 1.4,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 2
       }
     },
     "affluence": {
@@ -2970,11 +2912,9 @@ var POIS=[
     },
     "duration": 45,
     "distance": {
-      "km": "?",
+      "km": 0.4,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 1
       }
     },
     "affluence": {
@@ -3068,11 +3008,9 @@ var POIS=[
     },
     "duration": 120,
     "distance": {
-      "km": "?",
+      "km": 16.9,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 23
       }
     },
     "affluence": {
@@ -3166,11 +3104,9 @@ var POIS=[
     },
     "duration": 30,
     "distance": {
-      "km": "?",
+      "km": 32.0,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 43
       }
     },
     "affluence": {
@@ -3264,11 +3200,9 @@ var POIS=[
     },
     "duration": 90,
     "distance": {
-      "km": "?",
+      "km": 101.3,
       "min": {
-        "voiture": "?",
-        "pied": "?",
-        "velo": "?"
+        "voiture": 135
       }
     },
     "affluence": {

@@ -1961,17 +1961,13 @@ function toggleLikeCard(){
   }
 }
 
-// Badge trajet adaptatif selon le filtre actif
 function updateCardTrajet(p){
   var trajetEl=document.getElementById('card-trajet');
-  var icons={voiture:'🚗',pied:'🥾',velo:'🚴'};
-  var key=transport||USER_PROFILE.mobilite||'voiture';
-  var icon=icons[key];
-  var val=p.trajet[key]||p.trajet.voiture;
-  // Calculer couleur selon durée
-  var min=parseInt(val);
-  var color=min<=10?'green':'orange';
-  trajetEl.textContent=icon+' '+val;
+  var d=p.distance||{};
+  var minVal=(d.min&&d.min.voiture)||'?';
+  var kmVal=d.km||'?';
+  var color=minVal!=='?'&&minVal<=10?'green':'orange';
+  trajetEl.textContent='🚗 '+minVal+' min · '+kmVal+' km';
   trajetEl.className='card-metric trajet '+color;
 }
 
@@ -2107,7 +2103,7 @@ function _renderBeachMarine(marineD,windD,tides){
   // Score de danger
   var score=_dangerScore(H,P,W);
   // Labels mer
-  var merLabel=score<=1?'Mer calme':score<=3?'Mer agitée':'Mer très agitée';
+  var merLabel=score<=2?'Mer calme':score<=5?'Mer agitée':'Mer très agitée';
   var wavesLabel=H>0?H.toFixed(1)+'m':'—';
   // Marée (depuis tides.js)
   var direction='—',arrow='',nextTideLabel='—',nextTideTime='—';
@@ -2134,11 +2130,11 @@ function _renderBeachMarine(marineD,windD,tides){
   var verdictBg,verdictIcon,verdictTxt,verdictSub,verdictColor;
   var bchSupervised=!!(window._currentBeach&&window._currentBeach.supervised);
   var survSuffix=bchSupervised?' · Surveillée':'';
-  if(score<=1){
+  if(score<=2){
     verdictBg='#EAF3DE';verdictIcon='✅';verdictColor='#27500A';
     verdictTxt='Baignade idéale';
     verdictSub='Mer calme'+survSuffix+', idéale en famille';
-  } else if(score<=3){
+  } else if(score<=5){
     verdictBg='#FAEEDA';verdictIcon='⚠️';verdictColor='#633806';
     verdictTxt='Baignade avec prudence';
     verdictSub='Vagues présentes · Surveiller les enfants';
@@ -2384,8 +2380,10 @@ function openPoiSheet(idx){
       velo:'<circle cx="5" cy="14" r="3"/><circle cx="15" cy="14" r="3"/><path d="M5 14l4-8h3l2 8"/><path d="M12 6h3"/>'
     };
     document.getElementById('rib-mob-svg').innerHTML=mobPaths[mode];
-    document.getElementById('tile-distance').textContent=p.distance.min[mode]+' min';
-    document.getElementById('tile-distance-lbl').textContent=p.distance.km+' km';
+    var distMin=(p.distance&&p.distance.min&&p.distance.min.voiture)||'?';
+    var distKm=(p.distance&&p.distance.km)||'?';
+    document.getElementById('tile-distance').textContent=distMin+' min';
+    document.getElementById('tile-distance-lbl').textContent=distKm+' km';
     document.getElementById('bs-desc').textContent=p.descLong;
     document.getElementById('bs-positif').textContent=p.conseil.positif;
     var att=document.getElementById('bs-attention');

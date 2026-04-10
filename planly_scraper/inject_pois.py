@@ -4,8 +4,27 @@ import os
 import sys
 import io
 import re
+import math
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+
+# Ref : 1 Av. Georges Pompidou, Les Sables-d'Olonne
+REF_LAT, REF_LNG = 46.4977749, -1.7823345
+
+def haversine_km(lat1, lng1, lat2, lng2):
+    R = 6371
+    dlat = math.radians(lat2 - lat1)
+    dlng = math.radians(lng2 - lng1)
+    a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlng/2)**2
+    return R * 2 * math.asin(math.sqrt(a))
+
+def compute_distance(lat, lng):
+    if not lat or not lng:
+        return {"km": "?", "min": {"voiture": "?"}}
+    km = haversine_km(REF_LAT, REF_LNG, lat, lng)
+    km_route = round(km * 1.3, 1)  # x1.3 sinuosite cote vendeenne
+    min_voiture = max(1, round(km_route / 45 * 60))  # 45 km/h moy
+    return {"km": km_route, "min": {"voiture": min_voiture}}
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 GLOBAL_JSON = os.path.join(SCRIPT_DIR, "output_global.json")
@@ -266,7 +285,7 @@ def convert_poi(p):
             "is_free": (p.get("price_range", "") == "gratuit"),
         },
         "duration": duration,
-        "distance": {"km": "?", "min": {"voiture": "?", "pied": "?", "velo": "?"}},
+        "distance": compute_distance(p.get("lat"), p.get("lng")),
         "affluence": {"label": "Normal", "color": "green"},
         "instant": None,
         "quickSpecs": make_quick_specs(p),
