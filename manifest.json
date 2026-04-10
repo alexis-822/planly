@@ -2,7 +2,7 @@
   "name": "Planly",
   "short_name": "Planly",
   "description": "Découvrez les pépites touristiques de Vendée",
-  "start_url": "/planly-full.html",
+  "start_url": "./planly-full.html",
   "display": "standalone",
   "background_color": "#FCF8ED",
   "theme_color": "#428CE3",
