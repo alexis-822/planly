@@ -1211,7 +1211,8 @@ body{
         <input type="text" class="search-input-explorer" id="search-input-explorer" placeholder="Rechercher..." oninput="handleSearch(this.value)" onfocus="enterSearchMode()" autocomplete="off">
         <div class="srch-clear" id="srch-clear" onclick="clearSearch()" style="display:none">✕</div>
       </div>
-<div class="hdr-btn" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
+      <div class="hdr-btn" id="hdr-btn-settings" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
+      <div class="hdr-btn" id="hdr-btn-close-search" onclick="clearSearch()" style="display:none;background:var(--bg-d);border-color:var(--br);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--tx)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
     </div>
     <div id="srch-autocomplete" style="position:fixed;z-index:9999;background:rgba(20,20,20,0.93);backdrop-filter:blur(12px);border-radius:0 0 14px 14px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.4);display:none;"></div>
     <div class="pills-row">
@@ -3214,29 +3215,20 @@ function srchSetSearchMode(on){
   if(hd)hd.style.display=on?'none':'';
   if(ah){ah.classList.toggle('searching',on);ah.style.zIndex=on?'200':'';}
   if(bn)bn.style.display=on?'none':'';
-  // 85% bottom sheet
+  // Bouton fermer ↔ bouton filtres
+  var btnSettings=document.getElementById('hdr-btn-settings');
+  var btnClose=document.getElementById('hdr-btn-close-search');
+  if(btnSettings)btnSettings.style.display=on?'none':'';
+  if(btnClose)btnClose.style.display=on?'flex':'none';
+  // Plein écran — top:0 pour éviter le fond noir
   if(sv){
     if(on){
-      sv.style.cssText='position:fixed;top:15vh;left:0;right:0;bottom:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;overflow:hidden;border-radius:20px 20px 0 0;box-shadow:0 -4px 24px rgba(0,0,0,.13);';
+      sv.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;overflow:hidden;';
     } else {
       sv.style.cssText='';
     }
   }
-  if(sc)sc.style.paddingTop=on?'14px':'';
-  // Overlay transparent top 15% → clic = retour explorer
-  var ov=document.getElementById('srch-bg-overlay');
-  if(on){
-    if(!ov){
-      ov=document.createElement('div');
-      ov.id='srch-bg-overlay';
-      ov.style.cssText='position:fixed;top:0;left:0;right:0;height:15vh;z-index:99;cursor:pointer;';
-      ov.addEventListener('click',function(){clearSearch();});
-      document.body.appendChild(ov);
-    }
-    ov.style.display='block';
-  } else {
-    if(ov)ov.style.display='none';
-  }
+  if(sc)sc.style.paddingTop=on?'calc(64px + env(safe-area-inset-top,0px))':'';
 }
 
 // Contenu initial plein écran : chips rapides + incontournables
