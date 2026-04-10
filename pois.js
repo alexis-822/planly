@@ -602,7 +602,7 @@ var POIS=[
     "beach": {
       "type_label": "Galets",
       "supervised": false,
-      "hours": null,
+      "hours": "11h à 19h",
       "period": null,
       "wave_profile": "variable",
       "naturist": false,
@@ -619,9 +619,9 @@ var POIS=[
       "naturist": false,
       "beach_bar": false,
       "water_activity": null,
-      "supervised_start": null,
+      "supervised_start": "12 avril 2025",
       "supervised_end": null,
-      "supervised_hours": null,
+      "supervised_hours": "11h à 19h",
       "tide_sensitive": null,
       "dogs_allowed_beach": null,
       "facilities_kids_club": null,
@@ -1361,8 +1361,8 @@ var POIS=[
     "beach": {
       "type_label": "Sable & rochers",
       "supervised": false,
-      "hours": null,
-      "period": null,
+      "hours": "14h à 18h30",
+      "period": "avr.→août",
       "wave_profile": "sportif",
       "naturist": false,
       "beach_bar": false,
@@ -1378,9 +1378,9 @@ var POIS=[
       "naturist": false,
       "beach_bar": false,
       "water_activity": null,
-      "supervised_start": null,
-      "supervised_end": null,
-      "supervised_hours": null,
+      "supervised_start": "12 avril 2025",
+      "supervised_end": "31 août 2025",
+      "supervised_hours": "14h à 18h30 (week-ends en avril-mai), progression à partir du 1er juin",
       "tide_sensitive": null,
       "dogs_allowed_beach": null,
       "facilities_kids_club": null,
@@ -1624,10 +1624,188 @@ var POIS=[
       "guided_tour_info": null,
       "free_access": null,
       "picnic_area": null,
-      "trails": null,
       "trail_link": null,
       "tide_sensitive": null,
-      "ferry_pricing": null
+      "ferry_pricing": null,
+      "picnic_tables": 85,
+      "alltrails_url": "https://www.alltrails.com/fr/parcs/france/vendee/foret-domaniale-dolonne",
+      "komoot_url": "https://www.komoot.com/fr-fr/guide/2720992/rando-vtt-et-circuits-autour-de-la-foret-domaniale-d-olonne",
+      "playground": false,
+      "nb_parcours": 15,
+      "trails": [
+        {
+          "name": "Boucle Forêt domaniale d'Olonne",
+          "type": "rando",
+          "distance_km": 13.2,
+          "duration_min": 150,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-foret-domaniale-d-olonne"
+        },
+        {
+          "name": "Forêt d'Olonne",
+          "type": "rando",
+          "distance_km": 4.8,
+          "duration_min": 75,
+          "difficulty": 2,
+          "trail_url": null
+        },
+        {
+          "name": "Forêt d'Olonne - Plage de Sauveterre",
+          "type": "rando",
+          "distance_km": 3.2,
+          "duration_min": 38,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-d-olonne-plage-de-sauveterre"
+        },
+        {
+          "name": "Forêt domaniale et dunes d'Olonne-sur-Mer",
+          "type": "rando",
+          "distance_km": 9.5,
+          "duration_min": 135,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-domaniale-et-dunes-d-olonne-sur-mer"
+        },
+        {
+          "name": "Côte et Forêt d'Olonne",
+          "type": "rando",
+          "distance_km": 8.0,
+          "duration_min": 105,
+          "difficulty": 2,
+          "trail_url": null
+        },
+        {
+          "name": "Forêt domaniale d'Olonne - Le Havre de la Gachère",
+          "type": "vtt",
+          "distance_km": null,
+          "duration_min": null,
+          "difficulty": null,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/sauveterre-foret-domaniale-d-olonne-le-havre-de-la-gachere"
+        },
+        {
+          "name": "Marais de L'Île-d'Olonne",
+          "type": "rando",
+          "distance_km": 4.7,
+          "duration_min": 45,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-l-ile-d-olonne"
+        },
+        {
+          "name": "Les Bourbes",
+          "type": "rando",
+          "distance_km": 7.7,
+          "duration_min": 105,
+          "difficulty": 3,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-bourbes"
+        },
+        {
+          "name": "Les Sauniers",
+          "type": "rando",
+          "distance_km": 17.1,
+          "duration_min": null,
+          "difficulty": null,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-sauniers"
+        },
+        {
+          "name": "Plage de Sauveterre par le Chemin du Menhir",
+          "type": "rando",
+          "distance_km": 2.9,
+          "duration_min": 45,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/plage-de-sauveterre-par-le-chemin-du-menhir"
+        },
+        {
+          "name": "Les Marais d'Olonnes",
+          "type": "rando",
+          "distance_km": 5.6,
+          "duration_min": 90,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-marais-d-olonnes"
+        },
+        {
+          "name": "Aire de la Tantouille - Plage des Granges",
+          "type": "rando",
+          "distance_km": 13.0,
+          "duration_min": 195,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/aire-de-la-tantouille-plage-des-granges"
+        },
+        {
+          "name": "L'Île-d'Olonne",
+          "type": "rando",
+          "distance_km": 17.5,
+          "duration_min": 210,
+          "difficulty": null,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/ile-d-olonne"
+        },
+        {
+          "name": "Les Gravelots",
+          "type": "rando",
+          "distance_km": 4.7,
+          "duration_min": 75,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-gravelots"
+        }
+      ],
+      "trails_display": {
+        "rando": [
+          {
+            "name": "Forêt d'Olonne",
+            "type": "rando",
+            "distance_km": 4.8,
+            "duration_min": 75,
+            "difficulty": 2,
+            "trail_url": null,
+            "display_category": "famille"
+          },
+          {
+            "name": "Forêt domaniale et dunes d'Olonne-sur-Mer",
+            "type": "rando",
+            "distance_km": 9.5,
+            "duration_min": 135,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-domaniale-et-dunes-d-olonne-sur-mer",
+            "display_category": "normal"
+          },
+          {
+            "name": "Boucle Forêt domaniale d'Olonne",
+            "type": "rando",
+            "distance_km": 13.2,
+            "duration_min": 150,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-foret-domaniale-d-olonne",
+            "display_category": "sportif"
+          },
+          {
+            "name": "Forêt d'Olonne - Plage de Sauveterre",
+            "type": "rando",
+            "distance_km": 3.2,
+            "duration_min": 38,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-d-olonne-plage-de-sauveterre",
+            "display_category": null
+          },
+          {
+            "name": "Côte et Forêt d'Olonne",
+            "type": "rando",
+            "distance_km": 8.0,
+            "duration_min": 105,
+            "difficulty": 2,
+            "trail_url": null,
+            "display_category": null
+          }
+        ],
+        "vtt": [
+          {
+            "name": "Forêt domaniale d'Olonne - Le Havre de la Gachère",
+            "type": "vtt",
+            "distance_km": null,
+            "duration_min": null,
+            "difficulty": null,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/sauveterre-foret-domaniale-d-olonne-le-havre-de-la-gachere",
+            "display_category": null
+          }
+        ]
+      }
     },
     "veto": null
   },
@@ -1738,10 +1916,131 @@ var POIS=[
       "guided_tour_info": null,
       "free_access": null,
       "picnic_area": null,
-      "trails": null,
       "trail_link": null,
       "tide_sensitive": null,
-      "ferry_pricing": null
+      "ferry_pricing": null,
+      "alltrails_url": "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-l-ile-d-olonne",
+      "komoot_url": "https://www.komoot.com/fr-fr/guide/1242551/rando-vtt-et-circuits-autour-de-l-ile-d-olonne",
+      "superficie_ha": 1500,
+      "playground": true,
+      "nb_parcours": 8,
+      "trails": [
+        {
+          "name": "Marais de L'Île-d'Olonne",
+          "type": "rando",
+          "distance_km": 4.7,
+          "duration_min": 45,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-l-ile-d-olonne"
+        },
+        {
+          "name": "Les Marais d'Olonnes",
+          "type": "rando",
+          "distance_km": 5.6,
+          "duration_min": 75,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-marais-d-olonnes"
+        },
+        {
+          "name": "L'Île-d'Olonne",
+          "type": "rando",
+          "distance_km": 17.5,
+          "duration_min": 210,
+          "difficulty": null,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/ile-d-olonne"
+        },
+        {
+          "name": "Les Sauniers",
+          "type": "rando",
+          "distance_km": 17.1,
+          "duration_min": 210,
+          "difficulty": 3,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-sauniers"
+        },
+        {
+          "name": "Boucle des marais",
+          "type": "rando",
+          "distance_km": 11.7,
+          "duration_min": 165,
+          "difficulty": 3,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-des-marais"
+        },
+        {
+          "name": "Marais et Plage de Luzéronde",
+          "type": "rando",
+          "distance_km": 9.2,
+          "duration_min": 105,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/marais-et-plage-de-luzeronde"
+        },
+        {
+          "name": "Plage de la Luzéronde et les Marais",
+          "type": "rando",
+          "distance_km": 6.3,
+          "duration_min": 75,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/plage-de-la-luzeronde-et-les-marais"
+        },
+        {
+          "name": "Le Devin - Plage de la Luzéronde",
+          "type": "rando",
+          "distance_km": 4.8,
+          "duration_min": 75,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/le-devin-plage-de-la-luzeronde"
+        }
+      ],
+      "trails_display": {
+        "rando": [
+          {
+            "name": "Marais de L'Île-d'Olonne",
+            "type": "rando",
+            "distance_km": 4.7,
+            "duration_min": 45,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-l-ile-d-olonne",
+            "display_category": "famille"
+          },
+          {
+            "name": "Boucle des marais",
+            "type": "rando",
+            "distance_km": 11.7,
+            "duration_min": 165,
+            "difficulty": 3,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-des-marais",
+            "display_category": "normal"
+          },
+          {
+            "name": "L'Île-d'Olonne",
+            "type": "rando",
+            "distance_km": 17.5,
+            "duration_min": 210,
+            "difficulty": null,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/ile-d-olonne",
+            "display_category": "sportif"
+          },
+          {
+            "name": "Les Marais d'Olonnes",
+            "type": "rando",
+            "distance_km": 5.6,
+            "duration_min": 75,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-marais-d-olonnes",
+            "display_category": null
+          },
+          {
+            "name": "Les Sauniers",
+            "type": "rando",
+            "distance_km": 17.1,
+            "duration_min": 210,
+            "difficulty": 3,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-sauniers",
+            "display_category": null
+          }
+        ],
+        "vtt": []
+      },
+      "wildlife_observable": true
     },
     "veto": null
   },
@@ -1857,10 +2156,173 @@ var POIS=[
       "guided_tour_info": null,
       "free_access": null,
       "picnic_area": null,
-      "trails": null,
       "trail_link": null,
       "tide_sensitive": null,
-      "ferry_pricing": null
+      "ferry_pricing": null,
+      "picnic_tables": 3,
+      "playground": true,
+      "alltrails_url": "https://www.alltrails.com/fr/poi/france/vendee/les-sables-d-olonne/lac-de-tanchet",
+      "komoot_url": "https://www.komoot.com/fr-fr/highlight/1033815",
+      "superficie_ha": 8,
+      "nb_parcours": 15,
+      "trails": [
+        {
+          "name": "Sentier Côtier vers le Lac de Tanchet",
+          "type": "rando",
+          "distance_km": 17.4,
+          "duration_min": 177,
+          "difficulty": 3,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/sentier-cotier-vers-le-lac-de-tanchet"
+        },
+        {
+          "name": "Bois de Saint-Jean - Lac de Tanchet - Puits d'Enfer",
+          "type": "vtt",
+          "distance_km": 17.7,
+          "duration_min": null,
+          "difficulty": 3,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/bois-de-saint-jean-lac-de-tanchet-puits-d-enfer"
+        },
+        {
+          "name": "GR® 8 Section 1 : Les Sables-d'Olonne - Le Port",
+          "type": "rando",
+          "distance_km": 23,
+          "duration_min": 278,
+          "difficulty": 4,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/gr-8-section-1-les-sables-d-olonne-le-port"
+        },
+        {
+          "name": "Port Bourgenay et Chemin du Grand Quézeau",
+          "type": "rando",
+          "distance_km": 6,
+          "duration_min": 75,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/port-bourgenay-et-chemin-du-grand-quezeau"
+        },
+        {
+          "name": "Jard-sur-Mer - Forêt de Longeville",
+          "type": "rando",
+          "distance_km": 8.2,
+          "duration_min": 105,
+          "difficulty": 1,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/jard-sur-mer-foret-de-longeville"
+        },
+        {
+          "name": "Boucle du Veillon",
+          "type": "rando",
+          "distance_km": 6.9,
+          "duration_min": 90,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-du-veillon"
+        },
+        {
+          "name": "Forêt domaniale de Longeville - Marais Guilloteau",
+          "type": "rando",
+          "distance_km": 9.8,
+          "duration_min": 116,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-domaniale-de-longeville-marais-guilloteau"
+        },
+        {
+          "name": "GR® 8 Section 1 : Le Port - La Tranche-sur-Mer",
+          "type": "rando",
+          "distance_km": 29.9,
+          "duration_min": 361,
+          "difficulty": 4,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/gr-8-section-1-le-port-la-tranche-sur-mer"
+        },
+        {
+          "name": "Marais de la Guittière",
+          "type": "rando",
+          "distance_km": 3.9,
+          "duration_min": 44,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-la-guittiere"
+        },
+        {
+          "name": "Pointe du Payré",
+          "type": "rando",
+          "distance_km": 5.5,
+          "duration_min": 75,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/pointe-du-payre"
+        },
+        {
+          "name": "Boucle de l'Espace naturel sensible Saint-Jean d'Orbestier",
+          "type": "rando",
+          "distance_km": 2.6,
+          "duration_min": null,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-de-l-espace-naturel-sensible-saint-jean-d-orbestier"
+        },
+        {
+          "name": "Plage du Veillon - Baie de Cayola",
+          "type": "rando",
+          "distance_km": 15.1,
+          "duration_min": 183,
+          "difficulty": 3,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/plage-du-veillon-a-la-baie-de-cayola"
+        }
+      ],
+      "trails_display": {
+        "rando": [
+          {
+            "name": "Marais de la Guittière",
+            "type": "rando",
+            "distance_km": 3.9,
+            "duration_min": 44,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-la-guittiere",
+            "display_category": "famille"
+          },
+          {
+            "name": "Port Bourgenay et Chemin du Grand Quézeau",
+            "type": "rando",
+            "distance_km": 6,
+            "duration_min": 75,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/port-bourgenay-et-chemin-du-grand-quezeau",
+            "display_category": "normal"
+          },
+          {
+            "name": "Sentier Côtier vers le Lac de Tanchet",
+            "type": "rando",
+            "distance_km": 17.4,
+            "duration_min": 177,
+            "difficulty": 3,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/sentier-cotier-vers-le-lac-de-tanchet",
+            "display_category": "sportif"
+          },
+          {
+            "name": "GR® 8 Section 1 : Les Sables-d'Olonne - Le Port",
+            "type": "rando",
+            "distance_km": 23,
+            "duration_min": 278,
+            "difficulty": 4,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/gr-8-section-1-les-sables-d-olonne-le-port",
+            "display_category": null
+          },
+          {
+            "name": "Jard-sur-Mer - Forêt de Longeville",
+            "type": "rando",
+            "distance_km": 8.2,
+            "duration_min": 105,
+            "difficulty": 1,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/jard-sur-mer-foret-de-longeville",
+            "display_category": null
+          }
+        ],
+        "vtt": [
+          {
+            "name": "Bois de Saint-Jean - Lac de Tanchet - Puits d'Enfer",
+            "type": "vtt",
+            "distance_km": 17.7,
+            "duration_min": null,
+            "difficulty": 3,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/bois-de-saint-jean-lac-de-tanchet-puits-d-enfer",
+            "display_category": "normal"
+          }
+        ]
+      }
     },
     "veto": null
   },
@@ -1971,10 +2433,92 @@ var POIS=[
       "guided_tour_info": null,
       "free_access": null,
       "picnic_area": null,
-      "trails": null,
       "trail_link": null,
       "tide_sensitive": null,
-      "ferry_pricing": null
+      "ferry_pricing": null,
+      "superficie_ha": 4900,
+      "picnic_tables": 44,
+      "playground": true,
+      "alltrails_url": "https://www.alltrails.com/fr/poi/france/vendee/---2/baie-de-l-aiguillon",
+      "komoot_url": "https://www.komoot.com/fr-fr/guide/162961/rando-vtt-et-circuits-autour-de-la-reserve-naturelle-de-la-baie-de-l-aiguillon",
+      "nb_parcours": 5,
+      "trails": [
+        {
+          "name": "De la Plage des Chardons à la Grande Casse",
+          "type": "rando",
+          "distance_km": 6.3,
+          "duration_min": 75,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/de-la-plage-des-chardons-a-la-grande-casse"
+        },
+        {
+          "name": "Boucle Champ-Saint-Père - Longeville",
+          "type": "rando",
+          "distance_km": 55.2,
+          "duration_min": 750,
+          "difficulty": 4,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-champ-saint-pere-longeville"
+        },
+        {
+          "name": "Concarneau: Le Rouz - Le Cabellou - Anse du Moulin à Mer",
+          "type": "vtt",
+          "distance_km": 12.2,
+          "duration_min": null,
+          "difficulty": null,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/finistere/concarneau-le-rouz-le-cabellou-anse-du-moulin-a-mer-lanriec"
+        },
+        {
+          "name": "Les Conches - Le Rocher",
+          "type": "rando",
+          "distance_km": 7.2,
+          "duration_min": 120,
+          "difficulty": 2,
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-conches-le-rocher"
+        }
+      ],
+      "trails_display": {
+        "rando": [
+          {
+            "name": "De la Plage des Chardons à la Grande Casse",
+            "type": "rando",
+            "distance_km": 6.3,
+            "duration_min": 75,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/de-la-plage-des-chardons-a-la-grande-casse",
+            "display_category": "normal"
+          },
+          {
+            "name": "Boucle Champ-Saint-Père - Longeville",
+            "type": "rando",
+            "distance_km": 55.2,
+            "duration_min": 750,
+            "difficulty": 4,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-champ-saint-pere-longeville",
+            "display_category": "sportif"
+          },
+          {
+            "name": "Les Conches - Le Rocher",
+            "type": "rando",
+            "distance_km": 7.2,
+            "duration_min": 120,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-conches-le-rocher",
+            "display_category": null
+          }
+        ],
+        "vtt": [
+          {
+            "name": "Concarneau: Le Rouz - Le Cabellou - Anse du Moulin à Mer",
+            "type": "vtt",
+            "distance_km": 12.2,
+            "duration_min": null,
+            "difficulty": null,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/finistere/concarneau-le-rouz-le-cabellou-anse-du-moulin-a-mer-lanriec",
+            "display_category": "normal"
+          }
+        ]
+      },
+      "wildlife_observable": true
     },
     "veto": null
   },
@@ -1986,7 +2530,7 @@ var POIS=[
     ],
     "name": "Île d'Yeu",
     "commune": "Saint-Gilles (ferry)",
-    "cat": "🌊 Nature & Grand Air",
+    "cat": "🏛️ Patrimoine",
     "note": "?",
     "budgetBadge": "€€€ Premium",
     "budgetClass": "paid",
@@ -2001,8 +2545,8 @@ var POIS=[
     "inco": true,
     "accroche": "Une île sauvage au large de la Vendée, entre côte rocheuse battue par les vents ",
     "descLong": "Perle du golfe de Gascogne, l'île d'Yeu séduit par ses paysages contrastés : côte sauvage et déchiquetée au nord, plages de sable fin au sud. À seulement une heure de bateau depuis Fromentine ou Saint-Gilles-Croix-de-Vie, cette île de 23 km² invite à explorer ses sentiers côtiers à vélo ou à pied, à découvrir le vieux château médiéval, les villages pittoresques aux maisons blanches et les criques secrètes. Un véritable dépaysement, loin de l'agitation du continent, où le temps semble suspendu entre terre, mer et ciel.",
-    "category": "nature",
-    "subcategory": "Forêts & Nature",
+    "category": "patrimoine",
+    "subcategory": "Villages & Sites",
     "pricing": {
       "adult": 43.6,
       "child": 24.0,
@@ -2022,13 +2566,13 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Facile à modéré",
-        "icon": "💪",
+        "label": "150 ans d'histoire, depuis 1959 pour Yeu Continent",
+        "icon": "📜",
         "cls": ""
       },
       {
-        "label": "Vélo OK",
-        "icon": "🚲",
+        "label": "Visite guidée",
+        "icon": "🎙️",
         "cls": "positive"
       }
     ],
@@ -2097,7 +2641,10 @@ var POIS=[
       "picnic_area": null,
       "trails": null,
       "trail_link": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "historical_period": "150 ans d'histoire, depuis 1959 pour Yeu Continent",
+      "guided_visit": true,
+      "free_entry": false
     },
     "veto": null
   },
@@ -2109,7 +2656,7 @@ var POIS=[
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
     "commune": "Noirmoutier-en-l'Île",
-    "cat": "🌊 Nature & Grand Air",
+    "cat": "🏛️ Patrimoine",
     "note": "4.8",
     "budgetBadge": "€ Gratuit",
     "budgetClass": "free",
@@ -2124,8 +2671,8 @@ var POIS=[
     "inco": true,
     "accroche": "Une route engloutie par l'océan : le Passage du Gois ne se découvre qu'à marée b",
     "descLong": "Le Passage du Gois est une chaussée submersible de 4,5 km reliant l'île de Noirmoutier au continent, praticable uniquement à marée basse. Deux fois par jour, la mer se retire et dévoile cette route mythique que l'océan recouvre ensuite de 3 à 4 mètres d'eau. Le spectacle est saisissant : des balises-refuges jalonnent la route pour rappeler la puissance des marées. Les amateurs de pêche à pied s'y retrouvent en nombre pour ramasser huîtres, moules et bigorneaux. Vérifiez impérativement les horaires des marées avant de vous lancer sur cette route hors du commun.",
-    "category": "nature",
-    "subcategory": "Forêts & Nature",
+    "category": "patrimoine",
+    "subcategory": "Villages & Sites",
     "pricing": {
       "adult": 0,
       "child": 0,
@@ -2145,18 +2692,18 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Facile (terrain plat) — prudence marées obligatoire",
-        "icon": "💪",
+        "label": "18ème siècle à nos jours",
+        "icon": "📜",
         "cls": ""
       },
       {
-        "label": "Poussette OK",
-        "icon": "👶",
+        "label": "Visite guidée",
+        "icon": "🎙️",
         "cls": "positive"
       },
       {
-        "label": "Vélo OK",
-        "icon": "🚲",
+        "label": "Entrée libre",
+        "icon": "🎟️",
         "cls": "positive"
       },
       {
@@ -2216,7 +2763,10 @@ var POIS=[
       "trails": null,
       "trail_link": null,
       "tide_sensitive": null,
-      "ferry_pricing": null
+      "ferry_pricing": null,
+      "historical_period": "18ème siècle à nos jours",
+      "guided_visit": true,
+      "free_entry": true
     },
     "veto": null
   },
@@ -3347,24 +3897,19 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Accès PMR",
-        "icon": "♿",
+        "label": "Moyen Âge (XI-XIII siècles)",
+        "icon": "📜",
+        "cls": ""
+      },
+      {
+        "label": "Visite guidée",
+        "icon": "🎙️",
         "cls": "positive"
       },
       {
-        "label": "Port",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Voile",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Vendée globe",
-        "icon": "📌",
-        "cls": ""
+        "label": "Accès PMR",
+        "icon": "♿",
+        "cls": "positive"
       }
     ],
     "avis": [
@@ -3397,7 +3942,11 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "historical_period": "Moyen Âge (XI-XIII siècles)",
+      "guided_visit": true,
+      "free_entry": false
+    },
     "veto": null
   },
   {
@@ -3444,24 +3993,14 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Mosaïques",
-        "icon": "📌",
+        "label": "Révolution (ancien nom 'L'île perdue'), XIXème siècle (nom 'Penotte' apparu)",
+        "icon": "📜",
         "cls": ""
       },
       {
-        "label": "Coquillages",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Balade",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Art urbain",
-        "icon": "📌",
-        "cls": ""
+        "label": "Entrée libre",
+        "icon": "🎟️",
+        "cls": "positive"
       }
     ],
     "avis": [
@@ -3494,7 +4033,11 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "historical_period": "Révolution (ancien nom 'L'île perdue'), XIXème siècle (nom 'Penotte' apparu)",
+      "guided_visit": false,
+      "free_entry": true
+    },
     "veto": null
   },
   {
@@ -3541,24 +4084,14 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Château médiéval",
-        "icon": "📌",
+        "label": "XIe siècle à XVIIe siècle",
+        "icon": "📜",
         "cls": ""
       },
       {
-        "label": "Fauconnerie",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Chevaliers",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Ateliers médiévaux",
-        "icon": "📌",
-        "cls": ""
+        "label": "Visite guidée",
+        "icon": "🎙️",
+        "cls": "positive"
       }
     ],
     "avis": [
@@ -3591,7 +4124,11 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "historical_period": "XIe siècle à XVIIe siècle",
+      "guided_visit": true,
+      "free_entry": false
+    },
     "veto": null
   },
   {
@@ -3638,24 +4175,14 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
+        "label": "Néolithique",
+        "icon": "📜",
+        "cls": ""
+      },
+      {
         "label": "Accès PMR",
         "icon": "♿",
         "cls": "positive"
-      },
-      {
-        "label": "Mégalithe",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Dolmen",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Préhistoire",
-        "icon": "📌",
-        "cls": ""
       }
     ],
     "avis": [
@@ -3688,7 +4215,9 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "historical_period": "Néolithique"
+    },
     "veto": null
   },
   {
@@ -3735,24 +4264,19 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Village_medieval",
-        "icon": "📌",
+        "label": "Moyen Âge (XIe-XIIIe siècles), avec origines vers 1016-1019",
+        "icon": "📜",
         "cls": ""
       },
       {
-        "label": "Patrimoine",
-        "icon": "📌",
-        "cls": ""
+        "label": "Visite guidée",
+        "icon": "🎙️",
+        "cls": "positive"
       },
       {
-        "label": "Plus_beaux_villages",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Fortifications",
-        "icon": "📌",
-        "cls": ""
+        "label": "Entrée libre",
+        "icon": "🎟️",
+        "cls": "positive"
       }
     ],
     "avis": [
@@ -3777,7 +4301,11 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "historical_period": "Moyen Âge (XIe-XIIIe siècles), avec origines vers 1016-1019",
+      "guided_visit": true,
+      "free_entry": true
+    },
     "veto": null
   }
 ];

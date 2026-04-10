@@ -1005,6 +1005,43 @@ body{
 
 /* PROFILE EDIT BUTTON */
 
+/* ── FRT — Forêts & Nature trails block ── */
+.frt-block{margin:12px 0 4px;border-radius:16px;overflow:hidden;border:1.5px solid #d4e6c3;}
+.frt-header{background:#2d5a1b;padding:12px 14px;display:flex;align-items:center;gap:10px;}
+.frt-header-icon{font-size:22px;line-height:1;}
+.frt-header-info{flex:1;}
+.frt-header-title{font-size:15px;font-weight:700;color:#fff;font-family:'Fraunces',serif;line-height:1.2;}
+.frt-header-sub{font-size:11px;color:#b8d4a0;margin-top:2px;}
+.frt-header-badge{background:rgba(255,255,255,.18);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap;}
+.frt-tabs{display:flex;gap:8px;padding:10px 12px 0;background:#f4f9f0;}
+.frt-tab{flex:1;padding:8px 6px;border-radius:20px;border:1.5px solid #c5ddb0;background:#fff;font-size:12px;font-weight:600;color:#4a7a2a;cursor:pointer;text-align:center;transition:all .2s;}
+.frt-tab.active{background:#2d5a1b;border-color:#2d5a1b;color:#fff;}
+.frt-list{display:flex;flex-direction:column;gap:0;background:#f4f9f0;padding:8px 12px 12px;}
+.frt-item{background:#fff;border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:10px;margin-top:8px;}
+.frt-item-rank{width:28px;height:28px;border-radius:8px;background:#2d5a1b;color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.frt-item-body{flex:1;min-width:0;}
+.frt-item-name{font-size:13px;font-weight:600;color:#1a1a18;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.frt-item-meta{display:flex;align-items:center;gap:6px;margin-top:3px;flex-wrap:wrap;}
+.frt-meta-dist{font-size:11px;color:#555;}
+.frt-diff-dots{font-size:10px;letter-spacing:-1px;}
+.frt-diff-dots-gr{color:#2d5a1b;}
+.frt-diff-dots-or{color:#b85c00;}
+.frt-diff-dots-rd{color:#b71c1c;}
+.frt-diff-lbl{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;}
+.frt-diff-lbl-1{background:#e8f5e9;color:#2d5a1b;}
+.frt-diff-lbl-2{background:#e8f5e9;color:#2d5a1b;}
+.frt-diff-lbl-3{background:#fff3e0;color:#b85c00;}
+.frt-diff-lbl-4{background:#fce4ec;color:#b71c1c;}
+.frt-diff-lbl-5{background:#f3e5f5;color:#6a1b9a;}
+.frt-item-btn{flex-shrink:0;}
+.frt-alltrails-btn{font-size:11px;font-weight:600;color:#2d5a1b;background:#fff;border:1.5px solid #2d5a1b;border-radius:8px;padding:5px 9px;text-decoration:none;white-space:nowrap;cursor:pointer;}
+.frt-alltrails-btn:hover{background:#2d5a1b;color:#fff;}
+.frt-empty{font-size:12px;color:#999;padding:12px;text-align:center;background:#f4f9f0;}
+.frt-diff-gr{color:#2d5a1b;font-weight:600;}
+.frt-diff-or{color:#b85c00;font-weight:600;}
+.frt-diff-rd{color:#b71c1c;font-weight:600;}
+.frt-block + .bch-conseil{margin-top:16px;}
+
 </style>
 </head>
 <body>
@@ -2097,6 +2134,70 @@ function _diffBadge(d){
   var cls=lc.includes('facile')?'easy':lc.includes('mod')?'medium':'hard';
   return '<span class="diff-badge diff-'+cls+'">'+d.charAt(0).toUpperCase()+d.slice(1)+'</span>';
 }
+
+/* ── FRT helpers (Forêts & Nature trails) ── */
+function _frtDiffLabel(d){
+  var m={1:'Très facile',2:'Facile',3:'Modéré',4:'Difficile',5:'Expert'};
+  return d?m[d]||null:null;
+}
+function _frtFormatDuration(min){
+  if(!min)return null;
+  if(min<60)return min+'min';
+  var h=Math.floor(min/60),m=min%60;
+  return h+'h'+(m?(m<10?'0'+m:m):'');
+}
+function _frtDiffDots(d){
+  if(!d)return '';
+  var cls=d<=2?'frt-diff-dots-gr':d<=3?'frt-diff-dots-or':'frt-diff-dots-rd';
+  var dots='';
+  for(var i=1;i<=5;i++)dots+=i<=d?'●':'○';
+  return '<span class="frt-diff-dots '+cls+'">'+dots+'</span>';
+}
+function _frtDiffLbl(d){
+  if(!d)return '';
+  var lbl=_frtDiffLabel(d)||'';
+  return '<span class="frt-diff-lbl frt-diff-lbl-'+d+'">'+lbl+'</span>';
+}
+function _frtRenderTrailItem(t,idx){
+  var meta='';
+  var dist=t.distance_km?t.distance_km+' km':null;
+  var dur=_frtFormatDuration(t.duration_min);
+  var distDur=[dist,dur].filter(Boolean).join(' · ');
+  if(distDur)meta+='<span class="frt-meta-dist">'+distDur+'</span>';
+  if(t.difficulty){meta+=_frtDiffDots(t.difficulty)+_frtDiffLbl(t.difficulty);}
+  var btnSite=t.trail_url&&t.trail_url.includes('komoot')?' Komoot':'AllTrails';
+  var btn=t.trail_url
+    ?'<a class="frt-alltrails-btn" href="'+t.trail_url+'" target="_blank">Voir →</a>'
+    :'';
+  return '<div class="frt-item">'
+    +'<div class="frt-item-rank">'+(idx+1)+'</div>'
+    +'<div class="frt-item-body">'
+    +'<div class="frt-item-name">'+t.name+'</div>'
+    +(meta?'<div class="frt-item-meta">'+meta+'</div>':'')
+    +'</div>'
+    +(btn?'<div class="frt-item-btn">'+btn+'</div>':'')
+    +'</div>';
+}
+function _frtRenderTrailList(trails){
+  if(!trails||!trails.length)return '<div class="frt-empty">Aucun parcours disponible</div>';
+  return '<div class="frt-list">'+trails.map(_frtRenderTrailItem).join('')+'</div>';
+}
+var _frtDisplayTrails={rando:[],vtt:[]};
+function frtSwitchTab(tab){
+  var btnR=document.getElementById('frt-tab-rando');
+  var btnV=document.getElementById('frt-tab-vtt');
+  var listEl=document.getElementById('frt-trails-list');
+  if(!listEl)return;
+  if(tab==='rando'){
+    if(btnR){btnR.classList.add('active');}
+    if(btnV){btnV.classList.remove('active');}
+    listEl.innerHTML=_frtRenderTrailList(_frtDisplayTrails.rando);
+  }else{
+    if(btnR){btnR.classList.remove('active');}
+    if(btnV){btnV.classList.add('active');}
+    listEl.innerHTML=_frtRenderTrailList(_frtDisplayTrails.vtt);
+  }
+}
 function _accPills(sp){
   var pills=[];
   if(sp.stroller_ok)pills.push('<span class="type-acc ok">👶 Poussette</span>');
@@ -2345,24 +2446,65 @@ function _renderPoiBody(p,mode){
       +(pwPills.length?'<div class="bch-pills-row">'+pwPills.join('')+'</div>':'');
 
   }else if(sub==='Forêts & Nature'){
-    var terrain=sp.terrain_type?(sp.terrain_type.split(',')[0].trim()):'—';
+    // Ribbon : difficulté (colorée), durée estimée, superficie, distance voiture
+    var frtDiff=sp.difficulty;
+    var frtDiffCls=frtDiff<=2?'gr':frtDiff<=3?'or':'rd';
+    var frtDiffVal=frtDiff?('<span class="frt-diff-'+frtDiffCls+'">'+(_frtDiffLabel(frtDiff)||'—')+'</span>'):'—';
+    var frtSupVal=sp.superficie_ha?sp.superficie_ha+' ha':'—';
+    var frtSentVal=sp.sentiers_km_total?sp.sentiers_km_total+' km':'—';
     ribbonItems=[
-      {val:_diffLabel(sp.difficulty),lbl:'Difficulté',cls:''},
-      {val:sp.shade_level||'—',lbl:'Ombre',cls:''},
-      {val:terrain,lbl:'Terrain',cls:''},
+      {val:frtDiffVal,lbl:'Difficulté',cls:''},
+      {val:frtSentVal,lbl:'Sentiers',cls:''},
+      {val:frtSupVal,lbl:'Superficie',cls:''},
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];
     sectionLabel='La forêt';
+    // Pills
     var pills=[];
+    if(sp.shade_level)pills.push('<span class="bch-pill bch-pi">🌿 '+sp.shade_level+'</span>');
     if(sp.stroller_ok)pills.push('<span class="bch-pill bch-pi">👶 Poussette OK</span>');
     if(sp.bike_allowed)pills.push('<span class="bch-pill bch-ps">🚲 Vélo OK</span>');
-    (p.quickSpecs||[]).forEach(function(s){
-      if(!/facile|modéré|difficile|vélo|poussette/i.test(s.label||'')){
-        var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-        pills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
-      }
-    });
+    if(sp.wildlife_observable)pills.push('<span class="bch-pill bch-pi">🦌 Faune observable</span>');
+    if(sp.picnic_tables)pills.push('<span class="bch-pill bch-pi">🍱 Tables pique-nique</span>');
+    if(sp.playground)pills.push('<span class="bch-pill bch-pi">🛝 Aire de jeux</span>');
     pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
+    // Trails block
+    var frtTrails=sp.trails_display||sp.trails||[];
+    var frtRando=[],frtVtt=[];
+    if(frtTrails&&frtTrails.rando){
+      // trails_display format {rando:[],vtt:[]}
+      frtRando=frtTrails.rando||[];
+      frtVtt=frtTrails.vtt||[];
+    }else if(Array.isArray(frtTrails)){
+      frtTrails.forEach(function(t){
+        var tp=(t.type||'').toLowerCase();
+        if(tp==='vtt'||tp==='velo')frtVtt.push(t);
+        else frtRando.push(t);
+      });
+    }
+    _frtDisplayTrails={rando:frtRando,vtt:frtVtt};
+    if(frtRando.length||frtVtt.length){
+      // Header infos
+      var frtNbTotal=(sp.nb_parcours||frtRando.length+frtVtt.length);
+      var frtSub=[];
+      if(sp.sentiers_km_total)frtSub.push(sp.sentiers_km_total+' km de sentiers entretenus');
+      if(sp.superficie_ha)frtSub.push(sp.superficie_ha+' ha');
+      var frtHeaderHtml='<div class="frt-header">'
+        +'<div class="frt-header-icon">🗺️</div>'
+        +'<div class="frt-header-info">'
+        +'<div class="frt-header-title">Sentiers balisés</div>'
+        +(frtSub.length?'<div class="frt-header-sub">'+frtSub.join(' · ')+'</div>':'')
+        +'</div>'
+        +'<div class="frt-header-badge">'+frtNbTotal+' parcours</div>'
+        +'</div>';
+      // Tabs
+      var frtTabsHtml='<div class="frt-tabs">'
+        +'<button class="frt-tab active" id="frt-tab-rando" onclick="frtSwitchTab(\'rando\')">🚶 Randonnée '+(frtRando.length||'')+'</button>'
+        +(frtVtt.length?'<button class="frt-tab" id="frt-tab-vtt" onclick="frtSwitchTab(\'vtt\')">🚲 Vélo '+frtVtt.length+'</button>':'')
+        +'</div>';
+      var frtListHtml='<div id="frt-trails-list">'+_frtRenderTrailList(frtRando)+'</div>';
+      specialBlock='<div class="frt-block">'+frtHeaderHtml+frtTabsHtml+frtListHtml+'</div>';
+    }
 
   }else if(sub==='Balades & Promenades'){
     var dist=sp.distance_km;

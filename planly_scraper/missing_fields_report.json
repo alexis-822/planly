@@ -1,0 +1,318 @@
+[
+  {
+    "poi": "Forêt Domaniale d'Olonne",
+    "field": "picnic_tables",
+    "value": 85,
+    "status": "auto",
+    "sources": [
+      "https://www.lessablesdolonne.fr/sit/aires-de-pique-nique-foret-dolonne-loipdl085v50y4nx/",
+      "https://www.vendee-tourisme.com/top-destinations/parcs-de-loisirs-aux-sables-dolonne-et-ses-alentours",
+      "https://pique-nique.info/AireRecherche.php?departement=85"
+    ]
+  },
+  {
+    "poi": "Forêt Domaniale d'Olonne",
+    "field": "playground",
+    "value": null,
+    "status": "empty",
+    "sources": [
+      "https://www.lessablesdolonne.fr/sit/aires-de-pique-nique-foret-dolonne-loipdl085v50y4nx/",
+      "https://www.vendee-tourisme.com/top-destinations/parcs-de-loisirs-aux-sables-dolonne-et-ses-alentours",
+      "https://pique-nique.info/AireRecherche.php?departement=85"
+    ]
+  },
+  {
+    "poi": "Forêt Domaniale d'Olonne",
+    "field": "alltrails_url",
+    "value": "https://www.alltrails.com/fr/parcs/france/vendee/foret-domaniale-dolonne",
+    "status": "auto",
+    "sources": [
+      "https://www.alltrails.com/fr/parcs/france/vendee/foret-domaniale-dolonne",
+      "https://www.alltrails.com/fr/parcs/france/vendee/foret-domaniale-dolonne/forest",
+      "https://www.alltrails.com/fr/parcs/france/vendee/foret-domaniale-dolonne/views"
+    ]
+  },
+  {
+    "poi": "Forêt Domaniale d'Olonne",
+    "field": "trails",
+    "value": 5,
+    "status": "auto",
+    "sources": [
+      "https://www.komoot.com/fr-fr/guide/2720992/rando-vtt-et-circuits-autour-de-la-foret-domaniale-d-olonne",
+      "https://www.france-voyage.com/balades/foret-olonne-landmark-28946.htm",
+      "https://www.alltrails.com/fr/randonnee/france/vendee/circuit-de-sauveterre",
+      "https://www.decathlon-outdoor.com/fr-fr/explore/france/grande-boucle-depuis-olonne-sur-mer-66d4562e7d302",
+      "https://www.lessablesdolonne.fr/a-chacun-sa-balade-aux-sables-dolonne/"
+    ]
+  },
+  {
+    "poi": "Marais Salants de l'Île d'Olonne",
+    "field": "alltrails_url",
+    "value": "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-l-ile-d-olonne",
+    "status": "auto",
+    "sources": [
+      "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-l-ile-d-olonne",
+      "https://www.alltrails.com/fr/randonnee/france/vendee/les-marais-d-olonnes",
+      "https://www.alltrails.com/fr/france/vendee/l-ile-d-olonne"
+    ]
+  },
+  {
+    "poi": "Marais Salants de l'Île d'Olonne",
+    "field": "trails",
+    "value": 11,
+    "status": "auto",
+    "sources": [
+      "https://www.visorando.com/randonnee-le-marais-des-olonnes/",
+      "https://www.komoot.com/fr-fr/guide/1242551/rando-vtt-et-circuits-autour-de-l-ile-d-olonne",
+      "https://www.decathlon-outdoor.com/fr-fr/explore/france/ile-d-olonne-et-ses-marais-salants-6032b549b1b92",
+      "https://www.alltrails.com/fr/randonnee/france/vendee/marais-de-l-ile-d-olonne",
+      "https://www.vendee-tourisme.com/inspirez-moi/au-coeur-de-la-nature/le-gr8-le-long-du-littoral"
+    ]
+  },
+  {
+    "poi": "Lac de Tanchet",
+    "field": "picnic_tables",
+    "value": 3,
+    "status": "auto",
+    "sources": [
+      "https://club-tanchet.sablotins.com/",
+      "https://www.vendee-tourisme.com/top-destinations/detente-et-nature-aux-sables-dolonne-et-ses-alentours/search_api_cluster_7/Aire%20de%20pique-nique/search_api_cluster_7/Plages",
+      "https://www.tripadvisor.fr/Attractions-g196666-Activities-c57-Les_Sables_d_Olonne_Vendee_Pays_de_la_Loire.html"
+    ]
+  },
+  {
+    "poi": "Lac de Tanchet",
+    "field": "playground",
+    "value": true,
+    "status": "auto",
+    "sources": [
+      "https://club-tanchet.sablotins.com/",
+      "https://www.vendee-tourisme.com/top-destinations/detente-et-nature-aux-sables-dolonne-et-ses-alentours/search_api_cluster_7/Aire%20de%20pique-nique/search_api_cluster_7/Plages",
+      "https://www.tripadvisor.fr/Attractions-g196666-Activities-c57-Les_Sables_d_Olonne_Vendee_Pays_de_la_Loire.html"
+    ]
+  },
+  {
+    "poi": "Lac de Tanchet",
+    "field": "alltrails_url",
+    "value": "https://www.alltrails.com/fr/poi/france/vendee/les-sables-d-olonne/lac-de-tanchet",
+    "status": "auto",
+    "sources": [
+      "https://www.alltrails.com/fr/poi/france/vendee/les-sables-d-olonne/lac-de-tanchet",
+      "https://www.alltrails.com/fr/randonnee/france/vendee/sentier-cotier-vers-le-lac-de-tanchet",
+      "https://www.alltrails.com/fr/randonnee/france/vendee/bois-de-saint-jean-lac-de-tanchet-puits-d-enfer"
+    ]
+  },
+  {
+    "poi": "Lac de Tanchet",
+    "field": "trails",
+    "value": 6,
+    "status": "auto",
+    "sources": [
+      "https://www.alltrails.com/fr/poi/france/vendee/les-sables-d-olonne/lac-de-tanchet",
+      "https://www.decathlon-outdoor.com/fr-fr/explore/france/du-puits-d-enfer-au-lac-de-tanchet-6814aa18684b3",
+      "https://www.lessablesdolonne.fr/sit/parcours-dorientation-de-tanchet-loipdl085v51dvcp/",
+      "https://www.calculitineraires.fr/index.php?id=970705",
+      "https://www.decathlon-outdoor.com/fr-fr/explore/france/de-tanchet-a-la-guittiere-629c6ea474f2e"
+    ]
+  },
+  {
+    "poi": "Réserve Nat. Baie de l'Aiguillon",
+    "field": "superficie_ha",
+    "value": 4900,
+    "status": "auto",
+    "sources": [
+      "https://www.reserve-baie-aiguillon.fr/",
+      "https://fr.wikipedia.org/wiki/R%C3%A9serve_naturelle_nationale_de_la_baie_de_l%27Aiguillon",
+      "https://www.vendee.gouv.fr/Actions-de-l-Etat/Environnement/Eau-et-Nature/Biodiversite/Habitats-espaces-proteges/Aires-protegees/Reserves-Naturelles-Nationales/Reserve-naturelle-nationale-de-la-Baie-de-l-Aiguillon"
+    ]
+  },
+  {
+    "poi": "Réserve Nat. Baie de l'Aiguillon",
+    "field": "sentiers_km_total",
+    "value": null,
+    "status": "empty",
+    "sources": [
+      "https://www.reserve-baie-aiguillon.fr/",
+      "https://fr.wikipedia.org/wiki/R%C3%A9serve_naturelle_nationale_de_la_baie_de_l%27Aiguillon",
+      "https://www.vendee.gouv.fr/Actions-de-l-Etat/Environnement/Eau-et-Nature/Biodiversite/Habitats-espaces-proteges/Aires-protegees/Reserves-Naturelles-Nationales/Reserve-naturelle-nationale-de-la-Baie-de-l-Aiguillon"
+    ]
+  },
+  {
+    "poi": "Réserve Nat. Baie de l'Aiguillon",
+    "field": "picnic_tables",
+    "value": 44,
+    "status": "auto",
+    "sources": [
+      "https://www.vendeedusud.com/loisirs/parc-de-la-presquile/",
+      "https://www.laiguillonlapresquile.fr/mes-loisirs/les-equipements-de-loisirs/le-parc-de-la-presquile/",
+      "https://www.vendeedusud.com/loisirs/aire-de-pique-nique-foret-domaniale/"
+    ]
+  },
+  {
+    "poi": "Réserve Nat. Baie de l'Aiguillon",
+    "field": "playground",
+    "value": true,
+    "status": "auto",
+    "sources": [
+      "https://www.vendeedusud.com/loisirs/parc-de-la-presquile/",
+      "https://www.laiguillonlapresquile.fr/mes-loisirs/les-equipements-de-loisirs/le-parc-de-la-presquile/",
+      "https://www.vendeedusud.com/loisirs/aire-de-pique-nique-foret-domaniale/"
+    ]
+  },
+  {
+    "poi": "Réserve Nat. Baie de l'Aiguillon",
+    "field": "alltrails_url",
+    "value": "https://www.alltrails.com/fr/poi/france/vendee/---2/baie-de-l-aiguillon",
+    "status": "auto",
+    "sources": [
+      "https://www.alltrails.com/fr/poi/france/vendee/---2/baie-de-l-aiguillon",
+      "https://www.alltrails.com/fr/france/vendee/l-aiguillon-sur-mer",
+      "https://www.alltrails.com/fr/poi/france/vendee/l-aiguillon-la-presqu-ile/pointe-de-l-aiguillon"
+    ]
+  },
+  {
+    "poi": "Réserve Nat. Baie de l'Aiguillon",
+    "field": "trails",
+    "value": 5,
+    "status": "auto",
+    "sources": [
+      "https://www.komoot.com/fr-fr/guide/162954/randonnees-autour-de-la-reserve-naturelle-de-la-baie-de-l-aiguillon",
+      "https://www.france-voyage.com/balades/l-aiguillon-la-presqu-ile-commune-33891.htm",
+      "https://www.decathlon-outdoor.com/fr-fr/explore/france/promenade-a-la-pointe-de-l-aiguillon-626bd4863cba4",
+      "https://www.alltrails.com/fr/randonnee/france/vendee/pointe-de-l-aiguillon",
+      "https://www.campinggrandr.fr/balades-randonnees-laiguillon-sur-mer/"
+    ]
+  },
+  {
+    "poi": "Forêt Domaniale d'Olonne",
+    "field": "komoot_url",
+    "value": "https://www.komoot.com/fr-fr/guide/2720992/rando-vtt-et-circuits-autour-de-la-foret-domaniale-d-olonne",
+    "status": "auto",
+    "sources": [
+      "https://www.komoot.com/fr-fr/guide/2720992/rando-vtt-et-circuits-autour-de-la-foret-domaniale-d-olonne",
+      "https://www.komoot.com/fr-fr/guide/1523799/rando-vtt-et-circuits-autour-des-sables-d-olonne",
+      "https://www.komoot.com/fr-fr/guide/1242551/rando-vtt-et-circuits-autour-de-l-ile-d-olonne"
+    ]
+  },
+  {
+    "poi": "Marais Salants de l'Île d'Olonne",
+    "field": "komoot_url",
+    "value": "https://www.komoot.com/fr-fr/guide/1242551/rando-vtt-et-circuits-autour-de-l-ile-d-olonne",
+    "status": "auto",
+    "sources": [
+      "https://www.komoot.com/fr-fr/guide/1242551/rando-vtt-et-circuits-autour-de-l-ile-d-olonne",
+      "https://www.komoot.com/fr-fr/highlight/3692842",
+      "https://www.komoot.com/fr-fr/guide/1308205/rando-vtt-et-circuits-autour-de-olonne-sur-mer"
+    ]
+  },
+  {
+    "poi": "Lac de Tanchet",
+    "field": "komoot_url",
+    "value": "https://www.komoot.com/fr-fr/highlight/1033815",
+    "status": "auto",
+    "sources": [
+      "https://www.komoot.com/fr-fr/highlight/1033815",
+      "https://www.komoot.com/fr-fr/guide/1523812/lacs-autour-des-sables-d-olonne",
+      "https://www.komoot.com/fr-fr/guide/1523799/rando-vtt-et-circuits-autour-des-sables-d-olonne"
+    ]
+  },
+  {
+    "poi": "Réserve Nat. Baie de l'Aiguillon",
+    "field": "komoot_url",
+    "value": "https://www.komoot.com/fr-fr/guide/162961/rando-vtt-et-circuits-autour-de-la-reserve-naturelle-de-la-baie-de-l-aiguillon",
+    "status": "auto",
+    "sources": [
+      "https://www.komoot.com/fr-fr/guide/162961/rando-vtt-et-circuits-autour-de-la-reserve-naturelle-de-la-baie-de-l-aiguillon",
+      "https://www.komoot.com/fr-fr/guide/162960/randonnees-autour-de-la-reserve-naturelle-de-la-baie-de-l-aiguillon",
+      "https://www.komoot.com/fr-fr/guide/162954/randonnees-autour-de-la-reserve-naturelle-de-la-baie-de-l-aiguillon"
+    ]
+  },
+  {
+    "poi": "Forêt Domaniale d'Olonne",
+    "field": "superficie_ha",
+    "value": null,
+    "status": "empty",
+    "sources": [
+      "https://www.onf.fr/vivre-la-foret/documents-de-gestion-durable/%2B%2Bamgt%2B%2BA033980X::amenagement-de-la-foret-domaniale-dolonne.html",
+      "https://www.onf.fr/vivre-la-foret/que-faire-en-foret/balade-activites-en-foret/%2B/12cc::la-foret-domaniale-dolonne-un-rendez-vous-loree-des-dunes-de-sable.html",
+      "https://www.lessablesdolonne.fr/la-foret-domaniale-dolonne/"
+    ]
+  },
+  {
+    "poi": "Forêt Domaniale d'Olonne",
+    "field": "sentiers_km_total",
+    "value": null,
+    "status": "empty",
+    "sources": [
+      "https://www.onf.fr/vivre-la-foret/documents-de-gestion-durable/%2B%2Bamgt%2B%2BA033980X::amenagement-de-la-foret-domaniale-dolonne.html",
+      "https://www.onf.fr/vivre-la-foret/que-faire-en-foret/balade-activites-en-foret/%2B/12cc::la-foret-domaniale-dolonne-un-rendez-vous-loree-des-dunes-de-sable.html",
+      "https://www.lessablesdolonne.fr/la-foret-domaniale-dolonne/"
+    ]
+  },
+  {
+    "poi": "Marais Salants de l'Île d'Olonne",
+    "field": "superficie_ha",
+    "value": 1500,
+    "status": "auto",
+    "sources": [
+      "https://www.onf.fr/vivre-la-foret/que-faire-en-foret/balade-activites-en-foret/%2B/12cc::la-foret-domaniale-dolonne-un-rendez-vous-loree-des-dunes-de-sable.html",
+      "https://www.seldeliledolonne.com/histoire",
+      "https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/docob_zsc_olonne_fr5200656_200510-2.pdf"
+    ]
+  },
+  {
+    "poi": "Marais Salants de l'Île d'Olonne",
+    "field": "sentiers_km_total",
+    "value": null,
+    "status": "empty",
+    "sources": [
+      "https://www.onf.fr/vivre-la-foret/que-faire-en-foret/balade-activites-en-foret/%2B/12cc::la-foret-domaniale-dolonne-un-rendez-vous-loree-des-dunes-de-sable.html",
+      "https://www.seldeliledolonne.com/histoire",
+      "https://www.pays-de-la-loire.developpement-durable.gouv.fr/IMG/pdf/docob_zsc_olonne_fr5200656_200510-2.pdf"
+    ]
+  },
+  {
+    "poi": "Marais Salants de l'Île d'Olonne",
+    "field": "picnic_tables",
+    "value": null,
+    "status": "empty",
+    "sources": [
+      "https://www.vendee-tourisme.com/vivez-une-aventure-unique-avec-les-salines-aux-sables-dolonne",
+      "https://www.lessablesdolonne.fr/aires-de-pique-nique/",
+      "https://campinglabergerie.com/experiences-vacances/experience-marais-salant/"
+    ]
+  },
+  {
+    "poi": "Marais Salants de l'Île d'Olonne",
+    "field": "playground",
+    "value": true,
+    "status": "auto",
+    "sources": [
+      "https://www.vendee-tourisme.com/vivez-une-aventure-unique-avec-les-salines-aux-sables-dolonne",
+      "https://www.lessablesdolonne.fr/aires-de-pique-nique/",
+      "https://campinglabergerie.com/experiences-vacances/experience-marais-salant/"
+    ]
+  },
+  {
+    "poi": "Lac de Tanchet",
+    "field": "superficie_ha",
+    "value": 8,
+    "status": "auto",
+    "sources": [
+      "https://www.lessablesdolonne.fr/le-lac-de-tanchet/",
+      "https://www.facebook.com/les.sables.d.olonne/posts/-le-saviez-vous-le-lac-de-tanchet-est-%C3%A0-lorigine-un-simple-r%C3%A9servoir-deau-potabl/786677446833199/",
+      "https://www.onf.fr/vivre-la-foret/que-faire-en-foret/balade-activites-en-foret/%2B/12cc::la-foret-domaniale-dolonne-un-rendez-vous-loree-des-dunes-de-sable.html"
+    ]
+  },
+  {
+    "poi": "Lac de Tanchet",
+    "field": "sentiers_km_total",
+    "value": null,
+    "status": "empty",
+    "sources": [
+      "https://www.lessablesdolonne.fr/le-lac-de-tanchet/",
+      "https://www.facebook.com/les.sables.d.olonne/posts/-le-saviez-vous-le-lac-de-tanchet-est-%C3%A0-lorigine-un-simple-r%C3%A9servoir-deau-potabl/786677446833199/",
+      "https://www.onf.fr/vivre-la-foret/que-faire-en-foret/balade-activites-en-foret/%2B/12cc::la-foret-domaniale-dolonne-un-rendez-vous-loree-des-dunes-de-sable.html"
+    ]
+  }
+]
