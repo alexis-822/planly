@@ -469,6 +469,7 @@ body {
 </style>
 </head>
 <body>
+<script src="tides.js"></script>
 
 <div class="topbar">
   <div class="topbar-left">
@@ -1244,7 +1245,31 @@ document.addEventListener('keydown', (e) => {
 // ONGLETS
 // ═══════════════════════════════════════════
 let meteoData = null; // stocké quand Open-Meteo répond
-let marineData = null; // données marine Open-Meteo
+let marineData = null;
+
+// Charge les marées depuis tides.js (généré par fetch_tides.py)
+// TIDES_DATA = { 124: {nom, date, tides:[...]}, 125: {...} }
+let tideCache = {};
+(function loadTidesFromFile() {
+  if (typeof TIDES_DATA !== 'undefined') {
+    const today = new Date().toISOString().slice(0,10);
+    Object.entries(TIDES_DATA).forEach(([id, data]) => {
+      if (data.date === today && data.tides && data.tides.length) {
+        tideCache[parseInt(id)] = data.tides;
+        console.log('Marées chargées depuis tides.js — port', id, ':', data.tides.length, 'marées');
+      } else {
+        tideCache[parseInt(id)] = data.tides && data.tides.length ? data.tides : 'error';
+        if (data.date !== today) console.warn('tides.js périmé (date:', data.date, '). Relancez fetch_tides.py');
+      }
+    });
+  } else {
+    console.warn('tides.js non chargé — relancez fetch_tides.py');
+  }
+})();
+
+function retryTides() {
+  alert('Relancez fetch_tides.py pour mettre à jour les marées, puis rechargez la page.');
+}
 
 function switchTab(tab) {
   document.getElementById('tab-pois').classList.toggle('active', tab === 'pois');
@@ -1256,6 +1281,13 @@ function switchTab(tab) {
 }
 
 function renderMeteoPage() {
+  try { _renderMeteoPageInner(); }
+  catch(e) {
+    console.error('renderMeteoPage error:', e);
+    document.getElementById('meteo-detail').innerHTML = '<div style="padding:40px;text-align:center;color:#ef4444">Erreur : '+e.message+'</div>';
+  }
+}
+function _renderMeteoPageInner() {
   if (!meteoData) {
     document.getElementById('meteo-detail').innerHTML = '<div style="padding:40px;text-align:center;color:var(--txl)">Chargement météo...</div>';
     return;
@@ -1318,7 +1350,7 @@ function renderMeteoPage() {
 
   // ── Section marine ──
   let marineSectionHtml = '';
-  if (marineData) {
+  if (marineData && marineData.hourly) { try {
     const mt = marineData.hourly;
     const now = new Date();
     const nowStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0') + 'T' + String(now.getHours()).padStart(2,'0');
@@ -1326,24 +1358,17 @@ function renderMeteoPage() {
     for (let i = 0; i < mt.time.length; i++) { if (mt.time[i].startsWith(nowStr)) { idx = i; break; } }
 
     const h = mt.wave_height[idx] || 0;
-    const waveLabel = h < 0.5 ? 'Mer calme' : h < 1 ? 'Faibles vagues' : h < 2 ? 'Vagues modérées' : 'Forte houle ⚠️';
-    const waveColor = h < 0.5 ? '#22C55E' : h < 1 ? '#3B82F6' : h < 2 ? '#F59E0B' : '#EF4444';
+    const p = (mt.wave_period && mt.wave_period[idx]) || 0;
+    // Score de danger expert (même algo que planly-full.html)
+    let dangerScore = 0;
+    if (h >= 1.5) dangerScore += 5; else if (h >= 0.8) dangerScore += 3; else if (h >= 0.4) dangerScore += 1;
+    if (p > 12) dangerScore += 2; else if (p >= 9) dangerScore += 1; else if (p < 6 && h < 1.5) dangerScore -= 1;
+    const waveLabel = dangerScore <= 2 ? 'Mer calme ✅' : dangerScore <= 5 ? 'Mer agitée ⚠️' : 'Mer très agitée ❌';
+    const waveColor = dangerScore <= 2 ? '#22C55E' : dangerScore <= 5 ? '#F59E0B' : '#EF4444';
     const dirs = ['N','NE','E','SE','S','SO','O','NO'];
-    const dirLabel = dirs[Math.round(((mt.wave_direction[idx]||0) % 360) / 45) % 8];
-
-    // Marée
-    const sl = mt.sea_level_height;
-    const trend = (idx+1 < sl.length && sl[idx+1] > sl[idx]) ? 'montante' : 'descendante';
-    const trendIcon = trend === 'montante' ? '↑' : '↓';
-    let nextTime = '';
-    if (trend === 'montante') {
-      for (let j = idx+1; j < sl.length-1; j++) { if (sl[j] >= sl[j-1] && sl[j] >= sl[j+1]) { nextTime = mt.time[j].slice(11,16); break; } }
-    } else {
-      for (let j = idx+1; j < sl.length-1; j++) { if (sl[j] <= sl[j-1] && sl[j] <= sl[j+1]) { nextTime = mt.time[j].slice(11,16); break; } }
-    }
-    const tideLabel = trend === 'montante'
-      ? `Marée montante ${trendIcon}${nextTime ? ' · Pleine mer à ' + nextTime : ''}`
-      : `Marée descendante ${trendIcon}${nextTime ? ' · Basse mer à ' + nextTime : ''}`;
+    const dirFull = ['Nord','Nord-Est','Est','Sud-Est','Sud','Sud-Ouest','Ouest','Nord-Ouest'];
+    const dirIdx = Math.round(((mt.wave_direction[idx]||0) % 360) / 45) % 8;
+    const dirLabel = dirs[dirIdx];
 
     // 12h forecast mini-bars
     const next12 = Array.from({length:12}, (_,k) => mt.wave_height[idx+k] || 0);
@@ -1369,27 +1394,76 @@ function renderMeteoPage() {
           <div style="font-size:24px;font-weight:600;color:${waveColor}">${h.toFixed(1)}<span style="font-size:13px;font-weight:400;color:var(--txm)"> m</span></div>
           <div style="font-size:12px;color:var(--txm);margin-top:4px">${waveLabel} · Dir. ${dirLabel}</div>
         </div>
-        <div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:10px;padding:12px 16px;flex:1;min-width:140px">
-          <div style="font-size:11px;color:var(--txl);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Marée</div>
-          <div style="font-size:16px;font-weight:600;color:#16A34A">${trendIcon} ${trend.charAt(0).toUpperCase() + trend.slice(1)}</div>
-          <div style="font-size:11px;color:var(--txm);margin-top:4px">${nextTime ? (trend === 'montante' ? 'Pleine mer à ' : 'Basse mer à ') + nextTime : '—'}</div>
+        <div style="background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;padding:12px 16px;flex:1;min-width:140px">
+          <div style="font-size:11px;color:var(--txl);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Temp. eau</div>
+          <div style="font-size:24px;font-weight:600;color:#EA580C">${mt.sea_surface_temperature ? mt.sea_surface_temperature[idx].toFixed(1) : '—'}<span style="font-size:13px;font-weight:400;color:var(--txm)"> °C</span></div>
+          <div style="font-size:12px;color:var(--txm);margin-top:4px">Température surface</div>
         </div>
-        <div style="background:#FAFAFA;border:1px solid var(--br);border-radius:10px;padding:12px 16px;flex:1;min-width:140px">
-          <div style="font-size:11px;color:var(--txl);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Période</div>
-          <div style="font-size:24px;font-weight:600;color:var(--tx)">${mt.wave_period[idx]||'—'}<span style="font-size:13px;font-weight:400;color:var(--txm)"> s</span></div>
-          <div style="font-size:12px;color:var(--txm);margin-top:4px">Période des vagues</div>
+        <div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:10px;padding:12px 16px;flex:1;min-width:140px">
+          <div style="font-size:11px;color:var(--txl);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Période · Dir.</div>
+          <div style="font-size:24px;font-weight:600;color:#16A34A">${(mt.wave_period&&mt.wave_period[idx])||'—'}<span style="font-size:13px;font-weight:400;color:var(--txm)"> s</span></div>
+          <div style="font-size:12px;color:var(--txm);margin-top:4px">Houle ${dirFull[dirIdx]} (${dirs[dirIdx]})</div>
         </div>
       </div>
       <div style="font-size:11px;color:var(--txl);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Hauteur vagues — 12 prochaines heures</div>
       <div style="display:flex;gap:4px;align-items:flex-end;height:70px">${barsHtml}</div>
     </div>`;
+  } catch(e) { console.warn('Marine section error:', e); } }
+
+  // Section marées
+  const tidesPorts = [
+    { id: 125, nom: "Les Sables-d'Olonne" },
+    { id: 124, nom: "Saint-Gilles-Croix-de-Vie" },
+  ];
+  let tidesSectionHtml = '';
+  let tidesAllError = tidesPorts.every(p => tideCache[p.id] === 'error');
+  let tidesAllLoading = tidesPorts.every(p => tideCache[p.id] === null || tideCache[p.id] === undefined);
+  if (tidesAllError) {
+    tidesSectionHtml = `<div class="meteo-section" style="text-align:center;padding:16px">
+      <div style="font-size:20px;margin-bottom:8px">⚠️</div>
+      <div style="font-size:13px;font-weight:500;color:var(--tx);margin-bottom:4px">Proxy local non joignable</div>
+      <div style="font-size:11px;color:var(--txm);margin-bottom:12px">Lancez <code>python server.py</code> dans le dossier du projet</div>
+      <button onclick="retryTides()" style="background:var(--brand);color:white;border:none;border-radius:10px;padding:8px 16px;font-size:12px;cursor:pointer;font-family:inherit">Réessayer</button>
+    </div>`;
+  } else if (tidesAllLoading) {
+    tidesSectionHtml = `<div class="meteo-section" style="text-align:center;padding:16px;color:var(--txm);font-size:12px">⏳ Chargement des marées...</div>`;
   }
+  tidesPorts.forEach(port => {
+    const tides = tideCache[port.id];
+    if (!tides || tides === 'error' || !tides.length) return;
+    // Détermine la prochaine marée
+    const now = new Date();
+    const nowMin = now.getHours() * 60 + now.getMinutes();
+    let nextIdx = tides.findIndex(t => {
+      const [hh, mm] = t.time.split('h').map(Number);
+      return hh * 60 + mm > nowMin;
+    });
+    if (nextIdx === -1) nextIdx = 0;
+    const rowsHtml = tides.map((t, i) => {
+      const isPM = t.type === 'PM';
+      const isNext = i === nextIdx;
+      const [hh, mm] = t.time.split('h').map(Number);
+      const isPast = hh * 60 + mm < nowMin;
+      return `<div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--br);opacity:${isPast?'.45':'1'}">
+        <div style="width:32px;height:32px;border-radius:50%;background:${isPM?'#DBEAFE':'#F0FDF4'};display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">${isPM?'🔼':'🔽'}</div>
+        <div style="flex:1">
+          <div style="font-size:13px;font-weight:${isNext?'700':'500'};color:var(--tx)">${t.time} <span style="font-weight:400;color:var(--txm);font-size:12px">${isPM?'Pleine mer':'Basse mer'}</span></div>
+          <div style="font-size:12px;color:var(--txm)">${t.height} m${t.coeff ? ' · Coeff. ' + t.coeff : ''}</div>
+        </div>
+        ${isNext ? '<div style="font-size:10px;background:#428CE3;color:#fff;border-radius:10px;padding:2px 8px;font-weight:600">PROCHAINE</div>' : ''}
+      </div>`;
+    }).join('');
+    tidesSectionHtml += `<div class="meteo-section">
+      <div class="meteo-section-title">🌊 Marées aujourd'hui — ${port.nom}</div>
+      ${rowsHtml}
+    </div>`;
+  });
 
   document.getElementById('meteo-detail').innerHTML = marineSectionHtml + `
     <div class="meteo-section">
       <div class="meteo-section-title">Prévisions 7 jours — Les Sables-d'Olonne</div>
       <div class="meteo-grid-7">${cardsHtml}</div>
-    </div>`;
+    </div>` + tidesSectionHtml;
 
   // Section 2 : Matrice POIs x Météo du jour
   if (!pois.length) return;
@@ -1433,7 +1507,68 @@ function renderMeteoPage() {
 
   matrixHtml += '</tbody></table>';
 
-  document.getElementById('meteo-poi-matrix').innerHTML = `
+  // Section plages par POI
+  const beachPois = pois.filter(p => p.subcategory === 'Plages & Côte');
+  const BEACH_PORT = {"Brétignolles-sur-Mer":124};
+  function getPort(commune){ return BEACH_PORT[commune]||125; }
+
+  // Météo actuelle
+  const todaySlots2 = todaySlots; // déjà défini plus haut
+  const [todayCode,,todayMax] = dominant(todaySlots2.pm.length?todaySlots2.pm:todaySlots2.am);
+  const [todayIcon] = todayCode!==null?weatherIcon(todayCode):['—','',''];
+
+  // Temp eau — marineData global
+  let seaTempStr='—';
+  if(marineData&&marineData.hourly&&marineData.hourly.sea_surface_temperature){
+    const now2=new Date();
+    const ns2=now2.getFullYear()+'-'+String(now2.getMonth()+1).padStart(2,'0')+'-'+String(now2.getDate()).padStart(2,'0')+'T'+String(now2.getHours()).padStart(2,'0');
+    let ix2=0;for(let i=0;i<marineData.hourly.time.length;i++){if(marineData.hourly.time[i].startsWith(ns2)){ix2=i;break;}}
+    const st=marineData.hourly.sea_surface_temperature[ix2];
+    if(st!=null)seaTempStr=st.toFixed(1)+'°C';
+  }
+
+  // Tableau par plage
+  let beachHtml='';
+  if(beachPois.length){
+    beachHtml+=`<div class="meteo-section">
+      <div class="meteo-section-title">🏖️ Plages — Conditions du jour</div>
+      <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="border-bottom:1px solid var(--br)">
+          <th style="text-align:left;padding:8px 6px;font-weight:600;color:var(--txm);font-size:11px">Plage</th>
+          <th style="padding:8px 6px;font-weight:600;color:var(--txm);font-size:11px">Météo</th>
+          <th style="padding:8px 6px;font-weight:600;color:var(--txm);font-size:11px">Temp eau</th>
+          <th style="padding:8px 6px;font-weight:600;color:var(--txm);font-size:11px;min-width:150px">Marée</th>
+        </tr></thead><tbody>`;
+    beachPois.forEach(poi => {
+      const portId=getPort(poi.commune);
+      const tides=tideCache[portId];
+      let tideStr='Chargement...';let tideColor='var(--txm)';
+      if(tides==='error'){tideStr='⚠️ <a href="javascript:retryTides()" style="color:var(--brand)">Réessayer</a>';tideColor='var(--txm)';}
+      else if(Array.isArray(tides)&&tides.length){
+        const now3=new Date();
+        const nm=now3.getHours()*60+now3.getMinutes();
+        let next=tides.find(t=>{const[hh,mm]=(t.time||'0h0').split('h').map(Number);return hh*60+(mm||0)>nm;});
+        if(!next)next=tides[0];
+        if(next){
+          const trend=next.type==='PM'?'montante':'descendante';
+          const arrow=next.type==='PM'?'🔼':'🔽';
+          const label=next.type==='PM'?'Pleine mer':'Basse mer';
+          tideStr=`${arrow} ${trend.charAt(0).toUpperCase()+trend.slice(1)}<br><span style="font-size:10px;color:var(--txm)">${label} à ${next.time} (${next.height}m)</span>`;
+          tideColor=next.type==='PM'?'#185FA5':'#16A34A';
+        }
+      } else if(tides===null||tides===undefined){ tideStr='Chargement...'; }
+      else { tideStr='—'; }
+      beachHtml+=`<tr style="border-bottom:1px solid var(--br)">
+        <td style="padding:8px 6px;font-weight:500;color:var(--tx)">${poi.name}<br><span style="font-size:10px;color:var(--txm)">${poi.commune}</span></td>
+        <td style="padding:8px 6px;text-align:center">${todayIcon} ${todayMax!==null?todayMax+'°C':'—'}</td>
+        <td style="padding:8px 6px;text-align:center;font-weight:600;color:#EA580C">${seaTempStr}</td>
+        <td style="padding:8px 6px;color:${tideColor}">${tideStr}</td>
+      </tr>`;
+    });
+    beachHtml+='</tbody></table></div></div>';
+  }
+
+  document.getElementById('meteo-poi-matrix').innerHTML = beachHtml + `
     <div class="meteo-section">
       <div class="meteo-section-title">POIs praticables par jour</div>
       ${matrixHtml}
@@ -1465,12 +1600,14 @@ let currentWeatherType = null; // 'sunny' | 'cloudy' | 'rainy'
 
 (function loadMeteo() {
   // Fetch marine en parallèle
-  fetch('https://marine-api.open-meteo.com/v1/marine?latitude=46.4952&longitude=-1.7888&hourly=wave_height,wave_direction,wave_period,sea_level_height&timezone=Europe%2FParis&forecast_days=2')
-    .then(r => r.json()).then(d => { marineData = d; }).catch(() => {});
+  fetch('https://marine-api.open-meteo.com/v1/marine?latitude=46.4952&longitude=-1.7888&hourly=wave_height,wave_direction,wave_period,sea_surface_temperature&timezone=Europe%2FParis&forecast_days=2&models=best_match')
+    .then(r => r.json()).then(d => { marineData = d; if(document.getElementById('meteo-page').style.display!=='none')renderMeteoPage(); }).catch(() => {});
+  // Marées chargées depuis tides.js (pas de fetch nécessaire)
 
   const url = 'https://api.open-meteo.com/v1/forecast?latitude=46.4952&longitude=-1.7888&current=temperature_2m,weathercode&hourly=weathercode,temperature_2m&timezone=Europe/Paris&forecast_days=7';
   fetch(url).then(r => r.json()).then(data => {
     meteoData = data; // Stocker pour l'onglet météo
+    if(document.getElementById('meteo-page').style.display!=='none')renderMeteoPage();
     // Météo actuelle
     const cur = data.current;
     const [icon, desc, type] = weatherIcon(cur.weathercode);

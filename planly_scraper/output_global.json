@@ -1304,7 +1304,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "Venez tôt le matin pour profiter du lever de soleil sur l'océan sans la foule, et garez-vous gratuitement à 15 minutes à pied pour éviter le stress du parking en haute saison.",
     "specific": {
-      "beach_type": "sable",
+      "beach_type": "sable_fin",
       "supervised": true,
       "supervised_start": "1er mai",
       "supervised_end": "début septembre",
@@ -1543,7 +1543,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "Vérifiez les horaires de marée avant de partir : à marée basse, la plage est immense et idéale pour les familles. Les surfeurs et amateurs de vagues préféreront les matinées venteuses pour des conditions optimales.",
     "specific": {
-      "beach_type": "mixte",
+      "beach_type": "sable_rochers",
       "supervised": true,
       "supervised_start": "15 juin",
       "supervised_end": "15 septembre",
@@ -1774,7 +1774,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "Venez tôt le matin pour profiter de la plage au calme avant l'affluence, et pensez à amener votre chien en laisse pour une balade sur le sable. Les amateurs de surf trouveront facilement cours et location à proximité.",
     "specific": {
-      "beach_type": "sable",
+      "beach_type": "sable_normal",
       "supervised": true,
       "supervised_start": "mi-juin (16 juin environ)",
       "supervised_end": "début septembre (2 septembre environ)",
@@ -2003,7 +2003,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "En famille, profitez de la baignade surveillée en matinée avant l'affluence. En couple, installez-vous en fin de journée pour siroter un verre face au coucher de soleil atlantique.",
     "specific": {
-      "beach_type": "mixte",
+      "beach_type": "sable_rochers",
       "supervised": true,
       "supervised_start": "20 avril (week-ends), 3 juin (quotidien)",
       "supervised_end": "1er septembre",
@@ -2240,7 +2240,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "En famille, arrivez tôt le matin pour profiter de la plage avant l'affluence et explorer les rochers avec les enfants. En couple, le coucher de soleil depuis le sentier côtier est absolument magique.",
     "specific": {
-      "beach_type": "galets, rochers",
+      "beach_type": "galets",
       "supervised": false,
       "showers": false,
       "wave_profile": "variable",
@@ -2479,7 +2479,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "En famille, vérifiez les conditions de mer avant de vous baigner et suivez les consignes des maîtres-nageurs. Venez tôt le matin pour profiter de la plage au calme et garer facilement votre vélo ou voiture sous les arbres.",
     "specific": {
-      "beach_type": "sable",
+      "beach_type": "sable_rochers",
       "supervised": true,
       "supervised_start": "1er mai",
       "supervised_end": "30 août",
@@ -2718,7 +2718,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "Consultez les horaires des marées avant de venir : à marée basse, les enfants adorent explorer les rochers pour la pêche à pied, tandis que la marée haute transforme la plage en spot idéal pour les sports nautiques !",
     "specific": {
-      "beach_type": "mixte",
+      "beach_type": "sable_rochers",
       "supervised": true,
       "supervised_start": "28 juin",
       "supervised_end": "31 août",
@@ -2957,7 +2957,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "En famille, prévoyez la matinée pour la baignade surveillée et partez randonner vers les falaises après le déjeuner. En couple, ne manquez surtout pas le coucher de soleil depuis les dunes, un moment magique à immortaliser !",
     "specific": {
-      "beach_type": "mixte",
+      "beach_type": "sable_fin",
       "supervised": true,
       "supervised_start": "début juillet",
       "supervised_end": "fin août",
@@ -3180,7 +3180,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "En famille, privilégiez la zone surveillée pour les petits et profitez des vagues douces pour des heures de jeux en toute sérénité. En couple ou en solo, venez à l'automne pour découvrir une plage quasi déserte et vraiment ressourçante.",
     "specific": {
-      "beach_type": "sable",
+      "beach_type": "sable_normal",
       "supervised": true,
       "supervised_start": "28 juin",
       "supervised_end": "31 août",
@@ -3420,7 +3420,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "En famille, arrivez avant midi pour trouver facilement à vous garer et profitez des vagues en matinée. En couple ou en solo, attardez-vous en fin de journée pour vivre un coucher de soleil magique loin de la foule.",
     "specific": {
-      "beach_type": "sable",
+      "beach_type": "sable_fin",
       "supervised": true,
       "supervised_start": "mi-juin",
       "supervised_end": "mi-septembre",
@@ -4860,7 +4860,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "Venez en fin d'après-midi pour admirer un coucher de soleil époustouflant et évitez la baignade — profitez plutôt d'un pique-nique face aux vagues. En famille, apportez de bonnes chaussures pour marcher confortablement sur les galets.",
     "specific": {
-      "beach_type": "sable",
+      "beach_type": "sable_rochers",
       "supervised": false,
       "showers": false,
       "wave_profile": "sportif",
@@ -5099,7 +5099,7 @@
     "rainy_day_activity": false,
     "conseil_planly": "En famille, profitez du fauteuil nautique mis à disposition pour que tout le monde puisse profiter de l'eau, et installez-vous près du poste de secours pour rester dans la zone surveillée. Arrivez tôt le matin pour trouver facilement une place de parking et profiter de la plage au calme avant l'affluence.",
     "specific": {
-      "beach_type": "sable",
+      "beach_type": "sable_fin",
       "supervised": true,
       "supervised_start": "1er juillet",
       "supervised_end": "31 août",

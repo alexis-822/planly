@@ -52,7 +52,7 @@ log = logging.getLogger(__name__)
 
 SPECIFIC_FIELDS = {
     "Plages & Côte": {
-        "beach_type": {"label": "type de plage (sable, galets, rochers, mixte)", "type": "enum", "options": ["sable", "galets", "rochers", "mixte"]},
+        "beach_type": {"label": "type de plage — utiliser exactement une de ces valeurs : sable_fin (sable fin, doux), sable_normal (sable ordinaire/grossier), galets, sable_galets (mixte sable et galets), rochers, sable_rochers (mixte sable et rochers)", "type": "enum", "options": ["sable_fin", "sable_normal", "galets", "sable_galets", "rochers", "sable_rochers"]},
         "supervised": {"label": "plage surveillée", "type": "bool"},
         "supervised_start": {"label": "date début surveillance baignade", "type": "text"},
         "supervised_end": {"label": "date fin surveillance baignade", "type": "text"},

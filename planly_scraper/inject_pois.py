@@ -3,6 +3,7 @@ import json
 import os
 import sys
 import io
+import re
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
@@ -45,19 +46,101 @@ def make_budget(p):
     return "\u20ac\u20ac\u20ac Premium", "paid"
 
 
+BEACH_TYPE_LABELS = {
+    "sable_fin": "Sable fin",
+    "sable fin": "Sable fin",
+    "sable_normal": "Sable",
+    "sable": "Sable",
+    "galets": "Galets",
+    "sable_galets": "Sable & galets",
+    "mixte": "Sable & galets",
+    "sable galets": "Sable & galets",
+    "rochers": "Rochers",
+    "sable_rochers": "Sable & rochers",
+    "sable rochers": "Sable & rochers",
+}
+
+MONTHS_FR = {
+    "janvier": "jan.", "février": "fév.", "mars": "mars", "avril": "avr.",
+    "mai": "mai", "juin": "juin", "juillet": "juil.", "août": "août",
+    "septembre": "sept.", "octobre": "oct.", "novembre": "nov.", "décembre": "déc."
+}
+
+
+def _extract_month(s):
+    if not s:
+        return None
+    s = s.lower()
+    for m, abbr in MONTHS_FR.items():
+        if m in s:
+            return abbr
+    return None
+
+
+def _extract_peak_hours(hours_str):
+    """Extrait les horaires de pointe (juil-août) d'une chaîne d'horaires."""
+    if not hours_str:
+        return None
+    # Pattern horaires : 10h30-19h ou 14h à 18h30
+    pat = r'\d{1,2}h\d{0,2}[\s]*[-–à]\s*\d{1,2}h\d{0,2}'
+    # 1. Cherche les horaires juste après "juillet" ou "août"
+    m = re.search(r'(?:juil|ao[uû]t)[^;,\n]*?(' + pat + ')', hours_str, re.IGNORECASE)
+    if m:
+        return m.group(1).strip()
+    # 2. Cherche les horaires avant "juillet" ou "août" sur la même portion
+    m = re.search(r'(' + pat + r')[^;,\n]*?(?:juil|ao[uû]t)', hours_str, re.IGNORECASE)
+    if m:
+        return m.group(1).strip()
+    # 3. Fallback : premier horaire trouvé
+    patterns = re.findall(pat, hours_str)
+    return patterns[0].strip() if patterns else None
+
+
+def make_beach_data(specific):
+    """Construit le sous-objet beach pour un POI plage."""
+    if not specific:
+        return None
+    bt_raw = (specific.get("beach_type") or "").lower().strip()
+    type_label = BEACH_TYPE_LABELS.get(bt_raw) or (bt_raw.capitalize() if bt_raw else "—")
+    supervised = bool(specific.get("supervised"))
+    sup_hours = _extract_peak_hours(specific.get("supervised_hours"))
+    period_start = _extract_month(specific.get("supervised_start"))
+    period_end = _extract_month(specific.get("supervised_end"))
+    period = (period_start + "→" + period_end) if (period_start and period_end) else None
+    wave_profile = (specific.get("wave_profile") or "").lower().strip() or None
+    return {
+        "type_label": type_label,
+        "supervised": supervised,
+        "hours": sup_hours,
+        "period": period,
+        "wave_profile": wave_profile,
+        "naturist": bool(specific.get("naturist")),
+        "beach_bar": bool(specific.get("beach_bar")),
+        "dogs": bool(specific.get("dogs_allowed_beach")),
+        "tide_sensitive": bool(specific.get("tide_sensitive")),
+        "showers": bool(specific.get("showers")),
+    }
+
+
 def make_quick_specs(p):
     specs = []
     subcat = p.get("subcategory", "")
     specific = p.get("specific", {}) or {}
 
     if subcat == "Plages & C\u00f4te":
-        bt = specific.get("beach_type")
-        if bt:
-            specs.append({"label": bt.capitalize(), "icon": "\U0001f3d6\ufe0f", "cls": ""})
+        # Beach type — label enrichi (affiché sur la card swipe, pas dans le ribbon detail)
+        bt_raw = (specific.get("beach_type") or "").lower().strip()
+        bt_label = BEACH_TYPE_LABELS.get(bt_raw) or (bt_raw.capitalize() if bt_raw else None)
+        if bt_label:
+            specs.append({"label": bt_label, "icon": "\U0001f3d6\ufe0f", "cls": ""})
         if specific.get("supervised"):
             specs.append({"label": "Surveill\u00e9e", "icon": "\U0001f3ca", "cls": "positive"})
         if specific.get("showers"):
             specs.append({"label": "Douches", "icon": "\U0001f6bf", "cls": "positive"})
+        wave = (specific.get("wave_profile") or "").lower()
+        if wave in ("modéré", "modere", "sportif", "fort"):
+            wave_label = "Mer sportive" if wave in ("sportif", "fort") else "Vagues mod\u00e9r\u00e9es"
+            specs.append({"label": wave_label, "icon": "\U0001f30a", "cls": "warning"})
     elif subcat in ("For\u00eats & Nature", "Balades & Promenades"):
         diff = specific.get("difficulty")
         if diff:
@@ -157,6 +240,9 @@ def convert_poi(p):
     if conseil_txt:
         ia_pill = "\U0001f4a1 Planly : " + conseil_txt[:60]
 
+    specific = p.get("specific", {}) or {}
+    beach = make_beach_data(specific) if p.get("subcategory") == "Plages & Côte" else None
+
     return {
         "imgs": imgs,
         "name": p.get("name", ""),
@@ -188,6 +274,7 @@ def convert_poi(p):
         "parking": parking,
         "location": {"lat": p.get("lat") or 0, "lng": p.get("lng") or 0},
         "conseil": conseil,
+        "beach": beach,
         "veto": None,
     }
 

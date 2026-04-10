@@ -629,6 +629,116 @@ body{
 }
 .bs-pill.positive{background:#F0FDF4;color:#15803D;border-color:rgba(34,197,94,.15);}
 .bs-pill.warning{background:#FFFBEB;color:#B45309;border-color:rgba(245,158,11,.15);}
+/* Beach-specific pill colors */
+.bs-pill.pi{background:#E6F1FB;color:#0C447C;border-color:transparent;}
+.bs-pill.ps{background:#EAF3DE;color:#27500A;border-color:transparent;}
+.bs-pill.pw{background:#FAEEDA;color:#633806;border-color:transparent;}
+
+/* ── BEACH CARD — structure indépendante, correspond à la référence exacte ── */
+.bch-body{padding:16px;background:#FCF8ED;}
+/* Ribbon */
+.bch-ribbon{display:grid;grid-template-columns:repeat(4,1fr);background:white;border-radius:12px;overflow:hidden;margin-bottom:12px;border:0.5px solid #e8e4da;}
+.bch-ri{padding:12px 4px;text-align:center;}
+.bch-ri+.bch-ri{border-left:0.5px solid #e8e4da;}
+.bch-rv{font-size:15px;font-weight:700;color:#1a1a18;margin-bottom:3px;}
+.bch-rv.bl{color:#185FA5;}.bch-rv.gr{color:#3B6D11;}
+.bch-rl{font-size:10px;color:#888780;text-transform:uppercase;letter-spacing:0.3px;}
+/* Bloc marine */
+.bch-marine{background:#E6F1FB;border-radius:14px;overflow:hidden;margin-bottom:14px;}
+.bch-marine-header{background:#B5D4F4;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;}
+.bch-marine-header-left{display:flex;align-items:center;gap:8px;}
+.bch-marine-header-icon{font-size:18px;}
+.bch-marine-header-main{font-size:13px;font-weight:700;color:#0C447C;}
+.bch-marine-header-sub{font-size:11px;color:#185FA5;margin-top:1px;}
+.bch-marine-header-time{background:rgba(255,255,255,0.7);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:700;color:#0C447C;white-space:nowrap;}
+.bch-marine-body{padding:12px 14px;}
+.bch-marine-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:10px;}
+.bch-marine-temp-big{font-size:32px;font-weight:800;line-height:1;}
+.bch-marine-temp-lbl{font-size:12px;font-weight:600;margin-top:3px;}
+.bch-marine-verdict{border-radius:10px;padding:9px 12px;display:flex;align-items:center;gap:8px;flex:1;}
+.bch-marine-verdict-icon{font-size:20px;flex-shrink:0;}
+.bch-marine-verdict-txt{font-size:13px;font-weight:700;}
+.bch-marine-verdict-sub{font-size:11px;margin-top:2px;}
+.bch-gauge-wrap{position:relative;height:8px;margin-bottom:5px;border-radius:20px;overflow:hidden;}
+.bch-gauge-grad{position:absolute;inset:0;background:linear-gradient(90deg,#B5D4F4,#5DCAA5,#3B6D11,#EF9F27,#BA7517);border-radius:20px;}
+.bch-gauge-dot{position:absolute;top:50%;transform:translateY(-50%);width:14px;height:14px;border-radius:50%;background:white;border:2.5px solid #0C447C;}
+.bch-gauge-labels{display:flex;justify-content:space-between;margin-bottom:0;}
+.bch-gauge-labels span{font-size:10px;}
+/* Conseil */
+.bch-conseil{background:white;border-radius:14px;padding:13px 15px;margin-bottom:14px;border-left:3px solid #BA7517;}
+.bch-ctit{font-size:12px;font-weight:700;color:#854F0B;margin-bottom:6px;display:flex;align-items:center;gap:5px;}
+.bch-cdot{width:7px;height:7px;background:#BA7517;border-radius:50%;flex-shrink:0;}
+.bch-ctxt{font-size:13px;color:#633806;line-height:1.6;}
+/* Pills */
+.bch-pills-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:7px;}
+.bch-pill{border-radius:22px;padding:7px 13px;font-size:13px;display:inline-flex;align-items:center;gap:3px;}
+.bch-pi{background:#E6F1FB;color:#0C447C;}
+.bch-ps{background:#EAF3DE;color:#27500A;}
+.bch-pw{background:#FAEEDA;color:#633806;}
+.bch-pn{background:#F1EFE8;color:#444441;}
+/* Description */
+.bch-desc{font-size:13px;color:#5F5E5A;line-height:1.7;margin:12px 0 14px;}
+/* Avis */
+.bch-avis-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.bch-avis-note{display:flex;align-items:center;gap:5px;}
+.bch-score{font-size:15px;font-weight:600;color:#1a1a18;}
+.bch-stars{color:#BA7517;font-size:12px;}
+.bch-avis-count{font-size:10px;color:#888780;}
+.bch-btn-avis{background:#E6F1FB;border:none;border-radius:20px;padding:5px 12px;font-size:11px;color:#185FA5;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.bch-avis-card{background:white;border-radius:10px;padding:10px 12px;margin-bottom:8px;border:0.5px solid #e8e4da;font-size:11px;color:#444441;font-style:italic;line-height:1.5;}
+.bch-avis-top{display:flex;align-items:center;gap:6px;margin-bottom:5px;font-style:normal;}
+.bch-av{width:22px;height:22px;border-radius:50%;background:#B5D4F4;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#0C447C;flex-shrink:0;}
+.bch-avis-name{font-size:11px;font-weight:500;color:#1a1a18;}
+.bch-avis-date{font-size:9px;color:#888780;margin-left:auto;}
+/* Parking */
+.bch-pk{background:white;border-radius:12px;overflow:hidden;margin-bottom:14px;border:0.5px solid #e8e4da;}
+.bch-pkm{display:flex;align-items:center;gap:8px;padding:10px 12px;cursor:pointer;}
+.bch-pp{width:30px;height:30px;background:#428CE3;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:white;flex-shrink:0;}
+.bch-pk-name{font-size:12px;font-weight:500;color:#1a1a18;}
+.bch-pk-sub{font-size:10px;color:#888780;margin-top:1px;}
+.bch-pk-maps{font-size:11px;color:#428CE3;margin-left:auto;font-weight:500;}
+.bch-pk-div{height:0.5px;background:#e8e4da;margin:0 12px;}
+.bch-pk-more{padding:8px 12px;font-size:11px;color:#185FA5;display:flex;justify-content:space-between;cursor:pointer;}
+.bch-pk-others{padding:0 12px 8px;display:none;}
+.bch-pk-others.open{display:block;}
+.bch-pk-other{display:flex;align-items:center;gap:7px;padding:6px 0;border-bottom:0.5px solid #f0ede4;font-size:11px;color:#444441;cursor:pointer;}
+.bch-pk-other:last-child{border:none;}
+.bch-pk-badge{width:22px;height:22px;background:#F1EFE8;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#5F5E5A;flex-shrink:0;}
+.bch-pk-dist{font-size:9px;color:#888780;margin-left:auto;}
+/* ── BEACH FULLSCREEN — Tinder style ── */
+.beach-sheet#sheet-poi{top:0;max-height:100%;border-radius:0;}
+.beach-sheet .bs-handle-row{display:none;}
+.beach-sheet .bs-carousel{height:42vh;flex-shrink:0;}
+.beach-sheet .bs-poi-body{flex:1;overflow-y:auto;background:#FCF8ED;}
+
+/* ← bouton retour carousel */
+.bs-car-back{display:none;position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);left:14px;z-index:10;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);align-items:center;justify-content:center;cursor:pointer;color:white;font-size:20px;line-height:1;}
+.beach-sheet .bs-car-back{display:flex;}
+
+
+/* Parking liste directe */
+.bch-pk-list{margin-bottom:14px;display:flex;flex-direction:column;gap:8px;}
+.bch-pk-item{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;cursor:pointer;background:white;}
+.bch-pk-item.primary{border:1.5px solid #428CE3;}
+.bch-pk-item.secondary{border:0.5px solid #e8e4da;}
+.bch-pk-badge-blue{width:32px;height:32px;background:#428CE3;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:white;flex-shrink:0;}
+.bch-pk-badge-grey{width:28px;height:28px;background:#F1EFE8;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#5F5E5A;flex-shrink:0;}
+.bch-pk-info{flex:1;min-width:0;}
+.bch-pk-name2{font-size:13px;font-weight:500;color:#1a1a18;}
+.bch-pk-sub2{font-size:11px;color:#888780;margin-top:1px;}
+.bch-pk-maps-blue{font-size:12px;color:#428CE3;font-weight:600;flex-shrink:0;}
+.bch-pk-maps-grey{font-size:12px;color:#888780;font-weight:500;flex-shrink:0;}
+
+/* Boutons action beach (grands) */
+.beach-sheet .bs-actions{background:#FCF8ED;border-top:0.5px solid #e8e4da;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;}
+.beach-sheet .bs-btn-secondary{flex:1;min-height:50px;font-size:14px;font-weight:700;padding:14px;border-radius:14px;border:0.5px solid #d0cdc4;background:white;color:#1a1a18;display:flex;align-items:center;justify-content:center;gap:6px;}
+.beach-sheet .bs-btn-primary{flex:2;min-height:50px;font-size:14px;font-weight:700;padding:14px;border-radius:14px;}
+
+/* Avis button beach (plus grand) */
+.bch-btn-avis{min-height:44px;font-size:13px;font-weight:600;padding:10px 18px;border-radius:22px;}
+
+/* Section label beach */
+.bch-slbl{font-size:10px;font-weight:700;color:#888780;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:9px;margin-top:4px;}
 
 /* Section labels — ligne décorative + contraste */
 .bs-section-lbl{
@@ -1188,6 +1298,7 @@ body{
 
     <!-- Photo + identité -->
     <div class="bs-carousel">
+      <div class="bs-car-back" onclick="closeAll()">←</div>
       <div class="bs-car-track" id="bs-car-track"></div>
       <div class="bs-car-ov"></div>
       <div class="bs-car-dots" id="bs-car-dots"></div>
@@ -1207,13 +1318,13 @@ body{
         <div class="bs-rib-item">
           <svg class="rib-svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2a6 6 0 0 1 6 6c0 4-6 10-6 10S4 12 4 8a6 6 0 0 1 6-6z"/><circle cx="10" cy="8" r="2"/></svg>
           <div class="bs-rib-val" id="tile-budget">—</div>
-          <div class="bs-rib-lbl">Budget</div>
+          <div class="bs-rib-lbl" id="tile-budget-lbl">Budget</div>
         </div>
         <div class="bs-rib-sep"></div>
         <div class="bs-rib-item">
           <svg class="rib-svg" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg>
           <div class="bs-rib-val" id="tile-duree">—</div>
-          <div class="bs-rib-lbl">Sur place</div>
+          <div class="bs-rib-lbl" id="tile-duree-lbl">Sur place</div>
         </div>
         <div class="bs-rib-sep"></div>
         <div class="bs-rib-item">
@@ -1232,6 +1343,9 @@ body{
       <!-- Instant T -->
       <div class="bs-instant" id="bs-instant" style="display:none"></div>
 
+      <!-- Marine block — plages uniquement -->
+      <div id="bs-marine"></div>
+
       <!-- Description -->
       <div class="bs-desc" id="bs-desc"></div>
 
@@ -1247,7 +1361,7 @@ body{
       </div>
 
       <!-- Caractéristiques — pills sobres, icônes seulement sur les 2 cruciales -->
-      <div class="bs-section-lbl">Caractéristiques</div>
+      <div class="bs-section-lbl" id="bs-specs-label">Caractéristiques</div>
       <div class="bs-specs-wrap" id="bs-quick-specs"></div>
 
       <!-- Avis slider -->
@@ -1270,7 +1384,8 @@ body{
             <div class="bs-parking-name-txt" id="bs-parking-name">—</div>
             <div class="bs-parking-sub-txt">Tap pour ouvrir dans Maps</div>
           </div>
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--txl)" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>
+          <span class="bs-parking-maps-txt" style="display:none;font-size:11px;color:#428CE3;font-weight:500;margin-left:auto">Maps →</span>
+          <svg class="bs-parking-arrow-svg" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="var(--txl)" stroke-width="1.5" stroke-linecap="round"><path d="M6 4l4 4-4 4"/></svg>
         </div>
         <div class="bs-parking-more" id="bs-parking-more-btn" onclick="toggleParkingOthers()">+ Autres options à proximité</div>
         <div class="bs-parking-others" id="bs-parking-others"></div>
@@ -1297,6 +1412,7 @@ body{
 </div>
 </div>
 
+<script src="tides.js"></script>
 <script src="pois.js"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
@@ -1900,12 +2016,329 @@ function fetchMarineData(p,inst){
     .catch(function(){if(inst)inst.style.display='none';});
 }
 
+// ── BEACH — MARINE + TIDES ──
+var _MAREE_PORT={'Brétignolles-sur-Mer':124};
+function _getPort(commune){return _MAREE_PORT[commune]||125;}
+// Tides chargées depuis tides.js (généré par fetch_tides.py)
+var _tideCache=(function(){
+  var cache={};
+  if(typeof TIDES_DATA!=='undefined'){
+    Object.keys(TIDES_DATA).forEach(function(id){
+      var d=TIDES_DATA[id];
+      cache[parseInt(id)]=d.tides&&d.tides.length?d.tides:[];
+    });
+  }
+  return cache;
+})();
+
+function _parseTides(html){
+  var doc=new DOMParser().parseFromString(html,'text/html');
+  var row=doc.getElementById('MareeJours_0')||doc.querySelector('tr.MJ');
+  if(row){
+    var cells=row.querySelectorAll('td');
+    if(cells.length>=2){
+      var splitBr=function(cell){return cell.innerHTML.split(/<br\s*\/?>/i).map(function(s){return s.replace(/<[^>]+>/g,'').replace(/&nbsp;/g,'').trim();});};
+      var timeTexts=splitBr(cells[0]).filter(Boolean).slice(0,4);
+      var heightTexts=splitBr(cells[1]).filter(Boolean).slice(0,4);
+      var coeffAll=cells[2]?splitBr(cells[2]).slice(0,4):[];
+      var types=['BM','PM','BM','PM'];
+      if(timeTexts.length>=2){
+        return timeTexts.map(function(t,i){
+          var h=heightTexts[i]?parseFloat(heightTexts[i].replace('m','').replace(',','.')):null;
+          var coeff=coeffAll[i]&&/^\d+$/.test(coeffAll[i])?parseInt(coeffAll[i]):null;
+          return{type:types[i],time:t,height:h!=null?h.toFixed(2):'?',coeff:coeff};
+        });
+      }
+    }
+  }
+  // Fallback regex
+  var text=doc.body?doc.body.textContent:'';
+  var tRe=/(\d{1,2}h\d{2})/g,hRe=/(\d[,\.]\d{2})\s*m/g;
+  var times=[],heights=[],m;
+  while((m=tRe.exec(text))!==null&&times.length<4)times.push(m[1]);
+  while((m=hRe.exec(text))!==null&&heights.length<4)heights.push(parseFloat(m[1].replace(',','.')));
+  var types=['BM','PM','BM','PM'];
+  return times.map(function(t,i){return{type:types[i],time:t,height:heights[i]!=null?heights[i].toFixed(2):'?',coeff:null};});
+}
+
+function _fetchTides(portId,cb){
+  // Données déjà chargées depuis tides.js
+  cb(_tideCache[portId]||[]);
+}
+
+function _dangerScore(H,P,W){
+  var score=0;
+  // A — Hauteur (standard drapeau SNSM Vendée)
+  if(H>=1.5)score+=5;
+  else if(H>=0.8)score+=3;
+  else if(H>=0.4)score+=1;
+  // B — Période (risque baïnes — danger n°1 côte vendéenne)
+  if(P>12)score+=2;       // houle longue, courants de retour violents
+  else if(P>=9)score+=1;  // swell modéré, baïnes possibles
+  else if(P<6)score-=1;   // clapot local sans énergie de fond
+  // C — Vent
+  if(W>40)score+=1;
+  return score;
+}
+// Verdict : 0-2 ✅ · 3-5 ⚠️ · 6+ ❌
+
+function _renderBeachMarine(marineD,windD,tides){
+  var el=document.getElementById('bch-marine-wrap');
+  if(!el)return;
+  var mt=marineD&&marineD.hourly;
+  var wt=windD&&windD.hourly;
+  var now=new Date();
+  var H=0,P=0,W=0,seaTemp=null;
+  var nowStr=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0')+'T'+String(now.getHours()).padStart(2,'0');
+  // Marine data
+  if(mt){
+    var idx=0;
+    for(var i=0;i<mt.time.length;i++){if(mt.time[i].startsWith(nowStr)){idx=i;break;}}
+    H=(mt.wave_height&&mt.wave_height[idx])||0;
+    P=(mt.wave_period&&mt.wave_period[idx])||0;
+    seaTemp=mt.sea_surface_temperature?mt.sea_surface_temperature[idx]:null;
+  }
+  // Wind data
+  if(wt){
+    var widx=0;
+    for(var k=0;k<wt.time.length;k++){if(wt.time[k].startsWith(nowStr)){widx=k;break;}}
+    W=(wt.wind_speed_10m&&wt.wind_speed_10m[widx])||0;
+  }
+  // Score de danger
+  var score=_dangerScore(H,P,W);
+  // Labels mer
+  var merLabel=score<=1?'Mer calme':score<=3?'Mer agitée':'Mer très agitée';
+  var wavesLabel=H>0?H.toFixed(1)+'m':'—';
+  // Marée (depuis tides.js)
+  var direction='—',arrow='',nextTideLabel='—',nextTideTime='—';
+  if(tides&&tides.length){
+    var nowMin=now.getHours()*60+now.getMinutes();
+    var nextTide=null;
+    for(var j=0;j<tides.length;j++){
+      var parts=tides[j].time.split('h');var tm=parseInt(parts[0])*60+(parseInt(parts[1])||0);
+      if(tm>nowMin){nextTide=tides[j];break;}
+    }
+    if(!nextTide)nextTide=tides[0];
+    direction=nextTide.type==='PM'?'montante':'descendante';
+    arrow=nextTide.type==='PM'?'↑':'↓';
+    nextTideLabel=nextTide.type==='PM'?'PM':'BM';
+    nextTideTime=nextTide.time;
+  }
+  // Température
+  var temp=seaTemp?Math.round(seaTemp):null;
+  var tempColor=!temp?'#0C447C':temp<16?'#0891B2':temp<=20?'#3B6D11':'#BA7517';
+  var tempLabel=!temp?'—':temp<16?'Eau fraîche':temp<=20?'Eau agréable':'Eau chaude';
+  var cursorPct=temp?Math.max(2,Math.min(95,((temp-12)/12)*100)):50;
+  var cursorPos=cursorPct+'%';
+  // Verdict final par score
+  var verdictBg,verdictIcon,verdictTxt,verdictSub,verdictColor;
+  var bchSupervised=!!(window._currentBeach&&window._currentBeach.supervised);
+  var survSuffix=bchSupervised?' · Surveillée':'';
+  if(score<=1){
+    verdictBg='#EAF3DE';verdictIcon='✅';verdictColor='#27500A';
+    verdictTxt='Baignade idéale';
+    verdictSub='Mer calme'+survSuffix+', idéale en famille';
+  } else if(score<=3){
+    verdictBg='#FAEEDA';verdictIcon='⚠️';verdictColor='#633806';
+    verdictTxt='Baignade avec prudence';
+    verdictSub='Vagues présentes · Surveiller les enfants';
+  } else {
+    verdictBg='#FCEBEB';verdictIcon='❌';verdictColor='#791F1F';
+    verdictTxt='Baignade déconseillée';
+    verdictSub='Forts courants possibles';
+  }
+  el.innerHTML='<div class="bch-marine">'
+    +'<div class="bch-marine-header">'
+      +'<div class="bch-marine-header-left">'
+        +'<div class="bch-marine-header-icon">🌊</div>'
+        +'<div>'
+          +'<div class="bch-marine-header-main">Marée '+direction+' '+arrow+'</div>'
+          +'<div class="bch-marine-header-sub">'+merLabel+' · '+wavesLabel+'</div>'
+        +'</div>'
+      +'</div>'
+      +'<div class="bch-marine-header-time">'+nextTideLabel+' '+nextTideTime+'</div>'
+    +'</div>'
+    +'<div class="bch-marine-body">'
+      +'<div class="bch-marine-row">'
+        +'<div>'
+          +'<div class="bch-marine-temp-big" style="color:'+tempColor+'">'+(temp?temp+'°C':'—')+'</div>'
+          +'<div class="bch-marine-temp-lbl" style="color:'+tempColor+'">🌡️ '+tempLabel+'</div>'
+        +'</div>'
+        +'<div class="bch-marine-verdict" style="background:'+verdictBg+'">'
+          +'<div class="bch-marine-verdict-icon">'+verdictIcon+'</div>'
+          +'<div>'
+            +'<div class="bch-marine-verdict-txt" style="color:'+verdictColor+'">'+verdictTxt+'</div>'
+            +'<div class="bch-marine-verdict-sub" style="color:'+verdictColor+'">'+verdictSub+'</div>'
+          +'</div>'
+        +'</div>'
+      +'</div>'
+      +'<div class="bch-gauge-wrap">'
+        +'<div class="bch-gauge-grad"></div>'
+        +'<div class="bch-gauge-dot" style="left:'+cursorPos+'"></div>'
+      +'</div>'
+      +'<div class="bch-gauge-labels">'
+        +'<span style="color:#185FA5">12° Froide</span>'
+        +'<span style="color:#3B6D11">18° Agréable</span>'
+        +'<span style="color:#BA7517">24° Chaude</span>'
+      +'</div>'
+    +'</div>'
+  +'</div>';
+}
+
+function fetchBeachData(p){
+  var portId=_getPort(p.commune);
+  var lat=(p.location&&p.location.lat)||46.4952;
+  var lng=(p.location&&p.location.lng)||-1.7888;
+  var url='https://marine-api.open-meteo.com/v1/marine?latitude='+lat+'&longitude='+lng
+    +'&hourly=wave_height,wave_period,sea_surface_temperature&timezone=Europe%2FParis&forecast_days=2'
+    +'&models=best_match';
+  var windUrl='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lng
+    +'&hourly=wind_speed_10m&timezone=Europe%2FParis&forecast_days=2';
+  Promise.all([
+    fetch(url).then(function(r){return r.json();}).catch(function(){return null;}),
+    fetch(windUrl).then(function(r){return r.json();}).catch(function(){return null;})
+  ]).then(function(results){
+    var marineD=results[0];
+    var windD=results[1];
+    _fetchTides(portId,function(tides){_renderBeachMarine(marineD,windD,tides);});
+  });
+}
+
+function renderBeachPoiBody(p,mode){
+  try{_renderBeachPoiBody(p,mode);}catch(e){
+    var body=document.querySelector('.bs-poi-body');
+    if(body)body.innerHTML='<div style="padding:20px;color:red;font-size:12px">Erreur beach: '+e.message+'<br>'+e.stack+'</div>';
+    console.error('renderBeachPoiBody error:',e);
+  }
+}
+function _renderBeachPoiBody(p,mode){
+  var body=document.querySelector('.bs-poi-body');
+  if(!body)return;
+  var bch=p.beach||{};
+  // Données ribbon
+  var bchType=bch.type_label||'Plage';
+  var bchSupervised=!!bch.supervised;
+  var bchWave=(bch.wave_profile||'').toLowerCase();
+  var affCls=(p.affluence&&p.affluence.color==='green')?'gr':'';
+  var affLabel=(p.affluence&&p.affluence.label)||'—';
+  var conseil=(p.conseil&&p.conseil.positif)||'';
+  var descLong=p.descLong||'';
+  var noteVal=p.note||'?';
+  var avis=p.avis||[];
+  var pk=p.parking||{};
+  var distMin=(p.distance&&p.distance.min&&p.distance.min[mode])||'?';
+
+  // Surveillance : heures si dispo, sinon période, sinon Oui/Non
+  var survDisplay=bchSupervised?(bch.period||'Oui'):'Non';
+  var survCls=bchSupervised?' bl':'';
+
+
+  // Pills depuis p.beach (pas quickSpecs — plus fiable)
+  var piPills=[],psPills=[],pwPills=[];
+  if(bchSupervised)piPills.push('<span class="bch-pill bch-pi">🏊 Surveillée</span>');
+  if(bch.showers)piPills.push('<span class="bch-pill bch-pi">🚿 Douches</span>');
+  var hasPmr=(p.quickSpecs||[]).some(function(s){return/pmr|wheelchair|handicap/i.test(s.label||'');});
+  if(hasPmr)piPills.push('<span class="bch-pill bch-pi">♿ Accès PMR</span>');
+  if(bch.naturist)psPills.push('<span class="bch-pill bch-ps">🏖️ Naturisme</span>');
+  if(bch.beach_bar)psPills.push('<span class="bch-pill bch-ps">🍹 Bar de plage</span>');
+  if(bch.dogs)psPills.push('<span class="bch-pill bch-ps">🐕 Chiens OK</span>');
+  if(/modér/i.test(bchWave))pwPills.push('<span class="bch-pill bch-pw">🌊 Vagues modérées</span>');
+  else if(/sportif|fort/i.test(bchWave))pwPills.push('<span class="bch-pill bch-pw">🌊 Mer sportive</span>');
+  if(bch.tide_sensitive)pwPills.push('<span class="bch-pill bch-pw">⚡ Sensible aux marées</span>');
+  var pillsHtml=(piPills.length?'<div class="bch-pills-row">'+piPills.join('')+'</div>':'')
+    +(psPills.length?'<div class="bch-pills-row">'+psPills.join('')+'</div>':'')
+    +(pwPills.length?'<div class="bch-pills-row wave-row">'+pwPills.join('')+'</div>':'');
+
+  // Avis
+  var avNames=[['Marie C.','M'],['Thierry M.','T'],['Sophie L.','S']];
+  var avisHtml=avis.slice(0,3).map(function(a,i){
+    var hidden=i>0?' style="display:none"':'';
+    return'<div class="bch-avis-card"'+hidden+'><div class="bch-avis-top"><div class="bch-av">'+avNames[i%3][1]+'</div>'
+      +'<span class="bch-avis-name">'+avNames[i%3][0]+'</span><span class="bch-avis-date">'+(a.date||'')+'</span></div>'
+      +'"'+(a.txt||'')+'"</div>';
+  }).join('');
+
+  // Parking — liste directe (pas d'accordéon)
+  var pkLat=pk.lat||0,pkLng=pk.lng||0,pkNom=pk.nom||'Parking';
+  var pkMapsUrl='https://maps.google.com/?q='+pkLat+','+pkLng+'&label='+encodeURIComponent(pkNom);
+  var pkFreeTxt=pk.is_free===true?'Gratuit':pk.is_free===false?'Payant':'';
+  var pkSubTxt=[pk.dist,pkFreeTxt].filter(Boolean).join(' · ')||'';
+  var pkHtml='<div class="bch-pk-list">'
+    +'<div class="bch-pk-item primary" onclick="window.open(\''+pkMapsUrl+'\')">'
+    +'<div class="bch-pk-badge-blue">P</div>'
+    +'<div class="bch-pk-info"><div class="bch-pk-name2">'+pkNom+'</div>'+(pkSubTxt?'<div class="bch-pk-sub2">'+pkSubTxt+'</div>':'')+'</div>'
+    +'<span class="bch-pk-maps-blue">Maps →</span></div>';
+  if(pk.autres&&pk.autres.length){
+    pk.autres.forEach(function(o){
+      var oUrl='https://maps.google.com/?q='+encodeURIComponent(o.nom);
+      pkHtml+='<div class="bch-pk-item secondary" onclick="window.open(\''+oUrl+'\')">'
+        +'<div class="bch-pk-badge-grey">P</div>'
+        +'<div class="bch-pk-info"><div class="bch-pk-name2">'+o.nom+'</div>'+(o.dist?'<div class="bch-pk-sub2">'+o.dist+'</div>':'')+'</div>'
+        +'<span class="bch-pk-maps-grey">Maps →</span></div>';
+    });
+  }
+  pkHtml+='</div>';
+
+  body.innerHTML='<div class="bch-body">'
+    // Ribbon : Surveill. | Affluence | Type | Distance
+    +'<div class="bch-ribbon">'
+    +'<div class="bch-ri"><div class="bch-rv'+survCls+'">'+survDisplay+'</div><div class="bch-rl">Surveill.</div></div>'
+    +'<div class="bch-ri"><div class="bch-rv '+affCls+'">'+affLabel+'</div><div class="bch-rl">Affluence</div></div>'
+    +'<div class="bch-ri"><div class="bch-rv">'+bchType+'</div><div class="bch-rl">Type</div></div>'
+    +'<div class="bch-ri"><div class="bch-rv">'+distMin+' min</div><div class="bch-rl">Distance</div></div>'
+    +'</div>'
+    // Marine (chargement)
+    +'<div id="bch-marine-wrap"><div class="bch-marine" style="text-align:center;font-size:11px;color:#185FA5">⏳ Chargement données marines...</div></div>'
+    // Conseil
+    +'<div class="bch-conseil"><div class="bch-ctit"><div class="bch-cdot"></div> Le Conseil Planly</div>'
+    +'<div class="bch-ctxt">'+conseil+'</div></div>'
+    // La plage + pills (sans "Sable" : déjà dans ribbon)
+    +'<div class="bch-slbl">La plage</div>'+pillsHtml
+    // Description
+    +'<div class="bch-desc">'+descLong+'</div>'
+    // Avis
+    +'<div class="bch-avis-hd"><div class="bch-avis-note">'
+    +'<span class="bch-score">'+noteVal+'</span><span class="bch-stars">★★★★★</span>'
+    +'<span class="bch-avis-count">'+avis.length+' avis</span></div>'
+    +'<button class="bch-btn-avis" onclick="(function(btn){var cards=btn.closest(\'.bch-body\').querySelectorAll(\'.bch-avis-card\');var anyHidden=[].some.call(cards,function(c){return c.style.display===\'none\';});cards.forEach(function(c){c.style.display=anyHidden?\'block\':\'none\';});cards[0].style.display=\'block\';btn.textContent=anyHidden?\'Moins d\\\'avis\':\'+ d\\\'avis\';})(this)">+ d\'avis</button></div>'
+    +avisHtml
+    // Parking conseillé
+    +'<div class="bch-slbl">Parking conseillé</div>'
+    +pkHtml
+    +'</div>';
+}
+
 // ── BS POI — DATA-DRIVEN ──
 var bsCarIdx=0,bsImgs=[];
-function bsCarMove(dir){bsCarIdx=(bsCarIdx+dir+bsImgs.length)%bsImgs.length;document.getElementById('bs-car-track').style.transform='translateX(-'+(bsCarIdx*100)+'%)';document.querySelectorAll('.bs-car-dot').forEach(function(d,i){d.classList.toggle('active',i===bsCarIdx);});}
+// Sauvegarde du HTML standard du body POI (pour restaurer après beach mode)
+var _STD_BODY_HTML=(function(){var b=document.querySelector('.bs-poi-body');return b?b.innerHTML:'';})();
+function bsCarMove(dir){
+  if(!bsImgs.length)return;
+  bsCarIdx=(bsCarIdx+dir+bsImgs.length)%bsImgs.length;
+  var track=document.getElementById('bs-car-track');
+  if(track){track.style.transition='transform .3s ease';track.style.transform='translateX(-'+(bsCarIdx*100)+'%)';}
+  document.querySelectorAll('.bs-car-dot').forEach(function(d,i){d.classList.toggle('active',i===bsCarIdx);});
+}
+// Touch swipe sur le carousel du bottom-sheet
+(function(){
+  var tx0=0,isDragging=false;
+  document.addEventListener('touchstart',function(e){
+    var car=document.querySelector('#sheet-poi .bs-carousel');
+    if(!car||!car.contains(e.target))return;
+    tx0=e.touches[0].clientX;isDragging=true;
+  },{passive:true});
+  document.addEventListener('touchend',function(e){
+    if(!isDragging)return;isDragging=false;
+    var dx=e.changedTouches[0].clientX-tx0;
+    if(Math.abs(dx)>40)bsCarMove(dx<0?1:-1);
+  },{passive:true});
+})();
 function openPoiSheet(idx){
   var p=POIS[idx];
   bsCarIdx=0;bsImgs=p.imgs;
+  var isBeach=p.subcategory==='Plages & Côte';
+  var mode=transport||USER_PROFILE.mobilite||'voiture';
+  var sheet=document.getElementById('sheet-poi');
   // Carousel
   var track=document.getElementById('bs-car-track');
   track.style.transition='none';track.style.transform='translateX(0)';
@@ -1914,82 +2347,84 @@ function openPoiSheet(idx){
   document.getElementById('bs-name').textContent=p.name;
   document.getElementById('bs-cat').textContent=p.cat;
   document.getElementById('bs-notoriety').textContent=p.inco?'⭐ Incontournable':'💎 Pépite locale';
-  // Instant T
-  var inst=document.getElementById('bs-instant');
-  if(p.subcategory==='Plages & Côte'){
-    inst.style.display='none'; // masqué pendant le chargement
-    fetchMarineData(p,inst);
-  } else if(p.instant){
-    inst.style.display='flex';inst.innerHTML=p.instant;inst.className='bs-instant '+(p.instant.includes('🌅')?'sun':'time');
+  // Beach mode : injection HTML complète
+  if(isBeach){
+    window._currentBeach=p.beach||{};
+    sheet.classList.add('beach-sheet');
+    try{renderBeachPoiBody(p,mode);}catch(e){console.error('beach open error:',e);}
+    fetchBeachData(p);
   } else {
-    inst.style.display='none';
-  }
-  // Ruban
-  var nbAdultes={solo:1,couple:2,famille:2,amis:4}[USER_PROFILE.groupe]||2;
-  var nbEnfants=USER_PROFILE.enfants?USER_PROFILE.enfants.length:0;
-  var budgetTxt=p.pricing.is_free?'Gratuit':(nbAdultes*(p.pricing.adult||0)+nbEnfants*(p.pricing.child||0))+'€';
-  document.getElementById('tile-budget').textContent=budgetTxt;
-  var dur=p.duration;
-  document.getElementById('tile-duree').textContent=dur>=60?Math.floor(dur/60)+'h'+(dur%60?dur%60+'m':''):''+dur+' min';
-  var affEl=document.getElementById('tile-affluence');
-  affEl.textContent=p.affluence.label;
-  affEl.className='bs-rib-val '+(p.affluence.color==='green'?'green':'amber');
-  document.getElementById('tile-affluence').textContent=p.affluence.label;
-  document.getElementById('tile-affluence').className='bs-rib-val '+(p.affluence.color==='green'?'green':'amber');
-  // Icône mobilité SVG selon transport actif
-  var mode=transport||USER_PROFILE.mobilite||'voiture';
-  var mobPaths={
-    voiture:'<rect x="2" y="7" width="16" height="9" rx="2"/><path d="M5 7V5a5 5 0 0 1 10 0v2"/><circle cx="7" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="13" cy="13" r="1.2" fill="currentColor" stroke="none"/>',
-    pied:'<path d="M12 3a1 1 0 1 0 2 0 1 1 0 0 0-2 0m-2.5 5.5L8 13l2 1 1-3 2 3h2l-2.5-5L14 7l-2-1z"/><path d="M8 17l1-2"/>',
-    velo:'<circle cx="5" cy="14" r="3"/><circle cx="15" cy="14" r="3"/><path d="M5 14l4-8h3l2 8"/><path d="M12 6h3"/>'
-  };
-  document.getElementById('rib-mob-svg').innerHTML=mobPaths[mode];
-  document.getElementById('tile-distance').textContent=p.distance.min[mode]+' min';
-  document.getElementById('tile-distance-lbl').textContent=p.distance.km+' km';
-  // Description
-  document.getElementById('bs-desc').textContent=p.descLong;
-  // Conseil Planly
-  document.getElementById('bs-positif').textContent=p.conseil.positif;
-  var att=document.getElementById('bs-attention');
-  if(p.conseil.attention){att.style.display='block';att.textContent=p.conseil.attention;}
-  else{att.style.display='none';}
-  document.getElementById('bs-verdict').textContent=p.conseil.verdict;
-  // Pills — sans icônes sauf les 2 cruciales (positive/warning)
-  document.getElementById('bs-quick-specs').innerHTML=p.quickSpecs.map(function(s){
-    var hasPicto=(s.cls==='positive'||s.cls==='warning');
-    return'<span class="bs-pill '+s.cls+'">'+(hasPicto?s.icon+' ':'')+s.label+'</span>';
-  }).join('');
-  // Note globale
-  document.getElementById('bs-note-globale').textContent=p.note;
-  document.getElementById('bs-note-count').textContent='· '+p.avis.length+' avis';
-  // Avis — avatars uniformes gris sobre, avec date
-  var avColors=['#6B7280','#9CA3AF','#4B5563'];
-  var avNames=[['Marie C.','M'],['Thierry M.','T'],['Sophie L.','S']];
-  document.getElementById('bs-avis-list').innerHTML=p.avis.map(function(a,i){
-    return'<div class="bs-avis-card"><div class="bs-avis-top"><div class="bs-avis-avatar" style="background:'+avColors[i%3]+'">'+avNames[i][1]+'</div><div class="bs-avis-pseudo">'+avNames[i][0]+'</div><div class="bs-avis-date">'+a.date+'</div></div><div class="bs-avis-text">'+a.txt+'</div></div>';
-  }).join('');
-  // Parking principal
-  document.getElementById('bs-parking-name').textContent=p.parking.nom;
-  document.getElementById('bs-parking-main').onclick=function(){window.open('https://maps.google.com/?q='+p.parking.lat+','+p.parking.lng+'&label='+encodeURIComponent(p.parking.nom));};
-  // Autres parkings
-  var othersEl=document.getElementById('bs-parking-others');
-  var moreBtn=document.getElementById('bs-parking-more-btn');
-  othersEl.classList.remove('open');
-  if(p.parking.autres&&p.parking.autres.length>0){
-    moreBtn.style.display='block';
-    othersEl.innerHTML=p.parking.autres.map(function(pk){
-      return'<div class="bs-parking-other" onclick="window.open(\'https://maps.google.com/?q='+pk.nom+'\')" >🅿️ <strong>'+pk.nom+'</strong> — '+pk.dist+'</div>';
+    sheet.classList.remove('beach-sheet');
+    // Restaurer le body HTML standard
+    var body=document.querySelector('.bs-poi-body');
+    if(body&&body.querySelector('.bch-body')){
+      body.innerHTML=_STD_BODY_HTML;
+    }
+    var inst=document.getElementById('bs-instant');
+    var marineEl=document.getElementById('bs-marine');
+    marineEl.style.display='none';marineEl.innerHTML='';
+    if(p.instant){inst.style.display='flex';inst.innerHTML=p.instant;inst.className='bs-instant '+(p.instant.includes('🌅')?'sun':'time');}
+    else{inst.style.display='none';}
+    var nbAdultes={solo:1,couple:2,famille:2,amis:4}[USER_PROFILE.groupe]||2;
+    var nbEnfants=USER_PROFILE.enfants?USER_PROFILE.enfants.length:0;
+    var budgetTxt=p.pricing.is_free?'Gratuit':(nbAdultes*(p.pricing.adult||0)+nbEnfants*(p.pricing.child||0))+'€';
+    document.getElementById('tile-budget').textContent=budgetTxt;
+    document.getElementById('tile-budget').className='bs-rib-val';
+    document.getElementById('tile-budget-lbl').textContent='Budget';
+    var dur=p.duration;
+    document.getElementById('tile-duree').textContent=dur>=60?Math.floor(dur/60)+'h'+(dur%60?dur%60+'m':''):''+dur+' min';
+    document.getElementById('tile-duree').className='bs-rib-val';
+    document.getElementById('tile-duree-lbl').textContent='Sur place';
+    var affEl=document.getElementById('tile-affluence');
+    affEl.textContent=p.affluence.label;
+    affEl.className='bs-rib-val '+(p.affluence.color==='green'?'green':'amber');
+    var mobPaths={
+      voiture:'<rect x="2" y="7" width="16" height="9" rx="2"/><path d="M5 7V5a5 5 0 0 1 10 0v2"/><circle cx="7" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="13" cy="13" r="1.2" fill="currentColor" stroke="none"/>',
+      pied:'<path d="M12 3a1 1 0 1 0 2 0 1 1 0 0 0-2 0m-2.5 5.5L8 13l2 1 1-3 2 3h2l-2.5-5L14 7l-2-1z"/><path d="M8 17l1-2"/>',
+      velo:'<circle cx="5" cy="14" r="3"/><circle cx="15" cy="14" r="3"/><path d="M5 14l4-8h3l2 8"/><path d="M12 6h3"/>'
+    };
+    document.getElementById('rib-mob-svg').innerHTML=mobPaths[mode];
+    document.getElementById('tile-distance').textContent=p.distance.min[mode]+' min';
+    document.getElementById('tile-distance-lbl').textContent=p.distance.km+' km';
+    document.getElementById('bs-desc').textContent=p.descLong;
+    document.getElementById('bs-positif').textContent=p.conseil.positif;
+    var att=document.getElementById('bs-attention');
+    if(p.conseil.attention){att.style.display='block';att.textContent=p.conseil.attention;}
+    else{att.style.display='none';}
+    document.getElementById('bs-verdict').textContent=p.conseil.verdict;
+    document.getElementById('bs-specs-label').textContent='Caractéristiques';
+    document.getElementById('bs-quick-specs').innerHTML=p.quickSpecs.map(function(s){
+      var hasPicto=(s.cls==='positive'||s.cls==='warning');
+      return'<span class="bs-pill '+s.cls+'">'+(hasPicto?s.icon+' ':'')+s.label+'</span>';
     }).join('');
-  } else {moreBtn.style.display='none';}
-  // Veto
-  var veto=document.getElementById('bs-veto');
-  if(p.veto){veto.style.display='block';veto.innerHTML='⚠️ '+p.veto;}
-  else{veto.style.display='none';}
-  // Bouton itinéraire — parking si dispo, sinon POI
+    document.getElementById('bs-note-globale').textContent=p.note;
+    document.getElementById('bs-note-count').textContent='· '+p.avis.length+' avis';
+    var avColors=['#6B7280','#9CA3AF','#4B5563'];
+    var avNames=[['Marie C.','M'],['Thierry M.','T'],['Sophie L.','S']];
+    document.getElementById('bs-avis-list').innerHTML=p.avis.map(function(a,i){
+      return'<div class="bs-avis-card"><div class="bs-avis-top"><div class="bs-avis-avatar" style="background:'+avColors[i%3]+'">'+avNames[i][1]+'</div><div class="bs-avis-pseudo">'+avNames[i][0]+'</div><div class="bs-avis-date">'+a.date+'</div></div><div class="bs-avis-text">'+a.txt+'</div></div>';
+    }).join('');
+    document.getElementById('bs-parking-name').textContent=p.parking.nom;
+    document.getElementById('bs-parking-main').onclick=function(){window.open('https://maps.google.com/?q='+p.parking.lat+','+p.parking.lng+'&label='+encodeURIComponent(p.parking.nom));};
+    var othersEl=document.getElementById('bs-parking-others');
+    var moreBtn=document.getElementById('bs-parking-more-btn');
+    othersEl.classList.remove('open');
+    if(p.parking.autres&&p.parking.autres.length>0){
+      moreBtn.style.display='block';
+      moreBtn.innerHTML='+ Autres options à proximité';
+      othersEl.innerHTML=p.parking.autres.map(function(pk){
+        return'<div class="bs-parking-other" onclick="window.open(\'https://maps.google.com/?q='+pk.nom+'\')" >🅿️ <strong>'+pk.nom+'</strong> — '+pk.dist+'</div>';
+      }).join('');
+    } else {moreBtn.style.display='none';}
+    var veto=document.getElementById('bs-veto');
+    if(p.veto){veto.style.display='block';veto.innerHTML='⚠️ '+p.veto;}
+    else{veto.style.display='none';}
+  }
+  // Bouton itinéraire
   var destLat=p.parking&&p.parking.lat?p.parking.lat:p.location.lat;
   var destLng=p.parking&&p.parking.lng?p.parking.lng:p.location.lng;
   document.getElementById('bs-btn-maps').onclick=function(){window.open('https://www.google.com/maps/dir/?api=1&destination='+destLat+','+destLng+'&travelmode=driving');};
-  // Reset ajout — restaurer état depuis localStorage
+  // Reset ajout
   var btn=document.getElementById('bs-btn-like');
   if(isLiked(p.name)){
     btn.classList.add('added');

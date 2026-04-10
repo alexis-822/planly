@@ -45,7 +45,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Sable",
+        "label": "Sable fin",
         "icon": "🏖️",
         "cls": ""
       },
@@ -60,9 +60,9 @@ var POIS=[
         "cls": "positive"
       },
       {
-        "label": "Accès PMR",
-        "icon": "♿",
-        "cls": "positive"
+        "label": "Vagues modérées",
+        "icon": "🌊",
+        "cls": "warning"
       }
     ],
     "avis": [
@@ -98,6 +98,18 @@ var POIS=[
       "positif": "Venez tôt le matin pour profiter du lever de soleil sur l'océan sans la foule, et garez-vous gratuitement à 15 minutes à pied pour éviter le stress du parking en haute saison.",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable fin",
+      "supervised": true,
+      "hours": "10h30-19h",
+      "period": "mai→sept.",
+      "wave_profile": "modéré",
+      "naturist": false,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": true
     },
     "veto": null
   },
@@ -147,7 +159,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Mixte",
+        "label": "Sable & rochers",
         "icon": "🏖️",
         "cls": ""
       },
@@ -155,6 +167,11 @@ var POIS=[
         "label": "Surveillée",
         "icon": "🏊",
         "cls": "positive"
+      },
+      {
+        "label": "Mer sportive",
+        "icon": "🌊",
+        "cls": "warning"
       }
     ],
     "avis": [
@@ -185,6 +202,18 @@ var POIS=[
       "positif": "Vérifiez les horaires de marée avant de partir : à marée basse, la plage est immense et idéale pour les familles. Les surfeurs et amateurs de vagues préféreront les matinées venteuses pour des conditi",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable & rochers",
+      "supervised": true,
+      "hours": "10h30-19h",
+      "period": "juin→sept.",
+      "wave_profile": "sportif",
+      "naturist": true,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": false
     },
     "veto": null
   },
@@ -242,6 +271,11 @@ var POIS=[
         "label": "Surveillée",
         "icon": "🏊",
         "cls": "positive"
+      },
+      {
+        "label": "Mer sportive",
+        "icon": "🌊",
+        "cls": "warning"
       }
     ],
     "avis": [
@@ -272,6 +306,18 @@ var POIS=[
       "positif": "Venez tôt le matin pour profiter de la plage au calme avant l'affluence, et pensez à amener votre chien en laisse pour une balade sur le sable. Les amateurs de surf trouveront facilement cours et loca",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable",
+      "supervised": true,
+      "hours": "12h-19h",
+      "period": "juin→sept.",
+      "wave_profile": "sportif",
+      "naturist": true,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": false
     },
     "veto": null
   },
@@ -319,7 +365,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Mixte",
+        "label": "Sable & rochers",
         "icon": "🏖️",
         "cls": ""
       },
@@ -327,6 +373,11 @@ var POIS=[
         "label": "Surveillée",
         "icon": "🏊",
         "cls": "positive"
+      },
+      {
+        "label": "Mer sportive",
+        "icon": "🌊",
+        "cls": "warning"
       },
       {
         "label": "Accès PMR",
@@ -367,6 +418,18 @@ var POIS=[
       "positif": "En famille, profitez de la baignade surveillée en matinée avant l'affluence. En couple, installez-vous en fin de journée pour siroter un verre face au coucher de soleil atlantique.",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable & rochers",
+      "supervised": true,
+      "hours": "14h à 18h30",
+      "period": "avr.→sept.",
+      "wave_profile": "sportif",
+      "naturist": false,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": false
     },
     "veto": null
   },
@@ -416,7 +479,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Galets, rochers",
+        "label": "Galets",
         "icon": "🏖️",
         "cls": ""
       },
@@ -470,6 +533,18 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": {
+      "type_label": "Galets",
+      "supervised": false,
+      "hours": null,
+      "period": null,
+      "wave_profile": "variable",
+      "naturist": false,
+      "beach_bar": false,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": false
+    },
     "veto": null
   },
   {
@@ -518,7 +593,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Sable",
+        "label": "Sable & rochers",
         "icon": "🏖️",
         "cls": ""
       },
@@ -526,6 +601,11 @@ var POIS=[
         "label": "Surveillée",
         "icon": "🏊",
         "cls": "positive"
+      },
+      {
+        "label": "Mer sportive",
+        "icon": "🌊",
+        "cls": "warning"
       }
     ],
     "avis": [
@@ -561,6 +641,18 @@ var POIS=[
       "positif": "En famille, vérifiez les conditions de mer avant de vous baigner et suivez les consignes des maîtres-nageurs. Venez tôt le matin pour profiter de la plage au calme et garer facilement votre vélo ou vo",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable & rochers",
+      "supervised": true,
+      "hours": "14h00 à 19h00",
+      "period": "mai→août",
+      "wave_profile": "sportif",
+      "naturist": true,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": false
     },
     "veto": null
   },
@@ -610,7 +702,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Mixte",
+        "label": "Sable & rochers",
         "icon": "🏖️",
         "cls": ""
       },
@@ -658,6 +750,18 @@ var POIS=[
       "positif": "Consultez les horaires des marées avant de venir : à marée basse, les enfants adorent explorer les rochers pour la pêche à pied, tandis que la marée haute transforme la plage en spot idéal pour les sp",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable & rochers",
+      "supervised": true,
+      "hours": "12h à 19h",
+      "period": "juin→août",
+      "wave_profile": "calme",
+      "naturist": false,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": true
     },
     "veto": null
   },
@@ -707,7 +811,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Mixte",
+        "label": "Sable fin",
         "icon": "🏖️",
         "cls": ""
       },
@@ -720,6 +824,11 @@ var POIS=[
         "label": "Douches",
         "icon": "🚿",
         "cls": "positive"
+      },
+      {
+        "label": "Vagues modérées",
+        "icon": "🌊",
+        "cls": "warning"
       }
     ],
     "avis": [
@@ -750,6 +859,18 @@ var POIS=[
       "positif": "En famille, prévoyez la matinée pour la baignade surveillée et partez randonner vers les falaises après le déjeuner. En couple, ne manquez surtout pas le coucher de soleil depuis les dunes, un moment ",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable fin",
+      "supervised": true,
+      "hours": null,
+      "period": "juil.→août",
+      "wave_profile": "modéré",
+      "naturist": false,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": true
     },
     "veto": null
   },
@@ -812,6 +933,11 @@ var POIS=[
         "label": "Douches",
         "icon": "🚿",
         "cls": "positive"
+      },
+      {
+        "label": "Mer sportive",
+        "icon": "🌊",
+        "cls": "warning"
       }
     ],
     "avis": [
@@ -847,6 +973,18 @@ var POIS=[
       "positif": "En famille, privilégiez la zone surveillée pour les petits et profitez des vagues douces pour des heures de jeux en toute sérénité. En couple ou en solo, venez à l'automne pour découvrir une plage qua",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable",
+      "supervised": true,
+      "hours": "11h30 à 19h",
+      "period": "juin→août",
+      "wave_profile": "sportif",
+      "naturist": false,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": true
     },
     "veto": null
   },
@@ -894,7 +1032,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Sable",
+        "label": "Sable fin",
         "icon": "🏖️",
         "cls": ""
       },
@@ -907,6 +1045,11 @@ var POIS=[
         "label": "Douches",
         "icon": "🚿",
         "cls": "positive"
+      },
+      {
+        "label": "Mer sportive",
+        "icon": "🌊",
+        "cls": "warning"
       }
     ],
     "avis": [
@@ -942,6 +1085,18 @@ var POIS=[
       "positif": "En famille, arrivez avant midi pour trouver facilement à vous garer et profitez des vagues en matinée. En couple ou en solo, attardez-vous en fin de journée pour vivre un coucher de soleil magique loi",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable fin",
+      "supervised": true,
+      "hours": "12h-19h",
+      "period": "juin→sept.",
+      "wave_profile": "sportif",
+      "naturist": false,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": true
     },
     "veto": null
   },
@@ -991,24 +1146,14 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Sable",
+        "label": "Sable & rochers",
         "icon": "🏖️",
         "cls": ""
       },
       {
-        "label": "Plage sauvage",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Coucher de soleil",
-        "icon": "📌",
-        "cls": ""
-      },
-      {
-        "label": "Nature préservée",
-        "icon": "📌",
-        "cls": ""
+        "label": "Mer sportive",
+        "icon": "🌊",
+        "cls": "warning"
       }
     ],
     "avis": [
@@ -1044,6 +1189,18 @@ var POIS=[
       "positif": "Venez en fin d'après-midi pour admirer un coucher de soleil époustouflant et évitez la baignade — profitez plutôt d'un pique-nique face aux vagues. En famille, apportez de bonnes chaussures pour march",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable & rochers",
+      "supervised": false,
+      "hours": null,
+      "period": null,
+      "wave_profile": "sportif",
+      "naturist": false,
+      "beach_bar": false,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": false
     },
     "veto": null
   },
@@ -1093,7 +1250,7 @@ var POIS=[
     "instant": null,
     "quickSpecs": [
       {
-        "label": "Sable",
+        "label": "Sable fin",
         "icon": "🏖️",
         "cls": ""
       },
@@ -1146,6 +1303,18 @@ var POIS=[
       "positif": "En famille, profitez du fauteuil nautique mis à disposition pour que tout le monde puisse profiter de l'eau, et installez-vous près du poste de secours pour rester dans la zone surveillée. Arrivez tôt",
       "attention": null,
       "verdict": "Bonne visite !"
+    },
+    "beach": {
+      "type_label": "Sable fin",
+      "supervised": true,
+      "hours": "11h à 19h",
+      "period": "juil.→août",
+      "wave_profile": "calme",
+      "naturist": false,
+      "beach_bar": true,
+      "dogs": false,
+      "tide_sensitive": false,
+      "showers": true
     },
     "veto": null
   },
@@ -1239,6 +1408,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -1336,6 +1506,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -1438,6 +1609,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -1535,6 +1707,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -1614,6 +1787,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -1716,6 +1890,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -1813,6 +1988,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -1905,6 +2081,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -1997,6 +2174,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2084,6 +2262,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2163,6 +2342,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2265,6 +2445,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2362,6 +2543,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2464,6 +2646,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2564,6 +2747,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2653,6 +2837,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2750,6 +2935,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2847,6 +3033,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -2944,6 +3131,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -3041,6 +3229,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   },
   {
@@ -3130,6 +3319,7 @@ var POIS=[
       "attention": null,
       "verdict": "Bonne visite !"
     },
+    "beach": null,
     "veto": null
   }
 ];
