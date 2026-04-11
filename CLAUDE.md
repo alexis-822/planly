@@ -101,7 +101,26 @@ Prototype mobile avec :
 - Champs toujours vides : opening_hours (0%), price_level (0%), zone (0%), affluence_profile (0%)
 - Wikipedia : 7/34 seulement (recherche exacte, pas de fuzzy)
 
-### Dernières modifications (2026-04-07)
+### Dernières modifications (2026-04-11)
+- **planly-full.html** :
+  - **Points de vue** : CSS `pdv-*` (bloc bleu #185FA5) + fiche enrichie :
+    - Ribbon : altitude (m) / meilleur moment / accès / distance
+    - Bloc bleu : header avec `view_description`, badge orientation/panoramique, 3 colonnes (orientation / idéal / météo), footer tempête si `storm_interest=true`, pills (table orientation, nb marches, PMR)
+  - **Forêts & Nature** : CSS `frt-*` (bloc vert #2d5a1b) + fiche parcours :
+    - Header vert avec nb parcours, onglets Rando / Vélo
+    - Parcours numérotés, dots difficulté CSS, bouton "Voir →" vers AllTrails/Komoot/Decathlon
+    - Tri par distance croissante (null en dernier), max 5 par onglet
+    - margin-top 16px sur conseil Planly après le bloc trails
+  - **UX** : bouton "Ajouter à mes activités" → ferme la fiche + swipe like + passe à la card suivante (délai 320ms)
+- **scraper_missing.py** :
+  - `process_forets_nature()` : SERP `site:alltrails.com/fr/randonnee` + Komoot + Decathlon, 2-pass completion, validation URL par unicodedata, dedup, tri distance
+  - `process_points_de_vue()` : 7 nouveaux champs (altitude_m, orientation, view_description, storm_interest, has_orientation_panel, nb_steps, ideal_weather), 2 blocs (Haiku corpus + SERP altitude)
+  - Règles d'inférence explicites : coucher de soleil/vue Atlantique → O, tempête → storm_interest, etc.
+- **planly_scraper/_fix_pdv_missing.py** : second pass inférence Points de vue (champs encore null)
+- **planly_scraper/_run_points_vue.py** : runner batch Points de vue
+- **dashboard.html** : SPECIFIC_FIELDS mis à jour pour Forêts & Nature (trails) + Points de vue (7 champs)
+
+### Modifications antérieures (2026-04-07)
 - **planly-full.html** : Refonte complète de l'Explorer en mode Tinder plein écran :
   - Card swipe 100% viewport, photo full-screen, fond noir
   - Header overlay glassmorphism (search + boutons ✏️⚙️ + pills catégories + dots photos)
@@ -109,8 +128,6 @@ Prototype mobile avec :
   - Nav bottom fond #111, icônes 16px
   - Panneau ⚙️ (settings-sheet) : mode vue Swipe/Liste + filtres (budget, météo, PMR, chiens, pépites)
   - Panneau ✏️ (edit-sheet) : modifier séjour (destination, dates, groupe, ambiance)
-  - Infos bas de card : badge conseil Planly, nom + bouton ↑ détail, description, note/distance
-  - Toggle Swipe/Liste déplacé dans le panneau ⚙️
   - Fix carousel slides (flex:0 0 100%), fix updateSlider crash, fix launchExplorer timing
   - Swipe réécrit (passive:false, direction lock), likes localStorage, itinéraire vers parking
 - **planly_scraper/inject_pois.py** : Transforme output_global.json → format POIS JS
