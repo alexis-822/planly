@@ -1647,7 +1647,7 @@ var POIS=[
           "distance_km": 4.8,
           "duration_min": 75,
           "difficulty": 2,
-          "trail_url": null
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-d-olonne"
         },
         {
           "name": "Forêt d'Olonne - Plage de Sauveterre",
@@ -1671,7 +1671,7 @@ var POIS=[
           "distance_km": 8.0,
           "duration_min": 105,
           "difficulty": 2,
-          "trail_url": null
+          "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/cote-et-foret-d-olonne"
         },
         {
           "name": "Forêt domaniale d'Olonne - Le Havre de la Gachère",
@@ -1749,13 +1749,31 @@ var POIS=[
       "trails_display": {
         "rando": [
           {
+            "name": "Forêt d'Olonne - Plage de Sauveterre",
+            "type": "rando",
+            "distance_km": 3.2,
+            "duration_min": 38,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-d-olonne-plage-de-sauveterre",
+            "display_category": null
+          },
+          {
             "name": "Forêt d'Olonne",
             "type": "rando",
             "distance_km": 4.8,
             "duration_min": 75,
             "difficulty": 2,
-            "trail_url": null,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-d-olonne",
             "display_category": "famille"
+          },
+          {
+            "name": "Côte et Forêt d'Olonne",
+            "type": "rando",
+            "distance_km": 8.0,
+            "duration_min": 105,
+            "difficulty": 2,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/cote-et-foret-d-olonne",
+            "display_category": null
           },
           {
             "name": "Forêt domaniale et dunes d'Olonne-sur-Mer",
@@ -1774,24 +1792,6 @@ var POIS=[
             "difficulty": 2,
             "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-foret-domaniale-d-olonne",
             "display_category": "sportif"
-          },
-          {
-            "name": "Forêt d'Olonne - Plage de Sauveterre",
-            "type": "rando",
-            "distance_km": 3.2,
-            "duration_min": 38,
-            "difficulty": 2,
-            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/foret-d-olonne-plage-de-sauveterre",
-            "display_category": null
-          },
-          {
-            "name": "Côte et Forêt d'Olonne",
-            "type": "rando",
-            "distance_km": 8.0,
-            "duration_min": 105,
-            "difficulty": 2,
-            "trail_url": null,
-            "display_category": null
           }
         ],
         "vtt": [
@@ -1805,7 +1805,9 @@ var POIS=[
             "display_category": null
           }
         ]
-      }
+      },
+      "superficie_ha": 1000,
+      "sentiers_km_total": 60
     },
     "veto": null
   },
@@ -2002,24 +2004,6 @@ var POIS=[
             "display_category": "famille"
           },
           {
-            "name": "Boucle des marais",
-            "type": "rando",
-            "distance_km": 11.7,
-            "duration_min": 165,
-            "difficulty": 3,
-            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-des-marais",
-            "display_category": "normal"
-          },
-          {
-            "name": "L'Île-d'Olonne",
-            "type": "rando",
-            "distance_km": 17.5,
-            "duration_min": 210,
-            "difficulty": null,
-            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/ile-d-olonne",
-            "display_category": "sportif"
-          },
-          {
             "name": "Les Marais d'Olonnes",
             "type": "rando",
             "distance_km": 5.6,
@@ -2029,6 +2013,15 @@ var POIS=[
             "display_category": null
           },
           {
+            "name": "Boucle des marais",
+            "type": "rando",
+            "distance_km": 11.7,
+            "duration_min": 165,
+            "difficulty": 3,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-des-marais",
+            "display_category": "normal"
+          },
+          {
             "name": "Les Sauniers",
             "type": "rando",
             "distance_km": 17.1,
@@ -2036,6 +2029,15 @@ var POIS=[
             "difficulty": 3,
             "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-sauniers",
             "display_category": null
+          },
+          {
+            "name": "L'Île-d'Olonne",
+            "type": "rando",
+            "distance_km": 17.5,
+            "duration_min": 210,
+            "difficulty": null,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/ile-d-olonne",
+            "display_category": "sportif"
           }
         ],
         "vtt": []
@@ -2284,6 +2286,15 @@ var POIS=[
             "display_category": "normal"
           },
           {
+            "name": "Jard-sur-Mer - Forêt de Longeville",
+            "type": "rando",
+            "distance_km": 8.2,
+            "duration_min": 105,
+            "difficulty": 1,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/jard-sur-mer-foret-de-longeville",
+            "display_category": null
+          },
+          {
             "name": "Sentier Côtier vers le Lac de Tanchet",
             "type": "rando",
             "distance_km": 17.4,
@@ -2299,15 +2310,6 @@ var POIS=[
             "duration_min": 278,
             "difficulty": 4,
             "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/gr-8-section-1-les-sables-d-olonne-le-port",
-            "display_category": null
-          },
-          {
-            "name": "Jard-sur-Mer - Forêt de Longeville",
-            "type": "rando",
-            "distance_km": 8.2,
-            "duration_min": 105,
-            "difficulty": 1,
-            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/jard-sur-mer-foret-de-longeville",
             "display_category": null
           }
         ],
@@ -2488,15 +2490,6 @@ var POIS=[
             "display_category": "normal"
           },
           {
-            "name": "Boucle Champ-Saint-Père - Longeville",
-            "type": "rando",
-            "distance_km": 55.2,
-            "duration_min": 750,
-            "difficulty": 4,
-            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-champ-saint-pere-longeville",
-            "display_category": "sportif"
-          },
-          {
             "name": "Les Conches - Le Rocher",
             "type": "rando",
             "distance_km": 7.2,
@@ -2504,6 +2497,15 @@ var POIS=[
             "difficulty": 2,
             "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/les-conches-le-rocher",
             "display_category": null
+          },
+          {
+            "name": "Boucle Champ-Saint-Père - Longeville",
+            "type": "rando",
+            "distance_km": 55.2,
+            "duration_min": 750,
+            "difficulty": 4,
+            "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/boucle-champ-saint-pere-longeville",
+            "display_category": "sportif"
           }
         ],
         "vtt": [

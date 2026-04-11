@@ -1023,11 +1023,15 @@ body{
 .frt-item-name{font-size:13px;font-weight:600;color:#1a1a18;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .frt-item-meta{display:flex;align-items:center;gap:6px;margin-top:3px;flex-wrap:wrap;}
 .frt-meta-dist{font-size:11px;color:#555;}
-.frt-diff-dots{font-size:10px;letter-spacing:-1px;}
-.frt-diff-dots-gr{color:#2d5a1b;}
-.frt-diff-dots-or{color:#b85c00;}
-.frt-diff-dots-rd{color:#b71c1c;}
-.frt-diff-lbl{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;}
+.frt-diff-dots{display:inline-flex;gap:3px;align-items:center;vertical-align:middle;}
+.frt-diff-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.frt-diff-dots-gr .frt-diff-dot.on{background:#2d5a1b;}
+.frt-diff-dots-gr .frt-diff-dot.off{background:transparent;border:1.5px solid #2d5a1b;}
+.frt-diff-dots-or .frt-diff-dot.on{background:#b85c00;}
+.frt-diff-dots-or .frt-diff-dot.off{background:transparent;border:1.5px solid #b85c00;}
+.frt-diff-dots-rd .frt-diff-dot.on{background:#b71c1c;}
+.frt-diff-dots-rd .frt-diff-dot.off{background:transparent;border:1.5px solid #b71c1c;}
+.frt-diff-lbl{font-size:11px;font-weight:700;padding:3px 9px;border-radius:10px;}
 .frt-diff-lbl-1{background:#e8f5e9;color:#2d5a1b;}
 .frt-diff-lbl-2{background:#e8f5e9;color:#2d5a1b;}
 .frt-diff-lbl-3{background:#fff3e0;color:#b85c00;}
@@ -2150,7 +2154,7 @@ function _frtDiffDots(d){
   if(!d)return '';
   var cls=d<=2?'frt-diff-dots-gr':d<=3?'frt-diff-dots-or':'frt-diff-dots-rd';
   var dots='';
-  for(var i=1;i<=5;i++)dots+=i<=d?'●':'○';
+  for(var i=1;i<=5;i++)dots+='<div class="frt-diff-dot '+(i<=d?'on':'off')+'"></div>';
   return '<span class="frt-diff-dots '+cls+'">'+dots+'</span>';
 }
 function _frtDiffLbl(d){
@@ -2447,14 +2451,19 @@ function _renderPoiBody(p,mode){
 
   }else if(sub==='Forêts & Nature'){
     // Ribbon : difficulté (colorée), durée estimée, superficie, distance voiture
+    // difficulty peut être int (1-5) ou string ("facile","très facile"…)
+    var _frtDiffStrMap={'très facile':1,'tres facile':1,'facile':2,'modéré':3,'modere':3,'difficile':4,'très difficile':5,'expert':5};
     var frtDiff=sp.difficulty;
-    var frtDiffCls=frtDiff<=2?'gr':frtDiff<=3?'or':'rd';
+    if(typeof frtDiff==='string')frtDiff=_frtDiffStrMap[frtDiff.toLowerCase().trim()]||null;
+    var frtDiffCls=frtDiff?(frtDiff<=2?'gr':frtDiff<=3?'or':'rd'):'';
     var frtDiffVal=frtDiff?('<span class="frt-diff-'+frtDiffCls+'">'+(_frtDiffLabel(frtDiff)||'—')+'</span>'):'—';
     var frtSupVal=sp.superficie_ha?sp.superficie_ha+' ha':'—';
-    var frtSentVal=sp.sentiers_km_total?sp.sentiers_km_total+' km':'—';
+    var frtSentVal=sp.sentiers_km_total?sp.sentiers_km_total+' km'
+      :(sp.nb_parcours?sp.nb_parcours+' parcours':'—');
+    var frtSentLbl=sp.sentiers_km_total?'Sentiers':'Parcours';
     ribbonItems=[
       {val:frtDiffVal,lbl:'Difficulté',cls:''},
-      {val:frtSentVal,lbl:'Sentiers',cls:''},
+      {val:frtSentVal,lbl:frtSentLbl,cls:''},
       {val:frtSupVal,lbl:'Superficie',cls:''},
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];

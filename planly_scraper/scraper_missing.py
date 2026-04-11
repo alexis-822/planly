@@ -427,6 +427,10 @@ def _select_display_trails(trails: list) -> dict:
             selected_vtt.append({**t, "display_category": None})
             used_vtt.add(t.get("name"))
 
+    # Tri final par distance croissante (null en dernier)
+    selected_rando.sort(key=lambda t: t.get("distance_km") or 9999)
+    selected_vtt.sort(key=lambda t: t.get("distance_km") or 9999)
+
     return {"rando": selected_rando, "vtt": selected_vtt}
 
 
