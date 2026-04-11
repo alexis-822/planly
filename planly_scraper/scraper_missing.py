@@ -84,6 +84,13 @@ SPECIFIC_FIELDS = {
         "difficulty": {"label": "difficulté d'accès", "type": "enum", "options": ["facile", "modéré", "difficile"]},
         "best_time": {"label": "meilleur moment de la journée pour visiter", "type": "enum", "options": ["lever", "journée", "coucher", "nuit"]},
         "panoramic": {"label": "vue panoramique", "type": "bool"},
+        "altitude_m": {"label": "altitude en mètres", "type": "int"},
+        "orientation": {"label": "orientation de la vue", "type": "enum", "options": ["N", "NE", "E", "SE", "S", "SO", "O", "NO", "360"]},
+        "view_description": {"label": "description courte de la vue (ce qu'on voit)", "type": "text"},
+        "storm_interest": {"label": "spectaculaire par tempête", "type": "bool"},
+        "has_orientation_panel": {"label": "panneaux d'orientation présents", "type": "bool"},
+        "nb_steps": {"label": "nombre de marches pour accéder", "type": "int"},
+        "ideal_weather": {"label": "météo idéale", "type": "enum", "options": ["beau", "vent", "nuageux", "tempete", "all"]},
     },
     "Balades & Promenades": {
         "distance_km": {"label": "distance en kilomètres", "type": "text"},
@@ -929,6 +936,139 @@ Si une info n'est pas trouvable, mets {{"value": null, "confidence": null}}."""
     return poi
 
 
+def process_points_de_vue(client, poi: dict, report: list) -> dict:
+    """Pipeline Points de vue — 2 blocs, coût minimal."""
+    import re as _re
+
+    poi_name = poi.get("name", "")
+    commune  = poi.get("commune", "") or ""
+    specific = poi.setdefault("specific", {})
+    status   = poi.setdefault("specific_status", {})
+
+    def _already(key):
+        return status.get(key) in ("auto", "manual") and specific.get(key) is not None
+
+    def _set(key, val, src):
+        specific[key] = val
+        status[key]   = "auto"
+        report.append({"poi": poi_name, "field": key, "value": val,
+                        "status": "auto", "sources": src if isinstance(src, list) else [src]})
+        log.info(f"  [PDV] OK {key} = {val}")
+
+    def _empty(key):
+        if not _already(key):
+            status[key] = "empty"
+            log.info(f"  [PDV] -- {key} = null")
+
+    log.info(f"  [PDV] == {poi_name} ==")
+
+    # Construire le corpus : description + avis (gratuit, déjà scraped)
+    desc = poi.get("description") or poi.get("description_long") or ""
+    conseil = poi.get("conseil_planly") or ""
+    reviews = poi.get("reviews") or []
+    avis_txt = " ".join(
+        r.get("text", "") for r in reviews if r.get("text")
+    )
+    corpus = f"Description : {desc}\n\nConseil Planly : {conseil}\n\nAvis visiteurs : {avis_txt}"
+
+    # -----------------------------------------------------------------------
+    # storm_interest : détection regex (0 coût)
+    # -----------------------------------------------------------------------
+    if not _already("storm_interest"):
+        storm_kw = _re.compile(
+            r"tempête|tempete|vague|gros temps|grosse mer|vent fort|impressionnant|spectaculaire|déchaîné",
+            _re.I
+        )
+        val = bool(storm_kw.search(avis_txt + " " + desc))
+        _set("storm_interest", val, "avis+description")
+
+    # -----------------------------------------------------------------------
+    # BLOC A : orientation, view_description, has_orientation_panel,
+    #          nb_steps, ideal_weather  → 1 seul appel Haiku
+    # -----------------------------------------------------------------------
+    keys_a = [k for k in ("orientation", "view_description", "has_orientation_panel",
+                           "nb_steps", "ideal_weather") if not _already(k)]
+    if keys_a:
+        log.info(f"  [PDV] BLOC A: {keys_a}")
+        prompt_a = (
+            f'Texte sur le point de vue "{poi_name}" ({commune}) :\n\n'
+            f'{corpus[:6000]}\n\n'
+            "Extrais UNIQUEMENT les champs présents dans le texte (null si absent) :\n"
+            '- orientation: direction principale de la vue parmi N/NE/E/SE/S/SO/O/NO/360. '
+            'Cherche des indices : "vue sur la mer à l\'ouest", "coucher de soleil" → O, '
+            '"face à l\'île" → cherche direction, "panoramique" → 360\n'
+            '- view_description: 1 phrase courte sur ce qu\'on voit (max 80 chars). '
+            'Ex: "Vue sur la baie et l\'île d\'Yeu par temps clair"\n'
+            '- has_orientation_panel: true si "table d\'orientation" ou "panneau" ou "borne" mentionné\n'
+            '- nb_steps: entier si "marches" ou "escaliers" + nombre mentionné\n'
+            '- ideal_weather: parmi beau/vent/nuageux/tempete/all. '
+            '"par beau temps" → beau, "tempête/vent" → tempete/vent, "toujours magnifique" → all\n\n'
+            '{"orientation":<str|null>,"view_description":<str|null>,'
+            '"has_orientation_panel":<bool|null>,"nb_steps":<int|null>,"ideal_weather":<str|null>}'
+        )
+        r = _call_haiku(client, prompt_a, max_tokens=400)
+        if r and isinstance(r, dict):
+            src = ["description+avis"]
+            for key in keys_a:
+                val = r.get(key)
+                _set(key, val, src) if val is not None else _empty(key)
+        else:
+            for key in keys_a:
+                _empty(key)
+    else:
+        log.info("  [PDV] BLOC A: skip (deja rempli)")
+
+    # -----------------------------------------------------------------------
+    # BLOC B : altitude_m → Wikipedia fetch → SERP
+    # -----------------------------------------------------------------------
+    if not _already("altitude_m"):
+        log.info("  [PDV] BLOC B: altitude_m")
+        text_b, src_b = "", []
+
+        # Essai 1 : Wikipedia
+        snip_w = search_organic(f"{poi_name} {commune} wikipedia altitude mètres", depth=5)
+        wiki_url = next((s["url"] for s in snip_w if "wikipedia.org" in s.get("url", "")), None)
+        if wiki_url:
+            try:
+                from bs4 import BeautifulSoup
+                import requests as _req
+                resp = _req.get(wiki_url, headers={"User-Agent": "Mozilla/5.0"}, timeout=12)
+                soup = BeautifulSoup(resp.text, "html.parser")
+                text_b = soup.get_text(" ", strip=True)[:4000]
+                src_b  = [wiki_url]
+                log.info(f"  [PDV] B source: Wikipedia {wiki_url[:60]}")
+            except Exception as e:
+                log.warning(f"  [PDV] B Wikipedia fetch fail: {e}")
+
+        # Essai 2 : snippets SERP si Wikipedia n'a pas répondu
+        if not text_b:
+            text_b = _snippets_to_text(snip_w, 3000)
+            src_b  = [s.get("url", "") for s in snip_w[:3]]
+
+        # Essai 3 : SERP dédié altitude/hauteur
+        if not text_b:
+            snip_alt = search_organic(f"{poi_name} altitude hauteur mètres IGN", depth=5)
+            text_b = _snippets_to_text(snip_alt, 3000)
+            src_b  = [s.get("url", "") for s in snip_alt[:3]]
+
+        if text_b:
+            r = _call_haiku(client,
+                f'Texte sur "{poi_name}" :\n{text_b}\n\n'
+                'altitude_m : entier en mètres (cherche "X m d\'altitude", "X mètres", "alt. X").\n'
+                'NE PAS inventer si absent → null\n'
+                '{"altitude_m": <int|null>}')
+            if r and isinstance(r, dict) and r.get("altitude_m") is not None:
+                _set("altitude_m", r["altitude_m"], src_b)
+            else:
+                _empty("altitude_m")
+        else:
+            _empty("altitude_m")
+    else:
+        log.info(f"  [PDV] BLOC B: skip (deja rempli: {specific.get('altitude_m')})")
+
+    return poi
+
+
 def process_poi(client, poi: dict, dry_run: bool = False, report: list = None) -> dict:
     """Traite un POI : remplit champs de base + champs spécifiques manquants."""
     if report is None:
@@ -963,6 +1103,10 @@ def process_poi(client, poi: dict, dry_run: bool = False, report: list = None) -
     # Pipeline spécifique Forêts & Nature
     if poi.get("subcategory") == "Forêts & Nature":
         return process_forets_nature(client, poi, report)
+
+    # Pipeline spécifique Points de vue
+    if poi.get("subcategory") == "Points de vue":
+        return process_points_de_vue(client, poi, report)
 
     # 1. Recherche SERP par champ manquant → fetch contenu → Claude par batch
     #    On regroupe les champs pour minimiser les appels SERP+Claude

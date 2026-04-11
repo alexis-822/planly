@@ -1046,6 +1046,26 @@ body{
 .frt-diff-rd{color:#b71c1c;font-weight:600;}
 .frt-block + .bch-conseil{margin-top:16px;}
 
+/* ── PDV — Points de vue bloc ── */
+.pdv-block{margin:12px 0 4px;border-radius:16px;overflow:hidden;border:1.5px solid #b8d0ee;}
+.pdv-header{background:#185FA5;padding:12px 14px;display:flex;align-items:center;gap:10px;}
+.pdv-header-icon{font-size:22px;line-height:1;}
+.pdv-header-info{flex:1;}
+.pdv-header-title{font-size:15px;font-weight:700;color:#fff;font-family:'Fraunces',serif;line-height:1.2;}
+.pdv-header-sub{font-size:11px;color:#a8c8f0;margin-top:2px;font-style:italic;}
+.pdv-header-badge{background:rgba(255,255,255,.18);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap;}
+.pdv-infos{display:flex;gap:0;background:#f0f6ff;padding:10px 12px;}
+.pdv-info-item{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 4px;}
+.pdv-info-item+.pdv-info-item{border-left:1px solid #cce0f5;}
+.pdv-info-val{font-size:16px;font-weight:700;color:#185FA5;line-height:1.2;}
+.pdv-info-lbl{font-size:10px;color:#666;margin-top:3px;text-transform:uppercase;letter-spacing:.4px;}
+.pdv-storm{background:#1a3a6b;padding:9px 14px;display:flex;align-items:center;gap:8px;}
+.pdv-storm-icon{font-size:18px;}
+.pdv-storm-txt{font-size:12px;color:#d0e4f8;font-weight:500;}
+.pdv-pills{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px;background:#f0f6ff;}
+.pdv-pill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;background:#ddeeff;color:#185FA5;}
+.pdv-block + .bch-conseil{margin-top:16px;}
+
 </style>
 </head>
 <body>
@@ -2532,20 +2552,60 @@ function _renderPoiBody(p,mode){
     pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
 
   }else if(sub==='Points de vue'){
+    // Ribbon : altitude | meilleur moment | accès | distance
     var bestLbl={lever:'🌅 Lever',journée:'☀️ Journée',coucher:'🌇 Coucher',matin:'🌄 Matin',nuit:'🌙 Nuit'};
     var bt=sp.best_time?(bestLbl[sp.best_time.toLowerCase()]||sp.best_time):'—';
+    var altVal=sp.altitude_m!=null?(sp.altitude_m+' m'):'—';
     ribbonItems=[
-      {val:sp.panoramic?'🌐 Oui':'—',lbl:'Panoramique',cls:''},
+      {val:altVal,lbl:'Altitude',cls:''},
       {val:bt,lbl:'Meilleur moment',cls:''},
       {val:_diffLabel(sp.difficulty),lbl:'Accès',cls:''},
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];
     sectionLabel='Le point de vue';
-    var pills=(p.quickSpecs||[]).map(function(s){
-      var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      return'<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>';
-    });
-    pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
+
+    // Orientation label
+    var orientLbl={'N':'Nord','NE':'Nord-Est','E':'Est','SE':'Sud-Est','S':'Sud','SO':'Sud-Ouest','O':'Ouest','NO':'Nord-Ouest','360':'360°'};
+    var orientVal=sp.orientation?(orientLbl[sp.orientation]||sp.orientation):'—';
+    // Météo idéale label
+    var meteoLbl={beau:'☀️ Beau temps',vent:'💨 Venteux',nuageux:'🌥 Nuageux',tempete:'⛈ Tempête',all:'🌈 Toujours'};
+    var meteoVal=sp.ideal_weather?(meteoLbl[sp.ideal_weather]||sp.ideal_weather):'—';
+
+    // Header badge : panoramique ou orientation
+    var pdvBadge=sp.panoramic?'🌐 360°':(sp.orientation?('↗ '+sp.orientation):'');
+    // Sub-header : view_description
+    var pdvSub=sp.view_description||'';
+
+    // 3-item info row
+    var pdvInfosHtml='<div class="pdv-infos">'
+      +'<div class="pdv-info-item"><div class="pdv-info-val">'+orientVal+'</div><div class="pdv-info-lbl">Orientation</div></div>'
+      +'<div class="pdv-info-item"><div class="pdv-info-val">'+bt+'</div><div class="pdv-info-lbl">Idéal</div></div>'
+      +'<div class="pdv-info-item"><div class="pdv-info-val">'+meteoVal+'</div><div class="pdv-info-lbl">Météo</div></div>'
+      +'</div>';
+
+    // Storm footer (only if storm_interest=true)
+    var pdvStormHtml=sp.storm_interest?'<div class="pdv-storm"><span class="pdv-storm-icon">⛈</span><span class="pdv-storm-txt">Spectaculaire par temps de tempête ou grand vent</span></div>':'';
+
+    // Pills block
+    var pdvPills=[];
+    if(sp.panoramic)pdvPills.push('🌐 Vue panoramique');
+    if(sp.has_orientation_panel)pdvPills.push('🗺 Table d\'orientation');
+    if(sp.nb_steps)pdvPills.push('🪜 '+sp.nb_steps+' marches');
+    if(p.accessibility&&p.accessibility.pmr)pdvPills.push('♿ Accessible PMR');
+    var pdvPillsHtml=pdvPills.length?'<div class="pdv-pills">'+pdvPills.map(function(t){return'<span class="pdv-pill">'+t+'</span>';}).join('')+'</div>':'';
+
+    specialBlock='<div class="pdv-block">'
+      +'<div class="pdv-header">'
+      +'<div class="pdv-header-icon">📸</div>'
+      +'<div class="pdv-header-info"><div class="pdv-header-title">Point de vue</div>'+(pdvSub?'<div class="pdv-header-sub">'+pdvSub+'</div>':'')+'</div>'
+      +(pdvBadge?'<div class="pdv-header-badge">'+pdvBadge+'</div>':'')
+      +'</div>'
+      +pdvInfosHtml
+      +pdvStormHtml
+      +pdvPillsHtml
+      +'</div>';
+
+    pillsHtml='';
 
   }else{
     // Villages & Sites, Ports & Littoral, default
@@ -2987,7 +3047,8 @@ function toggleAddPoi(btn){
     btn.classList.add('added');
     btn.querySelector('.btn-icon').textContent='✓';
     btn.querySelector('.btn-txt').textContent='Ajouté à mes activités';
-    saveLike(currentIdx);
+    // Ferme la fiche et swipe like vers la card suivante
+    setTimeout(function(){closeAll();doSwipeBtn('like');},320);
   } else {
     btn.classList.remove('added');
     btn.querySelector('.btn-icon').textContent='♥';

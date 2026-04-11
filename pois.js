@@ -2872,11 +2872,15 @@ var POIS=[
       "best_time": "coucher de soleil",
       "panoramic": true,
       "view_type": null,
-      "altitude_m": null,
       "access_type": null,
       "walk_distance_m": null,
       "tripod_useful": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "storm_interest": false,
+      "orientation": "O",
+      "view_description": "Vue sur le Remblai, la Grande Plage et l'horizon atlantique",
+      "altitude_m": 36,
+      "ideal_weather": "beau"
     },
     "veto": null
   },
@@ -2975,11 +2979,16 @@ var POIS=[
       "best_time": "coucher de soleil",
       "panoramic": true,
       "view_type": null,
-      "altitude_m": null,
       "access_type": null,
       "walk_distance_m": null,
       "tripod_useful": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "storm_interest": true,
+      "view_description": "Panorama de la côte sauvage vendéenne et île d'Yeu par temps clair",
+      "has_orientation_panel": true,
+      "ideal_weather": "tempete",
+      "altitude_m": 5,
+      "orientation": "O"
     },
     "veto": null
   },
@@ -3078,11 +3087,14 @@ var POIS=[
       "best_time": "marée haute et/ou gros temps (spectacle des vagues)",
       "panoramic": true,
       "view_type": null,
-      "altitude_m": null,
       "access_type": null,
       "walk_distance_m": null,
       "tripod_useful": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "storm_interest": true,
+      "view_description": "Faille naturelle dans la roche où les vagues s'engouffrent avec force",
+      "ideal_weather": "beau",
+      "orientation": "O"
     },
     "veto": null
   },
@@ -3176,11 +3188,15 @@ var POIS=[
       "best_time": "matin",
       "panoramic": true,
       "view_type": null,
-      "altitude_m": null,
       "access_type": null,
       "walk_distance_m": null,
       "tripod_useful": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "storm_interest": false,
+      "view_description": "Panoramas sur l'Atlantique, falaises et rivage vendéen",
+      "altitude_m": 9,
+      "orientation": "O",
+      "ideal_weather": "beau"
     },
     "veto": null
   },
