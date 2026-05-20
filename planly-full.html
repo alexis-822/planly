@@ -2109,9 +2109,15 @@ function _getPort(commune){return _MAREE_PORT[commune]||125;}
 var _tideCache=(function(){
   var cache={};
   if(typeof TIDES_DATA!=='undefined'){
+    var todayStr=new Date().toISOString().slice(0,10);
     Object.keys(TIDES_DATA).forEach(function(id){
       var d=TIDES_DATA[id];
-      cache[parseInt(id)]=d.tides&&d.tides.length?d.tides:[];
+      if(d.days){
+        // Nouveau format multi-jours : prend aujourd'hui, ou le premier jour dispo
+        cache[parseInt(id)]=d.days[todayStr]||d.days[Object.keys(d.days).sort()[0]]||[];
+      } else {
+        cache[parseInt(id)]=d.tides&&d.tides.length?d.tides:[];
+      }
     });
   }
   return cache;
