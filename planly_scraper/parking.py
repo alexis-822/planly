@@ -4,7 +4,7 @@ import requests
 
 log = logging.getLogger(__name__)
 
-OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+OVERPASS_URL = "https://overpass.kumi.systems/api/interpreter"
 
 
 def _haversine(lat1: float, lng1: float, lat2: float, lng2: float) -> float:

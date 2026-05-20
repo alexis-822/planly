@@ -2997,8 +2997,23 @@
     "scraped_at": "2026-04-01T13:30:34.519640+00:00",
     "enriched_at": "2026-04-01T13:30:34.519640+00:00",
     "status": "complete",
-    "parking_main": null,
-    "parking_others": [],
+    "parking_main": {
+      "nom": "Plage du Veillon",
+      "lat": 46.4350822,
+      "lng": -1.659244,
+      "distance_meters": 610,
+      "is_free": true,
+      "disabled_spaces": null
+    },
+    "parking_others": [
+      {
+        "nom": "Parking sans nom",
+        "lat": 46.4377033,
+        "lng": -1.6604635,
+        "distance_meters": 905,
+        "is_free": true
+      }
+    ],
     "name_google": null,
     "affluence_profile": null,
     "price_range": "gratuit",
@@ -8085,8 +8100,23 @@
       "guided_visit": "uncertain",
       "free_entry": "auto"
     },
-    "parking_main": null,
-    "parking_others": [],
+    "parking_main": {
+      "nom": "Parking sans nom",
+      "lat": 46.6873095,
+      "lng": -1.9357955,
+      "distance_meters": 449,
+      "is_free": null,
+      "disabled_spaces": null
+    },
+    "parking_others": [
+      {
+        "nom": "Parking sans nom",
+        "lat": 46.6861427,
+        "lng": -1.934719,
+        "distance_meters": 458,
+        "is_free": null
+      }
+    ],
     "scraped_at": null,
     "enriched_at": "2026-04-03T09:29:18.979591+00:00",
     "status": "partial",
@@ -15527,8 +15557,23 @@
       "guided_visit": "auto",
       "free_entry": "auto"
     },
-    "parking_main": null,
-    "parking_others": [],
+    "parking_main": {
+      "nom": "Parking sans nom",
+      "lat": 46.5004941,
+      "lng": -1.7955611,
+      "distance_meters": 21,
+      "is_free": true,
+      "disabled_spaces": null
+    },
+    "parking_others": [
+      {
+        "nom": "Parking sans nom",
+        "lat": 46.5008557,
+        "lng": -1.7954351,
+        "distance_meters": 62,
+        "is_free": null
+      }
+    ],
     "scraped_at": "2026-04-06T15:02:19.632468+00:00",
     "enriched_at": "2026-04-06T15:02:19.632468+00:00",
     "status": "complete",
@@ -15649,8 +15694,23 @@
       "guided_visit": "empty",
       "free_entry": "auto"
     },
-    "parking_main": null,
-    "parking_others": [],
+    "parking_main": {
+      "nom": "Parking sans nom",
+      "lat": 46.4948957,
+      "lng": -1.7829262,
+      "distance_meters": 100,
+      "is_free": null,
+      "disabled_spaces": null
+    },
+    "parking_others": [
+      {
+        "nom": "Place du Commandant Guilbaud",
+        "lat": 46.4951628,
+        "lng": -1.7854618,
+        "distance_meters": 110,
+        "is_free": null
+      }
+    ],
     "scraped_at": "2026-04-06T15:02:19.637358+00:00",
     "enriched_at": "2026-04-06T15:02:19.637358+00:00",
     "status": "complete",
@@ -15771,8 +15831,23 @@
       "guided_visit": "auto",
       "free_entry": "auto"
     },
-    "parking_main": null,
-    "parking_others": [],
+    "parking_main": {
+      "nom": "Place du Château",
+      "lat": 46.4672637,
+      "lng": -1.6185007,
+      "distance_meters": 28,
+      "is_free": null,
+      "disabled_spaces": null
+    },
+    "parking_others": [
+      {
+        "nom": "Place du Château",
+        "lat": 46.4666977,
+        "lng": -1.6189777,
+        "distance_meters": 99,
+        "is_free": null
+      }
+    ],
     "scraped_at": "2026-04-06T15:02:19.639796+00:00",
     "enriched_at": "2026-04-06T15:02:19.639796+00:00",
     "status": "complete",
@@ -17092,8 +17167,23 @@
       "guided_visit": "empty",
       "free_entry": "empty"
     },
-    "parking_main": null,
-    "parking_others": [],
+    "parking_main": {
+      "nom": "Parking Dolmen",
+      "lat": 46.4479228,
+      "lng": -1.467719,
+      "distance_meters": 106,
+      "is_free": null,
+      "disabled_spaces": null
+    },
+    "parking_others": [
+      {
+        "nom": "Parking Dolmen",
+        "lat": 46.4479876,
+        "lng": -1.467614,
+        "distance_meters": 111,
+        "is_free": null
+      }
+    ],
     "scraped_at": "2026-04-06T15:02:19.642732+00:00",
     "enriched_at": "2026-04-06T15:02:19.642732+00:00",
     "status": "complete",
@@ -17252,8 +17342,23 @@
       "guided_visit": "auto",
       "free_entry": "uncertain"
     },
-    "parking_main": null,
-    "parking_others": [],
+    "parking_main": {
+      "nom": "Parking sans nom",
+      "lat": 46.5718294,
+      "lng": -0.7693317,
+      "distance_meters": 23,
+      "is_free": null,
+      "disabled_spaces": null
+    },
+    "parking_others": [
+      {
+        "nom": "Place de l'Église",
+        "lat": 46.5722209,
+        "lng": -0.769796,
+        "distance_meters": 35,
+        "is_free": true
+      }
+    ],
     "scraped_at": "2026-04-06T15:02:19.650727+00:00",
     "enriched_at": "2026-04-06T15:02:19.650727+00:00",
     "status": "complete",

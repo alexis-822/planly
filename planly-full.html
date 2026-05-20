@@ -2658,7 +2658,9 @@ function _renderPoiBody(p,mode){
     +'<span class="bch-pk-maps-blue">Maps →</span></div>';
   if(pk.autres&&pk.autres.length){
     pk.autres.forEach(function(o){
-      var oUrl='https://maps.google.com/?q='+encodeURIComponent(o.nom);
+      var oUrl=o.gmaps_search
+        ?'https://maps.google.com/maps/search/parking/@'+o.lat+','+o.lng+',16z'
+        :(o.lat&&o.lng?'https://maps.google.com/?q='+o.lat+','+o.lng+'&label='+encodeURIComponent(o.nom):'https://maps.google.com/?q='+encodeURIComponent(o.nom));
       pkHtml+='<div class="bch-pk-item secondary" onclick="window.open(\''+oUrl+'\')">'
         +'<div class="bch-pk-badge-grey">P</div>'
         +'<div class="bch-pk-info"><div class="bch-pk-name2">'+o.nom+'</div>'+(o.dist?'<div class="bch-pk-sub2">'+o.dist+'</div>':'')+'</div>'

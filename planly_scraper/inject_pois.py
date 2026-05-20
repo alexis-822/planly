@@ -229,16 +229,27 @@ def convert_poi(p):
 
     # Parking
     pm = p.get("parking_main") or {}
+    poi_lat = p.get("lat") or 0
+    poi_lng = p.get("lng") or 0
     parking = {
-        "nom": pm.get("nom", "Non renseign\u00e9"),
-        "lat": pm.get("lat") or p.get("lat") or 0,
-        "lng": pm.get("lng") or p.get("lng") or 0,
+        "nom": pm.get("nom", "Parking \u00e0 proximit\u00e9"),
+        "lat": pm.get("lat") or poi_lat,
+        "lng": pm.get("lng") or poi_lng,
         "autres": [],
     }
     for po in (p.get("parking_others") or [])[:2]:
         dist_m = po.get("distance_meters", 0) or 0
         dist_txt = f"{max(1, int(dist_m / 80))} min \u00e0 pied" if dist_m else "?"
-        parking["autres"].append({"nom": po.get("nom", "?"), "dist": dist_txt})
+        parking["autres"].append({"nom": po.get("nom", "Parking"), "dist": dist_txt, "lat": po.get("lat", poi_lat), "lng": po.get("lng", poi_lng)})
+    # Garantir toujours un 2e parking : fallback Google Maps recherche \u00e0 proximit\u00e9
+    if not parking["autres"]:
+        parking["autres"].append({
+            "nom": "Rechercher un parking proche",
+            "dist": "",
+            "lat": poi_lat,
+            "lng": poi_lng,
+            "gmaps_search": True,
+        })
 
     # Conseil
     conseil_txt = p.get("conseil_planly", "") or ""
