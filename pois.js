@@ -84,7 +84,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Place du Commandant Guilbaud",
-          "dist": "1 min à pied"
+          "dist": "1 min à pied",
+          "lat": 46.4951628,
+          "lng": -1.7854618
         }
       ]
     },
@@ -207,7 +209,15 @@ var POIS=[
       "nom": "Parking sans nom",
       "lat": 46.5488706,
       "lng": -1.8295714,
-      "autres": []
+      "autres": [
+        {
+          "nom": "Rechercher un parking proche",
+          "dist": "",
+          "lat": 46.552872099999995,
+          "lng": -1.8334051,
+          "gmaps_search": true
+        }
+      ]
     },
     "location": {
       "lat": 46.552872099999995,
@@ -328,7 +338,15 @@ var POIS=[
       "nom": "Plage Les Granges",
       "lat": 46.5874798,
       "lng": -1.8441226,
-      "autres": []
+      "autres": [
+        {
+          "nom": "Rechercher un parking proche",
+          "dist": "",
+          "lat": 46.581075,
+          "lng": -1.846879,
+          "gmaps_search": true
+        }
+      ]
     },
     "location": {
       "lat": 46.581075,
@@ -455,7 +473,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "1 min à pied"
+          "dist": "1 min à pied",
+          "lat": 46.4808536,
+          "lng": -1.7595469
         }
       ]
     },
@@ -586,7 +606,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "4 min à pied"
+          "dist": "4 min à pied",
+          "lat": 46.4638561,
+          "lng": -1.7233903
         }
       ]
     },
@@ -712,7 +734,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "6 min à pied"
+          "dist": "6 min à pied",
+          "lat": 46.4214156,
+          "lng": -1.6267668
         }
       ]
     },
@@ -838,7 +862,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "3 min à pied"
+          "dist": "3 min à pied",
+          "lat": 46.6292102,
+          "lng": -1.8766122
         }
       ]
     },
@@ -963,10 +989,17 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
-      "lat": 46.4306792,
-      "lng": -1.6544857,
-      "autres": []
+      "nom": "Plage du Veillon",
+      "lat": 46.4350822,
+      "lng": -1.659244,
+      "autres": [
+        {
+          "nom": "Parking sans nom",
+          "dist": "11 min à pied",
+          "lat": 46.4377033,
+          "lng": -1.6604635
+        }
+      ]
     },
     "location": {
       "lat": 46.4306792,
@@ -1095,7 +1128,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking 1 de la base de la Normandelière",
-          "dist": "4 min à pied"
+          "dist": "4 min à pied",
+          "lat": 46.6143032,
+          "lng": -1.8568408
         }
       ]
     },
@@ -1224,7 +1259,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "3 min à pied"
+          "dist": "3 min à pied",
+          "lat": 46.3888211,
+          "lng": -1.4904236
         }
       ]
     },
@@ -1345,7 +1382,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "2 min à pied"
+          "dist": "2 min à pied",
+          "lat": 46.513138,
+          "lng": -1.8158416
         }
       ]
     },
@@ -1476,7 +1515,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "5 min à pied"
+          "dist": "5 min à pied",
+          "lat": 46.3310054,
+          "lng": -1.3270124
         }
       ]
     },
@@ -1597,7 +1638,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "9 min à pied"
+          "dist": "9 min à pied",
+          "lat": 46.546248,
+          "lng": -1.8228652
         }
       ]
     },
@@ -1891,7 +1934,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "4 min à pied"
+          "dist": "4 min à pied",
+          "lat": 46.5605744,
+          "lng": -1.7845368
         }
       ]
     },
@@ -2131,7 +2176,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking Institut Sports Océan",
-          "dist": "1 min à pied"
+          "dist": "1 min à pied",
+          "lat": 46.4823908,
+          "lng": -1.7626213
         }
       ]
     },
@@ -2407,10 +2454,18 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
+      "nom": "Parking à proximité",
       "lat": 46.330201699999996,
       "lng": -1.1012231,
-      "autres": []
+      "autres": [
+        {
+          "nom": "Rechercher un parking proche",
+          "dist": "",
+          "lat": 46.330201699999996,
+          "lng": -1.1012231,
+          "gmaps_search": true
+        }
+      ]
     },
     "location": {
       "lat": 46.330201699999996,
@@ -2585,10 +2640,17 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
-      "lat": 46.6848,
-      "lng": -1.9404,
-      "autres": []
+      "nom": "Parking sans nom",
+      "lat": 46.6873095,
+      "lng": -1.9357955,
+      "autres": [
+        {
+          "nom": "Parking sans nom",
+          "dist": "5 min à pied",
+          "lat": 46.6861427,
+          "lng": -1.934719
+        }
+      ]
     },
     "location": {
       "lat": 46.6848,
@@ -2735,7 +2797,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "2 min à pied"
+          "dist": "2 min à pied",
+          "lat": 46.9202109,
+          "lng": -2.1019416
         }
       ]
     },
@@ -2852,7 +2916,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "2 min à pied"
+          "dist": "2 min à pied",
+          "lat": 46.4912003,
+          "lng": -1.7949755
         }
       ]
     },
@@ -2961,7 +3027,15 @@ var POIS=[
       "nom": "Parking sans nom",
       "lat": 46.6931237,
       "lng": -1.9625381,
-      "autres": []
+      "autres": [
+        {
+          "nom": "Rechercher un parking proche",
+          "dist": "",
+          "lat": 46.6943348,
+          "lng": -1.9691337,
+          "gmaps_search": true
+        }
+      ]
     },
     "location": {
       "lat": 46.6943348,
@@ -3067,7 +3141,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Résidence de l'Estran",
-          "dist": "2 min à pied"
+          "dist": "2 min à pied",
+          "lat": 46.4732147,
+          "lng": -1.745017
         }
       ]
     },
@@ -3167,10 +3243,18 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
+      "nom": "Parking à proximité",
       "lat": 46.423452,
       "lng": -1.653687,
-      "autres": []
+      "autres": [
+        {
+          "nom": "Rechercher un parking proche",
+          "dist": "",
+          "lat": 46.423452,
+          "lng": -1.653687,
+          "gmaps_search": true
+        }
+      ]
     },
     "location": {
       "lat": 46.423452,
@@ -3261,10 +3345,18 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
+      "nom": "Parking à proximité",
       "lat": 46.5597,
       "lng": -1.8288,
-      "autres": []
+      "autres": [
+        {
+          "nom": "Rechercher un parking proche",
+          "dist": "",
+          "lat": 46.5597,
+          "lng": -1.8288,
+          "gmaps_search": true
+        }
+      ]
     },
     "location": {
       "lat": 46.5597,
@@ -3381,7 +3473,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Place du Commandant Guilbaud",
-          "dist": "1 min à pied"
+          "dist": "1 min à pied",
+          "lat": 46.4951628,
+          "lng": -1.7854618
         }
       ]
     },
@@ -3495,7 +3589,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "4 min à pied"
+          "dist": "4 min à pied",
+          "lat": 46.5605744,
+          "lng": -1.7845368
         }
       ]
     },
@@ -3614,7 +3710,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking des Tamarins",
-          "dist": "7 min à pied"
+          "dist": "7 min à pied",
+          "lat": 45.5368076,
+          "lng": -0.9039867
         }
       ]
     },
@@ -3731,7 +3829,9 @@ var POIS=[
       "autres": [
         {
           "nom": "Parking sans nom",
-          "dist": "1 min à pied"
+          "dist": "1 min à pied",
+          "lat": 46.5008557,
+          "lng": -1.7954351
         }
       ]
     },
@@ -3836,10 +3936,18 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
+      "nom": "Parking à proximité",
       "lat": 46.4283,
       "lng": -1.673,
-      "autres": []
+      "autres": [
+        {
+          "nom": "Rechercher un parking proche",
+          "dist": "",
+          "lat": 46.4283,
+          "lng": -1.673,
+          "gmaps_search": true
+        }
+      ]
     },
     "location": {
       "lat": 46.4283,
@@ -3945,10 +4053,17 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
-      "lat": 46.5003031,
-      "lng": -1.7955303999999999,
-      "autres": []
+      "nom": "Parking sans nom",
+      "lat": 46.5004941,
+      "lng": -1.7955611,
+      "autres": [
+        {
+          "nom": "Parking sans nom",
+          "dist": "1 min à pied",
+          "lat": 46.5008557,
+          "lng": -1.7954351
+        }
+      ]
     },
     "location": {
       "lat": 46.5003031,
@@ -4036,10 +4151,17 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
-      "lat": 46.4953424,
-      "lng": -1.7840546,
-      "autres": []
+      "nom": "Parking sans nom",
+      "lat": 46.4948957,
+      "lng": -1.7829262,
+      "autres": [
+        {
+          "nom": "Place du Commandant Guilbaud",
+          "dist": "1 min à pied",
+          "lat": 46.4951628,
+          "lng": -1.7854618
+        }
+      ]
     },
     "location": {
       "lat": 46.4953424,
@@ -4127,10 +4249,17 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
-      "lat": 46.467509799999995,
-      "lng": -1.6184505999999999,
-      "autres": []
+      "nom": "Place du Château",
+      "lat": 46.4672637,
+      "lng": -1.6185007,
+      "autres": [
+        {
+          "nom": "Place du Château",
+          "dist": "1 min à pied",
+          "lat": 46.4666977,
+          "lng": -1.6189777
+        }
+      ]
     },
     "location": {
       "lat": 46.467509799999995,
@@ -4218,10 +4347,17 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
-      "lat": 46.448283599999996,
-      "lng": -1.4689952,
-      "autres": []
+      "nom": "Parking Dolmen",
+      "lat": 46.4479228,
+      "lng": -1.467719,
+      "autres": [
+        {
+          "nom": "Parking Dolmen",
+          "dist": "1 min à pied",
+          "lat": 46.4479876,
+          "lng": -1.467614
+        }
+      ]
     },
     "location": {
       "lat": 46.448283599999996,
@@ -4304,10 +4440,17 @@ var POIS=[
       }
     ],
     "parking": {
-      "nom": "Non renseigné",
-      "lat": 46.571937,
-      "lng": -0.769589,
-      "autres": []
+      "nom": "Parking sans nom",
+      "lat": 46.5718294,
+      "lng": -0.7693317,
+      "autres": [
+        {
+          "nom": "Place de l'Église",
+          "dist": "1 min à pied",
+          "lat": 46.5722209,
+          "lng": -0.769796
+        }
+      ]
     },
     "location": {
       "lat": 46.571937,
