@@ -2886,6 +2886,64 @@ function getFilteredPois(){
   return POIS.filter(function(p){return cats.indexOf(p.category)!==-1;});
 }
 
+// ── ALGO DE PERTINENCE ──
+function _scorePoi(p){
+  var score=0;
+  // Qualité : note Google (poids principal)
+  var note=parseFloat(p.note)||3;
+  score+=note*12; // 0–60 pts
+  // Richesse de la fiche
+  if(p.imgs&&p.imgs.length>=3)score+=8;
+  else if(p.imgs&&p.imgs.length)score+=4;
+  if(p.avis&&p.avis.length>=3)score+=5;
+  if(p.descLong&&p.descLong.length>200)score+=5;
+  // Profil utilisateur
+  var prof=USER_PROFILE||{};
+  var sp=p.specific||{};
+  // Famille avec enfants → booster POIs adaptés
+  if(prof.groupe==='famille'&&prof.enfants&&prof.enfants.length){
+    if(sp.stroller_ok)score+=18;
+    var diff=sp.difficulty;
+    if(diff==='facile'||diff==='très facile')score+=12;
+    if(diff==='difficile'||diff==='très difficile')score-=10;
+  }
+  // PMR → booster accessibilité
+  if(prof.pmr){
+    var qs=p.quickSpecs||[];
+    var hasPmr=qs.some(function(q){return q.label&&q.label.toLowerCase().indexOf('pmr')!==-1;});
+    if(hasPmr)score+=20;
+  }
+  // Incontournables gardent un léger bonus
+  if(p.inco)score+=6;
+  return score;
+}
+
+// Interleaving round-robin par subcategory pour garantir la diversité
+function _interleaveByCat(pois){
+  var groups={};
+  pois.forEach(function(p){
+    var k=p.subcategory||p.category||'autre';
+    if(!groups[k])groups[k]=[];
+    groups[k].push(p);
+  });
+  // Trier chaque groupe par score desc
+  Object.keys(groups).forEach(function(k){
+    groups[k].sort(function(a,b){return _scorePoi(b)-_scorePoi(a);});
+  });
+  // Ordonner les catégories par score moyen desc pour que les meilleures passent en premier slot
+  var keys=Object.keys(groups).sort(function(a,b){
+    var avgA=groups[a].reduce(function(s,p){return s+_scorePoi(p);},0)/groups[a].length;
+    var avgB=groups[b].reduce(function(s,p){return s+_scorePoi(p);},0)/groups[b].length;
+    return avgB-avgA;
+  });
+  var queues=keys.map(function(k){return groups[k].slice();});
+  var result=[];
+  while(queues.some(function(q){return q.length;})){
+    queues.forEach(function(q){if(q.length)result.push(q.shift());});
+  }
+  return result;
+}
+
 // Index swipe filtré
 var swipeFiltered=[];
 var swipePos=0;
@@ -2897,13 +2955,18 @@ function rebuildSwipeDeck(resetPos){
   var fp=getFilteredPois();
   var deck=fp.filter(function(p){return likedPois.indexOf(p.name)===-1;});
   if(!deck.length)deck=fp; // tous likés → les montrer quand même
+  // Appliquer l'algo de pertinence (seulement si pas de filtre L1 précis)
+  if(!activeL1){
+    deck=_interleaveByCat(deck);
+  } else {
+    deck=deck.slice().sort(function(a,b){return _scorePoi(b)-_scorePoi(a);});
+  }
   var newFiltered=deck.map(function(p){return POIS.indexOf(p);});
   if(!newFiltered.length)newFiltered=POIS.map(function(_,i){return i;});
   swipeFiltered=newFiltered;
   if(resetPos){
     swipePos=0;
   } else {
-    // Garder swipePos dans les bornes (après suppression d'un item)
     if(swipePos>=swipeFiltered.length)swipePos=0;
   }
   currentIdx=swipeFiltered[swipePos];
