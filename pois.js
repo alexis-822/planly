@@ -4382,6 +4382,102 @@ var POIS=[
   },
   {
     "imgs": [
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpeg",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpeg",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpeg"
+    ],
+    "name": "Saint-Gilles-Croix-de-Vie",
+    "commune": "Saint-Gilles-Croix-de-Vie",
+    "cat": "🏛️ Patrimoine",
+    "note": "?",
+    "budgetBadge": "€ Gratuit",
+    "budgetClass": "free",
+    "trajet": {
+      "voiture": "? min",
+      "pied": "? min",
+      "velo": "? min"
+    },
+    "iaPill": "💡 En famille, ne manquez pas la criée et les conserveries pour une plongée dans la culture…",
+    "iaWarn": false,
+    "desc": "Ville côtière née de la fusion de deux cités, Saint-Gilles-Croix-de-Vie conjugue charme balnéaire et",
+    "inco": true,
+    "accroche": "Ville côtière née de la fusion de deux cités, Saint-Gilles-Croix-de-Vie conjugue",
+    "descLong": "Nichée à l'embouchure de la Vie sur la Côte de Lumière, Saint-Gilles-Croix-de-Vie est l'une des destinations phares de la Vendée. Née en 1967 de la réunion de Saint-Gilles-sur-Vie et Croix-de-Vie, la ville dévoile deux visages complémentaires : un port de pêche animé, spécialisé dans la sardine, et de belles plages classées station balnéaire depuis 1982. Flânez sur le quai de la Vie, découvrez les conserveries, les marchés de poissons colorés et les ruelles pleines de caractère avant de vous poser face à l'Atlantique pour profiter d'un coucher de soleil vendéen inoubliable.",
+    "category": "patrimoine",
+    "subcategory": "Villages & Sites",
+    "pricing": {
+      "adult": 0,
+      "child": 0,
+      "is_free": false
+    },
+    "duration": 120,
+    "distance": {
+      "km": 33.1,
+      "min": {
+        "voiture": 44
+      }
+    },
+    "affluence": {
+      "label": "Normal",
+      "color": "green"
+    },
+    "instant": null,
+    "quickSpecs": [
+      {
+        "label": "De l'Antiquité à l'époque contemporaine, avec apogée au XVIII siècle comme port commercial",
+        "icon": "📜",
+        "cls": ""
+      },
+      {
+        "label": "Visite guidée",
+        "icon": "🎙️",
+        "cls": "positive"
+      },
+      {
+        "label": "Accès PMR",
+        "icon": "♿",
+        "cls": "positive"
+      }
+    ],
+    "avis": [
+      {
+        "txt": "Aucun avis disponible.",
+        "date": ""
+      }
+    ],
+    "parking": {
+      "nom": "Parking à proximité",
+      "lat": 46.6961,
+      "lng": -1.9495,
+      "autres": [
+        {
+          "nom": "Rechercher un parking proche",
+          "dist": "",
+          "lat": 46.6961,
+          "lng": -1.9495,
+          "gmaps_search": true
+        }
+      ]
+    },
+    "location": {
+      "lat": 46.6961,
+      "lng": -1.9495
+    },
+    "conseil": {
+      "positif": "En famille, ne manquez pas la criée et les conserveries pour une plongée dans la culture sardinière locale. En couple, offrez-vous une promenade au coucher du soleil le long du quai de la Vie pour une ambiance romantique et authentique.",
+      "attention": null,
+      "verdict": "Bonne visite !"
+    },
+    "beach": null,
+    "specific": {
+      "historical_period": "De l'Antiquité à l'époque contemporaine, avec apogée au XVIII siècle comme port commercial",
+      "guided_visit": true,
+      "free_entry": false
+    },
+    "veto": null
+  },
+  {
+    "imgs": [
       "planly_scraper/images/vouvant/photo_1.jpg",
       "planly_scraper/images/vouvant/photo_2.jpg",
       "planly_scraper/images/vouvant/photo_3.webp"

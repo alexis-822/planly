@@ -11293,9 +11293,9 @@
       "specific.tide_sensitive": "Accès dépendant des marées"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweraS-XnAPE0zweAtlLmvTRa8T2eItvNtTDhMe0gIeGFiUdZe7gVdDKO3DWrqbPdiVgQF_0dCjmjRaQwo7SvlyJEZkbbG-wGf_J4eLRIt3S1bqfMsAFvG-YWCt0YoQGwL1KrlBHptg=w408-h306-k-no",
       "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/Aerien-0723-1600x900.jpg",
-      "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/Aerien-0723-1200x800.jpg"
+      "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/Aerien-0723-1200x800.jpg",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweraS-XnAPE0zweAtlLmvTRa8T2eItvNtTDhMe0gIeGFiUdZe7gVdDKO3DWrqbPdiVgQF_0dCjmjRaQwo7SvlyJEZkbbG-wGf_J4eLRIt3S1bqfMsAFvG-YWCt0YoQGwL1KrlBHptg=w408-h306-k-no"
     ]
   },
   {
@@ -17216,8 +17216,8 @@
     "commune": "Saint-Gilles-Croix-de-Vie",
     "zone": null,
     "poi_format": "poi",
-    "lat": null,
-    "lng": null,
+    "lat": 46.6961,
+    "lng": -1.9495,
     "address": "86 quai de la République - CS 80629 85806 Saint Gilles Croix de Vie",
     "phone": "+33 (0)2 51 55 79 79",
     "website": "https://www.saintgillescroixdevie.fr/",
