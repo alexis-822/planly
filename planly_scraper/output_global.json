@@ -2881,7 +2881,8 @@
     "price_level": null,
     "photos": [
       "images/plage_dunes_du_veillon/photo_1.jpg",
-      "images/plage_dunes_du_veillon/photo_2.jpg"
+      "images/plage_dunes_du_veillon/photo_2.jpg",
+      "images/plage_dunes_du_veillon/photo_3.webp"
     ],
     "reviews": [
       {
@@ -3088,7 +3089,8 @@
     },
     "photos_original_urls": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepHtZapV5jo-dBjP-TeORcROyXvWaIYMZAlZfNY5pGCOT6pbhclMdECZhVD0AuJUfJe0U1miMsGXIzyYUk08a76Ufbvx0xTCYoaK7e3MZm_fnoIax1QS0v_VnOM_YJUP46jA19n=w408-h306-k-no",
-      "https://www.campingveillonplage.com/wp-content/uploads/2019/11/IMG_1651-veillon.jpg"
+      "https://www.campingveillonplage.com/wp-content/uploads/2019/11/IMG_1651-veillon.jpg",
+      "https://www.la-grand-metairie.com/wp-content/uploads/2024/11/plage-talmont-saint-hilaire.webp"
     ]
   },
   {
@@ -3355,7 +3357,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_des_conches/photo_1.jpg"
+      "images/plage_des_conches/photo_1.jpg",
+      "images/plage_des_conches/photo_2.jpeg",
+      "images/plage_des_conches/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -3564,7 +3568,9 @@
       "specific.facilities_beach_shop": "Location matériel nautique"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepU-gtFoRwdIBErejzLkpuIkR-5jdD_J1lg1JVhQAeG15x3dxBe1D66pi1nWJTwEumNYHPlmM2L9j1zo0CgoBwn8CWJ0TQtjE5FCYehT7yJpjO7r9Z1-8OKiSFWoTLcMPjLtwwP-A=w408-h306-k-no"
+      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepU-gtFoRwdIBErejzLkpuIkR-5jdD_J1lg1JVhQAeG15x3dxBe1D66pi1nWJTwEumNYHPlmM2L9j1zo0CgoBwn8CWJ0TQtjE5FCYehT7yJpjO7r9Z1-8OKiSFWoTLcMPjLtwwP-A=w408-h306-k-no",
+      "https://www.mairie-longevillesurmer.fr/medias/2021/05/DJI_0124-Copier.jpg",
+      "https://www.mairie-longevillesurmer.fr/medias/2021/04/DJI_0195-Copier.jpg"
     ]
   },
   {
@@ -6063,7 +6069,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/lac_de_tanchet/photo_1.jpg"
+      "images/lac_de_tanchet/photo_1.jpg",
+      "images/lac_de_tanchet/photo_2.jpeg",
+      "images/lac_de_tanchet/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -6437,7 +6445,9 @@
       "specific.ferry_pricing": "Tarifs ferry (spécifique Île d'Yeu)"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep76W5o1kQWTPgM5x_lyZkjBZw0ExwBTWG2iLpzAGgS8nSkWGz_pLWwz1Dxg8ZKXSyCNiLVN1TT3ZnTCL8VuTh4n-pV-dO4L3jPc2gb_v7jbkDXH75qvIbaQAy1h4IE-zK_BFvp=w408-h306-k-no"
+      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep76W5o1kQWTPgM5x_lyZkjBZw0ExwBTWG2iLpzAGgS8nSkWGz_pLWwz1Dxg8ZKXSyCNiLVN1TT3ZnTCL8VuTh4n-pV-dO4L3jPc2gb_v7jbkDXH75qvIbaQAy1h4IE-zK_BFvp=w408-h306-k-no",
+      "https://media.ouest-france.fr/v1/pictures/MjAyMjAyNjg2YzJiYWI1ZmM3NDg4NjQyZTBiNWRkNDYzY2FjOTY?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=31f09836596b9f78f9a859c22b330735ac22c130480d7889ce33a274a055d76f",
+      "https://static.actu.fr/uploads/2020/07/lac-tanchet.jpg"
     ]
   },
   {
@@ -7661,7 +7671,8 @@
     "price_level": null,
     "photos": [
       "images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg",
-      "images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg"
+      "images/reserve_nat_baie_de_l_aiguillon/photo_2.jpeg",
+      "images/reserve_nat_baie_de_l_aiguillon/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -7949,8 +7960,9 @@
       "specific.ferry_pricing": "Tarifs ferry (spécifique Île d'Yeu)"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoAAg3DmNc8XF4l1nVQWXLQas5psoMyx7pOinUPDrPzgF4MUuU4zu-mH2iFcMxO2UNEDVGP18SBEArqBq8kVABORjqUqII7Pf3uTNpl2gyNIAE5oew_4H0vHVfqRaWJOKQtz3rk=w408-h306-k-no",
-      "https://www.guide-charente-maritime.com/_bibli/annonces/12704/hd/pointe-de-l-aiguillon-panoramique.jpg"
+      "https://www.guide-charente-maritime.com/_bibli/annonces/12704/hd/pointe-de-l-aiguillon-panoramique.jpg",
+      "https://pnr.parc-marais-poitevin.fr/wp-content/uploads/Pointe-aiguillon-115%C2%A9FrancisLeroy2018.jpg",
+      "https://www.vendeedusud.com/wp-content/uploads/wpetourisme/Pointe-de-l-Aiguillon-drone-RNNBA.JPG"
     ]
   },
   {
@@ -7974,8 +7986,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/ile_d_yeu/photo_1.jpg",
-      "images/ile_d_yeu/photo_2.jpg"
+      "images/ile_d_yeu/photo_1.jpeg",
+      "images/ile_d_yeu/photo_2.jpg",
+      "images/ile_d_yeu/photo_3.jpg"
     ],
     "reviews": [],
     "place_topics": null,
@@ -8181,6 +8194,7 @@
       "specific.ferry_pricing": "Tarifs ferry (spécifique Île d'Yeu)"
     },
     "photos_original_urls": [
+      "https://www.ile-yeu.fr/sites/iledyeu/files/styles/contenu_slider/public/content/images/1579098705-1455343201.jpg?itok=pJd7HSQU",
       "https://www.ile-yeu.fr/sites/iledyeu/files/styles/squared/public/visuel_collection/1166106088-1671013811.jpg?itok=5LwOM--I",
       "https://www.saintgillescroixdevie.fr/medias/2024/07/DSC_1548-e1719848397891.jpg"
     ]
@@ -12940,7 +12954,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg"
+      "images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg",
+      "images/sentier_cotier_foret_plages_d_olonne/photo_2.webp",
+      "images/sentier_cotier_foret_plages_d_olonne/photo_3.jpeg"
     ],
     "reviews": [],
     "place_topics": null,
@@ -13096,7 +13112,9 @@
       "specific.tide_sensitive": "Dépend des marées"
     },
     "photos_original_urls": [
-      "https://media.decathlon-outdoor.com/1cxKHET1VkYybwjNPfyxxe/entre-foret-mer-et-marais-a-olonne-sur-mer.webp?w=1200"
+      "https://media.decathlon-outdoor.com/1cxKHET1VkYybwjNPfyxxe/entre-foret-mer-et-marais-a-olonne-sur-mer.webp?w=1200",
+      "https://media.decathlon-outdoor.com/1cxSYiNeC2AfzDhtk3vvGH/week-end-familial-en-vendee-et-depart-des-sables-d-olonne.webp?ar=1:1&w=1260",
+      "https://www.onf.fr/outils/long-reads/ff88c4ef-8704-4d14-93a6-a5b708aae81f/++versions++/2/++paras++/20/1/++attr++data/++thumb++pano:w1200?_=1637074071.007071"
     ]
   },
   {
@@ -13363,7 +13381,8 @@
     "price_level": null,
     "photos": [
       "images/circuit_des_marais_salants/photo_1.jpg",
-      "images/circuit_des_marais_salants/photo_2.jpg"
+      "images/circuit_des_marais_salants/photo_2.webp",
+      "images/circuit_des_marais_salants/photo_3.webp"
     ],
     "reviews": [
       {
@@ -13565,8 +13584,9 @@
       "specific.tide_sensitive": "Dépend des marées"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo8v93X0_T6YoYkbcIMvriF3ej_yKF1tVy0vone0crq2kpORYo_OBfSssVcj9ao7Td6BCVFfwOxgb8qSEE79xIpfZkKOP-Jr02Vr8cHFsj7GwdwKbM_0gw2ZnobTlOQU706MAynom_TNCoF=w408-h544-k-no",
-      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/08/velomarais-alamoureux-2024-1600x900.jpg"
+      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/08/velomarais-alamoureux-2024-1600x900.jpg",
+      "https://media.decathlon-outdoor.com/1cxL2rBFqrBLEZ2nMKy2au/ile-d-olonne-et-ses-marais-salants.webp?w=600",
+      "https://media.decathlon-outdoor.com/1cxKMmM8EEGv1HBSYBpVcm/ile-d-olonne-et-ses-marais-salants.webp?w=600"
     ]
   },
   {
@@ -15035,7 +15055,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/port_olona/photo_1.jpg"
+      "images/port_olona/photo_1.jpg",
+      "images/port_olona/photo_2.jpeg",
+      "images/port_olona/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -15238,7 +15260,9 @@
       "specific.tide_sensitive": "Dépend des marées"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerfGqAivw50hxActbx912Gq3UJu4Rhn0_h-b-QojR5m0bdlPi8aj2__zKAMbxy_KoNicBpnOWadu72LtB0OR7d38D3_dVtwirlogj0-b1OjLTNvsJFdrU96EwM7Qa5JymMkeJCaCg=w408-h306-k-no"
+      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwerfGqAivw50hxActbx912Gq3UJu4Rhn0_h-b-QojR5m0bdlPi8aj2__zKAMbxy_KoNicBpnOWadu72LtB0OR7d38D3_dVtwirlogj0-b1OjLTNvsJFdrU96EwM7Qa5JymMkeJCaCg=w408-h306-k-no",
+      "https://cdt85.media.tourinsoft.eu/upload/2022-LS-PortOlona-Aerien---AntoineMartineau.jpg",
+      "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PortOlona-Plaisance---ALamoureux.jpg"
     ]
   },
   {
@@ -17191,7 +17215,11 @@
     "opening_hours": null,
     "popular_times": null,
     "price_level": null,
-    "photos": [],
+    "photos": [
+      "images/saint_gilles_croix_de_vie/photo_1.jpeg",
+      "images/saint_gilles_croix_de_vie/photo_2.jpeg",
+      "images/saint_gilles_croix_de_vie/photo_3.jpeg"
+    ],
     "reviews": [],
     "place_topics": null,
     "booking_url": null,
@@ -17246,7 +17274,11 @@
     "scraped_at": null,
     "enriched_at": "2026-04-06T15:02:19.648658+00:00",
     "status": "partial",
-    "photos_original_urls": []
+    "photos_original_urls": [
+      "https://www.saintgillescroixdevie.fr/medias/2021/01/Saint-Gilles-Croix-de-Vie-6552.jpg",
+      "https://media.ouest-france.fr/v1/pictures/MjAyMzAzNWJiNWU5ZjI3MzE3Zjc0MmE3ZTAzNDU2MWM5ZDEzNTA?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=6bd9f9627547e186916da1a51ff80e5b2ff41ef827f423d559eb357feb655938",
+      "https://www.guide-de-la-vendee.com/_bibli/annonces/2085/hd/st-gilles-croix-de-vie-12-.jpg"
+    ]
   },
   {
     "id": "vouvant",
