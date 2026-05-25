@@ -1468,9 +1468,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_de_sauveterre/photo_1.jpeg",
-      "images/plage_de_sauveterre/photo_2.jpeg",
-      "images/plage_de_sauveterre/photo_3.webp"
+      "images/plage_de_sauveterre/photo_1.jpg",
+      "images/plage_de_sauveterre/photo_2.jpg",
+      "images/plage_de_sauveterre/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -1699,9 +1699,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_des_granges/photo_1.jpeg",
+      "images/plage_des_granges/photo_1.jpg",
       "images/plage_des_granges/photo_2.jpg",
-      "images/plage_des_granges/photo_3.jpeg"
+      "images/plage_des_granges/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -1930,9 +1930,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_de_tanchet/photo_1.jpeg",
-      "images/plage_de_tanchet/photo_2.jpeg",
-      "images/plage_de_tanchet/photo_3.jpeg"
+      "images/plage_de_tanchet/photo_1.jpg",
+      "images/plage_de_tanchet/photo_2.jpg",
+      "images/plage_de_tanchet/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -2169,9 +2169,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/baie_de_cayola/photo_1.jpeg",
+      "images/baie_de_cayola/photo_1.jpg",
       "images/baie_de_cayola/photo_2.jpg",
-      "images/baie_de_cayola/photo_3.jpeg"
+      "images/baie_de_cayola/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -2409,9 +2409,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_de_la_mine/photo_1.jpeg",
-      "images/plage_de_la_mine/photo_2.jpeg",
-      "images/plage_de_la_mine/photo_3.jpeg"
+      "images/plage_de_la_mine/photo_1.jpg",
+      "images/plage_de_la_mine/photo_2.jpg",
+      "images/plage_de_la_mine/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -2648,9 +2648,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_de_la_paree/photo_1.jpeg",
+      "images/plage_de_la_paree/photo_1.jpg",
       "images/plage_de_la_paree/photo_2.jpg",
-      "images/plage_de_la_paree/photo_3.jpeg"
+      "images/plage_de_la_paree/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -2889,7 +2889,7 @@
     "photos": [
       "images/plage_dunes_du_veillon/photo_1.jpg",
       "images/plage_dunes_du_veillon/photo_2.jpg",
-      "images/plage_dunes_du_veillon/photo_3.webp"
+      "images/plage_dunes_du_veillon/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -3365,8 +3365,8 @@
     "price_level": null,
     "photos": [
       "images/plage_des_conches/photo_1.jpg",
-      "images/plage_des_conches/photo_2.jpeg",
-      "images/plage_des_conches/photo_3.jpeg"
+      "images/plage_des_conches/photo_2.jpg",
+      "images/plage_des_conches/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -5049,9 +5049,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_des_belugas/photo_1.jpeg",
+      "images/plage_des_belugas/photo_1.jpg",
       "images/plage_des_belugas/photo_2.jpg",
-      "images/plage_des_belugas/photo_3.jpeg"
+      "images/plage_des_belugas/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -5715,9 +5715,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/marais_salants_de_l_ile_d_olonne/photo_1.jpeg",
-      "images/marais_salants_de_l_ile_d_olonne/photo_2.jpeg",
-      "images/marais_salants_de_l_ile_d_olonne/photo_3.jpeg"
+      "images/marais_salants_de_l_ile_d_olonne/photo_1.jpg",
+      "images/marais_salants_de_l_ile_d_olonne/photo_2.jpg",
+      "images/marais_salants_de_l_ile_d_olonne/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -6081,8 +6081,8 @@
     "price_level": null,
     "photos": [
       "images/lac_de_tanchet/photo_1.jpg",
-      "images/lac_de_tanchet/photo_2.jpeg",
-      "images/lac_de_tanchet/photo_3.jpeg"
+      "images/lac_de_tanchet/photo_2.jpg",
+      "images/lac_de_tanchet/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -7682,8 +7682,8 @@
     "price_level": null,
     "photos": [
       "images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg",
-      "images/reserve_nat_baie_de_l_aiguillon/photo_2.jpeg",
-      "images/reserve_nat_baie_de_l_aiguillon/photo_3.jpeg"
+      "images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg",
+      "images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -7997,8 +7997,8 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/ile_d_yeu/photo_1.jpeg",
-      "images/ile_d_yeu/photo_2.jpeg",
+      "images/ile_d_yeu/photo_1.jpg",
+      "images/ile_d_yeu/photo_2.jpg",
       "images/ile_d_yeu/photo_3.jpg"
     ],
     "reviews": [],
@@ -8237,9 +8237,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/ile_de_noirmoutier_passage_du_gois/photo_1.webp",
-      "images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg",
-      "images/ile_de_noirmoutier_passage_du_gois/photo_3.jpeg"
+      "images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg",
+      "images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg",
+      "images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -9673,9 +9673,9 @@
     },
     "price_level": null,
     "photos": [
-      "images/phare_de_la_petite_jetee/photo_1.jpeg",
+      "images/phare_de_la_petite_jetee/photo_1.jpg",
       "images/phare_de_la_petite_jetee/photo_2.jpg",
-      "images/phare_de_la_petite_jetee/photo_3.jpeg"
+      "images/phare_de_la_petite_jetee/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -12522,8 +12522,8 @@
     "price_level": null,
     "photos": [
       "images/le_puits_d_enfer/photo_1.jpg",
-      "images/le_puits_d_enfer/photo_2.jpeg",
-      "images/le_puits_d_enfer/photo_3.jpeg"
+      "images/le_puits_d_enfer/photo_2.jpg",
+      "images/le_puits_d_enfer/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -12968,8 +12968,8 @@
     "price_level": null,
     "photos": [
       "images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg",
-      "images/sentier_cotier_foret_plages_d_olonne/photo_2.webp",
-      "images/sentier_cotier_foret_plages_d_olonne/photo_3.jpeg"
+      "images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg",
+      "images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg"
     ],
     "reviews": [],
     "place_topics": null,
@@ -13158,8 +13158,8 @@
     "price_level": null,
     "photos": [
       "images/le_remblai/photo_1.jpg",
-      "images/le_remblai/photo_2.jpeg",
-      "images/le_remblai/photo_3.jpeg"
+      "images/le_remblai/photo_2.jpg",
+      "images/le_remblai/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -13394,8 +13394,8 @@
     "price_level": null,
     "photos": [
       "images/circuit_des_marais_salants/photo_1.jpg",
-      "images/circuit_des_marais_salants/photo_2.webp",
-      "images/circuit_des_marais_salants/photo_3.webp"
+      "images/circuit_des_marais_salants/photo_2.jpg",
+      "images/circuit_des_marais_salants/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -14822,9 +14822,9 @@
     },
     "price_level": null,
     "photos": [
-      "images/chemin_des_douaniers_cayola_bourgenay/photo_1.webp",
-      "images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpeg",
-      "images/chemin_des_douaniers_cayola_bourgenay/photo_3.webp"
+      "images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg",
+      "images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg",
+      "images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -15069,8 +15069,8 @@
     "price_level": null,
     "photos": [
       "images/port_olona/photo_1.jpg",
-      "images/port_olona/photo_2.jpeg",
-      "images/port_olona/photo_3.jpeg"
+      "images/port_olona/photo_2.jpg",
+      "images/port_olona/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -15491,7 +15491,7 @@
     "photos": [
       "images/port_de_la_chaume/photo_1.jpg",
       "images/port_de_la_chaume/photo_2.jpg",
-      "images/port_de_la_chaume/photo_3.jpeg"
+      "images/port_de_la_chaume/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -15629,7 +15629,7 @@
     "photos": [
       "images/l_ile_penotte/photo_1.jpg",
       "images/l_ile_penotte/photo_2.jpg",
-      "images/l_ile_penotte/photo_3.jpeg"
+      "images/l_ile_penotte/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -15766,7 +15766,7 @@
     "photos": [
       "images/chateau_de_talmont/photo_1.jpg",
       "images/chateau_de_talmont/photo_2.jpg",
-      "images/chateau_de_talmont/photo_3.jpeg"
+      "images/chateau_de_talmont/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -17094,8 +17094,8 @@
     },
     "price_level": null,
     "photos": [
-      "images/dolmen_de_la_frebouch_ere/photo_1.jpeg",
-      "images/dolmen_de_la_frebouch_ere/photo_2.jpeg",
+      "images/dolmen_de_la_frebouch_ere/photo_1.jpg",
+      "images/dolmen_de_la_frebouch_ere/photo_2.jpg",
       "images/dolmen_de_la_frebouch_ere/photo_3.jpg"
     ],
     "reviews": [
@@ -17231,9 +17231,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/saint_gilles_croix_de_vie/photo_1.jpeg",
-      "images/saint_gilles_croix_de_vie/photo_2.jpeg",
-      "images/saint_gilles_croix_de_vie/photo_3.jpeg"
+      "images/saint_gilles_croix_de_vie/photo_1.jpg",
+      "images/saint_gilles_croix_de_vie/photo_2.jpg",
+      "images/saint_gilles_croix_de_vie/photo_3.jpg"
     ],
     "reviews": [],
     "place_topics": null,

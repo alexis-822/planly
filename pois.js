@@ -134,9 +134,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_sauveterre/photo_1.jpeg",
-      "planly_scraper/images/plage_de_sauveterre/photo_2.jpeg",
-      "planly_scraper/images/plage_de_sauveterre/photo_3.webp"
+      "planly_scraper/images/plage_de_sauveterre/photo_1.jpg",
+      "planly_scraper/images/plage_de_sauveterre/photo_2.jpg",
+      "planly_scraper/images/plage_de_sauveterre/photo_3.jpg"
     ],
     "name": "Plage de Sauveterre",
     "commune": "L'Île-d'Olonne",
@@ -263,9 +263,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_granges/photo_1.jpeg",
+      "planly_scraper/images/plage_des_granges/photo_1.jpg",
       "planly_scraper/images/plage_des_granges/photo_2.jpg",
-      "planly_scraper/images/plage_des_granges/photo_3.jpeg"
+      "planly_scraper/images/plage_des_granges/photo_3.jpg"
     ],
     "name": "Plage des Granges",
     "commune": "L'Île-d'Olonne",
@@ -392,9 +392,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_tanchet/photo_1.jpeg",
-      "planly_scraper/images/plage_de_tanchet/photo_2.jpeg",
-      "planly_scraper/images/plage_de_tanchet/photo_3.jpeg"
+      "planly_scraper/images/plage_de_tanchet/photo_1.jpg",
+      "planly_scraper/images/plage_de_tanchet/photo_2.jpg",
+      "planly_scraper/images/plage_de_tanchet/photo_3.jpg"
     ],
     "name": "Plage de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -525,9 +525,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/baie_de_cayola/photo_1.jpeg",
+      "planly_scraper/images/baie_de_cayola/photo_1.jpg",
       "planly_scraper/images/baie_de_cayola/photo_2.jpg",
-      "planly_scraper/images/baie_de_cayola/photo_3.jpeg"
+      "planly_scraper/images/baie_de_cayola/photo_3.jpg"
     ],
     "name": "Baie de Cayola",
     "commune": "Château-d'Olonne",
@@ -658,9 +658,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_la_mine/photo_1.jpeg",
-      "planly_scraper/images/plage_de_la_mine/photo_2.jpeg",
-      "planly_scraper/images/plage_de_la_mine/photo_3.jpeg"
+      "planly_scraper/images/plage_de_la_mine/photo_1.jpg",
+      "planly_scraper/images/plage_de_la_mine/photo_2.jpg",
+      "planly_scraper/images/plage_de_la_mine/photo_3.jpg"
     ],
     "name": "Plage de la Mine",
     "commune": "Jard-sur-Mer",
@@ -786,9 +786,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_la_paree/photo_1.jpeg",
+      "planly_scraper/images/plage_de_la_paree/photo_1.jpg",
       "planly_scraper/images/plage_de_la_paree/photo_2.jpg",
-      "planly_scraper/images/plage_de_la_paree/photo_3.jpeg"
+      "planly_scraper/images/plage_de_la_paree/photo_3.jpg"
     ],
     "name": "Plage de la Parée",
     "commune": "Brétignolles-sur-Mer",
@@ -916,7 +916,7 @@ var POIS=[
     "imgs": [
       "planly_scraper/images/plage_dunes_du_veillon/photo_1.jpg",
       "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_3.webp"
+      "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg"
     ],
     "name": "Plage & Dunes du Veillon",
     "commune": "Talmont-Saint-Hilaire",
@@ -1181,8 +1181,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/plage_des_conches/photo_1.jpg",
-      "planly_scraper/images/plage_des_conches/photo_2.jpeg",
-      "planly_scraper/images/plage_des_conches/photo_3.jpeg"
+      "planly_scraper/images/plage_des_conches/photo_2.jpg",
+      "planly_scraper/images/plage_des_conches/photo_3.jpg"
     ],
     "name": "Plage des Conches",
     "commune": "Longeville-sur-Mer",
@@ -1436,9 +1436,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_belugas/photo_1.jpeg",
+      "planly_scraper/images/plage_des_belugas/photo_1.jpg",
       "planly_scraper/images/plage_des_belugas/photo_2.jpg",
-      "planly_scraper/images/plage_des_belugas/photo_3.jpeg"
+      "planly_scraper/images/plage_des_belugas/photo_3.jpg"
     ],
     "name": "Plage des Bélugas",
     "commune": "L'Aiguillon-la-Presqu'île",
@@ -1860,9 +1860,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpeg",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpeg",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpeg"
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpg",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpg",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpg"
     ],
     "name": "Marais Salants de l'Île d'Olonne",
     "commune": "L'Île-d'Olonne",
@@ -2098,8 +2098,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/lac_de_tanchet/photo_1.jpg",
-      "planly_scraper/images/lac_de_tanchet/photo_2.jpeg",
-      "planly_scraper/images/lac_de_tanchet/photo_3.jpeg"
+      "planly_scraper/images/lac_de_tanchet/photo_2.jpg",
+      "planly_scraper/images/lac_de_tanchet/photo_3.jpg"
     ],
     "name": "Lac de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -2382,8 +2382,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpeg",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpeg"
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg",
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg"
     ],
     "name": "Réserve Nat. Baie de l'Aiguillon",
     "commune": "L'Aiguillon-sur-Mer",
@@ -2585,8 +2585,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/ile_d_yeu/photo_1.jpeg",
-      "planly_scraper/images/ile_d_yeu/photo_2.jpeg",
+      "planly_scraper/images/ile_d_yeu/photo_1.jpg",
+      "planly_scraper/images/ile_d_yeu/photo_2.jpg",
       "planly_scraper/images/ile_d_yeu/photo_3.jpg"
     ],
     "name": "Île d'Yeu",
@@ -2718,9 +2718,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.webp",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpeg"
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg"
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
     "commune": "Noirmoutier-en-l'Île",
@@ -2842,9 +2842,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpeg",
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpg",
       "planly_scraper/images/phare_de_la_petite_jetee/photo_2.jpg",
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpeg"
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpg"
     ],
     "name": "Phare de la Petite Jetée",
     "commune": "Les Sables-d'Olonne",
@@ -3073,8 +3073,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/le_puits_d_enfer/photo_1.jpg",
-      "planly_scraper/images/le_puits_d_enfer/photo_2.jpeg",
-      "planly_scraper/images/le_puits_d_enfer/photo_3.jpeg"
+      "planly_scraper/images/le_puits_d_enfer/photo_2.jpg",
+      "planly_scraper/images/le_puits_d_enfer/photo_3.jpg"
     ],
     "name": "Le Puits d'Enfer",
     "commune": "Les Sables-d'Olonne",
@@ -3291,8 +3291,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.webp",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpeg"
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg",
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg"
     ],
     "name": "Sentier côtier Forêt–Plages d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -3395,8 +3395,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/le_remblai/photo_1.jpg",
-      "planly_scraper/images/le_remblai/photo_2.jpeg",
-      "planly_scraper/images/le_remblai/photo_3.jpeg"
+      "planly_scraper/images/le_remblai/photo_2.jpg",
+      "planly_scraper/images/le_remblai/photo_3.jpg"
     ],
     "name": "Le Remblai",
     "commune": "Les Sables-d'Olonne",
@@ -3516,8 +3516,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/circuit_des_marais_salants/photo_1.jpg",
-      "planly_scraper/images/circuit_des_marais_salants/photo_2.webp",
-      "planly_scraper/images/circuit_des_marais_salants/photo_3.webp"
+      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg",
+      "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg"
     ],
     "name": "Circuit des Marais Salants",
     "commune": "L'Île-d'Olonne",
@@ -3631,9 +3631,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.webp",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpeg",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.webp"
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg",
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg",
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg"
     ],
     "name": "Chemin des Douaniers Cayola–Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
@@ -3753,8 +3753,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/port_olona/photo_1.jpg",
-      "planly_scraper/images/port_olona/photo_2.jpeg",
-      "planly_scraper/images/port_olona/photo_3.jpeg"
+      "planly_scraper/images/port_olona/photo_2.jpg",
+      "planly_scraper/images/port_olona/photo_3.jpg"
     ],
     "name": "Port Olona",
     "commune": "Les Sables-d'Olonne",
@@ -3989,7 +3989,7 @@ var POIS=[
     "imgs": [
       "planly_scraper/images/port_de_la_chaume/photo_1.jpg",
       "planly_scraper/images/port_de_la_chaume/photo_2.jpg",
-      "planly_scraper/images/port_de_la_chaume/photo_3.jpeg"
+      "planly_scraper/images/port_de_la_chaume/photo_3.jpg"
     ],
     "name": "Port de La Chaume",
     "commune": "Les Sables-d'Olonne",
@@ -4092,7 +4092,7 @@ var POIS=[
     "imgs": [
       "planly_scraper/images/l_ile_penotte/photo_1.jpg",
       "planly_scraper/images/l_ile_penotte/photo_2.jpg",
-      "planly_scraper/images/l_ile_penotte/photo_3.jpeg"
+      "planly_scraper/images/l_ile_penotte/photo_3.jpg"
     ],
     "name": "L'Île Penotte",
     "commune": "Les Sables-d'Olonne",
@@ -4190,7 +4190,7 @@ var POIS=[
     "imgs": [
       "planly_scraper/images/chateau_de_talmont/photo_1.jpg",
       "planly_scraper/images/chateau_de_talmont/photo_2.jpg",
-      "planly_scraper/images/chateau_de_talmont/photo_3.jpeg"
+      "planly_scraper/images/chateau_de_talmont/photo_3.jpg"
     ],
     "name": "Château de Talmont",
     "commune": "Talmont-Saint-Hilaire",
@@ -4286,8 +4286,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_1.jpeg",
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_2.jpeg",
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_1.jpg",
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_2.jpg",
       "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_3.jpg"
     ],
     "name": "Dolmen de la Frébouchère",
@@ -4382,9 +4382,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpeg",
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpeg",
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpeg"
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpg",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpg",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpg"
     ],
     "name": "Saint-Gilles-Croix-de-Vie",
     "commune": "Saint-Gilles-Croix-de-Vie",
