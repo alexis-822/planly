@@ -336,10 +336,11 @@ def post_image_tasks(pois: list[dict]) -> dict[str, str]:
     for i in range(0, len(pois), BATCH_SIZE):
         batch = pois[i:i + BATCH_SIZE]
         payload = [{
-            "keyword": f"{p['name']} {p['commune']}",
+            "keyword": f"{p['name']} {p['commune']} photo",
             "location_name": "France",
             "language_code": "fr",
             "depth": IMAGE_DEPTH,
+            "search_param": "tbs=isz:l,itp:photo,ic:color",  # grandes photos couleur uniquement
             "tag": p["tag"],
         } for p in batch]
         log.info(f"POST images batch {i // BATCH_SIZE + 1} ({len(batch)} POIs)")
@@ -359,19 +360,23 @@ def fetch_image_results(tag_to_task: dict[str, str], main_images: dict[str, str]
 
     results = {}
     for tag, task_id in tag_to_task.items():
-        photos = []
+        candidates = []
         if main_images.get(tag):
-            photos.append(main_images[tag])
+            candidates.append({"url": main_images[tag], "width": 0, "height": 0, "title": ""})
         try:
             resp = _get(f"/serp/google/images/task_get/advanced/{task_id}")
             for item in _get_items(resp):
                 img_url = item.get("source_url") or item.get("image_url")
-                if img_url and img_url not in photos and len(photos) < MAX_PHOTOS:
-                    photos.append(img_url)
-            log.info(f"[{tag}] ✓ {len(photos)} photos")
+                w = item.get("width") or 0
+                h = item.get("height") or 0
+                # Pré-filtre : exclure les images trop petites
+                if img_url and img_url not in [c["url"] for c in candidates]:
+                    if w == 0 or w >= 600:  # accepter si on ne connaît pas la taille
+                        candidates.append({"url": img_url, "width": w, "height": h, "title": item.get("title", "")})
+            log.info(f"[{tag}] ✓ {len(candidates)} candidats images")
         except Exception as e:
             log.error(f"[{tag}] erreur images: {e}")
-        results[tag] = photos
+        results[tag] = candidates
 
     return results
 
