@@ -913,8 +913,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/plage_dunes_du_veillon/photo_1.jpg",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg"
+      "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg"
     ],
     "name": "Plage & Dunes du Veillon",
     "commune": "Talmont-Saint-Hilaire",
@@ -2093,9 +2092,7 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/lac_de_tanchet/photo_1.jpg",
-      "planly_scraper/images/lac_de_tanchet/photo_2.jpg",
-      "planly_scraper/images/lac_de_tanchet/photo_3.jpg"
+      "planly_scraper/images/lac_de_tanchet/photo_1.jpg"
     ],
     "name": "Lac de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -2378,8 +2375,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg"
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg"
     ],
     "name": "Réserve Nat. Baie de l'Aiguillon",
     "commune": "L'Aiguillon-sur-Mer",
@@ -2582,8 +2578,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/ile_d_yeu/photo_1.jpg",
-      "planly_scraper/images/ile_d_yeu/photo_2.jpg",
-      "https://www.vendee-tourisme.com/sites/www.vendee-tourisme.com/files/styles/paragraphes_media_50/public/thumbnails/image/yeu-continent-570x430.jpg?itok=dbGFm99b"
+      "planly_scraper/images/ile_d_yeu/photo_2.jpg"
     ],
     "name": "Île d'Yeu",
     "commune": "Saint-Gilles (ferry)",
@@ -2715,8 +2710,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg",
-      "https://www.vendee-tourisme.com/sites/www.vendee-tourisme.com/files/styles/paragraphes_mosaique_horizontal/public/thumbnails/image/le-gois_noirmoutier_570x430.jpg?itok=GDo5QaXq"
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg"
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
     "commune": "Noirmoutier-en-l'Île",
@@ -3287,8 +3281,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg"
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg"
     ],
     "name": "Sentier côtier Forêt–Plages d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -3512,8 +3505,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/circuit_des_marais_salants/photo_1.jpg",
-      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg",
-      "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg"
+      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg"
     ],
     "name": "Circuit des Marais Salants",
     "commune": "L'Île-d'Olonne",
@@ -4085,8 +4077,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/l_ile_penotte/photo_1.jpg",
-      "planly_scraper/images/l_ile_penotte/photo_2.jpg",
-      "planly_scraper/images/l_ile_penotte/photo_3.jpg"
+      "planly_scraper/images/l_ile_penotte/photo_2.jpg"
     ],
     "name": "L'Île Penotte",
     "commune": "Les Sables-d'Olonne",
