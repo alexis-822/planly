@@ -3280,8 +3280,7 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg"
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg"
     ],
     "name": "Sentier côtier Forêt–Plages d'Olonne",
     "commune": "Olonne-sur-Mer",

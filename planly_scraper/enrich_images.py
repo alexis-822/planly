@@ -305,7 +305,8 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
 
     def _safe_copy(src: str, dst: str):
         """Copie robuste sur Windows (évite WinError 32 si fichier ouvert)."""
-        if src == dst:
+        # Normaliser les chemins pour comparer (Windows : / vs \, casse)
+        if os.path.normcase(os.path.normpath(src)) == os.path.normcase(os.path.normpath(dst)):
             return
         try:
             shutil.copy2(src, dst)
@@ -336,13 +337,14 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
         final_paths.append(rel_path)
         final_urls.append(item["url"])
 
-    # Nettoyer les anciens fichiers non retenus
-    dest_fulls = {os.path.join(SCRIPT_DIR, p) for p in final_paths}
+    # Nettoyer les anciens fichiers non retenus — normaliser les chemins (Windows / vs \)
+    dest_fulls = {os.path.normcase(os.path.normpath(os.path.join(poi_dir, os.path.basename(p))))
+                  for p in final_paths}
     for f in os.listdir(poi_dir):
-        fpath = os.path.join(poi_dir, f)
+        fpath = os.path.normcase(os.path.normpath(os.path.join(poi_dir, f)))
         if fpath not in dest_fulls:
             try:
-                os.unlink(fpath)
+                os.unlink(os.path.join(poi_dir, f))
             except Exception:
                 pass
 
