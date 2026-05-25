@@ -340,7 +340,7 @@ def post_image_tasks(pois: list[dict]) -> dict[str, str]:
             "location_name": "France",
             "language_code": "fr",
             "depth": IMAGE_DEPTH,
-            "search_param": "tbs=isz:l,itp:photo,ic:color",  # grandes photos couleur uniquement
+            "search_param": "tbs=isz:xl,itp:photo,ic:color",  # photos extra-large couleur uniquement
             "tag": p["tag"],
         } for p in batch]
         log.info(f"POST images batch {i // BATCH_SIZE + 1} ({len(batch)} POIs)")

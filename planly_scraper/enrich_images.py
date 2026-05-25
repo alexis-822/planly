@@ -135,6 +135,17 @@ def download_to_temp(url: str) -> str | None:
         if not is_img:
             os.unlink(tmp.name)
             return None
+        # Filtrer les images trop petites pour affichage plein écran Retina
+        try:
+            from PIL import Image as _PILCheck
+            import io as _io2
+            with open(tmp.name, "rb") as f:
+                _w, _h = _PILCheck.open(f).size
+            if min(_w, _h) < 600:  # rejeter si plus petit côté < 600px
+                os.unlink(tmp.name)
+                return None
+        except Exception:
+            pass  # si Pillow échoue, on garde l'image
         return tmp.name
     except Exception:
         return None
