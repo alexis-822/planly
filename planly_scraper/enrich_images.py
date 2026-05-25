@@ -11,7 +11,7 @@ Usage : python enrich_images.py [--poi TAG] [--skip-fetch]
   --poi TAG       : traiter un seul POI (par son tag/id)
   --skip-fetch    : ne pas re-fetcher DataForSEO, utiliser uniquement les existantes
 """
-import json, os, sys, io, time, base64, requests, tempfile, argparse, logging, re
+import json, os, sys, io, time, base64, requests, tempfile, argparse, logging, re, hashlib
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -179,12 +179,15 @@ def _claude():
 SCORE_PROMPT = """Tu analyses une photo pour l'application touristique Planly (Vendée, France).
 POI : {poi_name} ({subcategory})
 
-Note cette image de 1 à 5 :
-5 = Photo nette, belle, lumineuse, très représentative du lieu
-4 = Bonne photo, quelques défauts mineurs
-3 = Photo acceptable mais pas idéale
-2 = Floue, sombre, mal cadrée, ou peu représentative
-1 = Plan/carte/screenshot/logo/texte/intérieur générique/totalement hors-sujet
+Note cette image de 1 à 5. Sois TRÈS STRICT sur la netteté :
+5 = Photo parfaitement nette, lumineuse, très représentative du lieu
+4 = Bonne photo nette, défauts mineurs acceptables
+3 = Photo correcte mais qualité limitée
+2 = Floue (même légèrement), sombre, mal cadrée, peu représentative, ou similaire à une autre photo du même lieu
+1 = Plan/carte/screenshot/logo/texte/hors-sujet total
+
+IMPORTANT : Si l'image est floue, même légèrement → is_blurry:true et score ≤ 2.
+Si l'image ressemble à une photo déjà vue du même endroit → score ≤ 2.
 
 Réponds UNIQUEMENT en JSON valide, sans markdown :
 {{"score": X, "raison": "...", "is_map": true/false, "is_blurry": true/false}}"""
@@ -267,6 +270,8 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
 
     # 2. Télécharger les nouveaux candidats dans des fichiers temp
     scored = []
+    seen_hashes = set()  # déduplication par contenu
+
     for cand in all_candidates:
         tmp_path = cand.get("local")
         is_temp  = False
@@ -277,24 +282,42 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
                 log.info(f"    ✗ Impossible de télécharger {cand['url'][:60]}")
                 continue
 
+        # Dédup par hash fichier
+        with open(tmp_path, "rb") as f:
+            h = hashlib.md5(f.read()).hexdigest()
+        if h in seen_hashes:
+            log.info(f"    ✗ Doublon (même image) — {cand['url'][:60]}")
+            if is_temp and os.path.exists(tmp_path):
+                os.unlink(tmp_path)
+            continue
+        seen_hashes.add(h)
+
         # 3. Score Claude Haiku
         result = score_image(name, subcat, tmp_path)
-        score  = result.get("score", 1)
-        is_map = result.get("is_map", False)
-        raison = result.get("raison", "")
-        log.info(f"    score={score} map={is_map} — {raison[:60]} | {cand['url'][:50]}")
+        score     = result.get("score", 1)
+        is_map    = result.get("is_map", False)
+        is_blurry = result.get("is_blurry", False)
+        raison    = result.get("raison", "")
+        log.info(f"    score={score} map={is_map} blur={is_blurry} — {raison[:55]} | {cand['url'][:45]}")
 
-        if is_map or score < MIN_SCORE:
+        # Cartes/plans = toujours rejetées ; le reste est gardé avec son score
+        if is_map or score < 1:
             if is_temp and os.path.exists(tmp_path):
                 os.unlink(tmp_path)
             continue
 
         scored.append({"score": score, "path": tmp_path, "url": cand["url"],
-                       "is_temp": is_temp, "source": cand["source"]})
+                       "is_temp": is_temp, "source": cand["source"],
+                       "is_blurry": is_blurry})
 
-    # Trier par score desc
-    scored.sort(key=lambda x: -x["score"])
-    selected = scored[:MAX_PHOTOS]
+    # Trier : bonnes images (score≥MIN_SCORE, non floues) en premier, reste ensuite
+    good    = [x for x in scored if x["score"] >= MIN_SCORE and not x["is_blurry"]]
+    fallback = [x for x in scored if x not in good]
+    good.sort(key=lambda x: -x["score"])
+    fallback.sort(key=lambda x: -x["score"])
+
+    # Toujours viser MAX_PHOTOS : bonnes en priorité, fallback pour compléter
+    selected = (good + fallback)[:MAX_PHOTOS]
 
     if not selected:
         log.warning(f"  [{tag}] Aucune image valide ! Conservation des existantes.")
@@ -356,26 +379,29 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
             except Exception:
                 pass
 
-    log.info(f"  [{tag}] ✓ {len(final_paths)} photos retenues (scores: {[s['score'] for s in selected]})")
+    n_good = sum(1 for s in selected if s["score"] >= MIN_SCORE and not s.get("is_blurry"))
+    log.info(f"  [{tag}] ✓ {len(final_paths)} photos ({n_good} bonnes, {len(final_paths)-n_good} fallback) scores={[s['score'] for s in selected]}")
     return final_paths, final_urls
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--poi", help="Traiter un seul POI (tag/id)")
+    parser.add_argument("--poi", help="Traiter un ou plusieurs POIs (tags séparés par virgule)")
     parser.add_argument("--skip-fetch", action="store_true", help="Ne pas re-fetcher DataForSEO")
     args = parser.parse_args()
 
     with open(GLOBAL_JSON, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # Filtrer si --poi
+    # Filtrer si --poi (liste séparée par virgules)
     targets = data
     if args.poi:
-        targets = [p for p in data if p["id"] == args.poi or p.get("name") == args.poi]
+        ids = [x.strip() for x in args.poi.split(",")]
+        targets = [p for p in data if p["id"] in ids or p.get("name") in ids]
         if not targets:
-            log.error(f"POI '{args.poi}' non trouvé")
+            log.error(f"Aucun POI trouvé pour '{args.poi}'")
             return
+        log.info(f"Cibles : {[p['name'] for p in targets]}")
 
     # 1. Fetch DataForSEO pour tous les POIs cibles
     new_candidates_map = {}

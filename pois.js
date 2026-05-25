@@ -136,7 +136,7 @@ var POIS=[
     "imgs": [
       "planly_scraper/images/plage_de_sauveterre/photo_1.jpg",
       "planly_scraper/images/plage_de_sauveterre/photo_2.jpg",
-      "planly_scraper/images/plage_de_sauveterre/photo_3.jpg"
+      "planly_scraper/images/plage_de_sauveterre/photo_3.jpeg"
     ],
     "name": "Plage de Sauveterre",
     "commune": "L'Île-d'Olonne",
@@ -1431,9 +1431,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_belugas/photo_1.jpg",
+      "planly_scraper/images/plage_des_belugas/photo_1.jpeg",
       "planly_scraper/images/plage_des_belugas/photo_2.jpg",
-      "planly_scraper/images/plage_des_belugas/photo_3.jpg"
+      "planly_scraper/images/plage_des_belugas/photo_3.jpeg"
     ],
     "name": "Plage des Bélugas",
     "commune": "L'Aiguillon-la-Presqu'île",
@@ -3620,7 +3620,7 @@ var POIS=[
     "imgs": [
       "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg",
       "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg"
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpeg"
     ],
     "name": "Chemin des Douaniers Cayola–Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
