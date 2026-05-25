@@ -28,6 +28,18 @@ IMAGES_DIR  = os.path.join(SCRIPT_DIR, "images")
 MAX_PHOTOS  = 3
 MAX_CANDIDATES = 10  # candidats max à scorer par POI
 MIN_SCORE   = 3      # score minimum pour garder une image
+MIN_SIDE_PX = 600    # côté minimum en pixels (en dessous = rejeté)
+MAX_RATIO   = 2.8    # ratio max largeur/hauteur (au dessus = trop aplati)
+
+# Domaines avec watermarks commerciaux — toujours rejetés
+WATERMARK_DOMAINS = [
+    "alamy.com", "123rf.com", "shutterstock.com", "gettyimages.",
+    "dreamstime.com", "depositphotos.com", "fotolia.com", "istockphoto.com",
+    "stock.adobe", "pond5.com", "bigstockphoto.com",
+]
+
+def is_watermarked(url: str) -> bool:
+    return any(d in url.lower() for d in WATERMARK_DOMAINS)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
@@ -52,7 +64,7 @@ def fetch_image_candidates(pois: list[dict]) -> dict[str, list]:
         "location_name": "France",
         "language_code": "fr",
         "depth": IMAGE_DEPTH,
-        "search_param": "tbs=isz:l,itp:photo,ic:color",
+        "search_param": "tbs=isz:xl,itp:photo,ic:color",
         "tag": p["id"],
     } for p in pois]
 
@@ -88,7 +100,7 @@ def fetch_image_candidates(pois: list[dict]) -> dict[str, list]:
                         url = item.get("source_url") or item.get("image_url")
                         w   = item.get("width") or 0
                         h   = item.get("height") or 0
-                        if url and (w == 0 or w >= 600):
+                        if url and not is_watermarked(url) and (w == 0 or w >= 600):
                             candidates.append({"url": url, "width": w, "height": h,
                                                "title": item.get("title", "")})
                         if len(candidates) >= MAX_CANDIDATES:
@@ -135,13 +147,18 @@ def download_to_temp(url: str) -> str | None:
         if not is_img:
             os.unlink(tmp.name)
             return None
-        # Filtrer les images trop petites pour affichage plein écran Retina
+        # Rejeter watermarks connus
+        if is_watermarked(url):
+            os.unlink(tmp.name)
+            return None
+        # Filtrer taille et ratio
         try:
             from PIL import Image as _PILCheck
-            import io as _io2
             with open(tmp.name, "rb") as f:
                 _w, _h = _PILCheck.open(f).size
-            if min(_w, _h) < 600:  # rejeter si plus petit côté < 600px
+            _min = min(_w, _h)
+            _ratio = max(_w, _h) / _min if _min else 999
+            if _min < MIN_SIDE_PX or _ratio > MAX_RATIO:
                 os.unlink(tmp.name)
                 return None
         except Exception:
@@ -260,13 +277,43 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
     existing_urls = poi.get("photos_original_urls") or []
     all_candidates = []
 
-    # Images existantes déjà téléchargées
+    # Images existantes déjà téléchargées — filtrées (watermark, taille, ratio, doublons)
     existing_local = [p for p in (poi.get("photos") or []) if not p.startswith("http")]
+    seen_existing_hashes = set()
     for i, local in enumerate(existing_local):
         full = os.path.join(SCRIPT_DIR, local)
-        if os.path.exists(full):
-            url = existing_urls[i] if i < len(existing_urls) else ""
-            all_candidates.append({"url": url, "local": full, "source": "existing"})
+        if not os.path.exists(full):
+            continue
+        url = existing_urls[i] if i < len(existing_urls) else ""
+        # Rejeter watermarks connus
+        if is_watermarked(url):
+            log.info(f"    [existing] ✗ watermark — {url[:60]}")
+            continue
+        # Rejeter si taille insuffisante ou ratio aplati
+        try:
+            from PIL import Image as _PIL
+            _w, _h = _PIL.open(full).size
+            _min = min(_w, _h)
+            _ratio = max(_w, _h) / _min if _min else 999
+            if _min < MIN_SIDE_PX:
+                log.info(f"    [existing] ✗ trop_petit({_w}x{_h}) — {os.path.basename(full)}")
+                continue
+            if _ratio > MAX_RATIO:
+                log.info(f"    [existing] ✗ trop_aplati({_w}x{_h} ratio={_ratio:.1f}) — {os.path.basename(full)}")
+                continue
+        except Exception:
+            pass
+        # Rejeter doublons entre existantes
+        try:
+            with open(full, "rb") as _f:
+                _h_val = hashlib.md5(_f.read()).hexdigest()
+            if _h_val in seen_existing_hashes:
+                log.info(f"    [existing] ✗ doublon — {os.path.basename(full)}")
+                continue
+            seen_existing_hashes.add(_h_val)
+        except Exception:
+            pass
+        all_candidates.append({"url": url, "local": full, "source": "existing"})
 
     # Nouveaux candidats DataForSEO
     seen_urls = {c["url"] for c in all_candidates}

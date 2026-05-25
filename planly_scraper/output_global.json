@@ -1699,9 +1699,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_des_granges/photo_1.jpg",
+      "images/plage_des_granges/photo_1.jpeg",
       "images/plage_des_granges/photo_2.jpg",
-      "images/plage_des_granges/photo_3.jpg"
+      "images/plage_des_granges/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -1899,9 +1899,9 @@
       "specific.facilities_beach_shop": "Location matériel nautique"
     },
     "photos_original_urls": [
-      "https://cdt85.media.tourinsoft.eu/upload/2022-OL-PlagedesGranges---Crescent.jpg",
-      "https://fichier0.cirkwi.com/image/photo/circuit/390x390/9427/fr/0.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepE903Ah1axjr0XAVQcJyWVFO3h4Ti9dz20cHYGadtTf33XIRRJMLo51Uyp97bp6AtzPTTz6yu5nNqVNp5e5BKCIQikhtFnn7qfZzmsXO9T694EldU0LA-IAYypp3fcQVsWKXN-wA=w408-h306-k-no"
+      "https://beachsearcher.fr/images/beaches/250231133/FR231133.jpg",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepE903Ah1axjr0XAVQcJyWVFO3h4Ti9dz20cHYGadtTf33XIRRJMLo51Uyp97bp6AtzPTTz6yu5nNqVNp5e5BKCIQikhtFnn7qfZzmsXO9T694EldU0LA-IAYypp3fcQVsWKXN-wA=w408-h306-k-no",
+      "https://www.alltrails.com/mugen/image/location-app-router?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvMzgxMjExNzYvZjAxNTkyMjdiN2JmYTRkZTNiODUwNDI0YjE0YjJmM2MuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoiMTA4MCIsImhlaWdodCI6IjcwMCIsImZpdCI6ImNvdmVyIn0sInJvdGF0ZSI6bnVsbCwianBlZyI6eyJ0cmVsbGlzUXVhbnRpc2F0aW9uIjp0cnVlLCJvdmVyc2hvb3REZXJpbmdpbmciOnRydWUsIm9wdGltaXNlU2NhbnMiOnRydWUsInF1YW50aXNhdGlvblRhYmxlIjozfX19&w=3840&q=90"
     ]
   },
   {
@@ -2165,9 +2165,8 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/baie_de_cayola/photo_1.jpg",
-      "images/baie_de_cayola/photo_2.jpg",
-      "images/baie_de_cayola/photo_3.jpeg"
+      "images/baie_de_cayola/photo_1.jpeg",
+      "images/baie_de_cayola/photo_2.jpeg"
     ],
     "reviews": [
       {
@@ -2373,8 +2372,7 @@
       "specific.facilities_beach_shop": "Location matériel nautique"
     },
     "photos_original_urls": [
-      "https://www.lessablesdolonne.fr/wp-content/uploads/sit/cf43ceb27a1820aba7a9056b33ea3ddd-2024-CH-Cayola-Baie---ALamoureux-470x300.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoHdY4phO7GuYo-Vj1OODa297Y1gr-B9HXPS8EvBymZDhzCmbAnBc9UCJ_KtSRsWDlaIn7_T7aIZZXeymdlTP_8vAQFfR85wd1TlxG_eLQgdgAurcJGYxrxwyXfHPDysaTxii_IqSOMuDsZ=w408-h272-k-no",
+      "https://bord-de-mer.com/wp-content/uploads/2024/07/httpsd3e1m60ptf1oym.cloudfront.net5d952fd4-39f1-4e96-a3c6-c82c47d3f4adChateau-Olonne-0690_xgaplus-1024x767.jpg",
       "https://bord-de-mer.com/wp-content/uploads/2024/07/httpswww.sentinelledelestuaire.frwp-contentuploads201908P8230320-scaled.jpg"
     ]
   },
@@ -2404,7 +2402,7 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_de_la_mine/photo_1.jpg",
+      "images/plage_de_la_mine/photo_1.jpeg",
       "images/plage_de_la_mine/photo_2.jpeg",
       "images/plage_de_la_mine/photo_3.jpeg"
     ],
@@ -2612,9 +2610,9 @@
       "specific.facilities_beach_shop": "Location matériel nautique"
     },
     "photos_original_urls": [
-      "https://cdt85.media.tourinsoft.eu/upload/MINE-50--Horizon-Vertical.jpg",
       "https://planet-terre.ens-lyon.fr/planetterre/objets/Images/Img797/797-Plage-de-la-Mine-23.jpg",
-      "https://c8.alamy.com/compfr/rn3fr9/vue-aerienne-de-la-plage-de-la-mine-a-jard-sur-mer-vendee-rn3fr9.jpg"
+      "https://planet-terre.ens-lyon.fr/planetterre/objets/Images/Img797/797-Plage-de-la-Mine-01.jpg",
+      "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2018/03/Jard-sur-mer_plage-mine-17-e1520337141219.jpg"
     ]
   },
   {
@@ -2645,7 +2643,7 @@
     "photos": [
       "images/plage_de_la_paree/photo_1.jpeg",
       "images/plage_de_la_paree/photo_2.jpg",
-      "images/plage_de_la_paree/photo_3.jpg"
+      "images/plage_de_la_paree/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -2853,7 +2851,7 @@
     "photos_original_urls": [
       "https://www.vendeecamping.com/wp-content/uploads/2018/10/bretignolles-sur-mer-P1040841-1024x769.jpg",
       "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo-YJqFSymXzwrgWqQ4qnEHgCy2tYpI7mLnYZEM8HsvswQamaHQSlp_cCrO6FDSdIZ4doYOUe1BvgP_LcU3a9WLt2v_XAPOSsNIRKVqLIg8LDkrft9favGEn5D6zNGgchomi74=w408-h288-k-no",
-      "https://www.guide-de-la-vendee.com/_bibli/annonces/2087/hd/bretignolles-sur-mer-1-.jpg?v=nearestItems&width=292&height=193&pixelRatio=2.6250"
+      "https://bord-de-mer.com/wp-content/uploads/2024/07/httpslh5.googleusercontent.compAF1QipMfcWZP7v6G_V_r4cU19VCQ_KJmdv-fkQ8JTo3Qs1600-1024x768.jpeg"
     ]
   },
   {
@@ -3120,7 +3118,7 @@
     "price_level": null,
     "photos": [
       "images/plage_des_dunes/photo_1.jpg",
-      "images/plage_des_dunes/photo_2.jpg",
+      "images/plage_des_dunes/photo_2.jpeg",
       "images/plage_des_dunes/photo_3.jpg"
     ],
     "reviews": [
@@ -3327,8 +3325,8 @@
     },
     "photos_original_urls": [
       "https://www.bretignolles-sur-mer.fr/wp-content/uploads/2023/11/Visuel_plage.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqF5rf3DGxW9ZmzYNvx5WoYjKNnllORHW2lZiJeASyDqmHjApH0ErKa1KKzE2bbU_Mvgy_EiDtsz99SOg664t1ybcyr3__9saXDT8V98tI0CVOiNEeqpe60ZqofnS_MWs0XV1EgBcuUpKi5=w408-h306-k-no",
-      "https://cdt85.media.tourinsoft.eu/upload/alamoureux-MG-0254.jpg"
+      "https://cdt85.media.tourinsoft.eu/upload/alamoureux-MG-0254.jpg",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqF5rf3DGxW9ZmzYNvx5WoYjKNnllORHW2lZiJeASyDqmHjApH0ErKa1KKzE2bbU_Mvgy_EiDtsz99SOg664t1ybcyr3__9saXDT8V98tI0CVOiNEeqpe60ZqofnS_MWs0XV1EgBcuUpKi5=w408-h306-k-no"
     ]
   },
   {
@@ -4789,8 +4787,8 @@
     "price_level": null,
     "photos": [
       "images/plage_de_l_aubraie/photo_1.jpg",
-      "images/plage_de_l_aubraie/photo_2.jpg",
-      "images/plage_de_l_aubraie/photo_3.jpg"
+      "images/plage_de_l_aubraie/photo_2.jpeg",
+      "images/plage_de_l_aubraie/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -5007,7 +5005,7 @@
     },
     "photos_original_urls": [
       "https://cdt85.media.tourinsoft.eu/upload/2023-LS-PlagedesGraviers---SBourcierVendeeExpansion.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoAOz4Az_a5QC8Ujm9hjOzhzcHQj1srX9IsayQsPY2dj4-tqKi6OHD2NFar6RUhfDAywPbRVa8MbyIBbK-TFF4B3rWog1Rj3iXXjeNtvy-PK1GInm8emzGmR1iEQTy9tepAERRW=w408-h307-k-no",
+      "https://www.lessablesdolonne.fr/wp-content/uploads/sit/d572f74374b4550dabc680a23603a66a-2023-LS-PlagedesGraviers---SBourcierVendeeExpansion-1000x710.jpg",
       "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PlagedesGraviers-Aubraie---ALamoureux.jpg"
     ]
   },
@@ -5278,8 +5276,8 @@
     "price_level": null,
     "photos": [
       "images/foret_domaniale_d_olonne/photo_1.jpg",
-      "images/foret_domaniale_d_olonne/photo_2.jpg",
-      "images/foret_domaniale_d_olonne/photo_3.jpg"
+      "images/foret_domaniale_d_olonne/photo_2.jpeg",
+      "images/foret_domaniale_d_olonne/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -5672,7 +5670,7 @@
     "photos_original_urls": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer8WipLZIcRchvkWIf0VKi_vPPpaW8vcfzCM0SUSp_zDGRKEoBxaldxztU1pJriaibKpzxU2p6_6reLSRMKDKWeVyYwmgXiGtPr6OxVIPQyOwoKtInpf8Dy8_VK8TPaSNl1GkJYWQ=w408-h306-k-no",
       "https://www.lessablesdolonne.fr/wp-content/uploads/2024/05/2023-antoinemartineau-foret-dolonne-1600x900.jpg",
-      "https://upload.wikimedia.org/wikipedia/commons/6/60/For%C3%AAt_domaniale_d%27Olonne_%28panneau%29.JPG"
+      "https://www.onf.fr/outils/long-reads/ff88c4ef-8704-4d14-93a6-a5b708aae81f/++versions++/2/++paras++/20/1/++attr++data/++thumb++pano:w1200?_=1637074071.007071"
     ]
   },
   {
@@ -5702,9 +5700,8 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/marais_salants_de_l_ile_d_olonne/photo_1.jpg",
-      "images/marais_salants_de_l_ile_d_olonne/photo_2.jpeg",
-      "images/marais_salants_de_l_ile_d_olonne/photo_3.jpeg"
+      "images/marais_salants_de_l_ile_d_olonne/photo_1.jpeg",
+      "images/marais_salants_de_l_ile_d_olonne/photo_2.jpeg"
     ],
     "reviews": [
       {
@@ -6035,7 +6032,6 @@
       "specific.ferry_pricing": "Tarifs ferry (spécifique Île d'Yeu)"
     },
     "photos_original_urls": [
-      "https://www.enpaysdelaloire.com/sites/default/files/styles/360x450/public/sit/images/PNAPDL085V50GIZ3/2024-Marais---ALamoureux.jpg.webp?h=c12e0b96&itok=Sjx74e_c",
       "https://mairie-liledolonne.fr/media/mairie-ile-dolonne-marais.jpg",
       "https://www.lessablesdolonne.fr/wp-content/uploads/2024/08/velomarais-alamoureux-2024-1600x900.jpg"
     ]
@@ -9652,8 +9648,8 @@
     "price_level": null,
     "photos": [
       "images/phare_de_la_petite_jetee/photo_1.jpeg",
-      "images/phare_de_la_petite_jetee/photo_2.jpeg",
-      "images/phare_de_la_petite_jetee/photo_3.jpg"
+      "images/phare_de_la_petite_jetee/photo_2.jpg",
+      "images/phare_de_la_petite_jetee/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -9847,9 +9843,9 @@
       "specific.tide_sensitive": "Accès dépendant des marées"
     },
     "photos_original_urls": [
-      "https://previews.123rf.com/images/thomaspajot/thomaspajot1911/thomaspajot191100015/133371763-green-lighthouse-of-the-little-jetty-of-les-sables-d-olonne-at-low-tide-in-the-early-morning-vendee.jpg",
-      "https://previews.123rf.com/images/cloudmineamsterdam/cloudmineamsterdam2007/cloudmineamsterdam200700080/152109440-entrance-of-les-sables-d-olonne-harbour-taken-from-la-chaume-with-it-pier-and-lighthouse-called.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo2QRU3vJu9FYEc-SIuAeILiW9XdBJkugDbn2gLDbhjBcAYwF_lZh9NrcRn0J2Mprv2Z4BWXFB_thSmtD5Bttriwctj7D_OYfXJkSgZ_kTgQ5x1wqhggXJF5WLtERt1ZUeJB8rrOX_fIEs=w408-h544-k-no"
+      "https://media.ouest-france.fr/v1/pictures/MjAyNTAyOTVjMDYwMjZhODQzODFmN2NhYTI3YTBhMDY2ZmJiY2M?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=c9a5e0868fe78a29cac0b4f5d120273b8a70df90e559aad4b8412d168a53d982",
+      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweo2QRU3vJu9FYEc-SIuAeILiW9XdBJkugDbn2gLDbhjBcAYwF_lZh9NrcRn0J2Mprv2Z4BWXFB_thSmtD5Bttriwctj7D_OYfXJkSgZ_kTgQ5x1wqhggXJF5WLtERt1ZUeJB8rrOX_fIEs=w408-h544-k-no",
+      "https://static.actu.fr/uploads/2024/05/ace420b5a7266eb3520b5a726c9a52v-960x640.jpg"
     ]
   },
   {
@@ -12500,7 +12496,7 @@
     "photos": [
       "images/le_puits_d_enfer/photo_1.jpg",
       "images/le_puits_d_enfer/photo_2.jpeg",
-      "images/le_puits_d_enfer/photo_3.jpg"
+      "images/le_puits_d_enfer/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -12706,8 +12702,8 @@
     },
     "photos_original_urls": [
       "https://www.lessablesdolonne.fr/wp-content/uploads/2024/07/2023-antoinemartineau-puitsdenfer-1600x900-1725542584.jpg",
-      "https://c8.alamy.com/comp/MTN2P8/france-vendee-chateau-dolonne-the-puits-denfer-france-vende-85-chteau-dolonne-le-puits-denfer-MTN2P8.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoylRQgTzM7Az3S6X7PXYRfUQRTV0ZH04ptD51f-ECWK6QD1-sllcDeMK4bHben9X6p_-N5PBcuSLVp7RrLVl3ndFBJ-X4_D5JmdkTu13w7uw3TTa8m5UN1PmWtX5XFszwWtNA=w408-h544-k-no"
+      "https://media.francerent.com/attractions/puits-d-enfer-les-sables-dolonne.jpg",
+      "https://www.ici.fr/pikapi/images/f552819f-543c-4ad2-b328-90f76470da4d/1200x680?webp=false"
     ]
   },
   {
@@ -12738,8 +12734,8 @@
     "price_level": null,
     "photos": [
       "images/pointe_du_payre/photo_1.jpg",
-      "images/pointe_du_payre/photo_2.jpg",
-      "images/pointe_du_payre/photo_3.jpg"
+      "images/pointe_du_payre/photo_2.jpeg",
+      "images/pointe_du_payre/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -12919,8 +12915,8 @@
     },
     "photos_original_urls": [
       "https://la-grand-metairie.com/wp-content/uploads/2019/06/pointe-du-payre.jpg",
-      "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2018/01/Jard-sur-mer_pointe-du-payr%C3%A9-3-e1516812552310-800x600.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqgaDIZiXBsksXp_TX7ajw2FfEtxjOKdPG1YRHem65BrTZts50phUjZFSDxoTelrPDhiccQZLW5X6VR3p4rL-oSrVWzOVg0Qyi9UMDZ3Ria6lJ1PEkz6LDL3ZL7sRRtC0-R6Gdc=w408-h306-k-no"
+      "https://media.decathlon-outdoor.com/1cxHDWSWaVNVJ8xRGUvNXT/randonnee-pointe-payre-3-a231c61dc5.jpeg",
+      "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2018/01/Jard-sur-mer_pointe-du-payr%C3%A9-3-e1516812552310-800x600.jpg"
     ]
   },
   {
@@ -13131,7 +13127,7 @@
     "price_level": null,
     "photos": [
       "images/le_remblai/photo_1.jpg",
-      "images/le_remblai/photo_2.jpg",
+      "images/le_remblai/photo_2.jpeg",
       "images/le_remblai/photo_3.jpeg"
     ],
     "reviews": [
@@ -13335,8 +13331,8 @@
     },
     "photos_original_urls": [
       "https://upload.wikimedia.org/wikipedia/commons/8/8a/Promenade_Front_de_mer_Les_Sables-d%27Olonne_c%C3%B4t%C3%A9_nord_%28juin_2023%29.JPG",
-      "https://www.lessablesdolonne.fr/wp-content/uploads/sit/06474322b3ea441924cfe80f5ce623c2-2024-LS-VillaMirasol-Remblai---ALamoureux-470x300.jpg",
-      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/05/destination-cote-atlantique-les-sables-d-olonne-1-1600x900.jpg"
+      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/05/destination-cote-atlantique-les-sables-d-olonne-1-1600x900.jpg",
+      "https://www.pierres-caractere.fr/wp-content/uploads/2020/06/Ramblai_Vendee.jpg"
     ]
   },
   {
@@ -15458,7 +15454,7 @@
     "photos": [
       "images/port_de_la_chaume/photo_1.jpg",
       "images/port_de_la_chaume/photo_2.jpg",
-      "images/port_de_la_chaume/photo_3.jpg"
+      "images/port_de_la_chaume/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -15563,8 +15559,8 @@
     "status": "complete",
     "photos_original_urls": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoh3mm2ruOuf8Zjbq0te8tfgSvZ5M1s00MNVPGeVwyOeDNKkHDzY8xUbQjBTpv4LM2Zf1mYyqe7gxFhCo0kSGW3igtLZcAuTAyHyuvQAik32P6_BkrAIkPWqEfJiFsCZLrZ3HAm=w426-h240-k-no",
-      "https://www.lessablesdolonne.fr/wp-content/uploads/sit/527c3f30db2e49a75d686af0bc1be9b5-2024-LS-LaChaume-Quai-Chenal-Bateau---ALamoureux-470x300.jpg",
-      "https://www.lessablesdolonne.com/media/copyright_alamoureux_les_sables_olonne_14min__041655200_1057_09062016.jpg"
+      "https://www.lessablesdolonne.com/media/copyright_alamoureux_les_sables_olonne_14min__041655200_1057_09062016.jpg",
+      "https://www.lessablesdolonne.com/media/copyright_alamoureux_les_sables_olonne_18min__078063600_1057_09062016.jpg"
     ]
   },
   {
@@ -15731,7 +15727,7 @@
     "photos": [
       "images/chateau_de_talmont/photo_1.jpg",
       "images/chateau_de_talmont/photo_2.jpg",
-      "images/chateau_de_talmont/photo_3.jpg"
+      "images/chateau_de_talmont/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -15836,7 +15832,7 @@
     "photos_original_urls": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHVAweopy41dXyspWtdo4nxYdxp0rtPX9gTkB6i28tT70_7FzJClYL5yjMCsqF5RCH4Esgfc8ypeSqcT0WML4sBn95E9svpAZRSnrL98V8BOvzwlL2GPAw4hjl-2fcJzc2ZlsDblvSid3Q=w408-h272-k-no",
       "https://chateaudetalmont.com/wp-content/uploads/2022/07/chateau-talmon-home.png",
-      "https://chateaudetalmont.com/wp-content/uploads/2022/09/chateau-talmont.webp"
+      "https://www.guide-de-la-vendee.com/_bibli/annonces/3390/hd/chateau-de-talmont-chateau-maj-25-01.jpg"
     ]
   },
   {
@@ -17059,8 +17055,8 @@
     },
     "price_level": null,
     "photos": [
-      "images/dolmen_de_la_frebouch_ere/photo_1.jpg",
-      "images/dolmen_de_la_frebouch_ere/photo_2.jpg",
+      "images/dolmen_de_la_frebouch_ere/photo_1.jpeg",
+      "images/dolmen_de_la_frebouch_ere/photo_2.jpeg",
       "images/dolmen_de_la_frebouch_ere/photo_3.jpg"
     ],
     "reviews": [
@@ -17170,9 +17166,9 @@
     "enriched_at": "2026-04-06T15:02:19.642732+00:00",
     "status": "complete",
     "photos_original_urls": [
-      "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bernard_fr%C3%A9bouch%C3%A8re_02.jpg",
-      "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2018/05/randonnee-frebouchere-le-bernard-avrille-800x600.jpg",
-      "https://cdt85.media.tourinsoft.eu/upload/le-bernard-dolmen-frebouchere.JPG"
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/d6/c0/d1/une-decouverte-passionnante.jpg?w=1200&h=-1&s=1",
+      "https://p.monumentum.fr/main/85/pa00110041-le-bernard-dolmen-dit-de-la-frebouchere.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bernard_fr%C3%A9bouch%C3%A8re_02.jpg"
     ]
   },
   {
@@ -17275,7 +17271,7 @@
     "photos": [
       "images/vouvant/photo_1.jpg",
       "images/vouvant/photo_2.jpg",
-      "images/vouvant/photo_3.jpg"
+      "images/vouvant/photo_3.webp"
     ],
     "reviews": [],
     "place_topics": null,
