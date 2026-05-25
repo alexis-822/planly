@@ -526,7 +526,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/baie_de_cayola/photo_1.jpeg",
-      "planly_scraper/images/baie_de_cayola/photo_2.webp",
+      "planly_scraper/images/baie_de_cayola/photo_2.jpg",
       "planly_scraper/images/baie_de_cayola/photo_3.jpeg"
     ],
     "name": "Baie de Cayola",
