@@ -134,9 +134,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_sauveterre/photo_1.jpg",
+      "planly_scraper/images/plage_de_sauveterre/photo_1.jpeg",
       "planly_scraper/images/plage_de_sauveterre/photo_2.jpeg",
-      "planly_scraper/images/plage_de_sauveterre/photo_3.jpeg"
+      "planly_scraper/images/plage_de_sauveterre/photo_3.webp"
     ],
     "name": "Plage de Sauveterre",
     "commune": "L'Île-d'Olonne",
@@ -392,7 +392,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_tanchet/photo_1.jpg"
+      "planly_scraper/images/plage_de_tanchet/photo_1.jpeg",
+      "planly_scraper/images/plage_de_tanchet/photo_2.jpeg",
+      "planly_scraper/images/plage_de_tanchet/photo_3.jpeg"
     ],
     "name": "Plage de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -1858,7 +1860,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpeg",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpeg"
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpeg",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpeg"
     ],
     "name": "Marais Salants de l'Île d'Olonne",
     "commune": "L'Île-d'Olonne",
@@ -2582,7 +2585,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/ile_d_yeu/photo_1.jpeg",
-      "planly_scraper/images/ile_d_yeu/photo_2.jpg",
+      "planly_scraper/images/ile_d_yeu/photo_2.jpeg",
       "planly_scraper/images/ile_d_yeu/photo_3.jpg"
     ],
     "name": "Île d'Yeu",
@@ -2715,8 +2718,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.webp",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg"
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg"
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
     "commune": "Noirmoutier-en-l'Île",
@@ -3629,7 +3631,7 @@ var POIS=[
     "imgs": [
       "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.webp",
       "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpeg",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg"
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.webp"
     ],
     "name": "Chemin des Douaniers Cayola–Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
@@ -4087,7 +4089,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/l_ile_penotte/photo_1.jpg",
-      "planly_scraper/images/l_ile_penotte/photo_2.jpg"
+      "planly_scraper/images/l_ile_penotte/photo_2.jpg",
+      "planly_scraper/images/l_ile_penotte/photo_3.jpeg"
     ],
     "name": "L'Île Penotte",
     "commune": "Les Sables-d'Olonne",

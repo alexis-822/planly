@@ -1,133 +1,9 @@
-// Generated 2026-05-20 by fetch_tides.py
+// Generated 2026-05-25 by fetch_tides.py
 var TIDES_DATA = {
   "124": {
     "nom": "Saint-Gilles-Croix-de-Vie",
-    "generated": "2026-05-20",
+    "generated": "2026-05-25",
     "days": {
-      "2026-05-20": [
-        {
-          "type": "BM",
-          "time": "01h50",
-          "height": 0.68,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "08h08",
-          "height": 4.78,
-          "coeff": 87
-        },
-        {
-          "type": "BM",
-          "time": "14h07",
-          "height": 1.04,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "20h27",
-          "height": 4.87,
-          "coeff": 81
-        }
-      ],
-      "2026-05-21": [
-        {
-          "type": "BM",
-          "time": "02h43",
-          "height": 0.93,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "09h11",
-          "height": 4.5,
-          "coeff": 76
-        },
-        {
-          "type": "BM",
-          "time": "15h02",
-          "height": 1.31,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "21h31",
-          "height": 4.65,
-          "coeff": 70
-        }
-      ],
-      "2026-05-22": [
-        {
-          "type": "BM",
-          "time": "03h40",
-          "height": 1.23,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "10h27",
-          "height": 4.26,
-          "coeff": 64
-        },
-        {
-          "type": "BM",
-          "time": "16h01",
-          "height": 1.57,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "22h48",
-          "height": 4.45,
-          "coeff": 59
-        }
-      ],
-      "2026-05-23": [
-        {
-          "type": "BM",
-          "time": "04h43",
-          "height": 1.49,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "11h47",
-          "height": 4.14,
-          "coeff": 55
-        },
-        {
-          "type": "BM",
-          "time": "17h06",
-          "height": 1.76,
-          "coeff": null
-        }
-      ],
-      "2026-05-24": [
-        {
-          "type": "BM",
-          "time": "00h07",
-          "height": 4.33,
-          "coeff": 52
-        },
-        {
-          "type": "PM",
-          "time": "05h50",
-          "height": 1.66,
-          "coeff": null
-        },
-        {
-          "type": "BM",
-          "time": "12h59",
-          "height": 4.12,
-          "coeff": 51
-        },
-        {
-          "type": "PM",
-          "time": "18h14",
-          "height": 1.83,
-          "coeff": null
-        }
-      ],
       "2026-05-25": [
         {
           "type": "BM",
@@ -179,137 +55,143 @@ var TIDES_DATA = {
           "height": 1.69,
           "coeff": null
         }
+      ],
+      "2026-05-27": [
+        {
+          "type": "BM",
+          "time": "03h06",
+          "height": 4.35,
+          "coeff": 57
+        },
+        {
+          "type": "PM",
+          "time": "08h56",
+          "height": 1.55,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "15h25",
+          "height": 4.38,
+          "coeff": 60
+        },
+        {
+          "type": "PM",
+          "time": "21h15",
+          "height": 1.56,
+          "coeff": null
+        }
+      ],
+      "2026-05-28": [
+        {
+          "type": "BM",
+          "time": "03h44",
+          "height": 4.4,
+          "coeff": 62
+        },
+        {
+          "type": "PM",
+          "time": "09h43",
+          "height": 1.45,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "15h57",
+          "height": 4.5,
+          "coeff": 65
+        },
+        {
+          "type": "PM",
+          "time": "22h02",
+          "height": 1.45,
+          "coeff": null
+        }
+      ],
+      "2026-05-29": [
+        {
+          "type": "BM",
+          "time": "04h16",
+          "height": 4.47,
+          "coeff": 67
+        },
+        {
+          "type": "PM",
+          "time": "10h24",
+          "height": 1.38,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "16h29",
+          "height": 4.61,
+          "coeff": 68
+        },
+        {
+          "type": "PM",
+          "time": "22h44",
+          "height": 1.37,
+          "coeff": null
+        }
+      ],
+      "2026-05-30": [
+        {
+          "type": "BM",
+          "time": "04h49",
+          "height": 4.52,
+          "coeff": 70
+        },
+        {
+          "type": "PM",
+          "time": "11h02",
+          "height": 1.34,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "17h01",
+          "height": 4.69,
+          "coeff": 70
+        },
+        {
+          "type": "PM",
+          "time": "23h23",
+          "height": 1.31,
+          "coeff": null
+        }
+      ],
+      "2026-05-31": [
+        {
+          "type": "BM",
+          "time": "05h21",
+          "height": 4.55,
+          "coeff": 71
+        },
+        {
+          "type": "PM",
+          "time": "11h37",
+          "height": 1.34,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "17h35",
+          "height": 4.73,
+          "coeff": 71
+        },
+        {
+          "type": "PM",
+          "time": "23h59",
+          "height": 1.3,
+          "coeff": null
+        }
       ]
     }
   },
   "125": {
     "nom": "Les Sables-d'Olonne",
-    "generated": "2026-05-20",
+    "generated": "2026-05-25",
     "days": {
-      "2026-05-20": [
-        {
-          "type": "BM",
-          "time": "01h44",
-          "height": 0.83,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "08h09",
-          "height": 5.0,
-          "coeff": 87
-        },
-        {
-          "type": "BM",
-          "time": "14h01",
-          "height": 1.18,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "20h28",
-          "height": 5.08,
-          "coeff": 81
-        }
-      ],
-      "2026-05-21": [
-        {
-          "type": "BM",
-          "time": "02h38",
-          "height": 1.08,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "09h09",
-          "height": 4.7,
-          "coeff": 76
-        },
-        {
-          "type": "BM",
-          "time": "14h56",
-          "height": 1.46,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "21h29",
-          "height": 4.83,
-          "coeff": 70
-        }
-      ],
-      "2026-05-22": [
-        {
-          "type": "BM",
-          "time": "03h35",
-          "height": 1.36,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "10h23",
-          "height": 4.44,
-          "coeff": 64
-        },
-        {
-          "type": "BM",
-          "time": "15h55",
-          "height": 1.72,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "22h47",
-          "height": 4.62,
-          "coeff": 59
-        }
-      ],
-      "2026-05-23": [
-        {
-          "type": "BM",
-          "time": "04h38",
-          "height": 1.62,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "11h45",
-          "height": 4.3,
-          "coeff": 55
-        },
-        {
-          "type": "BM",
-          "time": "17h01",
-          "height": 1.9,
-          "coeff": null
-        }
-      ],
-      "2026-05-24": [
-        {
-          "type": "BM",
-          "time": "00h06",
-          "height": 4.5,
-          "coeff": 52
-        },
-        {
-          "type": "PM",
-          "time": "05h46",
-          "height": 1.79,
-          "coeff": null
-        },
-        {
-          "type": "BM",
-          "time": "12h56",
-          "height": 4.28,
-          "coeff": 51
-        },
-        {
-          "type": "PM",
-          "time": "18h09",
-          "height": 1.98,
-          "coeff": null
-        }
-      ],
       "2026-05-25": [
         {
           "type": "BM",
@@ -359,6 +241,136 @@ var TIDES_DATA = {
           "type": "PM",
           "time": "20h19",
           "height": 1.83,
+          "coeff": null
+        }
+      ],
+      "2026-05-27": [
+        {
+          "type": "BM",
+          "time": "03h05",
+          "height": 4.53,
+          "coeff": 57
+        },
+        {
+          "type": "PM",
+          "time": "08h54",
+          "height": 1.7,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "15h22",
+          "height": 4.56,
+          "coeff": 60
+        },
+        {
+          "type": "PM",
+          "time": "21h13",
+          "height": 1.71,
+          "coeff": null
+        }
+      ],
+      "2026-05-28": [
+        {
+          "type": "BM",
+          "time": "03h45",
+          "height": 4.59,
+          "coeff": 62
+        },
+        {
+          "type": "PM",
+          "time": "09h42",
+          "height": 1.6,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "15h56",
+          "height": 4.68,
+          "coeff": 65
+        },
+        {
+          "type": "PM",
+          "time": "22h00",
+          "height": 1.6,
+          "coeff": null
+        }
+      ],
+      "2026-05-29": [
+        {
+          "type": "BM",
+          "time": "04h19",
+          "height": 4.66,
+          "coeff": 67
+        },
+        {
+          "type": "PM",
+          "time": "10h23",
+          "height": 1.53,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "16h29",
+          "height": 4.79,
+          "coeff": 68
+        },
+        {
+          "type": "PM",
+          "time": "22h42",
+          "height": 1.53,
+          "coeff": null
+        }
+      ],
+      "2026-05-30": [
+        {
+          "type": "BM",
+          "time": "04h52",
+          "height": 4.71,
+          "coeff": 70
+        },
+        {
+          "type": "PM",
+          "time": "11h01",
+          "height": 1.5,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "17h02",
+          "height": 4.88,
+          "coeff": 70
+        },
+        {
+          "type": "PM",
+          "time": "23h21",
+          "height": 1.48,
+          "coeff": null
+        }
+      ],
+      "2026-05-31": [
+        {
+          "type": "BM",
+          "time": "05h25",
+          "height": 4.73,
+          "coeff": 71
+        },
+        {
+          "type": "PM",
+          "time": "11h36",
+          "height": 1.51,
+          "coeff": null
+        },
+        {
+          "type": "BM",
+          "time": "17h36",
+          "height": 4.92,
+          "coeff": 71
+        },
+        {
+          "type": "PM",
+          "time": "23h57",
+          "height": 1.46,
           "coeff": null
         }
       ]

@@ -1468,9 +1468,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_de_sauveterre/photo_1.jpg",
+      "images/plage_de_sauveterre/photo_1.jpeg",
       "images/plage_de_sauveterre/photo_2.jpeg",
-      "images/plage_de_sauveterre/photo_3.jpeg"
+      "images/plage_de_sauveterre/photo_3.webp"
     ],
     "reviews": [
       {
@@ -1668,9 +1668,9 @@
       "specific.facilities_beach_shop": "Location matériel nautique"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweq9uKlXi-AP4mgsmosw6WJG42jdQGg2i7JnSmPFpWp0LlfCWeChCfTxSGz3tMUaXqI04kUnvct1xbGxjFWYMhok8u30ycVA1FhNmMDXZDRxWTEkwJMTQ1ZIUw8wlo2TwnwqGHEF=w426-h240-k-no",
       "https://cdt85.media.tourinsoft.eu/upload/2020-LS-Plage-Sauveterre-Septembre---FMakhlouf.jpg",
-      "https://www.guide-de-la-vendee.com/_bibli/bandeaux/1/adobestock-1669688766.jpg"
+      "https://www.guide-de-la-vendee.com/_bibli/bandeaux/1/adobestock-1669688766.jpg",
+      "https://media.decathlon-outdoor.com/1cxKBeYwUu7GefucXNaRSG/sauveterre-belle-balade-entre-foret-et-plage.webp?w=600"
     ]
   },
   {
@@ -1930,7 +1930,9 @@
     "popular_times": null,
     "price_level": null,
     "photos": [
-      "images/plage_de_tanchet/photo_1.jpg"
+      "images/plage_de_tanchet/photo_1.jpeg",
+      "images/plage_de_tanchet/photo_2.jpeg",
+      "images/plage_de_tanchet/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -2136,7 +2138,9 @@
       "specific.facilities_beach_shop": "Location matériel nautique"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepVnntMJ0G0DcVrzTg6RhCJQYCpEN12OUi-nmsLN1iptrOqQJD_8OKs3heKNmTbe-XLzrNDoq4SHxTfo8exaIPiQaHjIGobE31gw64Y2EoLwydwTMUy_Exlyno3FW-o_JzJHx9yyFtaFsz9=w426-h240-k-no"
+      "https://cdt85.media.tourinsoft.eu/upload/2023-LS-Plage-Tanchet-Handicap-ISO---AMartineau.jpg",
+      "https://cdt85.media.tourinsoft.eu/upload/2020-LS-Plage-Tanchet---FMakhlouf.jpg",
+      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/05/tanchet-2-copyrights-antoine-martineau-1600x900.jpg"
     ]
   },
   {
@@ -5707,7 +5711,8 @@
     "price_level": null,
     "photos": [
       "images/marais_salants_de_l_ile_d_olonne/photo_1.jpeg",
-      "images/marais_salants_de_l_ile_d_olonne/photo_2.jpeg"
+      "images/marais_salants_de_l_ile_d_olonne/photo_2.jpeg",
+      "images/marais_salants_de_l_ile_d_olonne/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -6039,7 +6044,8 @@
     },
     "photos_original_urls": [
       "https://mairie-liledolonne.fr/media/mairie-ile-dolonne-marais.jpg",
-      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/08/velomarais-alamoureux-2024-1600x900.jpg"
+      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/08/velomarais-alamoureux-2024-1600x900.jpg",
+      "https://media.francerent.com/attractions/marais-salants-de-l-le-d-olonne-les-sables-dolonne.jpg"
     ]
   },
   {
@@ -7987,7 +7993,7 @@
     "price_level": null,
     "photos": [
       "images/ile_d_yeu/photo_1.jpeg",
-      "images/ile_d_yeu/photo_2.jpg",
+      "images/ile_d_yeu/photo_2.jpeg",
       "images/ile_d_yeu/photo_3.jpg"
     ],
     "reviews": [],
@@ -8195,8 +8201,8 @@
     },
     "photos_original_urls": [
       "https://www.ile-yeu.fr/sites/iledyeu/files/styles/contenu_slider/public/content/images/1579098705-1455343201.jpg?itok=pJd7HSQU",
-      "https://www.ile-yeu.fr/sites/iledyeu/files/styles/squared/public/visuel_collection/1166106088-1671013811.jpg?itok=5LwOM--I",
-      "https://www.saintgillescroixdevie.fr/medias/2024/07/DSC_1548-e1719848397891.jpg"
+      "https://www.yeu-continent.fr/wp-content/uploads/2024/01/DSC5980-scaled.jpg",
+      "https://www.ile-yeu.fr/sites/iledyeu/files/styles/squared/public/visuel_collection/1166106088-1671013811.jpg?itok=5LwOM--I"
     ]
   },
   {
@@ -8227,8 +8233,7 @@
     "price_level": null,
     "photos": [
       "images/ile_de_noirmoutier_passage_du_gois/photo_1.webp",
-      "images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg",
-      "images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg"
+      "images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg"
     ],
     "reviews": [
       {
@@ -8437,8 +8442,7 @@
     },
     "photos_original_urls": [
       "https://www.gochallansgois.fr/app/uploads/2023/11/aerienne-passagedugois5-bd-1.webp",
-      "https://media.ouest-france.fr/v1/pictures/MjAxODAxOGM1YmM4ODZhMTc1Y2VlMmEyNGVkY2M5MmQ3NzRkZGQ?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1d6aa443e64edf34a4849759d4e858fbb92180970d92ddffe7c67d5e7a6ecd6f",
-      "https://www.ile-noirmoutier.com/sites/default/files/styles/image_blog/public/2024-01/Passage%20du%20Gois%20chauss%C3%A9e%20-%20Trendz.jpg?itok=55ajbxSi"
+      "https://media.ouest-france.fr/v1/pictures/MjAxODAxOGM1YmM4ODZhMTc1Y2VlMmEyNGVkY2M5MmQ3NzRkZGQ?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1d6aa443e64edf34a4849759d4e858fbb92180970d92ddffe7c67d5e7a6ecd6f"
     ]
   },
   {
@@ -14811,7 +14815,7 @@
     "photos": [
       "images/chemin_des_douaniers_cayola_bourgenay/photo_1.webp",
       "images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpeg",
-      "images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg"
+      "images/chemin_des_douaniers_cayola_bourgenay/photo_3.webp"
     ],
     "reviews": [
       {
@@ -15025,7 +15029,7 @@
     "photos_original_urls": [
       "https://www.ici.fr/pikapi/images/96422093-a100-402f-a4ea-0037c973eb03/1200x680",
       "https://media.decathlon-outdoor.com/1cxUQLyWv5MTs4s8KXvrCX/randonnee-par-le-sentier-des-douaniers-a-talmont-saint-hilaire.jpg",
-      "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2026/03/Sentier-des-douaniers-Talmont-Saint-Hilaire-2-scaled-700x500.jpg"
+      "https://media.decathlon-outdoor.com/1cxKXgqRhV87QURdnCamZj/randonnee-par-le-sentier-des-douaniers-a-talmont-saint-hilaire.webp?w=600"
     ]
   },
   {
@@ -15615,7 +15619,8 @@
     "price_level": null,
     "photos": [
       "images/l_ile_penotte/photo_1.jpg",
-      "images/l_ile_penotte/photo_2.jpg"
+      "images/l_ile_penotte/photo_2.jpg",
+      "images/l_ile_penotte/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -15719,7 +15724,8 @@
     "status": "complete",
     "photos_original_urls": [
       "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqj-U9S08ABF6FslHNE2yI19wftjs9WeDfWd0B-NR5y-nr4C_3qbt0Zndmk0wRAxZy4g7Zve-PnT9H1BoNhKv9PYgQVywu7EvCjs_bidDOfBRdoc0_jadTrbueKZN-QIHDJ52OS=w408-h306-k-no",
-      "https://www.lessablesdolonne.com/media/7183106625_358eb8559c_b1min__044721900_1740_13012017.jpg"
+      "https://www.lessablesdolonne.com/media/7183106625_358eb8559c_b1min__044721900_1740_13012017.jpg",
+      "https://media.ouest-france.fr/v1/pictures/MjAyMzA3ZTBmYjY3YjYxMjc4YmUwYTFlMjNlN2RhZDI5ZDllY2Y?width=1260&height=708&focuspoint=45%2C52&cropresize=1&client_id=bpeditorial&sign=949acd336336ebca250a80349ebdad6fe7c83b8bb358629ff230e451c9a0f3ec"
     ]
   },
   {
