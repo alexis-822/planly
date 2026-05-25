@@ -2170,7 +2170,8 @@
     "price_level": null,
     "photos": [
       "images/baie_de_cayola/photo_1.jpeg",
-      "images/baie_de_cayola/photo_2.jpeg"
+      "images/baie_de_cayola/photo_2.webp",
+      "images/baie_de_cayola/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -2377,8 +2378,10 @@
     },
     "photos_original_urls": [
       "https://bord-de-mer.com/wp-content/uploads/2024/07/httpsd3e1m60ptf1oym.cloudfront.net5d952fd4-39f1-4e96-a3c6-c82c47d3f4adChateau-Olonne-0690_xgaplus-1024x767.jpg",
+      "https://media.decathlon-outdoor.com/1cA8aQ65KmZQ83i8iURSVC/baie-de-cayola-aux-sables-d-olonne.webp?w=600",
       "https://bord-de-mer.com/wp-content/uploads/2024/07/httpswww.sentinelledelestuaire.frwp-contentuploads201908P8230320-scaled.jpg"
-    ]
+    ],
+    "search_keyword": "Baie de Cayola Les Sables-d Olonne photo"
   },
   {
     "id": "plage_de_la_mine",
@@ -8233,7 +8236,8 @@
     "price_level": null,
     "photos": [
       "images/ile_de_noirmoutier_passage_du_gois/photo_1.webp",
-      "images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg"
+      "images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg",
+      "images/ile_de_noirmoutier_passage_du_gois/photo_3.jpeg"
     ],
     "reviews": [
       {
@@ -8442,8 +8446,10 @@
     },
     "photos_original_urls": [
       "https://www.gochallansgois.fr/app/uploads/2023/11/aerienne-passagedugois5-bd-1.webp",
-      "https://media.ouest-france.fr/v1/pictures/MjAxODAxOGM1YmM4ODZhMTc1Y2VlMmEyNGVkY2M5MmQ3NzRkZGQ?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1d6aa443e64edf34a4849759d4e858fbb92180970d92ddffe7c67d5e7a6ecd6f"
-    ]
+      "https://media.ouest-france.fr/v1/pictures/MjAxODAxOGM1YmM4ODZhMTc1Y2VlMmEyNGVkY2M5MmQ3NzRkZGQ?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=1d6aa443e64edf34a4849759d4e858fbb92180970d92ddffe7c67d5e7a6ecd6f",
+      "https://www.guide-de-la-vendee.com/_bibli/articlesPage/93/images/adobestock-jbop-bois-de-la-chaize.jpg"
+    ],
+    "search_keyword": "Noirmoutier Vendee photo"
   },
   {
     "id": "phare_de_la_petite_jetee",

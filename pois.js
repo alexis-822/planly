@@ -526,7 +526,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/baie_de_cayola/photo_1.jpeg",
-      "planly_scraper/images/baie_de_cayola/photo_2.jpeg"
+      "planly_scraper/images/baie_de_cayola/photo_2.webp",
+      "planly_scraper/images/baie_de_cayola/photo_3.jpeg"
     ],
     "name": "Baie de Cayola",
     "commune": "Château-d'Olonne",
@@ -2718,7 +2719,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.webp",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg"
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpeg",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpeg"
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
     "commune": "Noirmoutier-en-l'Île",

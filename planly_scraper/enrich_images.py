@@ -35,7 +35,7 @@ MAX_RATIO   = 2.8    # ratio max largeur/hauteur (au dessus = trop aplati)
 WATERMARK_DOMAINS = [
     "alamy.com", "123rf.com", "shutterstock.com", "gettyimages.",
     "dreamstime.com", "depositphotos.com", "fotolia.com", "istockphoto.com",
-    "stock.adobe", "pond5.com", "bigstockphoto.com",
+    "stock.adobe", "pond5.com", "bigstockphoto.com", "ftcdn.net",
 ]
 
 def is_watermarked(url: str) -> bool:
@@ -60,7 +60,7 @@ def fetch_image_candidates(pois: list[dict]) -> dict[str, list]:
 
     # POST batch
     payload = [{
-        "keyword": f"{p['name']} {p['commune']} photo",
+        "keyword": p.get("search_keyword") or f"{p['name']} {p['commune']} photo",
         "location_name": "France",
         "language_code": "fr",
         "depth": IMAGE_DEPTH,
