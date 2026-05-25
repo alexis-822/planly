@@ -3127,7 +3127,7 @@
     "price_level": null,
     "photos": [
       "images/plage_des_dunes/photo_1.jpg",
-      "images/plage_des_dunes/photo_2.jpeg",
+      "images/plage_des_dunes/photo_2.jpg",
       "images/plage_des_dunes/photo_3.jpg"
     ],
     "reviews": [
@@ -3334,8 +3334,8 @@
     },
     "photos_original_urls": [
       "https://www.bretignolles-sur-mer.fr/wp-content/uploads/2023/11/Visuel_plage.jpg",
-      "https://cdt85.media.tourinsoft.eu/upload/alamoureux-MG-0254.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqF5rf3DGxW9ZmzYNvx5WoYjKNnllORHW2lZiJeASyDqmHjApH0ErKa1KKzE2bbU_Mvgy_EiDtsz99SOg664t1ybcyr3__9saXDT8V98tI0CVOiNEeqpe60ZqofnS_MWs0XV1EgBcuUpKi5=w408-h306-k-no"
+      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqF5rf3DGxW9ZmzYNvx5WoYjKNnllORHW2lZiJeASyDqmHjApH0ErKa1KKzE2bbU_Mvgy_EiDtsz99SOg664t1ybcyr3__9saXDT8V98tI0CVOiNEeqpe60ZqofnS_MWs0XV1EgBcuUpKi5=w408-h306-k-no",
+      "https://www.bretignolles-sur-mer.fr/wp-content/uploads/2024/01/dunes1.jpg"
     ]
   },
   {
@@ -4800,8 +4800,8 @@
     "price_level": null,
     "photos": [
       "images/plage_de_l_aubraie/photo_1.jpg",
-      "images/plage_de_l_aubraie/photo_2.jpeg",
-      "images/plage_de_l_aubraie/photo_3.jpeg"
+      "images/plage_de_l_aubraie/photo_2.jpg",
+      "images/plage_de_l_aubraie/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -5019,8 +5019,9 @@
     "photos_original_urls": [
       "https://cdt85.media.tourinsoft.eu/upload/2023-LS-PlagedesGraviers---SBourcierVendeeExpansion.jpg",
       "https://www.lessablesdolonne.fr/wp-content/uploads/sit/d572f74374b4550dabc680a23603a66a-2023-LS-PlagedesGraviers---SBourcierVendeeExpansion-1000x710.jpg",
-      "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PlagedesGraviers-Aubraie---ALamoureux.jpg"
-    ]
+      "https://www.plage-propre.org/wp-content/uploads/2018/02/saint-gilles-croix-de-vie-grande-plage-e1518082281724.jpg"
+    ],
+    "search_keyword": "Plage Aubraie Saint-Gilles-Croix-de-Vie photo"
   },
   {
     "id": "plage_des_belugas",
@@ -17317,7 +17318,7 @@
     "photos": [
       "images/vouvant/photo_1.jpg",
       "images/vouvant/photo_2.jpg",
-      "images/vouvant/photo_3.webp"
+      "images/vouvant/photo_3.jpg"
     ],
     "reviews": [],
     "place_topics": null,
@@ -17390,7 +17391,7 @@
     "photos_original_urls": [
       "https://media.les-plus-beaux-villages-de-france.org/photos/s1611/vouvant-vue-depuis-la-riviere.webp",
       "https://lh3.googleusercontent.com/gps-cs-s/AHVAweoOXogyewZ4N3hRcywWBSEAauf99ksjKjUIPdWLbM5MMcJhgMnhvG7BNqYluYIHxgm-kl8HQxDa_RyHhZ0xxGXXynTqgUCjmCjEfd8huPjS_qozLxDkvrGPPIXMzEkRdlSGObK3cw=w408-h306-k-no",
-      "https://media.les-plus-beaux-villages-de-france.org/photos/s1611/vouvant-vue-du-ciel.webp"
+      "https://www.guide-de-la-vendee.com/_bibli/annonces/807/hd/vouvant-8-.jpg"
     ]
   }
 ]

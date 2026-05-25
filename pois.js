@@ -1048,7 +1048,7 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/plage_des_dunes/photo_1.jpg",
-      "planly_scraper/images/plage_des_dunes/photo_2.jpeg",
+      "planly_scraper/images/plage_des_dunes/photo_2.jpg",
       "planly_scraper/images/plage_des_dunes/photo_3.jpg"
     ],
     "name": "Plage des Dunes",
@@ -1314,8 +1314,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/plage_de_l_aubraie/photo_1.jpg",
-      "planly_scraper/images/plage_de_l_aubraie/photo_2.jpeg",
-      "planly_scraper/images/plage_de_l_aubraie/photo_3.jpeg"
+      "planly_scraper/images/plage_de_l_aubraie/photo_2.jpg",
+      "planly_scraper/images/plage_de_l_aubraie/photo_3.jpg"
     ],
     "name": "Plage de l'Aubraie",
     "commune": "Les Sables-d'Olonne",
@@ -4480,7 +4480,7 @@ var POIS=[
     "imgs": [
       "planly_scraper/images/vouvant/photo_1.jpg",
       "planly_scraper/images/vouvant/photo_2.jpg",
-      "planly_scraper/images/vouvant/photo_3.webp"
+      "planly_scraper/images/vouvant/photo_3.jpg"
     ],
     "name": "Vouvant",
     "commune": "Vouvant",
