@@ -1,35 +1,41 @@
-"""Télécharge toutes les images des POIs et met à jour les JSON avec les chemins locaux.
-Contrôle qualité : rejette les images < MIN_WIDTH pixels de large."""
-import json, os, re, requests, time, sys, io
+"""
+download_images.py — Télécharge les images des POIs avec pipeline qualité complet.
 
+Pipeline par image :
+1. Watermark URL check
+2. Téléchargement
+3. Magic bytes validation
+4. Géométrie (taille min, ratio max)
+5. Conversion WebP/PNG → JPEG
+6. Resize max 1920px
+7. MD5 dedup (intra-POI)
+8. pHash dedup perceptuel (intra-POI)
+"""
+import json, os, re, requests, time, sys, io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
 GLOBAL_JSON = os.path.join(SCRIPT_DIR, "output_global.json")
-OUTPUT_DIR = os.path.join(SCRIPT_DIR, "output")
-IMAGES_DIR = os.path.join(SCRIPT_DIR, "images")
-try:
-    from config import MIN_IMAGE_WIDTH
-    MIN_WIDTH = MIN_IMAGE_WIDTH
-except:
-    MIN_WIDTH = 800
-TARGET_WIDTH = 1200  # taille cible pour les images Google
+OUTPUT_DIR  = os.path.join(SCRIPT_DIR, "output")
+IMAGES_DIR  = os.path.join(SCRIPT_DIR, "images")
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-}
+from image_utils import (
+    is_watermarked, check_geometry, normalize_to_jpeg, resize_if_needed,
+    md5, is_perceptual_duplicate,
+)
+
+HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+TARGET_WIDTH = 1920
 
 
 def upgrade_google_url(url):
-    """Force la résolution HD sur les URLs Google."""
-    url = re.sub(r'=w\d+-h\d+-k-no', f'=w{TARGET_WIDTH}-h900-k-no', url)
-    url = re.sub(r'=s\d+', f'=s{TARGET_WIDTH}', url)
+    url = re.sub(r"=w\d+-h\d+-k-no", f"=w{TARGET_WIDTH}-h1080-k-no", url)
+    url = re.sub(r"=s\d+", f"=s{TARGET_WIDTH}", url)
     return url
 
 
-def download_image(url, dest_path):
+def download_raw(url, dest_path) -> tuple[bool, str]:
     try:
-        # Upgrade Google URLs automatiquement
         if "googleusercontent.com" in url:
             url = upgrade_google_url(url)
         r = requests.get(url, headers=HEADERS, timeout=15, stream=True)
@@ -37,117 +43,160 @@ def download_image(url, dest_path):
         with open(dest_path, "wb") as f:
             for chunk in r.iter_content(8192):
                 f.write(chunk)
-        size_kb = os.path.getsize(dest_path) / 1024
-        return True, f"{size_kb:.0f}KB"
+        return True, f"{os.path.getsize(dest_path) // 1024}KB"
     except Exception as e:
         return False, str(e)[:80]
 
-
-def check_image_quality(path):
-    """Vérifie que l'image fait au moins MIN_WIDTH pixels de large."""
-    try:
-        from PIL import Image
-        img = Image.open(path)
-        w, h = img.size
-        img.close()
-        return w >= MIN_WIDTH, w
-    except:
-        return False, 0
-
-def get_extension(url):
-    # Extract extension from URL
-    path = url.split("?")[0].split("#")[0]
-    ext = os.path.splitext(path)[1].lower()
-    if ext in (".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg"):
-        return ext
-    return ".jpg"  # default
 
 def main():
     with open(GLOBAL_JSON, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    total, ok, fail = 0, 0, 0
+    total, ok, fail, skip = 0, 0, 0, 0
 
     for poi in data:
-        tag = poi["id"]
+        tag     = poi["id"]
         poi_dir = os.path.join(IMAGES_DIR, tag)
         os.makedirs(poi_dir, exist_ok=True)
 
-        # Collect all image URLs
         urls = []
         if poi.get("main_image"):
             urls.append(("main", poi["main_image"]))
         for i, url in enumerate(poi.get("photos", [])):
-            if url != poi.get("main_image"):
-                urls.append((f"photo_{i+1}", url))
-            else:
-                urls.append((f"photo_{i+1}", url))
+            urls.append((f"photo_{i+1}", url))
 
         if not urls:
             continue
 
-        new_photos = []
-        new_main = None
+        seen_md5    = set()
+        seen_phash  = []
+        new_photos  = []
+        new_main    = None
 
         for label, url in urls:
             total += 1
-            ext = get_extension(url)
-            filename = f"{label}{ext}"
-            dest = os.path.join(poi_dir, filename)
-            rel_path = f"images/{tag}/{filename}"
 
+            # 1. Watermark check avant même de télécharger
+            if is_watermarked(url):
+                print(f"  [{tag}] {label} SKIP watermark")
+                skip += 1
+                continue
+
+            dest = os.path.join(poi_dir, f"{label}.jpg")
+
+            # Si déjà téléchargé et valide, vérifier et appliquer les filtres manquants
             if os.path.exists(dest) and os.path.getsize(dest) > 0:
-                # Vérifier la qualité de l'image existante
-                ok_quality, w = check_image_quality(dest)
-                if ok_quality:
-                    print(f"  [{tag}] {label} SKIP ({w}px)")
-                    ok += 1
+                ok_geom, raison = check_geometry(dest)
+                if not ok_geom:
+                    print(f"  [{tag}] {label} REJET {raison} — re-download")
+                    os.unlink(dest)
                 else:
-                    print(f"  [{tag}] {label} TROP PETIT ({w}px) — re-download")
-                    success, info = download_image(url, dest)
-                    if success:
-                        ok_q2, w2 = check_image_quality(dest)
-                        if ok_q2:
-                            print(f"  [{tag}] {label} OK ({w2}px, {info})")
-                            ok += 1
-                        else:
-                            print(f"  [{tag}] {label} WARNING: source trop petite ({w2}px)")
-                            ok += 1  # on garde quand même
-                    else:
-                        fail += 1
-                    time.sleep(0.3)
-            else:
-                success, info = download_image(url, dest)
-                if success:
-                    ok_quality, w = check_image_quality(dest)
-                    quality_str = f"{w}px" if ok_quality else f"WARNING {w}px < {MIN_WIDTH}px"
-                    print(f"  [{tag}] {label} OK ({info}, {quality_str})")
+                    h = md5(dest)
+                    if h in seen_md5:
+                        print(f"  [{tag}] {label} SKIP doublon_md5")
+                        skip += 1
+                        continue
+                    seen_md5.add(h)
+                    if is_perceptual_duplicate(dest, seen_phash):
+                        print(f"  [{tag}] {label} SKIP doublon_perceptuel")
+                        skip += 1
+                        continue
+                    print(f"  [{tag}] {label} SKIP (existe, valide)")
                     ok += 1
-                else:
-                    print(f"  [{tag}] {label} FAIL: {info}")
-                    fail += 1
-                    if os.path.exists(dest):
-                        os.remove(dest)
-                    rel_path = url  # keep original URL on failure
-                time.sleep(0.3)
+                    rel_path = f"images/{tag}/{label}.jpg"
+                    if label == "main":
+                        new_main = rel_path
+                    new_photos.append(rel_path)
+                    continue
 
+            # Téléchargement
+            tmp_path = dest + ".tmp"
+            success, info = download_raw(url, tmp_path)
+            if not success:
+                print(f"  [{tag}] {label} FAIL: {info}")
+                fail += 1
+                if os.path.exists(tmp_path):
+                    os.remove(tmp_path)
+                continue
+
+            if os.path.getsize(tmp_path) < 10000:
+                print(f"  [{tag}] {label} REJET trop_leger")
+                os.remove(tmp_path)
+                fail += 1
+                continue
+
+            # Magic bytes validation
+            with open(tmp_path, "rb") as f:
+                header = f.read(12)
+            is_img = (header[:2] == b"\xff\xd8" or header[:4] == b"\x89PNG"
+                      or header[:4] == b"RIFF" or b"WEBP" in header[:12])
+            if not is_img:
+                print(f"  [{tag}] {label} REJET pas_image")
+                os.remove(tmp_path)
+                fail += 1
+                continue
+
+            # Géométrie
+            ok_geom, raison = check_geometry(tmp_path)
+            if not ok_geom:
+                print(f"  [{tag}] {label} REJET {raison}")
+                os.remove(tmp_path)
+                fail += 1
+                continue
+
+            # Conversion → JPEG + rename à dest
+            try:
+                final = normalize_to_jpeg(tmp_path)
+                if final != dest:
+                    os.rename(final, dest)
+            except Exception as e:
+                print(f"  [{tag}] {label} REJET conversion_fail: {e}")
+                if os.path.exists(tmp_path):
+                    os.remove(tmp_path)
+                fail += 1
+                continue
+
+            # Resize
+            try:
+                resize_if_needed(dest)
+            except Exception:
+                pass
+
+            # MD5 dedup
+            h = md5(dest)
+            if h in seen_md5:
+                print(f"  [{tag}] {label} REJET doublon_md5")
+                os.remove(dest)
+                skip += 1
+                continue
+            seen_md5.add(h)
+
+            # pHash dedup
+            if is_perceptual_duplicate(dest, seen_phash):
+                print(f"  [{tag}] {label} REJET doublon_perceptuel")
+                os.remove(dest)
+                skip += 1
+                continue
+
+            from PIL import Image
+            w, h_px = Image.open(dest).size
+            print(f"  [{tag}] {label} OK ({info}, {w}x{h_px})")
+            ok += 1
+            time.sleep(0.2)
+
+            rel_path = f"images/{tag}/{label}.jpg"
             if label == "main":
                 new_main = rel_path
             new_photos.append(rel_path)
 
-        # Update POI data
+        # Mise à jour JSON
         if new_main:
             poi["main_image"] = new_main
         poi["photos_original_urls"] = poi.get("photos", [])
-        if poi.get("main_image") and "main_image_original_url" not in poi:
-            poi["main_image_original_url"] = urls[0][1] if urls[0][0] == "main" else None
         poi["photos"] = new_photos
 
-    # Save updated global
     with open(GLOBAL_JSON, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-
-    # Save individual files
     for poi in data:
         tag = poi["id"]
         poi_path = os.path.join(OUTPUT_DIR, f"{tag}.json")
@@ -155,7 +204,8 @@ def main():
             with open(poi_path, "w", encoding="utf-8") as f:
                 json.dump(poi, f, ensure_ascii=False, indent=2)
 
-    print(f"\nDone: {ok}/{total} OK, {fail} failed")
+    print(f"\nDone: {ok} OK, {fail} fail, {skip} skip / {total} total")
+
 
 if __name__ == "__main__":
     main()

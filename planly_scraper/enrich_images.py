@@ -22,24 +22,17 @@ from config import (
     DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD, DATAFORSEO_BASE_URL,
     BATCH_SIZE, IMAGE_DEPTH
 )
+from image_utils import (
+    is_watermarked, check_geometry, normalize_to_jpeg, resize_if_needed,
+    media_type_from_path, md5, is_perceptual_duplicate, is_portrait,
+    MIN_SIDE_PX, MAX_RATIO,
+)
 
-GLOBAL_JSON = os.path.join(SCRIPT_DIR, "output_global.json")
-IMAGES_DIR  = os.path.join(SCRIPT_DIR, "images")
-MAX_PHOTOS  = 3
-MAX_CANDIDATES = 10  # candidats max à scorer par POI
-MIN_SCORE   = 3      # score minimum pour garder une image
-MIN_SIDE_PX = 600    # côté minimum en pixels (en dessous = rejeté)
-MAX_RATIO   = 2.8    # ratio max largeur/hauteur (au dessus = trop aplati)
-
-# Domaines avec watermarks commerciaux — toujours rejetés
-WATERMARK_DOMAINS = [
-    "alamy.com", "123rf.com", "shutterstock.com", "gettyimages.",
-    "dreamstime.com", "depositphotos.com", "fotolia.com", "istockphoto.com",
-    "stock.adobe", "pond5.com", "bigstockphoto.com", "ftcdn.net",
-]
-
-def is_watermarked(url: str) -> bool:
-    return any(d in url.lower() for d in WATERMARK_DOMAINS)
+GLOBAL_JSON    = os.path.join(SCRIPT_DIR, "output_global.json")
+IMAGES_DIR     = os.path.join(SCRIPT_DIR, "images")
+MAX_PHOTOS     = 3
+MAX_CANDIDATES = 10
+MIN_SCORE      = 3
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
@@ -116,66 +109,63 @@ def fetch_image_candidates(pois: list[dict]) -> dict[str, list]:
 # ── Téléchargement temporaire ────────────────────────────────────────────────
 
 def download_to_temp(url: str) -> str | None:
-    """Télécharge une image dans un fichier temporaire, retourne le chemin ou None."""
+    """
+    Télécharge une image, applique tous les filtres qualité, retourne le chemin .jpg ou None.
+    Pipeline : watermark → téléchargement → magic bytes → géométrie → convert JPEG → resize.
+    """
+    if is_watermarked(url):
+        return None
     try:
         r = requests.get(url, headers=HEADERS_HTTP, timeout=15, stream=True)
         r.raise_for_status()
         ct = r.headers.get("content-type", "")
-        if "image" not in ct and not any(url.lower().endswith(e) for e in (".jpg",".jpeg",".png",".webp")):
+        if "image" not in ct and not any(url.lower().endswith(e) for e in (".jpg", ".jpeg", ".png", ".webp")):
             return None
-        suffix = ".jpg"
-        for ext in (".png", ".webp", ".jpeg"):
-            if ext in url.lower() or ext.replace(".", "") in ct:
-                suffix = ext; break
-        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
+        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".tmp")
         for chunk in r.iter_content(8192):
             tmp.write(chunk)
         tmp.close()
-        size = os.path.getsize(tmp.name)
-        if size < 10000:  # < 10KB = trop petit
-            os.unlink(tmp.name)
+        path = tmp.name
+
+        if os.path.getsize(path) < 10000:
+            os.unlink(path)
             return None
-        # Vérifier que c'est bien une image (magic bytes)
-        with open(tmp.name, "rb") as f:
+
+        # Vérifier magic bytes
+        with open(path, "rb") as f:
             header = f.read(12)
-        is_img = (
-            header[:2] == b'\xff\xd8' or  # JPEG
-            header[:4] == b'\x89PNG' or   # PNG
-            header[:4] in (b'RIFF', b'WEBP') or  # WebP
-            b'WEBP' in header[:12]
-        )
+        is_img = (header[:2] == b"\xff\xd8" or header[:4] == b"\x89PNG"
+                  or header[:4] == b"RIFF" or b"WEBP" in header[:12])
         if not is_img:
-            os.unlink(tmp.name)
+            os.unlink(path)
             return None
-        # Rejeter watermarks connus
-        if is_watermarked(url):
-            os.unlink(tmp.name)
+
+        # Géométrie (taille + ratio)
+        ok, raison = check_geometry(path)
+        if not ok:
+            os.unlink(path)
             return None
-        # Filtrer taille et ratio
-        try:
-            from PIL import Image as _PILCheck
-            with open(tmp.name, "rb") as f:
-                _w, _h = _PILCheck.open(f).size
-            _min = min(_w, _h)
-            _ratio = max(_w, _h) / _min if _min else 999
-            if _min < MIN_SIDE_PX or _ratio > MAX_RATIO:
-                os.unlink(tmp.name)
-                return None
-        except Exception:
-            pass  # si Pillow échoue, on garde l'image
-        return tmp.name
+
+        # Convertir WebP/PNG → JPEG, normaliser en .jpg
+        path = normalize_to_jpeg(path)
+
+        # Resize si > 1920px
+        resize_if_needed(path)
+
+        return path
     except Exception:
         return None
 
 
 def image_to_base64(path: str) -> tuple[str, str]:
-    """Retourne (base64_data, media_type). Redimensionne si > 4MB."""
-    ext = os.path.splitext(path)[1].lower()
-    mt = {"jpg": "image/jpeg", "jpeg": "image/jpeg",
-          "png": "image/png", "webp": "image/webp"}.get(ext.lstrip("."), "image/jpeg")
+    """
+    Retourne (base64_data, media_type).
+    media_type détecté depuis les magic bytes (pas l'extension) → évite Claude API 400.
+    Redimensionne si > 4MB.
+    """
+    mt = media_type_from_path(path)  # basé sur magic bytes, pas l'extension
     with open(path, "rb") as f:
         data = f.read()
-    # Claude limite à 5MB — si trop grand, redimensionner avec Pillow
     if len(data) > 4 * 1024 * 1024:
         try:
             from PIL import Image as PILImage
@@ -183,12 +173,11 @@ def image_to_base64(path: str) -> tuple[str, str]:
             img = PILImage.open(_io.BytesIO(data))
             img.thumbnail((1920, 1920), PILImage.LANCZOS)
             buf = _io.BytesIO()
-            fmt = "JPEG" if mt == "image/jpeg" else ("PNG" if mt == "image/png" else "JPEG")
-            img.save(buf, format=fmt, quality=85)
+            img.save(buf, format="JPEG", quality=85)
             data = buf.getvalue()
-            mt = "image/jpeg" if fmt == "JPEG" else mt
+            mt = "image/jpeg"
         except Exception:
-            pass  # Si Pillow échoue, on tente quand même
+            pass
     return base64.standard_b64encode(data).decode(), mt
 
 
@@ -277,42 +266,35 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
     existing_urls = poi.get("photos_original_urls") or []
     all_candidates = []
 
-    # Images existantes déjà téléchargées — filtrées (watermark, taille, ratio, doublons)
+    # Images existantes déjà téléchargées — filtrées (watermark, taille, ratio, MD5, pHash)
     existing_local = [p for p in (poi.get("photos") or []) if not p.startswith("http")]
-    seen_existing_hashes = set()
+    seen_existing_md5   = set()
+    seen_existing_phash = []
     for i, local in enumerate(existing_local):
         full = os.path.join(SCRIPT_DIR, local)
         if not os.path.exists(full):
             continue
         url = existing_urls[i] if i < len(existing_urls) else ""
-        # Rejeter watermarks connus
+
         if is_watermarked(url):
             log.info(f"    [existing] ✗ watermark — {url[:60]}")
             continue
-        # Rejeter si taille insuffisante ou ratio aplati
-        try:
-            from PIL import Image as _PIL
-            _w, _h = _PIL.open(full).size
-            _min = min(_w, _h)
-            _ratio = max(_w, _h) / _min if _min else 999
-            if _min < MIN_SIDE_PX:
-                log.info(f"    [existing] ✗ trop_petit({_w}x{_h}) — {os.path.basename(full)}")
-                continue
-            if _ratio > MAX_RATIO:
-                log.info(f"    [existing] ✗ trop_aplati({_w}x{_h} ratio={_ratio:.1f}) — {os.path.basename(full)}")
-                continue
-        except Exception:
-            pass
-        # Rejeter doublons entre existantes
-        try:
-            with open(full, "rb") as _f:
-                _h_val = hashlib.md5(_f.read()).hexdigest()
-            if _h_val in seen_existing_hashes:
-                log.info(f"    [existing] ✗ doublon — {os.path.basename(full)}")
-                continue
-            seen_existing_hashes.add(_h_val)
-        except Exception:
-            pass
+
+        ok, raison = check_geometry(full)
+        if not ok:
+            log.info(f"    [existing] ✗ {raison} — {os.path.basename(full)}")
+            continue
+
+        h = md5(full)
+        if h in seen_existing_md5:
+            log.info(f"    [existing] ✗ doublon_md5 — {os.path.basename(full)}")
+            continue
+        seen_existing_md5.add(h)
+
+        if is_perceptual_duplicate(full, seen_existing_phash):
+            log.info(f"    [existing] ✗ doublon_perceptuel — {os.path.basename(full)}")
+            continue
+
         all_candidates.append({"url": url, "local": full, "source": "existing"})
 
     # Nouveaux candidats DataForSEO
@@ -328,7 +310,8 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
 
     # 2. Télécharger les nouveaux candidats dans des fichiers temp
     scored = []
-    seen_hashes = set()  # déduplication par contenu
+    seen_hashes  = set()   # MD5 dedup (doublons binaires)
+    seen_phashes = []      # pHash dedup — se construit pendant la boucle (ne pas pré-charger les existants)
 
     for cand in all_candidates:
         tmp_path = cand.get("local")
@@ -340,15 +323,21 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
                 log.info(f"    ✗ Impossible de télécharger {cand['url'][:60]}")
                 continue
 
-        # Dédup par hash fichier
-        with open(tmp_path, "rb") as f:
-            h = hashlib.md5(f.read()).hexdigest()
+        # MD5 dedup
+        h = md5(tmp_path)
         if h in seen_hashes:
-            log.info(f"    ✗ Doublon (même image) — {cand['url'][:60]}")
+            log.info(f"    ✗ doublon_md5 — {cand['url'][:60]}")
             if is_temp and os.path.exists(tmp_path):
                 os.unlink(tmp_path)
             continue
         seen_hashes.add(h)
+
+        # pHash dedup perceptuel (détecte les mêmes photos recompressées)
+        if is_perceptual_duplicate(tmp_path, seen_phashes):
+            log.info(f"    ✗ doublon_perceptuel — {cand['url'][:60]}")
+            if is_temp and os.path.exists(tmp_path):
+                os.unlink(tmp_path)
+            continue
 
         # 3. Score Claude Haiku
         result = score_image(name, subcat, tmp_path)
@@ -400,9 +389,8 @@ def process_poi(poi: dict, new_candidates: list) -> list[str]:
     final_paths = []
     final_urls  = []
     for i, item in enumerate(selected, 1):
-        ext      = os.path.splitext(item["path"])[1] or ".jpg"
-        dest     = os.path.join(poi_dir, f"photo_{i}{ext}")
-        rel_path = f"images/{tag}/photo_{i}{ext}"
+        dest     = os.path.join(poi_dir, f"photo_{i}.jpg")  # toujours .jpg
+        rel_path = f"images/{tag}/photo_{i}.jpg"
 
         if item["source"] == "existing" and not item["is_temp"]:
             _safe_copy(item["path"], dest)

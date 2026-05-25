@@ -1570,8 +1570,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/foret_domaniale_d_olonne/photo_1.jpg",
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_2.jpeg",
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpeg"
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_2.jpg",
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpg"
     ],
     "name": "Forêt Domaniale d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -3181,8 +3181,8 @@ var POIS=[
   {
     "imgs": [
       "planly_scraper/images/pointe_du_payre/photo_1.jpg",
-      "planly_scraper/images/pointe_du_payre/photo_2.jpeg",
-      "planly_scraper/images/pointe_du_payre/photo_3.jpeg"
+      "planly_scraper/images/pointe_du_payre/photo_2.jpg",
+      "planly_scraper/images/pointe_du_payre/photo_3.jpg"
     ],
     "name": "Pointe du Payré",
     "commune": "Jard-sur-Mer",

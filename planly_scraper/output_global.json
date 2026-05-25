@@ -5289,8 +5289,8 @@
     "price_level": null,
     "photos": [
       "images/foret_domaniale_d_olonne/photo_1.jpg",
-      "images/foret_domaniale_d_olonne/photo_2.jpeg",
-      "images/foret_domaniale_d_olonne/photo_3.jpeg"
+      "images/foret_domaniale_d_olonne/photo_2.jpg",
+      "images/foret_domaniale_d_olonne/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -5681,10 +5681,11 @@
       "specific.ferry_pricing": "Tarifs ferry (spécifique Île d'Yeu)"
     },
     "photos_original_urls": [
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAwer8WipLZIcRchvkWIf0VKi_vPPpaW8vcfzCM0SUSp_zDGRKEoBxaldxztU1pJriaibKpzxU2p6_6reLSRMKDKWeVyYwmgXiGtPr6OxVIPQyOwoKtInpf8Dy8_VK8TPaSNl1GkJYWQ=w408-h306-k-no",
-      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/05/2023-antoinemartineau-foret-dolonne-1600x900.jpg",
+      "https://www.camping-logeries.com/wp-content/uploads/2025/12/foret_domaniale_olonne_sur_mer-1-2.jpg",
+      "https://www.lessablesdolonne.fr/wp-content/uploads/2024/06/2023-foret-rando-chemindesgrandschevaux-lessablesdolonne-envendee-228-1600x900.jpg",
       "https://www.onf.fr/outils/long-reads/ff88c4ef-8704-4d14-93a6-a5b708aae81f/++versions++/2/++paras++/20/1/++attr++data/++thumb++pano:w1200?_=1637074071.007071"
-    ]
+    ],
+    "search_keyword": "sentier foret olonne randonnee photo"
   },
   {
     "id": "marais_salants_de_l_ile_d_olonne",
@@ -11295,8 +11296,9 @@
     "photos_original_urls": [
       "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/Aerien-0723-1600x900.jpg",
       "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/Aerien-0723-1200x800.jpg",
-      "https://lh3.googleusercontent.com/gps-cs-s/AHVAweraS-XnAPE0zweAtlLmvTRa8T2eItvNtTDhMe0gIeGFiUdZe7gVdDKO3DWrqbPdiVgQF_0dCjmjRaQwo7SvlyJEZkbbG-wGf_J4eLRIt3S1bqfMsAFvG-YWCt0YoQGwL1KrlBHptg=w408-h306-k-no"
-    ]
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/813698818.jpg?k=79eefca599d2711d322995716556e89b5b816b8556bd2477aaf999af28e5012f&o="
+    ],
+    "search_keyword": "belvédère vue mer Saint-Gilles-Croix-de-Vie photo"
   },
   {
     "id": "le_puits_d_enfer",
@@ -12758,8 +12760,8 @@
     "price_level": null,
     "photos": [
       "images/pointe_du_payre/photo_1.jpg",
-      "images/pointe_du_payre/photo_2.jpeg",
-      "images/pointe_du_payre/photo_3.jpeg"
+      "images/pointe_du_payre/photo_2.jpg",
+      "images/pointe_du_payre/photo_3.jpg"
     ],
     "reviews": [
       {
@@ -12938,9 +12940,9 @@
       "specific.tide_sensitive": "Accès dépendant des marées"
     },
     "photos_original_urls": [
-      "https://la-grand-metairie.com/wp-content/uploads/2019/06/pointe-du-payre.jpg",
-      "https://media.decathlon-outdoor.com/1cxHDWSWaVNVJ8xRGUvNXT/randonnee-pointe-payre-3-a231c61dc5.jpeg",
-      "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2018/01/Jard-sur-mer_pointe-du-payr%C3%A9-3-e1516812552310-800x600.jpg"
+      "https://www.enpaysdelaloire.com/sites/default/files/styles/ogimage/public/sit/images/PNAPDL085V50012F/P1020892.jpg?itok=tAkVDYp4",
+      "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2018/03/Vue-de-la-Pointe-du-Payr%C3%A9-cr%C3%A9dit-photo-destination-vend%C3%A9e-grand-littoral-2-800x600.jpg",
+      "https://media-cdn.tripadvisor.com/media/photo-m/1280/14/88/c4/e6/pointe-du-payre.jpg"
     ]
   },
   {
