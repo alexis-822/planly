@@ -5,6 +5,7 @@ import sys
 import io
 import re
 import math
+from datetime import datetime
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
@@ -209,7 +210,7 @@ def convert_poi(p):
     imgs = []
     for ph in photos[:3]:
         if not ph.startswith("http"):
-            imgs.append("planly_scraper/" + ph)
+            imgs.append("planly_scraper/" + ph + "?v=" + BUILD_VERSION)
         else:
             imgs.append(ph)
     if not imgs:
@@ -314,6 +315,9 @@ def convert_poi(p):
 
 
 def main():
+    global BUILD_VERSION
+    BUILD_VERSION = datetime.now().strftime("%Y%m%d%H%M")
+
     with open(GLOBAL_JSON, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -330,9 +334,29 @@ def main():
     js_data = json.dumps(converted, ensure_ascii=False, indent=2)
     js_block = "var POIS=" + js_data + ";\n"
 
-    # Écrire dans pois.js (séparé du HTML pour optimiser le chargement)
+    # Écrire dans pois.js
     with open(POIS_JS, "w", encoding="utf-8") as f:
         f.write(js_block)
+
+    # Mettre à jour le tag <script src="pois.js?v=..."> dans le HTML
+    with open(PLANLY_HTML, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    # Remplace pois.js?v=... ou pois.js (sans version) par la version actuelle
+    html_new = re.sub(r'<script src="pois\.js(?:\?v=[^"]*)?"></script>',
+                      f'<script src="pois.js?v={BUILD_VERSION}"></script>', html)
+
+    # Ajouter meta no-store si absent
+    if 'http-equiv="Cache-Control"' not in html_new:
+        html_new = html_new.replace(
+            '<meta charset="UTF-8">',
+            '<meta charset="UTF-8">\n<meta http-equiv="Cache-Control" content="no-store">'
+        )
+
+    if html_new != html:
+        with open(PLANLY_HTML, "w", encoding="utf-8") as f:
+            f.write(html_new)
+        print(f"planly-full.html mis a jour (pois.js?v={BUILD_VERSION})")
 
     print(f"{len(converted)} POIs injectes dans pois.js")
     for c in converted:
