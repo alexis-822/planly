@@ -1504,7 +1504,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202605260848"></script>
+<script src="pois.js?v=202605261017"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -3718,7 +3718,10 @@ updateCard(currentIdx);
 (function(){var b=document.getElementById('act-badge');if(b)b.textContent=likedPois.length;})();
 
 // PWA
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js');}
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js').catch(console.error);
+  navigator.serviceWorker.addEventListener('controllerchange', function() { location.reload(); });
+}
 </script>
 </body>
 </html>

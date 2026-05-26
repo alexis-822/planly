@@ -358,6 +358,18 @@ def main():
             f.write(html_new)
         print(f"planly-full.html mis a jour (pois.js?v={BUILD_VERSION})")
 
+    # Mettre à jour CACHE_NAME dans sw.js pour invalider le cache PWA
+    sw_path = os.path.join(os.path.dirname(PLANLY_HTML), "sw.js")
+    if os.path.exists(sw_path):
+        with open(sw_path, "r", encoding="utf-8") as f:
+            sw = f.read()
+        sw_new = re.sub(r"const CACHE_NAME = 'planly-v[^']*'",
+                        f"const CACHE_NAME = 'planly-v{BUILD_VERSION}'", sw)
+        if sw_new != sw:
+            with open(sw_path, "w", encoding="utf-8") as f:
+                f.write(sw_new)
+            print(f"sw.js mis a jour (planly-v{BUILD_VERSION})")
+
     print(f"{len(converted)} POIs injectes dans pois.js")
     for c in converted:
         print(f"  {c['name']}")
