@@ -1504,7 +1504,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202605261017"></script>
+<script src="pois.js?v=202606010824"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -3137,6 +3137,11 @@ function toggleAddPoi(btn){
 function renderList(){
   var zone=document.getElementById('list-zone');
   var fp=getFilteredPois();
+  if(!activeL1){
+    fp=_interleaveByCat(fp);
+  } else {
+    fp=fp.slice().sort(function(a,b){return _scorePoi(b)-_scorePoi(a);});
+  }
   zone.innerHTML=fp.map(function(p){
     var i=POIS.indexOf(p);
     var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
