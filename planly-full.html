@@ -1512,7 +1512,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606010847"></script>
+<script src="pois.js?v=202606010849"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -3187,16 +3187,24 @@ function renderList(){
       +'<button class="lcard-like'+(liked?' on':'')+'" onclick="toggleListLike('+i+',this);event.stopPropagation()">'+(liked?'♥':'♡')+'</button>'
       +'</div></div></div>';
   }).join('');
-  // Swipe horizontal sur les photos
+  // Swipe horizontal sur les photos (Airbnb-style)
   zone.querySelectorAll('.lcard-img-wrap').forEach(function(wrap){
-    if((wrap.dataset.srcs||'').split('|').length<2)return;
-    var tx=0,swiped=false;
-    wrap.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;swiped=false;},{passive:true});
-    wrap.addEventListener('touchmove',function(e){if(Math.abs(e.touches[0].clientX-tx)>10)swiped=true;},{passive:true});
+    if((wrap.dataset.srcs||'').split('|').filter(Boolean).length<2)return;
+    var tx=0,ty=0,isHoriz=false;
+    wrap.addEventListener('touchstart',function(e){
+      tx=e.touches[0].clientX;ty=e.touches[0].clientY;isHoriz=false;
+    },{passive:true});
+    wrap.addEventListener('touchmove',function(e){
+      var dx=Math.abs(e.touches[0].clientX-tx),dy=Math.abs(e.touches[0].clientY-ty);
+      if(dx>dy&&dx>5){isHoriz=true;e.preventDefault();}
+    },{passive:false});
     wrap.addEventListener('touchend',function(e){
-      var dx=e.changedTouches[0].clientX-tx;
-      if(Math.abs(dx)>30){lcardNextPhoto(wrap,dx<0?1:-1);e.preventDefault();e.stopPropagation();}
-      else if(!swiped){lcardNextPhoto(wrap,1);}
+      var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;
+      if(isHoriz&&Math.abs(dx)>30){
+        lcardNextPhoto(wrap,dx<0?1:-1);e.preventDefault();e.stopPropagation();
+      } else if(Math.abs(dx)<10&&Math.abs(dy)<10){
+        lcardNextPhoto(wrap,1);e.preventDefault();e.stopPropagation();
+      }
     });
   });
 }
