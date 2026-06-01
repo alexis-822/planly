@@ -1513,7 +1513,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606010905"></script>
+<script src="pois.js?v=202606010936"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -3147,7 +3147,9 @@ function toggleAddPoi(btn){
     btn.querySelector('.btn-txt').textContent='Ajouter à mes activités';
     likedPois=likedPois.filter(function(n){return n!==p.name;});
     localStorage.setItem('planly_likes',JSON.stringify(likedPois));
-    if(fromAct){setTimeout(function(){closeAll();renderActivites();},200);}
+    rebuildSwipeDeck(false);
+    if(fromAct){setTimeout(function(){closeAll();renderActivites();renderList();},200);}
+    else{renderList();}
   }
   var badge=document.getElementById('act-badge');
   if(badge)badge.textContent=likedPois.length;
@@ -3220,6 +3222,7 @@ function toggleListLike(idx, btn){
   if(liked){
     likedPois=likedPois.filter(function(n){return n!==name;});
     btn.className='lcard-like';btn.textContent='♡';
+    rebuildSwipeDeck(false);
   } else {
     saveLike(idx);
     btn.className='lcard-like on';btn.textContent='♥';
@@ -3227,6 +3230,7 @@ function toggleListLike(idx, btn){
   localStorage.setItem('planly_likes',JSON.stringify(likedPois));
   var badge=document.getElementById('act-badge');
   if(badge)badge.textContent=likedPois.length||'';
+  if(document.getElementById('activites-view').classList.contains('open'))renderActivites();
 }
 
 function lcardNextPhoto(wrap,dir){
@@ -3751,16 +3755,28 @@ function removeLike(name){
   localStorage.setItem('planly_likes',JSON.stringify(likedPois));
   var badge=document.getElementById('act-badge');if(badge)badge.textContent=likedPois.length;
   if(POIS[currentIdx]&&POIS[currentIdx].name===name)updateLikeBtn(false);
+  rebuildSwipeDeck(false);
   renderActivites();
+  renderList();
 }
 
 function clearLikes(){
-  if(!confirm('Vider toutes tes activités ?'))return;
+  // confirm() bloqué silencieusement en PWA iOS — double-tap pour confirmer
+  var cb=document.getElementById('act-clear-btn');
+  if(!cb)return;
+  if(cb.dataset.confirm!=='1'){
+    cb.dataset.confirm='1';cb.textContent='Confirmer ?';
+    setTimeout(function(){if(cb.dataset.confirm==='1'){cb.dataset.confirm='';cb.textContent='Vider';}},3000);
+    return;
+  }
+  cb.dataset.confirm='';cb.textContent='Vider';
   likedPois=[];
   localStorage.setItem('planly_likes','[]');
   var badge=document.getElementById('act-badge');if(badge)badge.textContent=0;
   updateLikeBtn(false);
+  rebuildSwipeDeck(true);
   renderActivites();
+  renderList();
 }
 
 function renderActivites(){
@@ -3778,22 +3794,47 @@ function renderActivites(){
   }
   scroll.innerHTML=liked.map(function(p){
     var i=POIS.indexOf(p);
-    var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
-    var inco=p.inco?'<div class="lcard-inco">⭐ Incontournable</div>':'';
-    var safeName=p.name.replace(/'/g,'\\\'');
-    return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
-      +'<img src="'+img+'" alt="" loading="lazy">'
+    var imgs=p.imgs&&p.imgs.length?p.imgs:[''];
+    var inco=p.inco?'<div class="lcard-inco">⭐</div>':'';
+    var dur=p.duration>=60?(Math.floor(p.duration/60)+'h'+(p.duration%60?p.duration%60:'')):(p.duration+'min');
+    var dist=p.distance&&p.distance.km&&p.distance.km!=='?'?p.distance.km+' km':'';
+    var srcsAttr=imgs.join('|');
+    var dotsHtml=imgs.length>1?'<div class="lcard-photo-dots">'+imgs.map(function(_,n){return '<div class="lcard-photo-dot'+(n===0?' on':'')+'"></div>';}).join('')+'</div>':'';
+    return '<div class="lcard" onclick="openPoiSheet('+i+')">'
+      +'<div class="lcard-img-wrap" data-srcs="'+srcsAttr+'" onclick="lcardNextPhoto(this);event.stopPropagation()">'
+      +'<img src="'+imgs[0]+'" alt="" loading="lazy">'
+      +dotsHtml
       +'<div class="lcard-cat">'+p.cat+'</div>'
-      +'<button class="lcard-remove" onclick="event.stopPropagation();removeLike(\''+safeName+'\')">✕</button>'
       +inco
+      +'</div>'
       +'<div class="lcard-body">'
       +'<div class="lcard-name">'+p.name+'</div>'
+      +'<div class="lcard-commune">📍 '+p.commune+(dist?' · '+dist:'')+'</div>'
       +'<div class="lcard-desc">'+p.desc+'</div>'
+      +'<div class="lcard-footer">'
       +'<div class="lcard-pills">'
-      +'<div class="lcard-pill'+(p.budgetClass==='free'?' green':'')+'">'+p.budgetBadge+'</div>'
+      +(p.budgetBadge?'<div class="lcard-pill'+(p.budgetClass==='free'?' green':'')+'">'+p.budgetBadge+'</div>':'')
       +'<div class="lcard-pill">⭐ '+p.note+'</div>'
+      +'<div class="lcard-pill">⏱ '+dur+'</div>'
+      +'</div>'
+      +'<button class="lcard-like on" onclick="event.stopPropagation();toggleListLike('+i+',this)">♥</button>'
       +'</div></div></div>';
   }).join('');
+  // Touch carousel (même logique que renderList)
+  scroll.querySelectorAll('.lcard-img-wrap').forEach(function(wrap){
+    if((wrap.dataset.srcs||'').split('|').filter(Boolean).length<2)return;
+    var tx=0,ty=0,isHoriz=false;
+    wrap.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;ty=e.touches[0].clientY;isHoriz=false;},{passive:true});
+    wrap.addEventListener('touchmove',function(e){
+      var dx=Math.abs(e.touches[0].clientX-tx),dy=Math.abs(e.touches[0].clientY-ty);
+      if(dx>dy&&dx>5){isHoriz=true;e.preventDefault();}
+    },{passive:false});
+    wrap.addEventListener('touchend',function(e){
+      var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;
+      if(isHoriz&&Math.abs(dx)>30){lcardNextPhoto(wrap,dx<0?1:-1);e.preventDefault();e.stopPropagation();}
+      else if(Math.abs(dx)<10&&Math.abs(dy)<10){lcardNextPhoto(wrap,1);e.preventDefault();e.stopPropagation();}
+    });
+  });
 }
 
 // ── INIT ──
