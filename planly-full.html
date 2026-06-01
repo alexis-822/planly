@@ -1339,8 +1339,8 @@ body{
     <div class="bs-handle-row" onclick="closeSettingsSheet()"><div class="bs-handle"></div></div>
     <div class="ss-title">Mode de vue</div>
     <div class="ss-row">
-      <div class="ss-mode-btn active" id="ss-swipe" onclick="ssSetMode('swipe')">🃏 Swipe</div>
-      <div class="ss-mode-btn" id="ss-liste" onclick="ssSetMode('liste')">≡ Liste</div>
+      <div class="ss-mode-btn" id="ss-swipe" onclick="ssSetMode('swipe')">🃏 Swipe</div>
+      <div class="ss-mode-btn active" id="ss-liste" onclick="ssSetMode('liste')">≡ Liste</div>
     </div>
     <div class="f-divider" style="margin:10px 0;"></div>
     <div class="bs-f-header"><div class="bs-f-title">Filtres</div><div class="bs-f-reset" onclick="resetAll()">Tout effacer</div></div>
@@ -1504,7 +1504,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606010824"></script>
+<script src="pois.js?v=202606010826"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -1705,6 +1705,7 @@ function launchExplorer(){
     renderPillsL0();
     updateCtxPill();
     updateCard(0);
+    setView('liste');
   },150);
 }
 
