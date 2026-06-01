@@ -2,10 +2,12 @@ import http.server
 import sys
 import subprocess
 import os
+import socket
 import urllib.request
 import urllib.parse
 
 PROXY_UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def refresh_tides():
     script = os.path.join(os.path.dirname(__file__), "fetch_tides.py")
@@ -22,8 +24,10 @@ refresh_tides()
 
 class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory=SCRIPT_DIR, **kwargs)
+
     def do_GET(self):
-        # Endpoint proxy : /proxy?url=https://...
         if self.path.startswith("/proxy?"):
             qs = urllib.parse.parse_qs(self.path[7:])
             target = qs.get("url", [None])[0]
@@ -51,9 +55,23 @@ class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
     def log_message(self, format, *args):
-        # Silence proxy logs, keep others
-        if "/proxy?" not in args[0]:
-            super().log_message(format, *args)
+        if args and isinstance(args[0], str) and "/proxy?" in args[0]:
+            return
+        super().log_message(format, *args)
 
-print("Server: http://0.0.0.0:8080 (no-cache + /proxy endpoint)")
-http.server.HTTPServer(("0.0.0.0", 8080), NoCacheHandler).serve_forever()
+
+class DualStackServer(http.server.HTTPServer):
+    """Écoute IPv4 et IPv6 simultanément (dual-stack).
+    Nécessaire sur Windows 11 où localhost résout vers ::1 (IPv6) en priorité.
+    """
+    address_family = socket.AF_INET6
+
+    def server_bind(self):
+        # IPV6_V6ONLY=0 → accepte aussi les connexions IPv4 via ::ffff:127.0.0.1
+        self.socket.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 0)
+        super().server_bind()
+
+
+print(f"Server: http://localhost:8080  |  http://127.0.0.1:8080  |  http://192.168.1.15:8080")
+print(f"Répertoire servi : {SCRIPT_DIR}")
+DualStackServer(("::", 8080), NoCacheHandler).serve_forever()
