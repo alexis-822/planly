@@ -1513,7 +1513,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606010901"></script>
+<script src="pois.js?v=202606010905"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2778,12 +2778,15 @@ function openPoiSheet(idx){
   // Rendu unifié : même style pour tous les types
   renderPoiBody(p,mode);
   if(isBeach)fetchBeachData(p);
-  // Bouton like
+  // Bouton like — contexte activités vs explorer
+  var fromAct=document.getElementById('activites-view').classList.contains('open');
+  var passBtn=document.getElementById('bs-btn-pass');
+  if(passBtn)passBtn.style.display=fromAct?'none':'';
   var btn=document.getElementById('bs-btn-like');
   if(isLiked(p.name)){
     btn.classList.add('added');
     btn.querySelector('.btn-icon').textContent='✓';
-    btn.querySelector('.btn-txt').textContent='Ajouté à mes activités';
+    btn.querySelector('.btn-txt').textContent=fromAct?'Retirer de mes activités':'Ajouté à mes activités';
   }else{
     btn.classList.remove('added');
     btn.querySelector('.btn-icon').textContent='♥';
@@ -3126,15 +3129,16 @@ function handleCardClick(e){
 function toggleAddPoi(btn){
   var p=POIS[currentIdx];
   var added=btn.classList.contains('added');
+  var fromAct=document.getElementById('activites-view').classList.contains('open');
   if(!added){
     btn.classList.add('added');
     btn.querySelector('.btn-icon').textContent='✓';
     btn.querySelector('.btn-txt').textContent='Ajouté à mes activités';
-    // Ferme la fiche — en mode liste : refresh list ; en swipe : avance la card
     var inListMode=document.getElementById('list-zone').classList.contains('active');
     setTimeout(function(){
       closeAll();
-      if(inListMode){saveLike(currentIdx);renderList();}
+      if(fromAct){saveLike(currentIdx);renderActivites();}
+      else if(inListMode){saveLike(currentIdx);renderList();}
       else{doSwipeBtn('like');}
     },320);
   } else {
@@ -3143,8 +3147,8 @@ function toggleAddPoi(btn){
     btn.querySelector('.btn-txt').textContent='Ajouter à mes activités';
     likedPois=likedPois.filter(function(n){return n!==p.name;});
     localStorage.setItem('planly_likes',JSON.stringify(likedPois));
+    if(fromAct){setTimeout(function(){closeAll();renderActivites();},200);}
   }
-  // Mettre à jour badge activités
   var badge=document.getElementById('act-badge');
   if(badge)badge.textContent=likedPois.length;
 }
