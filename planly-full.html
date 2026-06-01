@@ -481,9 +481,8 @@ body{
 .act-clear-btn{font-size:12px;color:#ef4444;font-weight:500;cursor:pointer;padding:4px 8px;border-radius:8px;border:1px solid rgba(239,68,68,.3);background:rgba(239,68,68,.07);-webkit-tap-highlight-color:transparent;}
 .lcard-remove{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;border:none;line-height:1;}
 .lcard{border-radius:14px;overflow:hidden;margin-bottom:16px;cursor:pointer;background:var(--wh);box-shadow:0 2px 10px rgba(0,0,0,.08);}
-.lcard-img-wrap{position:relative;height:180px;overflow:hidden;}
-.lcard-img-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .25s;}
-.lcard-img-wrap img.on{opacity:1;}
+.lcard-img-wrap{position:relative;height:160px;overflow:hidden;cursor:pointer;}
+.lcard-img-wrap img{width:100%;height:160px;object-fit:cover;display:block;}
 .lcard-overlay{display:none;}
 .lcard-cat{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);border-radius:12px;padding:4px 10px;font-size:10px;font-weight:500;color:#fff;z-index:1;}
 .lcard-inco{position:absolute;top:10px;right:10px;background:rgba(212,168,67,.9);border-radius:12px;padding:4px 10px;font-size:10px;font-weight:600;color:#fff;z-index:1;}
@@ -1513,7 +1512,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606010833"></script>
+<script src="pois.js?v=202606010839"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2757,6 +2756,7 @@ function _restoreSrchAfterPoi(){
 }
 
 function openPoiSheet(idx){
+  currentIdx=idx;
   _hideSrchForPoi();
   var p=POIS[idx];
   bsCarIdx=0;bsImgs=p.imgs;
@@ -3129,8 +3129,13 @@ function toggleAddPoi(btn){
     btn.classList.add('added');
     btn.querySelector('.btn-icon').textContent='✓';
     btn.querySelector('.btn-txt').textContent='Ajouté à mes activités';
-    // Ferme la fiche et swipe like vers la card suivante
-    setTimeout(function(){closeAll();doSwipeBtn('like');},320);
+    // Ferme la fiche — en mode liste : refresh list ; en swipe : avance la card
+    var inListMode=document.getElementById('list-zone').classList.contains('active');
+    setTimeout(function(){
+      closeAll();
+      if(inListMode){saveLike(currentIdx);renderList();}
+      else{doSwipeBtn('like');}
+    },320);
   } else {
     btn.classList.remove('added');
     btn.querySelector('.btn-icon').textContent='♥';
@@ -3159,15 +3164,13 @@ function renderList(){
     var liked=isLiked(p.name);
     var dur=p.duration>=60?(Math.floor(p.duration/60)+'h'+(p.duration%60?p.duration%60:'')):(p.duration+'min');
     var dist=p.distance&&p.distance.km&&p.distance.km!=='?'?p.distance.km+' km':'';
-    // Carousel images
-    var imgHtml=imgs.map(function(src,n){
-      return '<img src="'+(n===0?src:'')+'" data-src="'+src+'" class="'+(n===0?'on':'')+'" alt="" loading="lazy">';
-    }).join('');
-    // Dots (seulement si > 1 photo)
+    // Carousel : un seul <img>, src swappé au tap
+    var srcsAttr=imgs.join('|');
     var dotsHtml=imgs.length>1?'<div class="lcard-photo-dots">'+imgs.map(function(_,n){return '<div class="lcard-photo-dot'+(n===0?' on':'')+'"></div>';}).join('')+'</div>':'';
     return '<div class="lcard" onclick="openPoiSheet('+i+')">'
-      +'<div class="lcard-img-wrap" onclick="lcardNextPhoto(this);event.stopPropagation()">'
-      +imgHtml+dotsHtml
+      +'<div class="lcard-img-wrap" data-srcs="'+srcsAttr+'" onclick="lcardNextPhoto(this);event.stopPropagation()">'
+      +'<img src="'+imgs[0]+'" alt="" loading="lazy">'
+      +dotsHtml
       +'<div class="lcard-cat">'+p.cat+'</div>'
       +inco
       +'</div>'
@@ -3202,13 +3205,13 @@ function toggleListLike(idx, btn){
 }
 
 function lcardNextPhoto(wrap){
-  var imgs=wrap.querySelectorAll('img');
+  var srcs=(wrap.dataset.srcs||'').split('|').filter(Boolean);
+  if(srcs.length<2)return;
   var dots=wrap.querySelectorAll('.lcard-photo-dot');
   var cur=parseInt(wrap.dataset.cur||'0');
-  var next=(cur+1)%imgs.length;
-  // Lazy load
-  if(!imgs[next].src&&imgs[next].dataset.src)imgs[next].src=imgs[next].dataset.src;
-  imgs[cur].classList.remove('on');imgs[next].classList.add('on');
+  var next=(cur+1)%srcs.length;
+  var img=wrap.querySelector('img');
+  if(img)img.src=srcs[next];
   if(dots[cur])dots[cur].classList.remove('on');
   if(dots[next])dots[next].classList.add('on');
   wrap.dataset.cur=next;

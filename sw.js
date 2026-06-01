@@ -1,4 +1,4 @@
-const CACHE_NAME = 'planly-v202606010833'; // mis à jour automatiquement par inject_pois.py
+const CACHE_NAME = 'planly-v202606010839'; // mis à jour automatiquement par inject_pois.py
 
 self.addEventListener('install', function(e) {
   self.skipWaiting();
