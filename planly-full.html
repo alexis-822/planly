@@ -592,7 +592,7 @@ body{
   flex-shrink:0;
   display:flex;overflow-x:auto;overflow-y:hidden;
   scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
-  gap:10px;padding:10px 16px calc(env(safe-area-inset-bottom,0px)+10px);
+  gap:10px;padding:12px 16px calc(env(safe-area-inset-bottom,0px)+24px);
   scrollbar-width:none;
   background:#fff;
   box-shadow:0 -3px 12px rgba(0,0,0,.1);
@@ -1478,18 +1478,6 @@ body{
         <div class="map-fpill" id="mfp-parcs"   onclick="mapFilter('parcs')">🎡 Loisirs</div>
         <div class="map-fpill" id="mfp-sorties" onclick="mapFilter('sorties')">🎬 Sorties</div>
       </div>
-      <!-- Pills sous-catégories -->
-      <div class="map-subcat-row" id="map-subcat-row">
-        <div class="map-scpill on" id="msp-tous"   onclick="mapScatTous()">Tout type</div>
-        <div class="map-scpill" data-scat="Plages & Côte"          onclick="mapScat('Plages &amp; Côte')">🏖 Plages</div>
-        <div class="map-scpill" data-scat="Forêts & Nature"        onclick="mapScat('Forêts &amp; Nature')">🌲 Forêts</div>
-        <div class="map-scpill" data-scat="Points de vue"          onclick="mapScat('Points de vue')">🔭 Points de vue</div>
-        <div class="map-scpill" data-scat="Balades & Promenades"   onclick="mapScat('Balades &amp; Promenades')">🥾 Balades</div>
-        <div class="map-scpill" data-scat="Ports & Nautisme"       onclick="mapScat('Ports &amp; Nautisme')">⛵ Ports</div>
-        <div class="map-scpill" data-scat="Villages & Sites"       onclick="mapScat('Villages &amp; Sites')">🏛 Villages</div>
-        <div class="map-scpill" data-scat="Marais & Zones humides" onclick="mapScat('Marais &amp; Zones humides')">🦆 Marais</div>
-        <div class="map-scpill" data-scat="Châteaux & Monuments"   onclick="mapScat('Châteaux &amp; Monuments')">🏰 Châteaux</div>
-      </div>
     </div>
     <!-- Carte (prend tout l'espace central) -->
     <div id="map-container"></div>
@@ -1705,7 +1693,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606031940"></script>
+<script src="pois.js?v=202606031945"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
