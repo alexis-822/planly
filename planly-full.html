@@ -521,94 +521,81 @@ body{
 .map-view{position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;display:none;flex-direction:column;}
 .map-view.open{display:flex;}
 
-/* Topbar : ligne 1 ← + search + compteur */
-.map-topbar{
-  position:absolute;top:0;left:0;right:0;z-index:1001;
-  padding:calc(10px + env(safe-area-inset-top,0px)) 12px 0;
-  pointer-events:none;
+/* En-tête en flux normal (garantit que la carte est en dessous, cards en bas) */
+.map-header{
+  flex-shrink:0;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  padding:calc(8px + env(safe-area-inset-top,0px)) 12px 8px;
+  z-index:1001;
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 .map-topbar-r1{display:flex;align-items:center;gap:8px;}
 .map-back-btn{
-  pointer-events:all;flex-shrink:0;
-  background:#fff;border:none;border-radius:24px;
+  flex-shrink:0;
+  background:#1A1A18;border:none;border-radius:22px;
   padding:8px 14px;display:flex;align-items:center;gap:5px;
-  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#1A1A18;
-  box-shadow:0 2px 12px rgba(0,0,0,.25);cursor:pointer;
-  -webkit-tap-highlight-color:transparent;white-space:nowrap;
+  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#fff;
+  cursor:pointer;-webkit-tap-highlight-color:transparent;white-space:nowrap;
 }
 .map-search-wrap{
-  flex:1;pointer-events:all;
-  background:#fff;border-radius:22px;
+  flex:1;
+  background:#f2f2f2;border-radius:20px;
   display:flex;align-items:center;gap:6px;
-  padding:8px 12px;
-  box-shadow:0 2px 10px rgba(0,0,0,.2);
-  min-width:0;
+  padding:8px 12px;min-width:0;
 }
-.map-search-wrap svg{flex-shrink:0;opacity:.45;}
+.map-search-wrap svg{flex-shrink:0;opacity:.4;}
 .map-search-input{
   flex:1;border:none;outline:none;
   font-family:'DM Sans',sans-serif;font-size:13px;
   background:transparent;color:#1A1A18;min-width:0;
 }
 .map-search-input::placeholder{color:var(--txl);}
-.map-count-pill{
-  pointer-events:none;flex-shrink:0;
-  background:#fff;border-radius:16px;padding:7px 11px;
-  font-size:11px;font-weight:500;color:var(--txm);font-family:'DM Sans',sans-serif;
-  box-shadow:0 2px 8px rgba(0,0,0,.15);white-space:nowrap;
-}
 
 /* Ligne 2 : pills catégories L1 */
 .map-filter-row{
-  position:absolute;z-index:1001;
-  top:calc(60px + env(safe-area-inset-top,0px));
-  left:0;right:0;
-  display:flex;overflow-x:auto;gap:6px;padding:5px 12px;
-  scrollbar-width:none;pointer-events:auto;
+  display:flex;overflow-x:auto;gap:6px;
+  padding:6px 0 2px;
+  scrollbar-width:none;
 }
 .map-filter-row::-webkit-scrollbar{display:none;}
 .map-fpill{
   flex-shrink:0;
-  background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  border:1.5px solid rgba(0,0,0,.1);border-radius:20px;
+  background:#f0f0f0;border:1.5px solid transparent;border-radius:20px;
   padding:5px 13px;font-size:12px;font-weight:500;color:#1A1A18;
   cursor:pointer;white-space:nowrap;
-  box-shadow:0 1px 6px rgba(0,0,0,.12);
   -webkit-tap-highlight-color:transparent;touch-action:manipulation;
 }
 .map-fpill.on{background:#1A1A18;color:#fff;border-color:#1A1A18;}
 
 /* Ligne 3 : pills sous-catégories */
 .map-subcat-row{
-  position:absolute;z-index:1001;
-  top:calc(100px + env(safe-area-inset-top,0px));
-  left:0;right:0;
-  display:flex;overflow-x:auto;gap:6px;padding:4px 12px;
-  scrollbar-width:none;pointer-events:auto;
+  display:flex;overflow-x:auto;gap:6px;
+  padding:4px 0 2px;
+  scrollbar-width:none;
 }
 .map-subcat-row::-webkit-scrollbar{display:none;}
 .map-scpill{
   flex-shrink:0;
-  background:rgba(252,248,237,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  border:1.5px solid rgba(0,0,0,.08);border-radius:20px;
-  padding:4px 12px;font-size:11px;font-weight:500;color:#1A1A18;
+  background:#e8f0fb;border:1.5px solid transparent;border-radius:20px;
+  padding:4px 11px;font-size:11px;font-weight:500;color:#1A1A18;
   cursor:pointer;white-space:nowrap;
-  box-shadow:0 1px 4px rgba(0,0,0,.1);
   -webkit-tap-highlight-color:transparent;touch-action:manipulation;
 }
-.map-scpill.on{background:var(--brand);color:#fff;border-color:var(--brand);}
+.map-scpill.on{background:var(--brand);color:#fff;}
 
+/* Carte prend tout l'espace central */
 #map-container{flex:1;width:100%;min-height:0;}
 
-/* Carousel Airbnb — cards horizontales */
+/* Carousel en bas — flux normal (pas absolu) */
 .map-cards-carousel{
-  position:absolute;
-  bottom:calc(env(safe-area-inset-bottom,0px)+8px);
-  left:0;right:0;z-index:1000;
+  flex-shrink:0;
   display:flex;overflow-x:auto;overflow-y:hidden;
   scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
-  gap:12px;padding:12px 24px 14px 16px;
-  scrollbar-width:none;pointer-events:auto;
+  gap:10px;padding:10px 16px calc(env(safe-area-inset-bottom,0px)+10px);
+  scrollbar-width:none;
+  background:#fff;
+  box-shadow:0 -3px 12px rgba(0,0,0,.1);
 }
 .map-cards-carousel::-webkit-scrollbar{display:none;}
 .map-card-empty{
@@ -1469,7 +1456,8 @@ body{
 
   <!-- VUE CARTE -->
   <div class="map-view" id="map-view">
-    <div class="map-topbar">
+    <!-- En-tête en flux normal : ← + search, puis filtres L1 + sous-cats -->
+    <div class="map-header">
       <div class="map-topbar-r1">
         <button class="map-back-btn" onclick="closeMapView()">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -1479,32 +1467,33 @@ body{
           <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><line x1="14" y1="14" x2="18" y2="18"/></svg>
           <input type="text" id="map-search-input" class="map-search-input" placeholder="Rechercher un lieu..." oninput="onMapSearch(this.value)" autocomplete="off">
         </div>
-        <div class="map-count-pill" id="map-count"></div>
+      </div>
+      <!-- Pills catégories L1 -->
+      <div class="map-filter-row" id="map-filter-row">
+        <div class="map-fpill on" id="mfp-tous" onclick="mapFilterTous()">Tous</div>
+        <div class="map-fpill" id="mfp-air"     onclick="mapFilter('air')">🌿 Nature</div>
+        <div class="map-fpill" id="mfp-sport"   onclick="mapFilter('sport')">🏃 Sport</div>
+        <div class="map-fpill" id="mfp-patri"   onclick="mapFilter('patri')">🏛️ Patrimoine</div>
+        <div class="map-fpill" id="mfp-vivre"   onclick="mapFilter('vivre')">🍽️ Art de vivre</div>
+        <div class="map-fpill" id="mfp-parcs"   onclick="mapFilter('parcs')">🎡 Loisirs</div>
+        <div class="map-fpill" id="mfp-sorties" onclick="mapFilter('sorties')">🎬 Sorties</div>
+      </div>
+      <!-- Pills sous-catégories -->
+      <div class="map-subcat-row" id="map-subcat-row">
+        <div class="map-scpill on" id="msp-tous"   onclick="mapScatTous()">Tout type</div>
+        <div class="map-scpill" data-scat="Plages & Côte"          onclick="mapScat('Plages &amp; Côte')">🏖 Plages</div>
+        <div class="map-scpill" data-scat="Forêts & Nature"        onclick="mapScat('Forêts &amp; Nature')">🌲 Forêts</div>
+        <div class="map-scpill" data-scat="Points de vue"          onclick="mapScat('Points de vue')">🔭 Points de vue</div>
+        <div class="map-scpill" data-scat="Balades & Promenades"   onclick="mapScat('Balades &amp; Promenades')">🥾 Balades</div>
+        <div class="map-scpill" data-scat="Ports & Nautisme"       onclick="mapScat('Ports &amp; Nautisme')">⛵ Ports</div>
+        <div class="map-scpill" data-scat="Villages & Sites"       onclick="mapScat('Villages &amp; Sites')">🏛 Villages</div>
+        <div class="map-scpill" data-scat="Marais & Zones humides" onclick="mapScat('Marais &amp; Zones humides')">🦆 Marais</div>
+        <div class="map-scpill" data-scat="Châteaux & Monuments"   onclick="mapScat('Châteaux &amp; Monuments')">🏰 Châteaux</div>
       </div>
     </div>
-    <!-- Ligne 2 : Pills catégories L1 -->
-    <div class="map-filter-row" id="map-filter-row">
-      <div class="map-fpill on" id="mfp-tous" onclick="mapFilterTous()">Tous</div>
-      <div class="map-fpill" id="mfp-air"     onclick="mapFilter('air')">🌿 Nature</div>
-      <div class="map-fpill" id="mfp-sport"   onclick="mapFilter('sport')">🏃 Sport</div>
-      <div class="map-fpill" id="mfp-patri"   onclick="mapFilter('patri')">🏛️ Patrimoine</div>
-      <div class="map-fpill" id="mfp-vivre"   onclick="mapFilter('vivre')">🍽️ Art de vivre</div>
-      <div class="map-fpill" id="mfp-parcs"   onclick="mapFilter('parcs')">🎡 Loisirs</div>
-      <div class="map-fpill" id="mfp-sorties" onclick="mapFilter('sorties')">🎬 Sorties</div>
-    </div>
-    <!-- Ligne 3 : Pills sous-catégories -->
-    <div class="map-subcat-row" id="map-subcat-row">
-      <div class="map-scpill on" id="msp-tous"   onclick="mapScatTous()">Tout type</div>
-      <div class="map-scpill" data-scat="Plages & Côte"          onclick="mapScat('Plages &amp; Côte')">🏖 Plages</div>
-      <div class="map-scpill" data-scat="Forêts & Nature"        onclick="mapScat('Forêts &amp; Nature')">🌲 Forêts</div>
-      <div class="map-scpill" data-scat="Points de vue"          onclick="mapScat('Points de vue')">🔭 Points de vue</div>
-      <div class="map-scpill" data-scat="Balades & Promenades"   onclick="mapScat('Balades &amp; Promenades')">🥾 Balades</div>
-      <div class="map-scpill" data-scat="Ports & Nautisme"       onclick="mapScat('Ports &amp; Nautisme')">⛵ Ports</div>
-      <div class="map-scpill" data-scat="Villages & Sites"       onclick="mapScat('Villages &amp; Sites')">🏛 Villages</div>
-      <div class="map-scpill" data-scat="Marais & Zones humides" onclick="mapScat('Marais &amp; Zones humides')">🦆 Marais</div>
-      <div class="map-scpill" data-scat="Châteaux & Monuments"   onclick="mapScat('Châteaux &amp; Monuments')">🏰 Châteaux</div>
-    </div>
+    <!-- Carte (prend tout l'espace central) -->
     <div id="map-container"></div>
+    <!-- Cards en bas — flux normal garanti -->
     <div class="map-cards-carousel" id="map-cards-carousel"></div>
   </div>
 
@@ -1716,7 +1705,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606031927"></script>
+<script src="pois.js?v=202606031940"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
