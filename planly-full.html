@@ -1662,7 +1662,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606031852"></script>
+<script src="pois.js?v=202606031908"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -4141,16 +4141,20 @@ function _buildMapCarousel(fp){
   }
   car.innerHTML=fp.map(function(p,fi){
     var poiIdx=POIS.indexOf(p);
-    var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
+    var imgs=p.imgs&&p.imgs.length?p.imgs.filter(Boolean):[];
+    var img=imgs[0]||'';
+    var srcsAttr=imgs.join('|');
     var dur=p.duration>=60?(Math.floor(p.duration/60)+'h'+(p.duration%60?p.duration%60:'')):(p.duration+'min');
     var liked=isLiked(p.name);
     var em=_subCatEmoji(p);
     var subcat=p.subcategory||p.cat||'';
+    var dotsHtml=imgs.length>1?'<div class="lcard-photo-dots">'+imgs.map(function(_,n){return '<div class="lcard-photo-dot'+(n===0?' on':'')+'"></div>';}).join('')+'</div>':'';
     return '<div class="map-card-item" data-fi="'+fi+'" onclick="_mapOpenFiche('+poiIdx+')">'
-      +'<div class="map-card-thumb">'
+      +'<div class="map-card-thumb" data-srcs="'+srcsAttr+'" data-cur="0" onclick="lcardNextPhoto(this);event.stopPropagation()">'
       +'<img src="'+img+'" alt="" loading="lazy">'
       +'<button class="map-card-hov'+(liked?' on':'')+'" onclick="event.stopPropagation();_mapToggleLike('+poiIdx+',this)">'+(liked?'♥':'♡')+'</button>'
       +'<div class="map-card-badge">'+em+' '+subcat+'</div>'
+      +dotsHtml
       +'</div>'
       +'<div class="map-card-body">'
       +'<div class="map-card-name">'+p.name+'</div>'
@@ -4179,12 +4183,30 @@ function _buildMapCarousel(fp){
     },100);
   };
   car.addEventListener('scroll',car._mapScrollHandler,{passive:true});
+
+  // Swipe tactile horizontal sur les thumbs pour changer de photo
+  car.querySelectorAll('.map-card-thumb').forEach(function(thumb){
+    var tx0,ty0;
+    thumb.addEventListener('touchstart',function(e){
+      tx0=e.touches[0].clientX;ty0=e.touches[0].clientY;
+    },{passive:true});
+    thumb.addEventListener('touchend',function(e){
+      if(tx0===undefined)return;
+      var dx=e.changedTouches[0].clientX-tx0;
+      var dy=e.changedTouches[0].clientY-ty0;
+      if(Math.abs(dx)>30&&Math.abs(dx)>Math.abs(dy)){
+        lcardNextPhoto(thumb,dx<0?1:-1);
+        e.stopPropagation();
+      }
+      tx0=undefined;
+    },{passive:true});
+  });
 }
 
 function _mapToggleLike(poiIdx,btn){
   toggleListLike(poiIdx,btn);
   var liked=isLiked(POIS[poiIdx].name);
-  btn.className='map-card-heart'+(liked?' on':'');
+  btn.className='map-card-hov'+(liked?' on':'');
   btn.textContent=liked?'♥':'♡';
 }
 
