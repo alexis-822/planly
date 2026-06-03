@@ -443,6 +443,17 @@ body{
   background:transparent;color:#fff;min-width:0;
 }
 .map-search-input::placeholder{color:rgba(255,255,255,.45);}
+.map-search-clear{flex-shrink:0;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.2);display:none;align-items:center;justify-content:center;font-size:10px;color:#fff;cursor:pointer;line-height:1;}
+.map-search-clear.visible{display:flex;}
+.map-search-dropdown{position:absolute;top:calc(100% + 6px);left:0;right:0;background:rgba(12,12,12,.95);backdrop-filter:blur(16px);border-radius:14px;overflow:hidden;z-index:1010;display:none;box-shadow:0 8px 24px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);}
+.map-search-dropdown.open{display:block;}
+.map-srch-item{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.06);-webkit-tap-highlight-color:transparent;}
+.map-srch-item:last-child{border-bottom:none;}
+.map-srch-item:active{background:rgba(255,255,255,.07);}
+.map-srch-icon{width:30px;height:30px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.map-srch-name{font-size:13px;font-weight:500;color:#fff;line-height:1.3;}
+.map-srch-sub{font-size:11px;color:rgba(255,255,255,.45);margin-top:1px;}
+.map-srch-empty{padding:14px;font-size:13px;color:rgba(255,255,255,.35);text-align:center;}
 
 /* Pills L1 — identiques à .pill du mode liste, saignent jusqu'aux bords */
 .map-filter-row{
@@ -1294,9 +1305,11 @@ body{
         <button class="map-back-btn" onclick="closeMapView()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
-        <div class="map-search-wrap">
+        <div class="map-search-wrap" style="position:relative;">
           <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><line x1="14" y1="14" x2="18" y2="18"/></svg>
           <input type="text" id="map-search-input" class="map-search-input" placeholder="Rechercher un lieu..." oninput="onMapSearch(this.value)" autocomplete="off">
+          <div class="map-search-clear" id="map-search-clear" onclick="onMapSearchClear()">✕</div>
+          <div class="map-search-dropdown" id="map-search-dropdown"></div>
         </div>
         <div class="hdr-btn" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
       </div>
@@ -3598,7 +3611,6 @@ var _mapCurrentIdx=-1;
 var _mapScrolling=false;
 var _mapScrollTimer;
 var _mapSubcat=null;   // filtre sous-catégorie (map uniquement)
-var _mapSearchQ='';    // recherche texte (map uniquement)
 
 // Emoji badge (cartes texte) — toujours utilisé pour les badges dans les cards
 var _subCatIcons={
@@ -3657,8 +3669,9 @@ function _refreshMap(){
   var fp=_mapActivitesOnly?POIS.filter(function(p){return isLiked(p.name);}):getFilteredPois();
   // Filtre sous-catégorie (map uniquement)
   if(_mapSubcat){var _sc=L1_CATS[_mapSubcat]||[];if(_sc.length)fp=fp.filter(function(p){return _sc.indexOf(p.category)>=0;});};
-  // Filtre recherche texte (map uniquement)
-  if(_mapSearchQ)fp=fp.filter(function(p){return (p.name+' '+(p.commune||'')).toLowerCase().indexOf(_mapSearchQ)>=0;});
+  // Interleaving par catégorie (comme mode liste) quand pas de filtre précis
+  if(!_mapSubcat){fp=_interleaveByCat(fp);}
+  else{fp=fp.slice().sort(function(a,b){return _scorePoi(b)-_scorePoi(a);});}
   var countEl=document.getElementById('map-count');
   if(countEl)countEl.textContent=fp.length+' lieu'+(fp.length>1?'x':'');
   fp.forEach(function(p,fi){
@@ -3683,7 +3696,7 @@ function openMapView(){
   if(activeL1)_renderMapPillsL2(activeL1);else _renderMapPillsL1();
   // Sync search input avec état courant
   var si=document.getElementById('map-search-input');
-  if(si)si.value=_mapSearchQ;
+  if(si)si.value='';
 
   if(!_map){
     _map=L.map('map-container',{
@@ -3927,8 +3940,51 @@ function mapScatTous(){
   _refreshMap();
 }
 function onMapSearch(q){
-  _mapSearchQ=q.trim().toLowerCase();
-  _refreshMap();
+  var trimmed=q.trim();
+  var clearBtn=document.getElementById('map-search-clear');
+  var dropdown=document.getElementById('map-search-dropdown');
+  if(clearBtn)clearBtn.classList.toggle('visible',trimmed.length>0);
+  if(!trimmed){
+    if(dropdown)dropdown.classList.remove('open');
+    return;
+  }
+  var lq=trimmed.toLowerCase();
+  var matches=POIS.filter(function(p){
+    var hay=(p.name+' '+(p.commune||'')+' '+(p.subcategory||'')+' '+(p.cat||'')+' '+(p.desc||'')).toLowerCase();
+    return hay.indexOf(lq)>=0;
+  }).slice(0,8);
+  if(!dropdown)return;
+  if(!matches.length){
+    dropdown.innerHTML='<div class="map-srch-empty">Aucun résultat pour "'+trimmed+'"</div>';
+    dropdown.classList.add('open');
+    return;
+  }
+  dropdown.innerHTML=matches.map(function(p){
+    var poiIdx=POIS.indexOf(p);
+    var c=_catColors[p.category]||_catColors.default;
+    var icon=_catSvg(p.category,14);
+    return '<div class="map-srch-item" onclick="_mapGoToPoi('+poiIdx+');onMapSearchClear()">'
+      +'<div class="map-srch-icon" style="background:'+c+';box-shadow:0 0 0 1.5px rgba(255,255,255,.25)">'+icon+'</div>'
+      +'<div><div class="map-srch-name">'+p.name+'</div>'
+      +'<div class="map-srch-sub">'+p.commune+' · '+(p.subcategory||p.cat||'')+'</div></div>'
+      +'</div>';
+  }).join('');
+  dropdown.classList.add('open');
+}
+function onMapSearchClear(){
+  var si=document.getElementById('map-search-input');
+  if(si)si.value='';
+  var clearBtn=document.getElementById('map-search-clear');
+  if(clearBtn)clearBtn.classList.remove('visible');
+  var dropdown=document.getElementById('map-search-dropdown');
+  if(dropdown)dropdown.classList.remove('open');
+}
+function _mapGoToPoi(poiIdx){
+  var p=POIS[poiIdx];
+  if(!p||!p.location||!p.location.lat)return;
+  _map.setView([p.location.lat,p.location.lng],15,{animate:true});
+  var entry=_mapPois.filter(function(e){return e.poiIdx===poiIdx;})[0];
+  if(entry)setTimeout(function(){_selectMapFi(entry.fi,false);},300);
 }
 function _updateMapFpills(){
   var keyMap={'air':'mfp-air','sport':'mfp-sport','patri':'mfp-patri','vivre':'mfp-vivre','parcs':'mfp-parcs','sorties':'mfp-sorties'};
