@@ -3940,14 +3940,17 @@ function mapScatTous(){
   _updateMapScpills();
   _refreshMap();
 }
-function _normalize(s){return(s||'').normalize('NFD').replace(/\p{Mn}/gu,'').toLowerCase();}
+function _normalize(s){return(s||'').normalize('NFD').replace(/\p{Mn}/gu,'').toLowerCase().replace(/-/g,' ');}
+function _expandAbbrFr(s){return s.replace(/\bst\b/g,'saint').replace(/\bste\b/g,'sainte');}
+function _searchNorm(s){return _expandAbbrFr(_normalize(s||''));}
 function _escHtml(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function _hlMatch(text,nq){
+function _hlMatch(text,qtoks){
   var safe=_escHtml(text);
-  var nt=_normalize(text);
-  var idx=nt.indexOf(nq);
-  if(idx<0)return safe;
-  return _escHtml(text.slice(0,idx))+'<span class="map-srch-hl">'+_escHtml(text.slice(idx,idx+nq.length))+'</span>'+_escHtml(text.slice(idx+nq.length));
+  var nt=_searchNorm(text);
+  var best=-1,blen=0;
+  qtoks.forEach(function(tok){var i=nt.indexOf(tok);if(i>=0&&(best<0||tok.length>blen)){best=i;blen=tok.length;}});
+  if(best<0)return safe;
+  return _escHtml(text.slice(0,best))+'<span class="map-srch-hl">'+_escHtml(text.slice(best,best+blen))+'</span>'+_escHtml(text.slice(best+blen));
 }
 function onMapSearch(q){
   var trimmed=q.trim();
@@ -3958,10 +3961,11 @@ function onMapSearch(q){
     if(dropdown)dropdown.classList.remove('open');
     return;
   }
-  var nq=_normalize(trimmed);
+  var nq=_searchNorm(trimmed);
+  var qtoks=nq.split(/\s+/).filter(Boolean);
   var matches=POIS.filter(function(p){
-    var hay=_normalize(p.name+' '+(p.commune||'')+' '+(p.subcategory||'')+' '+(p.cat||'')+' '+(p.desc||''));
-    return hay.indexOf(nq)>=0;
+    var hay=_searchNorm(p.name+' '+(p.commune||'')+' '+(p.subcategory||'')+' '+(p.cat||'')+' '+(p.descLong||p.desc||''));
+    return qtoks.every(function(tok){return hay.indexOf(tok)>=0;});
   }).slice(0,8);
   if(!dropdown)return;
   if(!matches.length){
@@ -3975,7 +3979,7 @@ function onMapSearch(q){
     var icon=_catSvg(p.category,14);
     return '<div class="map-srch-item" onclick="_mapGoToPoi('+poiIdx+');onMapSearchClear()">'
       +'<div class="map-srch-icon" style="background:'+c+';box-shadow:0 0 0 1.5px rgba(255,255,255,.25)">'+icon+'</div>'
-      +'<div style="overflow:hidden"><div class="map-srch-name">'+_hlMatch(p.name,nq)+'</div>'
+      +'<div style="overflow:hidden"><div class="map-srch-name">'+_hlMatch(p.name,qtoks)+'</div>'
       +'<div class="map-srch-sub">'+_escHtml(p.commune)+' · '+_escHtml(p.subcategory||p.cat||'')+'</div></div>'
       +'</div>';
   }).join('');
