@@ -1,55 +1,9 @@
-// Generated 2026-06-01 by fetch_tides.py
+// Generated 2026-06-03 by fetch_tides.py
 var TIDES_DATA = {
   "124": {
     "nom": "Saint-Gilles-Croix-de-Vie",
-    "generated": "2026-06-01",
+    "generated": "2026-06-03",
     "days": {
-      "2026-06-01": [
-        {
-          "type": "BM",
-          "time": "05h54",
-          "height": 4.55,
-          "coeff": 71
-        },
-        {
-          "type": "PM",
-          "time": "12h12",
-          "height": 1.38,
-          "coeff": null
-        },
-        {
-          "type": "BM",
-          "time": "18h09",
-          "height": 4.73,
-          "coeff": 71
-        }
-      ],
-      "2026-06-02": [
-        {
-          "type": "BM",
-          "time": "00h34",
-          "height": 1.31,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "06h25",
-          "height": 4.51,
-          "coeff": 70
-        },
-        {
-          "type": "BM",
-          "time": "12h46",
-          "height": 1.45,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "18h42",
-          "height": 4.7,
-          "coeff": 69
-        }
-      ],
       "2026-06-03": [
         {
           "type": "BM",
@@ -179,59 +133,59 @@ var TIDES_DATA = {
           "height": 4.31,
           "coeff": 48
         }
+      ],
+      "2026-06-08": [
+        {
+          "type": "BM",
+          "time": "04h42",
+          "height": 1.9,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "11h02",
+          "height": 4.04,
+          "coeff": 47
+        },
+        {
+          "type": "BM",
+          "time": "17h11",
+          "height": 2.06,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "23h36",
+          "height": 4.28,
+          "coeff": 47
+        }
+      ],
+      "2026-06-09": [
+        {
+          "type": "BM",
+          "time": "05h41",
+          "height": 1.91,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "12h21",
+          "height": 4.09,
+          "coeff": 47
+        },
+        {
+          "type": "BM",
+          "time": "18h14",
+          "height": 2.0,
+          "coeff": null
+        }
       ]
     }
   },
   "125": {
     "nom": "Les Sables-d'Olonne",
-    "generated": "2026-06-01",
+    "generated": "2026-06-03",
     "days": {
-      "2026-06-01": [
-        {
-          "type": "BM",
-          "time": "05h57",
-          "height": 4.72,
-          "coeff": 71
-        },
-        {
-          "type": "PM",
-          "time": "12h10",
-          "height": 1.54,
-          "coeff": null
-        },
-        {
-          "type": "BM",
-          "time": "18h09",
-          "height": 4.91,
-          "coeff": 71
-        }
-      ],
-      "2026-06-02": [
-        {
-          "type": "BM",
-          "time": "00h32",
-          "height": 1.46,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "06h29",
-          "height": 4.68,
-          "coeff": 70
-        },
-        {
-          "type": "BM",
-          "time": "12h44",
-          "height": 1.61,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "18h44",
-          "height": 4.87,
-          "coeff": 69
-        }
-      ],
       "2026-06-03": [
         {
           "type": "BM",
@@ -360,6 +314,52 @@ var TIDES_DATA = {
           "time": "22h32",
           "height": 4.42,
           "coeff": 48
+        }
+      ],
+      "2026-06-08": [
+        {
+          "type": "BM",
+          "time": "04h40",
+          "height": 1.97,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "11h07",
+          "height": 4.14,
+          "coeff": 47
+        },
+        {
+          "type": "BM",
+          "time": "17h09",
+          "height": 2.16,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "23h37",
+          "height": 4.4,
+          "coeff": 47
+        }
+      ],
+      "2026-06-09": [
+        {
+          "type": "BM",
+          "time": "05h39",
+          "height": 1.98,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "12h24",
+          "height": 4.21,
+          "coeff": 47
+        },
+        {
+          "type": "BM",
+          "time": "18h11",
+          "height": 2.1,
+          "coeff": null
         }
       ]
     }
