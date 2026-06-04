@@ -2709,6 +2709,8 @@ function openPoiSheet(idx){
   var isBeach=p.subcategory==='Plages & Côte';
   var mode=transport||USER_PROFILE.mobilite||'voiture';
   var sheet=document.getElementById('sheet-poi');
+  // Reset scroll position
+  var body=sheet.querySelector('.bs-poi-body');if(body)body.scrollTop=0;
   // Carousel
   var track=document.getElementById('bs-car-track');
   track.style.transition='none';track.style.transform='translateX(0)';
