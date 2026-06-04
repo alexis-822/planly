@@ -3720,6 +3720,9 @@ function closeMapView(){
   var mapBtn=document.getElementById('map-btn-float');
   if(mapBtn&&currentNav!=='activites')mapBtn.classList.remove('hidden');
   if(wasAct){
+    // Restaurer les filtres Explorer et effacer les filtres Activités
+    activeL1=_savedL1;_mapSubcat=_savedMapSubcat;
+    _savedL1=null;_savedMapSubcat=null;
     var bl=document.getElementById('act-btn-liste');
     var bc=document.getElementById('act-btn-carte');
     if(bl)bl.classList.add('active');
@@ -3728,6 +3731,7 @@ function closeMapView(){
 }
 
 var _mapActivitesOnly=false;
+var _savedL1=null,_savedMapSubcat=null;
 function _actSetView(v){
   var bl=document.getElementById('act-btn-liste');
   var bc=document.getElementById('act-btn-carte');
@@ -3736,6 +3740,9 @@ function _actSetView(v){
   if(v==='carte')openActivitesMap();
 }
 function openActivitesMap(){
+  // Sauvegarder les filtres Explorer avant d'entrer en mode Activités
+  _savedL1=activeL1;_savedMapSubcat=_mapSubcat;
+  activeL1=null;_mapSubcat=null;
   _mapActivitesOnly=true;
   openMapView();
 }
