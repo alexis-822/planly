@@ -13,8 +13,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="Planly">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="vendor/leaflet.css"/>
 <style>
 :root{
   --brand:#428CE3;--brand-l:#EAF2FC;--brand-d:#2B6FBE;
@@ -284,17 +287,18 @@ body{
 }
 
 
-/* ── HEADER OVERLAY (glassmorphism sur la photo) ── */
+/* ── HEADER OVERLAY ── */
 .app-header{
   position:absolute;top:0;left:0;right:0;z-index:10;
-  padding:calc(14px + env(safe-area-inset-top, 0px)) 16px 0;
-  background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.2) 70%,transparent 100%);
+  padding:calc(14px + env(safe-area-inset-top, 0px)) 16px 10px;
+  background:var(--bg);
+  box-shadow:0 1px 0 rgba(0,0,0,.07);
   pointer-events:none;
 }
 .app-header>*{pointer-events:auto;}
 .header-row{display:flex;align-items:center;gap:10px;}
-.search-bar-explorer{flex:1;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);border-radius:28px;height:42px;padding:0 14px;min-width:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 24px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.3);transition:background .2s,border-color .2s,box-shadow .2s;}
-.app-header.searching{background:#fff!important;border-bottom:1px solid var(--br);padding-bottom:10px;}
+.search-bar-explorer{flex:1;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:28px;height:42px;padding:0 14px;min-width:0;box-shadow:0 2px 10px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.06);transition:background .2s,border-color .2s,box-shadow .2s;}
+.app-header.searching{background:var(--bg)!important;border-bottom:1px solid var(--br);padding-bottom:10px;}
 .app-header.searching .search-bar-explorer{background:var(--bg-d,#f0ece0);border-color:var(--br);box-shadow:none;}
 .app-header.searching .search-bar-explorer svg{stroke:var(--txm);}
 .app-header.searching .search-input-explorer{color:var(--tx);}
@@ -302,10 +306,10 @@ body{
 .app-header.searching .srch-clear{color:var(--txm);}
 .app-header.searching .hdr-btn{background:var(--bg-d,#f0ece0);border-color:var(--br);}
 .app-header.searching .hdr-btn svg{stroke:var(--tx);}
-.search-bar-explorer svg{flex-shrink:0;width:16px;height:16px;stroke:rgba(255,255,255,.6);fill:none;stroke-width:2;stroke-linecap:round;}
-.search-input-explorer{border:none;outline:none;background:transparent;font-family:'DM Sans',sans-serif;font-size:13px;color:#fff;width:100%;}
-.search-input-explorer::placeholder{color:rgba(255,255,255,.4);}
-.srch-clear{font-size:14px;color:rgba(255,255,255,.5);cursor:pointer;flex-shrink:0;padding:0 2px;}
+.search-bar-explorer svg{flex-shrink:0;width:16px;height:16px;stroke:rgba(0,0,0,.4);fill:none;stroke-width:2;stroke-linecap:round;}
+.search-input-explorer{border:none;outline:none;background:transparent;font-family:'DM Sans',sans-serif;font-size:13px;color:#1a1a18;width:100%;}
+.search-input-explorer::placeholder{color:rgba(0,0,0,.3);}
+.srch-clear{font-size:14px;color:rgba(0,0,0,.35);cursor:pointer;flex-shrink:0;padding:0 2px;}
 /* VUE RÉSULTATS RECHERCHE */
 .srch-view{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg);min-height:0;position:relative;}
 .srch-view.open{display:flex;}
@@ -316,8 +320,8 @@ body{
 .srch-empty-page{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:200px;gap:10px;padding:40px 20px;text-align:center;}
 .srch-empty-icon{font-size:40px;opacity:.25;}
 .srch-empty-txt{font-size:14px;color:var(--txm);line-height:1.5;}
-.hdr-btn{width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 4px 12px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;font-size:15px;color:#fff;transition:background .2s;-webkit-tap-highlight-color:transparent;}
-.hdr-btn:active{background:rgba(255,255,255,.15);}
+.hdr-btn{width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid rgba(0,0,0,.1);box-shadow:0 2px 8px rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;font-size:15px;color:#1a1a18;transition:background .2s;-webkit-tap-highlight-color:transparent;}
+.hdr-btn:active{background:rgba(0,0,0,.05);}
 
 /* PILLS */
 .pills-row{padding:10px 0 0 0;pointer-events:none;margin-left:-16px;margin-right:-16px;}
@@ -325,9 +329,10 @@ body{
 .pills-scroll{display:flex;align-items:center;gap:8px;overflow-x:auto;scrollbar-width:none;padding-left:10px;}
 .pills-scroll::after{content:'';flex-shrink:0;width:16px;}
 .pills-scroll::-webkit-scrollbar{display:none;}
-.pill{display:inline-flex;align-items:center;padding:6px 12px;border-radius:20px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:500;color:#fff;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:all .18s;}
-.pill.active,.pill.tous{background:#fff;border-color:#fff;color:#1a1a18;font-weight:500;padding:6px 14px;}
-.pill-back{display:inline-flex;align-items:center;padding:6px 12px;border-radius:20px;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2);font-size:12px;font-weight:500;color:#fff;white-space:nowrap;cursor:pointer;flex-shrink:0;}
+.pill{display:inline-flex;align-items:center;padding:6px 14px;border-radius:20px;background:#fff;border:1px solid rgba(0,0,0,.13);font-size:13px;font-weight:500;color:#1a1a18;white-space:nowrap;cursor:pointer;flex-shrink:0;transition:all .18s;box-shadow:0 1px 3px rgba(0,0,0,.07);}
+.pill.active{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600;box-shadow:none;}
+.pill.tous{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600;box-shadow:none;}
+.pill-back{display:inline-flex;align-items:center;padding:6px 12px;border-radius:20px;background:#fff;border:1px solid rgba(0,0,0,.13);font-size:12px;font-weight:600;color:#1a1a18;white-space:nowrap;cursor:pointer;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.07);}
 
 /* DOTS PHOTOS (sous les pills dans le header) */
 .header-dots{display:flex;justify-content:center;gap:4px;padding:10px 0 6px;}
@@ -346,6 +351,7 @@ body{
 /* ── LISTE style Airbnb ── */
 .list-zone{position:absolute;inset:0;overflow-y:auto;padding:120px 16px calc(100px + env(safe-area-inset-bottom,0px));scrollbar-width:none;display:block;background:var(--bg);}
 .list-zone::-webkit-scrollbar{display:none;}
+.list-zone>.lcard:first-child{margin-top:16px;}
 
 /* ── VUE ACTIVITÉS ── */
 .activites-view{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg);min-height:0;}
@@ -379,7 +385,7 @@ body{
 .lcard-body{position:relative;padding:12px 14px 14px;}
 .lcard-name{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--tx);margin-bottom:2px;}
 .lcard-commune{font-size:11px;color:var(--txm);margin-bottom:6px;}
-.lcard-desc{font-size:12px;color:var(--txm);line-height:1.4;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.lcard-desc{display:none;}
 .lcard-footer{display:flex;align-items:center;gap:8px;}
 .lcard-pills{display:flex;gap:6px;flex-wrap:wrap;flex:1;}
 .lcard-pill{padding:4px 10px;border-radius:10px;background:var(--bg);border:1px solid var(--br);font-size:10px;font-weight:500;color:var(--txm);}
@@ -410,40 +416,41 @@ body{
 }
 .map-view.open{display:flex;}
 
-/* Header en overlay absolu — même style que mode liste */
+/* Header carte — même style que app-header Explorer */
 .map-header{
   position:absolute;top:0;left:0;right:0;z-index:1001;
-  padding:calc(14px + env(safe-area-inset-top,0px)) 16px 0;
-  background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.2) 75%,transparent 100%);
+  padding:calc(14px + env(safe-area-inset-top,0px)) 16px 10px;
+  background:var(--bg);
+  box-shadow:0 1px 0 rgba(0,0,0,.07);
   pointer-events:none;
 }
 .map-header>*{pointer-events:auto;}
 .map-topbar-r1{display:flex;align-items:center;gap:8px;}
 
-/* Bouton retour — cercle icône seul, comme hdr-btn */
+/* Bouton retour — même style que hdr-btn */
 .map-back-btn{
   width:42px;height:42px;flex-shrink:0;border-radius:50%;
-  background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 4px 12px rgba(0,0,0,.4);
+  background:#fff;border:1px solid rgba(0,0,0,.1);
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
   display:flex;align-items:center;justify-content:center;
   cursor:pointer;-webkit-tap-highlight-color:transparent;
 }
 
-/* Search bar — identique à .search-bar-explorer */
+/* Search bar carte — style Airbnb */
 .map-search-wrap{
   flex:1;display:flex;align-items:center;gap:8px;
-  background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12);
+  background:#fff;border:1px solid rgba(0,0,0,.1);
   border-radius:28px;height:42px;padding:0 14px;min-width:0;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 4px 12px rgba(0,0,0,.4);
+  box-shadow:0 2px 12px rgba(0,0,0,.18),0 1px 3px rgba(0,0,0,.08);
 }
-.map-search-wrap svg{flex-shrink:0;stroke:rgba(255,255,255,.5);}
+.map-search-wrap svg{flex-shrink:0;stroke:rgba(0,0,0,.4);}
 .map-search-input{
   flex:1;border:none;outline:none;
   font-family:'DM Sans',sans-serif;font-size:14px;font-weight:400;
-  background:transparent;color:#fff;min-width:0;
+  background:transparent;color:#1a1a18;min-width:0;
 }
-.map-search-input::placeholder{color:rgba(255,255,255,.45);}
-.map-search-clear{flex-shrink:0;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.2);display:none;align-items:center;justify-content:center;font-size:10px;color:#fff;cursor:pointer;line-height:1;}
+.map-search-input::placeholder{color:rgba(0,0,0,.3);}
+.map-search-clear{flex-shrink:0;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,.12);display:none;align-items:center;justify-content:center;font-size:10px;color:#1a1a18;cursor:pointer;line-height:1;}
 .map-search-clear.visible{display:flex;}
 .map-search-dropdown{position:absolute;top:calc(100% + 6px);left:0;right:0;background:rgba(12,12,12,.95);backdrop-filter:blur(16px);border-radius:14px;overflow:hidden;z-index:1010;display:none;box-shadow:0 8px 24px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);}
 .map-search-dropdown.open{display:block;}
@@ -465,14 +472,15 @@ body{
 .map-filter-row::after{content:'';flex-shrink:0;width:6px;}
 .map-filter-row::-webkit-scrollbar{display:none;}
 .map-fpill{
-  display:inline-flex;align-items:center;padding:6px 12px;border-radius:20px;
-  background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2);
-  font-size:13px;font-weight:500;color:#fff;white-space:nowrap;
+  display:inline-flex;align-items:center;padding:6px 14px;border-radius:20px;
+  background:#fff;border:1px solid rgba(0,0,0,.13);
+  font-size:13px;font-weight:500;color:#1a1a18;white-space:nowrap;
   cursor:pointer;flex-shrink:0;transition:all .18s;
+  box-shadow:0 1px 3px rgba(0,0,0,.07);
   -webkit-tap-highlight-color:transparent;touch-action:manipulation;
 }
-.map-fpill.on{background:#fff;border-color:#fff;color:#1a1a18;font-weight:500;padding:6px 14px;}
-.map-fpill-back{background:rgba(0,0,0,.6)!important;border:1.5px solid rgba(255,255,255,.65)!important;color:#fff!important;padding:6px 12px!important;font-weight:600!important;letter-spacing:-.01em;}
+.map-fpill.on{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600;box-shadow:none;}
+.map-fpill-back{background:#fff!important;border:1px solid rgba(0,0,0,.13)!important;color:#1a1a18!important;padding:6px 12px!important;font-weight:600!important;box-shadow:0 1px 3px rgba(0,0,0,.07)!important;}
 
 /* Carte prend tout l'écran (header et carousel en overlay absolu) */
 #map-container{flex:1;width:100%;min-height:0;}
@@ -539,7 +547,18 @@ body{
 /* ── NAV BOTTOM — fond beige ── */
 .bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:8px 8px calc(12px + env(safe-area-inset-bottom, 0px));background:var(--bg-d);flex-shrink:0;border-top:1px solid #1A1A18;}
 .nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
-.nav-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;transition:background .2s;}
+.nav-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;transition:background .2s;position:relative;}
+.nav-act-badge{position:absolute;top:-4px;right:-6px;min-width:16px;height:16px;border-radius:8px;background:var(--brand);color:#fff;font-size:10px;font-weight:700;display:none;align-items:center;justify-content:center;padding:0 4px;line-height:1;border:1.5px solid #FCF8ED;}
+.nav-act-badge.on{display:flex;}
+.act-cat-title{font-size:11px;font-weight:700;color:var(--txm);text-transform:uppercase;letter-spacing:.6px;padding:16px 0 8px;font-family:'DM Sans',sans-serif;border-top:1px solid rgba(0,0,0,.06);margin-top:8px;}
+.act-cat-title:first-child{border-top:none;margin-top:0;padding-top:0;}
+.poi-mini-map-wrap{position:relative;margin:12px 0;}
+.poi-mini-map{width:100%;height:200px;border-radius:14px;overflow:hidden;}
+/* Overlay carte fullscreen (bouton Agrandir) */
+#map-full-overlay{display:none;position:fixed;inset:0;z-index:600;background:#111;}
+#map-full-container{width:100%;height:100%;}
+.map-full-close{position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);left:14px;z-index:10;width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.poi-mini-map-expand{position:absolute;bottom:10px;right:10px;background:#fff;border:none;border-radius:8px;padding:6px 11px;font-size:12px;font-weight:600;color:#1a1a18;box-shadow:0 2px 8px rgba(0,0,0,.2);display:flex;align-items:center;gap:5px;z-index:500;cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .nav-icon svg{width:20px;height:20px;stroke:rgba(26,26,24,.32);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
 .nav-lbl{font-size:11px;color:rgba(26,26,24,.38);font-weight:400;}
 .nav-item.active .nav-icon{background:var(--brand);}
@@ -744,7 +763,7 @@ body{
 .bch-pw{background:#FAEEDA;color:#633806;}
 .bch-pn{background:#F1EFE8;color:#444441;}
 /* Description */
-.bch-desc{font-size:15px;color:#5F5E5A;line-height:1.7;margin:12px 0 14px;}
+.bch-desc{font-size:15px;color:#5F5E5A;line-height:1.75;margin:14px 0 20px;}
 /* Avis */
 .bch-avis-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
 .bch-avis-note{display:flex;align-items:center;gap:5px;}
@@ -785,6 +804,10 @@ body{
 /* ← bouton retour carousel */
 .bs-car-back{display:none;position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);left:14px;z-index:10;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);align-items:center;justify-content:center;cursor:pointer;color:white;font-size:20px;line-height:1;}
 #sheet-poi .bs-car-back{display:flex;}
+/* ♥ bouton like sur le carousel (style Airbnb) */
+.bs-car-heart{display:none;position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);right:14px;z-index:10;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);align-items:center;justify-content:center;cursor:pointer;font-size:18px;line-height:1;-webkit-tap-highlight-color:transparent;}
+#sheet-poi .bs-car-heart{display:flex;color:#fff;}
+.bs-car-heart.on{color:#ff385c;background:rgba(255,56,92,.18);border-color:rgba(255,56,92,.45);}
 
 
 /* Parking liste directe */
@@ -809,7 +832,7 @@ body{
 .bch-btn-avis{min-height:44px;font-size:13px;font-weight:600;padding:10px 18px;border-radius:22px;}
 
 /* Section label beach */
-.bch-slbl{font-size:13px;font-weight:700;color:#5F5E5A;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:10px;margin-top:6px;}
+.bch-slbl{font-size:13px;font-weight:700;color:#5F5E5A;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:10px;margin-top:20px;}
 
 /* Section labels — ligne décorative + contraste */
 .bs-section-lbl{
@@ -1275,7 +1298,7 @@ body{
         <input type="text" class="search-input-explorer" id="search-input-explorer" placeholder="Rechercher..." oninput="handleSearch(this.value)" onfocus="enterSearchMode()" autocomplete="off">
         <div class="srch-clear" id="srch-clear" onclick="clearSearch()" style="display:none">✕</div>
       </div>
-      <div class="hdr-btn" id="hdr-btn-settings" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
+      <div class="hdr-btn" id="hdr-btn-settings" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="#1a1a18" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="#1a1a18" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="#1a1a18" stroke="none"/></svg></div>
       <div class="hdr-btn" id="hdr-btn-close-search" onclick="clearSearch()" style="display:none;background:var(--bg-d);border-color:var(--br);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--tx)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
     </div>
     <div id="srch-autocomplete" style="position:fixed;z-index:9999;background:rgba(20,20,20,0.93);backdrop-filter:blur(12px);border-radius:0 0 14px 14px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.4);display:none;"></div>
@@ -1304,7 +1327,7 @@ body{
     <div class="map-header">
       <div class="map-topbar-r1">
         <button class="map-back-btn" onclick="closeMapView()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
         <div class="map-search-wrap" style="position:relative;">
           <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><line x1="14" y1="14" x2="18" y2="18"/></svg>
@@ -1312,7 +1335,7 @@ body{
           <div class="map-search-clear" id="map-search-clear" onclick="onMapSearchClear()">✕</div>
           <div class="map-search-dropdown" id="map-search-dropdown"></div>
         </div>
-        <div class="hdr-btn" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="rgba(255,255,255,0.9)" stroke="none"/></svg></div>
+        <div class="hdr-btn" onclick="openSettingsSheet()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="8" cy="6" r="2.5" fill="#1a1a18" stroke="none"/><circle cx="16" cy="12" r="2.5" fill="#1a1a18" stroke="none"/><circle cx="10" cy="18" r="2.5" fill="#1a1a18" stroke="none"/></svg></div>
       </div>
       <!-- Pills dynamiques — peuplées par _renderMapPillsL1() / _renderMapPillsL2() -->
       <div class="map-filter-row" id="map-filter-row"></div>
@@ -1349,7 +1372,7 @@ body{
       <div class="nav-lbl">Explorer</div>
     </div>
     <div class="nav-item" id="nav-activites" onclick="navShow('activites')">
-      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div>
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg><div class="nav-act-badge" id="nav-act-badge"></div></div>
       <div class="nav-lbl">Mes activités</div>
     </div>
     <div class="nav-item">
@@ -1412,6 +1435,7 @@ body{
     <!-- Photo + identité -->
     <div class="bs-carousel">
       <div class="bs-car-back" onclick="closeAll()">←</div>
+      <div class="bs-car-heart" id="bs-car-heart" onclick="event.stopPropagation();_toggleFicheLike()">♡</div>
       <div class="bs-car-track" id="bs-car-track"></div>
       <div class="bs-car-ov"></div>
       <div class="bs-car-dots" id="bs-car-dots"></div>
@@ -2222,14 +2246,12 @@ function _renderTypeBlock(p){
 
 function _airDesc(txt){
   if(!txt) return '';
-  // Découpe sur les fins de phrases et ajoute un saut toutes les 3 phrases
-  var parts = txt.replace(/([.!?])\s+/g,'$1|||').split('|||');
-  var out = [];
-  parts.forEach(function(s,i){
-    out.push(s);
-    if((i+1)%3===0 && i<parts.length-1) out.push('<br>');
-  });
-  return out.join(' ');
+  var parts = txt.replace(/([.!?])\s+/g,'$1|||').split('|||').filter(Boolean);
+  var paras = [];
+  for(var i=0;i<parts.length;i+=2){
+    paras.push(parts.slice(i,i+2).join(' '));
+  }
+  return paras.map(function(p){return '<p style="margin:0 0 16px;line-height:1.75">'+p+'</p>';}).join('');
 }
 
 function _dangerScore(H,P,W){
@@ -2644,6 +2666,10 @@ function _renderPoiBody(p,mode){
     +'<span class="bch-avis-count">'+avis.length+' avis</span></div>'
     +'<button class="bch-btn-avis" onclick="(function(btn){var cards=btn.closest(\'.bch-body\').querySelectorAll(\'.bch-avis-card\');var anyHidden=[].some.call(cards,function(c){return c.style.display===\'none\';});cards.forEach(function(c){c.style.display=anyHidden?\'block\':\'none\';});cards[0].style.display=\'block\';btn.textContent=anyHidden?\'Moins d\\\'avis\':\'+ d\\\'avis\';})(this)">+ d\'avis</button></div>'
     +avisHtml
+    +((p.location&&p.location.lat)?'<div class="bch-slbl">'+_mapLbl(p)+'</div>'
+      +'<div class="poi-mini-map-wrap"><div id="poi-mini-map" class="poi-mini-map"></div>'
+      +'<button class="poi-mini-map-expand" onclick="_openMapForPoi('+p.location.lat+','+p.location.lng+')">⊞ Agrandir</button>'
+      +'</div>':'')
     +'<div class="bch-slbl">Parking conseillé</div>'
     +pkHtml
     +'</div>';
@@ -2739,7 +2765,10 @@ function openPoiSheet(idx){
     btn.querySelector('.btn-icon').textContent='♥';
     btn.querySelector('.btn-txt').textContent='Ajouter à mes activités';
   }
+  _updateFicheLikeBtn();
   openSheet('poi');
+  var _miniIdx=idx;
+  setTimeout(function(){if(currentIdx===_miniIdx)_initMiniMap(p);},350);
 }
 function toggleParkingOthers(){}// stub — parking est maintenant un flat list injecté
 
@@ -2891,7 +2920,7 @@ function scrollPillIntoView(el){
 }
 function renderPillsL0(){
   var w=document.getElementById('pills-scroll');w.innerHTML='';
-  var t=mk('pill tous','Tous');t.onclick=selectTous;w.appendChild(t);
+  var t=mk(activeTuile?'pill':'pill tous','Tous');t.onclick=selectTous;w.appendChild(t);
   var activeEl=null;
   TUILES.forEach(function(tu){
     var isActive=activeTuile===tu.id;
@@ -2946,8 +2975,7 @@ function toggleAddPoi(btn){
     if(fromAct){setTimeout(function(){closeAll();renderActivites();renderList();},200);}
     else{renderList();}
   }
-  var badge=document.getElementById('act-badge');
-  if(badge)badge.textContent=likedPois.length;
+  _updateActBadge();
 }
 
 // ── RENDER LIST DYNAMIQUE ──
@@ -2970,7 +2998,7 @@ function renderList(){
     var srcsAttr=imgs.join('|');
     var dotsHtml=imgs.length>1?'<div class="lcard-photo-dots">'+imgs.map(function(_,n){return '<div class="lcard-photo-dot'+(n===0?' on':'')+'"></div>';}).join('')+'</div>':'';
     return '<div class="lcard" onclick="openPoiSheet('+i+')">'
-      +'<div class="lcard-img-wrap" data-srcs="'+srcsAttr+'" onclick="lcardNextPhoto(this);event.stopPropagation()">'
+      +'<div class="lcard-img-wrap" data-srcs="'+srcsAttr+'">'
       +'<img src="'+imgs[0]+'" alt="" loading="lazy">'
       +dotsHtml
       +'<div class="lcard-cat">'+p.cat+'</div>'
@@ -3003,11 +3031,10 @@ function renderList(){
     wrap.addEventListener('touchend',function(e){
       var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;
       if(isHoriz&&Math.abs(dx)>30){
-        lcardNextPhoto(wrap,dx<0?1:-1);e.preventDefault();e.stopPropagation();
-      } else if(Math.abs(dx)<10&&Math.abs(dy)<10){
-        lcardNextPhoto(wrap,1);e.preventDefault();e.stopPropagation();
+        lcardNextPhoto(wrap,dx<0?1:-1);e.stopPropagation();
       }
-    });
+      // tap : laisser le click bubble vers lcard.onclick → openPoiSheet
+    },{passive:true});
   });
 }
 
@@ -3022,8 +3049,7 @@ function toggleListLike(idx, btn){
     btn.className='lcard-like on';btn.textContent='♥';
   }
   localStorage.setItem('planly_likes',JSON.stringify(likedPois));
-  var badge=document.getElementById('act-badge');
-  if(badge)badge.textContent=likedPois.length||'';
+  _updateActBadge();
   if(document.getElementById('activites-view').classList.contains('open'))renderActivites();
 }
 
@@ -3047,8 +3073,7 @@ function saveLike(idx){
   if(likedPois.indexOf(name)===-1){
     likedPois.push(name);
     localStorage.setItem('planly_likes',JSON.stringify(likedPois));
-    var badge=document.getElementById('act-badge');
-    if(badge)badge.textContent=likedPois.length;
+    _updateActBadge();
   }
 }
 function isLiked(name){return likedPois.indexOf(name)!==-1;}
@@ -3526,13 +3551,12 @@ function navShow(view){
 function removeLike(name){
   likedPois=likedPois.filter(function(n){return n!==name;});
   localStorage.setItem('planly_likes',JSON.stringify(likedPois));
-  var badge=document.getElementById('act-badge');if(badge)badge.textContent=likedPois.length;
+  _updateActBadge();
   renderActivites();
   renderList();
 }
 
 function clearLikes(){
-  // confirm() bloqué silencieusement en PWA iOS — double-tap pour confirmer
   var cb=document.getElementById('act-clear-btn');
   if(!cb)return;
   if(cb.dataset.confirm!=='1'){
@@ -3543,25 +3567,32 @@ function clearLikes(){
   cb.dataset.confirm='';cb.textContent='Vider';
   likedPois=[];
   localStorage.setItem('planly_likes','[]');
-  var badge=document.getElementById('act-badge');if(badge)badge.textContent=0;
+  _updateActBadge();
   renderActivites();
   renderList();
 }
 
 function renderActivites(){
   var liked=POIS.filter(function(p){return likedPois.indexOf(p.name)!==-1;});
-  document.getElementById('act-badge').textContent=liked.length;
+  _updateActBadge();
   var cb=document.getElementById('act-clear-btn');if(cb)cb.style.display=liked.length>0?'':'none';
   var scroll=document.getElementById('act-scroll');
   if(liked.length===0){
     scroll.innerHTML='<div class="act-empty">'
       +'<div class="act-empty-icon">♡</div>'
       +'<div class="act-empty-title">Aucune activité pour l\'instant</div>'
-      +'<div class="act-empty-sub">Swipe et appuie sur ♥ ou "Ajouter à mes activités" pour sauvegarder des endroits.</div>'
+      +'<div class="act-empty-sub">Appuie sur ♥ pour sauvegarder des endroits.</div>'
       +'</div>';
     return;
   }
-  scroll.innerHTML=liked.map(function(p){
+  // Grouper par sous-catégorie
+  var groups={};var groupOrder=[];
+  liked.forEach(function(p){
+    var key=p.subcategory||p.cat||'Autre';
+    if(!groups[key]){groups[key]=[];groupOrder.push(key);}
+    groups[key].push(p);
+  });
+  function _actCard(p){
     var i=POIS.indexOf(p);
     var imgs=p.imgs&&p.imgs.length?p.imgs:[''];
     var inco=p.inco?'<div class="lcard-inco">⭐</div>':'';
@@ -3570,7 +3601,7 @@ function renderActivites(){
     var srcsAttr=imgs.join('|');
     var dotsHtml=imgs.length>1?'<div class="lcard-photo-dots">'+imgs.map(function(_,n){return '<div class="lcard-photo-dot'+(n===0?' on':'')+'"></div>';}).join('')+'</div>':'';
     return '<div class="lcard" onclick="openPoiSheet('+i+')">'
-      +'<div class="lcard-img-wrap" data-srcs="'+srcsAttr+'" onclick="lcardNextPhoto(this);event.stopPropagation()">'
+      +'<div class="lcard-img-wrap" data-srcs="'+srcsAttr+'">'
       +'<img src="'+imgs[0]+'" alt="" loading="lazy">'
       +dotsHtml
       +'<div class="lcard-cat">'+p.cat+'</div>'
@@ -3579,7 +3610,6 @@ function renderActivites(){
       +'<div class="lcard-body">'
       +'<div class="lcard-name">'+p.name+'</div>'
       +'<div class="lcard-commune">📍 '+p.commune+(dist?' · '+dist:'')+'</div>'
-      +'<div class="lcard-desc">'+p.desc+'</div>'
       +'<div class="lcard-footer">'
       +'<div class="lcard-pills">'
       +(p.budgetBadge?'<div class="lcard-pill'+(p.budgetClass==='free'?' green':'')+'">'+p.budgetBadge+'</div>':'')
@@ -3588,8 +3618,12 @@ function renderActivites(){
       +'</div>'
       +'<button class="lcard-like on" onclick="event.stopPropagation();toggleListLike('+i+',this)">♥</button>'
       +'</div></div></div>';
+  }
+  scroll.innerHTML=groupOrder.map(function(key,gi){
+    return '<div class="act-cat-title'+(gi===0?' first':'')+'">'+key+'</div>'
+      +groups[key].map(_actCard).join('');
   }).join('');
-  // Touch carousel (même logique que renderList)
+  // Touch carousel
   scroll.querySelectorAll('.lcard-img-wrap').forEach(function(wrap){
     if((wrap.dataset.srcs||'').split('|').filter(Boolean).length<2)return;
     var tx=0,ty=0,isHoriz=false;
@@ -3600,9 +3634,8 @@ function renderActivites(){
     },{passive:false});
     wrap.addEventListener('touchend',function(e){
       var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;
-      if(isHoriz&&Math.abs(dx)>30){lcardNextPhoto(wrap,dx<0?1:-1);e.preventDefault();e.stopPropagation();}
-      else if(Math.abs(dx)<10&&Math.abs(dy)<10){lcardNextPhoto(wrap,1);e.preventDefault();e.stopPropagation();}
-    });
+      if(isHoriz&&Math.abs(dx)>30){lcardNextPhoto(wrap,dx<0?1:-1);e.stopPropagation();}
+    },{passive:true});
   });
 }
 
@@ -3733,6 +3766,94 @@ function closeMapView(){
 }
 
 var _mapActivitesOnly=false;
+
+// ── AGRANDIR MINI-CARTE → overlay fullscreen carte ──
+var _fullMap=null;
+function _openMapForPoi(lat,lng){
+  var ov=document.getElementById('map-full-overlay');
+  if(!ov)return;
+  ov.style.display='block';
+  var el=document.getElementById('map-full-container');
+  if(_fullMap){try{_fullMap.remove();}catch(e){}_fullMap=null;}
+  try{
+    _fullMap=L.map(el,{zoomControl:true,attributionControl:false})
+      .setView([lat,lng],15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(_fullMap);
+    var p=currentIdx>=0?POIS[currentIdx]:null;
+    if(p&&typeof _makeIcon==='function')L.marker([lat,lng],{icon:_makeIcon(p,false)}).addTo(_fullMap);
+    setTimeout(function(){if(_fullMap)_fullMap.invalidateSize();},100);
+  }catch(e){ov.style.display='none';}
+}
+function _closeMapFull(){
+  var ov=document.getElementById('map-full-overlay');
+  if(ov)ov.style.display='none';
+  if(_fullMap){try{_fullMap.remove();}catch(e){}_fullMap=null;}
+}
+
+// ── CŒUR FICHE (Airbnb-style) ──
+function _updateFicheLikeBtn(){
+  var btn=document.getElementById('bs-car-heart');
+  if(!btn||currentIdx<0)return;
+  var liked=isLiked(POIS[currentIdx].name);
+  btn.textContent=liked?'♥':'♡';
+  btn.classList.toggle('on',liked);
+}
+function _toggleFicheLike(){
+  if(currentIdx<0)return;
+  var p=POIS[currentIdx];
+  var nowLiked=!isLiked(p.name);
+  if(!nowLiked){
+    likedPois=likedPois.filter(function(n){return n!==p.name;});
+  } else {
+    saveLike(currentIdx);
+  }
+  localStorage.setItem('planly_likes',JSON.stringify(likedPois));
+  _updateActBadge();
+  _updateFicheLikeBtn();
+  // Sync le bouton "Ajouter" principal dans la fiche
+  var addBtn=document.getElementById('bs-btn-like');
+  if(addBtn){
+    addBtn.classList.toggle('added',nowLiked);
+    addBtn.querySelector('.btn-icon').textContent=nowLiked?'✓':'♥';
+    addBtn.querySelector('.btn-txt').textContent=nowLiked?'Ajouté à mes activités':'Ajouter à mes activités';
+  }
+  renderList();
+  if(document.getElementById('activites-view').classList.contains('open'))renderActivites();
+}
+
+// ── BADGE ACTIVITÉS (nav + header) ──
+function _updateActBadge(){
+  var n=likedPois.length;
+  var hb=document.getElementById('act-badge');
+  if(hb)hb.textContent=n||'';
+  var nb=document.getElementById('nav-act-badge');
+  if(nb){nb.textContent=n;nb.classList.toggle('on',n>0);}
+}
+
+// ── MINI-CARTE FICHE POI ──
+var _miniMap=null;
+function _mapLbl(p){
+  var s=p.subcategory||'';
+  if(s.indexOf('Plage')>=0||s.indexOf('Côte')>=0)return'Où se situe la plage';
+  if(s.indexOf('Forêt')>=0||s.indexOf('Nature')>=0)return'Où se situe le site';
+  if(s.indexOf('Port')>=0||(p.name||'').toLowerCase().indexOf('port')>=0)return'Où se situe le port';
+  if(s.indexOf('Village')>=0||s.indexOf('Sites')>=0)return'Où se situe le village';
+  if(s.indexOf('Balade')>=0||s.indexOf('Promenade')>=0)return'Où commence la balade';
+  if(s.indexOf('Point')>=0||s.indexOf('Vue')>=0)return'Où se situe le point de vue';
+  return'Localisation';
+}
+function _initMiniMap(p){
+  var el=document.getElementById('poi-mini-map');
+  if(!el||!p||!p.location||!p.location.lat)return;
+  if(_miniMap){try{_miniMap.remove();}catch(e){}  _miniMap=null;}
+  try{
+    _miniMap=L.map(el,{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,tap:false})
+      .setView([p.location.lat,p.location.lng],14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19}).addTo(_miniMap);
+    if(typeof _makeIcon==='function')L.marker([p.location.lat,p.location.lng],{icon:_makeIcon(p,false)}).addTo(_miniMap);
+    setTimeout(function(){if(_miniMap)_miniMap.invalidateSize();},100);
+  }catch(e){}
+}
 var _savedL1=null,_savedMapSubcat=null;
 function _actSetView(v){
   var bl=document.getElementById('act-btn-liste');
@@ -3815,7 +3936,7 @@ function _buildMapCarousel(fp){
     var subcat=p.subcategory||p.cat||'';
     var dotsHtml=imgs.length>1?'<div class="lcard-photo-dots">'+imgs.map(function(_,n){return '<div class="lcard-photo-dot'+(n===0?' on':'')+'"></div>';}).join('')+'</div>':'';
     return '<div class="map-card-item" data-fi="'+fi+'" onclick="_mapOpenFiche('+poiIdx+')">'
-      +'<div class="map-card-thumb" data-srcs="'+srcsAttr+'" data-cur="0" onclick="event.stopPropagation()">'
+      +'<div class="map-card-thumb" data-srcs="'+srcsAttr+'" data-cur="0">'
       +'<img src="'+img+'" alt="" loading="lazy">'
       +'<button class="map-card-hov'+(liked?' on':'')+'" onclick="event.stopPropagation();_mapToggleLike('+poiIdx+',this)">'+(liked?'♥':'♡')+'</button>'
       +'<div class="map-card-badge">'+em+' '+subcat+'</div>'
@@ -3841,8 +3962,11 @@ function _buildMapCarousel(fp){
     },{passive:false});
     thumb.addEventListener('touchend',function(e){
       var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;
-      if(Math.abs(dx)>30&&Math.abs(dx)>Math.abs(dy)){lcardNextPhoto(thumb,dx<0?1:-1);}
-      else if(Math.abs(dx)<10&&Math.abs(dy)<10){lcardNextPhoto(thumb,1);}
+      if(Math.abs(dx)>30&&Math.abs(dx)>Math.abs(dy)){
+        lcardNextPhoto(thumb,dx<0?1:-1);
+        e.stopPropagation(); // swipe → change photo, ne pas ouvrir la fiche
+      }
+      // tap (dx<10, dy<10) → laisser le click bubbler → ouvre la fiche
     },{passive:true});
   });
 
@@ -4042,7 +4166,7 @@ function mapOpenFiche(){
 updateSlider(4);
 renderList();
 // Initialiser le badge activités
-(function(){var b=document.getElementById('act-badge');if(b)b.textContent=likedPois.length;})();
+(function(){_updateActBadge();})();
 
 // PWA
 if('serviceWorker' in navigator){
@@ -4050,6 +4174,11 @@ if('serviceWorker' in navigator){
   navigator.serviceWorker.addEventListener('controllerchange', function() { location.reload(); });
 }
 </script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="vendor/leaflet.js"></script>
+<!-- Overlay carte fullscreen -->
+<div id="map-full-overlay">
+  <div id="map-full-container"></div>
+  <div class="map-full-close" onclick="_closeMapFull()">✕</div>
+</div>
 </body>
 </html>
