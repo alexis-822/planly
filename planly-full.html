@@ -3620,7 +3620,7 @@ function renderActivites(){
       +'</div></div></div>';
   }
   scroll.innerHTML=groupOrder.map(function(key,gi){
-    return '<div class="act-cat-title'+(gi===0?' first':'')+'"><span class="hl">'+key+'</span></div>'
+    return '<div class="act-cat-title'+(gi===0?' first':'')+'">'+key+'</div>'
       +groups[key].map(_actCard).join('');
   }).join('');
   // Touch carousel
