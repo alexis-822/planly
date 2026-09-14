@@ -1,0 +1,105 @@
+{
+  "id": "parc_des_floralies",
+  "name": "Parc des Floralies",
+  "name_google": "Parc des Floralies",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Parcs botaniques",
+  "commune": "La Tranche-sur-Mer",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.3466124,
+  "lng": -1.448299,
+  "address": "2 All. Jean Bart, 85360 La Tranche-sur-Mer",
+  "phone": "+33251303396",
+  "website": "https://www.vendee-tourisme.com/parc-des-floralies/la-tranche-sur-mer/loipdl085v513v1x",
+  "rating": 4,
+  "reviews_count": 241,
+  "rating_distribution": {
+    "1": 17,
+    "2": 23,
+    "3": 17,
+    "4": 67,
+    "5": 117
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [],
+  "reviews": [
+    {
+      "text": "Le Parc des Floralies est une très belle surprise pour ceux qui cherchent un endroit calme, naturel et agréable pour se promener en famille. Ce parc est bien aménagé, très propre et surtout très fleuri, avec une grande variété de plantes, d’arbres et de petits chemins ombragés qui invitent à la détente.\n\nCe que j’ai particulièrement aimé, c’est la tranquillité qui règne dans ce lieu. On peut y faire une belle pause au frais, lire un livre, se promener, ou tout simplement profiter du calme et de la nature.\n\nPour les enfants, il y a aussi une belle aire de jeux bien équipée, ce qui en fait un lieu parfait pour une sortie familiale. Les bancs tout au long du parcours permettent de s’asseoir et de profiter du paysage en toute sérénité.\n\nC’est aussi un bon endroit pour pique-niquer à l’ombre, ou faire une petite sieste pendant les journées d’été.\n\nSitué à deux pas du centre-ville et non loin de la plage. Une belle découverte que je recommande vivement à tous les amoureux de nature et de tranquillité.",
+      "rating": 4,
+      "date": "2025-05-27 18:23:51 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Nous avons passé la journée au parc en famille. C'était très agréable,  ombragé,  les jeux pour les enfants. Le snack a l'entrée nous y avons mangé, c'était bon et vraiment pas excessif niveau tarif!",
+      "rating": 5,
+      "date": "2026-07-06 20:10:52 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Le parc des Floralies est très bucolique.\nIl y a des poneys, des canards, des poules, des ânes, des chèvres.\nCe jour du mois d'août, il y avait aussi une exposition photo.\nPour les enfants, il y a des balades en poneys mais pas le lundi.\nIl y a à l'entrée du parc, une paillote pour se restaurer.",
+      "rating": 5,
+      "date": "2023-08-16 16:11:21 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Parc agréable à faire en famille, même si maintenant il y a un peu moins de fleurs, ça vaut le coup d'y aller ne serait-ce que voir tous les panneaux installés qui expliquent ce qu'était la vie des habitants de la Tranche sur Mer, mais il y a aussi quelques animaux, la mare aux canards. Un bon moment à y passer !!",
+      "rating": 5,
+      "date": "2023-10-02 19:25:21 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Au calme en pleine nature avec quelques animaux présents\nBalade possible en poney 10e\nJeux en bois et de société présent lors de notre parcours\nToilettes et buvette à disposition",
+      "rating": 3,
+      "date": "2025-07-14 11:42:00 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "11594476517966295757",
+  "place_id": "ChIJ6aJWWr4PBEgRzTL9gfba56A",
+  "wikipedia_description": null,
+  "description_short": "Un écrin de verdure fleuri et bucolique à La Tranche-sur-Mer, idéal pour une balade en famille avec animaux et jeux pour les enfants.",
+  "description_long": "Le Parc des Floralies est un havre de paix niché à La Tranche-sur-Mer, alliant nature, fleurs et convivialité. Ce parc bien aménagé et ombragé accueille poneys, ânes, chèvres, canards et poules, pour le plus grand bonheur des petits. Les enfants profitent de jeux en bois et de jeux de société, tandis que les adultes se ressourcent au fil de sentiers fleuris et d'expositions temporaires. Une buvette sur place permet de se restaurer à prix doux. Idéal pour une journée complète en plein air, entre découverte de la faune, flânerie botanique et douceur vendéenne.",
+  "tags": [
+    "parc fleuri",
+    "animaux de la ferme",
+    "jeux enfants",
+    "balade nature",
+    "poney"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": true,
+  "rainy_day_activity": false,
+  "conseil_planly": "Venez en matinée pour profiter de la fraîcheur et voir les animaux bien réveillés — les enfants adorent la balade en poney ! Prévoyez un pique-nique ou testez la buvette sur place pour une journée complète sans stress.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T19:09:50.932662+00:00",
+  "enriched_at": "2026-09-14T19:09:50.932662+00:00",
+  "status": "complete",
+  "photos_original_urls": []
+}

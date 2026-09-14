@@ -1,0 +1,1319 @@
+{
+  "id": "vague_de_jeux",
+  "name": "Vague de Jeux",
+  "name_google": "Vague de Jeux - Escape Game - Professionnels et Particuliers",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Jeux & Divertissement",
+  "commune": "Talmont-Saint-Hilaire",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.462589799999996,
+  "lng": -1.6056831,
+  "address": "19 Rue du 11 Novembre 1918, 85440 Talmont-Saint-Hilaire",
+  "phone": "+33781571904",
+  "website": "https://www.vaguedejeux.fr/",
+  "rating": 4.9,
+  "reviews_count": 88,
+  "rating_distribution": {
+    "1": 1,
+    "2": 0,
+    "3": 0,
+    "4": 5,
+    "5": 82
+  },
+  "opening_hours": null,
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 42
+        }
+      ],
+      "monday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 63
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 63
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 47
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 63
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 42
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 63
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 36
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 63
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 21
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 63
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 68
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 31
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 68
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [
+    "images/vague_de_jeux/photo_1.jpg",
+    "images/vague_de_jeux/photo_2.jpg",
+    "images/vague_de_jeux/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Nous avons passé un excellent moment pour un EVJF. Toutes ont adoré ! Un excellent concept que nous recommandons fortement si vous aimez les escape game tout en profitant d’un beau cadre. Nous sommes allées en forêt plage du veillon... on termine par manger et boire notre butin 😁 et celui ci est tout à fait bien garnis ... un grand merci...",
+      "rating": 5,
+      "date": "2026-04-05 16:11:29 +00:00",
+      "owner_response": "Et le temps était de la partie !! Merci d'avoir tenté l'expérience pour votre EVJF ! A bientôt pour les anniversaires de mariage ^^  Merci A vous, Alexandre"
+    },
+    {
+      "text": "Super et convivial nous avons découvert l’escape game apéro pour la fête des pères .\nUn moment de rigolade en famille . Le concept de l’escape à emmener partout est génial , et en plus de passer un bon moment cela permet de découvrir des produits locaux car à la fin nous sommes récompensés par un super apéro !!!",
+      "rating": 5,
+      "date": "2026-06-27 13:09:28 +00:00",
+      "owner_response": "Bonjour  Morgane, Merci pour cette belle note ! L'Escape Game Apéro réserve bien des surprises, en effet ! A bientôt, Cdt Alexandre"
+    },
+    {
+      "text": "Nous avons passé un très bon moment avec nos amis autour de l’escape game Le Manoir !\nTrès bien fait et intriguant, on ne s’est pas ennuyé, le temps est passé très vite !\nNous avions aussi fait l’escape game apéro en famille et pareil c’était un super bon moment !",
+      "rating": 5,
+      "date": "2026-08-05 07:27:27 +00:00",
+      "owner_response": "Un grand merci pour ce retour d'expériences et pour votre fidélité ! <br>A bientôt pour de nouvelles aventures ludiques, Alexandre "
+    },
+    {
+      "text": "Nous avons testé le serpent d or en famille. Des petits enfants enfants aux grands parents tout le monde s'est amusé et a contribué à la résolution du jeu.\n\nA refaire avec grand plaisir.\n\nMerci également le service, Alex est disponible, réactif et de bons conseils.",
+      "rating": 5,
+      "date": "2026-04-12 07:26:41 +00:00",
+      "owner_response": "Bonjour Anthony, Merci pour ce retour d'expérience ! Le Mystère du Serpent d'Or est, en effet, un jeu très familial. Nous sommes ravis que toute la famille en ait profité ! A bientôt pour une nouvelle aventure ludique ! Alex "
+    },
+    {
+      "text": "Supers moments autour des coffres Le Manoir et le Serpent ! Hâte de tester les autres formats ! Alexandre est très arrangeant et c’est super facile à organiser ! À recommander pour les adeptes des escape games !!!",
+      "rating": 5,
+      "date": "2026-04-06 09:45:49 +00:00",
+      "owner_response": "Merci pour votre fidélité et votre confiance. A bientôt pour une nouvelle aventure ludique ! Merci, Alexandre "
+    }
+  ],
+  "place_topics": {
+    "apero": 25,
+    "énigmes": 15,
+    "concept": 13,
+    "glacière": 8,
+    "EVJF": 5,
+    "chapitre de religieux": 4,
+    "plage": 6,
+    "soirée": 2,
+    "festival": 2,
+    "grands parents": 2
+  },
+  "booking_url": null,
+  "cid": "168067289293241146",
+  "place_id": "ChIJB37eMMtrBEgROruvJE8YVQI",
+  "wikipedia_description": null,
+  "description_short": "Escape game apéro, jeux de piste et animations mobiles à vivre partout en Vendée pour tous vos événements !",
+  "description_long": "Vague de Jeux propose des expériences ludiques et mobiles pour tous vos moments de convivialité en Vendée. Leur concept phare, l'escape game apéro, réunit l'ambiance des énigmes et le plaisir de l'apéritif dans votre salon, à la plage ou en forêt. Idéal pour un EVJF, EVG, anniversaire, mariage ou team building, leurs animations s'adaptent à tous les groupes et tous les âges. Des coffres mystérieux comme Le Manoir ou Le Serpent d'Or raviront aussi bien les enfants que les grands-parents. Une formule originale, facile à organiser et garantie 100 % fous rires !",
+  "tags": [
+    "escape-game",
+    "animation-mobile",
+    "apéro",
+    "jeux-de-piste",
+    "team-building"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "ados",
+    "amis"
+  ],
+  "age_min": 7,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Pour une soirée originale en famille ou entre amis, optez pour l'escape game apéro à domicile : prévoir une glacière et des encas pour prolonger le plaisir ! Pour un EVJF ou team building, contactez Alexandre en avance pour personnaliser votre animation.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T16:26:32.757490+00:00",
+  "enriched_at": "2026-09-14T16:26:32.757490+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://france3-regions.franceinfo.fr/image/00V32NOljhPuM61QSTF1hkFOJ04/2048x1534/regions/2025/06/15/manif-surf-une-684eef08f245c743345310.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/escape-game-apero-chapitre-glaciere.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/escape-game-apero-85-jeu-enquete.jpg"
+  ]
+}

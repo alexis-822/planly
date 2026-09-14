@@ -1,0 +1,114 @@
+{
+  "id": "zoo_des_sables_d_olonne",
+  "name": "Zoo des Sables d'Olonne",
+  "name_google": "Zoo des Sables d'Olonne",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Parcs animaliers",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.484142999999996,
+  "lng": -1.755827,
+  "address": "Rte du Tour de France, 85100 Les Sables-d'Olonne",
+  "phone": "+33251951410",
+  "website": "http://www.zoodessables.fr/",
+  "rating": 4.2,
+  "reviews_count": 8621,
+  "rating_distribution": {
+    "1": 213,
+    "2": 346,
+    "3": 1026,
+    "4": 2873,
+    "5": 4163
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/zoo_des_sables_d_olonne/photo_1.jpg",
+    "images/zoo_des_sables_d_olonne/photo_2.jpg",
+    "images/zoo_des_sables_d_olonne/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Ce \"petit\" zoo n'est pas si petit, il y a de quoi faire ! Nous sommes arrivés à l'ouverture et repartis un peu avant midi, donc un peu plus de 2h sur place. Nous avons pris le temps d'observer les animaux et assister à 2 présentations (celle des manchots est très sympa comme on peut les voir plonger pour manger et nager dans l'eau par la vitre devant les gradins).\nOn a passé un super moment avec un enfant de 3 ans et une ado.",
+      "rating": 5,
+      "date": "2026-07-30 08:55:28 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Une très belle surprise !\nUne visite au top ! Nous avons été agréablement surpris par la quantité d'animaux présents et surtout par leur dynamisme, pourtant actifs malgré la chaleur. Nous avons pu admirer de magnifiques girafes, des singes très joueurs, et nous avons même assisté à une petite scène de ménage hilarante chez les lions ! Parc ombragé ce qui est agréable en été.\nMention spéciale pour la possibilité de nourrir les oiseaux, une expérience vraiment immersive et sympa pour petits et grands.\nSeul petit bémol: dommage qu'il n'y ait pas de tarif famille proposé, ce qui allégerait un peu le budget. Mais dans l'ensemble, c'est un parc que nous recommandons sans hésitation !",
+      "rating": 5,
+      "date": "2026-08-03 14:19:15 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Découverte immersive en plus ou moins deux heures. Tout public et agréable le long d’allées ombragées. Une grande variété d’espèces avec un accent mis sur la proximité avec les animaux : nectar à 1€ pour nourrir des oiseaux (loriquets). Le zoo permet une sensibilisation pédagogique aux divers enjeux environnementaux, et promeut la préservation des espèces menacées.",
+      "rating": 5,
+      "date": "2026-07-02 15:42:41 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Un sublime \"petit\" parc zoologique. Probablement l'un des plus jolis et des mieux entretenu que nous ayons visité ! Le cadre est idyllique et très naturelle. Tous les animaux sont magnifiques et semblent en pleine forme.  C'est vrai plaisir d'arpenter les petits chemins qui regorgent d'informations diverses sur la faune et la flore du parc. Une mention toute particulière pour la possibilité d'acheter un petit pot de nectar à donner au oiseaux dans la volière dès l'entrée du parc et croyez-moi vous serez attendus ! Les oiseaux ont du nectar à disposition mais ils préfèrent visiblement bien plus celui offert par les visiteurs ! A faire absolument ! Il y a également des présentations intéressantes à différents horraires (manchots, oiseaux, capybara...). Parc à visiter absolument ! Très peu de monde le matin à l'ouverture et parking gratuit directement devant.",
+      "rating": 5,
+      "date": "2026-07-20 12:08:31 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Étant de grand amateurs de zoo et étant de passage aux sables, nous ne pouvions que faire une halte dans celui-ci.\n\nNous n’avions aucun a priori sur ce zoo car jamais entendu parlé, donc nous y sommes allés sans savoir à quoi s’attendre.\n\nDès le début agréablement surpris, des toilettes très propres.\n\nEt on commence la visiter, annoncée 1h30.\n\nL’intégralité du parc ou presque est extrêmement bien couverte, arborée dans sa quasi intégralité ce qui est incroyable aussi bien pour nous que pour les animaux .\n\nLes enclos sont grands, vraiment bien aménagés et c’est super agréable à parcourir!\n\nUn vrai bonheur de voir ce genre d’installation !\n\nNous reviendrons pour sur!",
+      "rating": 5,
+      "date": "2026-06-20 22:13:36 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "12523434607002497078",
+  "place_id": "ChIJE4xgpxJoBEgRNrA3TmwtzK0",
+  "wikipedia_description": null,
+  "description_short": "Un zoo surprenant aux allées ombragées, où la proximité avec les animaux fait toute la différence. Une belle escapade pour petits et grands !",
+  "description_long": "Niché dans un cadre naturel et idyllique aux Sables-d'Olonne, le Zoo des Sables offre une expérience immersive et conviviale pour toute la famille. Malgré sa taille modeste, il réserve de belles surprises avec une grande variété d'espèces animales, toutes présentées dans des enclos soignés et bien entretenus. Les allées ombragées rendent la visite agréable même en plein été. Points forts : la proximité avec les animaux, l'ambiance verdoyante et l'atmosphère détendue. Comptez environ 2 heures pour profiter pleinement du site sans vous presser.",
+  "tags": [
+    "zoo",
+    "animaux",
+    "famille",
+    "nature",
+    "sortie enfants"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": true,
+  "rainy_day_activity": false,
+  "conseil_planly": "Arrivez dès l'ouverture pour observer les animaux à leur meilleur ! Les familles apprécieront l'option nectar à 1€ pour nourrir certaines espèces, un moment magique pour les enfants.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T19:02:30.298625+00:00",
+  "enriched_at": "2026-09-14T19:02:30.298625+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://www.zoodessables.fr/wp-content/uploads/2025/05/Girafes-2025-2.jpg",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ad/ab/14/zoo-des-sables-d-olonne.jpg?w=1200&h=-1&s=1",
+    "https://www.culturadvisor.com/app/uploads/2024/08/Zoo-des-Sables-dOlonne-vendee.jpg"
+  ]
+}

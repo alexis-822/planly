@@ -1,0 +1,125 @@
+{
+  "id": "atlantic_kart_system",
+  "name": "Atlantic Kart System",
+  "name_google": "Atlantic Kart System-karting les Sables d'Olonne",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Jeux & Divertissement",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.509119299999995,
+  "lng": -1.6859427,
+  "address": "Lieu dit Le Coudriou, 85180",
+  "phone": "+33251325252",
+  "website": "http://www.akskart.fr/",
+  "rating": 4.5,
+  "reviews_count": 604,
+  "rating_distribution": {
+    "1": 47,
+    "2": 7,
+    "3": 15,
+    "4": 70,
+    "5": 465
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/atlantic_kart_system/photo_1.jpg",
+    "images/atlantic_kart_system/photo_2.jpg",
+    "images/atlantic_kart_system/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Excellente journée du début à la fin !\n\nUn grand merci à toute l’équipe pour son accueil, son professionnalisme et la qualité de l’organisation. Nous avons passé un très bon moment dans une ambiance conviviale et pleine de bonne humeur.\n\nLa pluie a-t-elle fait gagner les filles ou est-ce simplement leur talent ? Le débat reste ouvert… 😄 Quoi qu’il en soit, cela a donné lieu à quelques belles glissades, beaucoup de rires et de très bons souvenirs.\n\nUne activité parfaite pour partager un moment d’équipe. Nous recommandons sans hésiter !\n\nEncore merci et excellente saison à toute l’équipe.",
+      "rating": 5,
+      "date": "2026-06-14 09:19:10 +00:00",
+      "owner_response": "Merci beaucoup pour votre confiance et cet avis, une excellente saison à vous !!!"
+    },
+    {
+      "text": "Équipe au top\nExcellent tracé de 1000m avec virages variés.\nKart neuf (270cc pour nous, largement suffisant pour une découverte du circuit)\nFormule 3x10min (Essai libre, course, finale) pour 55€. Ça les vaut sans soucis et donne envie d'y revenir.",
+      "rating": 5,
+      "date": "2026-03-29 19:09:46 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Un accueil et une proximité comme il en existe peu… ma fille de 9 ans avait très peur pour sa « première fois ».\nLe patron l’a accompagné et l’a vraiment rassuré avec bienveillance patience et passion. Elle n’a plus qu’une envie… En refaire!!!\nMerci pour votre authenticité et votre sourire !!\nNous reviendrons ☺️",
+      "rating": 5,
+      "date": "2026-07-20 13:10:07 +00:00",
+      "owner_response": "Un réel plaisir de partager notre passion avec de jeunes pilotes 😉"
+    },
+    {
+      "text": "Première fois que nous venons,et mon ado de 16 ans à adoré.\nUn grand merci à la propriétaire pour l'accueil chaleureux et pour sa gentillesse, merci également d'avoir accepté mon chien ( un cocker ) et merci pour la petite friandise 🫣😅.\n\n'ous reviendrons c'est sur",
+      "rating": 5,
+      "date": "2026-07-07 15:06:48 +00:00",
+      "owner_response": "Avec plaisir ☺️<br>À bientôt 😉"
+    },
+    {
+      "text": "Accueil chaleureux par la gérante, piste agréable et karts performants. Cependant, je déconseille fortement d'y amener de jeunes conducteurs. Le gérant a été insultant envers un jeune (et sa famille médusée). Ce jeune avait fait correctement son tour, sans gêner nullement les autres karts. A l'arrivée,  où il a renversé un pneu, il a été surpris d'être insulté par le gérant en des termes violents et visant à le décourager. Ses cousins, témoins, ont bien réconforté le jeune. Grand manque de pédagogie de la part de ce gérant .....qui devrait peut-être réfléchir à se réorienter, avant de faire d'autres dégâts auprès des jeunes.",
+      "rating": 1,
+      "date": "2026-07-23 09:38:15 +00:00",
+      "owner_response": "Bonjour,<br>Merci d'avoir pris le temps de partager votre ressenti. Nous sommes heureux que vous ayez apprécié l'accueil, la qualité de notre piste et de de nos karts.<br>Nous sommes toutefois désolés que cette situation ait terni votre expérience.<br>Chez AKS, la sécurité est et restera toujours notre priorité. Avant chaque session, un briefing est réalisé afin d'expliquer les règles de pilotage et les consignes à respecter. Elles ne sont pas là pour contraindre les pilotes, mais pour permettre à chacun, enfants comme adultes, de profiter de l'activité en toute sécurité.<br>Il peut arriver que nous soyons amenés à rappeler ces règles avec rigueur lorsque nous estimons que la sécurité sur la piste l'exige. Ce n'est jamais dans le but de décourager un pilote, mais bien de protéger l'ensemble des participants et le staff pour garantir le bon déroulement de la session.<br>Depuis 25 ans, nous accueillons avec plaisir des familles, des groupes, des entreprises et de jeunes pilotes. Nous avons à coeur de leur faire vivre un moment convivial, tout en veillant au respect des règles qui permettent à chacun de profiter de l'expérience dans les meilleures conditions.<br>Nous vous souhaitons une bonne continuation."
+    }
+  ],
+  "place_topics": {
+    "équipe": 39,
+    "moniteurs": 14,
+    "chiens": 11,
+    "sensations": 9,
+    "souriant": 14,
+    "biplace": 7,
+    "pneu": 7,
+    "vacances": 20,
+    "pédagogie": 5,
+    "patronne": 5
+  },
+  "booking_url": null,
+  "cid": "2880320761602315185",
+  "place_id": "ChIJoy4sKPlBBEgRsRN92nj0-Cc",
+  "wikipedia_description": null,
+  "description_short": "La plus grande piste de kart du littoral vendéen sur 1 km de sensations ! Dès 7 ans, seul ou en famille, foncez à toute allure.",
+  "description_long": "Atlantic Kart System vous invite à dévaler le kilomètre de piste le plus long du littoral vendéen, au volant de karts modernes et puissants (270 cc). Accessible dès 7 ans, le circuit propose des virages variés pour toutes les envies : essais libres, courses chronométrées, endurances ou grandes finales. L'équipe, reconnue pour son professionnalisme et sa bienveillance, accompagne aussi bien les petits débutants que les pilotes en herbe. Idéal pour les EVG, EVJF et team-building, Atlantic Kart garantit une expérience conviviale et inoubliable à partager en famille, entre amis ou entre collègues.",
+  "tags": [
+    "kart",
+    "vitesse",
+    "sensations",
+    "piste outdoor",
+    "compétition"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "ados",
+    "solo"
+  ],
+  "age_min": 7,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 60,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "En famille, optez pour les karts biplace pour que les plus jeunes (dès 7 ans) profitent de l'adrénaline en toute sécurité aux côtés d'un adulte. Réservez en avance en haute saison vendéenne, les créneaux partent vite !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T16:25:30.888368+00:00",
+  "enriched_at": "2026-09-14T16:25:30.888368+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://cdt85.media.tourinsoft.eu/upload/2023-D-AtlanticKartSystem-2-1.jpg",
+    "https://www.enpaysdelaloire.com/sites/default/files/styles/ogimage/public/sit/images/LOIPDL085V514L16/Arrivee-mondial-atlantickart-system.jpg?itok=H1lPb8T1",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/ae/2a/80/atlantic-kart-system.jpg?w=1100&h=1100&s=1"
+  ]
+}

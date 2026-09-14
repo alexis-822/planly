@@ -1,0 +1,889 @@
+{
+  "id": "aquarium_de_vendee",
+  "name": "Aquarium de Vendée",
+  "name_google": "Aquarium de Vendée",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Aquariums",
+  "commune": "Talmont-Saint-Hilaire",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4505931,
+  "lng": -1.6967469,
+  "address": "8CRWF823+785, Av. de la Mine, 85440 Talmont-Saint-Hilaire",
+  "phone": "+33251323000",
+  "website": "https://www.aquarium-vendee.com/",
+  "rating": 4,
+  "reviews_count": 7548,
+  "rating_distribution": {
+    "1": 263,
+    "2": 477,
+    "3": 1141,
+    "4": 2572,
+    "5": 3095
+  },
+  "opening_hours": null,
+  "popular_times": {
+    "popular_times_by_days": {
+      "monday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 27
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 22
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 51
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 27
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 58
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 83
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 84
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 59
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 38
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 69
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 98
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 74
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 59
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 51
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 72
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 92
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 89
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 61
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 44
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 44
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 76
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 94
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 92
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [],
+  "reviews": [
+    {
+      "text": "Visite le 10 juillet 2026 sous canicule alerte rouge. Grand parking. Billetterie rapide. A l'intérieur, cadre sympathique sous une température agréable. Plusieurs salles avec des grands aquariums et des plus petits. Panneaux descriptifs de qualité. Pour 2 adultes et 2 enfants, nous avons fait la visite en un peu plus d'une heure et demi. Suffisant pour maintenir l'attention des enfants. Point noir : les prix exorbitants de la boutique de souvenir. Pas sûr que le poule XXL à 300€ ne trouve preneur. Sauf pour la décoration de la boutique.",
+      "rating": 4,
+      "date": "2026-07-10 15:05:59 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Véritable lieu d’émerveillement pour les petits et grands. Le cadre est agréable avec un très grand parking de quoi accueillir un grand nombre de visiteurs. Le prix de l’entrée est très abordable avec un mini tarif pour les petits et gratuité pour les touts petits.\nLes aquariums sont propres et bien entretenues, avec beaucoup d’espèces différentes notamment un superbe requin léopard. La boutique ravira toute la famille avec un large choix de goodies. Nous reviendrons certainement avec un immense plaisir.",
+      "rating": 5,
+      "date": "2026-04-15 11:26:21 +00:00",
+      "owner_response": "Bonjour,<br>Merci beaucoup pour votre retour ! Nous sommes ravis de lire que vous avez passé un agréable moment en famille et que petits et grands ont pu s’émerveiller au sein de notre aquarium.<br><br>Au plaisir de vous accueillir à nouveau pour de nouvelles découvertes aquatiques !<br><br>Bien cordialement,<br>L’équipe de l’Aquarium de Vendée 🐠"
+    },
+    {
+      "text": "Nous avons visité cette aquarium sans grande attente particulière mais nous avons été tres agréablement surpris, la qualité des aquarium (eau, propreté, vivacité des poissons,..) a chaque point  un ecran pour apprendre sur les espèces presentes dans le bassin correspondant est super. Pour la visite des trois hall, nous avons mis un peu plus de heures, on a pris notre temps pour bien tout voir et bien lire. En ressortant les enfants et nous étions ravis de notre visite.",
+      "rating": 5,
+      "date": "2026-07-23 15:43:25 +00:00",
+      "owner_response": "Bonjour,<br>Merci pour votre retour ! Nous sommes ravis de lire que votre visite à l'Aquarium de Vendée vous a agréablement surpris.<br><br>Nous sommes heureux que petits et grands aient pu profiter pleinement de cette expérience et prendre le temps de découvrir nos pensionnaires.<br><br>Au plaisir de vous accueillir à nouveau,<br>L'équipe de l'Aquarium de Vendée 🐠"
+    },
+    {
+      "text": "Un aquarium magnifique qui mérite vraiment d'être visiter ! 🤩\nLes différents bassins sont grandioses par leurs tailles et la diversité des poissons à l'intérieur ! La visite est très bien organisée et nous avons mis 1h30 pour tout voir, nous avons vraiment pris le temps de profiter de notre visite tellement nous étions surpris, on ne s'attendait pas du tout à cela 🤩 l'espace MANGROVE est trop chouette on s'y croirait vraiment 🥰\nFélicitations à vous tous pour votre travail de soigneur, nourrisseur et à la personne qui nous a fait vivre une belle découverte sur le requin léopard 👏🙏\nNotre petit fils de 2 ans et demi était... ravis et ébloui et nous aussi 🤩",
+      "rating": 5,
+      "date": "2026-05-21 16:53:06 +00:00",
+      "owner_response": "Bonjour,<br>Merci pour votre magnifique retour ! Nous sommes très heureux de lire que vous avez apprécié l’expérience proposée tout au long du parcours, ainsi que nos différents univers, notamment l’espace mangrove.<br><br>Quelle joie également de savoir que votre petit-fils est reparti émerveillé 😊<br><br>En espérant vous revoir prochainement pour de nouvelles découvertes, <br>À bientôt ! <br>L'équipe de l'Aquarium de Vendée 🐠"
+    },
+    {
+      "text": "Un parking très pratique, un accès simple et aucune attente grâce à la borne autonome pour acheter les billets. La visite dure environ 45 minutes, avec des bassins variés, bien entretenus et accompagnés d'explications claires. Une sortie agréable, ludique et adaptée à un bébé ainsi qu'à des adultes. Les poissons visible sont pour la plupart splendide.",
+      "rating": 4,
+      "date": "2026-08-04 07:22:56 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "décors": 100,
+    "animations": 54,
+    "vitres": 43,
+    "tactile": 42,
+    "taille": 40,
+    "univers": 37,
+    "le tour": 24,
+    "mangrove": 24,
+    "notre temps": 22,
+    "un bon moment": 19
+  },
+  "booking_url": null,
+  "cid": "9692060665991412238",
+  "place_id": "ChIJU728TWlpBEgRDjr0MdMdgYY",
+  "wikipedia_description": null,
+  "description_short": "Plongez dans les profondeurs des océans du monde entier ! Bassins grandioses, décors immersifs et biodiversité marine à couper le souffle.",
+  "description_long": "L'Aquarium de Vendée vous invite à un voyage aquatique unique à travers les océans du monde. Des eaux tropicales aux fonds marins tempérés, en passant par une impressionnante mangrove, chaque bassin révèle une biodiversité fascinante. Les aquariums, remarquables par leur taille et leur propreté, accueillent une faune marine d'une vivacité exceptionnelle. Bornes tactiles interactives, animations régulières et décors soignés rendent la visite captivante pour petits et grands. L'accès est facilité par un vaste parking gratuit, une billetterie rapide et une accessibilité totale aux personnes à mobilité réduite. Une halte incontournable en Vendée, même par temps de canicule !",
+  "tags": [
+    "aquarium",
+    "océan",
+    "poissons",
+    "famille",
+    "interactif"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 60,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": true,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille, prévoyez la visite en milieu de matinée pour éviter l'affluence et profiter sereinement des bassins tactiles avec les enfants. En couple ou en solo, l'aquarium est idéal par forte chaleur ou jour de pluie : la climatisation et l'ambiance apaisante des fonds marins en font un refuge parfait.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T19:05:44.315710+00:00",
+  "enriched_at": "2026-09-14T19:05:44.315710+00:00",
+  "status": "complete",
+  "photos_original_urls": []
+}

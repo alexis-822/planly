@@ -1,0 +1,114 @@
+{
+  "id": "explora_parc",
+  "name": "Explora Parc",
+  "name_google": "Explora Parc",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Jeux & Divertissement",
+  "commune": "Saint-Jean-de-Monts",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.7930682,
+  "lng": -2.0778962,
+  "address": "Rue de la Parée Jésus, 85160 Saint-Jean-de-Monts",
+  "phone": "+33244360483",
+  "website": "https://www.exploraparc.com/",
+  "rating": 4.7,
+  "reviews_count": 2123,
+  "rating_distribution": {
+    "1": 32,
+    "2": 22,
+    "3": 62,
+    "4": 389,
+    "5": 1618
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/explora_parc/photo_1.jpg",
+    "images/explora_parc/photo_2.jpg",
+    "images/explora_parc/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Bonjour  la Team Explora Parc,\nQuelle belle journée nous avons passé en famille hier de 10h à 18 heures avec du sport\nmais aussi de la détente et quelques pauses gourmandes,\nun petit café et chocolat le matin puis un repas bien servi puis  au goûter glaces et autres gourmandises\nMerci pour vos prestations de qualité et un bel accueil jeune et PRO !\nUne Mamy qui adore Explora parc et sous les branches. Annick Cotreuil\nAnnkx",
+      "rating": 5,
+      "date": "2026-08-18 18:05:35 +00:00",
+      "owner_response": "Bonjour Annick,<br>Un très grand merci de la part de toute l'équipe d'avoir partagé votre avis sur votre expérience en famille à Explora Parc et pour vos magnifiques photos👍🙏 Nous sommes très heureux que vous ayez passé un bon moment et serons heureux de vous revoir 😉<br>A bientôt 👋🏼.<br>Acrobatiquement.<br>Fabien - Explora Parc<br>Parc de Loisirs Accrobranche à Saint Jean de Monts"
+    },
+    {
+      "text": "Les enfants se sont bien amusés, les parents sont complètement cramés à partir des parcours rouges. La nocturne est un vrai avantage pour réaliser un max de parcours. On notera un personnel très professionnel.",
+      "rating": 5,
+      "date": "2026-08-20 13:58:46 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Super moment en famille à Explora Parc ! Les parcours sont variés, très bien sécurisés et adaptés à tous les niveaux. L'équipe est accueillante, souriante et toujours disponible en cas de besoin. Le cadre en pleine forêt est vraiment agréable et les tyroliennes procurent de belles sensations. Une excellente activité à faire à Saint-Jean-de-Monts, aussi bien pour les enfants que pour les adultes. Nous reviendrons avec plaisir !",
+      "rating": 5,
+      "date": "2026-07-20 15:39:21 +00:00",
+      "owner_response": "Bonjour Valentin,<br>Un grand MERCI de la part de tout notre équipe pour votre sympathique commentaire sur votre super moment en famille à Explora Parc 👍🙏 Nous sommes ravis que tout vous ait plu, de l'accueil aux parcours en passant par la sécurité 😉<br>A bientôt 👋🏼.<br>Acrobatiquement.<br>Fabien - Explora Parc<br>Parc de Loisirs Accrobranche à Saint Jean de Monts"
+    },
+    {
+      "text": "Superbe fin de journée en famille à s'amuser et se dépasser dans ce parc aux parcours très variés et pour tous les niveaux. 3e fois qu'on y revient (à chaque déblocage de nouveau palier enfant 😁) et on ne s'en lasse pas. Le cadre est vraiment top et le personnel très sympa et souriant, même en fin de journée bien chargée 😉",
+      "rating": 5,
+      "date": "2025-08-08 20:56:22 +00:00",
+      "owner_response": "Bonjour Fabrice,<br>Toute l'équipe vous remercie d'avoir partagé votre avis sur votre expérience en famille à Explora Parc, pour votre fidélité et vos sympathiques compliments 😉 Nous sommes ravis que tout le monde passe de bons moments à Explora Parc 👍Très belles photos 📸<br>Acrobatiquement.<br>Fabien - Explora Parc"
+    },
+    {
+      "text": "C'est toujours un énorme plaisir de venir à Explora parc. Le personnel est à l'écoute, disponible et accueillant.\nLe parc est magnifique, les parcours sont riches et on ne s'ennuie jamais.\nMes enfants sont fans, ils ont des pass pour la 4 ème fois.\nJe recommande vivement Explora. parc",
+      "rating": 5,
+      "date": "2026-08-04 19:02:25 +00:00",
+      "owner_response": "Bonjour Sadeq,<br>Toute l'équipe d'Explora Parc vous remercie pour votre très sympathique commentaire et pour votre fidélité 👍🙏 Nous ravis que vous passiez de bons moments avec les enfants à chacune de vos visites😉<br>A bientôt 👋🏼.<br>Acrobatiquement.<br>Fabien - Explora Parc<br>Parc de Loisirs Accrobranche à Saint Jean de Monts"
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "16086558324445322584",
+  "place_id": "ChIJnU6wYXb9BEgRWJ0q25DvPt8",
+  "wikipedia_description": null,
+  "description_short": "Grimpez, glissez, volez à Explora Parc ! Des parcours acrobatiques pour tous les niveaux au cœur de la Vendée.",
+  "description_long": "Explora Parc à Saint-Jean-de-Monts est le rendez-vous incontournable des familles en quête de sensations et de dépassement de soi. Le parc propose des parcours acrobatiques variés, adaptés à tous les âges et tous les niveaux, des plus accessibles pour les petits aux plus techniques et exigeants pour les parents courageux. Bien sécurisé et encadré par une équipe accueillante et professionnelle, le parc offre également des moments de détente et des options de restauration sur place. La nocturne est un vrai plus pour prolonger l'aventure jusqu'au soir !",
+  "tags": [
+    "accrobranche",
+    "parcours acrobatiques",
+    "aventure",
+    "sensations",
+    "plein air"
+  ],
+  "audience": [
+    "famille",
+    "ados",
+    "couple",
+    "solo"
+  ],
+  "age_min": 4,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 180,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": true,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Prévoyez une journée complète et profitez de la nocturne pour maximiser le nombre de parcours ! Réservez en ligne à l'avance en haute saison, surtout en juillet-août à Saint-Jean-de-Monts.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T16:26:53.913081+00:00",
+  "enriched_at": "2026-09-14T16:26:53.913081+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://paysdesaintjeandemonts.fr/app/uploads/iris-images/2975/saintjeandemonts-accrobranche-exploraparc-michelarnaud-1920x1080-f50_50.webp",
+    "https://static.actu.fr/uploads/2024/08/c4df61d36fb66c8df61d36fb69cdf6v.jpeg",
+    "https://www.guide-de-la-vendee.com/_bibli/annonces/3887/hd/explora-parc-loisirs-03.jpg"
+  ]
+}

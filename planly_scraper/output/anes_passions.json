@@ -1,0 +1,122 @@
+{
+  "id": "anes_passions",
+  "name": "Ânes Passions",
+  "name_google": "Ânes passions et sa mini ferme pédagogique",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Parcs animaliers",
+  "commune": "L'Île-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.573369799999995,
+  "lng": -1.7766560999999998,
+  "address": "Rue du Fief dôme Les démeries, 85340 L'Île-d'Olonne",
+  "phone": "+33666863681",
+  "website": "https://anepassion.wixsite.com/website",
+  "rating": 5,
+  "reviews_count": 80,
+  "rating_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 3,
+    "5": 77
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/anes_passions/photo_1.jpg",
+    "images/anes_passions/photo_2.jpg",
+    "images/anes_passions/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Superbe visite de la ferme pour l'anniversaire de notre fils (3 ans). Gaël est vraiment doux avec les enfants, les explications sont top. Nous avons adoré ! N'hésitez pas ! 😃",
+      "rating": 5,
+      "date": "2025-09-13 09:53:34 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Nous avons visité cette mini ferme avec l'association des assistantes maternelles,  petits et grands étaient contents !!\nGaël et très gentil,nous avons eu la chance de pouvoir approcher Lapin, cochon d'inde, poules et aussi de pouvoir donner à manger aux animaux.\nJe vous recommande de prendre votre temps pour vous y arrêter.\nL'endroit est reposant et calme.",
+      "rating": 5,
+      "date": "2023-10-24 11:53:14 +00:00",
+      "owner_response": "Merci à vous d avoir organisé cette sortie sur notre site. Le temps était de la partie enfin de compte... "
+    },
+    {
+      "text": "Très belle expérience avec Gael, qui partage sa passion des animaux. Nous avons choisi une visite guidée avec mon fils de 23 mois et pu apprécié ce moment privilégié pour découvrir la mini ferme. Nous reviendrons cest certain! Je recommande ++",
+      "rating": 5,
+      "date": "2025-08-18 20:48:08 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Super visite à faire avec des enfants. Il faut compter une heure pour faire le tour des animaux. Il est possible de manipuler certains petits animaux (lapins/ poules/ cochons d’inde) avec l’aide du gérant. Notre fille et nous-même avons passé un super moment !",
+      "rating": 5,
+      "date": "2024-08-03 18:58:27 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "On a passer une excellente matinée, Gaël est vraiment très gentil à l’écoute et passionner ! Mon fils est un amoureux des animaux il a passer un moment magique en faisant le petit fermier.\n\nNous reviendrons l’année prochaine ❤️",
+      "rating": 5,
+      "date": "2023-08-19 20:49:00 +00:00",
+      "owner_response": "Merci à vous. A bientôt donc..."
+    }
+  ],
+  "place_topics": {
+    "poules": 5,
+    "lapins": 11,
+    "partage": 19,
+    "fils": 5,
+    "bienveillance": 5,
+    "cochon d'inde": 7,
+    "anniversaire": 3,
+    "toucher": 2,
+    "propriétaire": 2,
+    "rythme": 2
+  },
+  "booking_url": null,
+  "cid": "3487097976376221849",
+  "place_id": "ChIJsyoHuWpdBEgRmWDjUiKpZDA",
+  "wikipedia_description": null,
+  "description_short": "Une mini-ferme enchanteresse où lapins, cochons d'Inde et ânes n'attendent que vos enfants. Visite guidée, anniversaire ou petit fermier d'un jour !",
+  "description_long": "Ânes Passions, c'est une mini-ferme chaleureuse animée par Gaël, passionné et bienveillant, qui partage son amour des animaux avec les petits et les grands. Sur réservation uniquement, trois formules sont proposées : la visite guidée pour découvrir les animaux à son rythme, le p'tit fermier pour vivre une vraie expérience de la ferme, et l'Ân'versaire pour fêter un anniversaire entouré de lapins, cochons d'Inde, poules et ânes. Une heure de magie, de douceur et de contact animal, idéale pour les tout-petits dès le plus jeune âge.",
+  "tags": [
+    "mini-ferme",
+    "animaux",
+    "enfants",
+    "anniversaire",
+    "ânes"
+  ],
+  "audience": [
+    "famille"
+  ],
+  "age_min": 1,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 60,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": true,
+  "rainy_day_activity": false,
+  "conseil_planly": "Réservez en avance par SMS, surtout en juillet et le week-end : les créneaux partent vite ! Pour un anniversaire mémorable, optez pour l'Ân'versaire dès 3 ans.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T19:02:49.590743+00:00",
+  "enriched_at": "2026-09-14T19:02:49.590743+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://media.ouest-france.fr/v1/pictures/MjAxOTA3Yjc4MTZhNjM3MGExYmE1Yzc2ZWJjMjk2YTQ3NjA4OGI?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=c8068b6c11e69d793dda6fb2a680409fb233d5051d0e0c2c49ae7dc2634571a7",
+    "https://tvvendee.fr/wp-content/uploads/2022/04/202214LES_PASSIONNES-Anes-passions--scaled.jpg",
+    "https://static.wixstatic.com/media/84beed_adeb9c22e32e4a1bacf7d4443e1af622~mv2.jpg"
+  ]
+}

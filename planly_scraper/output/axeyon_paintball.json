@@ -1,0 +1,83 @@
+{
+  "id": "axeyon_paintball",
+  "name": "AxeYon Paintball",
+  "name_google": "AxeYon Paintball",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Jeux & Divertissement",
+  "commune": "La Roche-sur-Yon",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.654973999999996,
+  "lng": -1.367969,
+  "address": "La Sapinière de Basses Barbontes, 85000 La Roche-sur-Yon",
+  "phone": "+33681599980",
+  "website": "http://axeyon-paintball.ovh/",
+  "rating": 4.9,
+  "reviews_count": 66,
+  "rating_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 3,
+    "5": 62
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [],
+  "reviews": [],
+  "place_topics": {
+    "EVG": 4,
+    "humour": 3,
+    "prix": 3,
+    "gérant": 2,
+    "terrain de jeu": 2,
+    "moniteur": 2,
+    "passion": 2
+  },
+  "booking_url": null,
+  "cid": "7639692725294926449",
+  "place_id": "ChIJ00L3CP0lBEgRcQpXjA6kBWo",
+  "wikipedia_description": null,
+  "description_short": "Batailles épiques sur 3 terrains en pleine nature vendéenne. Forêt, semi-urbain ou speed ball : à vous de choisir votre terrain de guerre !",
+  "description_long": "AxeYon Paintball vous plonge dans l'action sur 3 terrains aux ambiances radicalement différentes : forêt sauvage, zone semi-urbaine et speed ball pour les plus rapides. Idéal pour les groupes d'amis, EVG ou sorties en famille (dès 12 ans), ce site vendéen propose une expérience intense encadrée par des moniteurs passionnés. En été, l'activité se délocalise sur le site de La Faute-sur-Mer, à deux pas du littoral. Réservation obligatoire toute l'année. Paiement par carte ou chèque accepté.",
+  "tags": [
+    "paintball",
+    "adrénaline",
+    "sport-combat",
+    "EVG",
+    "plein-air"
+  ],
+  "audience": [
+    "ados",
+    "solo",
+    "famille"
+  ],
+  "age_min": 12,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 120,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Parfait pour un EVG ou une sortie entre amis survoltée ! Pensez à réserver bien à l'avance, surtout en été où le site se déplace à La Faute-sur-Mer — prévoyez des vêtements que vous n'avez pas peur de salir.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T16:26:53.444234+00:00",
+  "enriched_at": "2026-09-14T16:26:53.444234+00:00",
+  "status": "complete",
+  "photos_original_urls": []
+}

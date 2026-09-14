@@ -22,6 +22,10 @@ import os
 import re
 import sys
 import time
+import datetime
+import urllib.parse
+import urllib.robotparser
+from html import unescape
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
@@ -49,6 +53,18 @@ log = logging.getLogger(__name__)
 # ─────────────────────────────────────────────
 # Définition des champs spécifiques par sous-catégorie
 # ─────────────────────────────────────────────
+
+# Parcs & Loisirs : remplis uniquement depuis le site officiel (process_parcs_loisirs)
+_PARCS_LOISIRS_FIELDS = {
+    "pricing": {"label": "tarifs adulte/enfant, tranches d'âge, billet famille", "type": "official"},
+    "age_min": {"label": "âge minimum", "type": "official"},
+    "activities": {"label": "activités avec âge/taille minimum", "type": "official"},
+    "shows": {"label": "animations à heure fixe", "type": "official"},
+    "indoor_outdoor": {"label": "intérieur / extérieur / mixte", "type": "official"},
+    "booking": {"label": "réservation obligatoire / conseillée / non", "type": "official"},
+    "season": {"label": "période d'ouverture", "type": "official"},
+    "hours_text": {"label": "horaires d'ouverture", "type": "official"},
+}
 
 SPECIFIC_FIELDS = {
     "Plages & Côte": {
@@ -149,31 +165,10 @@ SPECIFIC_FIELDS = {
         "free_entry": {"label": "entrée libre et gratuite", "type": "bool"},
         "interactive": {"label": "musée interactif ou ludique", "type": "bool"},
     },
-    "Jeux & Divertissement": {
-        "activity_type": {"label": "type d'activité", "type": "text"},
-        "min_age_activity": {"label": "âge minimum", "type": "text"},
-        "indoor": {"label": "activité en intérieur", "type": "bool"},
-        "entry_price": {"label": "prix en euros", "type": "text"},
-        "group_discount": {"label": "tarif groupe disponible", "type": "bool"},
-    },
-    "Parcs animaliers": {
-        "animal_types": {"label": "types d'animaux présents", "type": "text"},
-        "feeding_sessions": {"label": "nourrissage public", "type": "bool"},
-        "entry_price": {"label": "prix d'entrée en euros", "type": "text"},
-        "petting_area": {"label": "mini-ferme ou espace caresses", "type": "bool"},
-    },
-    "Aquariums": {
-        "tank_count": {"label": "nombre de bassins ou aquariums", "type": "text"},
-        "touch_pool": {"label": "bassin tactile", "type": "bool"},
-        "entry_price": {"label": "prix d'entrée en euros", "type": "text"},
-        "shark_tunnel": {"label": "tunnel à requins", "type": "bool"},
-    },
-    "Parcs botaniques": {
-        "garden_type": {"label": "type de jardin", "type": "enum", "options": ["botanique", "tropical", "japonais", "exotique", "mixte"]},
-        "guided_visit": {"label": "visite guidée disponible", "type": "bool"},
-        "entry_price": {"label": "prix d'entrée en euros", "type": "text"},
-        "free_entry": {"label": "entrée libre et gratuite", "type": "bool"},
-    },
+    "Jeux & Divertissement": _PARCS_LOISIRS_FIELDS,
+    "Parcs animaliers": _PARCS_LOISIRS_FIELDS,
+    "Aquariums": _PARCS_LOISIRS_FIELDS,
+    "Parcs botaniques": _PARCS_LOISIRS_FIELDS,
     "Cinéma": {
         "screens": {"label": "nombre de salles", "type": "text"},
         "imax_3d": {"label": "salle IMAX ou 3D", "type": "bool"},
@@ -1069,6 +1064,156 @@ def process_points_de_vue(client, poi: dict, report: list) -> dict:
     return poi
 
 
+# ─────────────────────────────────────────────
+# Parcs & Loisirs — site officiel uniquement
+# ─────────────────────────────────────────────
+
+PARCS_LOISIRS = {"Jeux & Divertissement", "Parcs animaliers", "Aquariums", "Parcs botaniques"}
+OFFICIAL_UA = "PlanlyBot/1.0 (guide touristique Vendee)"
+NOT_OFFICIAL_DOMAINS = ("facebook.", "instagram.", "tripadvisor.", "google.", "linktr.ee", "pagesjaunes.")
+INFO_LINK_RE = re.compile(
+    r"tarif|prix|horaire|pratique|informations|billet|reserv|activit|attraction|animation|planning|programme",
+    re.I,
+)
+
+PARCS_PROMPT = """Voici des pages du site officiel de "{name}" ({subcategory}, {commune}).
+{pages}
+
+---
+
+Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
+{{
+  "pricing": {{
+    "adult": prix adulte en euros (nombre) ou null,
+    "child": prix enfant en euros (nombre) ou null,
+    "child_age_min": âge minimum du tarif enfant (entier) ou null,
+    "child_age_max": âge maximum du tarif enfant (entier) ou null,
+    "free_under_age": gratuit en dessous de cet âge (entier) ou null,
+    "family_ticket": {{"price": nombre, "adults": entier, "children": entier}} ou null,
+    "notes": précision courte (suppléments, saison...) ou null,
+    "source_url": URL de la page où figurent les tarifs, ou null
+  }},
+  "age_min": âge minimum pour venir (entier) ou null,
+  "activities": [{{"name": texte, "age_min": entier ou null, "age_max": entier ou null, "height_min_cm": entier ou null, "duration_min": entier ou null, "extra_price": nombre ou null}}],
+  "shows": [{{"name": texte, "time": "HH:MM"}}],
+  "indoor_outdoor": "intérieur" ou "extérieur" ou "mixte" ou null,
+  "booking": "obligatoire" ou "conseillée" ou "non" ou null,
+  "season": période d'ouverture en texte court ou null,
+  "hours_text": horaires d'ouverture en texte court ou null
+}}
+
+- activities : 8 maximum, [] si aucune. shows : animations ou nourrissages à heure fixe, [] si aucun.
+- Si plusieurs tarifs existent (haute/basse saison), prends la haute saison et précise-le dans notes."""
+
+
+def _html_to_text(page_html: str) -> str:
+    page_html = re.sub(r"<(script|style|noscript)[^>]*>.*?</\1>", " ", page_html, flags=re.S | re.I)
+    text = unescape(re.sub(r"<[^>]+>", " ", page_html))
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _load_robots(home: str):
+    parts = urllib.parse.urlsplit(home)
+    try:
+        resp = requests.get(f"{parts.scheme}://{parts.netloc}/robots.txt", timeout=8,
+                            headers={"User-Agent": OFFICIAL_UA})
+    except Exception:
+        return None
+    if resp.status_code >= 400:
+        return None
+    rp = urllib.robotparser.RobotFileParser()
+    rp.parse(resp.text.splitlines())
+    return rp
+
+
+def fetch_official_pages(website: str, max_pages: int = 5) -> list[dict]:
+    """Page d'accueil du site officiel + pages infos pratiques du même domaine, robots.txt respecté."""
+    home = website if website.startswith("http") else f"https://{website}"
+    domain = urllib.parse.urlsplit(home).netloc.removeprefix("www.")
+    robots = _load_robots(home)
+
+    def get(url):
+        if robots and not robots.can_fetch(OFFICIAL_UA, url):
+            log.info(f"    robots.txt refuse : {url[:80]}")
+            return None
+        try:
+            r = requests.get(url, headers={"User-Agent": OFFICIAL_UA, "Accept": "text/html"}, timeout=12)
+            r.raise_for_status()
+            return r.text if "html" in r.headers.get("content-type", "") else None
+        except Exception as e:
+            log.warning(f"    Fetch échoué {url[:80]}: {e}")
+            return None
+
+    home_html = get(home)
+    if not home_html:
+        return []
+    pages = [{"url": home, "content": _html_to_text(home_html)[:6000]}]
+    seen = {home.rstrip("/")}
+    links = []
+    for href, label in re.findall(r'<a[^>]+href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', home_html, flags=re.S | re.I):
+        url = urllib.parse.urljoin(home, href.strip())
+        if urllib.parse.urlsplit(url).netloc.removeprefix("www.") != domain or url.rstrip("/") in seen:
+            continue
+        if INFO_LINK_RE.search(href + " " + _html_to_text(label)):
+            seen.add(url.rstrip("/"))
+            links.append(url)
+    for url in links[:max_pages - 1]:
+        time.sleep(1)
+        page_html = get(url)
+        if page_html:
+            log.info(f"    Page officielle : {url[:80]}")
+            pages.append({"url": url, "content": _html_to_text(page_html)[:6000]})
+    return pages
+
+
+def process_parcs_loisirs(client, poi: dict, report: list) -> dict:
+    keys = list(_PARCS_LOISIRS_FIELDS)
+    website = (poi.get("website") or "").strip()
+    if not website or any(d in website for d in NOT_OFFICIAL_DOMAINS):
+        log.info(f"  [P&L] pas de site officiel exploitable ({website or 'aucun'})")
+        for k in keys:
+            poi["specific_status"][k] = "empty"
+        return poi
+
+    log.info(f"  [P&L] site officiel : {website}")
+    pages = [p for p in fetch_official_pages(website) if p["content"]]
+    data = None
+    if pages:
+        pages_text = "".join(f"\n\n--- {p['url']} ---\n{p['content']}" for p in pages)
+        data = _call_haiku(client, PARCS_PROMPT.format(
+            name=poi.get("name", ""), subcategory=poi.get("subcategory", ""),
+            commune=poi.get("commune", ""), pages=pages_text), max_tokens=2000)
+    if not isinstance(data, dict):
+        for k in keys:
+            poi["specific_status"][k] = "empty"
+        return poi
+
+    pricing = data.get("pricing")
+    if isinstance(pricing, dict) and all(pricing.get(x) is None for x in ("adult", "child", "family_ticket")):
+        data["pricing"] = None
+
+    for k in keys:
+        value = data.get(k)
+        if value in (None, [], {}, ""):
+            poi["specific_status"][k] = "empty"
+            log.info(f"    ✗ {k} = null")
+            continue
+        poi["specific"][k] = value
+        poi["specific_status"][k] = "auto"
+        report.append({"poi": poi.get("id"), "field": k, "value": value, "source": "site officiel"})
+        log.info(f"    ✓ {k} = {str(value)[:90]}")
+
+    poi["specific"]["official_source"] = {"url": website, "verified_at": datetime.date.today().isoformat()}
+    pricing = poi["specific"].get("pricing") or {}
+    if pricing.get("adult") is not None:
+        poi["price_adult"] = pricing["adult"]
+    if pricing.get("child") is not None:
+        poi["price_child"] = pricing["child"]
+    if poi["specific"].get("age_min") is not None:
+        poi["age_min"] = poi["specific"]["age_min"]
+    return poi
+
+
 def process_poi(client, poi: dict, dry_run: bool = False, report: list = None) -> dict:
     """Traite un POI : remplit champs de base + champs spécifiques manquants."""
     if report is None:
@@ -1087,6 +1232,14 @@ def process_poi(client, poi: dict, dry_run: bool = False, report: list = None) -
 
     if dry_run:
         return poi
+
+    # Parcs & Loisirs : pas de SERP ni de pages tierces, site officiel uniquement
+    if poi.get("subcategory") in PARCS_LOISIRS:
+        if not missing:
+            return poi
+        poi.setdefault("specific", {})
+        poi.setdefault("specific_status", {})
+        return process_parcs_loisirs(client, poi, report)
 
     # Étape 0 : remplir les champs de base (lat, lng, address...)
     if missing_base:
@@ -1189,7 +1342,17 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Affiche les champs manquants sans scraper")
     parser.add_argument("--max-pois", type=int, default=0, help="Limite le nombre de POIs traités (0 = tous)")
     parser.add_argument("--input", default=OUTPUT_GLOBAL, help="Fichier JSON source")
+    parser.add_argument("--subcategory", action="append", help="Sous-catégorie à traiter (répétable)")
+    parser.add_argument("--poi", help="Tags des POIs à traiter, séparés par des virgules")
     args = parser.parse_args()
+    if not (args.subcategory or args.poi):
+        parser.error("préciser --subcategory ou --poi : les POIs existants ne doivent pas être retraités par défaut")
+    target_subcats = set(args.subcategory or [])
+    target_ids = {x.strip() for x in args.poi.split(",")} if args.poi else set()
+
+    def selected(p):
+        return (not target_subcats or p.get("subcategory") in target_subcats) and \
+               (not target_ids or p.get("id") in target_ids)
 
     # Charger le JSON
     input_path = args.input
@@ -1206,6 +1369,8 @@ def main():
     total_base_missing = 0
     pois_with_missing = 0
     for poi in pois:
+        if not selected(poi):
+            continue
         mb = get_missing_base_fields(poi)
         ms = get_missing_fields(poi)
         if mb or ms:
@@ -1217,6 +1382,8 @@ def main():
 
     if args.dry_run:
         for poi in pois:
+            if not selected(poi):
+                continue
             mb = get_missing_base_fields(poi)
             ms = get_missing_fields(poi)
             if mb or ms:
@@ -1231,7 +1398,7 @@ def main():
     report = []
     for i, poi in enumerate(pois):
         missing = get_missing_fields(poi)
-        if not missing:
+        if not selected(poi) or not missing:
             continue
 
         pois[i] = process_poi(client, poi, report=report)

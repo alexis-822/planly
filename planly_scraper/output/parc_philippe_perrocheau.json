@@ -1,0 +1,1286 @@
+{
+  "id": "parc_philippe_perrocheau",
+  "name": "Parc Philippe Perrocheau",
+  "name_google": "Parc Philippe Perrocheau",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Parcs botaniques",
+  "commune": "Coëx",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.6959631,
+  "lng": -1.7614017,
+  "address": "Place de l'Église, 85220 Coëx",
+  "phone": null,
+  "website": null,
+  "rating": 4.1,
+  "reviews_count": 619,
+  "rating_distribution": {
+    "1": 37,
+    "2": 36,
+    "3": 78,
+    "4": 173,
+    "5": 295
+  },
+  "opening_hours": null,
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 5
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 22
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 27
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 34
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 38
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 71
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 90
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 90
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 72
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 24
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 16
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 3
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 4
+        }
+      ],
+      "monday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 5
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 27
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 29
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 16
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 9
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 5
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 5
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 5
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 16
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 27
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 5
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 11
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 11
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 9
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 11
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 11
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 38
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 9
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 6
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 9
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 16
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 16
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 4
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 4
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 6
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 5
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 5
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 9
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 9
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 11
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 27
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 29
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 34
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 39
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 38
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 7
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 4,
+            "minute": 0
+          },
+          "popular_index": 5
+        },
+        {
+          "time": {
+            "hour": 5,
+            "minute": 0
+          },
+          "popular_index": 7
+        },
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 10
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 16
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 29
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 41
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 48
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 64
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 76
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 87
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 63
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 41
+        },
+        {
+          "time": {
+            "hour": 0,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 1,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 2,
+            "minute": 0
+          },
+          "popular_index": 9
+        },
+        {
+          "time": {
+            "hour": 3,
+            "minute": 0
+          },
+          "popular_index": 5
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [
+    "images/parc_philippe_perrocheau/photo_1.jpg",
+    "images/parc_philippe_perrocheau/photo_2.jpg",
+    "images/parc_philippe_perrocheau/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": {
+    "jeux": 63,
+    "famille": 24,
+    "paon": 46,
+    "bambous": 9,
+    "poules": 7,
+    "ballade": 7,
+    "parc public": 7,
+    "tables de pique-nique": 10,
+    "tyrolienne": 5,
+    "site": 5
+  },
+  "booking_url": null,
+  "cid": "15441289540151049233",
+  "place_id": "ChIJ44WQxTROBEgREXyoegZ7StY",
+  "wikipedia_description": null,
+  "description_short": "Un écrin de verdure familial avec paons en liberté, jeux pour enfants et tyrolienne pour des heures de plaisir en plein air.",
+  "description_long": "Le Parc Philippe Perrocheau est un espace vert public idéal pour les sorties en famille. On y déambule parmi des allées verdoyantes bordées de bambous, avec la surprise de croiser des paons et des poules en semi-liberté qui ravissent petits et grands. Les enfants s'y dépensent sur les aires de jeux et la tyrolienne, tandis que les parents profitent des tables de pique-nique pour une pause gourmande. Entièrement accessible aux personnes à mobilité réduite, le parc dispose également de sanitaires. Une halte nature agréable et gratuite au cœur de la Vendée.",
+  "tags": [
+    "parc public",
+    "jeux enfants",
+    "paons",
+    "pique-nique",
+    "tyrolienne"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": true,
+  "rainy_day_activity": false,
+  "conseil_planly": "Venez en matinée pour observer les paons dans toute leur splendeur et profiter des jeux avant l'affluence. Pensez à apporter un pique-nique pour profiter pleinement des espaces verts !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T19:09:51.483018+00:00",
+  "enriched_at": "2026-09-14T19:09:51.483018+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://cdt85.media.tourinsoft.eu/upload/Coex-Parc-Perrocheau-famille.jpg",
+    "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/balade-parc-perrocheau-coex-1200x800.jpg",
+    "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/Coex-Parc-Perrocheau-toboggan-1200x800.jpg"
+  ]
+}

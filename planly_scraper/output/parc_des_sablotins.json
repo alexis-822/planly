@@ -1,0 +1,124 @@
+{
+  "id": "parc_des_sablotins",
+  "name": "Parc des Sablotins",
+  "name_google": "Parc de loisirs des Sablotins",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Jeux & Divertissement",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4871592,
+  "lng": -1.7326214999999998,
+  "address": "17 Av. Louis Breguet, 85180 Les Sables-d'Olonne",
+  "phone": "+33251010946",
+  "website": "http://www.sablotins.com/",
+  "rating": 4.8,
+  "reviews_count": 695,
+  "rating_distribution": {
+    "1": 7,
+    "2": 6,
+    "3": 15,
+    "4": 88,
+    "5": 579
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/parc_des_sablotins/photo_1.jpg",
+    "images/parc_des_sablotins/photo_2.jpg",
+    "images/parc_des_sablotins/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Parfait pour les enfants, ils s'amusent. Également pour les parents, ils se reposent.\nDans son genre, ce parc est très calme avec un niveau sonore peu élevé.",
+      "rating": 5,
+      "date": "2026-07-18 14:15:33 +00:00",
+      "owner_response": "Merci beaucoup pour votre avis !<br><br>Nous sommes ravis que les enfants aient passé un bon moment et que les parents aient pu profiter d'un moment de détente. Nous attachons une grande importance à offrir un espace agréable pour toute la famille.<br>Au plaisir de vous accueillir à nouveau au parc des Sablotins !"
+    },
+    {
+      "text": "Pas facile d'accès petit parking mais c'est un très bon moment pour tout les enfants  il y a des attractions pour les petits de 2 ans jusqu'à 12 le parc  accepte jusqu'à 14 ans mais pour moi je trouve qu’ils préféraient faire autre chose il y à aussi des activités extérieures mais il ne faisait pas très chaud. Je vous le conseille vivement pour passer un bon après-midi",
+      "rating": 5,
+      "date": "2026-04-14 08:39:31 +00:00",
+      "owner_response": "Merci beaucoup pour votre super retour et votre recommandation 😊<br>Nous sommes ravis que vous ayez passé un bon moment aux Sablotins et que les enfants aient pu profiter des différentes attractions !<br><br>Effectivement, notre parking n'est pas immense mais heureusement, il y a de nombreuses places aux alentours, mais nous sommes heureux de voir que cela n’a pas gâché votre expérience.<br>Les enfants grandissent chacun à leur vitesse, certains s'amusent encore dans les structures et d'autres préfèrent prendre les options espace extérieur et/ou laser game. L'essentiel est de garder son âme d'enfant...<br><br>Nous espérons que vous aurez l’occasion de revenir profiter également des espaces extérieurs par une météo plus clémente 🌞<br><br>À très bientôt aux Sablotins !"
+    },
+    {
+      "text": "Que dire si ce n’est EXCEPTIONNEL !\nL’accueil est des plus agréables, la qualité de la structure dans son ensemble est irréprochable.\nNous avons énormément apprécié notre sortie sur ce lieu et nous la recommandons sans hésiter !\nRendez tous visite au parc des Sablotins pour un superbe après-midi en famille Oe en ALSH !",
+      "rating": 5,
+      "date": "2026-07-30 09:14:19 +00:00",
+      "owner_response": "Anatole, un immense merci pour ce magnifique commentaire !<br><br>Toute l'équipe est très touchée par vos mots. Nous sommes ravis que vous ayez apprécié l'accueil, les installations et votre après-midi au parc des Sablotins. Votre recommandation est la plus belle des récompenses pour notre équipe. Nous sommes également très heureux de vous avoir accueillis, votre team était très sympa...<br><br>Au plaisir de vous accueillir à nouveau lors de votre prochaine visite !"
+    },
+    {
+      "text": "Mon fils de 18 mois a adoré et a passé près de 2 heures à jouer dans les structures mises à disposition pour son age. Les espaces sont très bien délimités et parfaitement adaptés à son âge. Un vrai moment de plaisir !",
+      "rating": 5,
+      "date": "2026-05-12 14:02:32 +00:00",
+      "owner_response": "Merci beaucoup pour ce superbe retour 😊<br>Nous sommes ravis que votre petit garçon ait autant profité de son moment aux Sablotins ! Nos espaces dédiés aux tout-petits sont pensés pour qu’ils puissent explorer, jouer et s’amuser en toute sécurité, alors votre message nous fait très plaisir.<br><br>Et un grand merci également pour votre fidélité et votre nouvelle visite 🧡<br>Au plaisir de vous accueillir à nouveau pour de nouvelles aventures et encore plein de jeux !"
+    },
+    {
+      "text": "Ma fille de 2 ans 1/2 a passé à un super moment ce mercredi matin . L'espèce de jeux et bien délimitée pour les différents tranche d'âge , la structure pour les grands qu'elle a escaladé sans soucis et vraiment grande avec différents toboggan et une grande piscine à boule . Étant en vacance dans le coin je recommande avec plaisir 😊😊",
+      "rating": 5,
+      "date": "2025-09-03 11:37:08 +00:00",
+      "owner_response": "Merci beaucoup Marine pour ce très bel avis ⭐️<br>Nous sommes ravis que votre fille ait passé un super moment aux Sablotins et qu’elle ait pu profiter pleinement des espaces adaptés à son âge… et même de la grande structure des “grands” 💪😄<br>Merci également pour votre recommandation, cela nous fait très plaisir.<br>Nous espérons vous revoir lors de prochaines vacances dans le coin ! 😊"
+    }
+  ],
+  "place_topics": {
+    "pluie": 16,
+    "trampoline": 15,
+    "laser game": 14,
+    "sécurité": 14,
+    "accrobranche": 12,
+    "gérants": 6,
+    "structure": 6,
+    "genre": 5,
+    "un bon moment": 5,
+    "paradis": 5
+  },
+  "booking_url": null,
+  "cid": "9056005447576914353",
+  "place_id": "ChIJu663nNxpBEgRsQnTSvlkrX0",
+  "wikipedia_description": null,
+  "description_short": "Parc multi-activités indoor & outdoor aux Sables d'Olonne pour les 0-14 ans. Toboggans, laser game, accrobranche et bien plus encore !",
+  "description_long": "Le Parc des Sablotins est un espace de jeux et de loisirs incontournable aux Sables d'Olonne, pensé pour les enfants de 0 à 14 ans. En intérieur, une plaine de jeux géante attend les petits aventuriers : toboggans, piscines à balles, tyroliennes, trampolines et même un laser game et une salle mini disco. Les tout-petits disposent de structures dédiées dès la naissance. En extérieur, l'accrobranche sécurisé dès 2 ans et les trampolines complètent l'offre. Une restauration sur place (crêpes, gaufres, granités, bubble tea) permet aux parents de souffler confortablement pendant que les enfants s'éclatent.",
+  "tags": [
+    "jeux enfants",
+    "parc de loisirs",
+    "laser game",
+    "accrobranche",
+    "anniversaire enfant"
+  ],
+  "audience": [
+    "famille",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Idéal par temps de pluie pour occuper les enfants : la partie intérieure est grande et bien pensée pour tous les âges. Prévoyez des chaussettes pour tout le monde, c'est obligatoire !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T16:25:47.473317+00:00",
+  "enriched_at": "2026-09-14T16:25:47.473317+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2020/02/2020-LesSablotins-Gigi-stru.jpg",
+    "https://ptitexplorer.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fddwsudjb6%2Fimage%2Fupload%2Fv1778837994%2Flocations%2Fparc-des-sablotins-parc-indoor-fun-et-anniversaire-enfants-inoubliable-les-sables-d-olonne-1778837993394-5myk.jpg&w=3840&q=75",
+    "https://sablotins.com/wp-content/uploads/2024/06/sablotins_img_20240607_095326.webp"
+  ]
+}

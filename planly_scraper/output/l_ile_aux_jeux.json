@@ -1,0 +1,112 @@
+{
+  "id": "l_ile_aux_jeux",
+  "name": "L'Île aux Jeux",
+  "name_google": "L'Ile aux Jeux les Sables",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Jeux & Divertissement",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.5445694,
+  "lng": -1.7725559,
+  "address": "73 Rue du 8 Mai 1945, 85340 Les Sables-d'Olonne",
+  "phone": "+33251011172",
+  "website": "https://www.ile-aux-jeux.com/index.php/le-parc-les-sables-olonne/",
+  "rating": 4.7,
+  "reviews_count": 625,
+  "rating_distribution": {
+    "1": 15,
+    "2": 9,
+    "3": 12,
+    "4": 64,
+    "5": 525
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/l_ile_aux_jeux/photo_1.jpg",
+    "images/l_ile_aux_jeux/photo_2.jpg",
+    "images/l_ile_aux_jeux/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Cet endroit est très propre,  super agreable, il y a des structures pour les petits 2,3 ans et pour les plus grands aussi. Le lieu est forcément un peu bruyant, mais tres agréable par ailleurs. Je recommande",
+      "rating": 5,
+      "date": "2026-02-18 15:58:41 +00:00",
+      "owner_response": "Merci beaucoup pour votre avis qui va droit au cœur de toute l’équipe ! 🥰"
+    },
+    {
+      "text": "J'ai emmené pour la première fois mon bébé de 11 mois, en fin d'après-midi. J'ai été très bien accueillie et le monsieur à l'accueil m'a expliqué qu'il était mieux de venir le matin, car c'est plus calme et il y a d'autres bébés. S'il y avait eu trop de monde cet après-midi, il aurait pu ne pas accepter l'accès. Contente que ça n'ait pas été le cas, car je ne suis pas disponible les matins. Mon bébé a passé un excellent moment, il s'est bien amusé dans l'espace dédié aux tout-petits. Je recommande 👍",
+      "rating": 5,
+      "date": "2026-05-09 18:17:45 +00:00",
+      "owner_response": "C’était un plaisir de vous accueillir ! Merci beaucoup pour votre avis et à bientôt :D 🐒 "
+    },
+    {
+      "text": "Très beau et bon restaurant asiatique buffet a volonté a partir de 18,90€ énormément de choix et personnel discret et accueillant.",
+      "rating": 5,
+      "date": "2026-04-13 07:46:32 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Interdire d'apporter  une petite bouteille d'eau ou un quelconque biscuit qui ne soit pas acheté sur place..au prix d'entrée à 9€50... Enfant de 7ans...je plains les familles nombreuses.. d'ailleurs il n'y a pas foule.. à éviter..",
+      "rating": 1,
+      "date": "2026-07-08 14:18:41 +00:00",
+      "owner_response": "Ça ne vous a pourtant pas empêché de vous cacher pour faire manger votre enfant ! Votre petit fils est reparti avec le sourire et vous avez fait le plein de photo et de vidéos de lui qui jouait dans les jeux donc pour nous l’objectif est rempli 😊 "
+    },
+    {
+      "text": "Au top. Ma fille était ravie. Le gâteau au chocolat était excellent. Très professionnel et d’une gentillesse. Je recommande.",
+      "rating": 5,
+      "date": "2026-07-06 04:33:42 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "1751365246013966380",
+  "place_id": "ChIJ9ykl0YxdBEgRLIiggGkZThg",
+  "wikipedia_description": null,
+  "description_short": "Une aire de jeux indoor colorée et sécurisée pour les enfants, idéale pour se défouler par tous les temps aux Sables-d'Olonne.",
+  "description_long": "L'Île aux Jeux est un espace de jeux intérieur situé aux Sables-d'Olonne, conçu pour accueillir les enfants de tous âges, des plus petits (dès 11 mois) aux plus grands. Les structures ludiques variées permettent aux enfants de grimper, glisser et s'amuser en toute sécurité dans un environnement propre et bien entretenu. L'accueil y est chaleureux et professionnel. Une restauration est disponible sur place, avec notamment des gâteaux maison appréciés. À noter : l'entrée est payante et aucune nourriture extérieure n'est autorisée. Idéal le matin pour éviter l'affluence.",
+  "tags": [
+    "jeux intérieur",
+    "enfants",
+    "aire de jeux",
+    "activité couverte",
+    "famille"
+  ],
+  "audience": [
+    "famille"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Privilégiez une visite en matinée pour profiter des structures sans trop de monde, surtout avec des tout-petits. Prévoyez chaussettes et boisson achetée sur place, car aucune nourriture extérieure n'est admise.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T16:26:04.665257+00:00",
+  "enriched_at": "2026-09-14T16:26:04.665257+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://www.ile-aux-jeux.com/wp-content/uploads/2020/03/DSC_0226.jpg",
+    "https://www.ile-aux-jeux.com/wp-content/uploads/2022/05/IMG_8.jpg",
+    "https://www.ile-aux-jeux.com/wp-content/uploads/2020/02/1015967_525767600810894_128604471_o.jpg"
+  ]
+}

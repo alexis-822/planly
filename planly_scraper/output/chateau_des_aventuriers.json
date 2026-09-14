@@ -1,0 +1,125 @@
+{
+  "id": "chateau_des_aventuriers",
+  "name": "Château des Aventuriers",
+  "name_google": "Le Château des Aventuriers - Parc d'attractions et de loisirs en Vendée (85)",
+  "category": "Parcs & Loisirs",
+  "subcategory": "Jeux & Divertissement",
+  "commune": "Avrillé",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4737867,
+  "lng": -1.5098844,
+  "address": "Château de la Guignardière Route des Sables d'Olonne, D949, 85440 Avrillé",
+  "phone": "+33251223306",
+  "website": "http://www.chateau-aventuriers.com/",
+  "rating": 4.6,
+  "reviews_count": 8538,
+  "rating_distribution": {
+    "1": 120,
+    "2": 117,
+    "3": 394,
+    "4": 1999,
+    "5": 5908
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/chateau_des_aventuriers/photo_1.jpg",
+    "images/chateau_des_aventuriers/photo_2.jpg",
+    "images/chateau_des_aventuriers/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Nous avons fait l'enquête au château. Génial, les enfants ont adoré, le décor et les énigmes.\nNous n'étions pas nombreux ce jour... A voir en forte affluence avec plusieurs groupes dans la même salle ça peut être plus compliqué. (Pour la discrétion des énigmes).\nPour info : il y a des escaliers dans le château donc pas adapté au  PMR\n\nLe tarif reste cher pour une activité.\nVous pouvez avoir des tarifs pour faire ttes les activités si vous les prenez en avance.\nJe recommande",
+      "rating": 4,
+      "date": "2026-04-17 14:54:50 +00:00",
+      "owner_response": "Merci pour votre retour, nous sommes ravis que vous ayez apprécié notre aventure Enquête au château. Nous avons bien une version PMR pour cette aventure qui permet de ne faire que le rez de chaussé. A bientôt pour de nouvelles aventures."
+    },
+    {
+      "text": "Très chouette expérience en famille. Nous avons fait la quête des pirates, c'était original et varié. Des jeux d'eau ou des brumisateurs auraient été super appréciables et appréciés. Puis pause snack, tarifs un peu élevés. Et nous avons fait l'enquête au château, très original aussi. Des points pour s'asseoir seraient une bonne idée. Pas le courage d'aller faire les dinos par ce temps même si c'est en forêt. La boutique est sympa. Bref un très bon moment en famille, à recommander !",
+      "rating": 4,
+      "date": "2026-07-09 13:06:51 +00:00",
+      "owner_response": "Merci pour cette belle note, vous semblez avoir passé un bon moment en famille sur notre parc et nous en sommes très heureux. A bientôt"
+    },
+    {
+      "text": "Une très belle découverte, nous recommandons !\nVenus en famille avec deux adolescents de 13 et 14 ans, nous avons pris le pack Grand Frisson et y avons passé une très bonne partie de la journée (de 10h15 à 16h). Les activités ont plu à tout le monde, balayant nos doutes sur le côté potentiellement trop enfantin pour leur âge. L'escape game de la maison hantée a d'ailleurs été le coup de cœur de notre journée.\nLe site est superbe : le château est très beau et le grand parc, ainsi que le sentier boisé de la piste des dinos, sont parfaitement entretenus.\nPrévoyez votre pique-nique car peu de choix en snack.",
+      "rating": 5,
+      "date": "2026-07-12 21:30:50 +00:00",
+      "owner_response": "<br>Merci pour cette excellente note et votre commentaire. Nous sommes ravis que nos différentes aventures aient plu à toute la famille ! A bientôt<br>"
+    },
+    {
+      "text": "Parfait pour occuper un amateur de pirate, de dinosaure ou de Cluedo.\n\nVisiter un château où le crime parfait a été commis tout en découvrant un château et ses jolis trésors.\n\nDe belles animations où l'on oublie l'écran, le portable en pleine nature dans un cadre bucolique.\n\nDes énigmes, complexes comme facile. À faire en famille.\n\nBoutique où vous laisserez quelques pièces d'or, cafétéria.\n\nPossibilité de pique niquer sur place. Parking gratuit.\n\nLa maison hantée sera à faire dès que notre enfant sera plus grand.",
+      "rating": 5,
+      "date": "2026-04-25 06:52:33 +00:00",
+      "owner_response": "Merci beaucoup ! Nous sommes heureux que l’univers du parc vous ait plu. De nouvelles aventures vous attendent lors de votre prochaine visite "
+    },
+    {
+      "text": "Nous avons passés une formidable journée !\nC'est vraiment une reconnection à la nature.\nLe parc est vraiment propre et bien entretenu. La nouvelle activité de la maison hanté est tout simplement génial !\nNous y retournerons.",
+      "rating": 5,
+      "date": "2026-06-15 09:02:10 +00:00",
+      "owner_response": "Merci beaucoup pour cette excellente note et votre commentaire qui nous font réellement très plaisir ! Nous sommes très heureux de voir que vous avez passé une bonne journée en famille sur notre parc et avez pu partager de bons moments avec vos enfants dans notre escape game La Maison Hantée. A bientôt pour de nouvelles aventures !"
+    }
+  ],
+  "place_topics": {
+    "pirates": 707,
+    "énigmes": 674,
+    "maison hantée": 392,
+    "escape game": 191,
+    "cluedo": 119,
+    "chasse au trésor": 119,
+    "western": 78,
+    "jeu de piste": 39,
+    "dinos": 37,
+    "menhirs": 17
+  },
+  "booking_url": null,
+  "cid": "3092512066561162257",
+  "place_id": "ChIJ1xvB2mQWBEgREbz89lbP6io",
+  "wikipedia_description": "Le château de la Guignardière est un château situé à Avrillé, dans le département de la Vendée, en région Pays-de-la-Loire. L’édifice occupe une place centrale au sein du parc de loisirs dénommé « Le château des Aventuriers ».",
+  "description_short": "Chasses au trésor, escape game et maison hantée dans un vrai château vendéen. Une aventure palpitante pour toute la famille !",
+  "description_long": "Au cœur d'un parc verdoyant à Avrillé, le Château des Aventuriers vous plonge dans un univers magique mêlant pirates, dinosaures, Cluedo et maison hantée. Dans le cadre authentique du château de la Guignardière, vivez des quêtes et énigmes soigneusement scénarisées pour petits et grands. Les packs thématiques – comme le Grand Frisson – permettent de passer une journée entière à explorer. Décors soignés, jeux de piste variés et animations surprenantes font de ce lieu une expérience de loisirs complète, avec restauration et snack sur place pour prolonger la visite.",
+  "tags": [
+    "chasse au trésor",
+    "escape game",
+    "pirates",
+    "château",
+    "maison hantée"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "ados"
+  ],
+  "age_min": 5,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 180,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Réservez vos billets à l'avance, surtout en juillet-août ! Optez pour le pack journée pour profiter de plusieurs quêtes et éviter la frustration d'en vouloir encore plus.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-14T16:27:13.306211+00:00",
+  "enriched_at": "2026-09-14T16:27:13.306211+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://chateau-aventuriers.com/wp-content/uploads/2024/01/Poster-Video-Home.jpg",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/52/b2/1e/parcours-des-pirates.jpg?w=1200&h=1200&s=1",
+    "https://www.chausseliere.com/wp-content/uploads/2023/01/ChateaudesAventuriers1_1199_800-1024x683.webp"
+  ]
+}
