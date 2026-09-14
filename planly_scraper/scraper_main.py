@@ -14,6 +14,7 @@ import json
 import logging
 import os
 import sys
+import unicodedata
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
@@ -139,6 +140,21 @@ def run_claude(pois, business_results, review_results, wikipedia_results):
     return enriched
 
 
+def score_photos(merged: dict, candidates: list) -> None:
+    # Import tardif : enrich_images reconfigure stdout et logging à l'import
+    from enrich_images import process_poi
+    cands = [c if isinstance(c, dict) else {"url": c} for c in (candidates or [])]
+    result = process_poi({**merged, "photos": [], "photos_original_urls": []}, cands)
+    if isinstance(result, tuple):
+        merged["photos"], merged["photos_original_urls"] = result
+    else:
+        merged["photos"], merged["photos_original_urls"] = [], []
+
+
+def _name_key(name: str) -> str:
+    return unicodedata.normalize("NFC", name).casefold()
+
+
 def _load_existing() -> dict[str, dict]:
     """Charge les POIs existants depuis output_global.json (pour le resume)."""
     if os.path.exists(OUTPUT_GLOBAL):
@@ -170,20 +186,26 @@ def main():
         all_pois = [p for p in all_pois if p["subcategory"] == args.subcategory]
         log.info(f"{len(all_pois)} POIs après filtre subcategory='{args.subcategory}'")
 
-    # Resume : charger les POIs existants et ne traiter que les nouveaux
+    # Resume : tout POI déjà présent (même partial) est ignoré. Match aussi par nom car
+    # certains tags historiques diffèrent de l'Excel (ex: dolmen_de_la_frebouch_ere)
     existing = _load_existing()
+    existing_by_name = {_name_key(p["name"]): p for p in existing.values()}
+
+    def find_existing(p):
+        return existing.get(p["tag"]) or existing_by_name.get(_name_key(p["name"]))
+
     if existing and not args.no_resume:
-        pois_to_process = [p for p in all_pois if p["tag"] not in existing or existing[p["tag"]].get("status") != "complete"]
+        pois_to_process = [p for p in all_pois if not find_existing(p)]
         skipped = len(all_pois) - len(pois_to_process)
         if skipped > 0:
-            log.info(f"RESUME: {skipped} POIs déjà complets → skip, {len(pois_to_process)} à traiter")
+            log.info(f"RESUME: {skipped} POIs déjà scrapés → skip, {len(pois_to_process)} à traiter")
         pois = pois_to_process
     else:
         pois = all_pois
 
     if args.dry_run:
         for p in pois:
-            status = existing.get(p["tag"], {}).get("status", "new")
+            status = (find_existing(p) or {}).get("status", "new")
             print(f"  [{p['tag']}] {p['name']} — {p['subcategory']} — status: {status}")
         log.info(f"{len(pois)} POIs à traiter")
         return
@@ -211,6 +233,7 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # Merger les nouveaux résultats (en préservant specific/specific_status existants)
+    # + sélection des 3 meilleures photos par Claude Vision (enrich_images.process_poi)
     new_merged = []
     for poi in pois:
         tag = poi["tag"]
@@ -224,12 +247,14 @@ def main():
             parkings=parking_results.get(tag),
         )
         # Préserver les champs spécifiques déjà remplis par scraper_missing
-        if tag in existing:
-            old = existing[tag]
+        old = find_existing(poi)
+        if old:
             if old.get("specific"):
                 merged["specific"] = old["specific"]
             if old.get("specific_status"):
                 merged["specific_status"] = old["specific_status"]
+        log.info(f"[{tag}] Tri photos Claude Vision...")
+        score_photos(merged, photo_results.get(tag))
         save_poi_json(merged)
         new_merged.append(merged)
         log.info(f"[{tag}] → {merged['status']}")
@@ -242,8 +267,9 @@ def main():
     all_excel_pois = load_pois()
     all_merged = []
     for p in all_excel_pois:
-        if p["tag"] in existing:
-            all_merged.append(existing[p["tag"]])
+        found = existing.get(p["tag"]) or existing_by_name.get(_name_key(p["name"]))
+        if found:
+            all_merged.append(found)
 
     save_global_json(all_merged)
 

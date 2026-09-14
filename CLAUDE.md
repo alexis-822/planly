@@ -29,19 +29,20 @@ Script orchestrateur en 8 étapes :
 1. **Chargement** (`poi_loader.py`) — Lit le Excel, génère un tag/slug par POI
 2. **DataForSEO business_info** (`dataforseo.py`) — Fiche Google Business (lat/lng, adresse, tel, rating, horaires). Fallback Google Maps Live
 3. **DataForSEO reviews** — 5 derniers avis Google via CID
-4. **DataForSEO images** — Jusqu'à 3 photos via SERP Images
+4. **DataForSEO images** — ~10 candidats via SERP Images, puis tri Claude Haiku Vision (`enrich_images.process_poi` : rejet flou/cartes, garde les 3 meilleures, télécharge dans `images/{tag}/`)
 5. **Parkings** (`parking.py`) — Overpass API (OSM), rayon 500m/1000m
 6. **Wikipedia** (`wikipedia_client.py`) — Résumé FR (500 chars max)
 7. **Claude enrichissement** (`claude_enricher.py`) — Sonnet 4.6 : descriptions, tags, audience, durée, accessibilité, conseil_planly, notoriété
 8. **Fusion** (`merger.py`) — Assemble toutes les sources → JSON final par POI
 
-Le script supporte `--resume` (ne re-traite pas les POIs "complete") et `--subcategory` (filtre).
+Le script supporte `--subcategory` (filtre). Par défaut il ignore **tout POI déjà présent** dans output_global.json (même partial, match par tag ou par nom) — on ne retouche pas les POIs existants. `--no-resume` refait tout.
 
 ### Scripts complémentaires — `planly_scraper/`
 | Script | Rôle |
 |--------|------|
 | `scraper_missing.py` | Remplissage champs manquants (SERP organic + Claude Haiku extraction) |
-| `download_images.py` | Télécharge toutes les images en local (`images/{tag}/photo_N.ext`) |
+| `enrich_images.py` | Tri photos Claude Vision (déjà intégré à scraper_main pour les nouveaux POIs ; en manuel : `--poi tag1,tag2`, jamais sans `--poi`) |
+| `download_images.py` | Ancien téléchargement sans tri Vision — ne plus utiliser |
 | `inject_pois.py` | Transforme output_global.json → format JS et injecte dans planly-full.html |
 | `import_missing.py` | Import depuis Excel champs_manquants |
 | `complete_schema.py` | Schéma complet des champs |
@@ -74,7 +75,7 @@ Excel (97 POIs) → scraper_main.py → output_global.json (34 POIs)
                                           ↓
                     scraper_missing.py (complète les champs manquants)
                                           ↓
-                    download_images.py → images/ (91 images)
+       (photos triées par Claude Vision directement dans scraper_main)
                                           ↓
                     inject_pois.py → planly-full.html (33 POIs ≥85%)
                                           ↓
