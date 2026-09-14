@@ -314,6 +314,7 @@ def convert_poi(p):
         "conseil": conseil,
         "beach": beach,
         "specific": specific,
+        "openingHours": p.get("opening_hours"),
         "veto": None,
     }
 

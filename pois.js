@@ -1,9 +1,9 @@
 var POIS=[
   {
     "imgs": [
-      "planly_scraper/images/grande_plage_du_remblai/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/grande_plage_du_remblai/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/grande_plage_du_remblai/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/grande_plage_du_remblai/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/grande_plage_du_remblai/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/grande_plage_du_remblai/photo_3.jpg?v=202609142208"
     ],
     "name": "Grande Plage du Remblai",
     "commune": "Les Sables-d'Olonne",
@@ -130,13 +130,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_sauveterre/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_sauveterre/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_sauveterre/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_de_sauveterre/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_sauveterre/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_sauveterre/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage de Sauveterre",
     "commune": "L'Île-d'Olonne",
@@ -259,13 +260,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_granges/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_des_granges/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_des_granges/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_des_granges/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_des_granges/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_des_granges/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage des Granges",
     "commune": "L'Île-d'Olonne",
@@ -388,13 +390,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_tanchet/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_tanchet/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_tanchet/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_de_tanchet/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_tanchet/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_tanchet/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -521,13 +524,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/baie_de_cayola/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/baie_de_cayola/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/baie_de_cayola/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/baie_de_cayola/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/baie_de_cayola/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/baie_de_cayola/photo_3.jpg?v=202609142208"
     ],
     "name": "Baie de Cayola",
     "commune": "Château-d'Olonne",
@@ -654,13 +658,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_la_mine/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_la_mine/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_la_mine/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_de_la_mine/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_la_mine/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_la_mine/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage de la Mine",
     "commune": "Jard-sur-Mer",
@@ -782,13 +787,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_la_paree/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_la_paree/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_la_paree/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_de_la_paree/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_la_paree/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_la_paree/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage de la Parée",
     "commune": "Brétignolles-sur-Mer",
@@ -910,13 +916,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_dunes_du_veillon/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_dunes_du_veillon/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage & Dunes du Veillon",
     "commune": "Talmont-Saint-Hilaire",
@@ -1043,13 +1050,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_dunes/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_des_dunes/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_des_dunes/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_des_dunes/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_des_dunes/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_des_dunes/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage des Dunes",
     "commune": "Brétignolles-sur-Mer",
@@ -1176,13 +1184,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_conches/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_des_conches/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_des_conches/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_des_conches/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_des_conches/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_des_conches/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage des Conches",
     "commune": "Longeville-sur-Mer",
@@ -1309,13 +1318,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_l_aubraie/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_l_aubraie/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_de_l_aubraie/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_de_l_aubraie/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_l_aubraie/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_de_l_aubraie/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage de l'Aubraie",
     "commune": "Les Sables-d'Olonne",
@@ -1432,13 +1442,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_belugas/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/plage_des_belugas/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/plage_des_belugas/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/plage_des_belugas/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/plage_des_belugas/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/plage_des_belugas/photo_3.jpg?v=202609142208"
     ],
     "name": "Plage des Bélugas",
     "commune": "L'Aiguillon-la-Presqu'île",
@@ -1565,13 +1576,14 @@ var POIS=[
       "facilities_sun_loungers": null,
       "facilities_beach_shop": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpg?v=202609142208"
     ],
     "name": "Forêt Domaniale d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -1856,13 +1868,14 @@ var POIS=[
       "superficie_ha": 1000,
       "sentiers_km_total": 60
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpg?v=202609142208"
     ],
     "name": "Marais Salants de l'Île d'Olonne",
     "commune": "L'Île-d'Olonne",
@@ -2093,13 +2106,14 @@ var POIS=[
       },
       "wildlife_observable": true
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/lac_de_tanchet/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/lac_de_tanchet/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/lac_de_tanchet/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/lac_de_tanchet/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/lac_de_tanchet/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/lac_de_tanchet/photo_3.jpg?v=202609142208"
     ],
     "name": "Lac de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -2377,13 +2391,14 @@ var POIS=[
         ]
       }
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg?v=202609142208"
     ],
     "name": "Réserve Nat. Baie de l'Aiguillon",
     "commune": "L'Aiguillon-sur-Mer",
@@ -2581,13 +2596,14 @@ var POIS=[
       },
       "wildlife_observable": true
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/ile_d_yeu/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/ile_d_yeu/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/ile_d_yeu/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/ile_d_yeu/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/ile_d_yeu/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/ile_d_yeu/photo_3.jpg?v=202609142208"
     ],
     "name": "Île d'Yeu",
     "commune": "Saint-Gilles (ferry)",
@@ -2714,13 +2730,14 @@ var POIS=[
       "guided_visit": true,
       "free_entry": false
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg?v=202609142208"
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
     "commune": "Noirmoutier-en-l'Île",
@@ -2838,13 +2855,14 @@ var POIS=[
       "guided_visit": true,
       "free_entry": true
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpg?v=202609142208"
     ],
     "name": "Phare de la Petite Jetée",
     "commune": "Les Sables-d'Olonne",
@@ -2952,13 +2970,14 @@ var POIS=[
       "altitude_m": 36,
       "ideal_weather": "beau"
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/belvedere_arrondeau/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/belvedere_arrondeau/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/belvedere_arrondeau/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/belvedere_arrondeau/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/belvedere_arrondeau/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/belvedere_arrondeau/photo_3.jpg?v=202609142208"
     ],
     "name": "Belvédère Arrondeau",
     "commune": "Saint-Hilaire-de-Riez",
@@ -3068,13 +3087,14 @@ var POIS=[
       "altitude_m": 5,
       "orientation": "O"
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/le_puits_d_enfer/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/le_puits_d_enfer/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/le_puits_d_enfer/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/le_puits_d_enfer/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/le_puits_d_enfer/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/le_puits_d_enfer/photo_3.jpg?v=202609142208"
     ],
     "name": "Le Puits d'Enfer",
     "commune": "Les Sables-d'Olonne",
@@ -3176,13 +3196,14 @@ var POIS=[
       "ideal_weather": "beau",
       "orientation": "O"
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/pointe_du_payre/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/pointe_du_payre/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/pointe_du_payre/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/pointe_du_payre/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/pointe_du_payre/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/pointe_du_payre/photo_3.jpg?v=202609142208"
     ],
     "name": "Pointe du Payré",
     "commune": "Jard-sur-Mer",
@@ -3286,13 +3307,14 @@ var POIS=[
       "orientation": "O",
       "ideal_weather": "beau"
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg?v=202609142208"
     ],
     "name": "Sentier côtier Forêt–Plages d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -3390,13 +3412,14 @@ var POIS=[
       "best_time": null,
       "tide_sensitive": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/le_remblai/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/le_remblai/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/le_remblai/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/le_remblai/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/le_remblai/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/le_remblai/photo_3.jpg?v=202609142208"
     ],
     "name": "Le Remblai",
     "commune": "Les Sables-d'Olonne",
@@ -3511,13 +3534,14 @@ var POIS=[
       "best_time": null,
       "tide_sensitive": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/circuit_des_marais_salants/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/circuit_des_marais_salants/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg?v=202609142208"
     ],
     "name": "Circuit des Marais Salants",
     "commune": "L'Île-d'Olonne",
@@ -3627,13 +3651,14 @@ var POIS=[
       "best_time": null,
       "tide_sensitive": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg?v=202609142208"
     ],
     "name": "Chemin des Douaniers Cayola–Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
@@ -3748,13 +3773,14 @@ var POIS=[
       "best_time": null,
       "tide_sensitive": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/port_olona/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/port_olona/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/port_olona/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/port_olona/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/port_olona/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/port_olona/photo_3.jpg?v=202609142208"
     ],
     "name": "Port Olona",
     "commune": "Les Sables-d'Olonne",
@@ -3869,13 +3895,14 @@ var POIS=[
       "best_time": null,
       "tide_sensitive": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/port_de_bourgenay/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/port_de_bourgenay/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/port_de_bourgenay/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/port_de_bourgenay/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/port_de_bourgenay/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/port_de_bourgenay/photo_3.jpg?v=202609142208"
     ],
     "name": "Port de Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
@@ -3983,13 +4010,14 @@ var POIS=[
       "best_time": null,
       "tide_sensitive": null
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/port_de_la_chaume/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/port_de_la_chaume/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/port_de_la_chaume/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/port_de_la_chaume/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/port_de_la_chaume/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/port_de_la_chaume/photo_3.jpg?v=202609142208"
     ],
     "name": "Port de La Chaume",
     "commune": "Les Sables-d'Olonne",
@@ -4086,13 +4114,14 @@ var POIS=[
       "guided_visit": true,
       "free_entry": false
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/l_ile_penotte/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/l_ile_penotte/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/l_ile_penotte/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/l_ile_penotte/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/l_ile_penotte/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/l_ile_penotte/photo_3.jpg?v=202609142208"
     ],
     "name": "L'Île Penotte",
     "commune": "Les Sables-d'Olonne",
@@ -4184,13 +4213,14 @@ var POIS=[
       "guided_visit": false,
       "free_entry": true
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/chateau_de_talmont/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/chateau_de_talmont/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/chateau_de_talmont/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/chateau_de_talmont/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/chateau_de_talmont/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/chateau_de_talmont/photo_3.jpg?v=202609142208"
     ],
     "name": "Château de Talmont",
     "commune": "Talmont-Saint-Hilaire",
@@ -4282,13 +4312,14 @@ var POIS=[
       "guided_visit": true,
       "free_entry": false
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_3.jpg?v=202609142208"
     ],
     "name": "Dolmen de la Frébouchère",
     "commune": "Le Bernard",
@@ -4378,13 +4409,14 @@ var POIS=[
     "specific": {
       "historical_period": "Néolithique"
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpg?v=202609142208"
     ],
     "name": "Saint-Gilles-Croix-de-Vie",
     "commune": "Saint-Gilles-Croix-de-Vie",
@@ -4474,13 +4506,14 @@ var POIS=[
       "guided_visit": true,
       "free_entry": false
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/vouvant/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/vouvant/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/vouvant/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/vouvant/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/vouvant/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/vouvant/photo_3.jpg?v=202609142208"
     ],
     "name": "Vouvant",
     "commune": "Vouvant",
@@ -4569,13 +4602,14 @@ var POIS=[
       "guided_visit": true,
       "free_entry": true
     },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/circuit_mecamax/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/circuit_mecamax/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/circuit_mecamax/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/circuit_mecamax/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/circuit_mecamax/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/circuit_mecamax/photo_3.jpg?v=202609142208"
     ],
     "name": "Circuit Mecamax",
     "commune": "L'Île-d'Olonne",
@@ -4597,8 +4631,8 @@ var POIS=[
     "category": "jeux",
     "subcategory": "Jeux & Divertissement",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 17.0,
+      "child": 14.0,
       "is_free": false
     },
     "duration": 90,
@@ -4673,14 +4707,85 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": 17,
+        "child": 14,
+        "child_age_min": 7,
+        "child_age_max": 13,
+        "free_under_age": 3,
+        "family_ticket": null,
+        "notes": "Tarifs Kart Kid Family et Kart Adult en réservation en ligne. Tarifs plein: Kid Family 17€, Adult 21€. Enfants 5-13 ans peuvent bénéficier d'une place devant un adulte en quad gratuitement. Hors juillet-août pour anniversaires.",
+        "source_url": "https://mecamax.com/karting/",
+        "valid_period": null,
+        "evidence": "Kart Kid Family 1 Session de 10min à partir de 14 € TTC * *Tarif avec réservation en ligne Plein Tarif 17€. Kart Adult La session de 10min à partir de 17 € TTC * *Tarif avec réservation en ligne Plein tarif 21€.",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "age_min": 3,
+      "activities": [
+        {
+          "name": "Kart électrique en autonomie",
+          "age_min": 3,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Karting",
+          "age_min": 7,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Quad",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Promenade accompagnée sur un sentier de 5 hectares",
+          "age_min": 7,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "extérieur",
+      "booking": "conseillée",
+      "season": "Ouvert 7j/7",
+      "hours_text": "Automne/Hiver période scolaire : mercredi-vendredi 10h-12h et 14h-18h, samedi 10h-18h, dimanche 12h-18h. Automne/Hiver vacances scolaires : lundi-samedi 10h-18h, dimanche 12h-18h. Printemps/Été période scolaire : mercredi-vendredi 10h-12h et 14h-19h, samedi 10h-19h, dimanche 12h-19h. Printemps/Été vacances scolaires : lundi-samedi 10h-19h, dimanche 12h-19h. Grandes vacances (1-7 juillet) 10h-19h, (8 juillet-29 août) 10h-minuit.",
+      "amenities": {
+        "snack": true,
+        "kids_zone": true,
+        "picnic_area": null,
+        "stroller_ok": null,
+        "rules": [
+          "Casques, charlottes, combinaisons et combinaisons de pluie prêtés",
+          "Taille minimum 1.40m pour Kart Adult",
+          "Kart Racing 2T: E-card membre avec niveau de pilotage suffisant requis (chrono sous 49.000s)"
+        ]
+      },
+      "official_source": {
+        "url": "http://www.mecamax.com/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/atlantic_kart_system/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/atlantic_kart_system/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/atlantic_kart_system/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/atlantic_kart_system/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/atlantic_kart_system/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/atlantic_kart_system/photo_3.jpg?v=202609142208"
     ],
     "name": "Atlantic Kart System",
     "commune": "Les Sables-d'Olonne",
@@ -4702,8 +4807,8 @@ var POIS=[
     "category": "jeux",
     "subcategory": "Jeux & Divertissement",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 21.0,
+      "child": 16.0,
       "is_free": false
     },
     "duration": 60,
@@ -4778,14 +4883,92 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "free_entry": null,
+        "adult": 21,
+        "child": 16,
+        "child_age_min": 7,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Tarifs affichés pour une série de 10min. Plusieurs catégories de karts : 270cc (à partir de 14 ans à 21€), 390cc (à partir de 16 ans à 26€), 200cc junior (18€), Karting Kid (à partir de 7 ans à 16€). Séries 5 et 10 non nominatives sans limite de durée. Baptême biplace à 24€ la série de 10min (à partir de 5 ans).",
+        "source_url": "http://www.akskart.fr/",
+        "valid_period": null,
+        "evidence": "Karting Kid (à partir de 7 ans) Série(s) 10min Tarifs 1 16€ 5 70€ 10 120€",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "age_min": 5,
+      "activities": [
+        {
+          "name": "Karting 270cc",
+          "age_min": 14,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 10,
+          "extra_price": null
+        },
+        {
+          "name": "Karting 390cc",
+          "age_min": 16,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 10,
+          "extra_price": null
+        },
+        {
+          "name": "Karting 200cc (junior)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 10,
+          "extra_price": null
+        },
+        {
+          "name": "Karting Kid",
+          "age_min": 7,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 10,
+          "extra_price": null
+        },
+        {
+          "name": "Baptême Karting Biplace",
+          "age_min": 5,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 10,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "extérieur",
+      "booking": "non",
+      "season": "Ouvert toute l'année. Horaires réduits de février à décembre (fermeture certains jours), complets en juillet-août et vacances scolaires (7j/7)",
+      "hours_text": "Février-mars et octobre-décembre : sam-dim 14h-18h. Avril-juin : lun-mer 14h-19h, ven-dim 14h-19h (jeudi fermé). Juillet-août : tous les jours 10h-19h. Septembre : lun-mer 14h-19h, ven-dim 14h-19h (jeudi fermé). 7j/7 en vacances scolaires.",
+      "amenities": {
+        "snack": null,
+        "kids_zone": null,
+        "picnic_area": null,
+        "stroller_ok": null,
+        "rules": [
+          "Système électronique permettant de réduire la vitesse ou arrêter les machines"
+        ]
+      },
+      "official_source": {
+        "url": "http://www.akskart.fr/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/up2play/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/up2play/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/up2play/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/up2play/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/up2play/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/up2play/photo_3.jpg?v=202609142208"
     ],
     "name": "UP2PLAY",
     "commune": "Les Sables-d'Olonne",
@@ -4807,8 +4990,8 @@ var POIS=[
     "category": "jeux",
     "subcategory": "Jeux & Divertissement",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 9.9,
+      "child": 9.9,
       "is_free": false
     },
     "duration": 90,
@@ -4883,14 +5066,216 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": 9.9,
+        "child": 9.9,
+        "child_age_min": null,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Tarif bowling par partie (activité principale). Du lundi au jeudi: 8.90€/pers/partie. Vendredi, weekends, jours fériés et vacances scolaires (zone B): 9.90€/pers/partie. Location de chaussures incluse. Tarifs variables selon activités (Trampoline: 10-22€/pers selon durée; Kids Parc: 6-9€/pers; Vague de surf: 30€/pers; Quiz Boxing: 20€/pers; Escape Game: 25€/pers).",
+        "source_url": "https://www.up2play.fr/lessablesdolonne/horaires-tarifs/",
+        "valid_period": null,
+        "evidence": "Du lundi au jeudi /pers. /partie 8.90€ Vendredi, weekends, jours fériés et vacances scolaires (zone B) /pers. /partie 9.90€ Location de chaussures incluse",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "age_min": 1,
+      "activities": [
+        {
+          "name": "Bowling",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Trampoline Parc",
+          "age_min": 7,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 30,
+          "extra_price": null
+        },
+        {
+          "name": "Baby Jump (Trampoline)",
+          "age_min": 2,
+          "age_max": 6,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Kids Parc",
+          "age_min": 1,
+          "age_max": 12,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Vague de Surf",
+          "age_min": 7,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 40,
+          "extra_price": null
+        },
+        {
+          "name": "Quiz Boxing",
+          "age_min": 3,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        },
+        {
+          "name": "Escape Game (Magic School et Fort Boyard)",
+          "age_min": 4,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Jeux de Bar (Shuffleboard, Ping-pong, Cornhole, Billard, Baby-foot, Fléchettes, Palets, Jeux d'arcade)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        }
+      ],
+      "shows": [
+        {
+          "name": "Soirée danse Salsa, Bachata, Kizomba - Initiation gratuite",
+          "time": "20:30"
+        },
+        {
+          "name": "Soirée danse Salsa, Bachata, Kizomba - Piste de danse",
+          "time": "21:30"
+        }
+      ],
+      "indoor_outdoor": "intérieur",
+      "booking": "conseillée",
+      "season": "Toute l'année. Ouvert tous les jours fériés sauf 25 décembre.",
+      "hours_text": "Lundi-jeudi 10h00-00h00 | Vendredi-samedi 10h00-02h00 | Dimanche 10h00-20h00 (*horaires spécifiques pour certaines activités, fermeture plus tardive en veille de jour férié et vacances scolaires)",
+      "amenities": {
+        "snack": true,
+        "kids_zone": true,
+        "picnic_area": false,
+        "stroller_ok": null,
+        "rules": [
+          "Chaussettes anti-dérapantes obligatoires au Trampoline Parc",
+          "Chaussettes obligatoires au Kids Parc",
+          "Brief inclus à la Vague de Surf",
+          "Décharge obligatoire par un majeur pour Trampoline",
+          "Les enfants de plus d'1m50 et adultes non autorisés dans structures Kids Parc",
+          "Pas de réservation pour Bowling",
+          "Accès gratuit au complexe"
+        ]
+      },
+      "official_source": {
+        "url": "https://www.up2play.fr/lessablesdolonne/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 20,
+            "minute": 0
+          }
+        }
+      ],
+      "monday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 0,
+            "minute": 0
+          }
+        }
+      ],
+      "tuesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 0,
+            "minute": 0
+          }
+        }
+      ],
+      "wednesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 0,
+            "minute": 0
+          }
+        }
+      ],
+      "thursday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 0,
+            "minute": 0
+          }
+        }
+      ],
+      "friday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 2,
+            "minute": 0
+          }
+        }
+      ],
+      "saturday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 2,
+            "minute": 0
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_des_sablotins/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/parc_des_sablotins/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/parc_des_sablotins/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/parc_des_sablotins/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/parc_des_sablotins/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/parc_des_sablotins/photo_3.jpg?v=202609142208"
     ],
     "name": "Parc des Sablotins",
     "commune": "Les Sables-d'Olonne",
@@ -4913,7 +5298,7 @@ var POIS=[
     "subcategory": "Jeux & Divertissement",
     "pricing": {
       "adult": 0,
-      "child": 0,
+      "child": 8.5,
       "is_free": false
     },
     "duration": 90,
@@ -4988,14 +5373,153 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": null,
+        "child": 8.5,
+        "child_age_min": 3,
+        "child_age_max": 14,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Tarif matinée enfant 3-14 ans : 8,50€ ; après-midi : 9,50€. Enfants 1-2 ans : 7,50€ (matinée et après-midi identiques). Gratuit pour 2 accompagnateurs adultes, puis 2€ par accompagnateur supplémentaire. Accès extérieur en supplément : +3€ matinée (moins de 3 ans et 3-14 ans), +5€ après-midi (3-14 ans). Laser Game en supplément : +4€ (1 partie) ou +6€ (2 parties).",
+        "source_url": "https://sablotins.com/horaires-tarifs",
+        "valid_period": null,
+        "evidence": "3 à 14 Ans Matinée En intérieur 8.5€ Après-Midi En intérieur 9.5€",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "age_min": 1,
+      "activities": [
+        {
+          "name": "Espace intérieur (jeux pour tous les âges)",
+          "age_min": 1,
+          "age_max": 14,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Laser Game (SabloLaser)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": 4
+        },
+        {
+          "name": "Espace extérieur (accrofilet, trampolines, luge)",
+          "age_min": 1,
+          "age_max": 14,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "mixte",
+      "booking": "non",
+      "season": "Toute l'année. Hors vacances scolaires : ouvert mercredi, samedi, dimanche et 1er vendredi matin de chaque mois. Vacances scolaires et jours fériés : ouvert tous les jours. Vacances d'été : ouvert du mardi au dimanche, lundi en cas de mauvais temps.",
+      "hours_text": "De 10:00 à 12:30 et de 14:00 à 18:30",
+      "amenities": {
+        "snack": true,
+        "kids_zone": null,
+        "picnic_area": false,
+        "stroller_ok": null,
+        "rules": [
+          "Chaussettes obligatoires pour tous les enfants",
+          "Chaussures bien ajustées indispensables pour activités extérieures",
+          "Enfants obligatoirement accompagnés d'un adulte",
+          "Nourriture et boissons extérieures interdites (sauf nourriture bébé, eau, fruits)",
+          "Parc fermé et sécurisé",
+          "Défibrillateur et premiers soins disponibles",
+          "Toilettes accessibles aux PMR avec table à langer",
+          "Accessible aux personnes à mobilité réduite"
+        ]
+      },
+      "official_source": {
+        "url": "http://www.sablotins.com/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 30
+          }
+        }
+      ],
+      "monday": null,
+      "tuesday": null,
+      "wednesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 30
+          }
+        }
+      ],
+      "thursday": null,
+      "friday": null,
+      "saturday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 30
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/l_ile_aux_jeux/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/l_ile_aux_jeux/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/l_ile_aux_jeux/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/l_ile_aux_jeux/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/l_ile_aux_jeux/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/l_ile_aux_jeux/photo_3.jpg?v=202609142208"
     ],
     "name": "L'Île aux Jeux",
     "commune": "Les Sables-d'Olonne",
@@ -5018,7 +5542,7 @@ var POIS=[
     "subcategory": "Jeux & Divertissement",
     "pricing": {
       "adult": 0,
-      "child": 0,
+      "child": 7.5,
       "is_free": false
     },
     "duration": 90,
@@ -5093,14 +5617,186 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": null,
+        "child": 7.5,
+        "child_age_min": null,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Entrée matinée enfant 7,50€ ; entrée après-midi enfant 9,50€ ; entrée 1 heure enfant 7,50€ ; enfant non marcheur allant dans les jeux 2€ ; adultes accompagnants gratuit ; carte 10 entrées matinée 65€, après-midi 85€ (Les Sables). Carte 10 entrées Challans : matinée 65€, après-midi 80€, assistante maternelle matin 45€, après-midi 65€.",
+        "source_url": "https://www.ile-aux-jeux.com/index.php/tarifs-resa-les-sables-olonne/",
+        "valid_period": null,
+        "evidence": "PAR ENFANT – Entrée matinée : 7,50 € – Entrée après-midi : 9,50 € – Entrée 1 heure : 7,50 € – Entrée enfant non marcheur allant dans les jeux : 2€ [...] GRATUIT Pour les adultes accompagnants.",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "activities": [
+        {
+          "name": "Jeux gonflables",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Structures tubulaires",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Trampolines",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Piscines à balles",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Piste de patinettes",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Baby-foot",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Jeux de société",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Tricycles",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "intérieur",
+      "booking": "conseillée",
+      "season": "Ouvert à l'année. Mercredis, samedis, dimanches et jours fériés. Tous les jours pendant les vacances scolaires des trois zones A, B et C. Fermé le 25 décembre et 1er janvier, ainsi que les dimanches d'été sauf s'il pleut.",
+      "hours_text": "De 10h à 12h30 et de 14h à 18h30",
+      "amenities": {
+        "snack": true,
+        "kids_zone": true,
+        "picnic_area": false,
+        "stroller_ok": null,
+        "rules": [
+          "Goûters et boissons personnels non autorisés à l'intérieur du parc",
+          "Snack disponible sur place avec pichets de sirop, bouteilles d'eau, sodas, gaufres, paquets de gâteaux, barres chocolatées, sachets de bonbons"
+        ]
+      },
+      "official_source": {
+        "url": "https://www.ile-aux-jeux.com/index.php/le-parc-les-sables-olonne/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 30
+          }
+        }
+      ],
+      "monday": null,
+      "tuesday": null,
+      "wednesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 30
+          }
+        }
+      ],
+      "thursday": null,
+      "friday": null,
+      "saturday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 30
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/mission_decouverte/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/mission_decouverte/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/mission_decouverte/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/mission_decouverte/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/mission_decouverte/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/mission_decouverte/photo_3.jpg?v=202609142208"
     ],
     "name": "Mission Découverte",
     "commune": "Les Sables-d'Olonne",
@@ -5122,7 +5818,7 @@ var POIS=[
     "category": "jeux",
     "subcategory": "Jeux & Divertissement",
     "pricing": {
-      "adult": 0,
+      "adult": 23.0,
       "child": 0,
       "is_free": false
     },
@@ -5198,14 +5894,168 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "free_entry": null,
+        "adult": 23,
+        "child": null,
+        "child_age_min": null,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Tarifs pour l'Enquête Sensorielle par joueur (équipe de 5). Missions Extérieures: 18€/joueur (équipe de 5). Tarifs variables selon taille d'équipe (2 à 5 joueurs). Prix en euros, non soumis à TVA.",
+        "source_url": "https://www.missiondecouverte.fr/horaires-tarifs/",
+        "valid_period": null,
+        "evidence": "TARIFS MISSIONS EXTÉRIEURES Équipe de 5 : 18,00€/joueur soit 90€/équipe. Équipe de 4 : 18,75€/joueur soit 75€/équipe Équipe de 3 : 20,00€/joueur soit 60€/équipe Équipe de 2 : 22,50€/joueur soit 45€/équipe ENQUÊTE SENSORIELLE Équipe de 5 : 23€/joueur soit 115€/équipe. Équipe de 4 : 25€/joueur soit 100€/équipe Équipe de 3 : 28€/joueur soit 84€/équipe",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "age_min": 18,
+      "activities": [
+        {
+          "name": "Escape game urbain",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 105,
+          "extra_price": null
+        },
+        {
+          "name": "Escape game sensoriel",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        },
+        {
+          "name": "Escape game enfants",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "mixte",
+      "booking": "obligatoire",
+      "season": "Toute l'année, 7j/7 sur réservation",
+      "hours_text": "Missions extérieures : juin-septembre 10h-18h, septembre-octobre 10h-17h, novembre-mars 10h-15h, avril-mai 10h-17h. Enquête sensorielle hors vacances : lun fermé, mar-jeu 14h-20h, ven 14h-22h, sam 10h-22h, dim 10h-20h. Enquête sensorielle vacances : lun-mer 10h-20h, jeu-sam 10h-22h, dim 10h-20h.",
+      "amenities": {
+        "snack": null,
+        "kids_zone": null,
+        "picnic_area": null,
+        "stroller_ok": true,
+        "rules": [
+          "Arriver 5 minutes avant l'heure de réservation",
+          "Chaussures confortables obligatoires",
+          "Adaptor sa tenue à la météo",
+          "Retard de 15 min ou plus: temps de jeu réduit",
+          "Retard de 30 min ou plus: annulation sans remboursement",
+          "Équipe minimum 2 joueurs",
+          "Interdiction de casser ou détériorer les objets",
+          "Restitution du matériel fourni obligatoire"
+        ]
+      },
+      "official_source": {
+        "url": "http://www.missiondecouverte.fr/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 22,
+            "minute": 0
+          }
+        }
+      ],
+      "monday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 22,
+            "minute": 0
+          }
+        }
+      ],
+      "tuesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 22,
+            "minute": 0
+          }
+        }
+      ],
+      "wednesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 22,
+            "minute": 0
+          }
+        }
+      ],
+      "thursday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 22,
+            "minute": 0
+          }
+        }
+      ],
+      "friday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 22,
+            "minute": 0
+          }
+        }
+      ],
+      "saturday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 22,
+            "minute": 0
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/vague_de_jeux/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/vague_de_jeux/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/vague_de_jeux/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/vague_de_jeux/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/vague_de_jeux/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/vague_de_jeux/photo_3.jpg?v=202609142208"
     ],
     "name": "Vague de Jeux",
     "commune": "Talmont-Saint-Hilaire",
@@ -5228,7 +6078,7 @@ var POIS=[
     "subcategory": "Jeux & Divertissement",
     "pricing": {
       "adult": 0,
-      "child": 0,
+      "child": 15.0,
       "is_free": false
     },
     "duration": 90,
@@ -5303,13 +6153,120 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "free_entry": null,
+        "adult": null,
+        "child": null,
+        "child_age_min": null,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "from_price": 15,
+        "options": [
+          {
+            "label": "Scénario 1 - Recrutement (Escape Game Apéro, 3-100 personnes, 60-90 min)",
+            "price": 25
+          },
+          {
+            "label": "Scénario 2 - Infiltration (Escape Game Apéro, 3-8 personnes, 60-90 min)",
+            "price": 25
+          },
+          {
+            "label": "Kid's Party (Escape Game Enfant, 3-8 personnes, 45-60 min)",
+            "price": 15
+          },
+          {
+            "label": "Totem Sacré (Jeu de Piste, jusqu'à 30 joueurs, 60-90 min)",
+            "price": 20
+          },
+          {
+            "label": "Le Manoir (Coffre Escape Game, 3-8 personnes, 60-90 min)",
+            "price": 80
+          }
+        ],
+        "notes": "Tarif unique 80€ pour Le Manoir et Le Mystère du Serpent D'Or. Le Cube, La Tente (Saint Graal, Musée, Médaille d'Or, Noël) et Harcèlement Alerte sur devis. Tarifs « à partir de » par personne pour les autres jeux.",
+        "source_url": "https://vaguedejeux.fr/",
+        "valid_period": null,
+        "evidence": "A partir de 25€ / personne; A partir de 15€ / personne; A partir de 20€ / personne; Tarif unique 80€; Sur Devis",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "age_min": 8,
+      "activities": [
+        {
+          "name": "Scénario 1 - Recrutement (Escape Game Apéro)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        },
+        {
+          "name": "Scénario 2 - Infiltration (Escape Game Apéro)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        },
+        {
+          "name": "Kid's Party (Escape Game Enfant)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 45,
+          "extra_price": null
+        },
+        {
+          "name": "Le Cube Wheriz (Jeu d'Observation)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 5,
+          "extra_price": null
+        },
+        {
+          "name": "Totem Sacré (Jeu de Piste)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        },
+        {
+          "name": "Le Manoir (Coffre Escape Game)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        },
+        {
+          "name": "Le Mystère du Serpent D'Or (Coffre Escape Game)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "mixte",
+      "booking": "obligatoire",
+      "season": "05/04/2026 au 01/11/2026",
+      "official_source": {
+        "url": "https://www.vaguedejeux.fr/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/axeyon_paintball/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/axeyon_paintball/photo_2.jpg?v=202609142115"
+      "planly_scraper/images/axeyon_paintball/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/axeyon_paintball/photo_2.jpg?v=202609142208"
     ],
     "name": "AxeYon Paintball",
     "commune": "La Roche-sur-Yon",
@@ -5399,14 +6356,76 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "free_entry": null,
+        "adult": null,
+        "child": null,
+        "child_age_min": null,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "from_price": 20,
+        "options": [
+          {
+            "label": "Forfait 100 Billes · 1H",
+            "price": 20
+          },
+          {
+            "label": "Forfait 200 Billes · 1H30",
+            "price": 25
+          },
+          {
+            "label": "Forfait 300 Billes · 2H",
+            "price": 30
+          },
+          {
+            "label": "Forfait 500 Billes · 3H",
+            "price": 45
+          }
+        ],
+        "notes": "Les forfaits comprennent la location du matériel, l'accès aux différents terrains ainsi que l'encadrement et l'assurance. Billes supplémentaires disponibles. Joueurs équipés : droit d'entrée 5€ (terrain forêt + air) ou 10€ (accès total + air). Tarifs groupe à partir de 15 personnes sur demande.",
+        "source_url": "https://www.axeyon-paintball.ovh/tarifs",
+        "valid_period": "2022-2026",
+        "evidence": "Forfait 100 Billes 20€ Temps de jeu : 1H Forfait 200 Billes 25€ Temps de jeu : 1H30 Forfait 300 Billes 30€ Temps de jeu : 2H Forfait 500 Billes 45€ Temps de jeu : 3H",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "activities": [
+        {
+          "name": "Paintball",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "extérieur",
+      "booking": "conseillée",
+      "season": "Ouvert toute l'année. Juillet/Août uniquement sur le terrain de La Faute-Sur-Mer.",
+      "hours_text": "3 sessions par jour : 10H, 14H et 17H (juillet/août). Pour les autres périodes, sur réservation.",
+      "amenities": {
+        "snack": null,
+        "kids_zone": null,
+        "picnic_area": true,
+        "stroller_ok": null,
+        "rules": []
+      },
+      "official_source": {
+        "url": "http://axeyon-paintball.ovh/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/explora_parc/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/explora_parc/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/explora_parc/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/explora_parc/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/explora_parc/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/explora_parc/photo_3.jpg?v=202609142208"
     ],
     "name": "Explora Parc",
     "commune": "Saint-Jean-de-Monts",
@@ -5428,8 +6447,8 @@ var POIS=[
     "category": "jeux",
     "subcategory": "Jeux & Divertissement",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 27.0,
+      "child": 15,
       "is_free": false
     },
     "duration": 180,
@@ -5504,14 +6523,138 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": 27,
+        "child": null,
+        "child_age_min": 3,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Tarifs variables par tranche d'âge (3-5 ans: 15€, 6 ans: 17€, 7-8 ans: 22€, 9-11 ans: 25€, 12 ans+: 27€). Accrobranche + Trampo'filet inclus. Gratuit pour les personnes ne pratiquant pas d'activités. Adulte accompagnant parcours verts: 17€. Réduction -10% mentionnée. Tarif groupe à partir de 10 personnes.",
+        "source_url": "https://www.exploraparc.com/tarifs",
+        "valid_period": null,
+        "evidence": "12 ANS + ET ADULTE 13 PARCOURS + TRAMPO'FILET 27€ -10%",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "age_min": 3,
+      "activities": [
+        {
+          "name": "Accrobranche",
+          "age_min": 3,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Trampo'filet",
+          "age_min": 2,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Escap'Aventure",
+          "age_min": 6,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": 59
+        },
+        {
+          "name": "Escap'Box",
+          "age_min": 9,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": 59
+        },
+        {
+          "name": "Laser Tag",
+          "age_min": 8,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 30,
+          "extra_price": 15
+        },
+        {
+          "name": "Tir à l'arc",
+          "age_min": 8,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": 15
+        }
+      ],
+      "shows": [
+        {
+          "name": "Concert Sous les branches",
+          "time": "20:30"
+        }
+      ],
+      "indoor_outdoor": "mixte",
+      "booking": "conseillée",
+      "season": "Ouvert tous les jours à partir de 10h selon calendrier mentionné (septembre-octobre 2026 mentionnés). Ouvert mercredi au dimanche selon horaire en banneau.",
+      "hours_text": "Généralement 10h - 19h en haute saison, 14h - 19h mercredi-dimanche hors saison. Snack & Bar jusqu'à 21h, minuit jeudis et samedis.",
+      "amenities": {
+        "snack": true,
+        "kids_zone": true,
+        "picnic_area": null,
+        "stroller_ok": null,
+        "rules": [
+          "Port du masque obligatoire au sol et facultatif sur les parcours (protocole sanitaire)",
+          "Regroupement de 6 personnes maximum autorisé sur le site (protocole sanitaire)",
+          "Réservation obligatoire pour Accrobranche (le jour même impossible)",
+          "Réservation recommandée pour autres activités"
+        ]
+      },
+      "official_source": {
+        "url": "https://www.exploraparc.com/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ],
+      "monday": null,
+      "tuesday": null,
+      "wednesday": null,
+      "thursday": null,
+      "friday": null,
+      "saturday": [
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/chateau_des_aventuriers/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/chateau_des_aventuriers/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/chateau_des_aventuriers/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/chateau_des_aventuriers/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/chateau_des_aventuriers/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/chateau_des_aventuriers/photo_3.jpg?v=202609142208"
     ],
     "name": "Château des Aventuriers",
     "commune": "Avrillé",
@@ -5533,8 +6676,8 @@ var POIS=[
     "category": "jeux",
     "subcategory": "Jeux & Divertissement",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 26.5,
+      "child": 21.5,
       "is_free": false
     },
     "duration": 180,
@@ -5609,14 +6752,188 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": 26.5,
+        "child": 21.5,
+        "child_age_min": 3,
+        "child_age_max": 11,
+        "free_under_age": 3,
+        "family_ticket": null,
+        "notes": "Pass Grande Aventure (accès tout le parc sans Maison Hantée). Pass Grands Frissons : 31,50€ adulte / 26,50€ enfant (avec Maison Hantée). Billet Découverte : 17,50€ adulte / 13,50€ enfant (1 aventure au choix). Pass Saison : 53€ adulte / 43€ enfant. Personnes handicapées : 20% de réduction sur place. Réduction jusqu'à 3€ en achetant en ligne. Tarifs 2026.",
+        "source_url": "https://chateau-aventuriers.com/preparer-sa-visite/tarifs",
+        "valid_period": "2026",
+        "evidence": "Pass grande aventure TOUT LE PARC sans la maison hantée + accès libres au château et aux animations (2) Plein Tarif (à partir de 12 ans) 26,50 € Tarif réduit (de 3 à 11 ans) 21,50 € Enfants (-3 ans) Gratuit",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "age_min": 3,
+      "activities": [
+        {
+          "name": "Le Trésor du Pirate",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 90,
+          "extra_price": null
+        },
+        {
+          "name": "Sur la Piste des Dinos",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 90,
+          "extra_price": null
+        },
+        {
+          "name": "Enquête au Château",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        },
+        {
+          "name": "La Maison Hantée - Mission 2",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 60,
+          "extra_price": null
+        },
+        {
+          "name": "Western City",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Il était une fois",
+          "age_min": 2,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Visite du Château de la Guignardière",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "mixte",
+      "booking": "non",
+      "season": "Du 4 avril au 1er novembre 2026. Western City : 4 juillet au 31 août. Calendrier des périodes bleues, vertes, jaunes et grises.",
+      "hours_text": "Du 4 avril au 12 juin : 11h-18h. Du 13 juin au 31 août : 10h-20h. Du 2 septembre au 1er novembre : 11h-18h. Fermeture guichets à 18h.",
+      "amenities": {
+        "snack": true,
+        "kids_zone": true,
+        "picnic_area": true,
+        "stroller_ok": true,
+        "rules": [
+          "Poussettes : accessibles aux parcours extérieurs uniquement, non accessibles aux parcours intérieurs",
+          "Chiens bienvenus sur parcours extérieurs",
+          "Parking gratuit",
+          "Pique-niques autorisés",
+          "Recharge gratuite",
+          "Western City peut fermer sans préavis en cas d'intempéries (pluie, vents > 38 km/h) ou fortes chaleurs",
+          "Paiements sur place : CB, espèces, chèques vacances, chèques vacances connect",
+          "Paiements billetterie en ligne : CB uniquement"
+        ]
+      },
+      "official_source": {
+        "url": "http://www.chateau-aventuriers.com/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 11,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "monday": [
+        {
+          "open": {
+            "hour": 11,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "tuesday": null,
+      "wednesday": [
+        {
+          "open": {
+            "hour": 11,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "thursday": [
+        {
+          "open": {
+            "hour": 11,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "friday": [
+        {
+          "open": {
+            "hour": 11,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "saturday": [
+        {
+          "open": {
+            "hour": 11,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/o_fun_park/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/o_fun_park/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/o_fun_park/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/o_fun_park/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/o_fun_park/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/o_fun_park/photo_3.jpg?v=202609142208"
     ],
     "name": "O'Fun Park",
     "commune": "Le Bernard",
@@ -5638,8 +6955,8 @@ var POIS=[
     "category": "jeux",
     "subcategory": "Jeux & Divertissement",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 37.0,
+      "child": 29.0,
       "is_free": false
     },
     "duration": 180,
@@ -5714,14 +7031,122 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": 37,
+        "child": 29,
+        "child_age_min": 5,
+        "child_age_max": 10,
+        "free_under_age": 3,
+        "family_ticket": null,
+        "notes": "Tarifs haute saison (juillet-août). Billet 1 jour daté. Gratuit pour 60 ans et +. Pass 2 jours : adulte 55€ (-50% jour 2), enfant 43€. Pass saison adulte 95€, enfant 75€. Tarif basse saison : adulte 24-29€ (zone unique), enfant 17-20€.",
+        "source_url": "https://ofunpark.fr/tarifs-et-offres/tarifs",
+        "valid_period": "2026",
+        "evidence": "Billet 1 jour | Adulte 11/59 ans 37€ | Enfant 5/10 ans 29€ | Bout'Chou 3/4 ans 17€ | L'entrée est offerte pour les 60 ans et + et les moins de 3 ans",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "activities": [
+        {
+          "name": "Rope Canyon",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Explorer Camp",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Rushwater Canyon",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Silver Lake",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Accrobranche",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Water Jump",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Paintball",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 120,
+          "extra_price": null
+        },
+        {
+          "name": "Duel Arena",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 120,
+          "extra_price": null
+        }
+      ],
+      "shows": [
+        {
+          "name": "Soirées concerts",
+          "time": null
+        }
+      ],
+      "indoor_outdoor": "extérieur",
+      "booking": "conseillée",
+      "season": "avril à novembre",
+      "hours_text": "Haute saison (juillet-août) : 10h-19h. Basse saison (avril-mai-juin, septembre-octobre) : 11h-18h en semaine, samedi 10h-19h. Horaires variables selon conditions météorologiques.",
+      "amenities": {
+        "snack": true,
+        "kids_zone": null,
+        "picnic_area": true,
+        "stroller_ok": null,
+        "rules": [
+          "Maillot de bain conseillé pour activités aquatiques",
+          "Vêtements adaptés et chaussures fermées pour accrobranche",
+          "Certaines épreuves Duel Arena se déroulent dans l'eau, prévoir tenue de rechange"
+        ]
+      },
+      "official_source": {
+        "url": "https://ofunpark.fr/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_3.jpg?v=202609142208"
     ],
     "name": "Zoo des Sables d'Olonne",
     "commune": "Les Sables-d'Olonne",
@@ -5743,8 +7168,8 @@ var POIS=[
     "category": "animaux",
     "subcategory": "Parcs animaliers",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 20.0,
+      "child": 16.0,
       "is_free": false
     },
     "duration": 90,
@@ -5819,14 +7244,133 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": 20.0,
+        "child": 16.0,
+        "child_age_min": 3,
+        "child_age_max": 10,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Tarif demandeur d'emploi : 18€ (justificatif obligatoire). Tarif handicapé : 18€ adulte / 14,50€ enfant (carte d'invalidité). Groupes à partir de 20 personnes : 16,50€ adulte / 13,40€ enfant. Zoo Pass 2026 : 39€ adulte / 31,50€ enfant (nominatif, accès illimité saison février-début novembre, 5% remise à partir de 3 cartes).",
+        "source_url": "https://www.zoodessables.fr/tarifs-et-informations",
+        "valid_period": "2026",
+        "evidence": "ADULTE (à partir de 11 ans) ENFANT (3 à 10 ans inclus) DEMANDEUR D'EMPLOI (Présentation d'un justificatif obligatoire) INDIVIDUEL 20.00€ 16.00€ 18.00€",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "indoor_outdoor": "extérieur",
+      "season": "Du 7 février au 11 novembre 2026 et vacances de Noël",
+      "hours_text": "Février/Mars : 13h30-18h30. Avril/Mai/Juin : 9h30-19h. Juillet/Août : 9h30-19h30. Septembre : 9h30-19h. Octobre : 13h30-18h30. Novembre : 13h30-17h30. Vacances de Noël : 13h-17h (fermé 25/12 et 01/01). Billetterie fermée 1h30 avant fermeture.",
+      "amenities": {
+        "snack": true,
+        "kids_zone": null,
+        "picnic_area": null,
+        "stroller_ok": null,
+        "rules": [
+          "Parc sans tabac sauf zones prévues à cet effet",
+          "Animaux de compagnie non acceptés sauf chiens d'assistance"
+        ]
+      },
+      "official_source": {
+        "url": "http://www.zoodessables.fr/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 9,
+            "minute": 30
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ],
+      "monday": [
+        {
+          "open": {
+            "hour": 9,
+            "minute": 30
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ],
+      "tuesday": [
+        {
+          "open": {
+            "hour": 9,
+            "minute": 30
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ],
+      "wednesday": [
+        {
+          "open": {
+            "hour": 9,
+            "minute": 30
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ],
+      "thursday": [
+        {
+          "open": {
+            "hour": 9,
+            "minute": 30
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ],
+      "friday": [
+        {
+          "open": {
+            "hour": 9,
+            "minute": 30
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ],
+      "saturday": [
+        {
+          "open": {
+            "hour": 9,
+            "minute": 30
+          },
+          "close": {
+            "hour": 19,
+            "minute": 0
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/anes_passions/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/anes_passions/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/anes_passions/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/anes_passions/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/anes_passions/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/anes_passions/photo_3.jpg?v=202609142208"
     ],
     "name": "Ânes Passions",
     "commune": "L'Île-d'Olonne",
@@ -5848,8 +7392,8 @@ var POIS=[
     "category": "animaux",
     "subcategory": "Parcs animaliers",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 8.0,
+      "child": 6.0,
       "is_free": false
     },
     "duration": 60,
@@ -5924,14 +7468,65 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": 8,
+        "child": 6,
+        "child_age_min": null,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Visite guidée : 6€ enfant, 8€ adulte. Le p'tit fermier : 9€ par enfant + 1 accompagnateur gratuit, 6€ par accompagnateur supplémentaire. Ân'verserie : 10€ par enfant (min 4, max 8). Paiement en espèces uniquement (pas de carte bancaire).",
+        "source_url": "https://anepassion.wixsite.com/website/page-vierge-3-1",
+        "valid_period": "2025",
+        "evidence": "TARIFS 2025 ATTENTION TOUTES NOS PRESTATIONS SONT SUR RESERVATION ​ * Le p'tit fermier 9€ par enfant 1 accompagnateur gratuit 6€ par accompagnateur supplémentaire ​ * Visite guidée 6€ par enfant 8€ par adulte Tarif famille (2 adultes + 2 enfants)",
+        "stale": true,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "activities": [
+        {
+          "name": "Le p'tit fermier",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Visite guidée",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Visite libre",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "extérieur",
+      "booking": "obligatoire",
+      "season": "Ouverture uniquement les week-ends, exceptionnellement ouvert en juillet, août et septembre",
+      "hours_text": "Ouverture uniquement les week-ends. Ouvert vendredi 15 août 2025.",
+      "official_source": {
+        "url": "https://anepassion.wixsite.com/website",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": null,
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/aquarium_de_vendee/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/aquarium_de_vendee/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/aquarium_de_vendee/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/aquarium_de_vendee/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/aquarium_de_vendee/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/aquarium_de_vendee/photo_3.jpg?v=202609142208"
     ],
     "name": "Aquarium de Vendée",
     "commune": "Talmont-Saint-Hilaire",
@@ -5953,8 +7548,8 @@ var POIS=[
     "category": "aquarium",
     "subcategory": "Aquariums",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 15.8,
+      "child": 11.8,
       "is_free": false
     },
     "duration": 60,
@@ -6029,14 +7624,245 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "adult": 15.8,
+        "child": 11.8,
+        "child_age_min": 3,
+        "child_age_max": 12,
+        "free_under_age": 3,
+        "family_ticket": null,
+        "notes": "Tarifs réduits pour personnes handicapées et PMR disponibles uniquement sur place sur présentation d'un justificatif. Toutes les animations comprises dans le prix de visite.",
+        "source_url": "https://www.aquarium-vendee.com/tarifs-aquarium-vendee",
+        "valid_period": "2026",
+        "evidence": "PUBLIC ADULTE (À PARTIR DE 18 ANS) 15,80 € / ENFANT (DE 3 À 12 ANS) 11,80 € / ENFANT (DE MOINS DE 3 ANS*) GRATUIT",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-14"
+      },
+      "activities": [
+        {
+          "name": "Nourrissages des animaux",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": 15,
+          "extra_price": 0
+        },
+        {
+          "name": "Découverte Univers Atlantique et Méditerranéen",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": 0
+        },
+        {
+          "name": "Découverte Univers Indo-Pacifique",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": 0
+        },
+        {
+          "name": "Découverte Univers Tropical",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": 0
+        }
+      ],
+      "indoor_outdoor": "intérieur",
+      "booking": "conseillée",
+      "season": "Ouvert toute l'année, sauf 1er janvier et 25 décembre",
+      "hours_text": "Toute l'année : 10h-12h30 et 14h-18h. Du 1er juillet au 31 août : 9h30-19h en continu. Fermeture grilles 18h (toute l'année) et 19h (juillet-août). Clôture billetterie 1h avant fermeture.",
+      "amenities": {
+        "snack": null,
+        "kids_zone": null,
+        "picnic_area": false,
+        "stroller_ok": false,
+        "rules": [
+          "Circuit entièrement couvert et climatisé",
+          "Accès PMR (plain-pied, ascenseurs, sanitaires adaptés)",
+          "Boucles magnétiques à l'accueil",
+          "Chiens guides d'aveugle acceptés uniquement",
+          "Autres animaux interdits",
+          "Interdit de manger ou boire dans le circuit",
+          "En période estivale, draisiennes, tricycles, chariots, remorques à vélo et poussettes plus de 2 places non autorisés. Porte-bébés recommandés.",
+          "Parking privé gratuit",
+          "Stationnement vélo sécurisé"
+        ]
+      },
+      "official_source": {
+        "url": "https://www.aquarium-vendee.com/",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "monday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "tuesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "wednesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "thursday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "friday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ],
+      "saturday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 12,
+            "minute": 30
+          }
+        },
+        {
+          "open": {
+            "hour": 14,
+            "minute": 0
+          },
+          "close": {
+            "hour": 18,
+            "minute": 0
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_des_floralies/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/parc_des_floralies/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/parc_des_floralies/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/parc_des_floralies/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/parc_des_floralies/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/parc_des_floralies/photo_3.jpg?v=202609142208"
     ],
     "name": "Parc des Floralies",
     "commune": "La Tranche-sur-Mer",
@@ -6134,14 +7960,199 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "free_entry": true,
+        "adult": 0,
+        "child": 0,
+        "child_age_min": null,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": "Entrée gratuite toute l'année",
+        "source_url": "https://www.vendee-tourisme.com/parc-des-floralies/la-tranche-sur-mer/loipdl085v513v1x",
+        "valid_period": null,
+        "evidence": "Le parc des Floralies est ouvert toute l'année au public. Son entrée est gratuite.",
+        "stale": false,
+        "source_label": "office de tourisme",
+        "verified_at": "2026-09-14"
+      },
+      "activities": [
+        {
+          "name": "Balades en poney",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Rencontre avec les animaux (âne, baudet du Poitou, chèvres)",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Ruche pédagogique",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Tyrolienne",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Parcours d'agilité",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Boîte à lire Floralies",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Expositions de photographies",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        },
+        {
+          "name": "Expositions patrimoniales",
+          "age_min": null,
+          "age_max": null,
+          "height_min_cm": null,
+          "duration_min": null,
+          "extra_price": null
+        }
+      ],
+      "indoor_outdoor": "extérieur",
+      "booking": "non",
+      "season": "Ouvert toute l'année",
+      "amenities": {
+        "snack": null,
+        "kids_zone": true,
+        "picnic_area": true,
+        "stroller_ok": null,
+        "rules": [
+          "Les chiens sont acceptés, tenus en laisse"
+        ]
+      },
+      "official_source": {
+        "url": "https://www.vendee-tourisme.com/parc-des-floralies/la-tranche-sur-mer/loipdl085v513v1x",
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 20,
+            "minute": 0
+          }
+        }
+      ],
+      "monday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 20,
+            "minute": 0
+          }
+        }
+      ],
+      "tuesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 20,
+            "minute": 0
+          }
+        }
+      ],
+      "wednesday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 20,
+            "minute": 0
+          }
+        }
+      ],
+      "thursday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 20,
+            "minute": 0
+          }
+        }
+      ],
+      "friday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 20,
+            "minute": 0
+          }
+        }
+      ],
+      "saturday": [
+        {
+          "open": {
+            "hour": 10,
+            "minute": 0
+          },
+          "close": {
+            "hour": 20,
+            "minute": 0
+          }
+        }
+      ]
+    },
     "veto": null
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_philippe_perrocheau/photo_1.jpg?v=202609142115",
-      "planly_scraper/images/parc_philippe_perrocheau/photo_2.jpg?v=202609142115",
-      "planly_scraper/images/parc_philippe_perrocheau/photo_3.jpg?v=202609142115"
+      "planly_scraper/images/parc_philippe_perrocheau/photo_1.jpg?v=202609142208",
+      "planly_scraper/images/parc_philippe_perrocheau/photo_2.jpg?v=202609142208",
+      "planly_scraper/images/parc_philippe_perrocheau/photo_3.jpg?v=202609142208"
     ],
     "name": "Parc Philippe Perrocheau",
     "commune": "Coëx",
@@ -6231,7 +8242,116 @@ var POIS=[
       "verdict": "Bonne visite !"
     },
     "beach": null,
-    "specific": {},
+    "specific": {
+      "pricing": {
+        "free_entry": true,
+        "adult": 0,
+        "child": 0,
+        "child_age_min": null,
+        "child_age_max": null,
+        "free_under_age": null,
+        "family_ticket": null,
+        "notes": null,
+        "source_url": "https://www.vendee-tourisme.com/parc-philippe-perrocheau/coex/pcupdl085v51e3on",
+        "valid_period": null,
+        "evidence": "Le parc Philippe Perrocheau (anciennement le Jardin des Olfacties) vous accueille gratuitement et tous les jours pour une promenade originale et familiale.",
+        "stale": false,
+        "source_label": "office de tourisme",
+        "verified_at": "2026-09-14"
+      },
+      "indoor_outdoor": "extérieur",
+      "season": "tous les jours",
+      "official_source": {
+        "url": null,
+        "verified_at": "2026-09-14"
+      }
+    },
+    "openingHours": {
+      "sunday": [
+        {
+          "open": {
+            "hour": 0,
+            "minute": 0
+          },
+          "close": {
+            "hour": 24,
+            "minute": 0
+          }
+        }
+      ],
+      "monday": [
+        {
+          "open": {
+            "hour": 0,
+            "minute": 0
+          },
+          "close": {
+            "hour": 24,
+            "minute": 0
+          }
+        }
+      ],
+      "tuesday": [
+        {
+          "open": {
+            "hour": 0,
+            "minute": 0
+          },
+          "close": {
+            "hour": 24,
+            "minute": 0
+          }
+        }
+      ],
+      "wednesday": [
+        {
+          "open": {
+            "hour": 0,
+            "minute": 0
+          },
+          "close": {
+            "hour": 24,
+            "minute": 0
+          }
+        }
+      ],
+      "thursday": [
+        {
+          "open": {
+            "hour": 0,
+            "minute": 0
+          },
+          "close": {
+            "hour": 24,
+            "minute": 0
+          }
+        }
+      ],
+      "friday": [
+        {
+          "open": {
+            "hour": 0,
+            "minute": 0
+          },
+          "close": {
+            "hour": 24,
+            "minute": 0
+          }
+        }
+      ],
+      "saturday": [
+        {
+          "open": {
+            "hour": 0,
+            "minute": 0
+          },
+          "close": {
+            "hour": 24,
+            "minute": 0
+          }
+        }
+      ]
+    },
     "veto": null
   }
 ];

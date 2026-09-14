@@ -1137,6 +1137,66 @@ body{
 .pdv-pill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;background:#ddeeff;color:#185FA5;}
 .pdv-block + .bch-conseil{margin-top:16px;}
 
+/* ── PL — Parcs & Loisirs (horaires, prix groupe, activités, animations) ── */
+.pl-hours{display:flex;align-items:center;gap:8px;padding:12px 14px;border-radius:12px;background:#F0FDF4;border:1px solid #BBF7D0;color:#15803D;font-size:13px;line-height:1.4;margin-bottom:12px;}
+.pl-hours svg{flex-shrink:0;}
+.pl-hours{flex-wrap:wrap;cursor:pointer;}
+.pl-hours.closed{background:#FFFBEB;border-color:#FDE68A;color:#92400E;}
+.pl-hours-more{font-size:12px;font-weight:500;}
+.pl-week{display:none;width:100%;margin-top:6px;padding-top:8px;border-top:1px solid rgba(21,128,61,.15);}
+.pl-hours.open .pl-week{display:block;}
+.pl-week-row{display:flex;justify-content:space-between;gap:10px;font-size:12px;padding:3px 0;}
+.pl-week-row.today{font-weight:700;}
+.pl-price{background:#fff;border-radius:14px;padding:14px 16px;border:0.5px solid #e8e4da;margin-bottom:12px;}
+.pl-price-hd{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.pl-price-title{font-size:13px;font-weight:700;color:#1a1a18;}
+.pl-price-edit{font-size:12px;font-weight:500;color:#428CE3;cursor:pointer;background:none;border:none;font-family:'DM Sans',sans-serif;padding:8px 0;}
+.pl-price-total{display:flex;align-items:baseline;gap:8px;margin-top:6px;}
+.pl-price-big{font-size:30px;font-weight:700;line-height:1;color:#1a1a18;}
+.pl-price-for{font-size:13px;color:#888780;}
+.pl-price-who{font-size:12px;color:#888780;margin-top:4px;}
+.pl-price-deal{display:flex;align-items:center;gap:8px;margin-top:12px;padding:9px 12px;border-radius:10px;background:#F0FDF4;color:#15803D;font-size:12px;line-height:1.4;}
+.pl-price-lines{display:flex;flex-direction:column;gap:8px;margin-top:12px;padding-top:10px;border-top:0.5px solid #f0ede4;font-size:13px;color:#444441;}
+.pl-price-line{display:flex;justify-content:space-between;gap:10px;}
+.pl-price-line b{font-weight:600;color:#1a1a18;white-space:nowrap;}
+.pl-price-line.free b{color:#16A34A;}
+.pl-price-line.old,.pl-price-line.old b{color:#A8A8A3;font-weight:400;}
+.pl-price-line.old b{text-decoration:line-through;}
+.pl-price-line.unk b{color:#B45309;font-weight:500;}
+.pl-price-note{font-size:12px;color:#888780;margin-top:8px;line-height:1.4;}
+.pl-price-ft{display:flex;align-items:center;gap:10px;margin-top:12px;padding-top:12px;border-top:0.5px solid #f0ede4;}
+.pl-price-src{flex:1;font-size:11px;color:#A8A8A3;line-height:1.4;}
+.pl-price-src b{display:block;font-size:12px;font-weight:500;color:#B45309;margin-bottom:2px;}
+.pl-btn{min-height:44px;padding:0 18px;border-radius:12px;border:1.5px solid #428CE3;color:#428CE3;background:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;text-decoration:none;font-family:'DM Sans',sans-serif;white-space:nowrap;}
+.pl-block{border-radius:16px;overflow:hidden;margin-bottom:12px;}
+.pl-block.act{border:1.5px solid #DCCBEA;}
+.pl-block.show{border:1.5px solid #B9DDE0;}
+.pl-block-hd{padding:12px 14px;display:flex;align-items:center;gap:10px;}
+.pl-block.act .pl-block-hd{background:#5B2E7A;}
+.pl-block.show .pl-block-hd{background:#0E5A66;}
+.pl-block-info{flex:1;}
+.pl-block-title{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:#fff;line-height:1.2;}
+.pl-block-sub{font-size:11px;margin-top:2px;}
+.pl-block.act .pl-block-sub{color:#D9C4EC;}
+.pl-block.show .pl-block-sub{color:#A9DADF;}
+.pl-block-badge{background:rgba(255,255,255,.18);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap;}
+.pl-list{padding:8px 12px 12px;display:flex;flex-direction:column;gap:8px;}
+.pl-block.act .pl-list{background:#F7F1FB;}
+.pl-block.show .pl-list{background:#EEF7F8;}
+.pl-item{background:#fff;border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:10px;}
+.pl-item-body{flex:1;min-width:0;}
+.pl-item-name{font-size:13px;font-weight:600;color:#1a1a18;}
+.pl-item-meta{font-size:11px;color:#555;margin-top:3px;}
+.pl-kids{display:flex;gap:4px;flex-shrink:0;}
+.pl-kid{width:26px;height:26px;border-radius:50%;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.pl-kid.ok{background:#16A34A;color:#fff;}
+.pl-kid.maybe{background:#F59E0B;color:#fff;}
+.pl-kid.no{border:1.5px solid #D1D5DB;color:#9CA3AF;}
+.pl-legend{display:flex;flex-direction:column;gap:4px;font-size:11px;color:#6B5A7A;padding-top:2px;}
+.pl-legend span{display:flex;align-items:center;gap:6px;}
+.pl-legend .pl-kid{width:16px;height:16px;font-size:9px;}
+.pl-show-time{font-size:14px;font-weight:700;color:#0E5A66;width:48px;flex-shrink:0;}
+
 </style>
 </head>
 <body>
@@ -1550,7 +1610,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609142115"></script>
+<script src="pois.js?v=202609142208"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2407,6 +2467,146 @@ function _diffLabel(d){
   if(dl==='difficile'||dl==='hard')return'Difficile';
   return d;
 }
+// ── PL helpers (Parcs & Loisirs) ──
+var PL_SUBCATS=['Jeux & Divertissement','Parcs animaliers','Aquariums','Parcs botaniques'];
+var PL_ICON_TICKET='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 5v2m0 10v2" stroke-dasharray="2 2"/><path d="M2 10a3 3 0 0 1 0 4"/><path d="M22 10a3 3 0 0 0 0 4"/></svg>';
+var PL_ICON_FISH='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c3-5 9-6.5 13-3l4-3v12l-4-3c-4 3.5-10 2-13-3z"/><circle cx="8.5" cy="11" r="0.9" fill="#fff" stroke="none"/></svg>';
+var PL_ICON_CLOCK='<svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v4l2.8 1.8"/></svg>';
+function _plNum(v){if(v==null)return null;var n=parseFloat(String(v).replace(',','.'));return isNaN(n)?null:n;}
+function _plEuro(n){n=Math.round(n*100)/100;return(n%1?n.toFixed(2):String(n)).replace('.',',')+' €';}
+// Onboarding ne demande pas le nombre d'adultes pour famille/amis : 2 par défaut
+function _plGroup(){
+  var prof=USER_PROFILE||{};
+  return {adults:{solo:1,couple:2}[prof.groupe]||2,kids:prof.groupe==='famille'?(prof.enfants||[]):[]};
+}
+function _plAgesTxt(ages){
+  var a=ages.map(String);
+  return (a.length>1?a.slice(0,-1).join(', ')+' et '+a[a.length-1]:a[0])+(ages.length===1&&ages[0]<=1?' an':' ans');
+}
+function _plKidStatus(age,a){
+  var mn=_plNum(a.age_min),mx=_plNum(a.age_max);
+  if((mn!=null&&age<mn)||(mx!=null&&age>mx))return'no';
+  return _plNum(a.height_min_cm)?'maybe':'ok';
+}
+var PL_WEEK=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+var PL_DAYS_FR={monday:'Lundi',tuesday:'Mardi',wednesday:'Mercredi',thursday:'Jeudi',friday:'Vendredi',saturday:'Samedi',sunday:'Dimanche'};
+function _plHm(t){return t.hour+'h'+(t.minute?String(t.minute).padStart(2,'0'):'');}
+function _plDaySlots(tt,day){
+  var s=tt[day]||[];
+  return s.length?s.map(function(x){return x.open.hour===0&&!x.open.minute&&x.close.hour===24?'24h/24':_plHm(x.open)+' – '+_plHm(x.close);}).join(', '):'Fermé';
+}
+function _plHoursBar(p){
+  var sp=p.specific||{},tt=p.openingHours;
+  if(tt&&Object.keys(tt).length){
+    var today=PL_WEEK[(new Date().getDay()+6)%7],slots=_plDaySlots(tt,today),closed=slots==='Fermé';
+    var week=PL_WEEK.map(function(d){return'<div class="pl-week-row'+(d===today?' today':'')+'"><span>'+PL_DAYS_FR[d]+'</span><span>'+_plDaySlots(tt,d)+'</span></div>';}).join('');
+    return'<div class="pl-hours'+(closed?' closed':'')+'" onclick="this.classList.toggle(\'open\')">'+PL_ICON_CLOCK
+      +'<div style="flex:1"><b>'+(closed?'Fermé aujourd\'hui':'Ouvert aujourd\'hui')+'</b>'+(closed?'':' · '+slots)+'</div><div class="pl-hours-more">Semaine ›</div>'
+      +'<div class="pl-week">'+week+(sp.season?'<div class="pl-week-row"><span>Saison</span><span>'+_escHtml(String(sp.season))+'</span></div>':'')+'</div></div>';
+  }
+  if(!sp.hours_text&&!sp.season){
+    return sp.booking==='obligatoire'?'<div class="pl-hours">'+PL_ICON_CLOCK+'<div><b>Horaires</b> · sur réservation uniquement</div></div>':'';
+  }
+  return'<div class="pl-hours">'+PL_ICON_CLOCK+'<div><b>Horaires</b> · '+_escHtml(String(sp.hours_text||(sp.booking==='obligatoire'?'sur réservation uniquement':'voir le site officiel')))
+    +(sp.season?'<br><span style="font-size:12px">Saison : '+_escHtml(String(sp.season))+'</span>':'')+'</div></div>';
+}
+function _plPriceBlock(sp){
+  var pr=sp.pricing||{},src=sp.official_source||{};
+  var srcUrl=pr.source_url||src.url||'';
+  var booking=sp.booking==='obligatoire'||sp.booking==='conseillée';
+  var btn=srcUrl?'<a class="pl-btn" href="'+_escHtml(srcUrl)+'" target="_blank" rel="noopener">'+(booking?'Réserver':pr.source_label&&pr.source_label!=='site officiel'?'Voir la source':'Site officiel')+'</a>':'';
+  var adult=_plNum(pr.adult),child=_plNum(pr.child);
+  var hd='<div class="pl-price-hd"><div class="pl-price-title">Prix pour ton groupe</div><button class="pl-price-edit" onclick="closeAll();openProfileEdit()">Modifier le groupe</button></div>';
+  var g=_plGroup();
+  var srcTxt=function(){
+    var v=pr.verified_at||src.verified_at||'';
+    return(sp.booking==='obligatoire'?'<b>Réservation obligatoire</b>':sp.booking==='conseillée'?'<b>Réservation conseillée</b>':'')
+      +(pr.stale?'<b>Tarifs d\'une saison précédente</b>':'')
+      +'Tarifs indicatifs · '+_escHtml(String(pr.source_label||'site officiel'))+(v?', vérifié le '+v.split('-').reverse().join('/'):'');
+  };
+  var fromP=_plNum(pr.from_price),opts=(pr.options||[]).filter(function(o){return _plNum(o.price)!=null;});
+  if(adult==null&&child==null&&(fromP!=null||opts.length)){
+    var nb=g.adults+g.kids.length;
+    var minP=fromP!=null?fromP:Math.min.apply(null,opts.map(function(o){return _plNum(o.price);}));
+    return'<div class="pl-price">'+hd
+      +'<div class="pl-price-total"><div class="pl-price-big">dès '+_plEuro(minP*nb)+'</div><div class="pl-price-for">'+(nb===1?'pour toi':'pour vous '+nb)+'</div></div>'
+      +'<div class="pl-price-who">À partir de '+_plEuro(minP)+' par personne</div>'
+      +(opts.length?'<div class="pl-price-lines">'+opts.map(function(o){return'<div class="pl-price-line"><span>'+_escHtml(String(o.label||''))+'</span><b>'+_plEuro(_plNum(o.price))+'</b></div>';}).join('')+'</div>':'')
+      +(pr.notes?'<div class="pl-price-note">'+_escHtml(String(pr.notes))+'</div>':'')
+      +'<div class="pl-price-ft"><div class="pl-price-src">'+srcTxt()+'</div>'+btn+'</div></div>';
+  }
+  if(pr.free_entry){
+    var nf=g.adults+g.kids.length;
+    return'<div class="pl-price">'+hd+'<div class="pl-price-total"><div class="pl-price-big">Gratuit</div><div class="pl-price-for">'+(nf===1?'pour toi':'pour vous '+nf)+'</div></div>'
+      +'<div class="pl-price-ft"><div class="pl-price-src">Entrée libre · '+_escHtml(String(pr.source_label||'site officiel'))+'</div>'+btn+'</div></div>';
+  }
+  if(adult==null&&(child==null||!g.kids.length)){
+    if(!srcUrl)return'';
+    return'<div class="pl-price">'+hd+'<div class="pl-price-ft" style="border-top:none;padding-top:0;margin-top:4px"><div class="pl-price-src">Tarifs non communiqués sur le site officiel</div>'+btn+'</div></div>';
+  }
+  var adultTxt=g.adults+' adulte'+(g.adults>1?'s':'');
+  var total=adult==null?0:g.adults*adult,payingKids=0;
+  var lines=[adult==null?{lbl:adultTxt,val:'non précisé',cls:'unk'}:{lbl:adultTxt+' × '+_plEuro(adult),val:_plEuro(g.adults*adult)}];
+  var freeUnder=_plNum(pr.free_under_age),cMin=_plNum(pr.child_age_min),cMax=_plNum(pr.child_age_max);
+  var unknown=0;
+  g.kids.forEach(function(age){
+    var lbl='Enfant '+_plAgesTxt([age]);
+    if(freeUnder!=null&&age<freeUnder){lines.push({lbl:lbl+' · gratuit',val:'Gratuit',cls:'free'});return;}
+    var price=null,kind='';
+    if(child!=null&&(cMin==null||age>=cMin)&&(cMax==null||age<=cMax)){price=child;kind=' · tarif enfant';}
+    else if(adult!=null&&cMax!=null&&age>cMax){price=adult;kind=' · tarif adulte';}
+    if(price==null){unknown++;lines.push({lbl:lbl,val:'à vérifier',cls:'unk'});return;}
+    payingKids++;total+=price;
+    lines.push({lbl:lbl+kind,val:_plEuro(price)});
+  });
+  var ft=pr.family_ticket,ftPrice=ft?_plNum(ft.price):null,deal='';
+  if(ftPrice!=null&&_plNum(ft.adults)===g.adults&&_plNum(ft.children)===payingKids&&ftPrice<total){
+    deal='<div class="pl-price-deal">✓ <span><b>Billet famille</b> : '+_plEuro(total-ftPrice)+' de moins que les billets séparés</span></div>';
+    lines=[{lbl:'Billet famille '+g.adults+' adultes + '+payingKids+' enfant'+(payingKids>1?'s':''),val:_plEuro(ftPrice)},{lbl:'Billets séparés',val:_plEuro(total),cls:'old'}];
+    total=ftPrice;
+  }
+  var n=g.adults+g.kids.length;
+  var who=g.adults+' adulte'+(g.adults>1?'s':'')+(g.kids.length?' · enfant'+(g.kids.length>1?'s':'')+' de '+_plAgesTxt(g.kids):'');
+  return'<div class="pl-price">'+hd
+    +'<div class="pl-price-total"><div class="pl-price-big">'+(unknown||adult==null?'dès ':'')+_plEuro(total)+'</div><div class="pl-price-for">'+(n===1?'pour toi':'pour vous '+n)+'</div></div>'
+    +'<div class="pl-price-who">'+who+'</div>'+deal
+    +'<div class="pl-price-lines">'+lines.map(function(l){return'<div class="pl-price-line'+(l.cls?' '+l.cls:'')+'"><span>'+l.lbl+'</span><b>'+l.val+'</b></div>';}).join('')+'</div>'
+    +(pr.notes?'<div class="pl-price-note">'+_escHtml(String(pr.notes))+'</div>':'')
+    +'<div class="pl-price-ft"><div class="pl-price-src">'+srcTxt()+'</div>'+btn+'</div></div>';
+}
+function _plActivitiesBlock(sp){
+  var acts=sp.activities||[];
+  if(!acts.length)return'';
+  var kids=_plGroup().kids,forAll=0;
+  var items=acts.map(function(a){
+    var meta=[],mn=_plNum(a.age_min),mx=_plNum(a.age_max),h=_plNum(a.height_min_cm),d=_plNum(a.duration_min),x=_plNum(a.extra_price);
+    if(mn!=null&&mx!=null)meta.push('De '+mn+' à '+mx+' ans');
+    else if(mn!=null)meta.push('Dès '+mn+' ans');
+    else if(mx!=null)meta.push("Jusqu'à "+mx+' ans');
+    if(h)meta.push('taille min. '+(h/100).toFixed(2).replace('.',',')+' m');
+    if(d)meta.push(d+' min');
+    if(x)meta.push('supplément '+_plEuro(x));
+    var st=kids.map(function(age){return _plKidStatus(age,a);});
+    if(kids.length&&st.every(function(s){return s==='ok';}))forAll++;
+    return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(a.name||''))+'</div>'
+      +(meta.length?'<div class="pl-item-meta">'+_escHtml(meta.join(' · '))+'</div>':'')+'</div>'
+      +(kids.length?'<div class="pl-kids">'+kids.map(function(age,i){return'<div class="pl-kid '+st[i]+'">'+age+'</div>';}).join('')+'</div>':'')
+      +'</div>';
+  });
+  var sub=!kids.length?'Âges et tailles demandés':forAll?forAll+' activité'+(forAll>1?'s':'')+' pour '+(kids.length>1?'tous tes enfants':'ton enfant'):'Vérifie les âges demandés';
+  var legend=kids.length?'<div class="pl-legend"><span><span class="pl-kid ok">'+kids[0]+'</span>Âge de tes enfants · vert = c\'est possible</span>'
+    +(acts.some(function(a){return _plNum(a.height_min_cm);})?'<span><span class="pl-kid maybe">'+kids[0]+'</span>Orange = selon sa taille, à vérifier</span>':'')+'</div>':'';
+  return'<div class="pl-block act"><div class="pl-block-hd">'+PL_ICON_TICKET+'<div class="pl-block-info"><div class="pl-block-title">Les activités</div><div class="pl-block-sub">'+sub+'</div></div>'
+    +'<div class="pl-block-badge">'+acts.length+' activité'+(acts.length>1?'s':'')+'</div></div>'
+    +'<div class="pl-list">'+items.join('')+legend+'</div></div>';
+}
+function _plShowsBlock(sp){
+  var shows=sp.shows||[];
+  if(!shows.length)return'';
+  return'<div class="pl-block show"><div class="pl-block-hd">'+PL_ICON_FISH+'<div class="pl-block-info"><div class="pl-block-title">À ne pas manquer</div><div class="pl-block-sub">Les animations à heure fixe</div></div>'
+    +(sp.indoor_outdoor==='intérieur'?'<div class="pl-block-badge">100 % intérieur</div>':'')+'</div>'
+    +'<div class="pl-list">'+shows.map(function(s){return'<div class="pl-item"><div class="pl-show-time">'+_escHtml(String(s.time||'').replace(':','h'))+'</div><div class="pl-item-name">'+_escHtml(String(s.name||''))+'</div></div>';}).join('')+'</div></div>';
+}
 function _renderPoiBody(p,mode){
   var body=document.querySelector('.bs-poi-body');
   if(!body)return;
@@ -2590,6 +2790,43 @@ function _renderPoiBody(p,mode){
       +'</div>';
 
     pillsHtml='';
+
+  }else if(PL_SUBCATS.indexOf(sub)!==-1){
+    var plAgeMin=_plNum(sp.age_min);
+    var plAge=plAgeMin==null?'—':plAgeMin===0?'Tous âges':'Dès '+plAgeMin+' ans';
+    var plIo={'intérieur':'Intérieur','mixte':'Mixte','extérieur':'Plein air'}[sp.indoor_outdoor]||'—';
+    var plDur=p.duration||0;
+    ribbonItems=[
+      {val:plAge,lbl:'Âge',cls:plAgeMin==null?'':' bl'},
+      {val:plDur>=60?Math.floor(plDur/60)+' h'+(plDur%60?' '+plDur%60:''):plDur+' min',lbl:'Sur place',cls:''},
+      {val:plIo,lbl:'Pluie',cls:sp.indoor_outdoor==='intérieur'||sp.indoor_outdoor==='mixte'?' gr':''},
+      {val:distMin+' min',lbl:'Distance',cls:''}
+    ];
+    sectionLabel={'Aquariums':"L'aquarium",'Parcs botaniques':'Le jardin'}[sub]||'Le parc';
+    specialBlock=_plHoursBar(p)+_plPriceBlock(sp)+_plActivitiesBlock(sp)+_plShowsBlock(sp);
+    var am=sp.amenities||{},plPills=[];
+    if(sp.indoor_outdoor==='intérieur')plPills.push('<span class="bch-pill bch-pi">☔ Idéal par temps de pluie</span>');
+    else if(sp.indoor_outdoor==='mixte')plPills.push('<span class="bch-pill bch-pi">☔ En partie couvert</span>');
+    if(am.snack)plPills.push('<span class="bch-pill bch-ps">🍔 Snack sur place</span>');
+    if(am.kids_zone)plPills.push('<span class="bch-pill bch-pi">👶 Espace tout-petits</span>');
+    if(am.picnic_area)plPills.push('<span class="bch-pill bch-ps">🧺 Pique-nique</span>');
+    if(am.stroller_ok)plPills.push('<span class="bch-pill bch-ps">🚼 Poussette OK</span>');
+    (am.rules||[]).slice(0,3).forEach(function(r){
+      r=String(r||'');
+      if(r)plPills.push('<span class="bch-pill bch-pw">'+(/chaussette/i.test(r)?'🧦 ':'⚠️ ')+_escHtml(r.charAt(0).toUpperCase()+r.slice(1))+'</span>');
+    });
+    (p.quickSpecs||[]).forEach(function(s){
+      var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
+      plPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
+    });
+    pillsHtml=plPills.length?'<div class="bch-pills-row">'+plPills.join('')+'</div>':'';
+    var plKids=_plGroup().kids;
+    if(!attention&&plKids.length&&(sp.activities||[]).length){
+      attention=plKids.map(function(age){
+        var no=sp.activities.filter(function(a){return _plKidStatus(age,a)==='no';}).map(function(a){return String(a.name||'');});
+        return no.length?'Ton enfant de '+_plAgesTxt([age])+' ne pourra pas faire : '+_escHtml(no.join(', '))+'.':'';
+      }).filter(Boolean).join(' ');
+    }
 
   }else{
     // Villages & Sites, Ports & Littoral, default

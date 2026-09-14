@@ -23,6 +23,7 @@ import re
 import sys
 import time
 import datetime
+import unicodedata
 import urllib.parse
 import urllib.robotparser
 from html import unescape
@@ -36,6 +37,8 @@ load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 import anthropic
 import requests
+import truststore
+truststore.inject_into_ssl()  # magasin de certificats Windows : chaînes incomplètes (ex. vendee-tourisme.com)
 from config import OUTPUT_GLOBAL, ANTHROPIC_API_KEY, CLAUDE_MODEL_EXTRACT
 from dataforseo import search_organic
 
@@ -64,6 +67,7 @@ _PARCS_LOISIRS_FIELDS = {
     "booking": {"label": "réservation obligatoire / conseillée / non", "type": "official"},
     "season": {"label": "période d'ouverture", "type": "official"},
     "hours_text": {"label": "horaires d'ouverture", "type": "official"},
+    "amenities": {"label": "snack, espace tout-petits, pique-nique, poussette, règles pratiques", "type": "official"},
 }
 
 SPECIFIC_FIELDS = {
@@ -1071,12 +1075,13 @@ def process_points_de_vue(client, poi: dict, report: list) -> dict:
 PARCS_LOISIRS = {"Jeux & Divertissement", "Parcs animaliers", "Aquariums", "Parcs botaniques"}
 OFFICIAL_UA = "PlanlyBot/1.0 (guide touristique Vendee)"
 NOT_OFFICIAL_DOMAINS = ("facebook.", "instagram.", "tripadvisor.", "google.", "linktr.ee", "pagesjaunes.")
-INFO_LINK_RE = re.compile(
-    r"tarif|prix|horaire|pratique|informations|billet|reserv|activit|attraction|animation|planning|programme",
-    re.I,
-)
+LINK_SCORES = ((r"tarif|prix|billet|ticket", 10), (r"horaire|calendrier|ouverture|pratique|infos", 8),
+               (r"activit|attraction|animation|programme|planning|decouvr", 5), (r"reserv", 3))
+LINK_PENALTY = re.compile(r"anniversaire|groupe|entreprise|seminaire|celibataire|evjf|evg|scolaire|ecole|comite|cse|"
+                          r"mariage|recrut|emploi|mentions|cgv|cgu|politique|cookie|actualit|blog|presse", re.I)
+INSTITUTIONAL_RE = re.compile(r"(^|[.-])(tourisme|mairie|ville|agglo|communaute)[.-]|\.gouv\.fr$|(^|\.)vendee\.fr$", re.I)
 
-PARCS_PROMPT = """Voici des pages du site officiel de "{name}" ({subcategory}, {commune}).
+PARCS_PROMPT = """Voici des pages web ({source}) sur "{name}" ({subcategory}, {commune}).
 {pages}
 
 ---
@@ -1084,14 +1089,19 @@ PARCS_PROMPT = """Voici des pages du site officiel de "{name}" ({subcategory}, {
 Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
 {{
   "pricing": {{
+    "free_entry": true seulement si l'entrée est explicitement gratuite ou en accès libre, sinon null,
     "adult": prix adulte en euros (nombre) ou null,
     "child": prix enfant en euros (nombre) ou null,
     "child_age_min": âge minimum du tarif enfant (entier) ou null,
     "child_age_max": âge maximum du tarif enfant (entier) ou null,
     "free_under_age": gratuit en dessous de cet âge (entier) ou null,
     "family_ticket": {{"price": nombre, "adults": entier, "children": entier}} ou null,
+    "from_price": prix "à partir de" par personne en euros quand il n'y a pas de tarif adulte/enfant (nombre) ou null,
+    "options": [{{"label": texte court (ex: "Forfait 100 billes · 1h"), "price": nombre}}] (forfaits ou formules, 5 maximum, [] si aucun),
     "notes": précision courte (suppléments, saison...) ou null,
-    "source_url": URL de la page où figurent les tarifs, ou null
+    "source_url": URL de la page où figurent les tarifs, ou null,
+    "valid_period": année ou saison de validité des tarifs si écrite (ex: "2026", "saison 2026") ou null,
+    "evidence": phrase recopiée mot pour mot de la page contenant les prix, ou null
   }},
   "age_min": âge minimum pour venir (entier) ou null,
   "activities": [{{"name": texte, "age_min": entier ou null, "age_max": entier ou null, "height_min_cm": entier ou null, "duration_min": entier ou null, "extra_price": nombre ou null}}],
@@ -1099,10 +1109,16 @@ Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
   "indoor_outdoor": "intérieur" ou "extérieur" ou "mixte" ou null,
   "booking": "obligatoire" ou "conseillée" ou "non" ou null,
   "season": période d'ouverture en texte court ou null,
-  "hours_text": horaires d'ouverture en texte court ou null
+  "hours_text": horaires d'ouverture en texte court ou null,
+  "amenities": {{"snack": vrai/faux ou null, "kids_zone": espace réservé aux tout-petits vrai/faux ou null, "picnic_area": vrai/faux ou null, "stroller_ok": vrai/faux ou null, "rules": [règles pratiques courtes, ex: "chaussettes obligatoires"]}}
 }}
 
-- activities : 8 maximum, [] si aucune. shows : animations ou nourrissages à heure fixe, [] si aucun.
+- Recopie les prix exactement tels qu'écrits, sans calcul.
+
+- activities : attractions permanentes accessibles à un visiteur individuel, 8 maximum, [] si aucune.
+  Exclure : anniversaires, groupes/scolaires/CE, événements ponctuels ou fêtes (Pâques, Halloween...), ateliers datés, restauration, boutique, location.
+- shows : animations ou nourrissages quotidiens à heure fixe, [] si aucun.
+- pricing.notes : inclure les gratuités d'accompagnateurs si mentionnées.
 - Si plusieurs tarifs existent (haute/basse saison), prends la haute saison et précise-le dans notes."""
 
 
@@ -1126,91 +1142,217 @@ def _load_robots(home: str):
     return rp
 
 
-def fetch_official_pages(website: str, max_pages: int = 5) -> list[dict]:
-    """Page d'accueil du site officiel + pages infos pratiques du même domaine, robots.txt respecté."""
-    home = website if website.startswith("http") else f"https://{website}"
-    domain = urllib.parse.urlsplit(home).netloc.removeprefix("www.")
-    robots = _load_robots(home)
+def _host(url: str) -> str:
+    return urllib.parse.urlsplit(url).netloc.lower().removeprefix("www.")
 
-    def get(url):
-        if robots and not robots.can_fetch(OFFICIAL_UA, url):
-            log.info(f"    robots.txt refuse : {url[:80]}")
-            return None
+
+def _same_site(url: str, domain: str) -> bool:
+    host = _host(url)
+    return host == domain or host.endswith("." + domain)
+
+
+def _score_url(url: str, label: str = "") -> int:
+    txt = urllib.parse.unquote(url) + " " + label
+    score = sum(pts for pat, pts in LINK_SCORES if re.search(pat, txt, re.I))
+    return score - 12 if LINK_PENALTY.search(txt) else score
+
+
+def _fetch_page(url: str, robots) -> dict | None:
+    if robots and not robots.can_fetch(OFFICIAL_UA, url):
+        log.info(f"    robots.txt refuse : {url[:80]}")
+        return None
+    headers = {"User-Agent": OFFICIAL_UA}
+    try:
         try:
-            r = requests.get(url, headers={"User-Agent": OFFICIAL_UA, "Accept": "text/html"}, timeout=12)
-            r.raise_for_status()
-            return r.text if "html" in r.headers.get("content-type", "") else None
-        except Exception as e:
-            log.warning(f"    Fetch échoué {url[:80]}: {e}")
-            return None
+            r = requests.get(url, headers=headers, timeout=12)
+        except requests.exceptions.ChunkedEncodingError:
+            # certains serveurs coupent les réponses compressées (ex. axeyon-paintball.ovh)
+            r = requests.get(url, headers={**headers, "Accept-Encoding": "identity"}, timeout=20)
+        r.raise_for_status()
+    except Exception as e:
+        log.warning(f"    Fetch échoué {url[:80]}: {str(e)[:80]}")
+        return None
+    if "html" not in r.headers.get("content-type", "") and "xml" not in r.headers.get("content-type", ""):
+        return None
+    log.info(f"    Page : {url[:90]}")
+    return {"url": url, "html": r.text, "content": _html_to_text(r.text)[:20000]}
 
-    home_html = get(home)
-    if not home_html:
-        return []
-    pages = [{"url": home, "content": _html_to_text(home_html)[:6000]}]
-    seen = {home.rstrip("/")}
-    links = []
-    for href, label in re.findall(r'<a[^>]+href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', home_html, flags=re.S | re.I):
-        url = urllib.parse.urljoin(home, href.strip())
-        if urllib.parse.urlsplit(url).netloc.removeprefix("www.") != domain or url.rstrip("/") in seen:
-            continue
-        if INFO_LINK_RE.search(href + " " + _html_to_text(label)):
-            seen.add(url.rstrip("/"))
-            links.append(url)
-    for url in links[:max_pages - 1]:
-        time.sleep(1)
-        page_html = get(url)
-        if page_html:
-            log.info(f"    Page officielle : {url[:80]}")
-            pages.append({"url": url, "content": _html_to_text(page_html)[:6000]})
-    return pages
+
+def official_candidate_urls(home_page: dict, robots) -> list[str]:
+    """Pages du site officiel classées par pertinence (liens de l'accueil + sitemap)."""
+    home = home_page["url"]
+    domain = _host(home)
+    scores = {}
+
+    def add(url, label=""):
+        url = url.split("#")[0].rstrip("/")
+        if _same_site(url, domain) and url != home.rstrip("/"):
+            s = _score_url(url, label)
+            if s > 0:
+                scores[url] = max(s, scores.get(url, 0))
+
+    for href, label in re.findall(r'<a[^>]+href=["\']([^"\'#]+)["\'][^>]*>(.*?)</a>', home_page["html"], flags=re.S | re.I):
+        add(urllib.parse.urljoin(home, href.strip()), _html_to_text(label))
+
+    parts = urllib.parse.urlsplit(home)
+    sitemaps = list((robots.site_maps() if robots else None) or [f"{parts.scheme}://{parts.netloc}/sitemap.xml"])
+    for _ in range(6):
+        if not sitemaps:
+            break
+        sm = _fetch_page(sitemaps.pop(0), robots)
+        for loc in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", sm["html"] if sm else ""):
+            if loc.endswith(".xml"):
+                sitemaps.append(loc)
+            else:
+                add(loc)
+    return sorted(scores, key=lambda u: -scores[u])
+
+
+def _to_float(value) -> float | None:
+    try:
+        return float(str(value).replace("€", "").replace(",", ".").strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def _price_in_text(value, text: str) -> bool:
+    """Le prix extrait doit figurer tel quel dans les pages, à côté d'un symbole euro."""
+    n = _to_float(value)
+    if n is None:
+        return False
+    euros, cents = int(n), round((n - int(n)) * 100)
+    if cents:
+        variants = {f"{euros},{cents:02d}", f"{euros}.{cents:02d}"}
+        if cents % 10 == 0:
+            variants |= {f"{euros},{cents // 10}", f"{euros}.{cents // 10}"}
+        if f"{euros}€{cents:02d}" in text.replace(" ", ""):
+            return True
+    else:
+        variants = {str(euros), f"{euros},00", f"{euros}.00"}
+    t = text.replace(" ", " ")
+    return any(re.search(rf"(?<![\d,.]){re.escape(v)}(?![\d])\s?(?:€|euros?\b|eur\b)|€\s?{re.escape(v)}(?![\d,.])", t, re.I)
+               for v in variants)
+
+
+def _stale_year(pricing: dict) -> int | None:
+    years = [int(y) for y in re.findall(r"\b20\d\d\b", f"{pricing.get('valid_period') or ''} {pricing.get('evidence') or ''}")]
+    return max(years) if years and max(years) < datetime.date.today().year else None
+
+
+def _is_empty(value) -> bool:
+    if isinstance(value, dict):
+        return all(_is_empty(v) for v in value.values())
+    return value in (None, [], "")
 
 
 def process_parcs_loisirs(client, poi: dict, report: list) -> dict:
+    """Itère site officiel → recherche Google sur le domaine officiel → office de tourisme / commune,
+    jusqu'à obtenir des tarifs vérifiés (chiffres présents dans la page source) et des horaires."""
     keys = list(_PARCS_LOISIRS_FIELDS)
+    today = datetime.date.today().isoformat()
+    found, tried = {}, set()
     website = (poi.get("website") or "").strip()
-    if not website or any(d in website for d in NOT_OFFICIAL_DOMAINS):
-        log.info(f"  [P&L] pas de site officiel exploitable ({website or 'aucun'})")
-        for k in keys:
-            poi["specific_status"][k] = "empty"
-        return poi
+    if any(d in website for d in NOT_OFFICIAL_DOMAINS):
+        website = ""
+    home = (website if website.startswith("http") else f"https://{website}") if website else ""
+    domain = _host(home) if home else ""
+    robots = _load_robots(home) if home else None
+    site_label = "office de tourisme" if INSTITUTIONAL_RE.search(domain) else "site officiel"
 
-    log.info(f"  [P&L] site officiel : {website}")
-    pages = [p for p in fetch_official_pages(website) if p["content"]]
-    data = None
-    if pages:
-        pages_text = "".join(f"\n\n--- {p['url']} ---\n{p['content']}" for p in pages)
+    def complete():
+        pr = found.get("pricing")
+        return bool(pr and not pr.get("stale") and (found.get("hours_text") or poi.get("opening_hours")))
+
+    def extract(label, pages):
+        pages = [p for p in pages if p and p["content"] and p["url"] not in tried]
+        tried.update(p["url"] for p in pages)
+        if not pages:
+            return
+        log.info(f"  [P&L] {label} : extraction sur {len(pages)} page(s)")
+        text = "".join(f"\n\n--- {p['url']} ---\n{p['content']}" for p in pages)
         data = _call_haiku(client, PARCS_PROMPT.format(
-            name=poi.get("name", ""), subcategory=poi.get("subcategory", ""),
-            commune=poi.get("commune", ""), pages=pages_text), max_tokens=2000)
-    if not isinstance(data, dict):
+            source=label, name=poi.get("name", ""), subcategory=poi.get("subcategory", ""),
+            commune=poi.get("commune", ""), pages=text), max_tokens=2500)
+        if not isinstance(data, dict):
+            return
+        pr = data.get("pricing") if isinstance(data.get("pricing"), dict) else None
+        if pr and pr.get("free_entry") is True:
+            if re.search(r"gratuit|acc[eè]s libre|entr[ée]e libre", text, re.I):
+                pr.update({"adult": 0, "child": 0, "family_ticket": None})
+            else:
+                pr["free_entry"] = None
+        if pr and not pr.get("free_entry"):
+            for f in ("adult", "child"):
+                if pr.get(f) is not None and not _price_in_text(pr[f], text):
+                    log.info(f"    ✗ prix {f}={pr[f]} absent des pages → rejeté")
+                    pr[f] = None
+            ft = pr.get("family_ticket")
+            if isinstance(ft, dict) and not _price_in_text(ft.get("price"), text):
+                pr["family_ticket"] = None
+            if pr.get("from_price") is not None and not _price_in_text(pr["from_price"], text):
+                pr["from_price"] = None
+            pr["options"] = [o for o in (pr.get("options") or [])
+                             if isinstance(o, dict) and _price_in_text(o.get("price"), text)][:5]
+        if pr and pr.get("adult") is None and pr.get("child") is None and not pr.get("family_ticket") \
+                and pr.get("from_price") is None and not pr.get("options"):
+            pr = None
+        if pr:
+            stale = _stale_year(pr)
+            pr.update({"stale": bool(stale), "source_label": label, "verified_at": today})
+            if stale:
+                log.info(f"    ~ tarifs datés de {stale}, recherche de plus récents")
+            old = found.get("pricing")
+            if not old or (old.get("stale") and not stale):
+                found["pricing"] = pr
         for k in keys:
-            poi["specific_status"][k] = "empty"
-        return poi
+            if k != "pricing" and k not in found and not _is_empty(data.get(k)):
+                found[k] = data[k]
 
-    pricing = data.get("pricing")
-    if isinstance(pricing, dict) and all(pricing.get(x) is None for x in ("adult", "child", "family_ticket")):
-        data["pricing"] = None
+    # 1. Site officiel : accueil + pages les plus pertinentes (liens et sitemap)
+    if home:
+        home_page = _fetch_page(home, robots)
+        if home_page:
+            pages = [home_page]
+            for url in official_candidate_urls(home_page, robots)[:8]:
+                time.sleep(1)
+                pages.append(_fetch_page(url, robots))
+            extract(site_label, pages)
+
+    # 2. Recherche Google limitée au domaine officiel
+    if home and not complete():
+        urls = []
+        for q in ("tarifs prix", "horaires ouverture"):
+            for s in search_organic(f"site:{domain} {q}", depth=10):
+                if _same_site(s["url"], domain) and s["url"] not in tried and s["url"] not in urls:
+                    urls.append(s["url"])
+        extract(site_label, [_fetch_page(u, robots) for u in urls[:6]])
+
+    # 3. Pages institutionnelles (office de tourisme, commune)
+    if not complete():
+        query = f"\"{poi.get('name', '')}\" {poi.get('commune', '')} tarifs horaires"
+        commune_slug = re.sub(r"[^a-z]", "", unicodedata.normalize("NFKD", poi.get("commune", "").lower()))
+        urls = [s["url"] for s in search_organic(query, depth=10)
+                if (INSTITUTIONAL_RE.search(_host(s["url"])) or (commune_slug and commune_slug in re.sub(r"[^a-z]", "", _host(s["url"]))))
+                and s["url"] not in tried]
+        extract("office de tourisme", [_fetch_page(u, _load_robots(u)) for u in urls[:4]])
 
     for k in keys:
-        value = data.get(k)
-        if value in (None, [], {}, ""):
+        if _is_empty(found.get(k)):
             poi["specific_status"][k] = "empty"
             log.info(f"    ✗ {k} = null")
             continue
-        poi["specific"][k] = value
+        poi["specific"][k] = found[k]
         poi["specific_status"][k] = "auto"
-        report.append({"poi": poi.get("id"), "field": k, "value": value, "source": "site officiel"})
-        log.info(f"    ✓ {k} = {str(value)[:90]}")
+        report.append({"poi": poi.get("id"), "field": k, "value": found[k], "source": "parcs_loisirs"})
+        log.info(f"    ✓ {k} = {str(found[k])[:90]}")
 
-    poi["specific"]["official_source"] = {"url": website, "verified_at": datetime.date.today().isoformat()}
-    pricing = poi["specific"].get("pricing") or {}
-    if pricing.get("adult") is not None:
-        poi["price_adult"] = pricing["adult"]
-    if pricing.get("child") is not None:
-        poi["price_child"] = pricing["child"]
-    if poi["specific"].get("age_min") is not None:
-        poi["age_min"] = poi["specific"]["age_min"]
+    poi["specific"]["official_source"] = {"url": home or None, "verified_at": today}
+    pricing = found.get("pricing") or {}
+    for f, target in (("adult", "price_adult"), ("child", "price_child")):
+        if pricing.get(f) is not None:
+            poi[target] = _to_float(pricing[f])
+    if found.get("age_min") is not None:
+        poi["age_min"] = found["age_min"]
     return poi
 
 

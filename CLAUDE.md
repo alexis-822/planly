@@ -98,10 +98,12 @@ Prototype mobile avec :
 - **50 POIs** : les 34 historiques (non retouchés) + **16 Parcs & Loisirs** (11 Jeux & Divertissement, 2 Parcs animaliers, 1 Aquarium, 2 Parcs botaniques), tous injectés dans l'app
 - Coût DataForSEO des 16 : 0,056 $ (+ quelques centimes pour la relance photos)
 - Photos : tri Claude Vision intégré à scraper_main ; les photos de fiches Google (lh3 gps-cs-s) renvoient 403 en téléchargement direct → seules les photos SERP Images sont utilisables
-- `scraper_missing.py` exige `--subcategory` ou `--poi` ; Parcs & Loisirs lit **uniquement le site officiel** (robots.txt respecté) : tarifs par tranche d'âge, billet famille, activités âge/taille, animations, horaires, saison → pas encore lancé sur les 16
-- App : pill Parcs & Loisirs filtre les 4 sous-catégories (catégories `jeux`, `animaux`, `aquarium`, `jardin`)
-- Maquette fiche Parcs & Loisirs validée (voir mémoire projet), pas encore intégrée dans planly-full.html
-- opening_hours toujours vide pour les 16 (DataForSEO work_time non renvoyé) → à couvrir via `hours_text` du site officiel
+- `scraper_missing.py` exige `--subcategory` ou `--poi`. Parcs & Loisirs (`process_parcs_loisirs`) itère : site officiel (pages classées par pertinence via liens + sitemap, robots.txt respecté) → Google `site:domaine` (DataForSEO) → office de tourisme / commune. Prix acceptés seulement s'ils figurent tels quels dans la page source (`_price_in_text`), tarifs d'une année passée marqués `stale`. Formes gérées : adulte/enfant + tranches d'âge, billet famille, entrée gratuite, « à partir de », forfaits. Champs : pricing, activities, shows, hours_text, season, booking, indoor_outdoor, amenities, official_source
+- **Couverture des 16** : prix 16/16 (Ânes Passions = tarifs 2025, site non mis à jour), horaires 16/16 (10 Google, 5 site officiel, Vague de Jeux « sur réservation »)
+- Bug corrigé : `dataforseo.py` lisait `work_time.timetable` au lieu de `work_time.work_hours.timetable` → opening_hours était vide pour tous les POIs (les 34 historiques n'ont pas été re-scrapés)
+- `truststore` installé (certificats Windows, ex. vendee-tourisme.com)
+- App : pill Parcs & Loisirs filtre les 4 sous-catégories (catégories `jeux`, `animaux`, `aquarium`, `jardin`). Fiche Parcs & Loisirs = maquette validée intégrée (`_pl*` dans planly-full.html) : ouvert aujourd'hui + semaine (timetable Google `openingHours`), prix pour le groupe (profil onboarding, 2 adultes par défaut pour famille/amis), activités avec pastilles âge enfants, animations, pastilles équipements, alerte conseil automatique, source + date de vérification des tarifs
+- Coûts mesurés : DataForSEO ≈ 0,016 $/POI (collecte) ; passes site officiel ≈ 0,26 $ au total pour 16 POIs
 
 ### Avant (historique)
 - 34 POIs dans output_global.json (11 plages + 17 nature/promenades/ports + 6 Villages & Sites)
