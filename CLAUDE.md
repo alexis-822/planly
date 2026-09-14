@@ -94,6 +94,16 @@ Prototype mobile avec :
 - Toutes les données injectées dynamiquement par `inject_pois.py`
 
 ## État actuel
+### 2026-09-14 — Parcs & Loisirs
+- **50 POIs** : les 34 historiques (non retouchés) + **16 Parcs & Loisirs** (11 Jeux & Divertissement, 2 Parcs animaliers, 1 Aquarium, 2 Parcs botaniques), tous injectés dans l'app
+- Coût DataForSEO des 16 : 0,056 $ (+ quelques centimes pour la relance photos)
+- Photos : tri Claude Vision intégré à scraper_main ; les photos de fiches Google (lh3 gps-cs-s) renvoient 403 en téléchargement direct → seules les photos SERP Images sont utilisables
+- `scraper_missing.py` exige `--subcategory` ou `--poi` ; Parcs & Loisirs lit **uniquement le site officiel** (robots.txt respecté) : tarifs par tranche d'âge, billet famille, activités âge/taille, animations, horaires, saison → pas encore lancé sur les 16
+- App : pill Parcs & Loisirs filtre les 4 sous-catégories (catégories `jeux`, `animaux`, `aquarium`, `jardin`)
+- Maquette fiche Parcs & Loisirs validée (voir mémoire projet), pas encore intégrée dans planly-full.html
+- opening_hours toujours vide pour les 16 (DataForSEO work_time non renvoyé) → à couvrir via `hours_text` du site officiel
+
+### Avant (historique)
 - 34 POIs dans output_global.json (11 plages + 17 nature/promenades/ports + 6 Villages & Sites)
 - 33 POIs injectés dans planly-full.html (≥85% complets)
 - 1 POI exclu : Saint-Gilles-Croix-de-Vie (pas de fiche Google)

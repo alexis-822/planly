@@ -1550,7 +1550,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202606032111"></script>
+<script src="pois.js?v=202609142115"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2838,8 +2838,9 @@ var TUILES=[{id:'air',label:'Nature & Grand Air',emoji:'🌿'},{id:'sport',label
 var PL1={air:['Toutes','🏖️ Plages & Côte','🌲 Forêts & Nature','📸 Points de vue','🚶 Balades & Promenades'],sport:['Toutes','🥾 Randonnée','🚲 Vélo','🛶 Nautisme','➕ Autres sports'],patri:['Toutes','🏘️ Villages & Sites','🏰 Châteaux & Monuments','🏛️ Musées & Culture'],vivre:['Toutes','🍽️ Restaurants','🛒 Marchés & Terroir','🍷 Dégustations'],parcs:['Toutes','<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 5v2m0 10v2" stroke-dasharray="2 2"/><path d="M2 10a3 3 0 010 4"/><path d="M22 10a3 3 0 000 4"/></svg> Jeux & Divertissement','🦁 Parcs animaliers','🐠 Aquariums','🌺 Parcs botaniques'],sorties:['Toutes','🎬 Cinéma','🍸 Bars & Ambiance','🎰 Casino & Jeux','🏊 Piscines & Spa'],events:['Toutes','🎵 Concerts & Spectacles','🎉 Fêtes & Foires','🌙 Marchés nocturnes']};
 
 // Mapping tuile/L1 → catégorie POI
-var TUILE_CATS={air:['plage','nature','pointdevue','balade'],sport:[],patri:['patrimoine'],vivre:[],parcs:[],sorties:[],events:[]};
-var L1_CATS={'🏖️ Plages & Côte':['plage'],'🌲 Forêts & Nature':['nature'],'📸 Points de vue':['pointdevue'],'🚶 Balades & Promenades':['balade'],'🏘️ Villages & Sites':['patrimoine'],'🏰 Châteaux & Monuments':['patrimoine'],'🏛️ Musées & Culture':['patrimoine']};
+var TUILE_CATS={air:['plage','nature','pointdevue','balade'],sport:[],patri:['patrimoine'],vivre:[],parcs:['jeux','animaux','aquarium','jardin'],sorties:[],events:[]};
+var L1_CATS={'🏖️ Plages & Côte':['plage'],'🌲 Forêts & Nature':['nature'],'📸 Points de vue':['pointdevue'],'🚶 Balades & Promenades':['balade'],'🏘️ Villages & Sites':['patrimoine'],'🏰 Châteaux & Monuments':['patrimoine'],'🏛️ Musées & Culture':['patrimoine'],'🦁 Parcs animaliers':['animaux'],'🐠 Aquariums':['aquarium'],'🌺 Parcs botaniques':['jardin']};
+L1_CATS[PL1.parcs[1]]=['jeux']; // libellé Jeux & Divertissement = SVG inline, clé reprise du tableau PL1
 
 function getFilteredPois(){
   if(!activeTuile)return POIS;
@@ -3653,7 +3654,8 @@ var _subCatIcons={
   'Plages & Côte':'🏖','Forêts & Nature':'🌲','Points de vue':'📸',
   'Balades & Promenades':'🚶','Villages & Sites':'🏛','Ports & Nautisme':'⛵',
   'Marais & Zones humides':'🦆','Châteaux & Monuments':'🏰','Îles':'🏝',
-  'Restaurants':'🍽','Bars':'🍸','Casino':'🎰','Nautisme':'🏄'
+  'Restaurants':'🍽','Bars':'🍸','Casino':'🎰','Nautisme':'🏄',
+  'Jeux & Divertissement':'🎢','Parcs animaliers':'🦁','Aquariums':'🐠','Parcs botaniques':'🌺'
 };
 function _subCatEmoji(p){return _subCatIcons[p.subcategory||'']||_subCatIcons[p.category||'']||'📍';}
 

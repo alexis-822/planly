@@ -51,6 +51,10 @@ SUBCAT_CAT_MAP = {
     "Châteaux & Monuments": "patrimoine",
     "Musées & Culture": "culture",
     "Ports & Littoral": "port",
+    "Jeux & Divertissement": "jeux",
+    "Parcs animaliers": "animaux",
+    "Aquariums": "aquarium",
+    "Parcs botaniques": "jardin",
 }
 
 

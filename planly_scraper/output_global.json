@@ -17420,7 +17420,11 @@
     "opening_hours": null,
     "popular_times": null,
     "price_level": null,
-    "photos": [],
+    "photos": [
+      "images/circuit_mecamax/photo_1.jpg",
+      "images/circuit_mecamax/photo_2.jpg",
+      "images/circuit_mecamax/photo_3.jpg"
+    ],
     "reviews": [
       {
         "text": "Nous avons passé un excellent moment chez Mecamax !\n\nL’accueil est chaleureux, l’équipe est très sympathique et prend le temps de bien expliquer le fonctionnement ainsi que les consignes de sécurité, ce qui est très rassurant.\n\nLes tarifs sont attractifs et l’activité est accessible à toute la famille. Notre enfant de 4 ans a pu monter dans un kart biplace accompagné et a pris énormément de plaisir sur une piste agréable et bien entretenue.\n\nUn vrai plus : il y a également deux petits circuits spécialement adaptés aux enfants, ce qui permet aux plus jeunes de profiter pleinement de l’expérience.\n\nLe parking est facilement accessible et gratuit, ce qui est très appréciable.\n\nEn tout cas, nous sommes ravis de cette activité et nous reviendrons avec plaisir. Nous recommandons sans hésiter !",
@@ -17498,7 +17502,11 @@
     "scraped_at": "2026-09-14T16:25:30.373622+00:00",
     "enriched_at": "2026-09-14T16:25:30.373622+00:00",
     "status": "complete",
-    "photos_original_urls": []
+    "photos_original_urls": [
+      "https://mecamax.com/wp-content/uploads/2020/01/circuit2.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/cb/08/2e/vu-drone.jpg?w=1200&h=-1&s=1",
+      "https://www.pagesjaunes.fr/media/newdam/e9/c6/85/00/00/2c/04/b9/3d/2a/5d35e9c68500002c04b93d2a/5d35e9c68500002c04b93d2b.jpg"
+    ]
   },
   {
     "id": "atlantic_kart_system",
@@ -17651,7 +17659,11 @@
     "opening_hours": null,
     "popular_times": null,
     "price_level": null,
-    "photos": [],
+    "photos": [
+      "images/up2play/photo_1.jpg",
+      "images/up2play/photo_2.jpg",
+      "images/up2play/photo_3.jpg"
+    ],
     "reviews": [
       {
         "text": "Complexe de sports et de loisirs situé dans la galerie commerciale, adapté aussi bien aux enfants qu’aux adultes.\nLe lieu a récemment été réaménagé avec l’installation de nouveaux jeux.\nOn y trouve notamment une table de shuffleboard (10 €/h), une table de ping-pong (5 €/h), un jeu de cornhole (5 €/h) ainsi qu’un jeu de palets.\nUn écran géant a également été installé pour suivre des matchs, notamment de football et de rugby.\nUn distributeur automatique de pop-corn.\nIl est aussi possible de profiter du bowling, du billard, du baby-foot (1 € la partie), des fléchettes (3 cibles électroniques) et de plusieurs bornes d’arcade.\nLe complexe propose également un trampoline park, un escape game, un kids park et une vague de surf.\nUn endroit idéal pour s’amuser en famille ou entre amis !",
@@ -17741,7 +17753,11 @@
     "scraped_at": "2026-09-14T16:25:47.087264+00:00",
     "enriched_at": "2026-09-14T16:25:47.087264+00:00",
     "status": "complete",
-    "photos_original_urls": []
+    "photos_original_urls": [
+      "https://static.actu.fr/uploads/2020/06/internet-up2play.jpg",
+      "https://www.guide-de-la-vendee.com/_bibli/annonces/4236/hd/upzplay-vague-indoor-25-07.jpg",
+      "https://eliplay.fr/media/projects/UP2play-trampoline-park.jpg"
+    ]
   },
   {
     "id": "parc_des_sablotins",
@@ -20349,7 +20365,10 @@
     "opening_hours": null,
     "popular_times": null,
     "price_level": null,
-    "photos": [],
+    "photos": [
+      "images/axeyon_paintball/photo_1.jpg",
+      "images/axeyon_paintball/photo_2.jpg"
+    ],
     "reviews": [],
     "place_topics": {
       "EVG": 4,
@@ -20404,7 +20423,10 @@
     "scraped_at": "2026-09-14T16:26:53.444234+00:00",
     "enriched_at": "2026-09-14T16:26:53.444234+00:00",
     "status": "complete",
-    "photos_original_urls": []
+    "photos_original_urls": [
+      "https://www.vendeedusud.com/wp-content/uploads/wpetourisme/Lapins-Chasseurs.jpg",
+      "https://www.pagesjaunes.fr/media/newdam/05/10/61/00/00/3f/50/f2/d0/6c/5e1705106100003f50f2d06c/5e1705106100003f50f2d06d.jpg"
+    ]
   },
   {
     "id": "explora_parc",
@@ -21802,7 +21824,11 @@
       }
     },
     "price_level": null,
-    "photos": [],
+    "photos": [
+      "images/aquarium_de_vendee/photo_1.jpg",
+      "images/aquarium_de_vendee/photo_2.jpg",
+      "images/aquarium_de_vendee/photo_3.jpg"
+    ],
     "reviews": [
       {
         "text": "Visite le 10 juillet 2026 sous canicule alerte rouge. Grand parking. Billetterie rapide. A l'intérieur, cadre sympathique sous une température agréable. Plusieurs salles avec des grands aquariums et des plus petits. Panneaux descriptifs de qualité. Pour 2 adultes et 2 enfants, nous avons fait la visite en un peu plus d'une heure et demi. Suffisant pour maintenir l'attention des enfants. Point noir : les prix exorbitants de la boutique de souvenir. Pas sûr que le poule XXL à 300€ ne trouve preneur. Sauf pour la décoration de la boutique.",
@@ -21892,7 +21918,11 @@
     "scraped_at": "2026-09-14T19:05:44.315710+00:00",
     "enriched_at": "2026-09-14T19:05:44.315710+00:00",
     "status": "complete",
-    "photos_original_urls": []
+    "photos_original_urls": [
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/cb/8c/f5/en-juillet-et-en-aout.jpg?w=1200&h=-1&s=1",
+      "https://www.destination-vendeegrandlittoral.com/wp-content/uploads/2018/10/raie-guitare-2-1024x683.jpg",
+      "https://www.aquarium-vendee.com/wp-content/uploads/2026/07/enfants-bassin-bar-sables-olonne-aquarium-vendee.jpg"
+    ]
   },
   {
     "id": "parc_des_floralies",
@@ -21920,7 +21950,11 @@
     "opening_hours": null,
     "popular_times": null,
     "price_level": null,
-    "photos": [],
+    "photos": [
+      "images/parc_des_floralies/photo_1.jpg",
+      "images/parc_des_floralies/photo_2.jpg",
+      "images/parc_des_floralies/photo_3.jpg"
+    ],
     "reviews": [
       {
         "text": "Le Parc des Floralies est une très belle surprise pour ceux qui cherchent un endroit calme, naturel et agréable pour se promener en famille. Ce parc est bien aménagé, très propre et surtout très fleuri, avec une grande variété de plantes, d’arbres et de petits chemins ombragés qui invitent à la détente.\n\nCe que j’ai particulièrement aimé, c’est la tranquillité qui règne dans ce lieu. On peut y faire une belle pause au frais, lire un livre, se promener, ou tout simplement profiter du calme et de la nature.\n\nPour les enfants, il y a aussi une belle aire de jeux bien équipée, ce qui en fait un lieu parfait pour une sortie familiale. Les bancs tout au long du parcours permettent de s’asseoir et de profiter du paysage en toute sérénité.\n\nC’est aussi un bon endroit pour pique-niquer à l’ombre, ou faire une petite sieste pendant les journées d’été.\n\nSitué à deux pas du centre-ville et non loin de la plage. Une belle découverte que je recommande vivement à tous les amoureux de nature et de tranquillité.",
@@ -21997,7 +22031,11 @@
     "scraped_at": "2026-09-14T19:09:50.932662+00:00",
     "enriched_at": "2026-09-14T19:09:50.932662+00:00",
     "status": "complete",
-    "photos_original_urls": []
+    "photos_original_urls": [
+      "https://www.latranchesurmer.fr/medias/2018/07/alamoureux_LaTranche17_MG_4354.jpg",
+      "https://cdt85.media.tourinsoft.eu/upload/La-Tranche-sur-Mer-6602.jpg",
+      "https://cdt85.media.tourinsoft.eu/upload/La-Tranche-sur-Mer-6659.jpg"
+    ]
   },
   {
     "id": "parc_philippe_perrocheau",
