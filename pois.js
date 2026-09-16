@@ -1,9 +1,9 @@
 var POIS=[
   {
     "imgs": [
-      "planly_scraper/images/grande_plage_du_remblai/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/grande_plage_du_remblai/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/grande_plage_du_remblai/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/grande_plage_du_remblai/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/grande_plage_du_remblai/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/grande_plage_du_remblai/photo_3.jpg?v=202609161558"
     ],
     "name": "Grande Plage du Remblai",
     "commune": "Les Sables-d'Olonne",
@@ -124,9 +124,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_sauveterre/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_sauveterre/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_sauveterre/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_de_sauveterre/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_sauveterre/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_sauveterre/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage de Sauveterre",
     "commune": "L'Île-d'Olonne",
@@ -243,9 +243,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_granges/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_des_granges/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_des_granges/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_des_granges/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_des_granges/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_des_granges/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage des Granges",
     "commune": "L'Île-d'Olonne",
@@ -362,9 +362,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_tanchet/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_tanchet/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_tanchet/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_de_tanchet/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_tanchet/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_tanchet/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -485,9 +485,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/baie_de_cayola/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/baie_de_cayola/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/baie_de_cayola/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/baie_de_cayola/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/baie_de_cayola/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/baie_de_cayola/photo_3.jpg?v=202609161558"
     ],
     "name": "Baie de Cayola",
     "commune": "Château-d'Olonne",
@@ -608,9 +608,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_la_mine/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_la_mine/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_la_mine/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_de_la_mine/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_la_mine/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_la_mine/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage de la Mine",
     "commune": "Jard-sur-Mer",
@@ -726,9 +726,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_la_paree/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_la_paree/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_la_paree/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_de_la_paree/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_la_paree/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_la_paree/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage de la Parée",
     "commune": "Brétignolles-sur-Mer",
@@ -844,9 +844,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_dunes_du_veillon/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_dunes_du_veillon/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage & Dunes du Veillon",
     "commune": "Talmont-Saint-Hilaire",
@@ -967,9 +967,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_dunes/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_des_dunes/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_des_dunes/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_des_dunes/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_des_dunes/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_des_dunes/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage des Dunes",
     "commune": "Brétignolles-sur-Mer",
@@ -1090,9 +1090,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_conches/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_des_conches/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_des_conches/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_des_conches/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_des_conches/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_des_conches/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage des Conches",
     "commune": "Longeville-sur-Mer",
@@ -1213,9 +1213,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_l_aubraie/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_l_aubraie/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_de_l_aubraie/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_de_l_aubraie/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_l_aubraie/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_de_l_aubraie/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage de l'Aubraie",
     "commune": "Les Sables-d'Olonne",
@@ -1326,9 +1326,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_belugas/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/plage_des_belugas/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/plage_des_belugas/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/plage_des_belugas/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/plage_des_belugas/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/plage_des_belugas/photo_3.jpg?v=202609161558"
     ],
     "name": "Plage des Bélugas",
     "commune": "L'Aiguillon-la-Presqu'île",
@@ -1449,9 +1449,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpg?v=202609161558"
     ],
     "name": "Forêt Domaniale d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -1730,9 +1730,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpg?v=202609161558"
     ],
     "name": "Marais Salants de l'Île d'Olonne",
     "commune": "L'Île-d'Olonne",
@@ -1957,9 +1957,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/lac_de_tanchet/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/lac_de_tanchet/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/lac_de_tanchet/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/lac_de_tanchet/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/lac_de_tanchet/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/lac_de_tanchet/photo_3.jpg?v=202609161558"
     ],
     "name": "Lac de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -2231,9 +2231,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg?v=202609161558"
     ],
     "name": "Réserve Nat. Baie de l'Aiguillon",
     "commune": "L'Aiguillon-sur-Mer",
@@ -2425,9 +2425,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/ile_d_yeu/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/ile_d_yeu/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/ile_d_yeu/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/ile_d_yeu/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/ile_d_yeu/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/ile_d_yeu/photo_3.jpg?v=202609161558"
     ],
     "name": "Île d'Yeu",
     "commune": "Saint-Gilles (ferry)",
@@ -2556,9 +2556,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg?v=202609161558"
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
     "commune": "Noirmoutier-en-l'Île",
@@ -2670,9 +2670,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpg?v=202609161558"
     ],
     "name": "Phare de la Petite Jetée",
     "commune": "Les Sables-d'Olonne",
@@ -2774,9 +2774,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/belvedere_arrondeau/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/belvedere_arrondeau/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/belvedere_arrondeau/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/belvedere_arrondeau/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/belvedere_arrondeau/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/belvedere_arrondeau/photo_3.jpg?v=202609161558"
     ],
     "name": "Belvédère Arrondeau",
     "commune": "Saint-Hilaire-de-Riez",
@@ -2880,9 +2880,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/le_puits_d_enfer/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/le_puits_d_enfer/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/le_puits_d_enfer/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/le_puits_d_enfer/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/le_puits_d_enfer/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/le_puits_d_enfer/photo_3.jpg?v=202609161558"
     ],
     "name": "Le Puits d'Enfer",
     "commune": "Les Sables-d'Olonne",
@@ -2978,9 +2978,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/pointe_du_payre/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/pointe_du_payre/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/pointe_du_payre/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/pointe_du_payre/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/pointe_du_payre/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/pointe_du_payre/photo_3.jpg?v=202609161558"
     ],
     "name": "Pointe du Payré",
     "commune": "Jard-sur-Mer",
@@ -3078,9 +3078,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg?v=202609161558"
     ],
     "name": "Sentier côtier Forêt–Plages d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -3180,9 +3180,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/le_remblai/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/le_remblai/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/le_remblai/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/le_remblai/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/le_remblai/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/le_remblai/photo_3.jpg?v=202609161558"
     ],
     "name": "Le Remblai",
     "commune": "Les Sables-d'Olonne",
@@ -3291,9 +3291,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/circuit_des_marais_salants/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/circuit_des_marais_salants/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg?v=202609161558"
     ],
     "name": "Circuit des Marais Salants",
     "commune": "L'Île-d'Olonne",
@@ -3397,9 +3397,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg?v=202609161558"
     ],
     "name": "Chemin des Douaniers Cayola–Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
@@ -3508,9 +3508,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/port_olona/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/port_olona/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/port_olona/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/port_olona/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/port_olona/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/port_olona/photo_3.jpg?v=202609161558"
     ],
     "name": "Port Olona",
     "commune": "Les Sables-d'Olonne",
@@ -3619,9 +3619,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/port_de_bourgenay/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/port_de_bourgenay/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/port_de_bourgenay/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/port_de_bourgenay/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/port_de_bourgenay/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/port_de_bourgenay/photo_3.jpg?v=202609161558"
     ],
     "name": "Port de Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
@@ -3731,9 +3731,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/port_de_la_chaume/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/port_de_la_chaume/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/port_de_la_chaume/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/port_de_la_chaume/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/port_de_la_chaume/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/port_de_la_chaume/photo_3.jpg?v=202609161558"
     ],
     "name": "Port de La Chaume",
     "commune": "Les Sables-d'Olonne",
@@ -3824,9 +3824,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/l_ile_penotte/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/l_ile_penotte/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/l_ile_penotte/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/l_ile_penotte/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/l_ile_penotte/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/l_ile_penotte/photo_3.jpg?v=202609161558"
     ],
     "name": "L'Île Penotte",
     "commune": "Les Sables-d'Olonne",
@@ -3912,9 +3912,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/chateau_de_talmont/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/chateau_de_talmont/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/chateau_de_talmont/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/chateau_de_talmont/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/chateau_de_talmont/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/chateau_de_talmont/photo_3.jpg?v=202609161558"
     ],
     "name": "Château de Talmont",
     "commune": "Talmont-Saint-Hilaire",
@@ -4000,9 +4000,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_3.jpg?v=202609161558"
     ],
     "name": "Dolmen de la Frébouchère",
     "commune": "Le Bernard",
@@ -4086,9 +4086,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpg?v=202609161558"
     ],
     "name": "Saint-Gilles-Croix-de-Vie",
     "commune": "Saint-Gilles-Croix-de-Vie",
@@ -4180,9 +4180,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/vouvant/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/vouvant/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/vouvant/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/vouvant/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/vouvant/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/vouvant/photo_3.jpg?v=202609161558"
     ],
     "name": "Vouvant",
     "commune": "Vouvant",
@@ -4273,9 +4273,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/prieure_saint_nicolas/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/prieure_saint_nicolas/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/prieure_saint_nicolas/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/prieure_saint_nicolas/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/prieure_saint_nicolas/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/prieure_saint_nicolas/photo_3.jpg?v=202609161558"
     ],
     "name": "Prieuré Saint-Nicolas",
     "commune": "La Chaume, Les Sables",
@@ -4368,9 +4368,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/tour_d_arundel/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/tour_d_arundel/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/tour_d_arundel/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/tour_d_arundel/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/tour_d_arundel/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/tour_d_arundel/photo_3.jpg?v=202609161558"
     ],
     "name": "Tour d'Arundel",
     "commune": "Les Sables-d'Olonne",
@@ -4463,9 +4463,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/abbaye_de_maillezais/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/abbaye_de_maillezais/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/abbaye_de_maillezais/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/abbaye_de_maillezais/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/abbaye_de_maillezais/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/abbaye_de_maillezais/photo_3.jpg?v=202609161558"
     ],
     "name": "Abbaye de Maillezais",
     "commune": "Marais Poitevin",
@@ -4558,9 +4558,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/fort_saint_nicolas/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/fort_saint_nicolas/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/fort_saint_nicolas/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/fort_saint_nicolas/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/fort_saint_nicolas/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/fort_saint_nicolas/photo_3.jpg?v=202609161558"
     ],
     "name": "Fort Saint-Nicolas",
     "commune": "La Chaume, Les Sables",
@@ -4653,9 +4653,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_3.jpg?v=202609161558"
     ],
     "name": "Église Saint-Nicolas de Brem",
     "commune": "Brem-sur-Mer",
@@ -4748,9 +4748,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_3.jpg?v=202609161558"
     ],
     "name": "Musée de l'Abbaye Sainte-Croix",
     "commune": "Les Sables-d'Olonne",
@@ -4843,7 +4843,7 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/museum_du_coquillage/photo_1.jpg?v=202609161542"
+      "planly_scraper/images/museum_du_coquillage/photo_1.jpg?v=202609161558"
     ],
     "name": "Muséum du Coquillage",
     "commune": "Les Sables-d'Olonne",
@@ -5174,9 +5174,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/historial_de_la_vendee/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/historial_de_la_vendee/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/historial_de_la_vendee/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/historial_de_la_vendee/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/historial_de_la_vendee/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/historial_de_la_vendee/photo_3.jpg?v=202609161558"
     ],
     "name": "Historial de la Vendée",
     "commune": "Les Lucs-sur-Boulogne",
@@ -5343,9 +5343,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/la_cotriade/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/la_cotriade/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/la_cotriade/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/la_cotriade/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/la_cotriade/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/la_cotriade/photo_3.jpg?v=202609161558"
     ],
     "name": "La Cotriade",
     "commune": "Les Sables-d'Olonne",
@@ -5438,9 +5438,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/la_pancarte/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/la_pancarte/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/la_pancarte/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/la_pancarte/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/la_pancarte/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/la_pancarte/photo_3.jpg?v=202609161558"
     ],
     "name": "La Pancarte",
     "commune": "Les Sables-d'Olonne",
@@ -5657,9 +5657,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/les_regates/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/les_regates/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/les_regates/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/les_regates/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/les_regates/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/les_regates/photo_3.jpg?v=202609161558"
     ],
     "name": "Les Régates",
     "commune": "Les Sables-d'Olonne",
@@ -5752,9 +5752,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/lacertus/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/lacertus/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/lacertus/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/lacertus/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/lacertus/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/lacertus/photo_3.jpg?v=202609161558"
     ],
     "name": "Lacertus",
     "commune": "Les Sables-d'Olonne",
@@ -5950,9 +5950,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/la_p_tite_cale/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/la_p_tite_cale/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/la_p_tite_cale/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/la_p_tite_cale/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/la_p_tite_cale/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/la_p_tite_cale/photo_3.jpg?v=202609161558"
     ],
     "name": "La P'tite Cale",
     "commune": "Les Sables-d'Olonne",
@@ -6158,9 +6158,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/umi_sushi/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/umi_sushi/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/umi_sushi/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/umi_sushi/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/umi_sushi/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/umi_sushi/photo_3.jpg?v=202609161558"
     ],
     "name": "UMI Sushi",
     "commune": "Les Sables-d'Olonne",
@@ -6253,9 +6253,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/pizza_bar_12h03/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/pizza_bar_12h03/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/pizza_bar_12h03/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/pizza_bar_12h03/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/pizza_bar_12h03/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/pizza_bar_12h03/photo_3.jpg?v=202609161558"
     ],
     "name": "Pizza Bar 12h03",
     "commune": "Les Sables-d'Olonne",
@@ -6483,9 +6483,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/pizza_cosy/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/pizza_cosy/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/pizza_cosy/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/pizza_cosy/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/pizza_cosy/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/pizza_cosy/photo_3.jpg?v=202609161558"
     ],
     "name": "Pizza Cosy",
     "commune": "Les Sables-d'Olonne",
@@ -6578,9 +6578,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/le_quai_des_saveurs/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/le_quai_des_saveurs/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/le_quai_des_saveurs/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/le_quai_des_saveurs/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/le_quai_des_saveurs/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/le_quai_des_saveurs/photo_3.jpg?v=202609161558"
     ],
     "name": "Le Quai des Saveurs",
     "commune": "Les Sables-d'Olonne",
@@ -6776,9 +6776,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/la_cabane_du_ptitgas/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/la_cabane_du_ptitgas/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/la_cabane_du_ptitgas/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/la_cabane_du_ptitgas/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/la_cabane_du_ptitgas/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/la_cabane_du_ptitgas/photo_3.jpg?v=202609161558"
     ],
     "name": "La Cabane du Ptitgas",
     "commune": "Talmont-Saint-Hilaire",
@@ -6995,9 +6995,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/marche_arago/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/marche_arago/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/marche_arago/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/marche_arago/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/marche_arago/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/marche_arago/photo_3.jpg?v=202609161558"
     ],
     "name": "Marché Arago",
     "commune": "Les Sables-d'Olonne",
@@ -7090,9 +7090,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/halles_de_la_chaume/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/halles_de_la_chaume/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/halles_de_la_chaume/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/halles_de_la_chaume/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/halles_de_la_chaume/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/halles_de_la_chaume/photo_3.jpg?v=202609161558"
     ],
     "name": "Halles de La Chaume",
     "commune": "La Chaume, Les Sables",
@@ -7185,9 +7185,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_3.jpg?v=202609161558"
     ],
     "name": "Marché de Brétignolles-sur-Mer",
     "commune": "Brétignolles-sur-Mer",
@@ -7280,9 +7280,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_3.jpg?v=202609161558"
     ],
     "name": "Sel de l'Île d'Olonne",
     "commune": "L'Île-d'Olonne",
@@ -7460,9 +7460,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/vignobles_mourat/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/vignobles_mourat/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/vignobles_mourat/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/vignobles_mourat/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/vignobles_mourat/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/vignobles_mourat/photo_3.jpg?v=202609161558"
     ],
     "name": "Vignobles Mourat",
     "commune": "Mareuil-sur-Lay",
@@ -7555,8 +7555,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/famille_mary/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/famille_mary/photo_2.jpg?v=202609161542"
+      "planly_scraper/images/famille_mary/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/famille_mary/photo_2.jpg?v=202609161558"
     ],
     "name": "Famille Mary",
     "commune": "Les Sables-d'Olonne",
@@ -7649,9 +7649,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/conserverie_la_sablaise/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/conserverie_la_sablaise/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/conserverie_la_sablaise/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/conserverie_la_sablaise/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/conserverie_la_sablaise/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/conserverie_la_sablaise/photo_3.jpg?v=202609161558"
     ],
     "name": "Conserverie La Sablaise",
     "commune": "Les Sables-d'Olonne",
@@ -7847,9 +7847,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/circuit_mecamax/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/circuit_mecamax/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/circuit_mecamax/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/circuit_mecamax/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/circuit_mecamax/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/circuit_mecamax/photo_3.jpg?v=202609161558"
     ],
     "name": "Circuit Mecamax",
     "commune": "L'Île-d'Olonne",
@@ -8012,9 +8012,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/atlantic_kart_system/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/atlantic_kart_system/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/atlantic_kart_system/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/atlantic_kart_system/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/atlantic_kart_system/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/atlantic_kart_system/photo_3.jpg?v=202609161558"
     ],
     "name": "Atlantic Kart System",
     "commune": "Les Sables-d'Olonne",
@@ -8184,9 +8184,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/up2play/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/up2play/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/up2play/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/up2play/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/up2play/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/up2play/photo_3.jpg?v=202609161558"
     ],
     "name": "UP2PLAY",
     "commune": "Les Sables-d'Olonne",
@@ -8480,9 +8480,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_des_sablotins/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/parc_des_sablotins/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/parc_des_sablotins/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/parc_des_sablotins/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/parc_des_sablotins/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/parc_des_sablotins/photo_3.jpg?v=202609161558"
     ],
     "name": "Parc des Sablotins",
     "commune": "Les Sables-d'Olonne",
@@ -8713,9 +8713,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/l_ile_aux_jeux/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/l_ile_aux_jeux/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/l_ile_aux_jeux/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/l_ile_aux_jeux/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/l_ile_aux_jeux/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/l_ile_aux_jeux/photo_3.jpg?v=202609161558"
     ],
     "name": "L'Île aux Jeux",
     "commune": "Les Sables-d'Olonne",
@@ -8979,9 +8979,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/mission_decouverte/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/mission_decouverte/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/mission_decouverte/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/mission_decouverte/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/mission_decouverte/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/mission_decouverte/photo_3.jpg?v=202609161558"
     ],
     "name": "Mission Découverte",
     "commune": "Les Sables-d'Olonne",
@@ -9227,9 +9227,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/vague_de_jeux/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/vague_de_jeux/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/vague_de_jeux/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/vague_de_jeux/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/vague_de_jeux/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/vague_de_jeux/photo_3.jpg?v=202609161558"
     ],
     "name": "Vague de Jeux",
     "commune": "Talmont-Saint-Hilaire",
@@ -9428,8 +9428,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/axeyon_paintball/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/axeyon_paintball/photo_2.jpg?v=202609161542"
+      "planly_scraper/images/axeyon_paintball/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/axeyon_paintball/photo_2.jpg?v=202609161558"
     ],
     "name": "AxeYon Paintball",
     "commune": "La Roche-sur-Yon",
@@ -9583,9 +9583,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/explora_parc/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/explora_parc/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/explora_parc/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/explora_parc/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/explora_parc/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/explora_parc/photo_3.jpg?v=202609161558"
     ],
     "name": "Explora Parc",
     "commune": "Saint-Jean-de-Monts",
@@ -9801,9 +9801,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/chateau_des_aventuriers/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/chateau_des_aventuriers/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/chateau_des_aventuriers/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/chateau_des_aventuriers/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/chateau_des_aventuriers/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/chateau_des_aventuriers/photo_3.jpg?v=202609161558"
     ],
     "name": "Château des Aventuriers",
     "commune": "Avrillé",
@@ -10069,9 +10069,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/o_fun_park/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/o_fun_park/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/o_fun_park/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/o_fun_park/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/o_fun_park/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/o_fun_park/photo_3.jpg?v=202609161558"
     ],
     "name": "O'Fun Park",
     "commune": "Le Bernard",
@@ -10271,9 +10271,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_3.jpg?v=202609161558"
     ],
     "name": "Zoo des Sables d'Olonne",
     "commune": "Les Sables-d'Olonne",
@@ -10484,9 +10484,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/anes_passions/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/anes_passions/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/anes_passions/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/anes_passions/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/anes_passions/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/anes_passions/photo_3.jpg?v=202609161558"
     ],
     "name": "Ânes Passions",
     "commune": "L'Île-d'Olonne",
@@ -10629,9 +10629,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/aquarium_de_vendee/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/aquarium_de_vendee/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/aquarium_de_vendee/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/aquarium_de_vendee/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/aquarium_de_vendee/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/aquarium_de_vendee/photo_3.jpg?v=202609161558"
     ],
     "name": "Aquarium de Vendée",
     "commune": "Talmont-Saint-Hilaire",
@@ -10954,9 +10954,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_des_floralies/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/parc_des_floralies/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/parc_des_floralies/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/parc_des_floralies/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/parc_des_floralies/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/parc_des_floralies/photo_3.jpg?v=202609161558"
     ],
     "name": "Parc des Floralies",
     "commune": "La Tranche-sur-Mer",
@@ -11233,9 +11233,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_philippe_perrocheau/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/parc_philippe_perrocheau/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/parc_philippe_perrocheau/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/parc_philippe_perrocheau/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/parc_philippe_perrocheau/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/parc_philippe_perrocheau/photo_3.jpg?v=202609161558"
     ],
     "name": "Parc Philippe Perrocheau",
     "commune": "Coëx",
@@ -11436,9 +11436,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/cinema_le_grand_palace/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/cinema_le_grand_palace/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/cinema_le_grand_palace/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/cinema_le_grand_palace/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/cinema_le_grand_palace/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/cinema_le_grand_palace/photo_3.jpg?v=202609161558"
     ],
     "name": "Cinéma Le Grand Palace",
     "commune": "Les Sables-d'Olonne",
@@ -11586,8 +11586,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/l_etoile_de_mer/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/l_etoile_de_mer/photo_2.jpg?v=202609161542"
+      "planly_scraper/images/l_etoile_de_mer/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/l_etoile_de_mer/photo_2.jpg?v=202609161558"
     ],
     "name": "L'Étoile de Mer",
     "commune": "La Chaume, Les Sables",
@@ -11685,9 +11685,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/bar_rooftop_ventura/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/bar_rooftop_ventura/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/bar_rooftop_ventura/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/bar_rooftop_ventura/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/bar_rooftop_ventura/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/bar_rooftop_ventura/photo_3.jpg?v=202609161558"
     ],
     "name": "Bar Rooftop Ventura",
     "commune": "Port Olona, Les Sables",
@@ -11779,64 +11779,47 @@ var POIS=[
         "free_entry": null,
         "adult": null,
         "child": null,
-        "child_age_max": 12,
+        "child_age_max": null,
         "from_price": null,
         "options": [
           {
-            "label": "Brunch buffet (dimanche)",
+            "label": "Brunch buffet",
             "price": 45
           },
           {
-            "label": "Brunch enfant moins de 12 ans",
+            "label": "Brunch enfant (moins de 12 ans)",
             "price": 20
-          },
-          {
-            "label": "Petit-déjeuner buffet",
-            "price": 22
-          },
-          {
-            "label": "Petit-déjeuner express",
-            "price": 8
           }
         ],
-        "notes": "Entrée libre rooftop Ventura. Brunch dimanche avec 2 services (11h30 ou 13h). Parking privé 15€/nuit.",
+        "notes": "Brunch tous les dimanches. Entrée libre pour les concerts. Food & drinks sur place.",
         "source_url": "https://vertime-lessables.com/fr/page/rooftop-bar-ventura-vertime-les-sables-d-olonne-vendee.22842.html",
         "valid_period": null,
         "evidence": "Buffet à 45€ par personne (20€ pour les moins de 12 ans)",
-        "family_ticket": null,
         "stale": false,
         "source_label": "site officiel",
         "verified_at": "2026-09-16"
       },
-      "hours_text": "Ouvert 10h-23h30 tous les jours. Restaurant midi 11h30-15h (sauf dimanche brunch), soir 19h-21h30.",
+      "hours_text": "10h à 23h30 tous les jours",
       "closing_time": "23h30",
       "booking": "conseillée",
       "know": [
-        "Le bar rooftop Ventura propose une programmation riche avec coucher de soleil tous les soirs.",
-        "Situé à Vertime, l'établissement est tourné vers l'océan et face à Port-Olona.",
-        "C'est un lieu de rassemblement pour familles, amis et inconnus."
+        "Bar rooftop avec programmation riche et coucher de soleil tous les soirs",
+        "Situé à l'hôtel Vertime, face à Port-Olona aux Sables-d'Olonne",
+        "Lieu de rassemblement convivial pour manger, rire et vivre avec plaisir"
       ],
       "facilities": [
         {
           "name": "Piscine",
-          "detail": "35 m², solarium, clients hébergés uniquement, avril-septembre"
+          "detail": "35 m², 10h à 20h, avril à septembre, clients hébergés"
         },
         {
-          "name": "Bar rooftop",
-          "detail": "Cocktails signature, boissons, snacking, glaces"
-        },
-        {
-          "name": "Restaurant La Table Vertime",
-          "detail": "90 couverts intérieur + 30 en terrasse, cuisine de saison"
-        },
-        {
-          "name": "Espace lounge",
-          "detail": "Ambiance sixties, décor californien"
+          "name": "Serre végétalisée",
+          "detail": "Se métamorphose en jardin d'hiver en basse saison"
         }
       ],
       "services": {
         "terrace": true,
-        "view": "Océan, coucher de soleil",
+        "view": "océan, coucher de soleil",
         "live_music": null,
         "happy_hour": null,
         "restaurant_on_site": true,
@@ -11846,6 +11829,10 @@ var POIS=[
         "versions": null,
         "snack": null,
         "pmr": null
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php",
+        "instagram": "https://www.instagram.com/hotelvertime.lessables"
       },
       "official_source": {
         "url": "https://vertime-lessables.com/",
@@ -11857,9 +11844,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/the_goat/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/the_goat/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/the_goat/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/the_goat/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/the_goat/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/the_goat/photo_3.jpg?v=202609161558"
     ],
     "name": "The GOAT",
     "commune": "Port, Les Sables",
@@ -11947,12 +11934,6 @@ var POIS=[
     },
     "beach": null,
     "specific": {
-      "hours_text": "Ouvert à l'année",
-      "know": [
-        "Bistrot/bar à vin situé au 11 quai Guiné aux Sables-d'Olonne.",
-        "Établissement ouvert à l'année.",
-        "Contact: ohmygoat85@gmail.com, présent sur Facebook et Instagram."
-      ],
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
@@ -12048,8 +12029,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/bikini_beach/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/bikini_beach/photo_2.jpg?v=202609161542"
+      "planly_scraper/images/bikini_beach/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/bikini_beach/photo_2.jpg?v=202609161558"
     ],
     "name": "Bikini Beach",
     "commune": "Remblai, Les Sables",
@@ -12147,16 +12128,16 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/casino_joa_les_pins/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/casino_joa_les_pins/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/casino_joa_les_pins/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/casino_joa_les_pins/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/casino_joa_les_pins/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/casino_joa_les_pins/photo_3.jpg?v=202609161558"
     ],
     "name": "Casino JOA Les Pins",
     "commune": "Les Sables-d'Olonne",
     "cat": "🎬 Sorties & Détente",
     "note": "4.2",
-    "budgetBadge": "Prix non communiqué",
-    "budgetClass": "unknown",
+    "budgetBadge": "€ Petit budget",
+    "budgetClass": "paid",
     "trajet": {
       "voiture": "? min",
       "pied": "? min",
@@ -12171,8 +12152,8 @@ var POIS=[
     "category": "casino",
     "subcategory": "Casino & Jeux",
     "pricing": {
-      "adult": 0,
-      "child": 0,
+      "adult": 8.0,
+      "child": 5.0,
       "is_free": false
     },
     "duration": 120,
@@ -12237,52 +12218,93 @@ var POIS=[
     },
     "beach": null,
     "specific": {
-      "hours_text": "Ouvert de 9h à 3h",
-      "closing_time": "3h",
+      "pricing": {
+        "free_entry": null,
+        "adult": 8,
+        "child": 5,
+        "child_age_max": 14,
+        "from_price": null,
+        "options": [
+          {
+            "label": "Tarif réduit (membres Club JOA, retraités, +65 ans, famille nombreuse, PMR, étudiants, demandeurs d'emploi)",
+            "price": 7
+          },
+          {
+            "label": "Carte abonnement rechargeable",
+            "price": 1.5
+          },
+          {
+            "label": "Carte 5 places",
+            "price": 28.5
+          },
+          {
+            "label": "Carte 10 places",
+            "price": 55
+          },
+          {
+            "label": "Carte art & essai 6 places",
+            "price": 25.8
+          }
+        ],
+        "notes": "L'entrée du cinéma est indépendante du casino, accessible à toute la famille et aux personnes à mobilité réduite.",
+        "source_url": "https://www.joa.fr/casinos/fouras/loisirs/cinema",
+        "valid_period": null,
+        "evidence": "Plein Tarif : 8 € Tarif Réduit : 7 € ( Membre Club JOA , retraité, + de 65 ans, famille nombreuse, personne à mobilité réduite, carte étudiant, demandeur d'emploi) Tarif -14 ans : 5 €",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "hours_text": "Lundi, mardi, mercredi, jeudi, dimanche et jour férié : 9h à 3h. Vendredi, samedi et veille de jour férié : 9h à 4h.",
+      "closing_time": "4h",
       "age_min": 18,
+      "booking": "non",
       "know": [
-        "Casino avec machines à sous, jeux de table traditionnels et électroniques disponibles",
-        "Accès 24h/24 : jeux électroniques de 9h à 3h, jeux de table à partir de 20h30 (21h samedi pour la Boule)",
-        "Pièce d'identité obligatoire pour accéder aux jeux"
+        "Accès réservé aux personnes majeures, pièce d'identité obligatoire.",
+        "150 machines à sous de 0,01€ à 2€, jeux de table et loisirs (mini-golf, bowling, cinéma, dancefloor, escape game).",
+        "Restaurant et bars sur place, parking gratuit, wifi gratuit."
       ],
       "facilities": [
         {
+          "name": "Machines à sous",
+          "detail": "150 machines, mise 0,01€ à 2€"
+        },
+        {
           "name": "Black jack électronique",
-          "detail": "Ouvert de 9h à 3h"
+          "detail": "14 postes (7 intérieur, 7 terrasse), mise mini 2€, ouvert 9h à 3h"
         },
         {
           "name": "Roulette anglaise électronique",
-          "detail": "Ouvert de 9h à 3h"
-        },
-        {
-          "name": "Machines à sous",
-          "detail": "Ouvert de 9h à 3h"
+          "detail": "46 postes dont 8 en terrasse fumeur, mise mini 0,50€, ouvert 9h à 3h"
         },
         {
           "name": "Black jack",
-          "detail": "Ouvre à 20h30"
-        },
-        {
-          "name": "Ultimate poker",
-          "detail": "Ouvre à 20h30"
+          "detail": "Ouvert 20h30 à 3h (ou 4h samedi), mise mini 10€"
         },
         {
           "name": "Roulette anglaise",
-          "detail": "Ouvre à 20h30"
+          "detail": "1 table, mise mini 2€, ouvert 20h30 à 3h (ou 4h samedi)"
+        },
+        {
+          "name": "Boule",
+          "detail": "1 table, mise mini 1€, samedi 20h30 à 4h uniquement"
         }
       ],
       "services": {
-        "terrace": null,
-        "view": null,
+        "terrace": true,
+        "view": "vue sur les jardins",
         "live_music": false,
         "happy_hour": null,
         "restaurant_on_site": true,
-        "dress_code": null,
+        "dress_code": "tenue correcte exigée",
         "id_required": true,
         "screens": null,
         "versions": null,
-        "snack": false,
+        "snack": true,
         "pmr": null
+      },
+      "social": {
+        "instagram": "https://www.instagram.com/casino.joa.lespins",
+        "facebook": "https://www.facebook.com/CasinoJOA.LesPins"
       },
       "official_source": {
         "url": "https://www.joa.fr/casinos/sables-dolonne-les-pins",
@@ -12294,9 +12316,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/casino_les_sables_d_olonne/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/casino_les_sables_d_olonne/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/casino_les_sables_d_olonne/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/casino_les_sables_d_olonne/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/casino_les_sables_d_olonne/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/casino_les_sables_d_olonne/photo_3.jpg?v=202609161558"
     ],
     "name": "Casino Les Sables d'Olonne",
     "commune": "Remblai, Les Sables",
@@ -12385,9 +12407,9 @@ var POIS=[
     "beach": null,
     "specific": {
       "pricing": {
-        "free_entry": null,
-        "adult": null,
-        "child": null,
+        "free_entry": true,
+        "adult": 0,
+        "child": 0,
         "child_age_max": null,
         "from_price": null,
         "options": [
@@ -12400,61 +12422,66 @@ var POIS=[
             "price": 30.0
           }
         ],
-        "notes": "Entrée gratuite au casino. Les tarifs indiqués concernent les coffrets cadeaux vendus à la caisse.",
+        "notes": "Entrée gratuite. Options : coffrets cadeaux avec tickets de jeu et consommations.",
         "source_url": "http://www.casino-sables-dolonne.fr/",
         "valid_period": null,
-        "evidence": null,
+        "evidence": "Coffret La Box Easy 5.00 € 5€ en ticket de jeu1 boisson sans alcool offerte. Coffret La Box Player 30.00 € 30€ de ticket de jeu1 boisson offerte (hors champagne)",
+        "family_ticket": null,
         "stale": false,
         "source_label": "site officiel",
         "verified_at": "2026-09-16"
       },
-      "hours_text": "Machines à sous, Roulette Anglaise Electronique, Black Jack électronique : Du dimanche au jeudi de 9h à 03h, Du vendredi au samedi 9h à 04h. Table de Boule : Du dimanche au jeudi de 20h à 02h, Du vendredi au samedi 21h à 03h. Table de Black Jack : Du dimanche au jeudi de 20h à 02h, Du vendredi au samedi 21h à 03h.",
+      "hours_text": "Du dimanche au jeudi de 9h à 3h. Du vendredi au samedi de 9h à 4h. Table de Boule et Black Jack : dimanche-jeudi 20h-2h, vendredi-samedi 21h-3h. Restaurant en service continu tous les jours.",
       "closing_time": "4h",
       "age_min": 18,
       "booking": "non",
       "know": [
-        "Interdit aux personnes mineures et aux interdits de jeux.",
-        "Situé sur le front de mer de l'Atlantique, proche du centre-ville des Sables d'Olonne.",
-        "Restaurant Le Plat'O Resto ouvert tous les jours en service continu."
+        "Entrée gratuite. Carte de fidélité BiHappy gratuite et anonyme permettant d'accéder directement en salle sans pièce d'identité.",
+        "75 machines à sous, 1 table de Boule 2000, 1 table de Blackjack, 6 postes de roulette anglaise électronique, 7 postes de Blackjack électronique.",
+        "Taux de redistribution : 92,87% des sommes jouées reversées. Restaurant Le Plat'O Resto sur place, ouvert tous les jours en service continu."
       ],
       "facilities": [
         {
           "name": "Machines à sous",
-          "detail": "75 machines"
+          "detail": "75 machines, mise à partir de 0,01€"
         },
         {
-          "name": "Boule 2000",
-          "detail": "1 table"
+          "name": "Table de Boule 2000",
+          "detail": "1 table, du dimanche au jeudi 20h-2h, vendredi-samedi 21h-3h"
         },
         {
-          "name": "Black Jack",
-          "detail": "1 table + 7 postes électroniques"
+          "name": "Table de Blackjack",
+          "detail": "1 table, du dimanche au jeudi 20h-2h, vendredi-samedi 21h-3h"
         },
         {
           "name": "Roulette anglaise électronique",
           "detail": "6 postes"
         },
         {
-          "name": "Restaurant Le Plat'O Resto",
-          "detail": "Restauration à toute heure"
+          "name": "Blackjack électronique",
+          "detail": "7 postes"
         },
         {
-          "name": "Bar",
-          "detail": null
+          "name": "Restaurant Le Plat'O Resto",
+          "detail": "Ouvert tous les jours en service continu"
         }
       ],
       "services": {
         "terrace": null,
-        "view": "Front de mer de l'Atlantique",
+        "view": "Sur le front de mer de l'Atlantique",
         "live_music": null,
         "happy_hour": null,
         "restaurant_on_site": true,
         "dress_code": null,
-        "id_required": true,
+        "id_required": false,
         "screens": null,
         "versions": null,
         "snack": true,
         "pmr": null
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/casino.lessables",
+        "instagram": "https://www.instagram.com/les_atlantes"
       },
       "official_source": {
         "url": "http://www.casino-sables-dolonne.fr/",
@@ -12551,9 +12578,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/centre_aqualudique_aqualonne/photo_1.jpg?v=202609161542",
-      "planly_scraper/images/centre_aqualudique_aqualonne/photo_2.jpg?v=202609161542",
-      "planly_scraper/images/centre_aqualudique_aqualonne/photo_3.jpg?v=202609161542"
+      "planly_scraper/images/centre_aqualudique_aqualonne/photo_1.jpg?v=202609161558",
+      "planly_scraper/images/centre_aqualudique_aqualonne/photo_2.jpg?v=202609161558",
+      "planly_scraper/images/centre_aqualudique_aqualonne/photo_3.jpg?v=202609161558"
     ],
     "name": "Centre Aqualudique Aqualonne",
     "commune": "Cayola, Les Sables",

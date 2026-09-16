@@ -34199,7 +34199,8 @@
       "booking": "empty",
       "know": "empty",
       "facilities": "empty",
-      "services": "empty"
+      "services": "empty",
+      "social": "empty"
     },
     "parking_main": null,
     "parking_others": [],
@@ -34316,64 +34317,47 @@
         "free_entry": null,
         "adult": null,
         "child": null,
-        "child_age_max": 12,
+        "child_age_max": null,
         "from_price": null,
         "options": [
           {
-            "label": "Brunch buffet (dimanche)",
+            "label": "Brunch buffet",
             "price": 45
           },
           {
-            "label": "Brunch enfant moins de 12 ans",
+            "label": "Brunch enfant (moins de 12 ans)",
             "price": 20
-          },
-          {
-            "label": "Petit-déjeuner buffet",
-            "price": 22
-          },
-          {
-            "label": "Petit-déjeuner express",
-            "price": 8
           }
         ],
-        "notes": "Entrée libre rooftop Ventura. Brunch dimanche avec 2 services (11h30 ou 13h). Parking privé 15€/nuit.",
+        "notes": "Brunch tous les dimanches. Entrée libre pour les concerts. Food & drinks sur place.",
         "source_url": "https://vertime-lessables.com/fr/page/rooftop-bar-ventura-vertime-les-sables-d-olonne-vendee.22842.html",
         "valid_period": null,
         "evidence": "Buffet à 45€ par personne (20€ pour les moins de 12 ans)",
-        "family_ticket": null,
         "stale": false,
         "source_label": "site officiel",
         "verified_at": "2026-09-16"
       },
-      "hours_text": "Ouvert 10h-23h30 tous les jours. Restaurant midi 11h30-15h (sauf dimanche brunch), soir 19h-21h30.",
+      "hours_text": "10h à 23h30 tous les jours",
       "closing_time": "23h30",
       "booking": "conseillée",
       "know": [
-        "Le bar rooftop Ventura propose une programmation riche avec coucher de soleil tous les soirs.",
-        "Situé à Vertime, l'établissement est tourné vers l'océan et face à Port-Olona.",
-        "C'est un lieu de rassemblement pour familles, amis et inconnus."
+        "Bar rooftop avec programmation riche et coucher de soleil tous les soirs",
+        "Situé à l'hôtel Vertime, face à Port-Olona aux Sables-d'Olonne",
+        "Lieu de rassemblement convivial pour manger, rire et vivre avec plaisir"
       ],
       "facilities": [
         {
           "name": "Piscine",
-          "detail": "35 m², solarium, clients hébergés uniquement, avril-septembre"
+          "detail": "35 m², 10h à 20h, avril à septembre, clients hébergés"
         },
         {
-          "name": "Bar rooftop",
-          "detail": "Cocktails signature, boissons, snacking, glaces"
-        },
-        {
-          "name": "Restaurant La Table Vertime",
-          "detail": "90 couverts intérieur + 30 en terrasse, cuisine de saison"
-        },
-        {
-          "name": "Espace lounge",
-          "detail": "Ambiance sixties, décor californien"
+          "name": "Serre végétalisée",
+          "detail": "Se métamorphose en jardin d'hiver en basse saison"
         }
       ],
       "services": {
         "terrace": true,
-        "view": "Océan, coucher de soleil",
+        "view": "océan, coucher de soleil",
         "live_music": null,
         "happy_hour": null,
         "restaurant_on_site": true,
@@ -34383,6 +34367,10 @@
         "versions": null,
         "snack": null,
         "pmr": null
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php",
+        "instagram": "https://www.instagram.com/hotelvertime.lessables"
       },
       "official_source": {
         "url": "https://vertime-lessables.com/",
@@ -34397,7 +34385,8 @@
       "booking": "auto",
       "know": "auto",
       "facilities": "auto",
-      "services": "auto"
+      "services": "auto",
+      "social": "auto"
     },
     "parking_main": null,
     "parking_others": [],
@@ -35465,12 +35454,6 @@
     "rainy_day_activity": true,
     "conseil_planly": "En couple ou entre amis, craquez pour un cocktail pimenté maison en terrasse face au port en début de soirée. Renseignez-vous sur le programme des soirées DJ et live pour vivre The GOAT à son meilleur !",
     "specific": {
-      "hours_text": "Ouvert à l'année",
-      "know": [
-        "Bistrot/bar à vin situé au 11 quai Guiné aux Sables-d'Olonne.",
-        "Établissement ouvert à l'année.",
-        "Contact: ohmygoat85@gmail.com, présent sur Facebook et Instagram."
-      ],
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
@@ -35478,13 +35461,14 @@
     },
     "specific_status": {
       "pricing": "empty",
-      "hours_text": "auto",
+      "hours_text": "empty",
       "closing_time": "empty",
       "age_min": "empty",
       "booking": "empty",
-      "know": "auto",
+      "know": "empty",
       "facilities": "empty",
-      "services": "empty"
+      "services": "empty",
+      "social": "empty"
     },
     "parking_main": null,
     "parking_others": [],
@@ -35611,7 +35595,8 @@
       "booking": "empty",
       "know": "empty",
       "facilities": "empty",
-      "services": "empty"
+      "services": "empty",
+      "social": "empty"
     },
     "parking_main": null,
     "parking_others": [],
@@ -35724,52 +35709,93 @@
     "rainy_day_activity": true,
     "conseil_planly": "En couple, profitez d'un dîner romantique au restaurant avant de tenter votre chance sur les machines à sous. En solo ou entre amis, la discothèque et les cocktails vous garantissent une soirée mémorable !",
     "specific": {
-      "hours_text": "Ouvert de 9h à 3h",
-      "closing_time": "3h",
+      "pricing": {
+        "free_entry": null,
+        "adult": 8,
+        "child": 5,
+        "child_age_max": 14,
+        "from_price": null,
+        "options": [
+          {
+            "label": "Tarif réduit (membres Club JOA, retraités, +65 ans, famille nombreuse, PMR, étudiants, demandeurs d'emploi)",
+            "price": 7
+          },
+          {
+            "label": "Carte abonnement rechargeable",
+            "price": 1.5
+          },
+          {
+            "label": "Carte 5 places",
+            "price": 28.5
+          },
+          {
+            "label": "Carte 10 places",
+            "price": 55
+          },
+          {
+            "label": "Carte art & essai 6 places",
+            "price": 25.8
+          }
+        ],
+        "notes": "L'entrée du cinéma est indépendante du casino, accessible à toute la famille et aux personnes à mobilité réduite.",
+        "source_url": "https://www.joa.fr/casinos/fouras/loisirs/cinema",
+        "valid_period": null,
+        "evidence": "Plein Tarif : 8 € Tarif Réduit : 7 € ( Membre Club JOA , retraité, + de 65 ans, famille nombreuse, personne à mobilité réduite, carte étudiant, demandeur d'emploi) Tarif -14 ans : 5 €",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "hours_text": "Lundi, mardi, mercredi, jeudi, dimanche et jour férié : 9h à 3h. Vendredi, samedi et veille de jour férié : 9h à 4h.",
+      "closing_time": "4h",
       "age_min": 18,
+      "booking": "non",
       "know": [
-        "Casino avec machines à sous, jeux de table traditionnels et électroniques disponibles",
-        "Accès 24h/24 : jeux électroniques de 9h à 3h, jeux de table à partir de 20h30 (21h samedi pour la Boule)",
-        "Pièce d'identité obligatoire pour accéder aux jeux"
+        "Accès réservé aux personnes majeures, pièce d'identité obligatoire.",
+        "150 machines à sous de 0,01€ à 2€, jeux de table et loisirs (mini-golf, bowling, cinéma, dancefloor, escape game).",
+        "Restaurant et bars sur place, parking gratuit, wifi gratuit."
       ],
       "facilities": [
         {
+          "name": "Machines à sous",
+          "detail": "150 machines, mise 0,01€ à 2€"
+        },
+        {
           "name": "Black jack électronique",
-          "detail": "Ouvert de 9h à 3h"
+          "detail": "14 postes (7 intérieur, 7 terrasse), mise mini 2€, ouvert 9h à 3h"
         },
         {
           "name": "Roulette anglaise électronique",
-          "detail": "Ouvert de 9h à 3h"
-        },
-        {
-          "name": "Machines à sous",
-          "detail": "Ouvert de 9h à 3h"
+          "detail": "46 postes dont 8 en terrasse fumeur, mise mini 0,50€, ouvert 9h à 3h"
         },
         {
           "name": "Black jack",
-          "detail": "Ouvre à 20h30"
-        },
-        {
-          "name": "Ultimate poker",
-          "detail": "Ouvre à 20h30"
+          "detail": "Ouvert 20h30 à 3h (ou 4h samedi), mise mini 10€"
         },
         {
           "name": "Roulette anglaise",
-          "detail": "Ouvre à 20h30"
+          "detail": "1 table, mise mini 2€, ouvert 20h30 à 3h (ou 4h samedi)"
+        },
+        {
+          "name": "Boule",
+          "detail": "1 table, mise mini 1€, samedi 20h30 à 4h uniquement"
         }
       ],
       "services": {
-        "terrace": null,
-        "view": null,
+        "terrace": true,
+        "view": "vue sur les jardins",
         "live_music": false,
         "happy_hour": null,
         "restaurant_on_site": true,
-        "dress_code": null,
+        "dress_code": "tenue correcte exigée",
         "id_required": true,
         "screens": null,
         "versions": null,
-        "snack": false,
+        "snack": true,
         "pmr": null
+      },
+      "social": {
+        "instagram": "https://www.instagram.com/casino.joa.lespins",
+        "facebook": "https://www.facebook.com/CasinoJOA.LesPins"
       },
       "official_source": {
         "url": "https://www.joa.fr/casinos/sables-dolonne-les-pins",
@@ -35777,14 +35803,15 @@
       }
     },
     "specific_status": {
-      "pricing": "empty",
+      "pricing": "auto",
       "hours_text": "auto",
       "closing_time": "auto",
       "age_min": "auto",
-      "booking": "empty",
+      "booking": "auto",
       "know": "auto",
       "facilities": "auto",
-      "services": "auto"
+      "services": "auto",
+      "social": "auto"
     },
     "parking_main": null,
     "parking_others": [],
@@ -35795,7 +35822,9 @@
       "https://media.joa.fr/dynmed/6f524c8c-bf27-4b5b-80ff-908a0976da6b/1.91-1/1920/casino-joa-sables-olonne-gaetan-clement.jpg",
       "https://media.joa.fr/dynmed/60c67794-3ef0-4136-bdae-d3c3fac5d4cb/1.91-1/1920/casino-joa-les-sables-d-olonne-les-pins-joa.jpeg",
       "https://media.joa.fr/dynmed/ca8257a9-1cbb-412f-8fb5-a2a05e9dc640/1.91-1/1920/2_ananas-cafe.jpg"
-    ]
+    ],
+    "price_adult": 8.0,
+    "price_child": 5.0
   },
   {
     "id": "casino_les_sables_d_olonne",
@@ -37027,9 +37056,9 @@
     "conseil_planly": "En couple, combinez une soirée casino avec un dîner au restaurant sur place pour une nuit inoubliable aux Sables d'Olonne. En solo, le bar est parfait pour rencontrer d'autres joueurs dans une ambiance détendue.",
     "specific": {
       "pricing": {
-        "free_entry": null,
-        "adult": null,
-        "child": null,
+        "free_entry": true,
+        "adult": 0,
+        "child": 0,
         "child_age_max": null,
         "from_price": null,
         "options": [
@@ -37042,61 +37071,66 @@
             "price": 30.0
           }
         ],
-        "notes": "Entrée gratuite au casino. Les tarifs indiqués concernent les coffrets cadeaux vendus à la caisse.",
+        "notes": "Entrée gratuite. Options : coffrets cadeaux avec tickets de jeu et consommations.",
         "source_url": "http://www.casino-sables-dolonne.fr/",
         "valid_period": null,
-        "evidence": null,
+        "evidence": "Coffret La Box Easy 5.00 € 5€ en ticket de jeu1 boisson sans alcool offerte. Coffret La Box Player 30.00 € 30€ de ticket de jeu1 boisson offerte (hors champagne)",
+        "family_ticket": null,
         "stale": false,
         "source_label": "site officiel",
         "verified_at": "2026-09-16"
       },
-      "hours_text": "Machines à sous, Roulette Anglaise Electronique, Black Jack électronique : Du dimanche au jeudi de 9h à 03h, Du vendredi au samedi 9h à 04h. Table de Boule : Du dimanche au jeudi de 20h à 02h, Du vendredi au samedi 21h à 03h. Table de Black Jack : Du dimanche au jeudi de 20h à 02h, Du vendredi au samedi 21h à 03h.",
+      "hours_text": "Du dimanche au jeudi de 9h à 3h. Du vendredi au samedi de 9h à 4h. Table de Boule et Black Jack : dimanche-jeudi 20h-2h, vendredi-samedi 21h-3h. Restaurant en service continu tous les jours.",
       "closing_time": "4h",
       "age_min": 18,
       "booking": "non",
       "know": [
-        "Interdit aux personnes mineures et aux interdits de jeux.",
-        "Situé sur le front de mer de l'Atlantique, proche du centre-ville des Sables d'Olonne.",
-        "Restaurant Le Plat'O Resto ouvert tous les jours en service continu."
+        "Entrée gratuite. Carte de fidélité BiHappy gratuite et anonyme permettant d'accéder directement en salle sans pièce d'identité.",
+        "75 machines à sous, 1 table de Boule 2000, 1 table de Blackjack, 6 postes de roulette anglaise électronique, 7 postes de Blackjack électronique.",
+        "Taux de redistribution : 92,87% des sommes jouées reversées. Restaurant Le Plat'O Resto sur place, ouvert tous les jours en service continu."
       ],
       "facilities": [
         {
           "name": "Machines à sous",
-          "detail": "75 machines"
+          "detail": "75 machines, mise à partir de 0,01€"
         },
         {
-          "name": "Boule 2000",
-          "detail": "1 table"
+          "name": "Table de Boule 2000",
+          "detail": "1 table, du dimanche au jeudi 20h-2h, vendredi-samedi 21h-3h"
         },
         {
-          "name": "Black Jack",
-          "detail": "1 table + 7 postes électroniques"
+          "name": "Table de Blackjack",
+          "detail": "1 table, du dimanche au jeudi 20h-2h, vendredi-samedi 21h-3h"
         },
         {
           "name": "Roulette anglaise électronique",
           "detail": "6 postes"
         },
         {
-          "name": "Restaurant Le Plat'O Resto",
-          "detail": "Restauration à toute heure"
+          "name": "Blackjack électronique",
+          "detail": "7 postes"
         },
         {
-          "name": "Bar",
-          "detail": null
+          "name": "Restaurant Le Plat'O Resto",
+          "detail": "Ouvert tous les jours en service continu"
         }
       ],
       "services": {
         "terrace": null,
-        "view": "Front de mer de l'Atlantique",
+        "view": "Sur le front de mer de l'Atlantique",
         "live_music": null,
         "happy_hour": null,
         "restaurant_on_site": true,
         "dress_code": null,
-        "id_required": true,
+        "id_required": false,
         "screens": null,
         "versions": null,
         "snack": true,
         "pmr": null
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/casino.lessables",
+        "instagram": "https://www.instagram.com/les_atlantes"
       },
       "official_source": {
         "url": "http://www.casino-sables-dolonne.fr/",
@@ -37111,7 +37145,8 @@
       "booking": "auto",
       "know": "auto",
       "facilities": "auto",
-      "services": "auto"
+      "services": "auto",
+      "social": "auto"
     },
     "parking_main": null,
     "parking_others": [],

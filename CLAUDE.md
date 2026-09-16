@@ -119,6 +119,9 @@ Prototype mobile avec :
 - Casinos : les chiffres utiles au joueur sont demandés explicitement (nb de machines, de tables, jeux électroniques). Casino des Sables → 75 machines, Boule 2000, Black Jack 7 postes ; JOA ne publie pas ses quantités
 - Photos : un `search_keyword` par POI permet de rattraper une recherche d'images infructueuse (fait pour Aqualonne)
 - Maquette « Manger & terroir » (restaurants, marchés, dégustations) : https://claude.ai/code/artifact/bba72057-c5d2-462f-b655-a1df465b2e30 — à valider avant extraction et fiche
+- **Sites de groupe** (chaîne de casinos, d'hôtels, page de commune) : `official_candidate_urls` privilégie désormais les pages sous le chemin du lieu (+12) et pénalise les autres (-8). Sans ça, JOA remontait les pages des casinos de Gujan-Mestras ou Fouras au lieu de celles des Sables
+- `LINK_SCORES` : pages de jeux et de cartes/menus ajoutées au classement ; `SITE_QUERIES` lance une recherche Google ciblée par typologie (jeux d'un casino, carte d'un restaurant), même quand l'essentiel est déjà trouvé
+- **Réseaux sociaux** : `_social_links` récupère les liens Instagram et Facebook depuis le site officiel (et depuis le champ website quand c'est une page Facebook). Affichés en pastilles cliquables dans la fiche — un lien, jamais de contenu copié. Utile pour les bars, dont l'agenda ne vit que là
 
 ### 2026-09-16 — Avis : plus aucun texte republié
 - **Règle** : le texte des avis appartient à son auteur (confirmé par écrit par DataForSEO : leurs CGU n'accordent aucun droit sur les avis ni sur les images). L'app n'affiche plus d'extrait.

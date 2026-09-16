@@ -80,6 +80,7 @@ _SORTIES_FIELDS = {
     "know": {"label": "3 points « bon à savoir »", "type": "official"},
     "facilities": {"label": "installations, jeux ou salles", "type": "official"},
     "services": {"label": "terrasse, vue, musique live, restauration, tenue, versions", "type": "official"},
+    "social": {"label": "pages Instagram et Facebook du lieu", "type": "official"},
 }
 
 SPECIFIC_FIELDS = {
@@ -1067,7 +1068,16 @@ PARCS_LOISIRS = {"Jeux & Divertissement", "Parcs animaliers", "Aquariums", "Parc
 OFFICIAL_UA = "PlanlyBot/1.0 (guide touristique Vendee)"
 NOT_OFFICIAL_DOMAINS = ("facebook.", "instagram.", "tripadvisor.", "google.", "linktr.ee", "pagesjaunes.")
 LINK_SCORES = ((r"tarif|prix|billet|ticket", 10), (r"horaire|calendrier|ouverture|pratique|infos", 8),
+               (r"jeux?/|machine|roulette|poker|black.?jack|bingo|slot", 7),
+               (r"carte|menu|formule|midi", 7),
                (r"activit|attraction|animation|programme|planning|decouvr", 5), (r"reserv", 3))
+# recherche Google ciblée, en plus des tarifs et horaires, selon la typologie
+SITE_QUERIES = {
+    "Casino & Jeux": "jeux machines à sous tables",
+    "Restaurants": "carte menu formule midi",
+    "Piscines & Spa": "tarifs accès journée soins",
+    "Cinéma": "tarifs places",
+}
 LINK_PENALTY = re.compile(r"anniversaire|groupe|entreprise|seminaire|celibataire|evjf|evg|scolaire|ecole|comite|cse|"
                           r"mariage|recrut|emploi|mentions|cgv|cgu|politique|cookie|actualit|blog|presse", re.I)
 INSTITUTIONAL_RE = re.compile(r"(^|[.-])(tourisme|mairie|ville|agglo|communaute)[.-]|\.gouv\.fr$|(^|\.)vendee\.fr$", re.I)
@@ -1211,12 +1221,22 @@ def official_candidate_urls(home_page: dict, robots) -> list[str]:
     """Pages du site officiel classées par pertinence (liens de l'accueil + sitemap)."""
     home = home_page["url"]
     domain = _host(home)
+    # site de groupe (chaîne de casinos, d'hôtels, page de commune) : le lieu vit sous son propre chemin
+    base_path = urllib.parse.urlsplit(home).path.rstrip("/")
+    if base_path.count("/") < 2:
+        base_path = ""
     scores = {}
+
+    lang_re = re.compile(r"^/(en|de|es|it|nl|pt|zh|ja|cs|el|ru|pl|da|sv)(/|$)", re.I)
 
     def add(url, label=""):
         url = url.split("#")[0].rstrip("/")
+        if lang_re.match(urllib.parse.urlsplit(url).path):  # mêmes pages traduites : inutile de les relire
+            return
         if _same_site(url, domain) and url != home.rstrip("/"):
             s = _score_url(url, label)
+            if base_path:
+                s += 12 if urllib.parse.urlsplit(url).path.startswith(base_path + "/") else -8
             if s > 0:
                 scores[url] = max(s, scores.get(url, 0))
 
@@ -1240,6 +1260,20 @@ def official_candidate_urls(home_page: dict, robots) -> list[str]:
 AGGREGATORS = ("tripadvisor.", "thefork.", "lafourchette.", "petitfute.", "yelp.", "pagesjaunes.",
                "facebook.", "instagram.", "google.", "linktr.ee", "booking.com", "expedia.", "mapstr.",
                "opentable.", "michelin.", "annuaire-entreprises", "societe.com", "infogreffe.", "youtube.")
+
+
+SOCIAL_RE = re.compile(r"https?://(?:[a-z-]+\.)?(facebook|instagram)\.com/([^\"'<>\s?#]+)", re.I)
+SOCIAL_SKIP = re.compile(r"sharer|/share|/plugins/|/tr\b|dialog|intent|^p/$", re.I)
+
+
+def _social_links(html: str, seed: str = "") -> dict:
+    """Liens Instagram / Facebook du lieu : un simple lien, jamais de contenu copié."""
+    out = {}
+    for url, net, path in [(m.group(0), m.group(1).lower(), m.group(2)) for m in SOCIAL_RE.finditer(seed + " " + (html or ""))]:
+        if net in out or SOCIAL_SKIP.search(url) or len(path) < 2:
+            continue
+        out[net] = url.rstrip("/")
+    return out
 
 
 def _find_official_site(poi: dict) -> str:
@@ -1303,6 +1337,7 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
     today = datetime.date.today().isoformat()
     found, tried = {}, set()
     website = (poi.get("website") or "").strip()
+    social_seed = website if SOCIAL_RE.search(website) else ""
     if any(d in website for d in NOT_OFFICIAL_DOMAINS):
         website = ""
     if not website:
@@ -1367,16 +1402,24 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
     if home:
         home_page = _fetch_page(home, robots)
         if home_page:
+            social = _social_links(home_page["html"], social_seed)
+            if social:
+                found["social"] = social
+                log.info(f"    réseaux : {', '.join(social)}")
             pages = [home_page]
             for url in official_candidate_urls(home_page, robots)[:8]:
                 time.sleep(1)
                 pages.append(_fetch_page(url, robots))
             extract(site_label, pages)
 
-    # 2. Recherche Google limitée au domaine officiel
-    if home and not complete():
+    # 2. Recherche Google limitée au domaine officiel — toujours lancée quand la typologie
+    #    a une requête ciblée (pages de jeux, carte d'un restaurant…), même si l'essentiel est déjà trouvé
+    if home and (not complete() or SITE_QUERIES.get(poi.get("subcategory"))):
         urls = []
-        for q in ("tarifs prix", "horaires ouverture"):
+        queries = ["tarifs prix", "horaires ouverture"]
+        if SITE_QUERIES.get(poi.get("subcategory")):
+            queries.append(SITE_QUERIES[poi["subcategory"]])
+        for q in queries:
             for s in search_organic(f"site:{domain} {q}", depth=10):
                 if _same_site(s["url"], domain) and s["url"] not in tried and s["url"] not in urls:
                     urls.append(s["url"])

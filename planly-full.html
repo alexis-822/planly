@@ -1626,7 +1626,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609161542"></script>
+<script src="pois.js?v=202609161558"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2907,6 +2907,9 @@ function _renderPoiBody(p,mode){
     if(sv.pmr)stPills.push('<span class="bch-pill bch-pi">♿ Accès PMR</span>');
     if(sv.id_required)stPills.push('<span class="bch-pill bch-pw">🪪 Pièce d\'identité obligatoire</span>');
     if(sv.dress_code)stPills.push('<span class="bch-pill bch-pw">👔 '+_escHtml(String(sv.dress_code))+'</span>');
+    var soc=sp.social||{};
+    if(soc.instagram)stPills.push('<a class="bch-pill bch-pn" href="'+_escHtml(soc.instagram)+'" target="_blank" rel="noopener" style="text-decoration:none">📸 Instagram</a>');
+    if(soc.facebook)stPills.push('<a class="bch-pill bch-pn" href="'+_escHtml(soc.facebook)+'" target="_blank" rel="noopener" style="text-decoration:none">👍 Facebook</a>');
     (p.quickSpecs||[]).forEach(function(s){
       var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
       stPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
