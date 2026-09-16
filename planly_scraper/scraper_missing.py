@@ -83,6 +83,21 @@ _SORTIES_FIELDS = {
     "social": {"label": "pages Instagram et Facebook du lieu", "type": "official"},
 }
 
+# Manger & terroir : restaurants, marchés, dégustations (process_manger)
+_MANGER_FIELDS = {
+    "pricing": {"label": "formules, menus et prix moyen", "type": "official"},
+    "cuisine_type": {"label": "type de cuisine ou de lieu", "type": "official"},
+    "hours_text": {"label": "horaires des services", "type": "official"},
+    "closing_days": {"label": "jour(s) de fermeture", "type": "official"},
+    "market_days": {"label": "jours de marché", "type": "official"},
+    "products": {"label": "produits phares", "type": "official"},
+    "booking": {"label": "réservation obligatoire / conseillée / non", "type": "official"},
+    "booking_url": {"label": "lien de réservation", "type": "official"},
+    "services": {"label": "terrasse, vue, menu enfant, végétarien, à emporter, couvert, boutique", "type": "official"},
+    "know": {"label": "3 points « bon à savoir »", "type": "official"},
+    "social": {"label": "pages Instagram et Facebook du lieu", "type": "official"},
+}
+
 SPECIFIC_FIELDS = {
     "Plages & Côte": {
         "beach_type": {"label": "type de plage — utiliser exactement une de ces valeurs : sable_fin (sable fin, doux), sable_normal (sable ordinaire/grossier), galets, sable_galets (mixte sable et galets), rochers, sable_rochers (mixte sable et rochers)", "type": "enum", "options": ["sable_fin", "sable_normal", "galets", "sable_galets", "rochers", "sable_rochers"]},
@@ -132,25 +147,9 @@ SPECIFIC_FIELDS = {
         "bike_allowed": {"label": "vélo autorisé", "type": "bool"},
         "loop": {"label": "parcours en boucle", "type": "bool"},
     },
-    "Restaurants": {
-        "terrace_view": {"label": "terrasse et vue", "type": "enum", "options": ["aucune", "terrasse", "vue_mer", "terrasse_vue_mer"]},
-        "best_dish": {"label": "plat signature ou spécialité", "type": "text"},
-        "ambiance": {"label": "ambiance du restaurant", "type": "enum", "options": ["familial", "gastronomique", "bistrot", "brasserie", "décontracté", "chic"]},
-        "open_sunday": {"label": "ouvert le dimanche", "type": "bool"},
-        "reservation_needed": {"label": "réservation conseillée", "type": "bool"},
-        "avg_price": {"label": "prix moyen en euros par personne", "type": "text"},
-    },
-    "Marchés & Terroir": {
-        "market_days": {"label": "jours de marché", "type": "text"},
-        "covered": {"label": "marché couvert", "type": "bool"},
-        "local_products": {"label": "produits locaux phares", "type": "text"},
-    },
-    "Dégustations": {
-        "product_type": {"label": "type de produit", "type": "enum", "options": ["vin", "miel", "conserves", "sel", "bière", "autre"]},
-        "tasting_free": {"label": "dégustation gratuite", "type": "bool"},
-        "shop": {"label": "boutique sur place", "type": "bool"},
-        "guided_visit": {"label": "visite guidée disponible", "type": "bool"},
-    },
+    "Restaurants": _MANGER_FIELDS,
+    "Marchés & Terroir": _MANGER_FIELDS,
+    "Dégustations": _MANGER_FIELDS,
     "Nautisme": {
         "sport_type": {"label": "type de sport nautique", "type": "enum", "options": ["surf", "paddle", "kayak", "voile", "char_a_voile", "jet_ski", "plongée", "multi"]},
         "lesson_available": {"label": "cours disponibles", "type": "bool"},
@@ -1124,6 +1123,40 @@ Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
 
 
 SORTIES = {"Bars & Ambiance", "Casino & Jeux", "Cinéma", "Piscines & Spa"}
+MANGER = {"Restaurants", "Marchés & Terroir", "Dégustations"}
+
+MANGER_PROMPT = """Voici des pages web ({source}) sur "{name}" ({subcategory}, {commune}).
+{pages}
+
+---
+
+Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
+{{
+  "pricing": {{
+    "options": [{{"label": "ex: Formule du midi, Menu dégustation, Dégustation 3 vins", "price": nombre}}] (6 maximum, [] si aucun),
+    "avg_price": prix moyen par personne à la carte en euros (nombre) ou null,
+    "free_entry": true si l'entrée ou la dégustation est gratuite, sinon null,
+    "notes": précision courte (boissons comprises, supplément...) ou null,
+    "source_url": URL de la page des tarifs ou de la carte, ou null,
+    "valid_period": année ou saison si écrite, ou null,
+    "evidence": phrase recopiée mot pour mot contenant un prix, ou null
+  }},
+  "cuisine_type": type de cuisine ou de lieu en 1 à 3 mots (ex: fruits de mer, crêperie, brasserie, marché couvert, cave viticole) ou null,
+  "hours_text": horaires des services en texte court ou null,
+  "closing_days": jour(s) de fermeture ou null,
+  "market_days": jours de marché ou null,
+  "products": [produits phares, 5 maximum, [] si sans objet],
+  "booking": "obligatoire" ou "conseillée" ou "non" ou null,
+  "booking_url": URL de réservation ou null,
+  "services": {{"terrace": vrai/faux ou null, "view": texte court ou null, "kids_menu": vrai/faux ou null, "vegetarian": vrai/faux ou null, "takeaway": vrai/faux ou null, "covered": vrai/faux ou null, "shop": vrai/faux ou null}},
+  "know": [3 phrases courtes maximum, ce qu'il faut savoir avant d'y aller]
+}}
+
+- Recopie les prix exactement tels qu'écrits, sans calcul.
+- Ne recopie jamais la carte des plats : seulement les formules et menus avec leur prix.
+- N'invente ni horaire ni jour de fermeture : null si ce n'est pas écrit.
+- Marchés : market_days et products sont l'essentiel, covered dit si la halle est couverte.
+- Dégustations : options = les formules de dégustation, shop = boutique sur place."""
 
 SORTIES_PROMPT = """Voici des pages web ({source}) sur "{name}" ({subcategory}, {commune}).
 {pages}
@@ -1379,12 +1412,13 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
             ft = pr.get("family_ticket")
             if isinstance(ft, dict) and not _price_in_text(ft.get("price"), text):
                 pr["family_ticket"] = None
-            if pr.get("from_price") is not None and not _price_in_text(pr["from_price"], text):
-                pr["from_price"] = None
+            for f in ("from_price", "avg_price"):
+                if pr.get(f) is not None and not _price_in_text(pr[f], text):
+                    pr[f] = None
             pr["options"] = [o for o in (pr.get("options") or [])
                              if isinstance(o, dict) and _price_in_text(o.get("price"), text)][:5]
         if pr and pr.get("adult") is None and pr.get("child") is None and not pr.get("family_ticket") \
-                and pr.get("from_price") is None and not pr.get("options"):
+                and pr.get("from_price") is None and pr.get("avg_price") is None and not pr.get("options"):
             pr = None
         if pr:
             stale = _stale_year(pr)
@@ -1463,6 +1497,16 @@ def process_parcs_loisirs(client, poi: dict, report: list) -> dict:
                                   is_complete, "P&L", "parcs_loisirs")
 
 
+def process_manger(client, poi: dict, report: list) -> dict:
+    def is_complete(found, poi):
+        pr = found.get("pricing") or {}
+        prix = pr.get("options") or pr.get("avg_price") is not None or pr.get("free_entry")
+        return bool((found.get("hours_text") or found.get("market_days") or poi.get("opening_hours")) and prix)
+
+    return _run_official_pipeline(client, poi, report, list(_MANGER_FIELDS), MANGER_PROMPT,
+                                  is_complete, "M&T", "manger_terroir")
+
+
 def process_sorties(client, poi: dict, report: list) -> dict:
     def is_complete(found, poi):
         hours = found.get("hours_text") or poi.get("opening_hours")
@@ -1492,13 +1536,15 @@ def process_poi(client, poi: dict, dry_run: bool = False, report: list = None) -
         return poi
 
     # Familles lues sur le site officiel uniquement (pas de pages tierces)
-    if poi.get("subcategory") in PARCS_LOISIRS or poi.get("subcategory") in SORTIES:
+    if poi.get("subcategory") in PARCS_LOISIRS or poi.get("subcategory") in SORTIES or poi.get("subcategory") in MANGER:
         if not missing:
             return poi
         poi.setdefault("specific", {})
         poi.setdefault("specific_status", {})
         if poi["subcategory"] in SORTIES:
             return process_sorties(client, poi, report)
+        if poi["subcategory"] in MANGER:
+            return process_manger(client, poi, report)
         return process_parcs_loisirs(client, poi, report)
 
     # Étape 0 : remplir les champs de base (lat, lng, address...)

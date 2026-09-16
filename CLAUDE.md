@@ -123,6 +123,13 @@ Prototype mobile avec :
 - `LINK_SCORES` : pages de jeux et de cartes/menus ajoutées au classement ; `SITE_QUERIES` lance une recherche Google ciblée par typologie (jeux d'un casino, carte d'un restaurant), même quand l'essentiel est déjà trouvé
 - **Réseaux sociaux** : `_social_links` récupère les liens Instagram et Facebook depuis le site officiel (et depuis le champ website quand c'est une page Facebook). Affichés en pastilles cliquables dans la fiche — un lien, jamais de contenu copié. Utile pour les bars, dont l'agenda ne vit que là
 
+### 2026-09-16 — Manger & terroir (19 POIs)
+- Maquette validée → `_MANGER_FIELDS` + `MANGER_PROMPT` + `process_manger` (famille Restaurants, Marchés & Terroir, Dégustations) sur le pipeline commun
+- Champs : pricing (options = formules/menus, avg_price vérifié comme les autres prix), cuisine_type, hours_text, closing_days, market_days, products, booking, booking_url, services, know, social
+- **Couverture** : prix pour 8 POIs sur 19 (les autres sites ne publient pas leur carte → badge € / €€ de Google), type de cuisine 17/19, horaires 12/19, réseaux sociaux 13/19. Seul les Halles de La Chaume n'ont rien. Coût DataForSEO 0,38 $
+- App : fiche `_mt*` = bandeau (type, budget, services ou jours, distance), horaires, « Bon à savoir », bloc « Ce qu'on y mange » (formules et prix), bloc « Quand y aller » pour les marchés (jours, halle couverte, produits), carte « Y aller » (réservation, fermeture, estimation pour le groupe si prix moyen), pastilles services + liens Instagram/Facebook
+- Test de rendu : `scratchpad/test_mt_render.js` (comme `test_st_render.js` et `test_pl_render.js`)
+
 ### 2026-09-16 — Avis : plus aucun texte republié
 - **Règle** : le texte des avis appartient à son auteur (confirmé par écrit par DataForSEO : leurs CGU n'accordent aucun droit sur les avis ni sur les images). L'app n'affiche plus d'extrait.
 - `reviews_summary` (champ output_global) : synthèse 2 phrases générée par Claude Haiku à partir de ≥3 avis, reformulée, sans citation ni nom — script `scratchpad/summarize_reviews.py` (43/50 POIs ; 7 POIs sans avis stockés)

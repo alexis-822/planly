@@ -20368,8 +20368,80 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Réservez à l'avance, surtout en saison estivale : cette adresse locale se remplit vite ! Optez pour une table en soirée pour profiter pleinement de l'ambiance du vieux port.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "Menu Passion",
+            "price": 49.5
+          },
+          {
+            "label": "Menu Révélation",
+            "price": 79.5
+          },
+          {
+            "label": "Menu des Petits (moins de 10 ans)",
+            "price": 24.0
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Carte à la carte avec ardoise du jour, plateaux de fruits de mer à composer, vins à la carte",
+        "source_url": "https://restaurant-la-cotriade.com/la-carte-et-les-menus",
+        "valid_period": null,
+        "evidence": "Menu Passion 49,50€ Servi tous les jours, midi et soir",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "Poissons et fruits de mer",
+      "hours_text": "Ouvert midi et soir tous les jours en saison d'été, 2ème service à 21h15 ou 21h30 au plus tard certains soirs",
+      "closing_days": "Mardi 1er septembre, puis tous les lundis de septembre",
+      "products": [
+        "Thon rouge Bluefin",
+        "Homard bleu du vivier",
+        "Plateau de fruits de mer",
+        "La Belle Cotriade (bouillabaisse bretonne revisitée)",
+        "Poissons frais de criée (bar, turbot, dorade, Saint-Pierre)"
+      ],
+      "booking": "conseillée",
+      "booking_url": "https://restaurant-la-cotriade.com/",
+      "services": {
+        "terrace": true,
+        "view": "Face au port de pêche et au chenal, terrasse ombragée",
+        "kids_menu": true,
+        "vegetarian": null,
+        "takeaway": true,
+        "covered": null,
+        "shop": null
+      },
+      "know": [
+        "Restaurant Michelin 2026 (5e année consécutive), situé au cœur du port de pêche des Sables-d'Olonne",
+        "Cuisine ouverte : vous choisissez le poisson directement sur l'étal garni de glace face au port, puis le chef le prépare",
+        "Petits chiens autorisés en intérieur dans leur panier, autres chiens bienvenus en terrasse"
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/lacotriadelessablesdolonne",
+        "instagram": "https://www.instagram.com/lacotriadelessablesdolonne"
+      },
+      "official_source": {
+        "url": "https://restaurant-la-cotriade.com/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "auto",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "auto",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:42:14.503013+00:00",
@@ -20624,8 +20696,51 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En famille, profitez de la terrasse face à l'océan pour un déjeuner avec les enfants — la carte galettes-crêpes convient à tous les âges. En couple, réservez en avance pour un dîner au coucher du soleil sur l'Atlantique.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "cuisine_type": "Crêperie",
+      "hours_text": "Mar - Jeu 12h00 - 21h30 | Ven - Sam 12h00 - 21h45 | Dimanche 12h00 - 21h30",
+      "closing_days": "Lundi",
+      "products": [
+        "Crêpes salées",
+        "Crêpes sucrées",
+        "Salades",
+        "Bowls",
+        "Desserts maison"
+      ],
+      "booking": "conseillée",
+      "booking_url": "https://www.lapancarte.fr",
+      "services": {
+        "terrace": true,
+        "view": "Face mer, face à l'océan",
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": null,
+        "shop": null
+      },
+      "know": [
+        "Fermeture prévue du 14 au 21 décembre 2025 inclus",
+        "Terrasse face à l'océan avec cidre artisanal bio et glace confectionnée par un Maître Artisan Glacier",
+        "Ambiance boisée et végétale, cuisine faite maison en collaboration avec des artisans et producteurs locaux"
+      ],
+      "official_source": {
+        "url": "https://www.lapancarte.fr/.",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "auto",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "auto",
+      "services": "auto",
+      "know": "auto",
+      "social": "empty"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:42:35.185504+00:00",
@@ -20706,8 +20821,53 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En couple, réservez une table en terrasse côté mer pour profiter du coucher de soleil sur l'Atlantique. En famille, venez tôt pour éviter l'attente et laisser les enfants observer les bateaux depuis la promenade.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "cuisine_type": "Fruits de mer, cuisine française",
+      "hours_text": "Lundi à dimanche 09:00 - 19:00",
+      "products": [
+        "Tataki de thon",
+        "Moules frites",
+        "Crêpes",
+        "Burger",
+        "Filet de poisson aux agrumes"
+      ],
+      "booking": "conseillée",
+      "services": {
+        "terrace": true,
+        "view": "Vue sur la plage et la mer",
+        "kids_menu": true,
+        "vegetarian": true,
+        "takeaway": true,
+        "covered": null,
+        "shop": null
+      },
+      "know": [
+        "Restaurant situé sur la promenade de l'Amiral Lafargue avec vue directe sur la mer et la plage.",
+        "Réservations recommandées pour le déjeuner et le dîner en raison de l'affluence.",
+        "Accès aux personnes en fauteuil roulant : entrée, parking, toilettes et places assises accessibles."
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/placejoys",
+        "instagram": "https://www.instagram.com/placejoys"
+      },
+      "official_source": {
+        "url": "https://lesregates.shop/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:42:57.834067+00:00",
@@ -20945,8 +21105,87 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Pour les couples, réservez une table le soir et laissez-vous guider par le menu du Chef pour une expérience gastronomique inoubliable. En famille, le déjeuner est idéal pour profiter de la créativité des assiettes dans une ambiance chaleureuse et détendue.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "L'Escapade - Entrée & plat ou plat & dessert",
+            "price": 32
+          },
+          {
+            "label": "L'Escapade - Entrée, poisson ou viande & dessert",
+            "price": 39
+          },
+          {
+            "label": "L'Escapade - Entrée, poisson, viande & dessert",
+            "price": 49
+          },
+          {
+            "label": "L'Odyssée - Entrée, poisson ou viande, pré-dessert & dessert",
+            "price": 59
+          },
+          {
+            "label": "L'Odyssée - Entrée, poisson, viande, pré-dessert & dessert",
+            "price": 69
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Fromage travaillé optionnel +8€. Accords mets et vins disponibles en découverte ou prestige. Menu enfant 25€ jusqu'à 10 ans.",
+        "source_url": "https://lacertus-restaurant.fr/",
+        "valid_period": null,
+        "evidence": "Entrée & plat ou plat & dessert : 32 €",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "Gastronomie, cuisine de saison",
+      "hours_text": "Midi: 12h15-13h30, Soir: 19h15-20h30",
+      "closing_days": "Mardi, mercredi, jeudi midi",
+      "products": [
+        "Huître",
+        "Poisson de la criée",
+        "Andouillette",
+        "Cassoulet",
+        "Mogette"
+      ],
+      "booking": "obligatoire",
+      "services": {
+        "terrace": null,
+        "view": null,
+        "kids_menu": true,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": null,
+        "shop": null
+      },
+      "know": [
+        "Réservation obligatoire, uniquement le soir. Le midi, service sans réservation fermé mardi, mercredi et jeudi.",
+        "Restaurant gastronomique avec cuisine évolutive de saison basée sur les producteurs et fournisseurs locaux.",
+        "Lacertus signifie maquereau en latin, poisson populaire et local apprécié sur les côtes vendéennes."
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php",
+        "instagram": "https://www.instagram.com/lacertus_restaurant"
+      },
+      "official_source": {
+        "url": "https://lacertus-restaurant.fr/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "auto",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:43:10.600231+00:00",
@@ -21710,8 +21949,55 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En couple, réservez une table en terrasse pour profiter de la vue sur l'océan au coucher du soleil. En famille, venez à déjeuner pour savourer la choucroute de la mer, la spécialité maison plébiscitée par les habitués.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "cuisine_type": "Bar-Restaurant fruits de mer",
+      "hours_text": "Mercredi à dimanche : 9h00-15h00 et 19h00-23h00",
+      "closing_days": "Lundi et mardi",
+      "products": [
+        "Tartares",
+        "Burgers",
+        "Viandes et poissons frais de la criée",
+        "Choucroute de la Mer",
+        "Desserts maison et coupes glacées"
+      ],
+      "booking": "conseillée",
+      "booking_url": "https://www.la-ptite-cale.fr/",
+      "services": {
+        "terrace": true,
+        "view": "Vue sur la baie des Sables d'Olonne et l'océan",
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": null,
+        "shop": null
+      },
+      "know": [
+        "Terrasse avec vue imprenable sur la baie des Sables d'Olonne",
+        "Carte de saison faite maison avec produits frais et locaux",
+        "Possibilité de privatiser le lieu pour événements particuliers et professionnels"
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/profile.php",
+        "instagram": "https://www.instagram.com/laptitecale_lessables"
+      },
+      "official_source": {
+        "url": "https://www.la-ptite-cale.fr/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "auto",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "auto",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:43:26.922345+00:00",
@@ -21825,8 +22111,51 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En couple, optez pour le tartare de saumon mi-cuit et une sélection de sushis à partager face au quai — une escale japonaise avec vue sur le port. En famille, la carte variée conviendra à tous, même aux plus petits.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "cuisine_type": "Asiatique, Japonais, Sushis",
+      "hours_text": "Lundi 18:30-22:30 | Mardi-Dimanche 11:30-14:30 et 18:30-22:30",
+      "products": [
+        "Sushis",
+        "Recettes traditionnelles asiatiques",
+        "Plats vegan",
+        "Plats épicés"
+      ],
+      "services": {
+        "terrace": null,
+        "view": null,
+        "kids_menu": true,
+        "vegetarian": true,
+        "takeaway": null,
+        "covered": null,
+        "shop": null
+      },
+      "know": [
+        "Recettes savoureuses préparées de manière traditionnelle à partir d'ingrédients choisis avec soin",
+        "Ambiance conviviale, adapté aux amateurs comme aux découvreurs de recettes asiatiques",
+        "Accueil enfants et plats vegan disponibles"
+      ],
+      "social": {
+        "instagram": "https://www.instagram.com/umi._sushi",
+        "facebook": "https://www.facebook.com/profile.php"
+      },
+      "official_source": {
+        "url": "https://www.umisushi85.fr/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "empty",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:43:49.040972+00:00",
@@ -22985,8 +23314,48 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En famille ou entre amis, optez pour la terrasse en fin d'après-midi pour profiter de la vue sur l'océan tout en partageant pizzas et planches apéro. En solo, le comptoir bar est parfait pour une pause conviviale avec un cocktail maison.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "cuisine_type": "Pizzas à emporter",
+      "products": [
+        "Pizzas générales",
+        "Pizzas viande",
+        "Pizzas végétariennes",
+        "Pizzas fromage",
+        "Pizzas classiques"
+      ],
+      "booking": "non",
+      "services": {
+        "terrace": null,
+        "view": null,
+        "kids_menu": null,
+        "vegetarian": true,
+        "takeaway": true,
+        "covered": null,
+        "shop": false
+      },
+      "know": [
+        "Aucun établissement nommé 'Pizza Bar 12h03' aux Sables-d'Olonne n'apparaît dans les pages fournies.",
+        "Les pages contiennent des pizzerias situées à Saint-Prix, Mane, Oisy-le-Verger, Longperrier, Chavanod et Morteau.",
+        "Les données demandées sur 'Pizza Bar 12h03' à Les Sables-d'Olonne sont absentes de la documentation fournie."
+      ],
+      "official_source": {
+        "url": "https://pizzas-a-emporter.restaurants-de-france.fr",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "auto",
+      "hours_text": "empty",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "empty"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:44:11.652035+00:00",
@@ -23069,8 +23438,82 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En famille ou en couple, optez pour une table face aux quais pour profiter de l'animation du port tout en savourant votre pizza. Idéal après une balade sur le front de mer, même par temps couvert !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "Soirée Pizzas à Volonté adulte",
+            "price": 15
+          },
+          {
+            "label": "Soirée Pizzas à Volonté enfant",
+            "price": 5
+          },
+          {
+            "label": "Croque-Monsieur Bouillon Cosy",
+            "price": 10
+          },
+          {
+            "label": "Boeuf-Bourguignon Bouillon Cosy",
+            "price": 13
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Menu Enfant offert dès 20€ d'achat (restaurants participants uniquement). Livraison 3€.",
+        "source_url": "https://pizzerias.pizzacosy.fr/les-sables-dolonne/?utm_source=google&utm_medium=organic&utm_campaign=mybusiness-website",
+        "valid_period": null,
+        "evidence": "Tous les mardis soir, c'est soirée pizzas à volonté à 15€ et 5€ pour les enfants ! Nos deux nouvelles recettes BOUILLON COSY, à prix complètement accessibles : 10€* la Croque-Monsieur, et 13€* la Boeuf-Bourguignon",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "Pizzeria",
+      "products": [
+        "Pizzas",
+        "Croque-Monsieur Bouillon Cosy",
+        "Boeuf-Bourguignon Bouillon Cosy",
+        "Menu Enfant",
+        "Soirée Pizzas à Volonté"
+      ],
+      "booking": "conseillée",
+      "booking_url": "https://pizzerias.pizzacosy.fr/reservation",
+      "services": {
+        "terrace": true,
+        "view": null,
+        "kids_menu": true,
+        "vegetarian": null,
+        "takeaway": true,
+        "covered": null,
+        "shop": null
+      },
+      "know": [
+        "20 places assises intérieures et 32 places assises extérieures.",
+        "Livraison 3€ à Les Sables-d'Olonne, La Chaume, Olonne-sur-Mer, Le Château-d'Olonne ou en point de rencontre sur la plage.",
+        "Soirée Pizzas à Volonté tous les mardis soir uniquement sur place."
+      ],
+      "social": {
+        "instagram": "https://www.instagram.com/reel/DdUF3sElfnq",
+        "facebook": "https://www.facebook.com/pizzacosyfrance"
+      },
+      "official_source": {
+        "url": "https://pizzerias.pizzacosy.fr/les-sables-dolonne/?utm_source=google&utm_medium=organic&utm_campaign=mybusiness-website",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "empty",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "auto",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:44:24.649877+00:00",
@@ -23302,8 +23745,79 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Pour les couples, réservez impérativement une table en véranda pour profiter de la vue sur l'océan au coucher du soleil — un cadre romantique exceptionnel. Les gastronomes solo apprécieront d'échanger avec le sommelier pour composer un accord mets et vins sur-mesure.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "Entrée, plat & dessert",
+            "price": 55
+          },
+          {
+            "label": "Entrée, plat, interlude & dessert",
+            "price": 64
+          },
+          {
+            "label": "Les deux entrées, plat, interlude & dessert",
+            "price": 77
+          },
+          {
+            "label": "Menu Face à la Mer (7 temps)",
+            "price": 110
+          },
+          {
+            "label": "Accord mets et vins 3 verres (de 10 cl)",
+            "price": 33
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Accord mets et vins disponible en 3, 4 ou 6 verres (6 verres à 55€)",
+        "source_url": "https://lequaidessaveurs.net/menu-saveurs",
+        "valid_period": null,
+        "evidence": "Entrée, plat, interlude & dessert : 64 € Les deux entrées, plat, interlude & dessert : 77 €",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "Gastronomique, fruits de mer",
+      "hours_text": "Ouverture le soir du mercredi au dimanche. Ouverture le midi du jeudi au dimanche.",
+      "closing_days": "Lundi et mardi",
+      "products": [
+        "Filet de poisson de la criée",
+        "Homard",
+        "Gravlax de lotte",
+        "Quasi de veau",
+        "Pastèque"
+      ],
+      "booking": "conseillée",
+      "booking_url": "https://lequaidessaveurs.net/",
+      "know": [
+        "Restaurant gastronomique dirigé par le Chef Maxime Dourdin et son épouse Estelle.",
+        "Menus à 7 temps mettant en avant les produits de la mer et créations culinaires.",
+        "Prise de commande jusqu'à 13h le midi et 20h45 le soir pour les menus."
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/RESTAURANT.LEQUAI.DES.SAVEURS.LESSABLESDOLONNE",
+        "instagram": "https://www.instagram.com/lequai.des.saveurs"
+      },
+      "official_source": {
+        "url": "http://www.lequaidessaveurs.net/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "auto",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "auto",
+      "services": "empty",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:44:42.948801+00:00",
@@ -23550,8 +24064,54 @@
     "animals_captive": false,
     "rainy_day_activity": false,
     "conseil_planly": "Passez en semaine vers 13h pour profiter du plein air sans foule et goûter les huîtres du jour dans leur plus simple expression. Pensez à réserver le week-end, ça part vite !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "cuisine_type": "fruits de mer, ostréiculture",
+      "hours_text": "Magasin : 9h-18h lun, mer, jeu, ven, sam ; 9h-16h30 dim. Dégustation : 11h-14h30 et 18h-19h30 tous les jours",
+      "closing_days": "mardi (magasin)",
+      "products": [
+        "Huîtres",
+        "Crevettes",
+        "Bulots",
+        "Rillettes d'huîtres",
+        "Vins vendéens"
+      ],
+      "booking": "obligatoire",
+      "services": {
+        "terrace": true,
+        "view": "Vue imprenable sur les parcs à huîtres",
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": null,
+        "shop": true
+      },
+      "know": [
+        "La dégustation sur place est ouverte de mi-avril à septembre, avec services supplémentaires en juillet-août en soirée. Réservation téléphonique obligatoire au 02 51 90 21 83.",
+        "La boutique ostréicole est ouverte toute l'année avec produits locaux (rillettes, terrines, soupes, vins, sels aromatisés).",
+        "Reprise en 2025 par trois gérants (Alban Cousseau, Benoît Le Guen, Sébastien Bourdel) qui perpétuent le savoir-faire local en circuit court."
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/people/La-Cabane-du-Payr%C3%A9/61572839566079",
+        "instagram": "https://www.instagram.com/lacabanedupayre"
+      },
+      "official_source": {
+        "url": "https://lacabanedupayre.fr",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "auto",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:44:43.260502+00:00",
@@ -23664,8 +24224,47 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Passez-y tôt le matin pour profiter des meilleurs produits frais et éviter l'affluence touristique. Les couples apprécieront une pause dégustation au bar à vins, tandis que les familles pourront composer un pique-nique maison pour la plage !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "cuisine_type": "marché couvert et forain",
+      "hours_text": "Marché alimentaire couvert : tous les jours 7h30 à 13h. Marché forain extérieur : mardi, vendredi et dimanche 8h à 13h30",
+      "market_days": "Marché forain : mardi, vendredi et dimanche",
+      "products": [
+        "Délices de la mer",
+        "Produits de la terre",
+        "Produits du terroir"
+      ],
+      "services": {
+        "terrace": null,
+        "view": null,
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": true,
+        "shop": true
+      },
+      "know": [
+        "Localisation : Boulevard Arago, 85100 Les Sables d'Olonne, à une dizaine de minutes à pied de la plage",
+        "L'édifice construit selon les plans de Montegilardi fait partie du patrimoine d'avant-garde de la ville",
+        "Marché alimentaire couvert ouvert tous les jours le matin, marché forain extérieur 3 jours par semaine"
+      ],
+      "official_source": {
+        "url": null,
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "empty",
+      "market_days": "auto",
+      "products": "auto",
+      "booking": "empty",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "empty"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:52:38.801203+00:00",
@@ -23778,8 +24377,25 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Arrivez dès l'ouverture pour trouver tous les stands ouverts et les meilleurs produits de la mer ! Combinez la visite avec une balade dans le vieux quartier de La Chaume, juste à deux pas.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "official_source": {
+        "url": null,
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "empty",
+      "hours_text": "empty",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "empty",
+      "booking": "empty",
+      "booking_url": "empty",
+      "services": "empty",
+      "know": "empty",
+      "social": "empty"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:52:52.721289+00:00",
@@ -23892,8 +24508,49 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Venez de bonne heure le matin pour profiter des meilleurs produits frais et éviter l'affluence estivale. En famille, laissez les enfants choisir leurs fruits et légumes chez les maraîchers locaux — une belle façon de découvrir les saveurs vendéennes !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "cuisine_type": "marché",
+      "market_days": [
+        "Place des Halles – face à l'église : jeudi / dimanche",
+        "Les Halles (avril à septembre) : mardi / mercredi / jeudi / vendredi / samedi / dimanche",
+        "Les Halles (octobre à mars) : jeudi / samedi / dimanche",
+        "La Parée (juillet/août) : lundi"
+      ],
+      "services": {
+        "terrace": null,
+        "view": null,
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": true,
+        "shop": null
+      },
+      "know": [
+        "Aucune information sur le Marché de Brétignolles-sur-Mer n'est présente dans les pages fournies",
+        "La page fournie concerne uniquement la Fédération Nationale des Marchés de France (site marchesdefrance.fr)",
+        "Données insuffisantes pour compléter ce formulaire"
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/F%C3%A9d%C3%A9ration-Nationale-des-Syndicats-des-Commer%C3%A7ants-des-March%C3%A9s-de-France-308167020058013"
+      },
+      "official_source": {
+        "url": "http://www.marchesdefrance.fr/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "auto",
+      "hours_text": "empty",
+      "closing_days": "empty",
+      "market_days": "auto",
+      "products": "empty",
+      "booking": "empty",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:53:08.527142+00:00",
@@ -23969,8 +24626,25 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Passez en fin de matinée pour profiter des meilleurs produits avant écoulement. En famille, c'est une belle occasion d'initier les enfants aux saveurs du terroir vendéen directement chez le producteur.",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "official_source": {
+        "url": null,
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "empty",
+      "cuisine_type": "empty",
+      "hours_text": "empty",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "empty",
+      "booking": "empty",
+      "booking_url": "empty",
+      "services": "empty",
+      "know": "empty",
+      "social": "empty"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": null,
@@ -24171,8 +24845,86 @@
     "animals_captive": false,
     "rainy_day_activity": false,
     "conseil_planly": "Venez de préférence par beau temps pour profiter de la balade dans les marais et des reflets du ciel sur les bassins. En famille, les enfants seront captivés par les explications des sauniers à la cabane-boutique — prévoyez un petit sachet de fleur de sel en souvenir !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "Gros Sel FOU 500g",
+            "price": 4.0
+          },
+          {
+            "label": "Gros Sel 500g AUX PETITS LEGUMES",
+            "price": 4.0
+          },
+          {
+            "label": "Gros Sel 500g FORESTIER AUX PETITS CHAMPIGNONS",
+            "price": 4.0
+          },
+          {
+            "label": "Gros Sel 500g AUX 3 ALGUES",
+            "price": 4.0
+          },
+          {
+            "label": "Assortiment GROS SEL Aromatisés (4x100g)",
+            "price": 5.1
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": null,
+        "source_url": "http://www.seldeliledolonne.com/",
+        "valid_period": null,
+        "evidence": "GROS SEL FOU 500g 4,00 €",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "producteur de sel marin, marais salant",
+      "hours_text": "Cabane de vente : du 1er juin 2026 au 30 septembre 2026, tous les jours (lundi au dimanche) de 9h à 19h. Marché : mercredi et samedi de 8h à 13h",
+      "market_days": "mercredi et samedi aux Halles Éphémères des Sables d'Olonne",
+      "products": [
+        "Gros Sel Marin",
+        "Gros Sel Aromatisé",
+        "Fleur de Sel",
+        "Sel Fin",
+        "Salicornes"
+      ],
+      "booking": "non",
+      "services": {
+        "terrace": null,
+        "view": "marais salants",
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": true,
+        "covered": null,
+        "shop": true
+      },
+      "know": [
+        "Exploitants : Julien Lardeux et Yohan-Paul Eveno, sauniers exploitant 80 aires salantes selon des méthodes traditionnelles",
+        "Cabane de vente en marais ouverte juin-septembre, présence marché toute l'année aux Halles Éphémères des Sables d'Olonne",
+        "Pas de visites guidées proposées ; découverte libre et gratuite des marais par sentiers de promenade"
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/selileolonne"
+      },
+      "official_source": {
+        "url": "http://www.seldeliledolonne.com/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "empty",
+      "market_days": "auto",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:53:21.390228+00:00",
@@ -24284,8 +25036,64 @@
     "animals_captive": false,
     "rainy_day_activity": false,
     "conseil_planly": "Idéal en couple pour une journée romantique entre vignes et dégustation. En famille avec des enfants grands, optez pour le circuit en voiturette électrique, plus accessible et tout aussi magique !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [],
+        "avg_price": null,
+        "free_entry": true,
+        "notes": "Visite et dégustation à 15h d'avril à septembre. Contact préalable souhaité.",
+        "source_url": null,
+        "valid_period": "avril à septembre",
+        "evidence": "Tarifs Gratuit",
+        "adult": 0,
+        "child": 0,
+        "family_ticket": null,
+        "stale": false,
+        "source_label": "office de tourisme",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "cave viticole",
+      "hours_text": "Visite et dégustation à 15h d'avril à septembre. Du mardi au samedi en journée complète sur réservation (avril à septembre).",
+      "products": [
+        "vins Loire Méridionale"
+      ],
+      "booking": "conseillée",
+      "services": {
+        "terrace": null,
+        "view": "vignoble, coteaux",
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": false,
+        "covered": null,
+        "shop": true
+      },
+      "know": [
+        "Site officiel des Vignobles Mourat situé en Loire Méridionale, Mareuil-sur-Lay.",
+        "Les vignobles sont basés sur des valeurs d'ouverture au monde et de patrimoine culturel régional.",
+        "Proposent dégustations, œnotourisme et visite des vignobles en vidéo."
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/vignoblesmourat",
+        "instagram": "https://www.instagram.com/vignoblesmourat"
+      },
+      "official_source": {
+        "url": "http://www.mourat.com/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:59:17.334413+00:00",
@@ -24295,7 +25103,9 @@
       "https://vignobles-mourat.fr/wp-content/uploads/2016/11/36-foudre-mdf-vignobles-mourat.png",
       "https://cdt85.media.tourinsoft.eu/upload/vignoble-mourat-degustatio-3.jpg",
       "https://vignobles-mourat.fr/wp-content/uploads/2016/10/10-terrasse-chais-vignobles-mourat.jpg"
-    ]
+    ],
+    "price_adult": 0.0,
+    "price_child": 0.0
   },
   {
     "id": "famille_mary",
@@ -24397,8 +25207,82 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En famille ou en couple, profitez des conseils avisés de l'équipe pour découvrir des miels insolites et repartir avec un souvenir gourmand typiquement vendéen. Une escapade idéale même par temps de pluie !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "Miel d'amandier à la pesée",
+            "price": 15.95
+          },
+          {
+            "label": "Miel de forêt de Vendée à la pesée",
+            "price": 18.95
+          },
+          {
+            "label": "Miel bio de châtaignier d'Isère à la pesée",
+            "price": 26.9
+          },
+          {
+            "label": "Préparation miel & gelée royale à la pesée",
+            "price": 48.0
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Tarifs à la pesée en €/kg, sous réserve de disponibilité",
+        "source_url": "https://www.famillemary.fr/les-sables-d-olonne",
+        "valid_period": null,
+        "evidence": "Miel d'amandier* – 15,95 €/kg",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "boutique de produits de la ruche",
+      "hours_text": "mardi - samedi : 10h – 12h30 / 14h30 – 19h",
+      "closing_days": "lundi, dimanche",
+      "products": [
+        "Miel de Vendée",
+        "Miel associé à la fleur de sel des Sables-d'Olonne",
+        "Gelée royale",
+        "Propolis",
+        "Pollen"
+      ],
+      "services": {
+        "terrace": null,
+        "view": "À quelques pas de la plage",
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": true,
+        "covered": null,
+        "shop": true
+      },
+      "know": [
+        "Boutique à quelques pas de la plage ouverte toute l'année",
+        "Dégustations de miels et découvertes de produits de la ruche sur place",
+        "Spécialité locale : miel de Vendée avec fleur de sel des Sables-d'Olonne"
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/famillemaryFR",
+        "instagram": "https://www.instagram.com/famille_mary"
+      },
+      "official_source": {
+        "url": "https://www.famillemary.fr/les-sables-d-olonne",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "auto",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "empty",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:59:36.419876+00:00",
@@ -24624,8 +25508,69 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En famille ou entre gourmets, profitez de l'atelier découpe d'anchois pour une expérience interactive et repartez avec quelques bocaux à déguster le soir même. Idéal par temps de pluie !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "Atelier Calendrier de l'Avent",
+            "price": 12
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Prix par enfant",
+        "source_url": "https://lasablaise.fr/produit/atelier-calendrier-avent-mercredi-18-novembre-2026",
+        "valid_period": null,
+        "evidence": "Tarif : 12€/enfant",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "conserverie de fruits de mer",
+      "products": [
+        "Sardines aux tomates séchées à l'huile d'olive",
+        "Soupe de Poissons MSC",
+        "Rillettes et tartinables de poisson",
+        "Marinades de poisson",
+        "Cœur de thon blanc fumé"
+      ],
+      "booking": "conseillée",
+      "services": {
+        "terrace": null,
+        "view": null,
+        "kids_menu": true,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": null,
+        "shop": true
+      },
+      "know": [
+        "Conserverie familiale implantée depuis 30 ans à Olonne-sur-Mer sur la côte atlantique.",
+        "Atelier enfants « Calendrier de l'Avent de la mer » au Comptoir de la Sablaise, réservation via l'office de tourisme.",
+        "Vente en ligne et en boutique de produits 100% français : soupes, conserves, tartinables, marinades et sauces."
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/ConserverieLaSablaise",
+        "instagram": "https://www.instagram.com/conserverie_la_sablaise"
+      },
+      "official_source": {
+        "url": "https://lasablaise.fr/",
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "empty",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": "2026-09-16T08:59:44.271509+00:00",
@@ -24701,8 +25646,62 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En couple ou entre amis, optez pour une dégustation guidée en fin de journée pour profiter pleinement des explications du vigneron. Une belle occasion de rapporter quelques bouteilles confidentielles directement à la source !",
-    "specific": {},
-    "specific_status": {},
+    "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "Tarif indiv. adulte",
+            "price": 5
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "À partir de 18 ans. Réservation obligatoire.",
+        "source_url": "https://www.payssaintgilles-tourisme.fr/agenda/visitez-nos-entreprises-domaine-saint-nicolas/",
+        "valid_period": "2026",
+        "evidence": "Tarif indiv. adulte Min. 5€",
+        "stale": false,
+        "source_label": "office de tourisme",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "cave viticole",
+      "hours_text": "10h00 à 11h15",
+      "products": [
+        "vins"
+      ],
+      "booking": "obligatoire",
+      "services": {
+        "terrace": null,
+        "view": "terroir dans les vignes",
+        "kids_menu": false,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": null,
+        "shop": null
+      },
+      "know": [
+        "Visite guidée du domaine viticole SAS Vignobles Michon dans le cadre des Journées Régionales de la Visite d'Entreprise.",
+        "Découverte du métier de vigneron : visite du terroir dans les vignes, présentation du chai, explication de la Biodynamie.",
+        "Jauge limitée à 15 personnes par session. Créneaux disponibles 21, 22, 23 et 24 octobre 2026 à 10h."
+      ],
+      "official_source": {
+        "url": null,
+        "verified_at": "2026-09-16"
+      }
+    },
+    "specific_status": {
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "empty",
+      "market_days": "empty",
+      "products": "auto",
+      "booking": "auto",
+      "booking_url": "empty",
+      "services": "auto",
+      "know": "auto",
+      "social": "empty"
+    },
     "parking_main": null,
     "parking_others": [],
     "scraped_at": null,

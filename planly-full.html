@@ -1212,6 +1212,17 @@ body{
 .st-know-src{font-size:11px;color:#A8A8A3;line-height:1.4;margin-top:12px;padding-top:10px;border-top:0.5px solid #f0ede4;}
 .st-warn{display:flex;align-items:center;gap:8px;padding:10px 13px;border-radius:12px;background:#FFFBEB;border:1px solid #FDE68A;color:#92400E;font-size:12px;line-height:1.45;margin-bottom:12px;}
 .st-item-detail{font-size:11px;color:#555;margin-top:3px;}
+/* ── MT — Manger & terroir (restaurants, marchés, dégustations) ── */
+.pl-block.meal{border:1.5px solid #E2CDB9;}
+.pl-block.meal .pl-block-hd{background:#7A3B12;}
+.pl-block.meal .pl-block-sub{color:#E8C9AE;}
+.pl-block.meal .pl-list{background:#FBF4EC;}
+.pl-block.market{border:1.5px solid #CFE0C0;}
+.pl-block.market .pl-block-hd{background:#3F6B2B;}
+.pl-block.market .pl-block-sub{color:#C6DEB4;}
+.pl-block.market .pl-list{background:#F4F8EF;}
+.mt-price{font-size:15px;font-weight:700;color:#7A3B12;flex-shrink:0;}
+.mt-day{font-size:13px;font-weight:700;color:#3F6B2B;width:78px;flex-shrink:0;}
 
 </style>
 </head>
@@ -1626,7 +1637,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609161558"></script>
+<script src="pois.js?v=202609161617"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2690,6 +2701,48 @@ function _stCinemaCard(p,sp){
     +(url?'<a class="pl-btn" href="'+_escHtml(url)+'" target="_blank" rel="noopener" style="justify-content:center;margin-top:12px">Voir les séances et réserver</a>':'')
     +'</div>';
 }
+// ── MT helpers (Manger & terroir) ──
+var MT_SUBCATS=['Restaurants','Marchés & Terroir','Dégustations'];
+var MT_ICON_MEAL='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8a3 3 0 0 0 6 0V3"/><path d="M9 11v10"/><path d="M17 3c-1.5 2-2 4-2 6 0 2 .7 2.6 2 3v9"/></svg>';
+var MT_ICON_MARKET='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.5 10.5A2 2 0 0 1 16.5 21h-9a2 2 0 0 1-2-1.5L4 9z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg>';
+function _mtMealBlock(p,sp){
+  var pr=sp.pricing||{},opts=(pr.options||[]).filter(function(o){return _plNum(o.price)!=null;}).slice(0,6);
+  var avg=_plNum(pr.avg_price);
+  if(!opts.length&&avg==null)return'';
+  var sub=sp.cuisine_type?_escHtml(String(sp.cuisine_type)):'Formules publiées par le lieu';
+  return'<div class="pl-block meal"><div class="pl-block-hd">'+MT_ICON_MEAL
+    +'<div class="pl-block-info"><div class="pl-block-title">Ce qu\'on y mange</div><div class="pl-block-sub">'+sub+'</div></div>'
+    +(avg!=null?'<div class="pl-block-badge">~'+_plEuro(avg)+' / pers</div>':'')+'</div>'
+    +'<div class="pl-list">'
+    +opts.map(function(o){return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(o.label||''))+'</div></div><div class="mt-price">'+_plEuro(_plNum(o.price))+'</div></div>';}).join('')
+    +(pr.notes?'<div class="st-item-detail" style="padding:2px 2px 0">'+_escHtml(String(pr.notes))+'</div>':'')
+    +'</div></div>';
+}
+function _mtMarketBlock(sp){
+  var days=sp.market_days?String(sp.market_days):'',prods=(sp.products||[]).slice(0,6);
+  if(!days&&!prods.length)return'';
+  var sv=sp.services||{};
+  return'<div class="pl-block market"><div class="pl-block-hd">'+MT_ICON_MARKET
+    +'<div class="pl-block-info"><div class="pl-block-title">Quand y aller</div><div class="pl-block-sub">'+(sv.covered?'Halle couverte':'En plein air')+'</div></div>'
+    +(days?'<div class="pl-block-badge">'+_escHtml(days).slice(0,28)+'</div>':'')+'</div>'
+    +'<div class="pl-list">'
+    +(sp.hours_text?'<div class="pl-item"><div class="mt-day">Horaires</div><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(sp.hours_text))+'</div></div></div>':'')
+    +(prods.length?'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">Ce qu\'on y trouve</div><div class="st-item-detail">'+_escHtml(prods.map(String).join(' · '))+'</div></div></div>':'')
+    +'</div></div>';
+}
+function _mtBookCard(p,sp){
+  var rows=[],pr=sp.pricing||{},avg=_plNum(pr.avg_price),g=_plGroup(),n=g.adults+g.kids.length;
+  if(sp.booking)rows.push(['Réservation',String(sp.booking).charAt(0).toUpperCase()+String(sp.booking).slice(1)]);
+  if(sp.closing_days)rows.push(['Fermeture',String(sp.closing_days)]);
+  if(avg!=null)rows.push(['Pour vous '+n+', à la carte','~'+_plEuro(avg*n)]);
+  if(!rows.length)return'';
+  var url=sp.booking_url||(sp.official_source&&sp.official_source.url)||'';
+  var v=(sp.official_source&&sp.official_source.verified_at)?sp.official_source.verified_at.split('-').reverse().join('/'):'';
+  return'<div class="pl-price"><div class="pl-price-hd"><div class="pl-price-title">Y aller</div></div>'
+    +'<div class="pl-price-lines">'+rows.map(function(r){return'<div class="pl-price-line"><span>'+r[0]+'</span><b>'+_escHtml(String(r[1])).slice(0,40)+'</b></div>';}).join('')+'</div>'
+    +'<div class="pl-price-ft"><div class="pl-price-src">Site officiel'+(v?', vérifié le '+v:'')+'</div>'
+    +(url?'<a class="pl-btn" href="'+_escHtml(url)+'" target="_blank" rel="noopener">'+(sp.booking_url?'Réserver':'Site officiel')+'</a>':'')+'</div></div>';
+}
 function _renderPoiBody(p,mode){
   var body=document.querySelector('.bs-poi-body');
   if(!body)return;
@@ -2873,6 +2926,35 @@ function _renderPoiBody(p,mode){
       +'</div>';
 
     pillsHtml='';
+
+  }else if(MT_SUBCATS.indexOf(sub)!==-1){
+    var mv=sp.services||{},mPr=sp.pricing||{},mAvg=_plNum(mPr.avg_price);
+    var mEuros=(p.budgetBadge||'').match(/^€+/);
+    var mServ=sp.hours_text&&/midi|soir/i.test(sp.hours_text)?'Midi et soir':(sp.market_days?String(sp.market_days).slice(0,14):'—');
+    ribbonItems=[
+      {val:sp.cuisine_type?String(sp.cuisine_type).slice(0,14):(sub==='Marchés & Terroir'?'Marché':'—'),lbl:'Type',cls:sp.cuisine_type?' bl':''},
+      {val:mAvg!=null?'~'+_plEuro(mAvg):(mEuros?mEuros[0]:'—'),lbl:'Budget',cls:''},
+      {val:mServ,lbl:sub==='Marchés & Terroir'?'Jours':'Services',cls:''},
+      {val:distMin+' min',lbl:'Distance',cls:''}
+    ];
+    sectionLabel=sub==='Restaurants'?'Le restaurant':sub==='Marchés & Terroir'?'Le marché':'La dégustation';
+    specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+_mtMealBlock(p,sp)+_mtMarketBlock(sp)+_mtBookCard(p,sp);
+    var mtPills=[];
+    if(mv.terrace)mtPills.push('<span class="bch-pill bch-ps">☀️ Terrasse</span>');
+    if(mv.view)mtPills.push('<span class="bch-pill bch-pi">🌊 '+_escHtml(String(mv.view).slice(0,30))+'</span>');
+    if(mv.kids_menu)mtPills.push('<span class="bch-pill bch-ps">👶 Menu enfant</span>');
+    if(mv.vegetarian)mtPills.push('<span class="bch-pill bch-pn">🥗 Options végétariennes</span>');
+    if(mv.takeaway)mtPills.push('<span class="bch-pill bch-pn">🥡 À emporter</span>');
+    if(mv.covered)mtPills.push('<span class="bch-pill bch-pi">☔ Halle couverte</span>');
+    if(mv.shop)mtPills.push('<span class="bch-pill bch-ps">🛍 Boutique sur place</span>');
+    var mSoc=sp.social||{};
+    if(mSoc.instagram)mtPills.push('<a class="bch-pill bch-pn" href="'+_escHtml(mSoc.instagram)+'" target="_blank" rel="noopener" style="text-decoration:none">📸 Instagram</a>');
+    if(mSoc.facebook)mtPills.push('<a class="bch-pill bch-pn" href="'+_escHtml(mSoc.facebook)+'" target="_blank" rel="noopener" style="text-decoration:none">👍 Facebook</a>');
+    (p.quickSpecs||[]).forEach(function(s){
+      var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
+      mtPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
+    });
+    pillsHtml=mtPills.length?'<div class="bch-pills-row">'+mtPills.join('')+'</div>':'';
 
   }else if(ST_SUBCATS.indexOf(sub)!==-1){
     var sv=sp.services||{},stAge=_plNum(sp.age_min);
