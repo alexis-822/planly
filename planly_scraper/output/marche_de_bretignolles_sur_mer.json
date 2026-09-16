@@ -1,0 +1,106 @@
+{
+  "id": "marche_de_bretignolles_sur_mer",
+  "name": "Marché de Brétignolles-sur-Mer",
+  "name_google": "Marché de Brétignolles (jeudi et le dimanche)",
+  "category": "Art de vivre",
+  "subcategory": "Marchés & Terroir",
+  "commune": "Brétignolles-sur-Mer",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.627443799999995,
+  "lng": -1.8546748,
+  "address": "3 Rue du Clocher, 85470 Bretignolles-sur-Mer",
+  "phone": null,
+  "website": "http://www.marchesdefrance.fr/",
+  "rating": 4.6,
+  "reviews_count": 332,
+  "rating_distribution": {
+    "1": 2,
+    "2": 3,
+    "3": 19,
+    "4": 85,
+    "5": 223
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [],
+  "reviews": [
+    {
+      "text": "Marché très vivant, avec de très belles Halles, un petit bar juste à côté pour prendre un verre entre amis, du choix en l'alimentaire, nombreux exposants même en période hivernale, des artisans et des produits de qualité. Je recommence vivement ce marché très agréable.",
+      "rating": 5,
+      "date": "2025-12-07 09:56:46 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très joli marché très coloré on trouve de tout une assiette de charcuterie ou d huître pour l'apéro. Bonne balade",
+      "rating": 5,
+      "date": "2026-08-30 10:57:49 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "un assez grand marché générique, autour des halles, toutes neuves, et bien occupées par de bons commerçants, boucherie, poissons, boulangerie, légumes, (on a essayé tout cela le jeudi 28 septembre) - on y a trouvé de bons produits alimentaires.",
+      "rating": 4,
+      "date": "2023-10-01 15:47:18 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "C'est un marché bien achalandé, on trouve de tout, vêtements, bibelots, bijoux, fruits et légumes, très agréable à parcourir, c'est une prolongation de celui des halles (espace couvert), il se tient les jeudi et dimanche en septembre.\nNe vous attendez pas à faire des affaires au niveau des fruits et légumes, fuyez le marché couvert, des noix à 12€ le kilo ! (oui 11€95...) des nectarines à 8€ (oui 7€90) quand même !\nFaut quand même pousser !\nPersonnellement je trouve ça honteux.\nOui, et je ne suis pas le dernier à vouloir que les maraîchers gagnent leur vie, mais là qui peut mettre ce prix ?!",
+      "rating": 3,
+      "date": "2021-09-22 16:18:16 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Grand marché, qui anime la ville. Les places de parking se font rare mais sa vaut le détour",
+      "rating": 5,
+      "date": "2026-08-21 15:57:20 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "14088494372969266484",
+  "place_id": "ChIJFbuBSexbBEgRND3s-PxihMM",
+  "wikipedia_description": null,
+  "description_short": "Un marché haut en couleurs autour de belles halles flambant neuves, où l'on trouve de tout : produits frais, artisans et saveurs locales.",
+  "description_long": "Le marché de Brétignolles-sur-Mer est l'un des rendez-vous incontournables de la côte vendéenne. Animé et coloré, il s'articule autour de superbes halles couvertes toutes neuves, accueillant bouchers, poissonniers, boulangers et maraîchers de qualité. À l'extérieur, les étals se multiplient : vêtements, bijoux, bibelots et produits du terroir. Pour l'apéro, on se laisse tenter par une assiette d'huîtres ou de charcuterie, avant de rejoindre le petit bar attenant pour un verre entre amis. Actif même en hiver, ce marché fait battre le cœur du village.",
+  "tags": [
+    "marché",
+    "produits frais",
+    "terroir",
+    "halles couvertes",
+    "artisans"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Venez de bonne heure le matin pour profiter des meilleurs produits frais et éviter l'affluence estivale. En famille, laissez les enfants choisir leurs fruits et légumes chez les maraîchers locaux — une belle façon de découvrir les saveurs vendéennes !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:53:08.527142+00:00",
+  "enriched_at": "2026-09-16T08:53:08.527142+00:00",
+  "status": "complete",
+  "photos_original_urls": []
+}

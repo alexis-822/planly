@@ -1,0 +1,107 @@
+{
+  "id": "centre_aqualudique_aqualonne",
+  "name": "Centre Aqualudique Aqualonne",
+  "name_google": "Centre Aqualudique Aqualonne",
+  "category": "Sorties & Détente",
+  "subcategory": "Piscines & Spa",
+  "commune": "Cayola, Les Sables",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.491999799999995,
+  "lng": -1.7442278,
+  "address": "85 Rue des Plesses, 85180 Les Sables-d'Olonne",
+  "phone": "+33251953404",
+  "website": "https://piscines-des-sablesdolonne.fr/piscine-aqualonne/",
+  "rating": 4.1,
+  "reviews_count": 815,
+  "rating_distribution": {
+    "1": 50,
+    "2": 28,
+    "3": 96,
+    "4": 238,
+    "5": 403
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [],
+  "reviews": [
+    {
+      "text": "Je fréquente cette piscine depuis 10 mois pour des cours particuliers ainsi que collectifs pour mes petits-enfants, des moniteurs compétents, serviables, pédagogues notamment Chloé, Jules, Noé, Cyril( je ne connais pas les autres). Lorenzo et Julie sont top à l'accueil. Les sanitaires, cabines sont bien chauffés et propres. Le service technique et propreté parfait. Cette piscine est bien équipée pour les enfants. Le personnel agréable et sympathique.",
+      "rating": 5,
+      "date": "2026-07-10 21:31:50 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Piscine ok. Un espace nageur et détente. + Tobbogan\n\nPas d’accès facile pour personnes  handicapées marches partout.\n\nPersonnel fort peu agréable qui laisse les handicapés se débrouiller pour entrer seul dans la piscine.\nEspace bébé en plein courant d’air alors que les enfants n’ont que de l’eau jusqu’aux genoux et pareil refus des équipes de limiter les courants d’air en fermant les ouvertures.",
+      "rating": 3,
+      "date": "2026-06-27 23:52:00 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Aberrant de privatiser la moitié du bassin pour des activités aquabike ! J'ai payé ma place plein tarif - 10 min plus tard nous avons accès qu'à la partie peu profonde du bassin avec de la musique à fond ! Super la relaxation ! L'autre piscine étant dédiée à la nage , vraiment inutile, les activités doivent être faites sur le temps où ce n'est pas ouvert au public !",
+      "rating": 2,
+      "date": "2026-08-16 16:09:13 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Piscine sympathique mais avec quelques petits problèmes\nIl est dommage que le dimanche jour des enfants surtout en saison il y ait des cours d'aquabikes dans le petit bassin et la semaine dans le grand bassin il n'y a que 3 lignes pour les nageurs soit 2 lignes pour les nageurs ludiques 1 ligne pour les débutants 2 pour les très bons nageurs et 1 pour les cours\nNous avons pû aujourd'hui profiter de l'espace détente à l'extérieur qui est est très agréable\nEn conclusion il manque un bassin ou il faut réduire les entrées\nSinon le personnel de caisse, le personnel d'entretiens et les maîtres nageurs sont très compétents\nLa mairie des sables d'Olonne devrait revoir sa copie\nM Beaudouin",
+      "rating": 4,
+      "date": "2026-07-12 19:43:54 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Bassin ludique, toboggans, pataugeoire : dans l'eau c'est un plaisir pour les enfants ! Les parents apprécient les cabines famille avec planche à langer, les vestiaires propres, les casiers sans badge, pièce ou bracelet.",
+      "rating": 5,
+      "date": "2026-04-22 18:08:00 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "13406174269564181526",
+  "place_id": "ChIJJ9qgFz1oBEgRFtxaHnhMDLo",
+  "wikipedia_description": null,
+  "description_short": "Glissades, toboggans et bassins ludiques pour toute la famille ! Le complexe aquatique incontournable des Sables-d'Olonne.",
+  "description_long": "Le Centre Aqualudique Aqualonne aux Sables-d'Olonne est le terrain de jeux aquatique idéal pour petits et grands. Profitez d'un espace nageur, d'un bassin ludique avec toboggans, d'une pataugeoire pour les tout-petits, et d'un espace détente. Les familles apprécieront les cabines avec planche à langer, les vestiaires propres et les casiers sans badge. Des cours collectifs et particuliers sont proposés par des moniteurs compétents et pédagogues. À noter : certaines plages horaires sont réservées aux cours d'aquabike, pensez à vérifier les créneaux avant votre visite.",
+  "tags": [
+    "piscine",
+    "toboggan",
+    "aquabike",
+    "cours de natation",
+    "détente"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille, privilégiez les créneaux du matin en semaine pour profiter des toboggans et de la pataugeoire sans la foule. Vérifiez toujours les horaires des cours d'aquabike avant de venir pour avoir accès à l'intégralité des bassins !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:45:42.829463+00:00",
+  "enriched_at": "2026-09-16T09:45:42.829463+00:00",
+  "status": "complete",
+  "photos_original_urls": []
+}

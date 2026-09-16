@@ -1,0 +1,84 @@
+{
+  "id": "pizza_cosy",
+  "name": "Pizza Cosy",
+  "name_google": "Pizza Cosy",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4962571,
+  "lng": -1.7936212,
+  "address": "21 Quai René Guiné, 85100 Les Sables-d'Olonne",
+  "phone": "+33255890220",
+  "website": "https://pizzerias.pizzacosy.fr/les-sables-dolonne/?utm_source=google&utm_medium=organic&utm_campaign=mybusiness-website",
+  "rating": 4.7,
+  "reviews_count": 995,
+  "rating_distribution": {
+    "1": 34,
+    "2": 16,
+    "3": 20,
+    "4": 102,
+    "5": 823
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": "moderate",
+  "photos": [
+    "images/pizza_cosy/photo_1.jpg",
+    "images/pizza_cosy/photo_2.jpg",
+    "images/pizza_cosy/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "16342591411837426879",
+  "place_id": "ChIJOTno7KFnBEgRv1zrY02MzOI",
+  "wikipedia_description": null,
+  "description_short": "Pizzas généreuses face au port des Sables-d'Olonne, pour une pause gourmande les pieds dans l'eau.",
+  "description_long": "Pizza Cosy s'installe sur le Quai René Guiné, l'un des quais les plus animés des Sables-d'Olonne, avec une vue imprenable sur le port. Cette pizzeria propose des pizzas généreuses et savoureuses dans une atmosphère décontractée, idéale pour un repas convivial en famille, entre amis ou en amoureux. Profitez du cadre maritime exceptionnel tout en dégustant des pizzas généreusement garnies, préparées avec des produits de qualité. Une adresse simple et efficace pour se restaurer face à l'animation du port sablais.",
+  "tags": [
+    "pizza",
+    "port",
+    "vue mer",
+    "repas convivial",
+    "restauration rapide"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 60,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille ou en couple, optez pour une table face aux quais pour profiter de l'animation du port tout en savourant votre pizza. Idéal après une balade sur le front de mer, même par temps couvert !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:44:24.649877+00:00",
+  "enriched_at": "2026-09-16T08:44:24.649877+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/bb/ce/57/caption.jpg?w=1100&h=1100&s=1",
+    "https://pizzerias.pizzacosy.fr/wp-content/uploads/sb-instagram-feed-images/800842938_18340126402248082_6792214812206855116_nfull.webp",
+    "https://img02.restaurantguru.com/c6b5-Pizza-Cosy-Les-Sables-dOlonne-interior.jpg"
+  ]
+}

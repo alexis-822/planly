@@ -1,0 +1,82 @@
+{
+  "id": "les_regates",
+  "name": "Les Régates",
+  "name_google": "Les Régates",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4948978,
+  "lng": -1.7857488,
+  "address": "11 Prom. de l'Amiral Lafargue, 85100 Les Sables-d'Olonne",
+  "phone": "+33251325696",
+  "website": "https://lesregates.shop/",
+  "rating": 4.4,
+  "reviews_count": 2218,
+  "rating_distribution": {
+    "1": 98,
+    "2": 55,
+    "3": 122,
+    "4": 442,
+    "5": 1501
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": "moderate",
+  "photos": [
+    "images/les_regates/photo_1.jpg",
+    "images/les_regates/photo_2.jpg",
+    "images/les_regates/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "1368211732573977009",
+  "place_id": "ChIJi3lwcPxnBEgRsfmXWVLd_BI",
+  "wikipedia_description": null,
+  "description_short": "Vue imprenable sur l'océan et l'activité du port, Les Régates invite à savourer une cuisine généreuse face aux Sables-d'Olonne.",
+  "description_long": "Idéalement situé sur la Promenade de l'Amiral Lafargue aux Sables-d'Olonne, le restaurant Les Régates bénéficie d'un emplacement de choix face à l'Atlantique. Dans une atmosphère maritime et conviviale, cet établissement propose une cuisine mettant à l'honneur les produits de la mer locaux, typiques de la tradition vendéenne. Que vous soyez en famille, en couple ou entre amis, la terrasse offre un cadre idéal pour profiter du spectacle des voiliers et des va-et-vient du bord de mer. Un endroit parfait pour prolonger une belle journée de plage autour d'un repas de qualité.",
+  "tags": [
+    "restaurant",
+    "bord de mer",
+    "vue océan",
+    "fruits de mer",
+    "cuisine vendéenne"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En couple, réservez une table en terrasse côté mer pour profiter du coucher de soleil sur l'Atlantique. En famille, venez tôt pour éviter l'attente et laisser les enfants observer les bateaux depuis la promenade.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:42:57.834067+00:00",
+  "enriched_at": "2026-09-16T08:42:57.834067+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://rankeat.fr/wp-content/uploads/2025/07/les-regates-photo-google-1-1751738520.jpg",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/f8/20/c1/caption.jpg?w=1100&h=1100&s=1",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/e9/07/61/photo0jpg.jpg?w=1200&h=1200&s=1"
+  ]
+}

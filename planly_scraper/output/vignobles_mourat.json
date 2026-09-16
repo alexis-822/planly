@@ -1,0 +1,113 @@
+{
+  "id": "vignobles_mourat",
+  "name": "Vignobles Mourat",
+  "name_google": "Vignobles Mourat",
+  "category": "Art de vivre",
+  "subcategory": "Dégustations",
+  "commune": "Mareuil-sur-Lay",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.549707999999995,
+  "lng": -1.250321,
+  "address": "Route de la Roche sur Yon, 85320 Mareuil-sur-Lay-Dissais",
+  "phone": "+33251972010",
+  "website": "http://www.mourat.com/",
+  "rating": 4.6,
+  "reviews_count": 435,
+  "rating_distribution": {
+    "1": 11,
+    "2": 3,
+    "3": 13,
+    "4": 84,
+    "5": 324
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/vignobles_mourat/photo_1.jpg",
+    "images/vignobles_mourat/photo_2.jpg",
+    "images/vignobles_mourat/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Superbe expérience aux Vignobles Mourat ! ☀️🚴\nNous avons passé une excellente journée, notamment grâce à la balade à vélo au cœur des vignes, très agréable et parfaitement organisée. Les paysages sont magnifiques et le soleil était au rendez-vous, ce qui a rendu le moment encore plus magique. L’accueil est chaleureux, les dégustations de vins très appréciées et l’ensemble de l’expérience vraiment conviviale. Une très belle découverte que nous recommandons sans hésiter (et notamment l'Extra brut, le Pinot noir, et le Clos St André) !\n\nNous reviendrons sans doute en famille cet été (après tout, Saint-Germain-en-Laye / Mareuil, ce n'est que 5h00 de route 😉)",
+      "rating": 5,
+      "date": "2026-05-16 16:24:31 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très belle visite sauf qu'il a fait un peu chaud une accueil très sympathique",
+      "rating": 5,
+      "date": "2026-07-12 13:57:43 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très chouette journée en vélo qui nous avait été offerte. Bien organisée, parcours et domaine propre, accueillant et professionnel. Pique nique dans un petit moulin, visite des chais et dégustation. Journée au top ! Il y a des voiturettes électriques pour ceux qui ne veulent pas pédaler, vous pouvez aussi venir avec vos propres vélos électriques si vous voulez.\nBelle découverte de vins que je ne connaissais pas.",
+      "rating": 5,
+      "date": "2023-10-07 07:36:13 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Journée géniale. Circuit en voiture électrique. On traverse la campagne, les sous-bois, et bien sûr les vignes. Pique-nique au moulin, au milieu des vignes : super. Puis, visite des chais très bien expliquée, et dégustation. A refaire, vraiment 👍",
+      "rating": 5,
+      "date": "2024-04-16 19:05:46 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Superbe journée,\nPremièrement tout le personnel est accueillant, sympa, souriant...\nJournée à vélo très bien balisée, le pique nique au moulin avec des bons produits... Une visite des chais et des explications très très intéressantes et surtout bien amenées... On a passé un super moment, merci à l équipe passionnée. (on reviendra mais pas à moto pour plus de découvertes à ramener à la maison)",
+      "rating": 5,
+      "date": "2024-06-25 21:18:22 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "9107856626011691150",
+  "place_id": "ChIJq-Hf-TSiBkgRjlidilibZX4",
+  "wikipedia_description": null,
+  "description_short": "Balades à vélo entre les vignes, pique-nique au moulin et dégustation dans les chais : une journée d'exception en Vendée !",
+  "description_long": "Niché au cœur du vignoble vendéen à Mareuil-sur-Lay-Dissais, les Vignobles Mourat vous invitent à une expérience sensorielle et bucolique inoubliable. Partez explorer les vignes à vélo ou en voiturette électrique sur des parcours balisés, traversant sous-bois et paysages de campagne. La journée culmine autour d'un pique-nique convivial dans un moulin pittoresque, avant une visite guidée des chais et une généreuse dégustation des vins du domaine. Un accueil chaleureux, des produits de qualité et un cadre nature exceptionnel : une escapade à savourer sans modération.",
+  "tags": [
+    "vignoble",
+    "dégustation",
+    "vélo",
+    "pique-nique",
+    "oenotourisme"
+  ],
+  "audience": [
+    "couple",
+    "famille",
+    "solo"
+  ],
+  "age_min": 8,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 180,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": false,
+    "stroller": false
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Idéal en couple pour une journée romantique entre vignes et dégustation. En famille avec des enfants grands, optez pour le circuit en voiturette électrique, plus accessible et tout aussi magique !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:59:17.334413+00:00",
+  "enriched_at": "2026-09-16T08:59:17.334413+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://vignobles-mourat.fr/wp-content/uploads/2016/11/36-foudre-mdf-vignobles-mourat.png",
+    "https://cdt85.media.tourinsoft.eu/upload/vignoble-mourat-degustatio-3.jpg",
+    "https://vignobles-mourat.fr/wp-content/uploads/2016/10/10-terrasse-chais-vignobles-mourat.jpg"
+  ]
+}

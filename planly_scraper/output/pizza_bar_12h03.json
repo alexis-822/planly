@@ -1,0 +1,1160 @@
+{
+  "id": "pizza_bar_12h03",
+  "name": "Pizza Bar 12h03",
+  "name_google": "Pizza Bar 12h03",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4947206,
+  "lng": -1.7828964999999999,
+  "address": "66 Prom. Georges Clemenceau, 85100 Les Sables-d'Olonne",
+  "phone": "+33603428395",
+  "website": null,
+  "rating": 4.7,
+  "reviews_count": 1082,
+  "rating_distribution": {
+    "1": 45,
+    "2": 18,
+    "3": 17,
+    "4": 72,
+    "5": 930
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "monday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "tuesday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "wednesday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 11,
+          "minute": 0
+        },
+        "close": {
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ]
+  },
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 35
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 38
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 57
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "monday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 35
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 35
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 45
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 64
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 71
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 19
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 38
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 38
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 35
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 45
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 61
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 76
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 95
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 92
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 90
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 76
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ]
+    }
+  },
+  "price_level": "moderate",
+  "photos": [
+    "images/pizza_bar_12h03/photo_1.jpg",
+    "images/pizza_bar_12h03/photo_2.jpg",
+    "images/pizza_bar_12h03/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Petit passage a l imprévu on s arrête pour manger\n\nOn est très bien accueilli. Et quand on voit les pizzas qui arrivent sur les tables voisines on se dit on va se régaler.\n\nSa a pas louper les pizzas sont des tueries. Les sables d olonne ville du Vendée globe mais aussi ville de l excellente pizza.\nVous poure y aller les yeux fermés\n\nJuste attention ne prend pas les tickets restaurant PAPIER, ni les chq vacances",
+      "rating": 5,
+      "date": "2026-07-07 19:10:30 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Pizza exceptionnelle, la vraie pizza italienne. Généreuse, copieuse avec des produits de qualité. La pâte est moelleuse., Adresse incontournable si vous souhaitez manger une excellente pizza. L'équipe est super sympa ambiance. Familiale conviviale  On passe un très bon moment",
+      "rating": 5,
+      "date": "2026-08-08 23:45:14 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "C’était la deuxième fois que nous sommes venus et nous sommes toujours aussi satisfaits. Le service est au top et les pizzas également. Les produits sont de qualité et préparés « maison » (ex: le pesto). Pour les petits appétits, il y a des options « pizzas baguettes » très bien aussi.",
+      "rating": 5,
+      "date": "2026-07-24 17:11:58 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Excellent, de passage nous nous sommes arrêtés pour manger et je tiens à dire que les pizzas étaients excellentes, la pâte était incroyable.\nLe personnel était très convivial.\nJe recommande vivement.\nAu plaisir de revenir manger 👍",
+      "rating": 5,
+      "date": "2026-04-18 14:55:03 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très bonne pizzeria avec des choix originaux. Nous nous sommes régalés.\nVu mer en terrasse, service agréable.\n\nJe recommande",
+      "rating": 5,
+      "date": "2026-04-27 19:08:22 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "cocktails": 134,
+    "sables": 36,
+    "succulentes": 25,
+    "garniture": 146,
+    "planches": 22,
+    "apéro": 17,
+    "remblai": 13,
+    "océan": 28,
+    "pizza burrata": 7,
+    "pizza baguette": 6
+  },
+  "booking_url": null,
+  "cid": "4970245148403421126",
+  "place_id": "ChIJiY3EkEVnBEgRxs8xBaHb-UQ",
+  "wikipedia_description": null,
+  "description_short": "Bar à manger unique aux Sables d'Olonne : pizzas napolitaines maison, cocktails et vue sur l'océan pour une apéro-thérapie inoubliable.",
+  "description_long": "Le Pizza Bar 12h03 est un concept de bar à manger unique aux Sables d'Olonne, idéalement situé face au remblai avec une terrasse vue mer. Ici, la pizza napolitaine règne en maître : pâte étalée à la main, garnie de produits frais, moelleuse et généreuse. Au menu également, planches de charcuterie et fromages, sandwichs maison, pizzas dessert et glaces pour finir en beauté. L'ardoise cocktails, vins et bières complète parfaitement l'ambiance décontractée et conviviale du lieu. Sur place ou à emporter, c'est l'adresse incontournable pour une pause gourmande à l'heure de l'apéro.",
+  "tags": [
+    "pizza",
+    "cocktails",
+    "terrasse",
+    "vue mer",
+    "apéro"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 60,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille ou entre amis, optez pour la terrasse en fin d'après-midi pour profiter de la vue sur l'océan tout en partageant pizzas et planches apéro. En solo, le comptoir bar est parfait pour une pause conviviale avec un cocktail maison.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:44:11.652035+00:00",
+  "enriched_at": "2026-09-16T08:44:11.652035+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/98/ca/59/caption.jpg?w=1100&h=1100&s=1",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/9e/72/e3/caption.jpg?w=1100&h=1100&s=1",
+    "https://static.actu.fr/uploads/2022/03/e3e341afe132658e341afe132f2f34v.jpg"
+  ]
+}

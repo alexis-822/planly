@@ -1,0 +1,225 @@
+{
+  "id": "le_quai_des_saveurs",
+  "name": "Le Quai des Saveurs",
+  "name_google": "Le Quai des Saveurs",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4908247,
+  "lng": -1.7727827999999999,
+  "address": "8 Pl. de Strasbourg, 85100 Les Sables-d'Olonne",
+  "phone": "+33251238491",
+  "website": "http://www.lequaidessaveurs.net/",
+  "rating": 4.9,
+  "reviews_count": 1457,
+  "rating_distribution": {
+    "1": 9,
+    "2": 6,
+    "3": 17,
+    "4": 97,
+    "5": 1328
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 15
+        },
+        "close": {
+          "hour": 13,
+          "minute": 15
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 30
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ],
+    "monday": null,
+    "tuesday": null,
+    "wednesday": [
+      {
+        "open": {
+          "hour": 19,
+          "minute": 30
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 15
+        },
+        "close": {
+          "hour": 13,
+          "minute": 15
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 30
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 15
+        },
+        "close": {
+          "hour": 13,
+          "minute": 15
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 30
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 15
+        },
+        "close": {
+          "hour": 13,
+          "minute": 15
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 30
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ]
+  },
+  "popular_times": null,
+  "price_level": "moderate",
+  "photos": [],
+  "reviews": [
+    {
+      "text": "Une expérience exceptionnelle du début à la fin. La cuisine est raffinée, créative et parfaitement maîtrisée. Chaque assiette est un véritable plaisir pour les yeux autant que pour les papilles.\n\nLe service est attentif, professionnel et chaleureux, ce qui rend le moment encore plus agréable. Le cadre est élégant et l’ambiance propice à un excellent moment de détente.\n\nUne très belle adresse que je recommande sans hésitation aux amateurs de gastronomie. Nous reviendrons avec grand plaisir",
+      "rating": 5,
+      "date": "2026-06-22 12:13:55 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Nous avons passé un excellent moment à l’occasion de notre anniversaire de mariage au restaurant Le Quai des Saveurs, l’équipe de salle a été bienveillante et très sympathique, nous les remercions encore, le menu dégustation était savoureux, peut être un peu trop copieux, mais on ne va pas leur en vouloir ! Un beau restaurant avec une vue magnifique et de belles nappes blanches qu’on les aime. Merci de cette belle soirée et de votre gentille attention en fin de repas !",
+      "rating": 5,
+      "date": "2026-06-14 07:11:59 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Quel bel endroit, tres élégant, belle décoration, c'est chaleureux. Le service est parfait, tres professionnel, attentif, tout s'enchaine tres bien.  Que dire de la cuisine? C'est absolument délicieux,  beaucoup de saveurs, bien équilibrés. Que c'est bon tout simplement.  Nous avons pris le menu 4 plats, et l'accord mets-vins. Le sommelier propose des vins pas forcément connu et c'est une belle découverte! En résumé cet endroit va devenir un incontournable de la ville pour toutes ces raisons, alors allez y vite et n'attendez pas que les réservations soient booléen. Merci a cette team si agréable, accueillante, et souriante.",
+      "rating": 5,
+      "date": "2026-03-07 06:54:06 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Absolument parfait !\n\nTout y est\nA commencer par l'accueil et le service bravo au professionnalisme de ce jeune homme.\nEnsuite le décor, on a envie de s'installer, dans cette ambiance chaleureuse,\nreposante et bercés par la vue de la mer.\nEt enfin arrive la farandole des plats qui sont exceptionnels.\nNous avons pris le menu  proposé le midi qui était savoureux à souhait.\nDonc j'ose imaginer le menu 7 temps.\nNous reviendrons pour le déguster.\n\nMerci pour ce moment  culinaire rempli de passion, générosité et partage qui sont bien sûr les qualités essentielles des chefs de votre niveau.",
+      "rating": 5,
+      "date": "2026-02-27 16:53:06 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Chaque plat a régalé nos papilles ! Des amuses-bouche au dessert, nous avons découvert des saveurs et textures originales et plaisantes. La vue sur la mer est très agréable. Le service est de qualité et l’ambiance soignée. Nous recommandons vivement !",
+      "rating": 5,
+      "date": "2026-04-26 17:35:35 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "sables": 32,
+    "créativité": 28,
+    "accord mets et vins": 25,
+    "sommelier": 24,
+    "accords": 16,
+    "océan": 10,
+    "mignardises": 7,
+    "étoile michelin": 7,
+    "homard": 6,
+    "véranda": 5
+  },
+  "booking_url": [
+    {
+      "type": "reservation",
+      "title": "zenchef.com",
+      "url": "https://bookings.zenchef.com/results?rid=363861&lang=fr"
+    }
+  ],
+  "cid": "11325050363348794323",
+  "place_id": "ChIJ2UMwIoxnBEgR0zvQgk2pKp0",
+  "wikipedia_description": null,
+  "description_short": "Cuisine inventive et raffinée aux accents marins, avec une vue imprenable sur l'océan aux Sables-d'Olonne.",
+  "description_long": "Le Quai des Saveurs vous invite à une expérience gastronomique d'exception aux Sables-d'Olonne. Dans un cadre élégant et chaleureux, le chef sublime les produits locaux avec créativité et précision, des amuse-bouches aux mignardises. Chaque assiette, véritable œuvre d'art, ravit autant les yeux que les papilles. La carte des vins, conseillée par un sommelier attentionné, propose de beaux accords mets et vins. La véranda offre une vue sur l'océan qui achève de rendre ce moment absolument inoubliable. Une table étoilée au Guide Michelin, incontournable en Vendée.",
+  "tags": [
+    "gastronomie",
+    "vue mer",
+    "étoile michelin",
+    "produits locaux",
+    "accord mets et vins"
+  ],
+  "audience": [
+    "couple",
+    "solo"
+  ],
+  "age_min": 12,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 120,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Pour les couples, réservez impérativement une table en véranda pour profiter de la vue sur l'océan au coucher du soleil — un cadre romantique exceptionnel. Les gastronomes solo apprécieront d'échanger avec le sommelier pour composer un accord mets et vins sur-mesure.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:44:42.948801+00:00",
+  "enriched_at": "2026-09-16T08:44:42.948801+00:00",
+  "status": "complete",
+  "photos_original_urls": []
+}

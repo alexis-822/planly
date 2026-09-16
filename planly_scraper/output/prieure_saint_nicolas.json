@@ -1,0 +1,113 @@
+{
+  "id": "prieure_saint_nicolas",
+  "name": "Prieuré Saint-Nicolas",
+  "name_google": "Prieuré Saint-Nicolas - Eglise Artistique des Sables d'Olonne",
+  "category": "Patrimoine",
+  "subcategory": "Châteaux & Monuments",
+  "commune": "La Chaume, Les Sables",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4899262,
+  "lng": -1.794721,
+  "address": "3 Prom. Jean XXIII, 85100 Les Sables-d'Olonne",
+  "phone": null,
+  "website": null,
+  "rating": 4.6,
+  "reviews_count": 487,
+  "rating_distribution": {
+    "1": 6,
+    "2": 1,
+    "3": 22,
+    "4": 122,
+    "5": 336
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/prieure_saint_nicolas/photo_1.jpg",
+    "images/prieure_saint_nicolas/photo_2.jpg",
+    "images/prieure_saint_nicolas/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Nous avons fait le tour de ce prieuré, nous sommes tombé en plein exposition intéressante où nous avons pu faire le tour gratuitement.\nExposition de voiture sur les lieux également qui a rendu la balade sympa.",
+      "rating": 5,
+      "date": "2026-08-18 20:53:09 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Marche de noel 2025 à la chaume pas mal,mai manque quand même d'ambiance mais ça sera encore mieux l'année prochaine mais cela reste1 belle promenade de marche de noel avec les lumières et à l'intérieur  du prieute st nicolas très bien avec le coin des enfants ,père noel,coin contes de Noël bonnes fêtes de fin d'années",
+      "rating": 4,
+      "date": "2025-12-26 09:42:39 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Exposition superbe, avec très belle promenade.",
+      "rating": 5,
+      "date": "2026-08-04 21:47:45 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Jolie découverte de cette église tout proche du phare. L'exposition de tableaux sur le thème des femmes tenue à l'intérieur était superbe également.",
+      "rating": 4,
+      "date": "2025-09-23 14:03:57 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Magnifique prieuré où malheureusement, je n'ai pas pû rentrer !\n\nLa vue est belle avec les vagues qui viennent se fracasser sur les rochers en contrebas.\n\nLa grande esplanade devant le prieuré permet d'admirer ce bel édifice et de prendre le soleil... lorsqu'il y en a !",
+      "rating": 5,
+      "date": "2023-08-04 21:07:39 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "12485479980485507098",
+  "place_id": "ChIJiSu6faBnBEgRGvgWL-RVRa0",
+  "wikipedia_description": null,
+  "description_short": "Un prieuré médiéval face à l'océan, entre histoire et expositions culturelles surprenantes au cœur de La Chaume.",
+  "description_long": "Perché sur les hauteurs du quartier de La Chaume aux Sables-d'Olonne, le Prieuré Saint-Nicolas est un joyau patrimonial qui domine l'Atlantique. Depuis sa grande esplanade, le spectacle des vagues se fracassant sur les rochers est tout simplement saisissant. Ce monument accueille régulièrement des expositions temporaires gratuites — peintures, photographies, automobiles de collection — qui réservent de belles surprises aux visiteurs. À deux pas du phare de La Chaume, il s'inscrit parfaitement dans une belle promenade culturelle et maritime le long de la promenade Jean XXIII.",
+  "tags": [
+    "patrimoine",
+    "expo temporaire",
+    "vue mer",
+    "histoire",
+    "promenade"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 30,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": false,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Combinez la visite avec le phare de La Chaume tout proche et une balade sur la promenade pour profiter du panorama sur l'océan. Vérifiez au préalable les dates d'expositions temporaires, souvent gratuites et inattendues !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:09:06.161385+00:00",
+  "enriched_at": "2026-09-16T09:09:06.161385+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PrieureSaintNicolas-Drone---ALamoureux.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PrieureSaintNicolas-Rochers---ALamoureux.jpg",
+    "https://ville.lessablesdolonne.fr/media/copyright-alamoureux-vendee-expansion-les-sables-olonne-prieuresaintnicolas.jpg"
+  ]
+}

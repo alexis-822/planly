@@ -1,0 +1,115 @@
+{
+  "id": "umi_sushi",
+  "name": "UMI Sushi",
+  "name_google": "UMI SUSHI - les sables d’olonnes",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.49608,
+  "lng": -1.7920890999999999,
+  "address": "6 Quai René Guiné, 85100 Les Sables-d'Olonne",
+  "phone": "+33763113508",
+  "website": "https://www.umisushi85.fr/",
+  "rating": 4.8,
+  "reviews_count": 340,
+  "rating_distribution": {
+    "1": 6,
+    "2": 6,
+    "3": 7,
+    "4": 25,
+    "5": 296
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/umi_sushi/photo_1.jpg",
+    "images/umi_sushi/photo_2.jpg",
+    "images/umi_sushi/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "je me souviens des si bon sushis qu’ils faisaient à l’ouverture de leur établissement, bien garnis, le riz était… délicieux !\npuis, petit à petit, beaucoup de monde,\ndes produits moins qualitatifs, moins garnis (vraiment moins garnis).\nj’ai été chez le concurrent.\nce soir, j’ai tenté de nouveau,\nà deux doigts de ramener les boites tellement les sushis sont peu garnis.\net vraiment pas savoureux.\nla photo jointe est censée être un SAUMON cheese roll\npas juste du riz…",
+      "rating": 1,
+      "date": "2026-01-02 19:36:55 +00:00",
+      "owner_response": "Bonjour Marie <br><br>Vous suivre depuis l’ouverture, puis revenir après tout ce temps, c’est déjà une belle preuve d’attachement merci pour ça.<br>Voir notre établissement vivre, se remplir et trouver son public est une vraie fierté… même si cela nous oblige parfois à aller un peu plus vite que nous ne le voudrions.<br><br>La photo montre le dernier morceau d’un saumon roll. Comme souvent en bout de roll, la garniture peut paraître plus discrète.<br>Cela dit, nous entendons votre ressenti et prenons en compte votre retour.<br><br>Votre regard compte, surtout venant de quelqu’un qui a connu nos débuts.<br>Nous espérons vous convaincre lors d’un prochain passage que le plaisir peut encore être au rendez-vous du premier au dernier maki.<br><br>Merci pour votre fidélité et votre franchise.<br><br>UMI SUSHI "
+    },
+    {
+      "text": "Le personnel était très accueillant 🫶\nJ’ai choisi le menu brochettes : tout était bon, sauf celle au poulet 🥲. Je n’ai pas trop aimé la sauce, mais ça restait mangeable.",
+      "rating": 5,
+      "date": "2025-07-27 12:16:56 +00:00",
+      "owner_response": "Merci pour votre retour et pour vos compliments sur l’accueil et la majorité de votre menu brochettes.<br>Nous sommes désolés que la brochette au poulet ne vous ait pas totalement convaincu.<br>Nous espérons avoir le plaisir de vous faire goûter d’autres spécialités qui sauront pleinement vous séduire lors d’une prochaine visite."
+    },
+    {
+      "text": "Nous avions l'habitude d'y aller avec ma fille tous les semaines mais c'est devenu beaucoup trop cher. D'autant que si vous prenez un tartare saumon mi-cuit (tres bon d'ailleurs) mais sans accompagnement, on vous fait payer quand même le menu, soit 17.90€ ce qui est exorbitant pour un tartare seul.\nDéçues car nous avions instauré ici notre petit rituel, ce sera autre part, tant pis !",
+      "rating": 3,
+      "date": "2026-04-03 10:38:02 +00:00",
+      "owner_response": "Bonjour Noémie,<br><br>Merci beaucoup pour votre fidélité, cela nous touche sincèrement de savoir que vous aviez instauré ce petit rituel chez nous.<br><br>Nous sommes désolés d’apprendre votre déception concernant les prix. Cependant concernant le tartare de saumon mi-cuit à 17.90€, il s’agit d’un menu avec une portion généreuse et copieuse accompagné d’une salade de choux et d’une soupe miso, faisant trois fois la taille du mini tartare en entrée à 7.90€. <br><br>Concernant l’augmentation des prix nous vous confirmions qu’aucune augmentation n’a été appliqué sur les produits mentionnés depuis notre ouverture. <br><br><br>Nous espérons tout de même avoir le plaisir de accueillir à nouveau et de vous satisfaire pleinement afin de maintenir votre petit rituel chez nous.😊"
+    },
+    {
+      "text": "Incroyable expérience! Franchement rien à dire la nourriture est une des meilleures asiatique que j'ai manger de toute ma vie.\nSans parler du service on a été servi très rapidement sachant qu'on était nombreux et les serveurs très sympa!\nJe recommande vivement",
+      "rating": 5,
+      "date": "2026-08-05 20:52:40 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Tout simplement le meilleur restaurant japonnais que je connaisse et mon adresse favorite 🫶🏻 !\nDe délicieux produits frais et de qualité avec un large choix, il y en a pour tous les goûts !🍣\nUn personnel attentionné et souriant et un service irréprochable.✨\nEn bref ils méritent même une 6 eme étoile !\n\nAu plaisir de recommander un C5 et une fourchette 😋",
+      "rating": 5,
+      "date": "2025-11-07 13:34:44 +00:00",
+      "owner_response": "Merci beaucoup pour votre commentaire 🫶 c’est toujours un plaisir de vous recevoir ☺️"
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "13791067134072659327",
+  "place_id": "ChIJoRyGOHRnBEgRfx33f322Y78",
+  "wikipedia_description": null,
+  "description_short": "Saveurs japonaises au bord du quai des Sables-d'Olonne. Sushis, brochettes et tartares de saumon dans une adresse incontournable face à l'eau.",
+  "description_long": "Niché sur le quai René Guiné aux Sables-d'Olonne, UMI Sushi propose une cuisine japonaise soignée avec des produits frais et de qualité. Au menu : sushis généreux, brochettes variées et tartares de saumon mi-cuit qui font l'unanimité. Le cadre en bord de port et le service attentif et rapide en font une adresse appréciée des locaux comme des touristes. Idéal pour un déjeuner ou un dîner dépaysant face à l'océan, UMI Sushi séduit par la fraîcheur de ses produits et la diversité de sa carte, avec des options pour tous les goûts.",
+  "tags": [
+    "japonais",
+    "sushi",
+    "restaurant",
+    "quai",
+    "fruits de mer"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 5,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En couple, optez pour le tartare de saumon mi-cuit et une sélection de sushis à partager face au quai — une escale japonaise avec vue sur le port. En famille, la carte variée conviendra à tous, même aux plus petits.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:43:49.040972+00:00",
+  "enriched_at": "2026-09-16T08:43:49.040972+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://static.actu.fr/uploads/2024/04/acb735ff72266a0c735ff722684c73v.jpg",
+    "https://www.maville.com/photosmvi/2024/04/22/P34146182D6259177G.jpg",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/14/ea/3a/caption.jpg?w=1200&h=1200&s=1"
+  ]
+}

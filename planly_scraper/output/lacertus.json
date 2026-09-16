@@ -1,0 +1,239 @@
+{
+  "id": "lacertus",
+  "name": "Lacertus",
+  "name_google": "Restaurant Lacertus",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4951247,
+  "lng": -1.7917808,
+  "address": "4 Bd Franklin Roosevelt, 85100 Les Sables-d'Olonne",
+  "phone": "+33986490042",
+  "website": "https://lacertus-restaurant.fr/",
+  "rating": 4.9,
+  "reviews_count": 800,
+  "rating_distribution": {
+    "1": 0,
+    "2": 1,
+    "3": 1,
+    "4": 39,
+    "5": 759
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 15
+        },
+        "close": {
+          "hour": 13,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 15
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ],
+    "monday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 15
+        },
+        "close": {
+          "hour": 13,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 15
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ],
+    "tuesday": null,
+    "wednesday": null,
+    "thursday": [
+      {
+        "open": {
+          "hour": 19,
+          "minute": 15
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 15
+        },
+        "close": {
+          "hour": 13,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 15
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 15
+        },
+        "close": {
+          "hour": 13,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 15
+        },
+        "close": {
+          "hour": 20,
+          "minute": 45
+        }
+      }
+    ]
+  },
+  "popular_times": null,
+  "price_level": "inexpensive",
+  "photos": [
+    "images/lacertus/photo_1.jpg",
+    "images/lacertus/photo_2.jpg",
+    "images/lacertus/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Une excellente adresse tenue par un duo mari et femme, où nous avons déjeuné en famille. Madame, à l'accueil et au service, est très chaleureuse. Monsieur, le chef, propose des plats aux saveurs et accords originaux vraiment délicieux (en partie de la cuisine moléculaire). Les vins sont sélectionnés avec minutie. Laissez-vous notamment tenter par la suggestion de fromage affiné : une surprise très agréable vous attend (même si vous n'êtes pas fromage à la base), de même que sur les mises en bouche ! La salle, chic et cosy, donne sur une rue calme. Le rapport qualité-prix pour un restaurant gastronomique est très intéressant dans ce quartier prisé des Sables. Nous reviendrons !\nGrâce à vous nous garderons un très beau et bon souvenir des 25 ans de ma fille ! Merci !",
+      "rating": 5,
+      "date": "2026-06-30 12:43:11 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Quelle magnifique découverte ! Entre l'audace créative des assiettes aux saveurs surprenantes et l'accueil d'une gentillesse absolue, ce restaurant cultive un art de vivre mémorable. Une ambiance ultra-sympa où la justesse des goûts n'a d'égal que le sourire de notre serveuse.",
+      "rating": 5,
+      "date": "2026-06-19 18:21:46 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Quel plaisir de revenir dans ces lieux.\nLe chef est un artiste, il y a de la créativité, et un soin réel apporté à tous les plats.\nLes amuses-bouches, ainsi que les mignardises participent aussi à cet enchantement.\nEt que dire de la délicieuse personne qui fait le service. Elle connaît sa cuisine parfaitement,  et elle  possède des qualités œnologiques hors pair. Accords mets et vins.\nExcellente adresse !!",
+      "rating": 5,
+      "date": "2026-05-01 12:45:38 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Une pépite aux Sables d’Olonne !\nUne superbe découverte pour l'anniversaire de mon mari. Ce petit restaurant gastronomique offre un cadre intime et chaleureux, sublimé par l'accueil sincère d'Emeline.\nEn cuisine, Alex propose des plats tous plus succulents les uns que les autres. Véritable coup de cœur pour sa créativité, avec une mention spéciale pour les desserts peu sucrés et iodés, d'une finesse rare.\nUne adresse coup de foudre où la passion se ressent dans chaque assiette. Merci pour ce moment d'exception !",
+      "rating": 5,
+      "date": "2026-04-12 05:53:48 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Tout est parfait, l’accueil, les conseils, la beauté des assiettes, le délice des plats et un grand choix de vins au verre  pour accompagner tout ça. Un vrai régal !\nBravo et merci",
+      "rating": 5,
+      "date": "2026-05-10 12:47:52 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "service": 71,
+    "sables": 27,
+    "créative": 27,
+    "amuse bouche": 21,
+    "papilles": 21,
+    "accord mets-vin": 19,
+    "mises en bouche": 9,
+    "mignardises": 9,
+    "trompe l'œil": 8,
+    "carte des vins": 8
+  },
+  "booking_url": [
+    {
+      "type": "reservation",
+      "title": "zenchef.com",
+      "url": "https://bookings.zenchef.com/results?rid=363189&pid=1001"
+    },
+    {
+      "type": "menu",
+      "title": "lacertus-restaurant.fr",
+      "url": "https://lacertus-restaurant.fr/#menu"
+    }
+  ],
+  "cid": "16796055531723234301",
+  "place_id": "ChIJB-VlNpJnBEgR_RsZTISTF-k",
+  "wikipedia_description": null,
+  "description_short": "Une cuisine gastronomique inventive et de saison aux Sables d'Olonne, portée par un duo passionné dans une ambiance intime et feutrée.",
+  "description_long": "Le restaurant Lacertus est une véritable pépite gastronomique nichée aux Sables d'Olonne. Le Chef y déploie une cuisine créative, évolutive et maison, élaborée grâce à des producteurs locaux soigneusement sélectionnés. Des amuse-bouches aux mignardises, chaque plat est une invitation au voyage des papilles, sublimé par des accords mets-vins d'exception. En salle, Emeline réserve à chaque convive un accueil chaleureux et sincère dans une atmosphère cosy et romantique. Idéal pour une occasion spéciale, un déjeuner en famille ou un dîner en amoureux mémorable. Réservation fortement recommandée.",
+  "tags": [
+    "gastronomique",
+    "cuisine créative",
+    "produits locaux",
+    "accord mets-vins",
+    "intime"
+  ],
+  "audience": [
+    "couple",
+    "famille",
+    "solo"
+  ],
+  "age_min": 10,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Pour les couples, réservez une table le soir et laissez-vous guider par le menu du Chef pour une expérience gastronomique inoubliable. En famille, le déjeuner est idéal pour profiter de la créativité des assiettes dans une ambiance chaleureuse et détendue.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:43:10.600231+00:00",
+  "enriched_at": "2026-09-16T08:43:10.600231+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://lacertus-restaurant.fr/wp-content/uploads/2023/05/restaurant-gastro-lacertus.jpg",
+    "https://rankeat.fr/wp-content/uploads/2025/07/restaurant-lacertus-photo-google-1-1751738524.jpg",
+    "https://lacertus-restaurant.fr/wp-content/uploads/2023/05/restaurant-sables-olonne-gastronomique-lacertus-vendee.jpg"
+  ]
+}

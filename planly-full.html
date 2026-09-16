@@ -1199,6 +1199,19 @@ body{
 .pl-legend span{display:flex;align-items:center;gap:6px;}
 .pl-legend .pl-kid{width:16px;height:16px;font-size:9px;}
 .pl-show-time{font-size:14px;font-weight:700;color:#0E5A66;width:48px;flex-shrink:0;}
+/* ── ST — Sorties & Détente (bars, casinos, cinémas, piscines & spa) ── */
+.pl-block.night{border:1.5px solid #C9C4E4;}
+.pl-block.night .pl-block-hd{background:#2E2A5B;}
+.pl-block.night .pl-block-sub{color:#BDB8E0;}
+.pl-block.night .pl-list{background:#F4F2FB;}
+.st-know{background:#fff;border-radius:14px;padding:14px 16px;border:0.5px solid #e8e4da;margin-bottom:12px;}
+.st-know-hd{font-size:13px;font-weight:700;color:#1a1a18;margin-bottom:12px;}
+.st-know-row{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#444441;line-height:1.5;}
+.st-know-row+.st-know-row{margin-top:10px;}
+.st-know-dot{width:6px;height:6px;border-radius:50%;background:#2E2A5B;margin-top:7px;flex-shrink:0;}
+.st-know-src{font-size:11px;color:#A8A8A3;line-height:1.4;margin-top:12px;padding-top:10px;border-top:0.5px solid #f0ede4;}
+.st-warn{display:flex;align-items:center;gap:8px;padding:10px 13px;border-radius:12px;background:#FFFBEB;border:1px solid #FDE68A;color:#92400E;font-size:12px;line-height:1.45;margin-bottom:12px;}
+.st-item-detail{font-size:11px;color:#555;margin-top:3px;}
 
 </style>
 </head>
@@ -1613,7 +1626,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609160947"></script>
+<script src="pois.js?v=202609161251"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2610,6 +2623,70 @@ function _plShowsBlock(sp){
     +(sp.indoor_outdoor==='intérieur'?'<div class="pl-block-badge">100 % intérieur</div>':'')+'</div>'
     +'<div class="pl-list">'+shows.map(function(s){return'<div class="pl-item"><div class="pl-show-time">'+_escHtml(String(s.time||'').replace(':','h'))+'</div><div class="pl-item-name">'+_escHtml(String(s.name||''))+'</div></div>';}).join('')+'</div></div>';
 }
+// ── ST helpers (Sorties & Détente) ──
+var ST_SUBCATS=['Bars & Ambiance','Casino & Jeux','Cinéma','Piscines & Spa'];
+var ST_ICON_NIGHT='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-6 7v7"/><path d="M9 21h6"/><path d="M13 18v3"/></svg>';
+var ST_ICON_WATER='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c2 0 2 1.5 4 1.5S9 15 11 15s2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M3 19c2 0 2 1.5 4 1.5S9 19 11 19s2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M8 11V6a2 2 0 1 1 4 0"/></svg>';
+function _stKnowBlock(sp){
+  var k=(sp.know||[]).filter(Boolean).slice(0,3);
+  if(!k.length)return'';
+  var src=(sp.official_source&&sp.official_source.verified_at)?sp.official_source.verified_at.split('-').reverse().join('/'):'';
+  return'<div class="st-know"><div class="st-know-hd">Bon à savoir</div>'
+    +k.map(function(t){return'<div class="st-know-row"><div class="st-know-dot"></div><div>'+_escHtml(String(t))+'</div></div>';}).join('')
+    +'<div class="st-know-src">D\'après le site officiel du lieu'+(src?' · vérifié le '+src:'')+'</div></div>';
+}
+function _stFacilitiesBlock(sp,sub){
+  var f=(sp.facilities||[]).filter(function(x){return x&&x.name;}).slice(0,6);
+  if(!f.length||sub==='Bars & Ambiance')return'';
+  var spa=sub==='Piscines & Spa';
+  var title=sub==='Casino & Jeux'?'Les jeux':spa?'Les installations':'Le cinéma';
+  return'<div class="pl-block '+(spa?'show':'night')+'"><div class="pl-block-hd">'+(spa?ST_ICON_WATER:ST_ICON_NIGHT)
+    +'<div class="pl-block-info"><div class="pl-block-title">'+title+'</div><div class="pl-block-sub">D\'après le site officiel</div></div>'
+    +(sp.age_min?'<div class="pl-block-badge">'+sp.age_min+' ans et +</div>':'')+'</div>'
+    +'<div class="pl-list">'+f.map(function(x){
+      return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(x.name))+'</div>'
+        +(x.detail?'<div class="st-item-detail">'+_escHtml(String(x.detail))+'</div>':'')+'</div></div>';
+    }).join('')+'</div></div>';
+}
+function _stBudgetCard(p,sp){
+  var pr=sp.pricing||null,url=(pr&&pr.source_url)||(sp.official_source&&sp.official_source.url)||'';
+  var sub=p.subcategory||'';
+  if(pr&&pr.free_entry&&sub==='Casino & Jeux'){
+    return'<div class="pl-price"><div class="pl-price-hd"><div class="pl-price-title">Entrée</div></div>'
+      +'<div class="pl-price-total"><div class="pl-price-big">Entrée libre</div></div>'
+      +'<div class="pl-price-ft"><div class="pl-price-src">L\'entrée est gratuite, les jeux sont payants.</div>'
+      +(url?'<a class="pl-btn" href="'+_escHtml(url)+'" target="_blank" rel="noopener">Site officiel</a>':'')+'</div></div>';
+  }
+  if(pr&&sub==='Bars & Ambiance'){
+    // le site d'un bar publie souvent les prix du restaurant ou de l'hôtel : on ne garde que les boissons
+    var drink=/boisson|cocktail|bi[èe]re|pinte|verre|ap[ée]ro|vin|caf[ée]|soft|happy/i;
+    var opts=(pr.options||[]).filter(function(o){return drink.test(String(o.label||''));});
+    pr={adult:null,child:null,free_entry:null,from_price:opts.length?pr.from_price:null,options:opts,
+        notes:pr.notes,source_url:pr.source_url,source_label:pr.source_label,verified_at:pr.verified_at,stale:pr.stale};
+    sp=Object.assign({},sp,{pricing:pr});
+  }
+  if(pr&&(_plNum(pr.adult)!=null||_plNum(pr.child)!=null||_plNum(pr.from_price)!=null||(pr.options||[]).length||pr.free_entry))
+    return _plPriceBlock(sp);
+  // budgetBadge vaut "Gratuit" quand aucun prix n'est connu : trompeur pour un bar ou un casino
+  var lvl=/gratuit/i.test(p.budgetBadge||'')?'':(p.budgetBadge||'');
+  if(!lvl&&!url)return'';
+  return'<div class="pl-price"><div class="pl-price-hd"><div class="pl-price-title">Budget</div>'+(lvl?'<div class="pl-price-edit" style="cursor:default">source Google</div>':'')+'</div>'
+    +(lvl?'<div class="pl-price-total"><div class="pl-price-big">'+_escHtml(lvl.replace(/^€+\s*/,'').trim()||lvl)+'</div></div>':'')
+    +'<div class="pl-price-ft" style="'+(lvl?'':'border-top:none;padding-top:4px;margin-top:0')+'"><div class="pl-price-src">'+(lvl?'Le lieu ne publie pas ses tarifs. Niveau indicatif donné par Google.':'Le lieu ne publie pas ses tarifs.')+'</div>'
+    +(url?'<a class="pl-btn" href="'+_escHtml(url)+'" target="_blank" rel="noopener">Site officiel</a>':'')+'</div></div>';
+}
+function _stCinemaCard(p,sp){
+  var url=(sp.official_source&&sp.official_source.url)||p.website||'';
+  var sv=sp.services||{},rows=[];
+  if(sv.screens)rows.push(['Salles',sv.screens]);
+  if(sv.versions)rows.push(['Versions proposées',String(sv.versions)]);
+  if(sp.closing_time)rows.push(['Dernière séance vers',String(sp.closing_time)]);
+  return'<div class="pl-price"><div class="pl-price-title">Les séances</div>'
+    +'<div style="font-size:13px;color:#444441;line-height:1.6;margin-top:8px">Le programme change chaque semaine. Il est publié sur le site du cinéma, avec la réservation.</div>'
+    +(rows.length?'<div class="pl-price-lines">'+rows.map(function(r){return'<div class="pl-price-line"><span>'+r[0]+'</span><b>'+_escHtml(String(r[1]))+'</b></div>';}).join('')+'</div>':'')
+    +(url?'<a class="pl-btn" href="'+_escHtml(url)+'" target="_blank" rel="noopener" style="justify-content:center;margin-top:12px">Voir les séances et réserver</a>':'')
+    +'</div>';
+}
 function _renderPoiBody(p,mode){
   var body=document.querySelector('.bs-poi-body');
   if(!body)return;
@@ -2793,6 +2870,44 @@ function _renderPoiBody(p,mode){
       +'</div>';
 
     pillsHtml='';
+
+  }else if(ST_SUBCATS.indexOf(sub)!==-1){
+    var sv=sp.services||{},stAge=_plNum(sp.age_min);
+    var closing=sp.closing_time?String(sp.closing_time):'—';
+    var stDur=p.duration||0;
+    var stDurTxt=stDur>=60?Math.floor(stDur/60)+' h'+(stDur%60?' '+stDur%60:''):stDur+' min';
+    if(sub==='Cinéma'){
+      ribbonItems=[{val:sv.screens?sv.screens+' salles':'Cinéma',lbl:'Salles',cls:''},{val:stDurTxt,lbl:'Sur place',cls:''},{val:'Intérieur',lbl:'Pluie',cls:' gr'},{val:distMin+' min',lbl:'Distance',cls:''}];
+      sectionLabel='Le cinéma';
+    }else if(sub==='Piscines & Spa'){
+      ribbonItems=[{val:stAge?stAge+' ans +':'Tous âges',lbl:'Âge',cls:stAge?' bl':''},{val:stDurTxt,lbl:'Sur place',cls:''},{val:'Intérieur',lbl:'Pluie',cls:' gr'},{val:distMin+' min',lbl:'Distance',cls:''}];
+      sectionLabel='Le centre';
+    }else if(sub==='Casino & Jeux'){
+      ribbonItems=[{val:(stAge||18)+' ans +',lbl:'Âge',cls:' bl'},{val:closing,lbl:'Ferme à',cls:''},{val:sv.restaurant_on_site?'Oui':'—',lbl:'Restaurant',cls:''},{val:distMin+' min',lbl:'Distance',cls:''}];
+      sectionLabel='Le casino';
+    }else{
+      ribbonItems=[{val:sv.view?'Vue':'Bar',lbl:'Ambiance',cls:''},{val:closing,lbl:'Ferme à',cls:''},{val:p.budgetBadge||'—',lbl:'Budget',cls:''},{val:distMin+' min',lbl:'Distance',cls:''}];
+      sectionLabel='Le bar';
+    }
+    specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+(sub==='Cinéma'?_stCinemaCard(p,sp):'')+_stBudgetCard(p,sp)+_stFacilitiesBlock(sp,sub);
+    var stKids=_plGroup().kids;
+    if(stAge&&stKids.some(function(a){return a<stAge;}))
+      specialBlock='<div class="st-warn">⚠️ Interdit aux moins de '+stAge+' ans : à éviter avec tes enfants.</div>'+specialBlock;
+    var stPills=[];
+    if(sv.terrace)stPills.push('<span class="bch-pill bch-ps">☀️ Terrasse</span>');
+    if(sv.view)stPills.push('<span class="bch-pill bch-pi">🌅 '+_escHtml(String(sv.view).slice(0,40))+'</span>');
+    if(sv.live_music)stPills.push('<span class="bch-pill bch-ps">🎶 Musique live</span>');
+    if(sv.happy_hour)stPills.push('<span class="bch-pill bch-pw">🍹 Happy hour '+_escHtml(String(sv.happy_hour))+'</span>');
+    if(sv.restaurant_on_site)stPills.push('<span class="bch-pill bch-ps">🍽 Restaurant sur place</span>');
+    if(sv.snack)stPills.push('<span class="bch-pill bch-ps">🍿 Snack</span>');
+    if(sv.pmr)stPills.push('<span class="bch-pill bch-pi">♿ Accès PMR</span>');
+    if(sv.id_required)stPills.push('<span class="bch-pill bch-pw">🪪 Pièce d\'identité obligatoire</span>');
+    if(sv.dress_code)stPills.push('<span class="bch-pill bch-pw">👔 '+_escHtml(String(sv.dress_code))+'</span>');
+    (p.quickSpecs||[]).forEach(function(s){
+      var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
+      stPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
+    });
+    pillsHtml=stPills.length?'<div class="bch-pills-row">'+stPills.join('')+'</div>':'';
 
   }else if(PL_SUBCATS.indexOf(sub)!==-1){
     var plAgeMin=_plNum(sp.age_min);
@@ -3069,8 +3184,8 @@ var TUILES=[{id:'air',label:'Nature & Grand Air',emoji:'🌿'},{id:'sport',label
 var PL1={air:['Toutes','🏖️ Plages & Côte','🌲 Forêts & Nature','📸 Points de vue','🚶 Balades & Promenades'],sport:['Toutes','🥾 Randonnée','🚲 Vélo','🛶 Nautisme','➕ Autres sports'],patri:['Toutes','🏘️ Villages & Sites','🏰 Châteaux & Monuments','🏛️ Musées & Culture'],vivre:['Toutes','🍽️ Restaurants','🛒 Marchés & Terroir','🍷 Dégustations'],parcs:['Toutes','<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 5v2m0 10v2" stroke-dasharray="2 2"/><path d="M2 10a3 3 0 010 4"/><path d="M22 10a3 3 0 000 4"/></svg> Jeux & Divertissement','🦁 Parcs animaliers','🐠 Aquariums','🌺 Parcs botaniques'],sorties:['Toutes','🎬 Cinéma','🍸 Bars & Ambiance','🎰 Casino & Jeux','🏊 Piscines & Spa'],events:['Toutes','🎵 Concerts & Spectacles','🎉 Fêtes & Foires','🌙 Marchés nocturnes']};
 
 // Mapping tuile/L1 → catégorie POI
-var TUILE_CATS={air:['plage','nature','pointdevue','balade'],sport:[],patri:['patrimoine'],vivre:[],parcs:['jeux','animaux','aquarium','jardin'],sorties:[],events:[]};
-var L1_CATS={'🏖️ Plages & Côte':['plage'],'🌲 Forêts & Nature':['nature'],'📸 Points de vue':['pointdevue'],'🚶 Balades & Promenades':['balade'],'🏘️ Villages & Sites':['patrimoine'],'🏰 Châteaux & Monuments':['patrimoine'],'🏛️ Musées & Culture':['patrimoine'],'🦁 Parcs animaliers':['animaux'],'🐠 Aquariums':['aquarium'],'🌺 Parcs botaniques':['jardin']};
+var TUILE_CATS={air:['plage','nature','pointdevue','balade'],sport:[],patri:['patrimoine','culture'],vivre:['resto','marche','degustation'],parcs:['jeux','animaux','aquarium','jardin'],sorties:['bar','casino','cinema','spa'],events:[]};
+var L1_CATS={'🏖️ Plages & Côte':['plage'],'🌲 Forêts & Nature':['nature'],'📸 Points de vue':['pointdevue'],'🚶 Balades & Promenades':['balade'],'🏘️ Villages & Sites':['patrimoine'],'🏰 Châteaux & Monuments':['patrimoine'],'🏛️ Musées & Culture':['culture','patrimoine'],'🍽️ Restaurants':['resto'],'🛒 Marchés & Terroir':['marche'],'🍷 Dégustations':['degustation'],'🎬 Cinéma':['cinema'],'🍸 Bars & Ambiance':['bar'],'🎰 Casino & Jeux':['casino'],'🏊 Piscines & Spa':['spa'],'🦁 Parcs animaliers':['animaux'],'🐠 Aquariums':['aquarium'],'🌺 Parcs botaniques':['jardin']};
 L1_CATS[PL1.parcs[1]]=['jeux']; // libellé Jeux & Divertissement = SVG inline, clé reprise du tableau PL1
 
 function getFilteredPois(){

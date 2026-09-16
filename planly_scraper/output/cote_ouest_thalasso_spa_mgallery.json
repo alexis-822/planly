@@ -1,0 +1,76 @@
+{
+  "id": "cote_ouest_thalasso_spa_mgallery",
+  "name": "Côte Ouest Thalasso & Spa MGallery",
+  "name_google": null,
+  "category": "Sorties & Détente",
+  "subcategory": "Piscines & Spa",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": null,
+  "lng": null,
+  "address": null,
+  "phone": null,
+  "website": null,
+  "rating": null,
+  "reviews_count": null,
+  "rating_distribution": null,
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/cote_ouest_thalasso_spa_mgallery/photo_1.jpg",
+    "images/cote_ouest_thalasso_spa_mgallery/photo_2.jpg",
+    "images/cote_ouest_thalasso_spa_mgallery/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": null,
+  "place_id": null,
+  "wikipedia_description": null,
+  "description_short": "Plongez dans un univers de bien-être face à l'océan Atlantique. Thalasso, soins et piscines pour une parenthèse de sérénité en Vendée.",
+  "description_long": "Le Côte Ouest Thalasso & Spa MGallery vous invite à une expérience de ressourcement absolue sur la côte vendéenne. Bénéficiez des bienfaits de la thalassothérapie avec des soins à base d'eau de mer, des massages experts et des installations haut de gamme dignes des plus beaux établissements de luxe. Piscines intérieures et extérieures, hammam, sauna et cabines de soins composent un espace dédié à votre bien-être. Idéalement situé face à l'Atlantique, cet établissement MGallery allie élégance, confort et sérénité pour des moments inoubliables en Vendée.",
+  "tags": [
+    "thalasso",
+    "spa",
+    "bien-être",
+    "soins",
+    "luxe"
+  ],
+  "audience": [
+    "couple",
+    "solo"
+  ],
+  "age_min": 16,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 120,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En couple, optez pour un soin en duo et profitez des bassins face à l'océan en fin de journée pour un coucher de soleil inoubliable. En solo, un forfait journée thalasso vous ressourcera pleinement après une semaine de randonnée ou de surf.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": null,
+  "enriched_at": "2026-09-16T09:45:21.995244+00:00",
+  "status": "partial",
+  "photos_original_urls": [
+    "https://www.ahstatic.com/photos/1078_ho_00_p_1024x768.jpg",
+    "https://www.ahstatic.com/photos/1078_ho_01_p_1024x768.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/Cy-te-Ouest-9--copy.jpg"
+  ]
+}

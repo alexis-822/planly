@@ -1,0 +1,105 @@
+{
+  "id": "les_salines_angle_ecomusee",
+  "name": "Les Salines — angle écomusée",
+  "name_google": "Ecomusee Du Port Des Salines",
+  "category": "Patrimoine",
+  "subcategory": "Musées & Culture",
+  "commune": "L'Île-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 45.861646799999995,
+  "lng": -1.2302438,
+  "address": "23 Rue des Anciennes Salines, 17370 Le Grand-Village-Plage",
+  "phone": null,
+  "website": "https://www.port-des-salines.fr/ecomusee/",
+  "rating": 4.7,
+  "reviews_count": 25,
+  "rating_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 1,
+    "4": 5,
+    "5": 19
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [],
+  "reviews": [
+    {
+      "text": "L' Ecomusée est bien indiqué, facile à trouver.\nUn parking permet de pouvoir se garer à proximité.\nIl faut faire par contre attention aux cyclistes puisqu'une voie passe au niveau du parking.\nLes cyclistes font également attention de leur côté.\nL'endroit est calme, très coloré puisque les cabanes sont peintes de couleurs différentes ce qui ajoute un charme supplémentaire à cet endroit.\nL'accès est également accessible pour les personnes à mobilité réduite.\n\nNous sommes venus à plusieurs pour découvrir l'univers du sel donc ce site est fait pour nous.\nNous avons commencés par la visite de l'Ecomusée où tout est bien expliqué par des affiches, du matériel puis avec une vidéo sur le travail dans les marées salins.\nCette visite est vraiment très intéressante puisqu'elle explique en amont les étapes avant que le sel arrive sur notre table.\n\nL'Ecomusée propose à la vente différents articles pour tout les âges à tout les prix dont bien entendu du sel, des produits locaux entre-autres ainsi que différents prospectus des endroits à visiter sont mis à diposition.\nBelle découverte de ce qui est proposée, ce qui nous a permis de ramener des produits locaux que nous n'avons pas trouvé ailleurs.\nLe personnel est accueillant, disponible, aimable, de bons conseils.\n\nPuis, nous sommes aller visiter le marée salin, au milieu de la nature avec les oiseaux dont un héron.\nCe fut très agréable en toute quiétude.\nNous avons pris notre temps et surtout le temps était clément.\nNous avons passer une belle journée de connaissance comme nous les apprécions.\nJe ne peux que vous conseillez de vous rendre à cet endroit où je pense vous ne serez pas déçus.",
+      "rating": 5,
+      "date": "2025-11-06 11:36:08 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Sortie vélo guidée super sympathique avec Marie et Marjorie, nous avons vraiment passé un moment très agréable et nous avons appris énormément de choses. Merci pour ce moment de partage et de dégustation.",
+      "rating": 5,
+      "date": "2026-06-28 11:18:15 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Petit musée mais bien explicatif sur le fonctionnement d une saline .dommage que le temps ne permettais pas de faire un tour en barque .",
+      "rating": 4,
+      "date": "2026-04-29 10:08:31 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Nous avons beaucoup apprécié faire la visite des salines avec notre guide pour en apprendre un peu plus sur l'histoire du sel à Oléron",
+      "rating": 5,
+      "date": "2026-06-04 15:14:35 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Superbe lieu, joli, typique on peut y manger, boire un coup. Acheter du sel des épices",
+      "rating": 5,
+      "date": "2025-07-14 11:55:45 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "4782889005931337191",
+  "place_id": "ChIJWSsDcTVgAUgR55WoxjU8YEI",
+  "wikipedia_description": null,
+  "description_short": "Plongez dans l'histoire du sel à Oléron : visites guidées, sorties en barque et dégustation dans un cadre typique et authentique.",
+  "description_long": "Niché au cœur de l'île d'Oléron, l'écomusée des Salines vous invite à découvrir l'histoire fascinante de la production du sel. Visites guidées à pied, à vélo ou en barque permettent d'explorer les marais salants et d'apprendre les secrets du paludier. Les guides passionnés transmettent leur savoir avec enthousiasme, agrémentant les visites de dégustations de sel et d'épices. Sur place, une boutique propose des produits locaux à ramener en souvenir. Un incontournable pour petits et grands, accessible en voiture avec parking à proximité.",
+  "tags": [
+    "écomusée",
+    "sel",
+    "salines",
+    "visite guidée",
+    "Oléron"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 5,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": false,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "En famille, optez pour la sortie en barque pour une expérience inoubliable sur les marais. En couple, la sortie vélo guidée avec dégustation offre un moment de partage unique et savoureux.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:17:34.552334+00:00",
+  "enriched_at": "2026-09-16T09:17:34.552334+00:00",
+  "status": "complete",
+  "photos_original_urls": []
+}

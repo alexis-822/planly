@@ -1,0 +1,114 @@
+{
+  "id": "marche_arago",
+  "name": "Marché Arago",
+  "name_google": "Marché Arago",
+  "category": "Art de vivre",
+  "subcategory": "Marchés & Terroir",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4944707,
+  "lng": -1.7742788999999999,
+  "address": "27 Bd Arago, 85100 Les Sables-d'Olonne",
+  "phone": "+33251968585",
+  "website": "https://www.facebook.com/marchearago/",
+  "rating": 4.2,
+  "reviews_count": 1898,
+  "rating_distribution": {
+    "1": 52,
+    "2": 76,
+    "3": 211,
+    "4": 612,
+    "5": 947
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/marche_arago/photo_1.jpg",
+    "images/marche_arago/photo_2.jpg",
+    "images/marche_arago/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "⭐⭐⭐⭐⭐\nLe marché Arago, une adresse incontournable aux Sables-d’Olonne !\n\nJe connais le marché Arago aux Sables-d’Olonne depuis de nombreuses années, et c’est toujours un vrai plaisir d’y retourner lorsque nous venons en vacances en famille. C’est un marché que j’apprécie particulièrement et que j’avais envie de partager ici sur Google, car il mérite vraiment d’être découvert !\n\nOn y retrouve tout ce qui fait le charme d’un véritable marché : une ambiance conviviale et chaleureuse, des commerçants accueillants, de beaux étals et de nombreux produits de qualité. C’est un endroit vivant, authentique, où l’on aime prendre son temps, flâner, faire ses courses et profiter de l’atmosphère si particulière des Sables-d’Olonne.\n\nQue ce soit pour acheter de bons produits frais, découvrir les spécialités locales ou simplement se promener en famille, le marché Arago est une étape que je recommande sans hésitation. C’est aussi un lieu où l’on ressent véritablement la vie locale et l’esprit des Sables-d’Olonne.\n\n🍷 Et juste à côté du marché, je recommande également un très bon caviste, une adresse bien pratique pour les amateurs de vin, avec de belles découvertes et de bons conseils. Une excellente occasion de prolonger la balade et de repartir avec une jolie bouteille pour accompagner les bons produits achetés au marché !\n\nUn marché que je recommande donc les yeux fermés, aussi bien aux habitués qu’aux vacanciers de passage. Une belle adresse à découvrir et à partager !\n\n⭐⭐⭐⭐⭐",
+      "rating": 5,
+      "date": "2026-08-02 11:09:54 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Nous avons traversé ce marché lors de notre passage aux Sables-d’Olonne. On y trouve beaucoup de produits locaux et frais, ce qui est agréable. En revanche, les prix sont assez élevés, probablement en raison du caractère très touristique du lieu.",
+      "rating": 4,
+      "date": "2025-09-08 06:59:21 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "le marché est vraiment top. ouvert tout les jours . de bon produit frais.\nun bar a vin ou l on peut deguster des produits du marché. vraiment  bien. je recommande.\nlégumes un peu cher petit bémol",
+      "rating": 5,
+      "date": "2025-07-06 19:31:20 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très bien ouvert tous les jours sauf le lundi je crois. Varié. De bons produits même si parfois un peu cher.",
+      "rating": 4,
+      "date": "2026-05-28 17:32:18 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Beau marché malheureusement un peu cher, je pense qu’il y’a pal de touristes dans le coin, et voilà ils en profitent un peu.\nBref, nous sommes rentrés Par hasard et c’était vraiment une découverte.\nAllez je reste positif, bonne continuation les marchands 👍",
+      "rating": 5,
+      "date": "2026-04-28 14:38:06 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "5050479863061542268",
+  "place_id": "ChIJPzHpHftnBEgRfPULR63oFkY",
+  "wikipedia_description": null,
+  "description_short": "Le marché couvert des Sables-d'Olonne, ouvert tous les jours, où produits frais locaux et bar à vins se mêlent pour une expérience gourmande unique.",
+  "description_long": "Le Marché Arago est une adresse incontournable des Sables-d'Olonne, installé boulevard Arago en plein cœur de la ville. Ouvert presque tous les jours, il propose une belle sélection de produits frais et locaux : fruits, légumes, poissons, fromages et spécialités vendéennes. L'atmosphère animée et conviviale invite à flâner entre les étals colorés. Petite particularité appréciée : un bar à vins où il est possible de déguster sur place des produits achetés au marché. Idéal pour composer un pique-nique savoureux ou rapporter de délicieux souvenirs du terroir vendéen. Les prix sont un peu élevés en saison touristique, mais la qualité est au rendez-vous.",
+  "tags": [
+    "marché",
+    "produits locaux",
+    "terroir vendéen",
+    "bar à vins",
+    "gastronomie"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 45,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Passez-y tôt le matin pour profiter des meilleurs produits frais et éviter l'affluence touristique. Les couples apprécieront une pause dégustation au bar à vins, tandis que les familles pourront composer un pique-nique maison pour la plage !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:52:38.801203+00:00",
+  "enriched_at": "2026-09-16T08:52:38.801203+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://gites-lerelaydelasource.fr/wp-content/uploads/2025/12/marche_arago_sables_d_olonne_8988.jpg",
+    "https://www.hotel-lesrochesnoires.com/userfiles/marche_arago_les_sables.jpg",
+    "http://www.atlantichotel.fr/userfiles/Articles/MarcheLesSablesdOlon.jpg"
+  ]
+}

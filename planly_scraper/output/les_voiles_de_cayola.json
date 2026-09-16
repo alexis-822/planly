@@ -1,0 +1,77 @@
+{
+  "id": "les_voiles_de_cayola",
+  "name": "Les Voiles de Cayola",
+  "name_google": null,
+  "category": "Sorties & Détente",
+  "subcategory": "Cinéma",
+  "commune": "Cayola, ~8 km",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": null,
+  "lng": null,
+  "address": null,
+  "phone": null,
+  "website": null,
+  "rating": null,
+  "reviews_count": null,
+  "rating_distribution": null,
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/les_voiles_de_cayola/photo_1.jpg",
+    "images/les_voiles_de_cayola/photo_2.jpg",
+    "images/les_voiles_de_cayola/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": null,
+  "place_id": null,
+  "wikipedia_description": null,
+  "description_short": "Cinéma en plein air face à l'Atlantique, où le septième art rencontre l'horizon vendéen.",
+  "description_long": "Les Voiles de Cayola offrent une expérience cinématographique unique sur la côte vendéenne, à deux pas de la plage des Sables-d'Olonne. Nichée dans un cadre naturel exceptionnel, cette salle ou projection en plein air propose des séances pour tous les publics, dans une atmosphère conviviale et décontractée. Idéal pour s'évader le temps d'un film tout en profitant de l'ambiance maritime de Cayola, ce lieu allie culture et détente balnéaire. Une parenthèse cinéphile originale, parfaite même quand le temps se couvre sur l'Atlantique.",
+  "tags": [
+    "cinéma",
+    "plein air",
+    "soirée",
+    "culture",
+    "bord de mer"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 3,
+  "weather_ok": [
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille, privilégiez les séances en matinée ou en début d'après-midi pour les plus jeunes. En couple ou entre amis, une séance du soir avec vue sur le coucher de soleil vendéen est une expérience à ne pas manquer !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": null,
+  "enriched_at": "2026-09-16T09:41:53.063936+00:00",
+  "status": "partial",
+  "photos_original_urls": [
+    "https://www.guide-de-la-vendee.com/_bibli/annonces/4337/hd/voiles-de-cayola-26-018.jpg",
+    "https://www.guide-de-la-vendee.com/_bibli/annonces/4341/hd/voiles-de-cayola-26-013.jpg",
+    "https://www.1001salles.com/images/provider/67688/1772009800_699eb948d29ea.jpg"
+  ]
+}

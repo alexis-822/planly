@@ -1,0 +1,83 @@
+{
+  "id": "abbaye_de_maillezais",
+  "name": "Abbaye de Maillezais",
+  "name_google": "Abbaye de Maillezais",
+  "category": "Patrimoine",
+  "subcategory": "Châteaux & Monuments",
+  "commune": "Marais Poitevin",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.373543999999995,
+  "lng": -0.7460709999999999,
+  "address": "ABBAYE DE, 85420 Maillezais",
+  "phone": "+33251536680",
+  "website": "https://nossites.vendee.fr/abbaye-de-maillezais?utm_source=gmb",
+  "rating": 4.5,
+  "reviews_count": 2064,
+  "rating_distribution": {
+    "1": 24,
+    "2": 30,
+    "3": 104,
+    "4": 544,
+    "5": 1362
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/abbaye_de_maillezais/photo_1.jpg",
+    "images/abbaye_de_maillezais/photo_2.jpg",
+    "images/abbaye_de_maillezais/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "16495538313985844227",
+  "place_id": "ChIJ7S08xmPaBkgRA-T4D7Ps6-Q",
+  "wikipedia_description": "La cathédrale Saint-Pierre de Maillezais est une ancienne église abbatiale, convertie en 1317 en cathédrale, située à Maillezais, dans le département de la Vendée. Elle demeure le siège de l'évêché de Maillezais jusqu'en 1648, date à laquelle le siège épiscopal est transféré dans la cathédrale Saint-Barthélémy-du-Grand-Temple, à La Rochelle. Depuis 2009, elle est le siège des évêques titulaires de Maillezais.\nLes premières constructions datent du Xe siècle, puis la cathédrale achevée vers le XVe",
+  "description_short": "Plongez dans 10 siècles d'histoire au cœur du Marais poitevin. Une abbaye médiévale fascinante, joyau de la Vendée.",
+  "description_long": "Fondée au Xe siècle, l'abbaye de Maillezais est l'un des monuments médiévaux les plus remarquables de Vendée. Élevée au rang de cathédrale en 1317, elle fut le siège de l'évêché jusqu'en 1648 avant de tomber en ruines lors des guerres de religion. Aujourd'hui classée monument historique, ses vestiges imposants – nef effondrée, façade romane, cloître partiellement conservé – racontent une histoire millénaire. Nichée au cœur du Marais poitevin, la « Venise verte », elle offre un cadre exceptionnel mêlant patrimoine religieux et paysages naturels préservés.",
+  "tags": [
+    "abbaye",
+    "médiéval",
+    "patrimoine",
+    "ruines",
+    "marais poitevin"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 6,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Combinez la visite de l'abbaye avec une balade en barque dans le Marais poitevin tout proche pour une journée inoubliable. En famille, prévoyez la visite guidée pour captiver les enfants avec les légendes médiévales du site.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:09:20.482751+00:00",
+  "enriched_at": "2026-09-16T09:09:20.482751+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://upload.wikimedia.org/wikipedia/commons/9/96/F07_0017.Mz.JPG?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original",
+    "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/Photo-Maillezais-aerien-4.jpg",
+    "https://www.vendeecamping.com/wp-content/uploads/2018/09/abbaye-de-maillezais-IMG_4511.jpg"
+  ]
+}

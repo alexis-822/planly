@@ -1,0 +1,125 @@
+{
+  "id": "musee_de_l_abbaye_sainte_croix",
+  "name": "Musée de l'Abbaye Sainte-Croix",
+  "name_google": "MASC - Musée d'Art moderne et contemporain",
+  "category": "Patrimoine",
+  "subcategory": "Musées & Culture",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4968125,
+  "lng": -1.7768711,
+  "address": "Rue de Verdun, 85100 Les Sables-d'Olonne",
+  "phone": "+33251320116",
+  "website": "http://www.lemasc.fr/",
+  "rating": 4.3,
+  "reviews_count": 509,
+  "rating_distribution": {
+    "1": 12,
+    "2": 20,
+    "3": 48,
+    "4": 137,
+    "5": 292
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/musee_de_l_abbaye_sainte_croix/photo_1.jpg",
+    "images/musee_de_l_abbaye_sainte_croix/photo_2.jpg",
+    "images/musee_de_l_abbaye_sainte_croix/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "J’ai visité ce musée d’art contemporain en août 2025 avant sa fermeture pour rénovation et vu l’exposition «  l’envers du décor » dans laquelle la commissaire d’exposition Gaelle Rageot a sorti pas mal d’œuvres des collections du musée afin d’avoir une vision des précédentes programmations, le tout orchestré par des œuvres de @sansonbraun et @corentincanesson.\nHabitué des visites de musées particulièrement d’art contemporain j’ai trouvé cet inventaire d’œuvres très accessible car très majoritairement composé d’oeuvres  peintes (et sans les installations hétéroclites habituellement du pseudo art contemporain).\nC’est superbe et très à mon goût. Bravo.",
+      "rating": 5,
+      "date": "2025-08-20 09:58:45 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très jolie exposition des tableaux de Titouan Lamazou, la déambulation au rez-de-chaussée et à l'étage est pleine de poésie, de rêve et d'esprit positif. Les espaces sont spacieux et celui de l'étage très lumineux. Un vrai moment de bonheur à renouveler jusqu'en mars prochain. Merci pour cette belle idée.\nPensez seulement à réserver votre horaire de visite sur le site ou directement à l'Office de tourisme. Merci aussi au monsieur qui nous a accueillies juste à l'entrée, il nous a expliqué les espaces dédiés à l'exposition et aux autres artistes avec beaucoup de cordialité.\nL'exposition sous les combles est aussi pleine de rêverie et très originale.",
+      "rating": 5,
+      "date": "2024-10-30 10:57:28 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "L'exposition temporaire des œuvres de Fabrice Hyber est quelque peu déroutante mais très intéressante. Le musée a, a part ceci sinon de très beaux tableaux et sculptures et un personnel présent et passionné disponible pour des explications.",
+      "rating": 5,
+      "date": "2024-07-13 16:50:59 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Une grande qualité d'oeuvres, le prix d'entrée et la visite guidée vous fera aimer, si ce n'était déjà le cas, ce musée et l'art en lui-même !\n\nLe personnel sont des personnes passionnés par l'histoire de l'art et vous emmènera visiter le monde de chaque artistes.\n\nA revoir avec grand plaisir !",
+      "rating": 5,
+      "date": "2023-08-03 21:26:18 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Nous avons eu l'occasion de connaître ce lieu avec des amis lors de l'exposition Titouan Lamazou. Une jeune dame nous commentait la visite de façon très vivante et de façon vraiment passionnée. La visite a eu lieu gratuitement le 1er dimanche du mois. Très bientôt le musée ferme pour être rénové",
+      "rating": 5,
+      "date": "2025-02-26 05:41:36 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "exposition": 94,
+    "art contemporain": 20,
+    "combles": 24,
+    "oeuvres": 12,
+    "étage": 12,
+    "charpente": 11,
+    "famille": 8,
+    "dimanche": 8,
+    "collection permanente": 7,
+    "prix": 7
+  },
+  "booking_url": null,
+  "cid": "14205305039087908982",
+  "place_id": "ChIJl2IFqfBnBEgRdrjmjKthI8U",
+  "wikipedia_description": "Le musée de l'Abbaye Sainte-Croix (MASC), ou musée d'Art moderne et contemporain des Sables-d'Olonne est un musée d'art moderne et contemporain ouvert en 1963, situé aux Sables-d'Olonne, installé dans l'ancienne abbaye Sainte-Croix, fondée en 1632 par les religieuses bénédictines de Poitiers.",
+  "description_short": "Art moderne et contemporain niché dans une abbaye bénédictine du XVIIe siècle. Une escapade culturelle insolite aux Sables-d'Olonne.",
+  "description_long": "Installé dans l'ancienne abbaye Sainte-Croix fondée en 1632, le MASC est le rendez-vous incontournable de l'art moderne et contemporain en Vendée. Ses expositions temporaires accueillent des artistes de renom comme Titouan Lamazou ou Fabrice Hyber, tandis que la collection permanente révèle tableaux et sculptures de grande qualité. Ne manquez pas les spectaculaires combles avec leur charpente remarquable. Le personnel passionné propose des visites guidées qui transforment chaque visite en véritable coup de cœur. Un lieu alliant patrimoine architectural exceptionnel et création contemporaine audacieuse.",
+  "tags": [
+    "art contemporain",
+    "musée",
+    "abbaye",
+    "exposition temporaire",
+    "patrimoine"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 8,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Optez pour la visite guidée, les guides passionnés vous feront découvrir les œuvres et les secrets de l'abbaye avec une énergie contagieuse. En famille, les enfants seront surpris par l'immensité des combles et leur charpente impressionnante !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:17:02.154398+00:00",
+  "enriched_at": "2026-09-16T09:17:02.154398+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://upload.wikimedia.org/wikipedia/commons/2/21/Mus%C3%A9e_de_L%27Abbaye_Sainte-Croix_%28MASC%29_des_Sables-d%27Olonne_en_2013.jpg?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original",
+    "https://cdt85.media.tourinsoft.eu/upload/2015-LS-MASC---ALamoureuxVendeeExpansion.jpg",
+    "https://www.lemasc.fr/media/accueil-fermeture-1.jpg"
+  ]
+}

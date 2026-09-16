@@ -1,0 +1,971 @@
+{
+  "id": "historial_de_la_vendee",
+  "name": "Historial de la Vendée",
+  "name_google": "HISTORIAL DE LA VENDEE",
+  "category": "Patrimoine",
+  "subcategory": "Musées & Culture",
+  "commune": "Les Lucs-sur-Boulogne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.845768,
+  "lng": -1.4814319999999999,
+  "address": "All. Paul Bazin, 85170 Les Lucs-sur-Boulogne",
+  "phone": "+33228857777",
+  "website": "http://www.sitesculturels.vendee.fr/Historial-de-Vendee?utm_source=gmb",
+  "rating": 4.6,
+  "reviews_count": 1932,
+  "rating_distribution": {
+    "1": 20,
+    "2": 19,
+    "3": 111,
+    "4": 502,
+    "5": 1280
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "monday": null,
+    "tuesday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "wednesday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ]
+  },
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 64
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 90
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 79
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 25
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 35
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 37
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 11
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 13
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 14
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 27
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 29
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 24
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 26
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 35
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 17
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 15
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 18
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 22
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 27
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 21
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 8
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 12
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 16
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 31
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 48
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 62
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [
+    "images/historial_de_la_vendee/photo_1.jpg",
+    "images/historial_de_la_vendee/photo_2.jpg",
+    "images/historial_de_la_vendee/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Super après-midi à l’Historial ! Magnifique exposition sur la Vendée sous l’occupation. Coup de cœur pour l’expérience immersive sonore dans chaque espace (on s’y croirait !) et pour la narration sous forme de bande-dessiné ! Je recommande vivement !\nLe nouveau musée des enfants est également super, même en tant qu’adulte je me suis bien amusée.\nPetite pause goûter au soleil pour terminer cette visite (tarifs très abordables) 😋\nAccueil de l’historial toujours au top et souriant.",
+      "rating": 5,
+      "date": "2026-03-11 21:43:27 +00:00",
+      "owner_response": "Cher Alix,<br><br>Nous vous remercions chaleureusement pour votre superbe retour et votre note de 5 étoiles ! Nous sommes ravis que vous ayez passé un agréable après-midi à l’Historial de la Vendée et que notre exposition sur la Vendée sous l’occupation ait su capter votre intérêt.<br>Nous sommes également enchantés de savoir que vous avez apprécié le nouveau musée des enfants, même en tant qu’adulte. Votre satisfaction quant à notre espace de restauration nous touche également, et nous sommes heureux que vous ayez trouvé nos tarifs abordables.<br><br>Sachez que votre appréciation de notre accueil et de l’ambiance chaleureuse qui règne à l’historial nous motive à toujours offrir le meilleur à nos visiteurs. Merci encore pour vos recommandations, et nous espérons vous revoir bientôt pour une nouvelle visite !"
+    },
+    {
+      "text": "Je ne m'attendais vraiment pas un musée aussi complet et aussi moderne, avec une telle muséographie. L'exposition sur la Vendée sous l'occupation est vraiment excellente, l'espace enfants et son thème autour de l'arbre est magnifique. Mention spéciale à Émilie, adorable et très professionnelle ☺️",
+      "rating": 5,
+      "date": "2026-02-16 07:29:56 +00:00",
+      "owner_response": "Nous vous remercions pour votre retour si enthousiaste et pour cette note de 5 étoiles. <br><br>Nous espérons avoir le plaisir de vous accueillir de nouveau très bientôt à l'Historial de la Vendée."
+    },
+    {
+      "text": "Très bel Historial, une visite vraiment agréable ! Le lieu est bien pensé et s’adresse autant aux enfants qu’aux adultes, chacun peut y trouver son intérêt. L’exposition du moment était particulièrement réussie et très intéressante.\nPetit bémol : plusieurs boutons interactifs ne fonctionnaient pas pour accéder aux contenus supplémentaires, ce qui est dommage. Cela dit, ça n’enlève rien au plaisir global de la visite.",
+      "rating": 5,
+      "date": "2026-04-28 19:14:59 +00:00",
+      "owner_response": "Un grand merci pour votre retour positif et détaillé sur votre visite à l'Historial de la Vendée ! Nous sommes ravis d'apprendre que vous avez apprécié l'organisation du lieu et l'exposition en cours. Il est primordial pour nous de proposer une expérience enrichissante et plaisante pour tous nos visiteurs, petits et grands.<br><br>Nous prenons cependant bonne note de votre remarque concernant les boutons interactifs. Un renouvellement de la muséographie et de la scénographie du Musée est prévu dans les années à venir pour permettre d'offrir une visite optimale à nos visiteurs.<br><br>Nous espérons avoir le plaisir de vous accueillir à nouveau très bientôt."
+    },
+    {
+      "text": "Tres belle scénographie pour ce musée a la fois historique mais aussi ludopédagogique dans l’expo temporaire pour enfant, sur les arbres. Les animations extérieures mériteraient d’être (aussi)en matinée pour les plus petits et les plus sensibles à la chaleur.\nNotez que le musée est 100% accessible PMR. On peut aussi manger sur place avec une cafétéria qui propose des bocaux de spécialités locales et des glaces \"circuit court\".\nPetit bémol, de nombreuses animations pédagogiques (10-15%) sont HS ou en maintenance... mais il y a assez de choses à faire.",
+      "rating": 4,
+      "date": "2026-08-07 15:27:48 +00:00",
+      "owner_response": "Nous sommes ravis que vous ayez apprécié la scénographie du musée ainsi que l'espace Musée des enfants sur le thème de l'arbre.<br><br>Nous prenons également bonne note de votre remarque concernant les animations extérieures en matinée. Votre suggestion  sera transmise à nos équipes.<br><br>Merci aussi de souligner l’accessibilité PMR du musée ainsi que l’offre de restauration sur place. Nous sommes heureux que ces aspects aient contribué positivement à votre visite."
+    },
+    {
+      "text": "Magnifique endroit. Une riche collection diverses et variées sont exposées. À voir absolument ! Petite suggestion..Les expositions sont peu éclairée, et les descriptions le sont aussi, ce qui est dommage.",
+      "rating": 5,
+      "date": "2026-06-07 14:52:38 +00:00",
+      "owner_response": "Monsieur, <br>C'est un réel plaisir de savoir que la richesse et la diversité de nos collections ont su vous captiver.<br><br>Votre remarque concernant les dispositifs d'éclairage des expositions et les cartels explicatifs est justifiée. Nous travaillons actuellement au renouvellement de la scénographie mais aussi de la mise en lumière des oeuvres.<br><br>Merci de votre compréhension."
+    }
+  ],
+  "place_topics": {
+    "préhistoire": 60,
+    "cafétéria": 45,
+    "vendéenne": 37,
+    "osiris": 34,
+    "département": 18,
+    "scénographie": 17,
+    "mise en scène": 13,
+    "hélicoptère": 40,
+    "alexandre soljenitsyne": 8,
+    "histoire de france": 6
+  },
+  "booking_url": null,
+  "cid": "8619519372003508398",
+  "place_id": "ChIJQZlIjY5nBEgRrgDeXjOvnnc",
+  "wikipedia_description": "L'Historial de la Vendée est un musée retraçant l'Histoire de la Vendée, de la Préhistoire au début du XXIe siècle. Il se trouve près du Mémorial de la Vendée au cœur de l'espace naturel de la vallée de la Boulogne, c'est-à-dire, plus précisément, aux Lucs-sur-Boulogne. Il a ouvert ses portes le 26 juin 2006 après trois années de travaux, la première pierre ayant été posée le 22 septembre 2003 son concepteur est Christophe Vital, s’inspirant des musées nord-américains et plus particulièrement du",
+  "description_short": "7 000 ans d'histoire vendéenne vous attendent dans ce musée immersif et moderne, niché au cœur de la vallée de la Boulogne.",
+  "description_long": "L'Historial de la Vendée, aux Lucs-sur-Boulogne, vous plonge dans 7 000 ans d'histoire à travers une muséographie remarquable inspirée des grands musées nord-américains. Du Néolithique à aujourd'hui, vivez des expériences immersives : une rue gallo-romaine reconstituée, l'épopée des guerres de Vendée de 1793, un village du siècle dernier, ou encore une exposition captivante sur la Vendée sous l'Occupation. Le musée des enfants accueille désormais la thématique « Il était une fois l'arbre ». Un lieu incontournable, pensé pour tous les âges.",
+  "tags": [
+    "musée",
+    "histoire",
+    "immersif",
+    "famille",
+    "patrimoine vendéen"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 4,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille, commencez par le musée des enfants sur l'arbre avant d'explorer les grandes salles immersives — prévoyez au moins 2h pour profiter de tout ! En couple ou solo, ne manquez pas l'exposition sur la Vendée sous l'Occupation et les ambiances sonores saisissantes de chaque espace.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:17:40.855926+00:00",
+  "enriched_at": "2026-09-16T09:17:40.855926+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://cdt85.media.tourinsoft.eu/upload/les-lucs-historial-vue-du-ciel.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/c/ca/Historial_de_la_Vend%C3%A9e.jpg?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original",
+    "https://www.atelier-phileas.com/IMG/jpg/hdv-helico05.jpg"
+  ]
+}

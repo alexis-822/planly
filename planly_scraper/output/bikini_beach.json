@@ -1,0 +1,112 @@
+{
+  "id": "bikini_beach",
+  "name": "Bikini Beach",
+  "name_google": "Bikini Beach",
+  "category": "Sorties & Détente",
+  "subcategory": "Bars & Ambiance",
+  "commune": "Remblai, Les Sables",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4945441,
+  "lng": -1.7895157,
+  "address": "Prom. de l'Amiral Lafargue, 85100 Les Sables-d'Olonne",
+  "phone": "+33950465955",
+  "website": null,
+  "rating": 4,
+  "reviews_count": 238,
+  "rating_distribution": {
+    "1": 43,
+    "2": 12,
+    "3": 8,
+    "4": 25,
+    "5": 150
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/bikini_beach/photo_1.jpg",
+    "images/bikini_beach/photo_2.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Une belle soirée en famille avec des enfants en bas âge qui ont pu jouer dans le sable, venir grignoter les planches, wings, nems quand ils en avaient envie pendant que les adultes discutaient entre eux en pouvant facilement les surveiller. Un cadre sympa, un service souriant et de bon conseil.\nBudget correct pour ce genre de prestation",
+      "rating": 5,
+      "date": "2026-07-29 10:18:01 +00:00",
+      "owner_response": "Bonjour Claire,<br><br>Merci beaucoup pour votre retour ! ☀️ Nous sommes ravis que toute la famille ait passé un agréable moment au Bikini Beach. C'est un vrai plaisir de savoir que les enfants ont pu profiter de l'espace pour jouer pendant que les adultes se détendaient en toute sérénité.<br><br>Merci également pour vos compliments sur notre équipe, le service et nos plats. Nous espérons avoir le plaisir de vous accueillir de nouveau très bientôt pour une nouvelle soirée les pieds dans le sable ! 🌊✨"
+    },
+    {
+      "text": "Nous avons passé la journée au bikini beach  ! Un vrai bonheur\nGreg fait des supers cocktails , le pornstar est incroyable !! Franck a été top niveau service disponible malgré le monde et très sympathique\nNous nous sommes régalés! On vous conseil cet endroit !! Pensez à réserver votre table",
+      "rating": 5,
+      "date": "2026-05-24 17:02:35 +00:00",
+      "owner_response": "Bonjour Lauriane,<br><br>Un grand merci pour ce superbe retour ! ⭐⭐⭐⭐⭐<br><br>Nous sommes ravis que vous ayez passé une si belle journée au Bikini Beach. Votre message sera transmis à Greg et Franck, qui seront très heureux de lire vos compliments. 😊<br><br>Savoir que vous avez apprécié les cocktails, le service et votre déjeuner est la plus belle des récompenses pour toute l'équipe.<br><br>Merci également pour votre recommandation et votre conseil de réservation, surtout pendant les périodes de forte affluence. 😉<br><br>Au plaisir de vous accueillir de nouveau très bientôt face à l'océan. 🌊☀️🍹"
+    },
+    {
+      "text": "Lieu idyllique mais prestations en chute libre. Malgré une réservation de transats , aucun transat de disponible; la réponse : un bug du plagiste. Puis on enchaîne avec notre réservation en soirée d'une table demandée \"au calme, loin des enceintes\", on se retrouve face au DJ ! Impossible de parler. La carte est très chère et basique. Des tapas peuvent être délicats et originaux a moindre coût ! Quel dommage que des locaux soient si déçus. Nous ne sommes pas prêt de revenir et encore moins d'inviter. D'autres bars et restaurants de plage s'améliorent, eux....",
+      "rating": 2,
+      "date": "2026-08-17 12:42:19 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Bien, mais sans plus... pas au niveau du sud de la France. Ça reste tout de même correct dans l'ensemble",
+      "rating": 4,
+      "date": "2026-08-20 07:47:27 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Super endroit,\nUne vue parfaite au bord de la mer, les pieds dans le sable et surtout les cocktails sont exceptionnels avec un bon rapport qualité prix ! Un très bon service\nJe recommande",
+      "rating": 5,
+      "date": "2026-07-22 20:43:15 +00:00",
+      "owner_response": "Bonjour Elia,<br><br>Un grand merci pour votre recommandation ! ☀️ Nous sommes ravis que vous ayez apprécié notre cadre les pieds dans le sable, la vue sur la mer, ainsi que nos cocktails. 🍹<br><br>Toute l'équipe vous remercie également pour vos compliments sur le service. Au plaisir de vous accueillir de nouveau très bientôt pour un autre moment de détente au Bikini Beach ! 🌊✨"
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "13076195556681545026",
+  "place_id": "ChIJ71LFHctnBEgRQnWLAZT6d7U",
+  "wikipedia_description": "Bikini Beach est un film destiné aux adolescents, réalisé en 1964 par William Asher, avec Frankie Avalon et Annette Funicello. C'est le 3e film d'une série de sept produits par American International Pictures (AIP), initiée en 1963 avec Beach Party..",
+  "description_short": "Les pieds dans le sable, cocktails en main face à l'océan. Le beach bar incontournable des Sables-d'Olonne.",
+  "description_long": "Bikini Beach, c'est l'adresse phare de la promenade des Sables-d'Olonne pour profiter d'une journée ou d'une soirée les pieds dans le sable, face à l'Atlantique. Transats, cocktails savamment préparés (le pornstar martini fait l'unanimité !), petite restauration légère — planches, wings, nems — et une atmosphère détendue qui mêle familles, couples et amis. Le service est réputé chaleureux et disponible malgré l'affluence. Un spot idéal pour prolonger une belle journée de plage dans une ambiance beach-bar ensoleillée, typique du bord de mer vendéen.",
+  "tags": [
+    "beach bar",
+    "cocktails",
+    "terrasse",
+    "bord de mer",
+    "restauration légère"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": false,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "En famille, venez en fin d'après-midi : les enfants jouent dans le sable pendant que les adultes savourent un cocktail au coucher du soleil. En couple, réservez votre transat à l'avance pour éviter les mauvaises surprises !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:33:34.509140+00:00",
+  "enriched_at": "2026-09-16T09:33:34.509140+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://static.actu.fr/uploads/2024/08/569bd34f63c663a9bd34f63c60e9bdv-960x640.jpg",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/25/c2/38/bikini-beach.jpg?w=1100&h=1100&s=1"
+  ]
+}

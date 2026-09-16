@@ -70,6 +70,18 @@ _PARCS_LOISIRS_FIELDS = {
     "amenities": {"label": "snack, espace tout-petits, pique-nique, poussette, règles pratiques", "type": "official"},
 }
 
+# Sorties & Détente : bars, casinos, cinémas, piscines & spa (process_sorties)
+_SORTIES_FIELDS = {
+    "pricing": {"label": "tarifs (entrée, séance, accès journée, formules)", "type": "official"},
+    "hours_text": {"label": "horaires d'ouverture", "type": "official"},
+    "closing_time": {"label": "heure de fermeture la plus tardive", "type": "official"},
+    "age_min": {"label": "âge minimum d'accès", "type": "official"},
+    "booking": {"label": "réservation obligatoire / conseillée / non", "type": "official"},
+    "know": {"label": "3 points « bon à savoir »", "type": "official"},
+    "facilities": {"label": "installations, jeux ou salles", "type": "official"},
+    "services": {"label": "terrasse, vue, musique live, restauration, tenue, versions", "type": "official"},
+}
+
 SPECIFIC_FIELDS = {
     "Plages & Côte": {
         "beach_type": {"label": "type de plage — utiliser exactement une de ces valeurs : sable_fin (sable fin, doux), sable_normal (sable ordinaire/grossier), galets, sable_galets (mixte sable et galets), rochers, sable_rochers (mixte sable et rochers)", "type": "enum", "options": ["sable_fin", "sable_normal", "galets", "sable_galets", "rochers", "sable_rochers"]},
@@ -173,31 +185,10 @@ SPECIFIC_FIELDS = {
     "Parcs animaliers": _PARCS_LOISIRS_FIELDS,
     "Aquariums": _PARCS_LOISIRS_FIELDS,
     "Parcs botaniques": _PARCS_LOISIRS_FIELDS,
-    "Cinéma": {
-        "screens": {"label": "nombre de salles", "type": "text"},
-        "imax_3d": {"label": "salle IMAX ou 3D", "type": "bool"},
-        "outdoor": {"label": "cinéma en plein air", "type": "bool"},
-    },
-    "Bars & Ambiance": {
-        "ambiance": {"label": "ambiance du bar", "type": "enum", "options": ["lounge", "festif", "guinguette", "cocktails", "pub", "rooftop"]},
-        "live_music": {"label": "musique live", "type": "bool"},
-        "terrace_view": {"label": "terrasse ou vue", "type": "enum", "options": ["aucune", "terrasse", "vue_mer", "terrasse_vue_mer", "rooftop"]},
-        "open_late": {"label": "ouvert tard le soir", "type": "bool"},
-    },
-    "Casino & Jeux": {
-        "slot_machines": {"label": "machines à sous", "type": "bool"},
-        "table_games": {"label": "jeux de table", "type": "bool"},
-        "shows": {"label": "spectacles", "type": "bool"},
-        "restaurant": {"label": "restaurant sur place", "type": "bool"},
-        "min_age": {"label": "âge minimum d'entrée", "type": "text"},
-    },
-    "Piscines & Spa": {
-        "pool_type": {"label": "type d'établissement", "type": "enum", "options": ["piscine", "thalasso", "spa", "aqualudique", "mixte"]},
-        "outdoor_pool": {"label": "bassin extérieur", "type": "bool"},
-        "sauna_hammam": {"label": "sauna ou hammam", "type": "bool"},
-        "kids_area": {"label": "espace enfants", "type": "bool"},
-        "entry_price": {"label": "prix d'entrée en euros", "type": "text"},
-    },
+    "Cinéma": _SORTIES_FIELDS,
+    "Bars & Ambiance": _SORTIES_FIELDS,
+    "Casino & Jeux": _SORTIES_FIELDS,
+    "Piscines & Spa": _SORTIES_FIELDS,
 }
 
 
@@ -1122,6 +1113,44 @@ Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
 - Si plusieurs tarifs existent (haute/basse saison), prends la haute saison et précise-le dans notes."""
 
 
+SORTIES = {"Bars & Ambiance", "Casino & Jeux", "Cinéma", "Piscines & Spa"}
+
+SORTIES_PROMPT = """Voici des pages web ({source}) sur "{name}" ({subcategory}, {commune}).
+{pages}
+
+---
+
+Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
+{{
+  "pricing": {{
+    "free_entry": true seulement si l'entrée est explicitement gratuite, sinon null,
+    "adult": tarif adulte / plein tarif en euros (nombre) ou null,
+    "child": tarif enfant ou réduit en euros (nombre) ou null,
+    "child_age_max": âge maximum du tarif enfant (entier) ou null,
+    "from_price": prix "à partir de" par personne (nombre) ou null,
+    "options": [{{"label": texte court (ex: "Accès journée", "Soin 50 min"), "price": nombre}}] (5 maximum, [] si aucun),
+    "notes": précision courte ou null,
+    "source_url": URL de la page des tarifs ou null,
+    "valid_period": année ou saison des tarifs si écrite ou null,
+    "evidence": phrase recopiée mot pour mot contenant les prix, ou null
+  }},
+  "hours_text": horaires d'ouverture en texte court ou null,
+  "closing_time": heure de fermeture la plus tardive (ex: "1h", "23h30") ou null,
+  "age_min": âge minimum d'accès (entier) ou null,
+  "booking": "obligatoire" ou "conseillée" ou "non" ou null,
+  "know": [3 phrases courtes maximum, ce qu'il faut savoir avant d'y aller],
+  "facilities": [{{"name": texte court, "detail": texte court ou null}}] (installations d'un spa, jeux d'un casino, équipements d'un cinéma ; 6 maximum, [] si aucun),
+  "services": {{"terrace": vrai/faux ou null, "view": texte court ou null, "live_music": vrai/faux ou null, "happy_hour": texte court ou null, "restaurant_on_site": vrai/faux ou null, "dress_code": texte court ou null, "id_required": vrai/faux ou null, "screens": entier ou null, "versions": texte court (ex: "VF et VOST") ou null, "snack": vrai/faux ou null, "pmr": vrai/faux ou null}}
+}}
+
+- Recopie les prix exactement tels qu'écrits, sans calcul.
+- N'invente jamais d'horaire ni d'âge minimum : null si ce n'est pas écrit.
+- Pas d'agenda : ignore les concerts, soirées et séances datés, ils changent trop vite.
+- "know" : faits pratiques et durables (accès, ambiance, ce qui est compris, contraintes). Pas de superlatif publicitaire.
+- Casino : age_min 18 et id_required si la pièce d'identité est exigée. Spa : age_min souvent 16 ou 18.
+- Cinéma : screens = nombre de salles, versions = VF/VOST. Bars : closing_time = heure de fermeture."""
+
+
 def _html_to_text(page_html: str) -> str:
     page_html = re.sub(r"<(script|style|noscript)[^>]*>.*?</\1>", " ", page_html, flags=re.S | re.I)
     text = unescape(re.sub(r"<[^>]+>", " ", page_html))
@@ -1208,6 +1237,28 @@ def official_candidate_urls(home_page: dict, robots) -> list[str]:
     return sorted(scores, key=lambda u: -scores[u])
 
 
+AGGREGATORS = ("tripadvisor.", "thefork.", "lafourchette.", "petitfute.", "yelp.", "pagesjaunes.",
+               "facebook.", "instagram.", "google.", "linktr.ee", "booking.com", "expedia.", "mapstr.",
+               "opentable.", "michelin.", "annuaire-entreprises", "societe.com", "infogreffe.", "youtube.")
+
+
+def _find_official_site(poi: dict) -> str:
+    """Cherche le site officiel quand Google ne le donne pas : un mot du nom doit être dans le domaine."""
+    tokens = [t for t in re.split(r"[^a-z0-9]+", unicodedata.normalize("NFKD", poi.get("name", "").lower())
+                                  .encode("ascii", "ignore").decode()) if len(t) > 3]
+    if not tokens:
+        return ""
+    for s in search_organic(f"{poi.get('name', '')} {poi.get('commune', '')} site officiel", depth=10):
+        host = _host(s["url"])
+        if any(a in host for a in AGGREGATORS) or INSTITUTIONAL_RE.search(host):
+            continue
+        flat = re.sub(r"[^a-z0-9]", "", host)
+        if any(t in flat for t in tokens):
+            log.info(f"  [site officiel trouvé] {host}")
+            return f"https://{host}"
+    return ""
+
+
 def _to_float(value) -> float | None:
     try:
         return float(str(value).replace("€", "").replace(",", ".").strip())
@@ -1245,37 +1296,41 @@ def _is_empty(value) -> bool:
     return value in (None, [], "")
 
 
-def process_parcs_loisirs(client, poi: dict, report: list) -> dict:
+def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: str,
+                           is_complete, label_log: str, source_tag: str) -> dict:
     """Itère site officiel → recherche Google sur le domaine officiel → office de tourisme / commune,
     jusqu'à obtenir des tarifs vérifiés (chiffres présents dans la page source) et des horaires."""
-    keys = list(_PARCS_LOISIRS_FIELDS)
     today = datetime.date.today().isoformat()
     found, tried = {}, set()
     website = (poi.get("website") or "").strip()
     if any(d in website for d in NOT_OFFICIAL_DOMAINS):
         website = ""
+    if not website:
+        website = _find_official_site(poi)
     home = (website if website.startswith("http") else f"https://{website}") if website else ""
     domain = _host(home) if home else ""
     robots = _load_robots(home) if home else None
     site_label = "office de tourisme" if INSTITUTIONAL_RE.search(domain) else "site officiel"
 
     def complete():
-        pr = found.get("pricing")
-        return bool(pr and not pr.get("stale") and (found.get("hours_text") or poi.get("opening_hours")))
+        return is_complete(found, poi)
 
     def extract(label, pages):
         pages = [p for p in pages if p and p["content"] and p["url"] not in tried]
         tried.update(p["url"] for p in pages)
         if not pages:
             return
-        log.info(f"  [P&L] {label} : extraction sur {len(pages)} page(s)")
+        log.info(f"  [{label_log}] {label} : extraction sur {len(pages)} page(s)")
         text = "".join(f"\n\n--- {p['url']} ---\n{p['content']}" for p in pages)
-        data = _call_haiku(client, PARCS_PROMPT.format(
+        data = _call_haiku(client, prompt.format(
             source=label, name=poi.get("name", ""), subcategory=poi.get("subcategory", ""),
             commune=poi.get("commune", ""), pages=text), max_tokens=2500)
         if not isinstance(data, dict):
             return
         pr = data.get("pricing") if isinstance(data.get("pricing"), dict) else None
+        # Dans un bar ou un restaurant, l'entrée libre ne rend pas la sortie gratuite
+        if pr and pr.get("free_entry") and poi.get("subcategory") in ("Bars & Ambiance", "Restaurants"):
+            pr.update({"free_entry": None, "adult": None, "child": None})
         if pr and pr.get("free_entry") is True:
             if re.search(r"gratuit|acc[eè]s libre|entr[ée]e libre", text, re.I):
                 pr.update({"adult": 0, "child": 0, "family_ticket": None})
@@ -1343,7 +1398,7 @@ def process_parcs_loisirs(client, poi: dict, report: list) -> dict:
             continue
         poi["specific"][k] = found[k]
         poi["specific_status"][k] = "auto"
-        report.append({"poi": poi.get("id"), "field": k, "value": found[k], "source": "parcs_loisirs"})
+        report.append({"poi": poi.get("id"), "field": k, "value": found[k], "source": source_tag})
         log.info(f"    ✓ {k} = {str(found[k])[:90]}")
 
     poi["specific"]["official_source"] = {"url": home or None, "verified_at": today}
@@ -1354,6 +1409,24 @@ def process_parcs_loisirs(client, poi: dict, report: list) -> dict:
     if found.get("age_min") is not None:
         poi["age_min"] = found["age_min"]
     return poi
+
+
+def process_parcs_loisirs(client, poi: dict, report: list) -> dict:
+    def is_complete(found, poi):
+        pr = found.get("pricing")
+        return bool(pr and not pr.get("stale") and (found.get("hours_text") or poi.get("opening_hours")))
+
+    return _run_official_pipeline(client, poi, report, list(_PARCS_LOISIRS_FIELDS), PARCS_PROMPT,
+                                  is_complete, "P&L", "parcs_loisirs")
+
+
+def process_sorties(client, poi: dict, report: list) -> dict:
+    def is_complete(found, poi):
+        hours = found.get("hours_text") or poi.get("opening_hours")
+        return bool(hours and (found.get("pricing") or found.get("know")))
+
+    return _run_official_pipeline(client, poi, report, list(_SORTIES_FIELDS), SORTIES_PROMPT,
+                                  is_complete, "S&D", "sorties_detente")
 
 
 def process_poi(client, poi: dict, dry_run: bool = False, report: list = None) -> dict:
@@ -1375,12 +1448,14 @@ def process_poi(client, poi: dict, dry_run: bool = False, report: list = None) -
     if dry_run:
         return poi
 
-    # Parcs & Loisirs : pas de SERP ni de pages tierces, site officiel uniquement
-    if poi.get("subcategory") in PARCS_LOISIRS:
+    # Familles lues sur le site officiel uniquement (pas de pages tierces)
+    if poi.get("subcategory") in PARCS_LOISIRS or poi.get("subcategory") in SORTIES:
         if not missing:
             return poi
         poi.setdefault("specific", {})
         poi.setdefault("specific_status", {})
+        if poi["subcategory"] in SORTIES:
+            return process_sorties(client, poi, report)
         return process_parcs_loisirs(client, poi, report)
 
     # Étape 0 : remplir les champs de base (lat, lng, address...)

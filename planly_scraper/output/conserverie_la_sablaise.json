@@ -1,0 +1,228 @@
+{
+  "id": "conserverie_la_sablaise",
+  "name": "Conserverie La Sablaise",
+  "name_google": "Conserverie La Sablaise - Le Comptoir",
+  "category": "Art de vivre",
+  "subcategory": "Dégustations",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.5166901,
+  "lng": -1.7848069,
+  "address": "Parc Actilonne, All. Alain Gautier, 85340",
+  "phone": "+33251328637",
+  "website": "https://lasablaise.fr/",
+  "rating": 4.3,
+  "reviews_count": 58,
+  "rating_distribution": {
+    "1": 5,
+    "2": 2,
+    "3": 2,
+    "4": 11,
+    "5": 38
+  },
+  "opening_hours": {
+    "sunday": null,
+    "monday": null,
+    "tuesday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 19,
+          "minute": 30
+        }
+      }
+    ],
+    "wednesday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 30
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 30
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 30
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 0
+        }
+      }
+    ]
+  },
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/conserverie_la_sablaise/photo_1.jpg",
+    "images/conserverie_la_sablaise/photo_2.jpg",
+    "images/conserverie_la_sablaise/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Sur les conseils d'amis des Sables d'Olonne, nous sommes allés dans cette \"sardinerie locale\".\n\nLe choix de sardines, anchois, thon, haricots Mogette....\n\nLes anchois dégustés sur place sont excellents, la boutique accolée à l'atelier de fabrication est très bien achalandée et le personnel accueillant.\n\nNous avons pris tout un assortiment de poissons 🐟 🎏 en boîte que nous consommerons en rentrant de vacances, et faire le plein de protéines, magnésium, Omega 3, etc......",
+      "rating": 4,
+      "date": "2023-06-26 08:40:32 +00:00",
+      "owner_response": "Bonjour Monsieur,<br>Merci beaucoup pour votre commentaire. Au plaisir de vous revoir en boutique.<br>La Sablaise"
+    },
+    {
+      "text": "Accueil un peu froid, les prix ne sont pas forcément plus intéressants ici, la soupe de poissons plus intéressante à carrefour par exemple…",
+      "rating": 4,
+      "date": "2026-03-11 13:27:11 +00:00",
+      "owner_response": "Bonjour,<br><br>Nous sommes désolés que nos produits n’aient pas répondu à vos attentes.<br><br>Dans un souci d'amélioration permanent pouvez vous prendre contact avec nous par mail ou téléphone afin que nous puissions échanger ensemble. Vous retrouverez toutes nos coordonnées sur notre site: www.lasablaise.fr.<br><br>Bien cordialement,<br>L’équipe de la Sablaise"
+    },
+    {
+      "text": "Ne vous aventurez pas sur les plats préparés. Rata de seiche en bocal. Du VOL au niveau seiche pourtant l'ingrédient principal attendu. 2 tout petits  morceaux immergés dans des pommes de terre pour le coup en surnombre et une excellente sauce.\nLe rata de seiche était le plat du pauvre en son temps aujourd'hui c'est devenu un produit de luxe et encore on en sort rassasié que grâce à Parmentier! Fuyez !!!",
+      "rating": 2,
+      "date": "2025-11-26 19:01:57 +00:00",
+      "owner_response": "Bonjour Monsieur Ollivier,<br><br>Merci pour votre retour. Nous sommes vraiment désolés d'apprendre que notre rata de seiche n’ait pas répondu à vos attentes. Nous mettons beaucoup de cœur et de savoir-faire dans nos recettes, et c’est toujours décevant pour nous d’apprendre qu’un client a eu une mauvaise expérience.<br><br>La Conserverie La Sablaise est installée aux Sables d’Olonne depuis plus de 35 ans, et nous avons à cœur de proposer des produits authentiques, cuisinés avec sérieux et passion. Votre remarque sur la quantité de seiche est entendue : nous travaillons actuellement avec notre équipe de cuisiniers pour améliorer cette recette et en renforcer sa générosité.<br><br>Nous serions ravis d’échanger avec vous directement et de vous accueillir au « Comptoir La Sablaise », pour vous présenter notre démarche et nos produits. N’hésitez pas à venir nous rencontrer, ce sera avec plaisir.<br><br>Belle journée à vous,<br>L’équipe de la Conserverie La Sablaise"
+    },
+    {
+      "text": "L'expérience de visite proposée ne présente pas un grand intérêt...que du virtuel qu'on pourrait nous proposer en lien sur le site.. une petite manipulation de 5min...des présentations désordonnees et une expérience avec lunette virtuelle sans grand intérêt sauf de faire la queue pour tester...on se laisse tenter par quelques produits maison mais n'était ce pas le seul but ?...dommage alors de devoir payer 6euros pour goûter 2 ou 3 toasts...\nNous aurions apprécier de découvrir l'atelier de fabrication  compris derrière une vitre pour des questions d'hygiène ....\nEn conclusion visite trop amateur et trop peu instructive pour donner envie...",
+      "rating": 1,
+      "date": "2025-07-31 08:13:06 +00:00",
+      "owner_response": "Bonjour,<br><br>Nous sommes désolés que l’atelier n’ait pas répondu à vos attentes. Le contenu et le déroulé précis de l’expérience sont décrits sur le site de l’Office de Tourisme, afin que chacun puisse savoir à quoi s’attendre avant la visite.<br><br>Vos remarques sur la présentation et la dégustation seront transmises à notre équipe pour améliorer l’expérience proposée.<br><br>Dans un souci d'amélioration permanent pouvez vous prendre contact avec nous par mail ou téléphone afin que nous puissions échanger ensemble. Vous retrouverez toutes nos coordonnées sur notre site: www.lasablaise.fr.<br><br>Bien cordialement,<br>L’équipe du Comptoir de la Sablaise"
+    },
+    {
+      "text": "Super visite virtuelle avec atelier de découpe de l Anchois. Nous avons adoré découvrir cette conserverie. Merci pour  ce beau moment, nous allons nous régaler avec tous nos achats.",
+      "rating": 5,
+      "date": "2025-04-18 16:27:24 +00:00",
+      "owner_response": "Bonjour,<br>Merci beaucoup pour votre commentaire. Au plaisir de vous revoir en boutique.<br>La Sablaise"
+    }
+  ],
+  "place_topics": {
+    "prix": 5,
+    "boutique": 4,
+    "anchois": 3,
+    "atelier": 3,
+    "églefin": 2,
+    "soupe de poissons": 2,
+    "basilic": 2,
+    "visite virtuelle": 2,
+    "thon": 2,
+    "toasts": 2
+  },
+  "booking_url": null,
+  "cid": "9743125414860147735",
+  "place_id": "ChIJmc_M30NdBEgRF8zRivGINoc",
+  "wikipedia_description": null,
+  "description_short": "Plongez dans l'univers d'une conserverie familiale sablaise et repartez avec les trésors de la mer directement de la source.",
+  "description_long": "Au cœur des Sables d'Olonne, La Sablaise est une conserverie familiale passionnée par les produits de la mer. Son Comptoir vous accueille pour découvrir un savoir-faire artisanal transmis avec fierté : sardines, anchois, thon, soupe de poissons et spécialités régionales comme les haricots Mogette. Entre magasin de vente directe et espace d'apprentissage, vous pouvez déguster sur place, assister à des ateliers et repartir avec des produits du terroir marin soigneusement sélectionnés. Une adresse authentique pour les amateurs de gastronomie littorale vendéenne.",
+  "tags": [
+    "conserverie",
+    "produits de la mer",
+    "anchois",
+    "dégustation",
+    "artisanat local"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 6,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 45,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille ou entre gourmets, profitez de l'atelier découpe d'anchois pour une expérience interactive et repartez avec quelques bocaux à déguster le soir même. Idéal par temps de pluie !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:59:44.271509+00:00",
+  "enriched_at": "2026-09-16T08:59:44.271509+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://lasablaise.fr/wp-content/uploads/2022/03/23032022-LA-SABLAISE-MAG-LES-HALLES-44-1-1024x684.jpg",
+    "https://lasablaise.fr/wp-content/uploads/2023/12/La-Sablaise-Ambiance-Soupes_RVB-PAGE-GAMME-scaled.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/2026-PROD-ConserverieLaSablaiseSIT3-Antoine-Martineau.jpg"
+  ]
+}

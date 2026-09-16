@@ -1,0 +1,112 @@
+{
+  "id": "l_etoile_de_mer",
+  "name": "L'Étoile de Mer",
+  "name_google": "L'Etoile de Mer",
+  "category": "Sorties & Détente",
+  "subcategory": "Bars & Ambiance",
+  "commune": "La Chaume, Les Sables",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4969444,
+  "lng": -1.7966666999999998,
+  "address": "33 Quai George V, 85100 Les Sables-d'Olonne",
+  "phone": "+33251238865",
+  "website": "https://www.facebook.com/share/1B9njoCuT8/",
+  "rating": 4.4,
+  "reviews_count": 424,
+  "rating_distribution": {
+    "1": 11,
+    "2": 9,
+    "3": 39,
+    "4": 116,
+    "5": 249
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": "inexpensive",
+  "photos": [
+    "images/l_etoile_de_mer/photo_1.jpg",
+    "images/l_etoile_de_mer/photo_2.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Conviviale, simplicité et toujours de la bonne musique 🎶",
+      "rating": 5,
+      "date": "2026-06-21 12:24:23 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très bien dîner,propre,bon,serveur très correcte,aimable et gentil",
+      "rating": 5,
+      "date": "2025-08-20 19:53:47 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Service très agréable et réactif avec de bonnes boissons (bières locales, cocktails, vin…) et la possibilité d’avoir des planches en fin de journée. Nous avons passé un très bon moment avec en prime un petit concert !",
+      "rating": 5,
+      "date": "2021-08-09 06:01:42 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Petit bar sympa sur le port de la Chaume. Service souriant et ambiance conviviale.",
+      "rating": 4,
+      "date": "2017-07-17 13:43:33 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Agréable\nMais pas pratique pour les fauteuils roulants",
+      "rating": 4,
+      "date": "2022-08-23 17:15:19 +00:00",
+      "owner_response": "bonjour, la salle principale accueil sans soucis les fauteuils roulants . malheureusement la configuration du bar ne nous permet pas de faire des travaux accès pmr, dans tous le bar . mais nous vous accueillerons avec plaisir dans notre premiere salle. l'équipe de letoile de mer . "
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "8796025286921845258",
+  "place_id": "ChIJE_a9ao9nBEgRCnpUJmXCEXo",
+  "wikipedia_description": null,
+  "description_short": "Bar convivial sur le port de la Chaume, avec bières locales, cocktails et planches à partager au coucher du soleil.",
+  "description_long": "Niché sur le quai George V au cœur du port de la Chaume aux Sables-d'Olonne, L'Étoile de Mer est un bar d'ambiance où il fait bon s'attarder. On y apprécie une belle sélection de bières locales, cocktails et vins servis par une équipe souriante et réactive. En fin de journée, des planches apéritives permettent de prolonger le moment. La bonne musique et l'atmosphère chaleureuse en font un spot idéal pour débuter ou terminer une soirée face au port. Notez cependant que l'accessibilité en fauteuil roulant y est limitée.",
+  "tags": [
+    "bar",
+    "port",
+    "bières locales",
+    "cocktails",
+    "ambiance musicale"
+  ],
+  "audience": [
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 18,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": false,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En couple ou entre amis, installez-vous en fin d'après-midi pour profiter d'un apéro planche avec vue sur le port de la Chaume — le meilleur moment pour s'imprégner de l'ambiance sablaise.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:32:31.263576+00:00",
+  "enriched_at": "2026-09-16T09:32:31.263576+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://check.fr/wp-content/uploads/2023/01/checkfr-10245-l-etoile-de-mer-les-sables-d-olonne-2.jpg",
+    "https://img02.restaurantguru.com/cd80-LEtoile-de-Mer-Les-Sables-dOlonne-picture.jpg"
+  ]
+}

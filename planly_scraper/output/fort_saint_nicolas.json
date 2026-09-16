@@ -1,0 +1,114 @@
+{
+  "id": "fort_saint_nicolas",
+  "name": "Fort Saint-Nicolas",
+  "name_google": "Fort saint Nicolas",
+  "category": "Patrimoine",
+  "subcategory": "Châteaux & Monuments",
+  "commune": "La Chaume, Les Sables",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4899159,
+  "lng": -1.7945004,
+  "address": "85100 Les Sables-d'Olonne",
+  "phone": null,
+  "website": null,
+  "rating": 4.6,
+  "reviews_count": 173,
+  "rating_distribution": {
+    "1": 1,
+    "2": 1,
+    "3": 8,
+    "4": 49,
+    "5": 114
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/fort_saint_nicolas/photo_1.jpg",
+    "images/fort_saint_nicolas/photo_2.jpg",
+    "images/fort_saint_nicolas/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "J’ai beaucoup aimé ce lieu, de part son côté historique mais également sa beauté !\nLes sculptures sont vraiment belles, avec des descriptions en dessous,\nUne magnifique vue au loin, sur la plage et mer.\nAttention à vous lorsque c’est les grandes marées",
+      "rating": 5,
+      "date": "2024-10-18 19:59:33 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Un lieu à ne pas manqué, dans la continuité du port, lieux d'expositions et idéal pour quelques photos.  La corniche est aussi un lieu de ballade et d'accès à la plage !",
+      "rating": 4,
+      "date": "2023-11-02 00:45:47 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très bel endroit avec une vue magnifique sans oublier l'exposition de bronze de Leonardo Lucchi. Ça vaut le détour",
+      "rating": 5,
+      "date": "2026-07-26 05:48:25 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Rdv de voitures de plus de trente ans tous les 1er dimanche de chaque mois organisé par Sables rétro sport et collections. Un bon moment de partage entre passionnés de belles mécaniques.",
+      "rating": 5,
+      "date": "2023-08-08 18:38:47 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très bel endroit pour se balader",
+      "rating": 5,
+      "date": "2026-02-01 08:21:07 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "6191215643351272919",
+  "place_id": "ChIJ48qYveBnBEgR103LPdOd61U",
+  "wikipedia_description": "Voici une liste de forts s'appelant ou ayant porté le nom de fort Saint-Nicolas :\n\nFort Saint-Nicolas (Nouvelle-France) ;\nFort Saint-Nicolas (Marseille) ;\nFort Saint-Nicolas (Rhodes) ;\nFort Saint-Nicholas (Alaska) (en)",
+  "description_short": "Fort historique aux Sables-d'Olonne offrant une vue imprenable sur l'océan et le port, avec expositions et sculptures en plein air.",
+  "description_long": "Perché sur la corniche des Sables-d'Olonne, le Fort Saint-Nicolas est un site patrimonial incontournable alliant histoire militaire et art contemporain. Ses sculptures en bronze signées Leonardo Lucchi, accompagnées de descriptions pédagogiques, séduisent aussi bien les amateurs d'art que les curieux. La vue panoramique sur la plage et le port est tout simplement époustouflante. Le site accueille régulièrement des expositions et des événements, dont le célèbre rassemblement de voitures anciennes organisé par Sables Rétro Sport et Collections chaque premier dimanche du mois. Un lieu de balade et de découverte à ne pas manquer.",
+  "tags": [
+    "fort",
+    "patrimoine",
+    "vue panoramique",
+    "exposition",
+    "sculptures"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 60,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Venez le premier dimanche du mois pour admirer les voitures de collection en plus des sculptures et de la vue sur l'océan. En couple, le coucher de soleil depuis le fort est un moment romantique inoubliable.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:09:39.164972+00:00",
+  "enriched_at": "2026-09-16T09:09:39.164972+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PrieureSaintNicolas-Canons---ALamoureux.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PrieureSaintNicolas-Drone---ALamoureux.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/2024-LS-PrieureSaintNicolas-Rochers---ALamoureux.jpg"
+  ]
+}

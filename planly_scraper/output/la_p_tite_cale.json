@@ -1,0 +1,765 @@
+{
+  "id": "la_p_tite_cale",
+  "name": "La P'tite Cale",
+  "name_google": "La P'tite Cale",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4927249,
+  "lng": -1.7762729,
+  "address": "8 Rue Guynemer, 85100 Les Sables-d'Olonne",
+  "phone": "+33251323749",
+  "website": "https://www.la-ptite-cale.fr/",
+  "rating": 4.8,
+  "reviews_count": 1684,
+  "rating_distribution": {
+    "1": 15,
+    "2": 15,
+    "3": 30,
+    "4": 152,
+    "5": 1472
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 22,
+          "minute": 30
+        }
+      }
+    ],
+    "monday": null,
+    "tuesday": null,
+    "wednesday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ]
+  },
+  "popular_times": {
+    "popular_times_by_days": {
+      "wednesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 30
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 73
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 76
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 83
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 83
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 83
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 86
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 86
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 96
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 90
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 20
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 23
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 56
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 43
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 40
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ]
+    }
+  },
+  "price_level": "moderate",
+  "photos": [
+    "images/la_p_tite_cale/photo_1.jpg",
+    "images/la_p_tite_cale/photo_2.jpg",
+    "images/la_p_tite_cale/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "⭐⭐⭐⭐⭐\n\nUne très belle découverte ! Nous avons été accueillis avec le sourire dans une ambiance chaleureuse et conviviale. Le service est réactif, attentionné et très agréable tout au long du repas.\n\nLes plats sont excellents, préparés avec soin et de très bonne qualité. Tout était délicieux, de l’entrée au dessert.\n\nEt pour ne rien gâcher, la vue sur la mer et le remblai des Sables-d’Olonne est magnifique, ce qui rend ce moment encore plus agréable.\n\nUne adresse que je recommande sans hésiter. Nous reviendrons avec grand plaisir",
+      "rating": 5,
+      "date": "2026-08-03 12:32:04 +00:00",
+      "owner_response": "Merci pour ces 5 étoiles, c'est super si vous avez passé un bon moment chez nous. A très vite. "
+    },
+    {
+      "text": "Excellent restaurant en bord de mer ! Cuisine délicieuse, ambiance chaleureuse et vue magnifique. Mention spéciale au patron, vraiment au top : accueillant, souriant et aux petits soins avec les clients. On se sent comme à la maison. Une très belle adresse que je recommande sans hésiter !",
+      "rating": 5,
+      "date": "2026-05-11 18:17:50 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Mon choix s'est porté sur ce restaurant à la lecture des très bons avis et je ne peux que partager. Service excellent, la choucroute de la mer est vraiment très bonne, accompagnée d'un verre d'ovni. Grand choix de plat végétarien. Le restaurant est très prisé mais le personnel fait en sorte de satisfaire au mieux les clients n'ayant pas réservé. Je recommande vraiment",
+      "rating": 5,
+      "date": "2026-07-01 15:43:47 +00:00",
+      "owner_response": "Merci ! "
+    },
+    {
+      "text": "Restaurant génial, les plats sont délicieux et le service incroyable ! Nous avons été très bien reçus ! Je recommande 🙂",
+      "rating": 5,
+      "date": "2026-07-13 22:46:48 +00:00",
+      "owner_response": "Merci beaucoup, votre commentaire nous fait très plaisir. Nous sommes ravis que vous ayez passé un bon moment et vous disons à bientôt ! "
+    },
+    {
+      "text": "Excellente expérience ! Nous avons très bien mangé et l’accueil était parfait, chaleureux et convivial. Tout était au rendez-vous : qualité des plats, service et ambiance. Rien à redire, tout était nickel. Je recommande vivement !",
+      "rating": 5,
+      "date": "2026-06-05 19:23:08 +00:00",
+      "owner_response": "Merci beaucoup pour cet avis qui nous fait très plaisir ! "
+    }
+  ],
+  "place_topics": {
+    "mer": 198,
+    "service": 60,
+    "choucroute": 60,
+    "saint jacques": 28,
+    "apéro": 25,
+    "sables": 24,
+    "couscous": 27,
+    "tartare de saumon": 23,
+    "remblai": 15,
+    "café gourmand": 13
+  },
+  "booking_url": [
+    {
+      "type": "reservation",
+      "title": "zenchef.com",
+      "url": "https://la-ptite-cale.zensites.zenchef.com"
+    },
+    {
+      "type": "menu",
+      "title": "la-ptite-cale.fr",
+      "url": "https://www.la-ptite-cale.fr/carte-du-restaurant"
+    }
+  ],
+  "cid": "10536922488296401834",
+  "place_id": "ChIJ8WSygUxnBEgRqmu7FC2rOpI",
+  "wikipedia_description": null,
+  "description_short": "Bar-resto sur le Remblai des Sables d'Olonne, cuisine maison de la mer et ambiance chaleureuse face à l'océan.",
+  "description_long": "Installée sur le mythique Remblai des Sables d'Olonne depuis 2018, La P'tite Cale est une adresse incontournable pour les amateurs de cuisine marine. Le chef Nathan y propose une carte généreuse et fait maison : huîtres, choucroute de la mer, couscous de la mer, tartares de saumon, poissons de la criée et burgers. Côté ambiance, la terrasse face à l'océan invite à la détente dès le café du matin. Service chaleureux, belle carte de vins et bières, desserts maison : une expérience complète entre mer, convivialité et saveurs généreuses.",
+  "tags": [
+    "bord de mer",
+    "cuisine maison",
+    "fruits de mer",
+    "terrasse",
+    "bar"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En couple, réservez une table en terrasse pour profiter de la vue sur l'océan au coucher du soleil. En famille, venez à déjeuner pour savourer la choucroute de la mer, la spécialité maison plébiscitée par les habitués.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:43:26.922345+00:00",
+  "enriched_at": "2026-09-16T08:43:26.922345+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://boot2web.com/HDD/styles/pg_galerie_1/public/2021-07/_MG_9905.jpg?itok=zQ8mojib",
+    "https://boot2web.com/HDD/styles/pg_galerie_1/public/2021-08/IMG_6242.jpg?itok=KbFql1Kr",
+    "https://check.fr/wp-content/uploads/2023/01/E-66.jpg"
+  ]
+}

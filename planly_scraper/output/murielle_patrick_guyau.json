@@ -1,0 +1,77 @@
+{
+  "id": "murielle_patrick_guyau",
+  "name": "Murielle & Patrick Guyau",
+  "name_google": null,
+  "category": "Art de vivre",
+  "subcategory": "Marchés & Terroir",
+  "commune": "Port La Guittière, Talmont",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": null,
+  "lng": null,
+  "address": null,
+  "phone": null,
+  "website": null,
+  "rating": null,
+  "reviews_count": null,
+  "rating_distribution": null,
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/murielle_patrick_guyau/photo_1.jpg",
+    "images/murielle_patrick_guyau/photo_2.jpg",
+    "images/murielle_patrick_guyau/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": null,
+  "place_id": null,
+  "wikipedia_description": null,
+  "description_short": "Rencontrez Murielle & Patrick Guyau, producteurs passionnés du terroir vendéen, pour une expérience authentique au cœur des saveurs locales.",
+  "description_long": "Murielle et Patrick Guyau incarnent l'essence même du terroir vendéen avec leur production artisanale et familiale. En visitant leur exploitation, vous plongez dans l'authenticité d'un savoir-faire transmis avec passion, loin des circuits industriels. C'est l'occasion idéale de découvrir les produits du terroir des Pays de la Loire directement à la source, d'échanger avec des producteurs engagés et de repartir avec des produits frais, locaux et savoureux. Une halte incontournable pour tous les amoureux des marchés et de la gastronomie régionale authentique.",
+  "tags": [
+    "terroir",
+    "producteur local",
+    "artisanat",
+    "Vendée",
+    "circuit court"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 30,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Passez en fin de matinée pour profiter des meilleurs produits avant écoulement. En famille, c'est une belle occasion d'initier les enfants aux saveurs du terroir vendéen directement chez le producteur.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": null,
+  "enriched_at": "2026-09-16T08:53:08.937905+00:00",
+  "status": "partial",
+  "photos_original_urls": [
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/db/99/6a/caption.jpg?w=1100&h=1100&s=1",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/8e/39/b3/caption.jpg?w=1000&h=1000&s=1",
+    "https://franceweek-end.com/wp-content/uploads/2019/10/20191011_154948.jpg"
+  ]
+}

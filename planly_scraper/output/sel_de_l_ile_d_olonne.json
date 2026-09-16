@@ -1,0 +1,202 @@
+{
+  "id": "sel_de_l_ile_d_olonne",
+  "name": "Sel de l'Île d'Olonne",
+  "name_google": "Sel de L'Ile d'Olonne",
+  "category": "Art de vivre",
+  "subcategory": "Marchés & Terroir",
+  "commune": "L'Île-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.5600247,
+  "lng": -1.7901951999999999,
+  "address": "Marais Salants de l'Ile d'Olonne, 85340 L'Île-d'Olonne",
+  "phone": "+33648650174",
+  "website": "http://www.seldeliledolonne.com/",
+  "rating": 4.8,
+  "reviews_count": 62,
+  "rating_distribution": {
+    "1": 1,
+    "2": 0,
+    "3": 1,
+    "4": 7,
+    "5": 53
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "monday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "tuesday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "wednesday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ]
+  },
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/sel_de_l_ile_d_olonne/photo_1.jpg",
+    "images/sel_de_l_ile_d_olonne/photo_2.jpg",
+    "images/sel_de_l_ile_d_olonne/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Très belle balade qui nous amène à une cabane charmante où l on reçoit un accueil chaleureux.",
+      "rating": 5,
+      "date": "2026-08-09 16:02:30 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "De très beaux marais salants.",
+      "rating": 5,
+      "date": "2026-07-02 09:31:20 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Sous le soleil est très bien, j ai mon vélo a côté des sel de la île d Olonne pour se promener dans la Marais.",
+      "rating": 4,
+      "date": "2022-09-17 16:26:36 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Jolie balade dans les marais ainsi que les petites cabanes des sauniers où trouver leurs produits et leur savoir-faire.",
+      "rating": 5,
+      "date": "2025-04-14 19:30:20 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Quelle belle découverte ces marais salants de l'Ile d'Olonne, les sauniers sont passionnés par leur travail , merci pour les explications et aussi pour l'accueil très sympathique à la cabane boutique .",
+      "rating": 5,
+      "date": "2020-11-20 22:25:02 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "soleil": 5,
+    "enfants": 3,
+    "prix": 2
+  },
+  "booking_url": null,
+  "cid": "6197268591033137483",
+  "place_id": "ChIJAWO8a2pdBEgRSzk38vIeAVY",
+  "wikipedia_description": null,
+  "description_short": "Plongez dans l'univers fascinant des sauniers de l'Île d'Olonne, gardiens d'un savoir-faire millénaire au cœur de marais d'exception.",
+  "description_long": "Au pied du pittoresque village de l'Île d'Olonne, Julien Lardeux et Yohan-Paul Eveno perpétuent un art ancestral sur 80 aires salantes réparties en trois sites. Ces passionnés récoltent à la main fleur de sel et gros sel selon des méthodes inchangées depuis des siècles. Une balade à pied dans ces marais apaisants mène jusqu'à leur cabane-boutique, véritable écrin de convivialité où les sauniers partagent leur savoir-faire avec générosité. Une expérience authentique, sensorielle et profondément ancrée dans l'identité vendéenne, à vivre idéalement par beau temps.",
+  "tags": [
+    "marais salants",
+    "sel artisanal",
+    "fleur de sel",
+    "balade nature",
+    "terroir vendéen"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 4,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Venez de préférence par beau temps pour profiter de la balade dans les marais et des reflets du ciel sur les bassins. En famille, les enfants seront captivés par les explications des sauniers à la cabane-boutique — prévoyez un petit sachet de fleur de sel en souvenir !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:53:21.390228+00:00",
+  "enriched_at": "2026-09-16T08:53:21.390228+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://www.guide-de-la-vendee.com/_bibli/annonces/3594/hd/sel-de-l-ile-d-olonne-09.webp?v=original",
+    "https://www.guide-de-la-vendee.com/_bibli/annonces/3595/hd/sel-de-l-ile-d-olonne-artisans-10.webp?v=original",
+    "https://static.wixstatic.com/media/4896fc_a08a798bfcd6404aae08c2b5976b2767~mv2.jpg/v1/fill/w_980,h_1307,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4896fc_a08a798bfcd6404aae08c2b5976b2767~mv2.jpg"
+  ]
+}

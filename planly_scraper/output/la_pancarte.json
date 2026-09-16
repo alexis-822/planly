@@ -1,0 +1,256 @@
+{
+  "id": "la_pancarte",
+  "name": "La Pancarte",
+  "name_google": "La Pancarte - Crêperie face à la mer",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.489419,
+  "lng": -1.7698661999999998,
+  "address": "22 Prom. Georges Godet, 85100 Les Sables-d'Olonne",
+  "phone": "+33251329186",
+  "website": "https://www.lapancarte.fr/.",
+  "rating": 4.8,
+  "reviews_count": 1581,
+  "rating_distribution": {
+    "1": 18,
+    "2": 14,
+    "3": 27,
+    "4": 179,
+    "5": 1343
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 14,
+          "minute": 0
+        }
+      }
+    ],
+    "monday": null,
+    "tuesday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 21,
+          "minute": 30
+        }
+      }
+    ],
+    "wednesday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 21,
+          "minute": 30
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 21,
+          "minute": 30
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 13,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 21,
+          "minute": 45
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "hour": 14,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "hour": 21,
+          "minute": 45
+        }
+      }
+    ]
+  },
+  "popular_times": null,
+  "price_level": "moderate",
+  "photos": [
+    "images/la_pancarte/photo_1.jpg",
+    "images/la_pancarte/photo_2.jpg",
+    "images/la_pancarte/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Superbe expérience dans cette crêperie ! Les crêpes comme les galettes sont excellentes, préparées avec des produits frais et de grande qualité. L’accueil est chaleureux et le service très agréable. Je recommande cette adresse sans hésiter !",
+      "rating": 5,
+      "date": "2026-07-24 20:17:29 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "⭐⭐⭐⭐⭐\n\nExcellentes galettes bretonnes !\n\nLa pâte est savoureuse. Les ingrédients sont frais, généreux et de très bonne qualité. On retrouve le vrai goût de la Bretagne à chaque bouchée. Le service est chaleureux et l’ambiance agréable avec une superbe vue .\n\nUne adresse que je recommande sans hésiter, j’y reviendrai avec plaisir !\n\nBonne saison à vous\nLe P’tit Couple 🙂",
+      "rating": 5,
+      "date": "2026-06-28 14:00:09 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Les crêpes sont délicieuses.. un vrai régal.\nL'équipe que cela soit des cuisiniers ou de la serveuse..est très sympathique.\nJe recommande cette crêperie  fortement.",
+      "rating": 5,
+      "date": "2026-05-12 13:46:49 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Sincèrement une des meilleures crêperies que j’ai faite dans ma vie. Elles sont bien garnies (ce qui n’est pas toujours le cas dans une crêperie) et qualitative. La serveuse était aussi très agréable. Je recommande vivement.",
+      "rating": 5,
+      "date": "2026-05-31 09:53:34 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Endroit et personnel extrêmement agréable!!\n\nOn a bien mangé, et on a reçu un excellent accueil!! Les galettes sont incroyables et très bonnes!!\nJe recommande à 100%\nLe lieu est jolie, on y mange bien et on y est bien accueilli, c’est un 10/10!!",
+      "rating": 5,
+      "date": "2026-08-23 12:05:52 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "galettes": 449,
+    "sourire": 107,
+    "assiettes": 183,
+    "sables": 30,
+    "chef": 28,
+    "océan": 42,
+    "vue": 21,
+    "qualité de service": 7,
+    "thon": 6,
+    "remblai": 6
+  },
+  "booking_url": [
+    {
+      "type": "menu",
+      "title": "lapancarte.fr",
+      "url": "https://www.lapancarte.fr/"
+    }
+  ],
+  "cid": "7390933867379704870",
+  "place_id": "ChIJ27hlv-NnBEgRJkSSizHfkWY",
+  "wikipedia_description": null,
+  "description_short": "Crêperie face à l'océan au bout du Remblai des Sables d'Olonne, dans une ambiance boisée et végétale avec terrasse sur l'Atlantique.",
+  "description_long": "Au bout du célèbre Remblai des Sables d'Olonne, La Pancarte s'impose comme une adresse incontournable du quartier des présidents. Dans un cadre boisé et végétal, Dominique et son équipe régalent les visiteurs avec des crêpes et galettes généreusement garnies, des salades, bowls et desserts maison. Tout est préparé dans la pure tradition, avec des produits frais issus d'artisans et producteurs locaux. La terrasse face à l'océan invite à savourer un cidre artisanal bio en contemplant l'Atlantique. Cocktails, boissons et une ambiance chaleureuse complètent cette expérience gourmande et conviviale.",
+  "tags": [
+    "crêperie",
+    "face mer",
+    "terrasse océan",
+    "produits locaux",
+    "fait maison"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille, profitez de la terrasse face à l'océan pour un déjeuner avec les enfants — la carte galettes-crêpes convient à tous les âges. En couple, réservez en avance pour un dîner au coucher du soleil sur l'Atlantique.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:42:35.185504+00:00",
+  "enriched_at": "2026-09-16T08:42:35.185504+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://cdt85.media.tourinsoft.eu/upload/la-pancarte-07.jpg",
+    "https://www.lapancarte.fr/i/la-pancarte-640279/3/6/0/1/4/4/1/5/1/9/1/6/7/1714256897_482/3811daa10e2c296cbcde7d55af9a22c0.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/LA-PANCARTE-07-1-.jpg"
+  ]
+}

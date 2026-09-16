@@ -105,6 +105,17 @@ Prototype mobile avec :
 - App : pill Parcs & Loisirs filtre les 4 sous-catégories (catégories `jeux`, `animaux`, `aquarium`, `jardin`). Fiche Parcs & Loisirs = maquette validée intégrée (`_pl*` dans planly-full.html) : ouvert aujourd'hui + semaine (timetable Google `openingHours`), prix pour le groupe (profil onboarding, 2 adultes par défaut pour famille/amis), activités avec pastilles âge enfants, animations, pastilles équipements, alerte conseil automatique, source + date de vérification des tarifs
 - Coûts mesurés : DataForSEO ≈ 0,016 $/POI (collecte) ; passes site officiel ≈ 0,26 $ au total pour 16 POIs
 
+### 2026-09-16 — 88 POIs, Sorties & Détente traitée
+- **88 POIs** en base, **84 injectés** (4 sous le seuil 85 % : Murielle & Patrick Guyau, Domaine Saint Nicolas, Les Voiles de Cayola, Côte Ouest Thalasso)
+- Nouveaux : 19 Art de vivre (10 restaurants, 5 marchés, 4 dégustations), 9 Patrimoine (5 monuments, 4 musées), 10 Sorties & Détente (4 bars, 2 casinos, 2 cinémas, 2 piscines/spa). Coût DataForSEO ≈ 0,22 $
+- **Sorties & Détente** : maquette validée (https://claude.ai/code/artifact/55c28103-ce83-4664-b26a-90acd14b470e) → `_SORTIES_FIELDS` + `SORTIES_PROMPT` + `process_sorties` dans scraper_missing ; champs pricing, hours_text, closing_time, age_min, booking, know (3 points « bon à savoir »), facilities, services
+- `_run_official_pipeline` : pipeline commun (site officiel → Google `site:domaine` → office de tourisme) partagé par Parcs & Loisirs et Sorties & Détente. Nouveau : `_find_official_site` cherche le site quand Google ne le donne pas (un mot du nom doit figurer dans le domaine)
+- **Règle** : « entrée libre » ne vaut pas « sortie gratuite » pour un bar ou un restaurant (pricing ignoré) ; pour un casino la fiche affiche « Entrée libre, les jeux sont payants » ; pour un bar seuls les prix de boissons sont retenus
+- App : fiche Sorties (`_st*`) = bandeau par typologie, horaires, « Bon à savoir », budget (tarifs si publiés, sinon niveau Google, sinon « non communiqués »), bloc jeux/installations, carte séances pour le cinéma, avertissement âge minimum si des enfants voyagent
+- Pills : Art de vivre, Patrimoine et Sorties & Détente filtrent enfin leurs lieux (`resto`, `marche`, `degustation`, `bar`, `casino`, `cinema`, `spa`, `culture`)
+- **Restant : 9 POIs** (5 Nautisme, 4 Autres sports) + extraction site officiel pour Art de vivre et Patrimoine, pas encore faite
+- Sans données de site officiel : Les Voiles de Cayola, L'Étoile de Mer (Facebook seulement), Bikini Beach, Côte Ouest Thalasso → à relancer avec `_find_official_site`
+
 ### 2026-09-16 — Avis : plus aucun texte republié
 - **Règle** : le texte des avis appartient à son auteur (confirmé par écrit par DataForSEO : leurs CGU n'accordent aucun droit sur les avis ni sur les images). L'app n'affiche plus d'extrait.
 - `reviews_summary` (champ output_global) : synthèse 2 phrases générée par Claude Haiku à partir de ≥3 avis, reformulée, sans citation ni nom — script `scratchpad/summarize_reviews.py` (43/50 POIs ; 7 POIs sans avis stockés)

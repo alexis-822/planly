@@ -1,0 +1,248 @@
+{
+  "id": "la_cabane_du_ptitgas",
+  "name": "La Cabane du Ptitgas",
+  "name_google": "La Cabane du Ptitgas",
+  "category": "Art de vivre",
+  "subcategory": "Restaurants",
+  "commune": "Talmont-Saint-Hilaire",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4322642,
+  "lng": -1.6363105,
+  "address": "303 Rue des Parcs, 85440 Talmont-Saint-Hilaire",
+  "phone": "+33251906350",
+  "website": null,
+  "rating": 4.6,
+  "reviews_count": 147,
+  "rating_distribution": {
+    "1": 8,
+    "2": 2,
+    "3": 3,
+    "4": 8,
+    "5": 126
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 30
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      }
+    ],
+    "monday": null,
+    "tuesday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 30
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 15,
+          "minute": 30
+        },
+        "close": {
+          "hour": 18,
+          "minute": 30
+        }
+      }
+    ],
+    "wednesday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 30
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 15,
+          "minute": 30
+        },
+        "close": {
+          "hour": 18,
+          "minute": 30
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 30
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 15,
+          "minute": 30
+        },
+        "close": {
+          "hour": 18,
+          "minute": 30
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 30
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 15,
+          "minute": 30
+        },
+        "close": {
+          "hour": 18,
+          "minute": 30
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 9,
+          "minute": 30
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 15,
+          "minute": 30
+        },
+        "close": {
+          "hour": 18,
+          "minute": 30
+        }
+      }
+    ]
+  },
+  "popular_times": null,
+  "price_level": "inexpensive",
+  "photos": [
+    "images/la_cabane_du_ptitgas/photo_1.jpg",
+    "images/la_cabane_du_ptitgas/photo_2.jpg",
+    "images/la_cabane_du_ptitgas/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "On a apprécié ce moment de dégustation. Produits de la mer très frais.Suggestion du jour: tapenade d algues.Service au top.merci.",
+      "rating": 5,
+      "date": "2026-08-26 14:56:04 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Nous sommes arrivés vers 15h00 sans réservation. Nous avons été très bien reçu. Le service était parfait (muscadet dans sceau a glace, rince doigt, citron, vinaigrette échalotes, beurre salé, pain ...) et les huîtres célestine qui sont bien en chair étaient succulentes. Un vrai plaisir.\nOn y retournera !",
+      "rating": 5,
+      "date": "2026-07-19 16:18:48 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Huîtres prises  aujourd’hui pour découvrir cette variété et on peut dire qu’elles sont exceptionnelles, de la grande huître pour amateur.\nPetit bémol il va falloir y retourner tous les jours",
+      "rating": 5,
+      "date": "2026-07-13 12:02:03 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Super expérience ! Certainement les meilleures huîtres que j'ai mangé. Service très sympa. Cadre magnifique Le tout arrosé d'un ovni Mourat. Le bonheur",
+      "rating": 5,
+      "date": "2026-06-05 18:40:37 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Endroit authentique et plein de charme, tenu par deux jumelles adorables qui assurent un service chaleureux. On y mange bien, l’ambiance est simple et vraie, juste à côté des piscines, ce qui ajoute au côté local. Petit bémol : impossible de réserver, ce qui peut être frustrant après avoir fait la route pour rien. Et les prix, notamment des huîtres, ont bien grimpé. Dommage. Mais ça reste une adresse que je recommande.",
+      "rating": 4,
+      "date": "2025-05-27 14:48:05 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": {
+    "ostréicole": 9,
+    "amateur": 4,
+    "parc": 5,
+    "langoustines": 3,
+    "touristes": 5,
+    "malade": 3,
+    "médailles": 2,
+    "muscadet": 2,
+    "génération": 2,
+    "goûter": 2
+  },
+  "booking_url": null,
+  "cid": "12893178253103530707",
+  "place_id": "ChIJ7UNUcNVrBEgR0wIHak_F7bI",
+  "wikipedia_description": null,
+  "description_short": "Les meilleures huîtres de la région dégustées les pieds dans l'eau, servies par deux jumelles passionnées dans un cadre ostréicole authentique.",
+  "description_long": "La Cabane du Ptitgas, c'est l'adresse incontournable pour les amoureux des fruits de mer en Vendée. Tenue par deux jumelles adorables et passionnées, cette cabane ostréicole vous invite à découvrir des huîtres d'exception, pêchées le matin même, accompagnées de muscadet bien frais, de beurre salé et de citron. Le cadre, authentique et charmant, situé à deux pas des piscines naturelles, ajoute une touche de magie à l'expérience. Tapénades d'algues, langoustines et petites assiettes complètent une carte simple et savoureuse. Une pause inoubliable, les pieds dans l'air marin.",
+  "tags": [
+    "huîtres",
+    "ostréiculture",
+    "fruits de mer",
+    "muscadet",
+    "cabane authentique"
+  ],
+  "audience": [
+    "couple",
+    "famille",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy"
+  ],
+  "duration_min": 90,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": false,
+  "conseil_planly": "Passez en semaine vers 13h pour profiter du plein air sans foule et goûter les huîtres du jour dans leur plus simple expression. Pensez à réserver le week-end, ça part vite !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:44:43.260502+00:00",
+  "enriched_at": "2026-09-16T08:44:43.260502+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://www.petitfute.com/medias/professionnel/2095059/premium/originale/687dfd4e6656d.png",
+    "https://media.ouest-france.fr/v1/pictures/MjAyMzA4NWY3ZjZiYTMzNGMzMTE4YzQ5ZGZiMTRjMDQzZjQ5YWQ?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=71f4fdbab94ed58c15a5142ebca5a55a53fee3116ad38d96ebadce5f3113b4d2",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/ff/05/54/parc-de-production.jpg?w=1200&h=1200&s=1"
+  ]
+}

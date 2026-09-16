@@ -1,0 +1,83 @@
+{
+  "id": "eglise_saint_nicolas_de_brem",
+  "name": "Église Saint-Nicolas de Brem",
+  "name_google": "Église Saint-Nicolas",
+  "category": "Patrimoine",
+  "subcategory": "Châteaux & Monuments",
+  "commune": "Brem-sur-Mer",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.610163799999995,
+  "lng": -1.8410423,
+  "address": "15 Rue du Prieuré, 85470 Brem-sur-Mer",
+  "phone": null,
+  "website": null,
+  "rating": 4.6,
+  "reviews_count": 155,
+  "rating_distribution": {
+    "1": 1,
+    "2": 1,
+    "3": 7,
+    "4": 39,
+    "5": 107
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/eglise_saint_nicolas_de_brem/photo_1.jpg",
+    "images/eglise_saint_nicolas_de_brem/photo_2.jpg",
+    "images/eglise_saint_nicolas_de_brem/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "6811201798677942528",
+  "place_id": "ChIJCToR1M5bBEgRAFGz1_I_hl4",
+  "wikipedia_description": null,
+  "description_short": "Une église romane du XIe siècle nichée au cœur de Brem-sur-Mer, témoin silencieux de mille ans d'histoire vendéenne.",
+  "description_long": "L'église Saint-Nicolas de Brem est l'un des plus anciens édifices religieux du littoral vendéen. Construite aux alentours du XIe siècle, cette église romane séduit par sa sobriété architecturale et son clocher caractéristique qui domine le bourg de Brem-sur-Mer. Classée monument historique, elle témoigne du riche passé religieux et rural de ce village côtier. Son prieuré attenant rappelle l'importance du christianisme dans l'organisation médiévale du territoire. Un arrêt incontournable pour les amoureux du patrimoine et les curieux d'histoire locale, à deux pas des plages et des marais.",
+  "tags": [
+    "église romane",
+    "patrimoine historique",
+    "monument classé",
+    "architecture médiévale",
+    "Vendée"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 6,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 30,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": false,
+    "stroller": false
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Profitez d'une journée pluvieuse ou d'une halte culturelle entre deux sessions de plage pour découvrir ce joyau roman méconnu. En couple ou en solo, prenez le temps d'observer les détails sculptés de la façade et de ressentir le calme apaisant du lieu.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:09:51.470156+00:00",
+  "enriched_at": "2026-09-16T09:09:51.470156+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://upload.wikimedia.org/wikipedia/commons/2/2b/Brem-sur-Mer_-_Eglise_Saint-Nicolas_%282%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=index&utm_content=original",
+    "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/169396-otsaintgilles-mg-0043.jpg",
+    "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/35364-eglise-st-nicolas-1.jpg"
+  ]
+}

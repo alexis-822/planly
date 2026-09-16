@@ -1,0 +1,1166 @@
+{
+  "id": "museum_du_coquillage",
+  "name": "Muséum du Coquillage",
+  "name_google": "Muséum du Coquillage",
+  "category": "Patrimoine",
+  "subcategory": "Musées & Culture",
+  "commune": "Les Sables-d'Olonne",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.497760799999995,
+  "lng": -1.7856092,
+  "address": "8 Rue du Maréchal Leclerc, 85100 Les Sables-d'Olonne",
+  "phone": "+33251235000",
+  "website": "http://www.museumducoquillage.com/",
+  "rating": 4.5,
+  "reviews_count": 2105,
+  "rating_distribution": {
+    "1": 41,
+    "2": 36,
+    "3": 172,
+    "4": 523,
+    "5": 1333
+  },
+  "opening_hours": {
+    "sunday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "monday": [
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "tuesday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "wednesday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "thursday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "friday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "saturday": [
+      {
+        "open": {
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "hour": 12,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "hour": 14,
+          "minute": 0
+        },
+        "close": {
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ]
+  },
+  "popular_times": {
+    "popular_times_by_days": {
+      "sunday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 28
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 33
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 36
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 59
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 84
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 89
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 75
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "monday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 39
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 51
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 42
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "tuesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 47
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 53
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 69
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 90
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 100
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "wednesday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 54
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 50
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 64
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 79
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 80
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 72
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "thursday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 39
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 46
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 38
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 41
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 58
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 75
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 77
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "friday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 65
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 60
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 52
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 64
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 69
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 58
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ],
+      "saturday": [
+        {
+          "time": {
+            "hour": 6,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 7,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 8,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 9,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 10,
+            "minute": 0
+          },
+          "popular_index": 66
+        },
+        {
+          "time": {
+            "hour": 11,
+            "minute": 0
+          },
+          "popular_index": 88
+        },
+        {
+          "time": {
+            "hour": 12,
+            "minute": 0
+          },
+          "popular_index": 72
+        },
+        {
+          "time": {
+            "hour": 13,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 14,
+            "minute": 0
+          },
+          "popular_index": 55
+        },
+        {
+          "time": {
+            "hour": 15,
+            "minute": 0
+          },
+          "popular_index": 70
+        },
+        {
+          "time": {
+            "hour": 16,
+            "minute": 0
+          },
+          "popular_index": 78
+        },
+        {
+          "time": {
+            "hour": 17,
+            "minute": 0
+          },
+          "popular_index": 75
+        },
+        {
+          "time": {
+            "hour": 18,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 19,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 20,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 21,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 22,
+            "minute": 0
+          },
+          "popular_index": 0
+        },
+        {
+          "time": {
+            "hour": 23,
+            "minute": 0
+          },
+          "popular_index": 0
+        }
+      ]
+    }
+  },
+  "price_level": null,
+  "photos": [
+    "images/museum_du_coquillage/photo_1.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "J'avais déjà visité le musée à l'âge de 9 ans, aujourd'hui j'y retourne à l'âge de 37 ans ! J'ai retrouvé des souvenirs d'enfance mais en mieux car le musée à fait peau neuve ! Merci à  vous d'avoir repris la gestion du musée et de nous permettre de continuer à en prendre pleins les yeux. Personnel très gentil très accueillant. Lieu très propre et bien aménagé. Boutique simpa avec pleins de coquillages.\nJe recommande +++",
+      "rating": 5,
+      "date": "2026-08-17 16:11:22 +00:00",
+      "owner_response": "Bonjour Madame<br>Merci pour votre bonne note et l'encouragement dans  l'agencement de notre nouveau musée <br>Bon souvenir de votre passage au plaisir de vous revoir <br>Cordialement <br>Framboise BOHEAS  Sous Direction "
+    },
+    {
+      "text": "Une très belle visite au Muséum du Coquillage, avec de magnifiques spécimens qui méritent d’être observés attentivement. Il faut vraiment prendre son temps devant les vitrines, sinon la visite peut paraître un peu courte par rapport au prix.\n\nLes deux dames présentes sur place sont très aimables et accueillantes. L’accès est également simple pour les personnes en situation de handicap. La boutique est intéressante, même si les prix sont un peu élevés.\n\nJe déconseille plutôt la visite aux enfants de moins de 8 ans, car beaucoup de pièces demandent de l’attention et certaines vitrines sont assez hautes. Un espace dessin est néanmoins prévu pour eux.\n\nIl manque aussi des informations sur les dates de collecte ou d’acquisition des spécimens, ce qui apporterait davantage de contexte à la visite.\n\nSurtout, je trouve dommage que le musée soit si peu mis en avant dans la ville. Il faudrait davantage de panneaux et d’indications dans les rues, près du port, de la jetée et des zones touristiques, afin d’inviter les visiteurs à s’y rendre. Le lieu semble un peu oublié face aux nombreux commerces touristiques, alors qu’il possède une collection vraiment remarquable.",
+      "rating": 5,
+      "date": "2026-07-16 14:10:21 +00:00",
+      "owner_response": "Merci pour cette note  et vos encouragements !<br>Les panneaux  pour nous de la ville et des alentours nous coutent très chers <br>4000 € a l'année  par pancarte  ce qui pèse lourd pour notre petit musée de famille !  7 panneaux sont là , et en plus les campagnes pub  internet au mois <br>encore MERCI pour tout <br>BOHEAS Anthony Direction <br>"
+    },
+    {
+      "text": "Quelle collection impressionnante ! Des coquillages de toute beauté aux couleurs naturelles incroyables, j'ai adoré visiter ce musée. Il faut compter 1h30 maximum. A ne rater sous aucun prétexte.",
+      "rating": 5,
+      "date": "2026-07-23 16:35:34 +00:00",
+      "owner_response": "MERCI pour la PUB et la pluie d'étoiles !!!!<br>Bien cordialement<br>BOHEAS Anthony "
+    },
+    {
+      "text": "Un moment suspendu dans le temps aux milieu de coquillages. Riches explications\nDiversité et de très beaux spécimens de tous les  pays. Merci pour cette belle collection qui s est transformée au fil du temps en musée. Bonne visite\nUn point particulier pour le jeu enfant qui permet de s instruire et de les occuper.",
+      "rating": 5,
+      "date": "2026-08-13 18:47:17 +00:00",
+      "owner_response": "Adorable votre avis  Merci pour celui ci et le temps passé a le déposer <br>Bien cordialement<br>BOHEAS Anthony"
+    },
+    {
+      "text": "Tres beau musée ! On ne s'attend pas a une telle collection,  très bien mise en avant dans de belles vitrine avec une belle luminosité,  rendant l'expérience très agréable ! Point positif a noté la personne a l'accueil et très agréable 🌞",
+      "rating": 5,
+      "date": "2026-05-16 14:40:05 +00:00",
+      "owner_response": "Trop bien la bonne note et l'avis déposé<br>Avec notre bon souvenir<br>BOHEAS Anthony Direction"
+    }
+  ],
+  "place_topics": {
+    "coquillages": 215,
+    "collection": 190,
+    "vitrines": 459,
+    "questionnaire": 49,
+    "variété": 29,
+    "requins": 99,
+    "petit cadeau": 101,
+    "jeu de piste": 19,
+    "crustacés": 123,
+    "coraux": 14
+  },
+  "booking_url": null,
+  "cid": "11551061570798380442",
+  "place_id": "ChIJ91PEnPRnBEgRmmUaakydTaA",
+  "wikipedia_description": null,
+  "description_short": "50 000 coquillages du monde entier vous attendent ! Un musée marin fascinant, rénovié et incontournable en Vendée.",
+  "description_long": "Plongez dans l'univers fascinant des océans au Muséum du Coquillage, qui abrite une collection exceptionnelle de 50 000 coquillages venus des quatre coins du monde. Requins naturalisés, crustacés, coraux et spécimens aux couleurs époustouflantes s'exposent dans de magnifiques vitrines lumineuses. Récemment rénové, le musée propose également un jeu de piste pour les enfants et des questionnaires interactifs. La visite, guidée par de riches explications, dure environ 1h30. Une boutique de souvenirs complète l'expérience. Un lieu magique qui émerveille autant les petits que les grands, à ne manquer sous aucun prétexte !",
+  "tags": [
+    "coquillages",
+    "musée marin",
+    "collection unique",
+    "jeu de piste",
+    "boutique souvenirs"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo",
+    "ados"
+  ],
+  "age_min": 4,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": true,
+    "stroller": true
+  },
+  "dogs_allowed": false,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En famille, profitez du jeu de piste pour rendre la visite encore plus ludique pour les enfants ! Prenez bien votre temps devant chaque vitrine : les détails et couleurs des spécimens méritent une observation attentive.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T09:17:25.811942+00:00",
+  "enriched_at": "2026-09-16T09:17:25.811942+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/30/c6/cf/musee-du-coquillage.jpg?w=1200&h=-1&s=1"
+  ]
+}

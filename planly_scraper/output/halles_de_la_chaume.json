@@ -1,0 +1,114 @@
+{
+  "id": "halles_de_la_chaume",
+  "name": "Halles de La Chaume",
+  "name_google": "Halles de la Chaume",
+  "category": "Art de vivre",
+  "subcategory": "Marchés & Terroir",
+  "commune": "La Chaume, Les Sables",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": 46.4946215,
+  "lng": -1.7969378,
+  "address": "1 Pl. de l'Ormeau, 85100 Les Sables-d'Olonne",
+  "phone": null,
+  "website": null,
+  "rating": 4.1,
+  "reviews_count": 288,
+  "rating_distribution": {
+    "1": 9,
+    "2": 15,
+    "3": 38,
+    "4": 100,
+    "5": 126
+  },
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/halles_de_la_chaume/photo_1.jpg",
+    "images/halles_de_la_chaume/photo_2.jpg",
+    "images/halles_de_la_chaume/photo_3.jpg"
+  ],
+  "reviews": [
+    {
+      "text": "Je ne comprends pas pourquoi ils affichent ouvert jusqu'à 13h, nous sommes passés à 12h15 et pratiquement la moitié des stands étaient fermés, d'autres en train de ranger... ça donne pas du tout envie ( pour les mauvaises langues ça fait 40 ans que je connais les sables et c'était pas comme ça avant). On est arrivés à 12h45 aux halles des sables tout était bondé, les commerçants à fond en train de bosser et bien ça en pleine saison on est plus dans la logique...",
+      "rating": 2,
+      "date": "2026-08-12 12:15:07 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Très petite halle, à peine 20 commerçant même avec le prolongement du parking pour le non alimentaire, on en fait vite le tour même en période estivale.",
+      "rating": 3,
+      "date": "2022-09-02 07:12:51 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Marché ouvert assez souvent. Lieu propre et chaleureux .on y trouve beaucoup de produit .pains et gâteaux.  Poissons et crustacés. Fruits et légumes et vins sels",
+      "rating": 4,
+      "date": "2018-07-27 10:41:12 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Petit marché sympathique vec juste ce qu'il faut.",
+      "rating": 5,
+      "date": "2026-03-18 15:47:51 +00:00",
+      "owner_response": null
+    },
+    {
+      "text": "Petit marché pittoresque, l'essentiel des produits alimentaires frais sont là et notamment les produits de la mer.",
+      "rating": 5,
+      "date": "2019-08-18 17:44:05 +00:00",
+      "owner_response": null
+    }
+  ],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": "16679352020943809768",
+  "place_id": "ChIJx4OknI9nBEgR6KwMxEr2eOc",
+  "wikipedia_description": null,
+  "description_short": "Marché pittoresque au cœur de La Chaume, pour dénicher poissons frais, pains artisanaux et saveurs vendéennes.",
+  "description_long": "Nichées dans le quartier authentique de La Chaume, face aux Sables-d'Olonne, les Halles proposent un marché chaleureux où se côtoient étals de poissons et crustacés tout juste débarqués, pains et gâteaux artisanaux, fruits et légumes de saison, vins et spécialités locales. Petit par la taille mais riche en caractère, ce marché pittoresque incarne l'âme populaire du vieux quartier de pêcheurs. Idéal pour composer un panier gourmand ou simplement s'imprégner de l'ambiance locale. À noter : arrivez avant 12h pour profiter de tous les stands.",
+  "tags": [
+    "marché",
+    "produits locaux",
+    "poisson frais",
+    "artisanat alimentaire",
+    "terroir vendéen"
+  ],
+  "audience": [
+    "famille",
+    "couple",
+    "solo"
+  ],
+  "age_min": 0,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 30,
+  "notoriety": "pepite",
+  "accessibility": {
+    "wheelchair": true,
+    "walking_difficulty": false,
+    "stroller": true
+  },
+  "dogs_allowed": true,
+  "is_indoor": true,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "Arrivez dès l'ouverture pour trouver tous les stands ouverts et les meilleurs produits de la mer ! Combinez la visite avec une balade dans le vieux quartier de La Chaume, juste à deux pas.",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": "2026-09-16T08:52:52.721289+00:00",
+  "enriched_at": "2026-09-16T08:52:52.721289+00:00",
+  "status": "complete",
+  "photos_original_urls": [
+    "https://static.actu.fr/uploads/2025/07/4ae9ed19977863ee9ed19977802f9ev-960x640.jpeg",
+    "https://static.actu.fr/uploads/2025/07/de49ba4997786e259ba499778c659bv-960x640.jpeg",
+    "https://media.ouest-france.fr/v1/pictures/MjAyNTAzNGI2N2Y1M2JlN2IxZTk5N2QwYzY0ODI1M2RiMDg1NTI?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=408c5c65b804c87819d303a524e9eec83706d2fe43d0682f246291e471e6e8bf"
+  ]
+}

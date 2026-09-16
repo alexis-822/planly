@@ -1,0 +1,77 @@
+{
+  "id": "domaine_saint_nicolas",
+  "name": "Domaine Saint Nicolas",
+  "name_google": null,
+  "category": "Art de vivre",
+  "subcategory": "Dégustations",
+  "commune": "L'Île-d'Olonne, ~15 km",
+  "zone": null,
+  "poi_format": "poi",
+  "lat": null,
+  "lng": null,
+  "address": null,
+  "phone": null,
+  "website": null,
+  "rating": null,
+  "reviews_count": null,
+  "rating_distribution": null,
+  "opening_hours": null,
+  "popular_times": null,
+  "price_level": null,
+  "photos": [
+    "images/domaine_saint_nicolas/photo_1.jpg",
+    "images/domaine_saint_nicolas/photo_2.jpg",
+    "images/domaine_saint_nicolas/photo_3.jpg"
+  ],
+  "reviews": [],
+  "place_topics": null,
+  "booking_url": null,
+  "cid": null,
+  "place_id": null,
+  "wikipedia_description": null,
+  "description_short": "Un domaine viticole vendéen d'exception, entre vignes ancestrales et vins nature à découvrir lors d'une dégustation authentique.",
+  "description_long": "Le Domaine Saint Nicolas est une référence incontournable de la viticulture vendéenne, situé à Brem-sur-Mer. Ce domaine bio et biodynamique produit des vins nature d'une grande finesse, issus de cépages locaux comme le Fiefs Vendéens. Thierry Michon, vigneron passionné, y cultive ses vignes avec respect de la terre et des saisons. La visite du domaine offre une plongée dans l'univers du vin nature, avec des dégustations commentées au cœur du chai. Un moment de partage et de découverte pour tous les amateurs de vins authentiques et de terroir vendéen.",
+  "tags": [
+    "vin nature",
+    "biodynamie",
+    "dégustation",
+    "vignoble",
+    "terroir vendéen"
+  ],
+  "audience": [
+    "couple",
+    "solo",
+    "famille"
+  ],
+  "age_min": 18,
+  "weather_ok": [
+    "sunny",
+    "cloudy",
+    "rainy"
+  ],
+  "duration_min": 90,
+  "notoriety": "incontournable",
+  "accessibility": {
+    "wheelchair": false,
+    "walking_difficulty": true,
+    "stroller": false
+  },
+  "dogs_allowed": false,
+  "is_indoor": false,
+  "has_height": false,
+  "animals_captive": false,
+  "rainy_day_activity": true,
+  "conseil_planly": "En couple ou entre amis, optez pour une dégustation guidée en fin de journée pour profiter pleinement des explications du vigneron. Une belle occasion de rapporter quelques bouteilles confidentielles directement à la source !",
+  "specific": {},
+  "specific_status": {},
+  "parking_main": null,
+  "parking_others": [],
+  "scraped_at": null,
+  "enriched_at": "2026-09-16T09:00:03.604448+00:00",
+  "status": "partial",
+  "photos_original_urls": [
+    "https://cdt85.media.tourinsoft.eu/upload/Domaine-Saint-NicolasSIT01-JulienGazeau.jpg",
+    "https://cdt85.media.tourinsoft.eu/upload/2023-DomaineSaintNicolas-3.jpg",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/9f/49/e7/img-20180709-104209-largejpg.jpg?w=1200&h=-1&s=1"
+  ]
+}
