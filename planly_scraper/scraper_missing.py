@@ -1135,6 +1135,7 @@ Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
   "pricing": {{
     "options": [{{"label": "ex: Formule du midi, Menu dégustation, Dégustation 3 vins", "price": nombre}}] (6 maximum, [] si aucun),
     "avg_price": prix moyen par personne à la carte en euros (nombre) ou null,
+    "dish_price_range": {{"min": nombre, "max": nombre}} quand la carte ne propose que des plats à l'unité (prix du plat le moins cher et du plus cher, hors boissons), sinon null,
     "free_entry": true si l'entrée ou la dégustation est gratuite, sinon null,
     "notes": précision courte (boissons comprises, supplément...) ou null,
     "source_url": URL de la page des tarifs ou de la carte, ou null,
@@ -1265,6 +1266,8 @@ def _fetch_page(url: str, robots) -> dict | None:
         return {"url": url, "html": "", "content": text[:20000]}
     if "html" not in ctype and "xml" not in ctype:
         return None
+    if "charset" not in ctype.lower():  # sans charset déclaré, requests suppose du latin-1 → accents cassés
+        r.encoding = r.apparent_encoding or r.encoding
     log.info(f"    Page : {url[:90]}")
     return {"url": url, "html": r.text, "content": _html_to_text(r.text)[:20000]}
 
@@ -1317,7 +1320,7 @@ AGGREGATORS = ("tripadvisor.", "thefork.", "lafourchette.", "petitfute.", "yelp.
                "opentable.", "michelin.", "annuaire-entreprises", "societe.com", "infogreffe.", "youtube.")
 
 
-SOCIAL_RE = re.compile(r"https?://(?:[a-z-]+\.)?(facebook|instagram)\.com/([^\"'<>\s?#]+)", re.I)
+SOCIAL_RE = re.compile(r"https?://(?:[a-z-]+\.)?(facebook|instagram)\.com/(profile\.php\?id=\d+|[^\"'<>\s?#]+)", re.I)
 SOCIAL_SKIP = re.compile(r"sharer|/share|/plugins/|/tr\b|dialog|intent|^p/$", re.I)
 
 
@@ -1453,8 +1456,13 @@ def _price_in_text(value, text: str) -> bool:
     else:
         variants = {str(euros), f"{euros},00", f"{euros}.00"}
     t = text.replace(" ", " ")
-    return any(re.search(rf"(?<![\d,.]){re.escape(v)}(?![\d])\s?(?:€|euros?\b|eur\b)|€\s?{re.escape(v)}(?![\d,.])", t, re.I)
-               for v in variants)
+    if any(re.search(rf"(?<![\d,.]){re.escape(v)}(?![\d])\s?(?:€|euros?\b|eur\b)|€\s?{re.escape(v)}(?![\d,.])", t, re.I)
+           for v in variants):
+        return True
+    # certaines cartes omettent le symbole € : "soupe miso 2.50". On l'accepte seulement
+    # pour un montant à centimes, trop précis pour être une coïncidence.
+    return bool(cents) and any(re.search(rf"(?<![\d,.]){re.escape(v)}(?![\d])", t)
+                               for v in (f"{euros},{cents:02d}", f"{euros}.{cents:02d}"))
 
 
 def _stale_year(pricing: dict) -> int | None:
@@ -1480,6 +1488,14 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
         website = ""
     if not website:
         website = _find_official_site(poi)
+    if not website and not social_seed:
+        # aucun site : au moins donner la page Facebook ou Instagram du lieu
+        for s in search_organic(f"{poi.get('name', '')} {poi.get('commune', '')} facebook instagram", depth=10):
+            found_soc = _social_links("", s["url"])
+            if found_soc:
+                found["social"] = found_soc
+                log.info(f"    réseaux (sans site) : {', '.join(found_soc.values())}")
+                break
     home = (website if website.startswith("http") else f"https://{website}") if website else ""
     domain = _host(home) if home else ""
     robots = _load_robots(home) if home else None
@@ -1520,10 +1536,15 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
             for f in ("from_price", "avg_price"):
                 if pr.get(f) is not None and not _price_in_text(pr[f], text):
                     pr[f] = None
+            dpr = pr.get("dish_price_range")
+            if isinstance(dpr, dict) and not (_price_in_text(dpr.get("min"), text)
+                                              and _price_in_text(dpr.get("max"), text)):
+                pr["dish_price_range"] = None
             pr["options"] = [o for o in (pr.get("options") or [])
                              if isinstance(o, dict) and _price_in_text(o.get("price"), text)][:5]
         if pr and pr.get("adult") is None and pr.get("child") is None and not pr.get("family_ticket") \
-                and pr.get("from_price") is None and pr.get("avg_price") is None and not pr.get("options"):
+                and pr.get("from_price") is None and pr.get("avg_price") is None \
+                and not pr.get("options") and not pr.get("dish_price_range"):
             pr = None
         if pr:
             stale = _stale_year(pr)
@@ -1546,7 +1567,13 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
                 found["social"] = social
                 log.info(f"    réseaux : {', '.join(social)}")
             pages = [home_page]
-            for url in official_candidate_urls(home_page, robots)[:8]:
+            candidates = official_candidate_urls(home_page, robots)[:8]
+            if not candidates:
+                # site JavaScript : aucun lien dans le HTML, on tente les adresses habituelles
+                root = f"{urllib.parse.urlsplit(home).scheme}://{urllib.parse.urlsplit(home).netloc}"
+                candidates = [f"{root}/{p}/" for p in ("menu", "carte", "la-carte", "menus", "tarifs", "infos-pratiques")]
+                log.info("    aucun lien exploitable : essai des adresses habituelles")
+            for url in candidates:
                 time.sleep(1)
                 pages.append(_fetch_page(url, robots))
             extract(site_label, pages)
@@ -1613,7 +1640,8 @@ def process_parcs_loisirs(client, poi: dict, report: list) -> dict:
 def process_manger(client, poi: dict, report: list) -> dict:
     def is_complete(found, poi):
         pr = found.get("pricing") or {}
-        prix = pr.get("options") or pr.get("avg_price") is not None or pr.get("free_entry")
+        prix = (pr.get("options") or pr.get("avg_price") is not None or pr.get("free_entry")
+                or pr.get("dish_price_range"))
         return bool((found.get("hours_text") or found.get("market_days") or poi.get("opening_hours")) and prix)
 
     return _run_official_pipeline(client, poi, report, list(_MANGER_FIELDS), MANGER_PROMPT,

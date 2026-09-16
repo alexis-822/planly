@@ -247,11 +247,11 @@ def convert_poi(p):
         imgs = ["https://placehold.co/700x400/e0e0e0/999?text=Photo+manquante"]
 
     # Avis : jamais le texte (il appartient à son auteur) — note, nombre et lien Google
-    place_id = p.get("place_id")
-    if place_id:
-        google_url = f"https://www.google.com/maps/place/?q=place_id:{place_id}"
-    elif p.get("cid"):
+    # le cid ouvre directement la fiche dans Maps ; "place_id:xxx" était interprété comme une adresse
+    if p.get("cid"):
         google_url = f"https://maps.google.com/?cid={p['cid']}"
+    elif p.get("place_id"):
+        google_url = f"https://search.google.com/local/reviews?placeid={p['place_id']}"
     else:
         google_url = None
     reviews_count = p.get("reviews_count") or len(p.get("reviews") or [])

@@ -1,9 +1,9 @@
 var POIS=[
   {
     "imgs": [
-      "planly_scraper/images/grande_plage_du_remblai/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/grande_plage_du_remblai/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/grande_plage_du_remblai/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/grande_plage_du_remblai/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/grande_plage_du_remblai/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/grande_plage_du_remblai/photo_3.jpg?v=202609162038"
     ],
     "name": "Grande Plage du Remblai",
     "commune": "Les Sables-d'Olonne",
@@ -64,7 +64,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 138,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ0U7b_iNnBEgRoKIluIa28_o",
+    "googleUrl": "https://maps.google.com/?cid=18082997618554020512",
     "reviewsSummary": "La promenade en bord de mer séduit par ses aménagements de qualité, ses espaces de détente et ses vues panoramiques sur l'océan, ce qui en fait un lieu prisé pour la balade à pied ou à vélo. L'entretien des lieux et la proximité des commerces constituent également des atouts appréciés, bien que les conditions météorologiques puissent parfois limiter certaines activités.",
     "parking": {
       "nom": "Parking des Halles",
@@ -124,9 +124,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_sauveterre/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_sauveterre/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_sauveterre/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_de_sauveterre/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_sauveterre/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_sauveterre/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage de Sauveterre",
     "commune": "L'Île-d'Olonne",
@@ -182,7 +182,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1541,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJCfUDcBFcBEgRz5pVq00wUIY",
+    "googleUrl": "https://maps.google.com/?cid=9678288709364325071",
     "reviewsSummary": "Cette vaste plage sauvage offre un cadre naturel préservé avec des zones de baignade surveillées et un excellent potentiel pour la pratique du surf, bien qu'elle nécessite une petite marche d'accès depuis le parking. La présence d'espaces naturistes, l'acceptation des animaux et la faible affluence en fin de journée sont des atouts, même si la propreté dépend du civisme des visiteurs et que la surface exploitable diminue à marée haute.",
     "parking": {
       "nom": "Parking sans nom",
@@ -243,9 +243,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_granges/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_des_granges/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_des_granges/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_des_granges/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_des_granges/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_des_granges/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage des Granges",
     "commune": "L'Île-d'Olonne",
@@ -301,7 +301,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 157,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ14FtAflbBEgRIlA4_8NzOIs",
+    "googleUrl": "https://maps.google.com/?cid=10031895455605477410",
     "reviewsSummary": "Cette plage séduit particulièrement les visiteurs pour son environnement naturel préservé, sa propreté et son accueil des chiens en journée, ce qui la rend idéale pour les vacances en famille avec animaux. Elle offre une baignade surveillée, un accès facile au stationnement et des paysages sauvages, avec une composition mixte sable-galets et une section naturiste à certains endroits.",
     "parking": {
       "nom": "Plage Les Granges",
@@ -362,9 +362,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_tanchet/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_tanchet/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_tanchet/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_de_tanchet/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_tanchet/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_tanchet/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -425,7 +425,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 80,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJCUAKZnRoBEgRv5H1wjJUDtM",
+    "googleUrl": "https://maps.google.com/?cid=15208185568672715199",
     "reviewsSummary": "Cette petite plage conviviale offre de bonnes infrastructures avec surveillance, sanitaires gratuits et une offre de restauration variée directement en bord de mer, ce qui en fait un lieu idéal pour les familles comme pour les sorties entre amis. Le principal inconvénient soulevé par plusieurs visiteurs concerne l'affluence importante, particulièrement en haute saison, bien que l'emplacement stratégique et les possibilités de stationnement gratuit à proximité restent des atouts appréciés.",
     "parking": {
       "nom": "Parking sans nom",
@@ -485,9 +485,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/baie_de_cayola/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/baie_de_cayola/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/baie_de_cayola/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/baie_de_cayola/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/baie_de_cayola/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/baie_de_cayola/photo_3.jpg?v=202609162038"
     ],
     "name": "Baie de Cayola",
     "commune": "Château-d'Olonne",
@@ -548,7 +548,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 257,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJTWAtT_9oBEgR_jFKi5R0MZE",
+    "googleUrl": "https://maps.google.com/?cid=10462271590699250174",
     "reviewsSummary": "Ce camping familial bénéficie d'une excellente localisation géographique, d'équipes accueillantes et sympathiques, et propose des équipements appréciés comme la piscine et les animations régulières, dans une atmosphère calme et bien entretenue. Son caractère résidentiel très tranquille, particulièrement marqué en soirée, plaît aux vacanciers en quête de détente mais peut déplaire à ceux qui recherchent une ambiance plus animée.",
     "parking": {
       "nom": "Parking sans nom",
@@ -608,9 +608,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_la_mine/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_la_mine/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_la_mine/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_de_la_mine/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_la_mine/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_la_mine/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage de la Mine",
     "commune": "Jard-sur-Mer",
@@ -666,7 +666,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 529,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJiXKAPZBsBEgR5km-ZcKXRSU",
+    "googleUrl": "https://maps.google.com/?cid=2685719613982788070",
     "reviewsSummary": "Cette plage bénéficie d'une bonne accessibilité avec un parking ombragé à proximité et une surveillance en place, attirant les visiteurs qui apprécient son caractère moins fréquenté et sa propreté. L'accès depuis le parking nécessite une petite marche pédestre à travers un cadre boisé, ce qui peut représenter un effort selon les visiteurs.",
     "parking": {
       "nom": "Parking sans nom",
@@ -726,9 +726,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_la_paree/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_la_paree/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_la_paree/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_de_la_paree/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_la_paree/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_la_paree/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage de la Parée",
     "commune": "Brétignolles-sur-Mer",
@@ -784,7 +784,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 138,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJOccFUb1ZBEgRIYti0FVIBrw",
+    "googleUrl": "https://maps.google.com/?cid=13548596062396255009",
     "reviewsSummary": "Cette plage séduit par son cadre paisible, son sable fin et sa propreté, offrant un cadre agréable pour les familles et les amateurs d'activités nautiques. Cependant, les variations de marée constituent une caractéristique majeure du site qui modifie considérablement l'accessibilité et l'apparence du lieu, nécessitant de bien les anticiper avant la visite.",
     "parking": {
       "nom": "Parking Hotel l'Atlantic",
@@ -844,9 +844,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_dunes_du_veillon/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_dunes_du_veillon/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_dunes_du_veillon/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_dunes_du_veillon/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage & Dunes du Veillon",
     "commune": "Talmont-Saint-Hilaire",
@@ -907,7 +907,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1441,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJiQXcfYxrBEgRgpfF_YOCMdQ",
+    "googleUrl": "https://maps.google.com/?cid=15290145713309456258",
     "reviewsSummary": "Cette plage séduit par ses vastes étendues de sable fin, ses paysages naturels préservés et son atmosphère tranquille même en haute saison, avec des couchers de soleil remarquables et des possibilités de randonnée en bordure de côte. Elle dispose d'infrastructures pratiques (parkings, restauration sur place, surveillance) et attire notamment les amateurs de sports nautiques, bien que les conditions venteuses puissent ne pas convenir à tous les types de baignade.",
     "parking": {
       "nom": "Plage du Veillon",
@@ -967,9 +967,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_dunes/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_des_dunes/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_des_dunes/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_des_dunes/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_des_dunes/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_des_dunes/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage des Dunes",
     "commune": "Brétignolles-sur-Mer",
@@ -1030,7 +1030,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 291,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJY3UQO3xZBEgR4OgZpr321d8",
+    "googleUrl": "https://maps.google.com/?cid=16129068934893267168",
     "reviewsSummary": "Cette plage de sable fin attire particulièrement les familles et les propriétaires de chiens grâce à son accès facile, son parking gratuit et son environnement naturel préservé, propice à la détente. Les visiteurs apprécient son caractère paisible et dépaysant, bien que certains notent que les conditions de baignade peuvent être agitées.",
     "parking": {
       "nom": "Parking sans nom",
@@ -1090,9 +1090,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_conches/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_des_conches/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_des_conches/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_des_conches/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_des_conches/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_des_conches/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage des Conches",
     "commune": "Longeville-sur-Mer",
@@ -1153,7 +1153,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 917,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJlaA3s6ERBEgR5ZP7PJWoqtM",
+    "googleUrl": "https://maps.google.com/?cid=15252188446970319845",
     "reviewsSummary": "Cette plage de sable fin attire aussi bien les familles avec enfants que les amateurs de sports nautiques, grâce à ses vagues adaptées à différents niveaux et son accès aux chiens. L'accès demande quelques efforts physiques, et la gestion du stationnement et des horaires de marée nécessite une bonne planification.",
     "parking": {
       "nom": "Plage des Conches",
@@ -1213,9 +1213,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_de_l_aubraie/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_l_aubraie/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_de_l_aubraie/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_de_l_aubraie/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_l_aubraie/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_de_l_aubraie/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage de l'Aubraie",
     "commune": "Les Sables-d'Olonne",
@@ -1266,7 +1266,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 170,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJZQDPKwBdBEgR-SfBY4TpA70",
+    "googleUrl": "https://maps.google.com/?cid=13619986452917069817",
     "reviewsSummary": "Cette plage sauvage et préservée séduit par ses paysages naturels remarquables et son atmosphère tranquille même en haute saison, avec un accès facile depuis les aménagements environnants. Le principal point d'attention concerne la composition du littoral : plutôt rocailleux et caillouteux que sablonneux fin, et la baignade présente des risques liés aux courants.",
     "parking": {
       "nom": "Parking sans nom",
@@ -1326,9 +1326,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/plage_des_belugas/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/plage_des_belugas/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/plage_des_belugas/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/plage_des_belugas/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/plage_des_belugas/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/plage_des_belugas/photo_3.jpg?v=202609162038"
     ],
     "name": "Plage des Bélugas",
     "commune": "L'Aiguillon-la-Presqu'île",
@@ -1389,7 +1389,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 108,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJR_naaRIDBEgR0Z5p735Qucc",
+    "googleUrl": "https://maps.google.com/?cid=14391622590351908561",
     "reviewsSummary": "Cette plage familiale bénéficie d'une bonne surveillance, de sanitaires propres, d'un parking proche et de services de restauration, avec une attention particulière portée à l'accessibilité pour les personnes en situation de handicap. Le principal inconvénient relevé concerne la distance à parcourir à pied depuis le parking pour les visiteurs à mobilité réduite.",
     "parking": {
       "nom": "Parking sans nom",
@@ -1449,9 +1449,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/foret_domaniale_d_olonne/photo_3.jpg?v=202609162038"
     ],
     "name": "Forêt Domaniale d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -1502,7 +1502,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 37,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJQ04L6ERcBEgRaSN9-lB-bKM",
+    "googleUrl": "https://maps.google.com/?cid=11775926011931992937",
     "reviewsSummary": "Les visiteurs apprécient les nombreux sentiers bien balisés qui permettent des balades variées en forêt jusqu'à la plage, avec des points de vue attrayants et des aménagements pratiques comme les aires de pique-nique et les parkings. Certains regrettent cependant la gestion forestière, notamment les zones de coupe qui laissent des arbres isolés peu stables face aux intempéries.",
     "parking": {
       "nom": "Parking sans nom",
@@ -1730,9 +1730,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/marais_salants_de_l_ile_d_olonne/photo_3.jpg?v=202609162038"
     ],
     "name": "Marais Salants de l'Île d'Olonne",
     "commune": "L'Île-d'Olonne",
@@ -1788,7 +1788,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 203,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ5fGQRd1dBEgRXqBUUtjfDP0",
+    "googleUrl": "https://maps.google.com/?cid=18234195111503503454",
     "reviewsSummary": "Les visiteurs apprécient unanimement cette balade facile et paisible à travers les marais, qui offre de beaux paysages avec reflets d'eau et faune locale, ainsi qu'une découverte du savoir-faire salin traditionnel. Le principal point négatif relevé concerne l'insuffisance des installations de poubelles sur le site.",
     "parking": {
       "nom": "Parking sans nom",
@@ -1957,9 +1957,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/lac_de_tanchet/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/lac_de_tanchet/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/lac_de_tanchet/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/lac_de_tanchet/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/lac_de_tanchet/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/lac_de_tanchet/photo_3.jpg?v=202609162038"
     ],
     "name": "Lac de Tanchet",
     "commune": "Les Sables-d'Olonne",
@@ -2020,7 +2020,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 145,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJp3Z6p3RoBEgRDpdUjc_Vc1c",
+    "googleUrl": "https://maps.google.com/?cid=6301615391027533582",
     "reviewsSummary": "Ce site offre un cadre naturel agréable avec un petit lac entouré d'espaces verts bien entretenus, idéal pour des balades ou l'initiation à des activités nautiques, notamment pour les enfants. Le lieu présente un accès facile et gratuit, bien que son exposition au vent et sa proximité avec une route principale puissent réduire le sentiment de tranquillité attendu.",
     "parking": {
       "nom": "Parking sans nom",
@@ -2231,9 +2231,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/reserve_nat_baie_de_l_aiguillon/photo_3.jpg?v=202609162038"
     ],
     "name": "Réserve Nat. Baie de l'Aiguillon",
     "commune": "L'Aiguillon-sur-Mer",
@@ -2294,7 +2294,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 461,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ00j1BSWwBkgRDV5-qyvp-ek",
+    "googleUrl": "https://maps.google.com/?cid=16859763053808213517",
     "reviewsSummary": "Ce site naturel préservé séduit par ses paysages variés selon les saisons et offre une promenade accessible au bord de mer, particulièrement enrichissante en observant le jeu des marées et la faune marine. Certains visiteurs auraient apprécié davantage d'informations sur le lieu et une expérience ornithologique plus facilement accessible.",
     "parking": {
       "nom": "Parking à proximité",
@@ -2425,9 +2425,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/ile_d_yeu/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/ile_d_yeu/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/ile_d_yeu/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/ile_d_yeu/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/ile_d_yeu/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/ile_d_yeu/photo_3.jpg?v=202609162038"
     ],
     "name": "Île d'Yeu",
     "commune": "Saint-Gilles (ferry)",
@@ -2556,9 +2556,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/ile_de_noirmoutier_passage_du_gois/photo_3.jpg?v=202609162038"
     ],
     "name": "Île de Noirmoutier — Passage du Gois",
     "commune": "Noirmoutier-en-l'Île",
@@ -2619,7 +2619,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1229,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJCyQ6GfkFBUgR3FucfWXsj90",
+    "googleUrl": "https://maps.google.com/?cid=15965239124694948828",
     "reviewsSummary": "Le Passage du Gois fascine les visiteurs par son caractère submersible unique : cette chaussée reliant l'île au continent offre un spectacle impressionnant à marée basse, avec ses étendues de sable et ses opportunités de récolte de coquillages, tandis que des balises balisent le parcours pour la sécurité. Le passage requiert une attention particulière aux horaires de marée et aux conditions météorologiques, l'accès pouvant être restreint selon les coefficients de marée ou en cas de tempête, notamment en haute saison estivale.",
     "parking": {
       "nom": "Parking sans nom",
@@ -2670,9 +2670,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/phare_de_la_petite_jetee/photo_3.jpg?v=202609162038"
     ],
     "name": "Phare de la Petite Jetée",
     "commune": "Les Sables-d'Olonne",
@@ -2728,7 +2728,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 7,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJq8IkBk9nBEgR0jEPyjmLzaU",
+    "googleUrl": "https://maps.google.com/?cid=11947358466803184082",
     "reviewsSummary": "Le site offre une promenade agréable avec des perspectives intéressantes sur le littoral et la ville, accessible à tous les publics. C'est un lieu apprécié des pêcheurs et des amateurs de loisirs nautiques qui bénéficient de son emplacement stratégique.",
     "parking": {
       "nom": "Parking sans nom",
@@ -2774,9 +2774,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/belvedere_arrondeau/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/belvedere_arrondeau/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/belvedere_arrondeau/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/belvedere_arrondeau/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/belvedere_arrondeau/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/belvedere_arrondeau/photo_3.jpg?v=202609162038"
     ],
     "name": "Belvédère Arrondeau",
     "commune": "Saint-Hilaire-de-Riez",
@@ -2832,7 +2832,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 181,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJjbc8PkP5BEgRq9ygFSX1EAQ",
+    "googleUrl": "https://maps.google.com/?cid=293003515404541099",
     "reviewsSummary": "Le site offre une plateforme d'observation bien aménagée qui permet de contempler le spectacle de la mer, particulièrement impressionnant lors de conditions météorologiques agitées. Les visiteurs apprécient les panneaux informatifs et recommandent de le visiter en période venteuse pour vivre une expérience naturelle intense, tout en restant prudent face aux projections d'eau.",
     "parking": {
       "nom": "Parking sans nom",
@@ -2880,9 +2880,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/le_puits_d_enfer/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/le_puits_d_enfer/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/le_puits_d_enfer/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/le_puits_d_enfer/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/le_puits_d_enfer/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/le_puits_d_enfer/photo_3.jpg?v=202609162038"
     ],
     "name": "Le Puits d'Enfer",
     "commune": "Les Sables-d'Olonne",
@@ -2933,7 +2933,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 5214,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJH20_2o9nBEgRIEikE6yZ91g",
+    "googleUrl": "https://maps.google.com/?cid=6410761558928148512",
     "reviewsSummary": "Ce site naturel spectaculaire plaît pour son cadre impressionnant où les vagues s'écrasent contre les rochers, particulièrement remarquable lors des grandes marées ou en fin d'après-midi pour la lumière. L'accès facile et le parking gratuit en font une visite agréable, mais plusieurs visiteurs soulignent la nécessité de rester vigilant avec les enfants car le site n'est pas sécurisé et les conditions (marée, météo) peuvent changer rapidement.",
     "parking": {
       "nom": "Parking Puits d'Enfer",
@@ -2978,9 +2978,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/pointe_du_payre/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/pointe_du_payre/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/pointe_du_payre/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/pointe_du_payre/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/pointe_du_payre/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/pointe_du_payre/photo_3.jpg?v=202609162038"
     ],
     "name": "Pointe du Payré",
     "commune": "Jard-sur-Mer",
@@ -3031,7 +3031,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 390,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJx9BIx3ZsBEgR2gW2vVZ-Z7c",
+    "googleUrl": "https://maps.google.com/?cid=13215670542557119962",
     "reviewsSummary": "Cette promenade côtière d'environ 1h30 à 2h offre un parcours facile et peu accidenté combinant forêt, falaises et littoral, avec un accès pratique au départ et des paysages remarquables en chemin. À noter que le terrain peut présenter des portions sableuses qui rendent la visite inconfortable avec une poussette.",
     "parking": {
       "nom": "Parking à proximité",
@@ -3078,9 +3078,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/sentier_cotier_foret_plages_d_olonne/photo_3.jpg?v=202609162038"
     ],
     "name": "Sentier côtier Forêt–Plages d'Olonne",
     "commune": "Olonne-sur-Mer",
@@ -3180,9 +3180,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/le_remblai/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/le_remblai/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/le_remblai/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/le_remblai/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/le_remblai/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/le_remblai/photo_3.jpg?v=202609162038"
     ],
     "name": "Le Remblai",
     "commune": "Les Sables-d'Olonne",
@@ -3243,7 +3243,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 138,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ0U7b_iNnBEgRoKIluIa28_o",
+    "googleUrl": "https://maps.google.com/?cid=18082997618554020512",
     "reviewsSummary": "Cette promenade côtière offre un cadre agréable avec des aménagements de qualité (voies piétonnes et cyclables bien entretenues), des commerces à proximité et une vue remarquable sur l'océan, particulièrement apaisante en fin ou début de journée. Les visiteurs apprécient son accessibilité depuis le centre-ville et la diversité des activités possibles, que ce soit la balade à pied, à vélo ou simplement pour profiter d'une pause détente le long de la mer.",
     "parking": {
       "nom": "Parking des Halles",
@@ -3291,9 +3291,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/circuit_des_marais_salants/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/circuit_des_marais_salants/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/circuit_des_marais_salants/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/circuit_des_marais_salants/photo_3.jpg?v=202609162038"
     ],
     "name": "Circuit des Marais Salants",
     "commune": "L'Île-d'Olonne",
@@ -3349,7 +3349,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 203,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ5fGQRd1dBEgRXqBUUtjfDP0",
+    "googleUrl": "https://maps.google.com/?cid=18234195111503503454",
     "reviewsSummary": "Ce circuit offre une balade facile et paisible à travers les marais, appréciée pour ses paysages variés combinant reflets d'eau et faune locale, ainsi que pour les informations qu'elle apporte sur le savoir-faire salicole. Les visiteurs soulignent son caractère accessible et relaxant, particulièrement en fin de journée, bien que certains regrettent l'insuffisance des équipements de propreté sur place.",
     "parking": {
       "nom": "Parking sans nom",
@@ -3397,9 +3397,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/chemin_des_douaniers_cayola_bourgenay/photo_3.jpg?v=202609162038"
     ],
     "name": "Chemin des Douaniers Cayola–Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
@@ -3460,7 +3460,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 56,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJU7aozcehAUgRyRNOIu3LYS8",
+    "googleUrl": "https://maps.google.com/?cid=3414234211866776521",
     "reviewsSummary": "Ce sentier côtier offre une agréable promenade d'environ une heure sur une allée bien aménagée, avec des vues remarquables sur l'estuaire et les vignobles environnants. Le parcours, généralement calme et propice à la détente, permet de découvrir les paysages et l'architecture locale dans une atmosphère sereine.",
     "parking": {
       "nom": "Place des Douves de la Citadelle",
@@ -3508,9 +3508,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/port_olona/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/port_olona/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/port_olona/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/port_olona/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/port_olona/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/port_olona/photo_3.jpg?v=202609162038"
     ],
     "name": "Port Olona",
     "commune": "Les Sables-d'Olonne",
@@ -3571,7 +3571,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 5225,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJfehhlvRnBEgRtkHMe4vYTKQ",
+    "googleUrl": "https://maps.google.com/?cid=11839075614039228854",
     "reviewsSummary": "Le port bénéficie d'une excellente accessibilité avec un parking gratuit et une navette maritime abordable permettant de traverser facilement la zone, le tout apprécié notamment des visiteurs à vélo. Les événements nautiques majeurs créent une atmosphère festive et mémorable, bien que l'accès aux sites d'observation reste soumis à une certaine patience et à des conditions d'encombrement.",
     "parking": {
       "nom": "Parking sans nom",
@@ -3619,9 +3619,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/port_de_bourgenay/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/port_de_bourgenay/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/port_de_bourgenay/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/port_de_bourgenay/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/port_de_bourgenay/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/port_de_bourgenay/photo_3.jpg?v=202609162038"
     ],
     "name": "Port de Bourgenay",
     "commune": "Talmont-Saint-Hilaire",
@@ -3731,9 +3731,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/port_de_la_chaume/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/port_de_la_chaume/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/port_de_la_chaume/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/port_de_la_chaume/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/port_de_la_chaume/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/port_de_la_chaume/photo_3.jpg?v=202609162038"
     ],
     "name": "Port de La Chaume",
     "commune": "Les Sables-d'Olonne",
@@ -3789,7 +3789,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 5226,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJfehhlvRnBEgRtkHMe4vYTKQ",
+    "googleUrl": "https://maps.google.com/?cid=11839075614039228854",
     "reviewsSummary": "Le port bénéficie d'une excellente accessibilité avec un parking gratuit et une navette maritime économique permettant de traverser facilement le site, y compris avec des vélos, ainsi que de nombreux commerces et services à proximité offrant un cadre agréable. Les événements nautiques majeurs, notamment les retours de compétitions célèbres, créent une ambiance animée et mémorable, bien que le stationnement puisse devenir problématique lors de ces affluences importantes.",
     "parking": {
       "nom": "Parking sans nom",
@@ -3824,9 +3824,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/l_ile_penotte/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/l_ile_penotte/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/l_ile_penotte/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/l_ile_penotte/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/l_ile_penotte/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/l_ile_penotte/photo_3.jpg?v=202609162038"
     ],
     "name": "L'Île Penotte",
     "commune": "Les Sables-d'Olonne",
@@ -3877,7 +3877,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 12463,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJMYbztPNnBEgRYn3opJraz98",
+    "googleUrl": "https://maps.google.com/?cid=16127349148363554146",
     "reviewsSummary": "Ce quartier séduit par son charme authentique et ses ruelles ornées de mosaïques en coquillages, des créations artistiques originales qui en font une balade agréable et dépaysante, accessible gratuitement. À noter que c'est un lieu habité où le respect du calme est apprécié des résidents.",
     "parking": {
       "nom": "Parking sans nom",
@@ -3912,9 +3912,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/chateau_de_talmont/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/chateau_de_talmont/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/chateau_de_talmont/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/chateau_de_talmont/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/chateau_de_talmont/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/chateau_de_talmont/photo_3.jpg?v=202609162038"
     ],
     "name": "Château de Talmont",
     "commune": "Talmont-Saint-Hilaire",
@@ -3965,7 +3965,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 5087,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJMXpfad9qBEgRcsZTza0i3JA",
+    "googleUrl": "https://maps.google.com/?cid=10438256166207473266",
     "reviewsSummary": "Le château offre une visite complète combinant la découverte historique du bâtiment avec un village médiéval proposant plusieurs ateliers pratiques (tir à l'arbalète, tissage, calligraphie) et deux spectacles appréciés mettant en scène chevaliers et fauconnerie, le tout à un bon rapport qualité-prix et dans une ambiance accueillante. Les familles apprécient particulièrement la diversité des activités, la possibilité de se costumer à l'époque et les options de restauration sur place, même si certains visiteurs ont noté des restrictions d'accès à certaines zones lors des spectacles.",
     "parking": {
       "nom": "Place du Château",
@@ -4000,9 +4000,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/dolmen_de_la_frebouch_ere/photo_3.jpg?v=202609162038"
     ],
     "name": "Dolmen de la Frébouchère",
     "commune": "Le Bernard",
@@ -4053,7 +4053,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 116,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJc1TEjWAXBEgRFqMfFh4Cdxo",
+    "googleUrl": "https://maps.google.com/?cid=1906995295458140950",
     "reviewsSummary": "Ce monument mégalithique impressionne par ses dimensions imposantes et son excellent état de conservation, offrant un aperçu remarquable du patrimoine préhistorique de la région. Le site est bien aménagé avec un accès facile et constitue une halte intéressante pour les visiteurs curieux des vestiges archéologiques, dans un cadre paisible et peu touristique.",
     "parking": {
       "nom": "Parking Dolmen",
@@ -4086,9 +4086,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/saint_gilles_croix_de_vie/photo_3.jpg?v=202609162038"
     ],
     "name": "Saint-Gilles-Croix-de-Vie",
     "commune": "Saint-Gilles-Croix-de-Vie",
@@ -4180,9 +4180,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/vouvant/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/vouvant/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/vouvant/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/vouvant/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/vouvant/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/vouvant/photo_3.jpg?v=202609162038"
     ],
     "name": "Vouvant",
     "commune": "Vouvant",
@@ -4238,7 +4238,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 0,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJj1-LllPmBkgRIKwJHlI3DQQ",
+    "googleUrl": "https://maps.google.com/?cid=291950376679746592",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking sans nom",
@@ -4273,9 +4273,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/prieure_saint_nicolas/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/prieure_saint_nicolas/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/prieure_saint_nicolas/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/prieure_saint_nicolas/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/prieure_saint_nicolas/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/prieure_saint_nicolas/photo_3.jpg?v=202609162038"
     ],
     "name": "Prieuré Saint-Nicolas",
     "commune": "La Chaume, Les Sables",
@@ -4336,7 +4336,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 487,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJiSu6faBnBEgRGvgWL-RVRa0",
+    "googleUrl": "https://maps.google.com/?cid=12485479980485507098",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -4368,9 +4368,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/tour_d_arundel/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/tour_d_arundel/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/tour_d_arundel/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/tour_d_arundel/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/tour_d_arundel/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/tour_d_arundel/photo_3.jpg?v=202609162038"
     ],
     "name": "Tour d'Arundel",
     "commune": "Les Sables-d'Olonne",
@@ -4431,7 +4431,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 37,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ3cHjuY9nBEgRIe7QPDe0ja8",
+    "googleUrl": "https://maps.google.com/?cid=12649965077690117665",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -4463,9 +4463,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/abbaye_de_maillezais/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/abbaye_de_maillezais/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/abbaye_de_maillezais/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/abbaye_de_maillezais/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/abbaye_de_maillezais/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/abbaye_de_maillezais/photo_3.jpg?v=202609162038"
     ],
     "name": "Abbaye de Maillezais",
     "commune": "Marais Poitevin",
@@ -4526,7 +4526,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 2064,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ7S08xmPaBkgRA-T4D7Ps6-Q",
+    "googleUrl": "https://maps.google.com/?cid=16495538313985844227",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -4558,9 +4558,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/fort_saint_nicolas/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/fort_saint_nicolas/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/fort_saint_nicolas/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/fort_saint_nicolas/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/fort_saint_nicolas/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/fort_saint_nicolas/photo_3.jpg?v=202609162038"
     ],
     "name": "Fort Saint-Nicolas",
     "commune": "La Chaume, Les Sables",
@@ -4621,7 +4621,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 173,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ48qYveBnBEgR103LPdOd61U",
+    "googleUrl": "https://maps.google.com/?cid=6191215643351272919",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -4653,9 +4653,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/eglise_saint_nicolas_de_brem/photo_3.jpg?v=202609162038"
     ],
     "name": "Église Saint-Nicolas de Brem",
     "commune": "Brem-sur-Mer",
@@ -4716,7 +4716,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 155,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJCToR1M5bBEgRAFGz1_I_hl4",
+    "googleUrl": "https://maps.google.com/?cid=6811201798677942528",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -4748,9 +4748,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_3.jpg?v=202609162038"
     ],
     "name": "Musée de l'Abbaye Sainte-Croix",
     "commune": "Les Sables-d'Olonne",
@@ -4811,7 +4811,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 509,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJl2IFqfBnBEgRdrjmjKthI8U",
+    "googleUrl": "https://maps.google.com/?cid=14205305039087908982",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -4843,7 +4843,7 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/museum_du_coquillage/photo_1.jpg?v=202609161641"
+      "planly_scraper/images/museum_du_coquillage/photo_1.jpg?v=202609162038"
     ],
     "name": "Muséum du Coquillage",
     "commune": "Les Sables-d'Olonne",
@@ -4904,7 +4904,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 2105,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ91PEnPRnBEgRmmUaakydTaA",
+    "googleUrl": "https://maps.google.com/?cid=11551061570798380442",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -5142,7 +5142,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 25,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJWSsDcTVgAUgR55WoxjU8YEI",
+    "googleUrl": "https://maps.google.com/?cid=4782889005931337191",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -5174,9 +5174,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/historial_de_la_vendee/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/historial_de_la_vendee/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/historial_de_la_vendee/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/historial_de_la_vendee/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/historial_de_la_vendee/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/historial_de_la_vendee/photo_3.jpg?v=202609162038"
     ],
     "name": "Historial de la Vendée",
     "commune": "Les Lucs-sur-Boulogne",
@@ -5237,7 +5237,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1932,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJQZlIjY5nBEgRrgDeXjOvnnc",
+    "googleUrl": "https://maps.google.com/?cid=8619519372003508398",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -5343,9 +5343,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/la_cotriade/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/la_cotriade/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/la_cotriade/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/la_cotriade/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/la_cotriade/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/la_cotriade/photo_3.jpg?v=202609162038"
     ],
     "name": "La Cotriade",
     "commune": "Les Sables-d'Olonne",
@@ -5406,7 +5406,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 2852,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ_c3YWPtnBEgREn-LTODor7w",
+    "googleUrl": "https://maps.google.com/?cid=13596341850109345554",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -5498,9 +5498,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/la_pancarte/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/la_pancarte/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/la_pancarte/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/la_pancarte/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/la_pancarte/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/la_pancarte/photo_3.jpg?v=202609162038"
     ],
     "name": "La Pancarte",
     "commune": "Les Sables-d'Olonne",
@@ -5561,7 +5561,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1581,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ27hlv-NnBEgRJkSSizHfkWY",
+    "googleUrl": "https://maps.google.com/?cid=7390933867379704870",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -5781,9 +5781,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/les_regates/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/les_regates/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/les_regates/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/les_regates/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/les_regates/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/les_regates/photo_3.jpg?v=202609162038"
     ],
     "name": "Les Régates",
     "commune": "Les Sables-d'Olonne",
@@ -5844,7 +5844,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 2218,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJi3lwcPxnBEgRsfmXWVLd_BI",
+    "googleUrl": "https://maps.google.com/?cid=1368211732573977009",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -5871,19 +5871,19 @@ var POIS=[
     },
     "beach": null,
     "specific": {
-      "cuisine_type": "Fruits de mer, cuisine française",
+      "cuisine_type": "French coastal dining",
       "hours_text": "09:00 AM - 07:00 PM tous les jours",
       "products": [
-        "Tataki de thon",
-        "Moules frites",
-        "Crêpes",
-        "Fruits de mer frais",
-        "Filet de poisson aux agrumes"
+        "Moules Frites",
+        "Tataki de Thon",
+        "Filet de Bar et Petits Légumes",
+        "Galette Complète",
+        "Café Gourmand"
       ],
       "booking": "conseillée",
       "services": {
         "terrace": true,
-        "view": "Vue sur la mer et la promenade",
+        "view": "sweeping coastal views, sea views",
         "kids_menu": true,
         "vegetarian": true,
         "takeaway": true,
@@ -5891,9 +5891,9 @@ var POIS=[
         "shop": null
       },
       "know": [
-        "Restaurant situé 11 Prom. de l'Amiral Lafargue, Les Sables-d'Olonne, directement en bord de mer.",
-        "Ambiance décontractée et raffinée, accueil chaleureux, service attentif sans précipitation.",
-        "Portions généreuses, menu enfants disponible, réservations recommandées pour le déjeuner et le dîner."
+        "Restaurant situé 11 Prom. de l'Amiral Lafargue sur la promenade avec vue sur la mer",
+        "Les réservations sont conseillées pour le déjeuner et le dîner",
+        "Accessible aux fauteuils roulants (entrée, parking, toilettes, places assises)"
       ],
       "social": {
         "facebook": "https://www.facebook.com/placejoys",
@@ -5909,9 +5909,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/lacertus/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/lacertus/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/lacertus/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/lacertus/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/lacertus/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/lacertus/photo_3.jpg?v=202609162038"
     ],
     "name": "Lacertus",
     "commune": "Les Sables-d'Olonne",
@@ -5972,7 +5972,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 800,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJB-VlNpJnBEgR_RsZTISTF-k",
+    "googleUrl": "https://maps.google.com/?cid=16796055531723234301",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -6174,9 +6174,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/la_p_tite_cale/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/la_p_tite_cale/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/la_p_tite_cale/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/la_p_tite_cale/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/la_p_tite_cale/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/la_p_tite_cale/photo_3.jpg?v=202609162038"
     ],
     "name": "La P'tite Cale",
     "commune": "Les Sables-d'Olonne",
@@ -6237,7 +6237,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1684,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ8WSygUxnBEgRqmu7FC2rOpI",
+    "googleUrl": "https://maps.google.com/?cid=10536922488296401834",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -6429,9 +6429,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/umi_sushi/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/umi_sushi/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/umi_sushi/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/umi_sushi/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/umi_sushi/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/umi_sushi/photo_3.jpg?v=202609162038"
     ],
     "name": "UMI Sushi",
     "commune": "Les Sables-d'Olonne",
@@ -6492,7 +6492,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 340,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJoRyGOHRnBEgRfx33f322Y78",
+    "googleUrl": "https://maps.google.com/?cid=13791067134072659327",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -6520,12 +6520,13 @@ var POIS=[
     "beach": null,
     "specific": {
       "cuisine_type": "Asiatique, Japonais, Sushis",
-      "hours_text": "Lundi 18:30-22:30 | Mardi à Dimanche 11:30-14:30 et 18:30-22:30",
+      "hours_text": "Lundi 18h30-22h30 | Mardi-Dimanche 11h30-14h30 et 18h30-22h30",
       "products": [
         "Sushis",
-        "Plats traditionnels",
-        "Plats végans",
-        "Plats épicés"
+        "Makis",
+        "Poké Bowl",
+        "Ramen et Udon",
+        "Brochettes"
       ],
       "services": {
         "terrace": null,
@@ -6537,13 +6538,13 @@ var POIS=[
         "shop": null
       },
       "know": [
-        "Recettes savoureuses préparées de manière traditionnelle à partir d'ingrédients choisis avec soin",
-        "Ambiance conviviale, tables adaptées aux amateurs comme aux découvreurs de gastronomie asiatique",
-        "Services proposés : plats faits maison, plats traditionnels, végans, épicés, accueil enfant"
+        "Restaurant situé au 6 quai René Guine aux Sables-d'Olonne.",
+        "Cuisine traditionnelle avec ingrédients choisis, plats faits maison et options véganes disponibles.",
+        "Fermeture le lundi midi ; ouvert uniquement à partir de 18h30."
       ],
       "social": {
         "instagram": "https://www.instagram.com/umi._sushi",
-        "facebook": "https://www.facebook.com/profile.php"
+        "facebook": "https://www.facebook.com/profile.php?id=61558170561353"
       },
       "official_source": {
         "url": "https://www.umisushi85.fr/",
@@ -6555,9 +6556,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/pizza_bar_12h03/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/pizza_bar_12h03/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/pizza_bar_12h03/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/pizza_bar_12h03/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/pizza_bar_12h03/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/pizza_bar_12h03/photo_3.jpg?v=202609162038"
     ],
     "name": "Pizza Bar 12h03",
     "commune": "Les Sables-d'Olonne",
@@ -6618,7 +6619,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1082,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJiY3EkEVnBEgRxs8xBaHb-UQ",
+    "googleUrl": "https://maps.google.com/?cid=4970245148403421126",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -6645,27 +6646,10 @@ var POIS=[
     },
     "beach": null,
     "specific": {
-      "cuisine_type": "Pizzas à emporter",
-      "products": [
-        "Pizzas",
-        "Pâte fine et croustillante",
-        "Ingrédients frais et de qualité",
-        "Pizzas végétariennes",
-        "Pizzas viande"
-      ],
-      "services": {
-        "terrace": false,
-        "view": null,
-        "kids_menu": false,
-        "vegetarian": true,
-        "takeaway": true,
-        "covered": null,
-        "shop": false
-      },
       "know": [
-        "Aucune information spécifique sur 'Pizza Bar 12h03' (Les Sables-d'Olonne) n'est présente dans les pages fournies.",
-        "Les pages contiennent des annuaires génériques de pizzerias à emporter en France, mais pas de fiche dédiée à cet établissement.",
-        "Impossible d'extraire des données tarifaires, horaires ou services pour ce restaurant spécifique."
+        "Les pages fournies ne contiennent aucune information sur « Pizza Bar 12h03 »",
+        "Les résultats concernent d'autres établissements (restaurants généralistes, campings avec pizzeria, etc.)",
+        "Aucune donnée disponible pour répondre aux critères demandés"
       ],
       "official_source": {
         "url": "https://pizzas-a-emporter.restaurants-de-france.fr",
@@ -6812,9 +6796,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/pizza_cosy/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/pizza_cosy/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/pizza_cosy/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/pizza_cosy/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/pizza_cosy/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/pizza_cosy/photo_3.jpg?v=202609162038"
     ],
     "name": "Pizza Cosy",
     "commune": "Les Sables-d'Olonne",
@@ -6875,7 +6859,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 995,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJOTno7KFnBEgRv1zrY02MzOI",
+    "googleUrl": "https://maps.google.com/?cid=16342591411837426879",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -6969,9 +6953,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/le_quai_des_saveurs/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/le_quai_des_saveurs/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/le_quai_des_saveurs/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/le_quai_des_saveurs/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/le_quai_des_saveurs/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/le_quai_des_saveurs/photo_3.jpg?v=202609162038"
     ],
     "name": "Le Quai des Saveurs",
     "commune": "Les Sables-d'Olonne",
@@ -7032,7 +7016,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1457,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ2UMwIoxnBEgR0zvQgk2pKp0",
+    "googleUrl": "https://maps.google.com/?cid=11325050363348794323",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -7226,9 +7210,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/la_cabane_du_ptitgas/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/la_cabane_du_ptitgas/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/la_cabane_du_ptitgas/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/la_cabane_du_ptitgas/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/la_cabane_du_ptitgas/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/la_cabane_du_ptitgas/photo_3.jpg?v=202609162038"
     ],
     "name": "La Cabane du Ptitgas",
     "commune": "Talmont-Saint-Hilaire",
@@ -7289,7 +7273,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 147,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ7UNUcNVrBEgR0wIHak_F7bI",
+    "googleUrl": "https://maps.google.com/?cid=12893178253103530707",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -7316,8 +7300,70 @@ var POIS=[
     },
     "beach": null,
     "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "6 Huîtres n°2",
+            "price": 8.2
+          },
+          {
+            "label": "6 Huîtres n°3",
+            "price": 7.5
+          },
+          {
+            "label": "6 Huîtres n°4",
+            "price": 6.2
+          },
+          {
+            "label": "12 Huîtres n°1",
+            "price": 7.0
+          },
+          {
+            "label": "Rillettes d'Huîtres de la Cabane du Payré",
+            "price": 9.0
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Les huîtres sont servis avec du citron ainsi que du beurre et nos fruits de mer avec de la mayonnaise Morin ou du beurre.",
+        "source_url": "https://lacabanedupayre.fr/wp-content/uploads/2026/04/carte-La-Cabane-du-Payre-2026.pdf.pdf.pdf",
+        "valid_period": "2026",
+        "evidence": "6 Huîtres n°1 6.00€, 12 Huîtres n°1 7.00€, Rillettes d'Huîtres de la Cabane du Payré 9,00€",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "Fruits de mer, huîtres",
+      "hours_text": "Boutique ouverte toute l'année. Dégustation sur place de mi-avril à septembre, juillet et août également le soir.",
+      "closing_days": "mardi",
+      "products": [
+        "Huîtres de l'estuaire du Payré",
+        "Rillettes d'huîtres",
+        "Bulots",
+        "Crevettes grises",
+        "Palourdes"
+      ],
+      "booking": "obligatoire",
+      "services": {
+        "terrace": true,
+        "view": "Vue imprenable sur les parcs à huîtres",
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": null,
+        "shop": true
+      },
+      "know": [
+        "Réservation obligatoire par téléphone au 02 51 90 21 83 pour la dégustation sur place.",
+        "Dégustation et terrasse ouverts de mi-avril à septembre, avec soirées en juillet-août.",
+        "Boutique ostréicole ouverte toute l'année avec produits locaux (terrines, soupes, vins vendéens, sels aromatisés)."
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/people/La-Cabane-du-Payr%C3%A9/61572839566079",
+        "instagram": "https://www.instagram.com/lacabanedupayre"
+      },
       "official_source": {
-        "url": null,
+        "url": "https://lacabanedupayre.fr",
         "verified_at": "2026-09-16"
       }
     },
@@ -7450,9 +7496,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/marche_arago/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/marche_arago/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/marche_arago/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/marche_arago/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/marche_arago/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/marche_arago/photo_3.jpg?v=202609162038"
     ],
     "name": "Marché Arago",
     "commune": "Les Sables-d'Olonne",
@@ -7513,7 +7559,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1898,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJPzHpHftnBEgRfPULR63oFkY",
+    "googleUrl": "https://maps.google.com/?cid=5050479863061542268",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -7572,9 +7618,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/halles_de_la_chaume/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/halles_de_la_chaume/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/halles_de_la_chaume/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/halles_de_la_chaume/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/halles_de_la_chaume/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/halles_de_la_chaume/photo_3.jpg?v=202609162038"
     ],
     "name": "Halles de La Chaume",
     "commune": "La Chaume, Les Sables",
@@ -7635,7 +7681,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 288,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJx4OknI9nBEgR6KwMxEr2eOc",
+    "googleUrl": "https://maps.google.com/?cid=16679352020943809768",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -7672,9 +7718,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/marche_de_bretignolles_sur_mer/photo_3.jpg?v=202609162038"
     ],
     "name": "Marché de Brétignolles-sur-Mer",
     "commune": "Brétignolles-sur-Mer",
@@ -7735,7 +7781,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 332,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJFbuBSexbBEgRND3s-PxihMM",
+    "googleUrl": "https://maps.google.com/?cid=14088494372969266484",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -7796,9 +7842,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/sel_de_l_ile_d_olonne/photo_3.jpg?v=202609162038"
     ],
     "name": "Sel de l'Île d'Olonne",
     "commune": "L'Île-d'Olonne",
@@ -7859,7 +7905,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 62,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJAWO8a2pdBEgRSzk38vIeAVY",
+    "googleUrl": "https://maps.google.com/?cid=6197268591033137483",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -8042,9 +8088,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/vignobles_mourat/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/vignobles_mourat/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/vignobles_mourat/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/vignobles_mourat/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/vignobles_mourat/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/vignobles_mourat/photo_3.jpg?v=202609162038"
     ],
     "name": "Vignobles Mourat",
     "commune": "Mareuil-sur-Lay",
@@ -8105,7 +8151,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 435,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJq-Hf-TSiBkgRjlidilibZX4",
+    "googleUrl": "https://maps.google.com/?cid=9107856626011691150",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -8181,8 +8227,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/famille_mary/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/famille_mary/photo_2.jpg?v=202609161641"
+      "planly_scraper/images/famille_mary/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/famille_mary/photo_2.jpg?v=202609162038"
     ],
     "name": "Famille Mary",
     "commune": "Les Sables-d'Olonne",
@@ -8243,7 +8289,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1020,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ_ROcbfNnBEgR1gyZsT2hWj0",
+    "googleUrl": "https://maps.google.com/?cid=4421023270562237654",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -8337,9 +8383,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/conserverie_la_sablaise/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/conserverie_la_sablaise/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/conserverie_la_sablaise/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/conserverie_la_sablaise/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/conserverie_la_sablaise/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/conserverie_la_sablaise/photo_3.jpg?v=202609162038"
     ],
     "name": "Conserverie La Sablaise",
     "commune": "Les Sables-d'Olonne",
@@ -8400,7 +8446,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 58,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJmc_M30NdBEgRF8zRivGINoc",
+    "googleUrl": "https://maps.google.com/?cid=9743125414860147735",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -8584,9 +8630,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/circuit_mecamax/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/circuit_mecamax/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/circuit_mecamax/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/circuit_mecamax/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/circuit_mecamax/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/circuit_mecamax/photo_3.jpg?v=202609162038"
     ],
     "name": "Circuit Mecamax",
     "commune": "L'Île-d'Olonne",
@@ -8647,7 +8693,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1189,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJxfpR-apcBEgRtqb0pECI6RY",
+    "googleUrl": "https://maps.google.com/?cid=1651000549634778806",
     "reviewsSummary": "Le circuit se distingue par la qualité de sa piste, bien entretenue et technique, ainsi que par son matériel performant qui satisfait aussi bien les débutants que les pilotes expérimentés. L'accueil chaleureux et professionnel du personnel, combiné à des tarifs accessibles et à une offre adaptée à tous les âges, en fait une destination familiale appréciée où enfants et adultes prennent plaisir à évoluer.",
     "parking": {
       "nom": "Parking à proximité",
@@ -8749,9 +8795,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/atlantic_kart_system/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/atlantic_kart_system/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/atlantic_kart_system/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/atlantic_kart_system/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/atlantic_kart_system/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/atlantic_kart_system/photo_3.jpg?v=202609162038"
     ],
     "name": "Atlantic Kart System",
     "commune": "Les Sables-d'Olonne",
@@ -8812,7 +8858,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 604,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJoy4sKPlBBEgRsRN92nj0-Cc",
+    "googleUrl": "https://maps.google.com/?cid=2880320761602315185",
     "reviewsSummary": "Le site bénéficie d'une piste bien conçue avec un parcours varié, des karts en bon état et un accueil généralement chaleureux qui met à l'aise les visiteurs de tous les âges, y compris les enfants novices. Un manque de pédagogie a cependant été signalé lors d'interactions avec certains conducteurs jeunes.",
     "parking": {
       "nom": "Parking à proximité",
@@ -8921,9 +8967,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/up2play/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/up2play/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/up2play/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/up2play/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/up2play/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/up2play/photo_3.jpg?v=202609162038"
     ],
     "name": "UP2PLAY",
     "commune": "Les Sables-d'Olonne",
@@ -8984,7 +9030,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 2189,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJG3nB51FdBEgRkFx9_aagDys",
+    "googleUrl": "https://maps.google.com/?cid=3102875307359427728",
     "reviewsSummary": "Le complexe offre une variété de jeux et d'activités dans un cadre accueillant avec un personnel agréable, apprécié des familles comme des adultes. Certains visiteurs ont cependant relevé des préoccupations concernant la tarification du bowling et l'état du matériel, ainsi que des limitations dans l'espace enfants en termes de confort et de services.",
     "parking": {
       "nom": "Parking à proximité",
@@ -9217,9 +9263,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_des_sablotins/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/parc_des_sablotins/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/parc_des_sablotins/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/parc_des_sablotins/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/parc_des_sablotins/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/parc_des_sablotins/photo_3.jpg?v=202609162038"
     ],
     "name": "Parc des Sablotins",
     "commune": "Les Sables-d'Olonne",
@@ -9280,7 +9326,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 695,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJu663nNxpBEgRsQnTSvlkrX0",
+    "googleUrl": "https://maps.google.com/?cid=9056005447576914353",
     "reviewsSummary": "Les visiteurs apprécient particulièrement l'environnement calme et apaisant du parc, ainsi que la qualité des installations et leur bonne organisation par tranche d'âge, permettant aux enfants comme aux parents de passer un moment agréable. Seul bémol relevé par plusieurs personnes : l'accès au site reste limité avec un petit parking.",
     "parking": {
       "nom": "Parking à proximité",
@@ -9450,9 +9496,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/l_ile_aux_jeux/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/l_ile_aux_jeux/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/l_ile_aux_jeux/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/l_ile_aux_jeux/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/l_ile_aux_jeux/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/l_ile_aux_jeux/photo_3.jpg?v=202609162038"
     ],
     "name": "L'Île aux Jeux",
     "commune": "Les Sables-d'Olonne",
@@ -9513,7 +9559,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 625,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ9ykl0YxdBEgRLIiggGkZThg",
+    "googleUrl": "https://maps.google.com/?cid=1751365246013966380",
     "reviewsSummary": "Les visiteurs apprécient globalement la propreté des installations, l'accueil bienveillant du personnel, la diversité des attractions adaptées à tous les âges et la qualité de la restauration sur place. La politique restrictive concernant les apports extérieurs de nourriture et boissons, combinée au coût d'accès, constitue le principal point de mécontentement exprimé par certaines familles.",
     "parking": {
       "nom": "Parking à proximité",
@@ -9716,9 +9762,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/mission_decouverte/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/mission_decouverte/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/mission_decouverte/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/mission_decouverte/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/mission_decouverte/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/mission_decouverte/photo_3.jpg?v=202609162038"
     ],
     "name": "Mission Découverte",
     "commune": "Les Sables-d'Olonne",
@@ -9779,7 +9825,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 212,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ205zcvNnBEgRJ_NpYzZ5PAY",
+    "googleUrl": "https://maps.google.com/?cid=449367337333289767",
     "reviewsSummary": "Mission Découverte propose un jeu de piste en extérieur permettant de redécouvrir la ville et son patrimoine à travers des énigmes, avec un personnel accueillant et des activités engageantes pour tous les âges. Quelques visiteurs ont relevé que certaines énigmes manquaient de clarté et nécessitaient des appels fréquents à l'équipe, ainsi que des déplacements importants dans la ville.",
     "parking": {
       "nom": "Parking à proximité",
@@ -9964,9 +10010,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/vague_de_jeux/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/vague_de_jeux/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/vague_de_jeux/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/vague_de_jeux/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/vague_de_jeux/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/vague_de_jeux/photo_3.jpg?v=202609162038"
     ],
     "name": "Vague de Jeux",
     "commune": "Talmont-Saint-Hilaire",
@@ -10027,7 +10073,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 88,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJB37eMMtrBEgROruvJE8YVQI",
+    "googleUrl": "https://maps.google.com/?cid=168067289293241146",
     "reviewsSummary": "Les visiteurs apprécient particulièrement la diversité des formats d'escape game proposés, qui conviennent à tous les âges et occasions, ainsi que l'originalité du concept combinant jeu et découverte de produits locaux. L'équipe se distingue par sa disponibilité et son professionnalisme, rendant l'organisation simple et agréable.",
     "parking": {
       "nom": "Parking à proximité",
@@ -10165,8 +10211,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/axeyon_paintball/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/axeyon_paintball/photo_2.jpg?v=202609161641"
+      "planly_scraper/images/axeyon_paintball/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/axeyon_paintball/photo_2.jpg?v=202609162038"
     ],
     "name": "AxeYon Paintball",
     "commune": "La Roche-sur-Yon",
@@ -10227,7 +10273,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 66,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ00L3CP0lBEgRcQpXjA6kBWo",
+    "googleUrl": "https://maps.google.com/?cid=7639692725294926449",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -10320,9 +10366,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/explora_parc/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/explora_parc/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/explora_parc/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/explora_parc/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/explora_parc/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/explora_parc/photo_3.jpg?v=202609162038"
     ],
     "name": "Explora Parc",
     "commune": "Saint-Jean-de-Monts",
@@ -10383,7 +10429,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 2123,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJnU6wYXb9BEgRWJ0q25DvPt8",
+    "googleUrl": "https://maps.google.com/?cid=16086558324445322584",
     "reviewsSummary": "Explora Parc offre une expérience familiale complète avec des parcours variés et adaptés à tous les niveaux, dans un cadre forestier agréable, où les tyroliennes et activités de plein air procurent des sensations fortes et de la détente. L'équipe se distingue par son professionnalisme, sa disponibilité et son accueil souriant, tandis que l'offre culinaire sur place complète agréablement la journée, bien que les parcours les plus difficiles demandent une bonne condition physique.",
     "parking": {
       "nom": "Parking à proximité",
@@ -10538,9 +10584,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/chateau_des_aventuriers/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/chateau_des_aventuriers/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/chateau_des_aventuriers/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/chateau_des_aventuriers/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/chateau_des_aventuriers/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/chateau_des_aventuriers/photo_3.jpg?v=202609162038"
     ],
     "name": "Château des Aventuriers",
     "commune": "Avrillé",
@@ -10601,7 +10647,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 8538,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ1xvB2mQWBEgREbz89lbP6io",
+    "googleUrl": "https://maps.google.com/?cid=3092512066561162257",
     "reviewsSummary": "Le site plaît aux familles pour la diversité de ses activités immersives dans un cadre naturel bien entretenu, particulièrement l'escape game qui remporte l'adhésion de tous les âges. Les tarifs sont perçus comme élevés et l'offre de restauration/pause limitée, tandis que l'accessibilité pour les personnes à mobilité réduite et le confort (places assises) pourraient être améliorés.",
     "parking": {
       "nom": "Parking à proximité",
@@ -10806,9 +10852,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/o_fun_park/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/o_fun_park/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/o_fun_park/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/o_fun_park/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/o_fun_park/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/o_fun_park/photo_3.jpg?v=202609162038"
     ],
     "name": "O'Fun Park",
     "commune": "Le Bernard",
@@ -10869,7 +10915,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 4044,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJzwXM1kkYBEgRp8DiFnWRb8M",
+    "googleUrl": "https://maps.google.com/?cid=14082634491891990695",
     "reviewsSummary": "Le parc séduit les familles avec sa thématique immersive déclinée dans tous les espaces, son personnel accueillant et ses activités variées adaptées à tous les âges, du plus jeune au plus grand. Bien entretenu et propre, il se distingue par une ambiance authentiquement familiale, bien que quelques visiteurs notent des défaillances matérielles mineures et des imprécisions organisationnelles.",
     "parking": {
       "nom": "Parking à proximité",
@@ -11008,9 +11054,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/zoo_des_sables_d_olonne/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/zoo_des_sables_d_olonne/photo_3.jpg?v=202609162038"
     ],
     "name": "Zoo des Sables d'Olonne",
     "commune": "Les Sables-d'Olonne",
@@ -11071,7 +11117,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 8621,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJE4xgpxJoBEgRNrA3TmwtzK0",
+    "googleUrl": "https://maps.google.com/?cid=12523434607002497078",
     "reviewsSummary": "Ce petit parc zoologique surprend agréablement par sa taille, ses aménagements spacieux et bien entretenus, avec des allées largement ombragées idéales pour une visite de deux heures environ. Les visiteurs apprécient particulièrement la diversité des espèces, leur apparent bien-être, les animations pédagogiques comme les présentations d'animaux, et l'expérience interactive de nourrir les oiseaux à l'entrée, même si l'absence de tarif famille représente un point faible pour les groupes.",
     "parking": {
       "nom": "Parking à proximité",
@@ -11221,9 +11267,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/anes_passions/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/anes_passions/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/anes_passions/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/anes_passions/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/anes_passions/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/anes_passions/photo_3.jpg?v=202609162038"
     ],
     "name": "Ânes Passions",
     "commune": "L'Île-d'Olonne",
@@ -11284,7 +11330,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 80,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJsyoHuWpdBEgRmWDjUiKpZDA",
+    "googleUrl": "https://maps.google.com/?cid=3487097976376221849",
     "reviewsSummary": "Les visiteurs apprécient particulièrement l'accueil bienveillant du responsable et sa capacité à créer un moment privilégié pour les enfants de tous âges, ainsi que la possibilité d'interagir directement avec les animaux de la ferme. Le lieu offre une ambiance apaisante et permet de passer environ une heure à découvrir les différentes espèces dans un cadre reposant et convivial.",
     "parking": {
       "nom": "Parking à proximité",
@@ -11366,9 +11412,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/aquarium_de_vendee/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/aquarium_de_vendee/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/aquarium_de_vendee/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/aquarium_de_vendee/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/aquarium_de_vendee/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/aquarium_de_vendee/photo_3.jpg?v=202609162038"
     ],
     "name": "Aquarium de Vendée",
     "commune": "Talmont-Saint-Hilaire",
@@ -11429,7 +11475,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 7548,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJU728TWlpBEgRDjr0MdMdgYY",
+    "googleUrl": "https://maps.google.com/?cid=9692060665991412238",
     "reviewsSummary": "L'établissement séduira les familles grâce à ses installations bien entretenues, ses bassins variés et spacieux avec une bonne signalétique pédagogique, son accès pratique et ses tarifs avantageux pour les enfants. La visite dure environ une heure trente et maintient facilement l'attention des visiteurs de tous les âges, bien que la boutique de souvenirs soit jugée onéreuse par certains.",
     "parking": {
       "nom": "Parking à proximité",
@@ -11691,9 +11737,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_des_floralies/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/parc_des_floralies/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/parc_des_floralies/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/parc_des_floralies/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/parc_des_floralies/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/parc_des_floralies/photo_3.jpg?v=202609162038"
     ],
     "name": "Parc des Floralies",
     "commune": "La Tranche-sur-Mer",
@@ -11754,7 +11800,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 241,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ6aJWWr4PBEgRzTL9gfba56A",
+    "googleUrl": "https://maps.google.com/?cid=11594476517966295757",
     "reviewsSummary": "Ce parc constitue une destination appréciée des familles pour sa tranquillité, ses aménagements variés (aire de jeux, sentiers ombragés, flore abondante) et la présence d'animaux de ferme, complétée par des activités comme les balades à poney et des services de restauration à proximité. Les visiteurs notent cependant une diminution du fleurissement au fil des saisons.",
     "parking": {
       "nom": "Parking à proximité",
@@ -11970,9 +12016,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/parc_philippe_perrocheau/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/parc_philippe_perrocheau/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/parc_philippe_perrocheau/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/parc_philippe_perrocheau/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/parc_philippe_perrocheau/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/parc_philippe_perrocheau/photo_3.jpg?v=202609162038"
     ],
     "name": "Parc Philippe Perrocheau",
     "commune": "Coëx",
@@ -12033,7 +12079,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 619,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ44WQxTROBEgREXyoegZ7StY",
+    "googleUrl": "https://maps.google.com/?cid=15441289540151049233",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -12173,9 +12219,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/cinema_le_grand_palace/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/cinema_le_grand_palace/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/cinema_le_grand_palace/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/cinema_le_grand_palace/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/cinema_le_grand_palace/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/cinema_le_grand_palace/photo_3.jpg?v=202609162038"
     ],
     "name": "Cinéma Le Grand Palace",
     "commune": "Les Sables-d'Olonne",
@@ -12236,7 +12282,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 2457,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJH20_2o9nBEgRQ1xchKnSB3I",
+    "googleUrl": "https://maps.google.com/?cid=8216767670672710723",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -12323,8 +12369,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/l_etoile_de_mer/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/l_etoile_de_mer/photo_2.jpg?v=202609161641"
+      "planly_scraper/images/l_etoile_de_mer/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/l_etoile_de_mer/photo_2.jpg?v=202609162038"
     ],
     "name": "L'Étoile de Mer",
     "commune": "La Chaume, Les Sables",
@@ -12385,7 +12431,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 424,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJE_a9ao9nBEgRCnpUJmXCEXo",
+    "googleUrl": "https://maps.google.com/?cid=8796025286921845258",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -12422,9 +12468,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/bar_rooftop_ventura/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/bar_rooftop_ventura/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/bar_rooftop_ventura/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/bar_rooftop_ventura/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/bar_rooftop_ventura/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/bar_rooftop_ventura/photo_3.jpg?v=202609162038"
     ],
     "name": "Bar Rooftop Ventura",
     "commune": "Port Olona, Les Sables",
@@ -12485,7 +12531,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 55,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ0Yph3yddBEgRxjAyqjzAyLQ",
+    "googleUrl": "https://maps.google.com/?cid=13026873288955146438",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -12581,9 +12627,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/the_goat/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/the_goat/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/the_goat/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/the_goat/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/the_goat/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/the_goat/photo_3.jpg?v=202609162038"
     ],
     "name": "The GOAT",
     "commune": "Port, Les Sables",
@@ -12644,7 +12690,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 95,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJCzco36VnBEgRRd4eAD5QGzY",
+    "googleUrl": "https://maps.google.com/?cid=3898798129639513669",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -12766,8 +12812,8 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/bikini_beach/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/bikini_beach/photo_2.jpg?v=202609161641"
+      "planly_scraper/images/bikini_beach/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/bikini_beach/photo_2.jpg?v=202609162038"
     ],
     "name": "Bikini Beach",
     "commune": "Remblai, Les Sables",
@@ -12828,7 +12874,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 238,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ71LFHctnBEgRQnWLAZT6d7U",
+    "googleUrl": "https://maps.google.com/?cid=13076195556681545026",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -12865,9 +12911,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/casino_joa_les_pins/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/casino_joa_les_pins/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/casino_joa_les_pins/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/casino_joa_les_pins/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/casino_joa_les_pins/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/casino_joa_les_pins/photo_3.jpg?v=202609162038"
     ],
     "name": "Casino JOA Les Pins",
     "commune": "Les Sables-d'Olonne",
@@ -12928,7 +12974,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 4120,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJPxDCZAxoBEgRbzCEUf_bL7Q",
+    "googleUrl": "https://maps.google.com/?cid=12983838140363190383",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -13053,9 +13099,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/casino_les_sables_d_olonne/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/casino_les_sables_d_olonne/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/casino_les_sables_d_olonne/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/casino_les_sables_d_olonne/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/casino_les_sables_d_olonne/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/casino_les_sables_d_olonne/photo_3.jpg?v=202609162038"
     ],
     "name": "Casino Les Sables d'Olonne",
     "commune": "Remblai, Les Sables",
@@ -13116,7 +13162,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 1481,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ2YFmfY5nBEgRUMaFYLy2Wuw",
+    "googleUrl": "https://maps.google.com/?cid=17031125861044438608",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",
@@ -13315,9 +13361,9 @@ var POIS=[
   },
   {
     "imgs": [
-      "planly_scraper/images/centre_aqualudique_aqualonne/photo_1.jpg?v=202609161641",
-      "planly_scraper/images/centre_aqualudique_aqualonne/photo_2.jpg?v=202609161641",
-      "planly_scraper/images/centre_aqualudique_aqualonne/photo_3.jpg?v=202609161641"
+      "planly_scraper/images/centre_aqualudique_aqualonne/photo_1.jpg?v=202609162038",
+      "planly_scraper/images/centre_aqualudique_aqualonne/photo_2.jpg?v=202609162038",
+      "planly_scraper/images/centre_aqualudique_aqualonne/photo_3.jpg?v=202609162038"
     ],
     "name": "Centre Aqualudique Aqualonne",
     "commune": "Cayola, Les Sables",
@@ -13378,7 +13424,7 @@ var POIS=[
       }
     ],
     "reviewsCount": 815,
-    "googleUrl": "https://www.google.com/maps/place/?q=place_id:ChIJJ9qgFz1oBEgRFtxaHnhMDLo",
+    "googleUrl": "https://maps.google.com/?cid=13406174269564181526",
     "reviewsSummary": null,
     "parking": {
       "nom": "Parking à proximité",

@@ -1637,7 +1637,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609161641"></script>
+<script src="pois.js?v=202609162038"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2635,6 +2635,19 @@ function _plShowsBlock(sp){
     +'<div class="pl-list">'+shows.map(function(s){return'<div class="pl-item"><div class="pl-show-time">'+_escHtml(String(s.time||'').replace(':','h'))+'</div><div class="pl-item-name">'+_escHtml(String(s.name||''))+'</div></div>';}).join('')+'</div></div>';
 }
 // ── ST helpers (Sorties & Détente) ──
+// En app installée (écran d'accueil), <a target="_blank"> est souvent ignoré : on ouvre via window.open
+document.addEventListener('click',function(e){
+  var el=e.target;
+  while(el&&el!==document.body){
+    if(el.tagName==='A'&&el.getAttribute('target')==='_blank'&&el.href){
+      e.preventDefault();e.stopPropagation();
+      window.open(el.href,'_blank','noopener');
+      return;
+    }
+    el=el.parentNode;
+  }
+},true);
+
 var ST_SUBCATS=['Bars & Ambiance','Casino & Jeux','Cinéma','Piscines & Spa'];
 var ST_ICON_NIGHT='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-6 7v7"/><path d="M9 21h6"/><path d="M13 18v3"/></svg>';
 var ST_ICON_WATER='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c2 0 2 1.5 4 1.5S9 15 11 15s2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M3 19c2 0 2 1.5 4 1.5S9 19 11 19s2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M8 11V6a2 2 0 1 1 4 0"/></svg>';
@@ -2707,14 +2720,18 @@ var MT_ICON_MEAL='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" st
 var MT_ICON_MARKET='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.5 10.5A2 2 0 0 1 16.5 21h-9a2 2 0 0 1-2-1.5L4 9z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg>';
 function _mtMealBlock(p,sp){
   var pr=sp.pricing||{},opts=(pr.options||[]).filter(function(o){return _plNum(o.price)!=null;}).slice(0,6);
-  var avg=_plNum(pr.avg_price);
-  if(!opts.length&&avg==null)return'';
+  var avg=_plNum(pr.avg_price),dpr=pr.dish_price_range||null;
+  var dMin=dpr?_plNum(dpr.min):null,dMax=dpr?_plNum(dpr.max):null;
+  if(!opts.length&&avg==null&&dMin==null)return'';
   var sub=sp.cuisine_type?_escHtml(String(sp.cuisine_type)):'Formules publiées par le lieu';
   return'<div class="pl-block meal"><div class="pl-block-hd">'+MT_ICON_MEAL
     +'<div class="pl-block-info"><div class="pl-block-title">Ce qu\'on y mange</div><div class="pl-block-sub">'+sub+'</div></div>'
-    +(avg!=null?'<div class="pl-block-badge">~'+_plEuro(avg)+' / pers</div>':'')+'</div>'
+    +(avg!=null?'<div class="pl-block-badge">~'+_plEuro(avg)+' / pers</div>'
+      :dMin!=null&&dMax!=null?'<div class="pl-block-badge">'+_plEuro(dMin)+'–'+_plEuro(dMax)+'</div>':'')+'</div>'
     +'<div class="pl-list">'
     +opts.map(function(o){return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(o.label||''))+'</div></div><div class="mt-price">'+_plEuro(_plNum(o.price))+'</div></div>';}).join('')
+    // pas de formule publiée : on donne au moins la fourchette des plats à la carte
+    +(!opts.length&&dMin!=null?'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">Plats à la carte</div><div class="st-item-detail">du moins cher au plus cher</div></div><div class="mt-price">'+_plEuro(dMin)+(dMax!=null&&dMax!==dMin?'–'+_plEuro(dMax):'')+'</div></div>':'')
     +(pr.notes?'<div class="st-item-detail" style="padding:2px 2px 0">'+_escHtml(String(pr.notes))+'</div>':'')
     +'</div></div>';
 }

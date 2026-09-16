@@ -59,6 +59,10 @@ def merge_poi(
         "reviews": reviews or [],
         "place_topics": biz.get("place_topics"),
         "booking_url": biz.get("booking_url"),
+        # type de lieu vu par Google (ex. « Bar-restaurant à huîtres ») : utile quand le lieu n'a pas de site
+        "category_google": biz.get("category_google"),
+        "additional_categories": biz.get("additional_categories"),
+        "attributes_available": biz.get("attributes_available"),
         "cid": biz.get("cid"),
         "place_id": biz.get("place_id"),
 
