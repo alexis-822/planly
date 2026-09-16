@@ -220,17 +220,15 @@ def convert_poi(p):
     if not imgs:
         imgs = ["https://placehold.co/700x400/e0e0e0/999?text=Photo+manquante"]
 
-    # Reviews
-    reviews_raw = p.get("reviews", []) or []
-    avis = []
-    for r in reviews_raw[:3]:
-        txt = r.get("text", "")
-        if len(txt) > 150:
-            txt = txt[:147] + "..."
-        date_raw = r.get("date", "")
-        avis.append({"txt": txt, "date": date_raw[:10] if date_raw else ""})
-    if not avis:
-        avis = [{"txt": "Aucun avis disponible.", "date": ""}]
+    # Avis : jamais le texte (il appartient à son auteur) — note, nombre et lien Google
+    place_id = p.get("place_id")
+    if place_id:
+        google_url = f"https://www.google.com/maps/place/?q=place_id:{place_id}"
+    elif p.get("cid"):
+        google_url = f"https://maps.google.com/?cid={p['cid']}"
+    else:
+        google_url = None
+    reviews_count = p.get("reviews_count") or len(p.get("reviews") or [])
 
     # Parking
     pm = p.get("parking_main") or {}
@@ -308,7 +306,9 @@ def convert_poi(p):
         "affluence": {"label": "Normal", "color": "green"},
         "instant": None,
         "quickSpecs": make_quick_specs(p),
-        "avis": avis,
+        "reviewsCount": reviews_count,
+        "googleUrl": google_url,
+        "reviewsSummary": p.get("reviews_summary"),
         "parking": parking,
         "location": {"lat": p.get("lat") or 0, "lng": p.get("lng") or 0},
         "conseil": conseil,

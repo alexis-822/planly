@@ -771,6 +771,9 @@ body{
 .bch-stars{color:#BA7517;font-size:12px;}
 .bch-avis-count{font-size:12px;color:#888780;}
 .bch-btn-avis{background:#E6F1FB;border:none;border-radius:20px;padding:5px 12px;font-size:11px;color:#185FA5;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.bch-btn-avis{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;}
+.bch-rsum{background:white;border-radius:10px;padding:12px 14px;border:0.5px solid #e8e4da;font-size:14px;color:#444441;line-height:1.65;}
+.bch-rsum-src{font-size:11px;color:#A8A8A3;margin-top:8px;}
 .bch-avis-card{background:white;border-radius:10px;padding:10px 12px;margin-bottom:8px;border:0.5px solid #e8e4da;font-size:14px;color:#444441;font-style:italic;line-height:1.6;}
 .bch-avis-top{display:flex;align-items:center;gap:6px;margin-bottom:5px;font-style:normal;}
 .bch-av{width:22px;height:22px;border-radius:50%;background:#B5D4F4;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#0C447C;flex-shrink:0;}
@@ -1610,7 +1613,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609142208"></script>
+<script src="pois.js?v=202609160947"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2617,7 +2620,7 @@ function _renderPoiBody(p,mode){
   var attention=(p.conseil&&p.conseil.attention)||'';
   var descLong=p.descLong||'';
   var noteVal=p.note||'?';
-  var avis=p.avis||[];
+  var reviewsCount=p.reviewsCount||0,googleUrl=p.googleUrl||'',reviewsSummary=p.reviewsSummary||'';
   var pk=p.parking||{};
   var distMin=(p.distance&&p.distance.min&&p.distance.min[mode])||'?';
   var affLabel=(p.affluence&&p.affluence.label)||'—';
@@ -2852,15 +2855,6 @@ function _renderPoiBody(p,mode){
       return'<div class="bch-ri"><div class="bch-rv'+(item.cls||'')+'">'+item.val+'</div><div class="bch-rl">'+item.lbl+'</div></div>';
     }).join('')+'</div>';
 
-  // Avis HTML
-  var avNames=[['Marie C.','M'],['Thierry M.','T'],['Sophie L.','S']];
-  var avisHtml=avis.slice(0,3).map(function(a,i){
-    var hidden=i>0?' style="display:none"':'';
-    return'<div class="bch-avis-card"'+hidden+'><div class="bch-avis-top"><div class="bch-av">'+avNames[i%3][1]+'</div>'
-      +'<span class="bch-avis-name">'+avNames[i%3][0]+'</span><span class="bch-avis-date">'+(a.date||'')+'</span></div>'
-      +'"'+(a.txt||'')+'"</div>';
-  }).join('');
-
   // Parking HTML
   var pkLat=pk.lat||0,pkLng=pk.lng||0,pkNom=pk.nom||'Parking';
   var pkMapsUrl='https://maps.google.com/?q='+pkLat+','+pkLng+'&label='+encodeURIComponent(pkNom);
@@ -2900,9 +2894,9 @@ function _renderPoiBody(p,mode){
     +'<div class="bch-desc">'+_airDesc(descLong)+'</div>'
     +'<div class="bch-avis-hd"><div class="bch-avis-note">'
     +'<span class="bch-score">'+noteVal+'</span><span class="bch-stars">★★★★★</span>'
-    +'<span class="bch-avis-count">'+avis.length+' avis</span></div>'
-    +'<button class="bch-btn-avis" onclick="(function(btn){var cards=btn.closest(\'.bch-body\').querySelectorAll(\'.bch-avis-card\');var anyHidden=[].some.call(cards,function(c){return c.style.display===\'none\';});cards.forEach(function(c){c.style.display=anyHidden?\'block\':\'none\';});cards[0].style.display=\'block\';btn.textContent=anyHidden?\'Moins d\\\'avis\':\'+ d\\\'avis\';})(this)">+ d\'avis</button></div>'
-    +avisHtml
+    +'<span class="bch-avis-count">'+(reviewsCount?reviewsCount+' avis':'')+'</span></div>'
+    +(googleUrl?'<a class="bch-btn-avis" href="'+_escHtml(googleUrl)+'" target="_blank" rel="noopener">Voir sur Google</a>':'')+'</div>'
+    +(reviewsSummary?'<div class="bch-rsum">'+_escHtml(reviewsSummary)+'<div class="bch-rsum-src">Résumé automatique des avis Google</div></div>':'')
     +((p.location&&p.location.lat)?'<div class="bch-slbl">'+_mapLbl(p)+'</div>'
       +'<div class="poi-mini-map-wrap"><div id="poi-mini-map" class="poi-mini-map"></div>'
       +'<button class="poi-mini-map-expand" onclick="_openMapForPoi('+p.location.lat+','+p.location.lng+')">⊞ Agrandir</button>'
@@ -3095,7 +3089,7 @@ function _scorePoi(p){
   // Richesse de la fiche
   if(p.imgs&&p.imgs.length>=3)score+=8;
   else if(p.imgs&&p.imgs.length)score+=4;
-  if(p.avis&&p.avis.length>=3)score+=5;
+  if((p.reviewsCount||0)>=20)score+=5;
   if(p.descLong&&p.descLong.length>200)score+=5;
   // Profil utilisateur
   var prof=USER_PROFILE||{};

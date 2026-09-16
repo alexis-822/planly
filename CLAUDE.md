@@ -105,6 +105,14 @@ Prototype mobile avec :
 - App : pill Parcs & Loisirs filtre les 4 sous-catégories (catégories `jeux`, `animaux`, `aquarium`, `jardin`). Fiche Parcs & Loisirs = maquette validée intégrée (`_pl*` dans planly-full.html) : ouvert aujourd'hui + semaine (timetable Google `openingHours`), prix pour le groupe (profil onboarding, 2 adultes par défaut pour famille/amis), activités avec pastilles âge enfants, animations, pastilles équipements, alerte conseil automatique, source + date de vérification des tarifs
 - Coûts mesurés : DataForSEO ≈ 0,016 $/POI (collecte) ; passes site officiel ≈ 0,26 $ au total pour 16 POIs
 
+### 2026-09-16 — Avis : plus aucun texte republié
+- **Règle** : le texte des avis appartient à son auteur (confirmé par écrit par DataForSEO : leurs CGU n'accordent aucun droit sur les avis ni sur les images). L'app n'affiche plus d'extrait.
+- `reviews_summary` (champ output_global) : synthèse 2 phrases générée par Claude Haiku à partir de ≥3 avis, reformulée, sans citation ni nom — script `scratchpad/summarize_reviews.py` (43/50 POIs ; 7 POIs sans avis stockés)
+- `inject_pois.py` : ne passe plus les textes d'avis → `reviewsCount`, `googleUrl` (place_id, sinon cid), `reviewsSummary`
+- Fiche : note + nombre d'avis + bouton « Voir sur Google » + bloc « Résumé automatique des avis Google » (`.bch-rsum`)
+- **Photos : point ouvert.** Les 102 photos viennent de Google Images → à remplacer avant tout lancement public (accord des lieux, Wikimedia Commons, photothèques d'offices de tourisme, ou Google Places API en direct sans stockage)
+- Avis manquants rattrapables : Port de Bourgenay (cid absent), Vouvant, AxeYon Paintball, Parc Philippe Perrocheau — script prêt (`scratchpad/refetch_reviews.py`), pas encore lancé
+
 ### Avant (historique)
 - 34 POIs dans output_global.json (11 plages + 17 nature/promenades/ports + 6 Villages & Sites)
 - 33 POIs injectés dans planly-full.html (≥85% complets)
