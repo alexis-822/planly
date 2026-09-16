@@ -1626,7 +1626,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609161251"></script>
+<script src="pois.js?v=202609161542"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2651,9 +2651,12 @@ function _stFacilitiesBlock(sp,sub){
 function _stBudgetCard(p,sp){
   var pr=sp.pricing||null,url=(pr&&pr.source_url)||(sp.official_source&&sp.official_source.url)||'';
   var sub=p.subcategory||'';
-  if(pr&&pr.free_entry&&sub==='Casino & Jeux'){
-    return'<div class="pl-price"><div class="pl-price-hd"><div class="pl-price-title">Entrée</div></div>'
+  if(pr&&sub==='Casino & Jeux'){
+    // au casino on ne multiplie rien par la taille du groupe : les formules de jeu sont optionnelles
+    var cOpts=(pr.options||[]).filter(function(o){return _plNum(o.price)!=null;}).slice(0,5);
+    return'<div class="pl-price"><div class="pl-price-hd"><div class="pl-price-title">Entrée et formules</div></div>'
       +'<div class="pl-price-total"><div class="pl-price-big">Entrée libre</div></div>'
+      +(cOpts.length?'<div class="pl-price-lines">'+cOpts.map(function(o){return'<div class="pl-price-line"><span>'+_escHtml(String(o.label||''))+'</span><b>'+_plEuro(_plNum(o.price))+'</b></div>';}).join('')+'</div>':'')
       +'<div class="pl-price-ft"><div class="pl-price-src">L\'entrée est gratuite, les jeux sont payants.</div>'
       +(url?'<a class="pl-btn" href="'+_escHtml(url)+'" target="_blank" rel="noopener">Site officiel</a>':'')+'</div></div>';
   }
@@ -2668,7 +2671,7 @@ function _stBudgetCard(p,sp){
   if(pr&&(_plNum(pr.adult)!=null||_plNum(pr.child)!=null||_plNum(pr.from_price)!=null||(pr.options||[]).length||pr.free_entry))
     return _plPriceBlock(sp);
   // budgetBadge vaut "Gratuit" quand aucun prix n'est connu : trompeur pour un bar ou un casino
-  var lvl=/gratuit/i.test(p.budgetBadge||'')?'':(p.budgetBadge||'');
+  var lvl=/gratuit|non communiqu/i.test(p.budgetBadge||'')?'':(p.budgetBadge||'');
   if(!lvl&&!url)return'';
   return'<div class="pl-price"><div class="pl-price-hd"><div class="pl-price-title">Budget</div>'+(lvl?'<div class="pl-price-edit" style="cursor:default">source Google</div>':'')+'</div>'
     +(lvl?'<div class="pl-price-total"><div class="pl-price-big">'+_escHtml(lvl.replace(/^€+\s*/,'').trim()||lvl)+'</div></div>':'')
@@ -2886,7 +2889,8 @@ function _renderPoiBody(p,mode){
       ribbonItems=[{val:(stAge||18)+' ans +',lbl:'Âge',cls:' bl'},{val:closing,lbl:'Ferme à',cls:''},{val:sv.restaurant_on_site?'Oui':'—',lbl:'Restaurant',cls:''},{val:distMin+' min',lbl:'Distance',cls:''}];
       sectionLabel='Le casino';
     }else{
-      ribbonItems=[{val:sv.view?'Vue':'Bar',lbl:'Ambiance',cls:''},{val:closing,lbl:'Ferme à',cls:''},{val:p.budgetBadge||'—',lbl:'Budget',cls:''},{val:distMin+' min',lbl:'Distance',cls:''}];
+      var stEuros=(p.budgetBadge||'').match(/^€+/);
+      ribbonItems=[{val:sv.view?'Vue':'Bar',lbl:'Ambiance',cls:''},{val:closing,lbl:'Ferme à',cls:''},{val:stEuros?stEuros[0]:'—',lbl:'Budget',cls:''},{val:distMin+' min',lbl:'Distance',cls:''}];
       sectionLabel='Le bar';
     }
     specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+(sub==='Cinéma'?_stCinemaCard(p,sp):'')+_stBudgetCard(p,sp)+_stFacilitiesBlock(sp,sub);

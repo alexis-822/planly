@@ -65,16 +65,35 @@ SUBCAT_CAT_MAP = {
 }
 
 
+PRICE_LEVEL_BADGES = {
+    "inexpensive": ("\u20ac Petit budget", "paid"),
+    "moderate": ("\u20ac\u20ac Mod\u00e9r\u00e9", "paid"),
+    "expensive": ("\u20ac\u20ac\u20ac Premium", "paid"),
+    "very_expensive": ("\u20ac\u20ac\u20ac\u20ac Premium", "paid"),
+}
+
+# Lieux o\u00f9 l'on paie forc\u00e9ment quelque chose : ne jamais afficher "Gratuit" faute de prix connu
+PAYANT_SUBCATS = {"Restaurants", "Bars & Ambiance", "Casino & Jeux", "Piscines & Spa",
+                  "Cin\u00e9ma", "D\u00e9gustations", "March\u00e9s & Terroir"}
+
+
 def make_budget(p):
-    pa = p.get("price_adult", 0) or 0
-    pr = p.get("price_range", "gratuit") or "gratuit"
-    if pr == "gratuit" or pa == 0:
+    level = PRICE_LEVEL_BADGES.get((p.get("price_level") or "").lower())
+    if level:
+        return level
+    pa = p.get("price_adult") or 0
+    if pa:
+        if pa <= 10:
+            return "\u20ac Petit budget", "paid"
+        if pa <= 25:
+            return "\u20ac\u20ac Mod\u00e9r\u00e9", "paid"
+        return "\u20ac\u20ac\u20ac Premium", "paid"
+    pricing = (p.get("specific") or {}).get("pricing") or {}
+    if pricing.get("free_entry") and p.get("subcategory") not in PAYANT_SUBCATS:
         return "\u20ac Gratuit", "free"
-    elif pa <= 10:
-        return "\u20ac Petit budget", "paid"
-    elif pa <= 25:
-        return "\u20ac\u20ac Mod\u00e9r\u00e9", "paid"
-    return "\u20ac\u20ac\u20ac Premium", "paid"
+    if p.get("subcategory") in PAYANT_SUBCATS:
+        return "Prix non communiqu\u00e9", "unknown"
+    return "\u20ac Gratuit", "free"
 
 
 BEACH_TYPE_LABELS = {

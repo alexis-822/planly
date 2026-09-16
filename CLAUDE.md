@@ -114,7 +114,11 @@ Prototype mobile avec :
 - App : fiche Sorties (`_st*`) = bandeau par typologie, horaires, « Bon à savoir », budget (tarifs si publiés, sinon niveau Google, sinon « non communiqués »), bloc jeux/installations, carte séances pour le cinéma, avertissement âge minimum si des enfants voyagent
 - Pills : Art de vivre, Patrimoine et Sorties & Détente filtrent enfin leurs lieux (`resto`, `marche`, `degustation`, `bar`, `casino`, `cinema`, `spa`, `culture`)
 - **Restant : 9 POIs** (5 Nautisme, 4 Autres sports) + extraction site officiel pour Art de vivre et Patrimoine, pas encore faite
-- Sans données de site officiel : Les Voiles de Cayola, L'Étoile de Mer (Facebook seulement), Bikini Beach, Côte Ouest Thalasso → à relancer avec `_find_official_site`
+- `_find_official_site` a rattrapé Les Voiles de Cayola et la thalasso Côte Ouest (horaires + installations). Restent sans aucune source : L'Étoile de Mer (Facebook seulement) et Bikini Beach
+- **Badge budget corrigé** (`make_budget`) : il utilise le `price_level` de Google (inexpensive → €, moderate → €€) ; « Gratuit » est réservé aux lieux réellement gratuits — un restaurant, un bar, un casino ou un cinéma sans tarif connu affiche « Prix non communiqué », jamais « Gratuit »
+- Casinos : les chiffres utiles au joueur sont demandés explicitement (nb de machines, de tables, jeux électroniques). Casino des Sables → 75 machines, Boule 2000, Black Jack 7 postes ; JOA ne publie pas ses quantités
+- Photos : un `search_keyword` par POI permet de rattraper une recherche d'images infructueuse (fait pour Aqualonne)
+- Maquette « Manger & terroir » (restaurants, marchés, dégustations) : https://claude.ai/code/artifact/bba72057-c5d2-462f-b655-a1df465b2e30 — à valider avant extraction et fiche
 
 ### 2026-09-16 — Avis : plus aucun texte republié
 - **Règle** : le texte des avis appartient à son auteur (confirmé par écrit par DataForSEO : leurs CGU n'accordent aucun droit sur les avis ni sur les images). L'app n'affiche plus d'extrait.

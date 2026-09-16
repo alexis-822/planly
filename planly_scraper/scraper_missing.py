@@ -1147,7 +1147,7 @@ Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
 - N'invente jamais d'horaire ni d'âge minimum : null si ce n'est pas écrit.
 - Pas d'agenda : ignore les concerts, soirées et séances datés, ils changent trop vite.
 - "know" : faits pratiques et durables (accès, ambiance, ce qui est compris, contraintes). Pas de superlatif publicitaire.
-- Casino : age_min 18 et id_required si la pièce d'identité est exigée. Spa : age_min souvent 16 ou 18.
+- Casino : age_min 18 et id_required si la pièce d'identité est exigée. Dans facilities, donne les chiffres utiles au joueur : nombre de machines à sous, nombre de tables de jeu, jeux électroniques et leur nombre (name = le jeu, detail = le nombre et l'horaire s'ils sont écrits). Spa : age_min souvent 16 ou 18.
 - Cinéma : screens = nombre de salles, versions = VF/VOST. Bars : closing_time = heure de fermeture."""
 
 

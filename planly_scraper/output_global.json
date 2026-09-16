@@ -34038,20 +34038,41 @@
     "rainy_day_activity": true,
     "conseil_planly": "En famille, privilégiez les séances en matinée ou en début d'après-midi pour les plus jeunes. En couple ou entre amis, une séance du soir avec vue sur le coucher de soleil vendéen est une expérience à ne pas manquer !",
     "specific": {
+      "hours_text": "Lun–Dim · 12h – 14h30 · 19h – 22h30 (restaurant) ; Lun–Dim · 11h – 00h (bar lounge)",
+      "closing_time": "0h",
+      "booking": "conseillée",
+      "know": [
+        "Restaurant & bar en bord de mer perché au-dessus de l'anse de Cayola avec vue panoramique sur l'océan.",
+        "Possibilité de privatisation pour mariages, séminaires, repas en famille et cocktails (jusqu'à 200 convives selon l'événement).",
+        "Carte célébrant les produits de la mer et les saisons au restaurant ; tapas et planches à partager au bar lounge."
+      ],
+      "services": {
+        "terrace": true,
+        "view": "Vue panoramique sur l'océan et la baie",
+        "live_music": null,
+        "happy_hour": null,
+        "restaurant_on_site": true,
+        "dress_code": null,
+        "id_required": null,
+        "screens": null,
+        "versions": null,
+        "snack": true,
+        "pmr": null
+      },
       "official_source": {
-        "url": null,
+        "url": "https://lesvoilesdecayola.com",
         "verified_at": "2026-09-16"
       }
     },
     "specific_status": {
       "pricing": "empty",
-      "hours_text": "empty",
-      "closing_time": "empty",
+      "hours_text": "auto",
+      "closing_time": "auto",
       "age_min": "empty",
-      "booking": "empty",
-      "know": "empty",
+      "booking": "auto",
+      "know": "auto",
       "facilities": "empty",
-      "services": "empty"
+      "services": "auto"
     },
     "parking_main": null,
     "parking_others": [],
@@ -35707,34 +35728,34 @@
       "closing_time": "3h",
       "age_min": 18,
       "know": [
-        "Casino avec machines à sous, jeux électroniques et jeux de table (black jack, roulette, poker).",
-        "Mini-golf et restaurant sur place.",
-        "Pièce d'identité obligatoire pour accéder aux jeux."
+        "Casino avec machines à sous, jeux de table traditionnels et électroniques disponibles",
+        "Accès 24h/24 : jeux électroniques de 9h à 3h, jeux de table à partir de 20h30 (21h samedi pour la Boule)",
+        "Pièce d'identité obligatoire pour accéder aux jeux"
       ],
       "facilities": [
         {
-          "name": "Machines à sous",
-          "detail": "Disponibles de 9h à 3h"
-        },
-        {
           "name": "Black jack électronique",
-          "detail": "Disponible de 9h à 3h"
+          "detail": "Ouvert de 9h à 3h"
         },
         {
           "name": "Roulette anglaise électronique",
-          "detail": "Disponible de 9h à 3h"
+          "detail": "Ouvert de 9h à 3h"
         },
         {
-          "name": "Black jack (jeu de table)",
-          "detail": "Ouvert à 20h30"
+          "name": "Machines à sous",
+          "detail": "Ouvert de 9h à 3h"
+        },
+        {
+          "name": "Black jack",
+          "detail": "Ouvre à 20h30"
         },
         {
           "name": "Ultimate poker",
-          "detail": "Ouvert à 20h30"
+          "detail": "Ouvre à 20h30"
         },
         {
-          "name": "Mini-Golf",
-          "detail": null
+          "name": "Roulette anglaise",
+          "detail": "Ouvre à 20h30"
         }
       ],
       "services": {
@@ -37006,11 +37027,11 @@
     "conseil_planly": "En couple, combinez une soirée casino avec un dîner au restaurant sur place pour une nuit inoubliable aux Sables d'Olonne. En solo, le bar est parfait pour rencontrer d'autres joueurs dans une ambiance détendue.",
     "specific": {
       "pricing": {
-        "free_entry": true,
-        "adult": 0,
-        "child": 0,
+        "free_entry": null,
+        "adult": null,
+        "child": null,
         "child_age_max": null,
-        "from_price": 0.01,
+        "from_price": null,
         "options": [
           {
             "label": "La Box Easy",
@@ -37021,23 +37042,22 @@
             "price": 30.0
           }
         ],
-        "notes": "Machines à sous à partir de 0,01€. Les box cadeaux incluent des tickets de jeu et boissons.",
+        "notes": "Entrée gratuite au casino. Les tarifs indiqués concernent les coffrets cadeaux vendus à la caisse.",
         "source_url": "http://www.casino-sables-dolonne.fr/",
         "valid_period": null,
-        "evidence": "Machines à sous à partir de 0,01€",
-        "family_ticket": null,
+        "evidence": null,
         "stale": false,
         "source_label": "site officiel",
         "verified_at": "2026-09-16"
       },
-      "hours_text": "Dimanche-jeudi 9h-3h, vendredi-samedi 9h-4h. Tables (Boule, Black Jack) dimanche-jeudi 20h-2h, vendredi-samedi 21h-3h. Restaurant tous les jours en service continu.",
+      "hours_text": "Machines à sous, Roulette Anglaise Electronique, Black Jack électronique : Du dimanche au jeudi de 9h à 03h, Du vendredi au samedi 9h à 04h. Table de Boule : Du dimanche au jeudi de 20h à 02h, Du vendredi au samedi 21h à 03h. Table de Black Jack : Du dimanche au jeudi de 20h à 02h, Du vendredi au samedi 21h à 03h.",
       "closing_time": "4h",
       "age_min": 18,
       "booking": "non",
       "know": [
-        "Établissement réservé aux adultes, interdit aux mineurs et aux interdits de jeux.",
+        "Interdit aux personnes mineures et aux interdits de jeux.",
         "Situé sur le front de mer de l'Atlantique, proche du centre-ville des Sables d'Olonne.",
-        "Programme de fidélité BiHappy gratuit et anonyme avec points cumulables et réductions."
+        "Restaurant Le Plat'O Resto ouvert tous les jours en service continu."
       ],
       "facilities": [
         {
@@ -37045,24 +37065,24 @@
           "detail": "75 machines"
         },
         {
-          "name": "Table de Boule 2000",
+          "name": "Boule 2000",
           "detail": "1 table"
         },
         {
-          "name": "Table de Black Jack",
-          "detail": "1 table"
+          "name": "Black Jack",
+          "detail": "1 table + 7 postes électroniques"
         },
         {
           "name": "Roulette anglaise électronique",
           "detail": "6 postes"
         },
         {
-          "name": "Black Jack électronique",
-          "detail": "7 postes"
+          "name": "Restaurant Le Plat'O Resto",
+          "detail": "Restauration à toute heure"
         },
         {
-          "name": "Restaurant Le Plat'O Resto",
-          "detail": "Service continu tous les jours"
+          "name": "Bar",
+          "detail": null
         }
       ],
       "services": {
@@ -37170,20 +37190,67 @@
     "rainy_day_activity": true,
     "conseil_planly": "En couple, optez pour un soin en duo et profitez des bassins face à l'océan en fin de journée pour un coucher de soleil inoubliable. En solo, un forfait journée thalasso vous ressourcera pleinement après une semaine de randonnée ou de surf.",
     "specific": {
+      "hours_text": "Lundi au vendredi de 9h00 à 19h00, samedi de 9h00 à 18h00",
+      "closing_time": "19h00",
+      "booking": "conseillée",
+      "know": [
+        "Établissement 4 étoiles Thalasso & Spa face à la baie des Sables-d'Olonne, adossé à la pinède.",
+        "Propose 97 chambres et suites, restaurant, bar lounge, thalasso, spa beauté, club fitness, piscine intérieure avec parcours hydromarin et plage privée avec piscine extérieure chauffée.",
+        "Ouvert toute l'année avec thème décoration inspiré des paquebots des années 30."
+      ],
+      "facilities": [
+        {
+          "name": "Piscine intérieure",
+          "detail": "avec parcours hydromarin"
+        },
+        {
+          "name": "Piscine extérieure",
+          "detail": "chauffée à fond de sable, plage privée"
+        },
+        {
+          "name": "Thalasso & Spa",
+          "detail": "soins Sothys et Phytomer"
+        },
+        {
+          "name": "Salle de Fitness",
+          "detail": "avec coaching personnalisé"
+        },
+        {
+          "name": "Cryothérapie",
+          "detail": null
+        },
+        {
+          "name": "Restaurant",
+          "detail": "face à la mer, dont SUN DECK rooftop"
+        }
+      ],
+      "services": {
+        "terrace": true,
+        "view": "Vue mer et baie des Sables-d'Olonne",
+        "live_music": null,
+        "happy_hour": null,
+        "restaurant_on_site": true,
+        "dress_code": null,
+        "id_required": null,
+        "screens": null,
+        "versions": null,
+        "snack": null,
+        "pmr": true
+      },
       "official_source": {
-        "url": null,
+        "url": "https://hotel-coteouest.com",
         "verified_at": "2026-09-16"
       }
     },
     "specific_status": {
       "pricing": "empty",
-      "hours_text": "empty",
-      "closing_time": "empty",
+      "hours_text": "auto",
+      "closing_time": "auto",
       "age_min": "empty",
-      "booking": "empty",
-      "know": "empty",
-      "facilities": "empty",
-      "services": "empty"
+      "booking": "auto",
+      "know": "auto",
+      "facilities": "auto",
+      "services": "auto"
     },
     "parking_main": null,
     "parking_others": [],
@@ -37222,7 +37289,11 @@
     "opening_hours": null,
     "popular_times": null,
     "price_level": null,
-    "photos": [],
+    "photos": [
+      "images/centre_aqualudique_aqualonne/photo_1.jpg",
+      "images/centre_aqualudique_aqualonne/photo_2.jpg",
+      "images/centre_aqualudique_aqualonne/photo_3.jpg"
+    ],
     "reviews": [
       {
         "text": "Je fréquente cette piscine depuis 10 mois pour des cours particuliers ainsi que collectifs pour mes petits-enfants, des moniteurs compétents, serviables, pédagogues notamment Chloé, Jules, Noé, Cyril( je ne connais pas les autres). Lorenzo et Julie sont top à l'accueil. Les sanitaires, cabines sont bien chauffés et propres. Le service technique et propreté parfait. Cette piscine est bien équipée pour les enfants. Le personnel agréable et sympathique.",
@@ -37361,6 +37432,11 @@
     "scraped_at": "2026-09-16T09:45:42.829463+00:00",
     "enriched_at": "2026-09-16T09:45:42.829463+00:00",
     "status": "complete",
-    "photos_original_urls": []
+    "photos_original_urls": [
+      "https://cdt85.media.tourinsoft.eu/upload/2017-D-aqualonne.jpg",
+      "https://www.enpaysdelaloire.com/sites/default/files/styles/ogimage/public/sit/images/LOIPDL085V514L18/2021-Aqualonne.jpg?itok=h0LuoaWz",
+      "https://cdt85.media.tourinsoft.eu/upload/Aqualonne-2.jpg"
+    ],
+    "search_keyword": "Aqualonne Les Sables d'Olonne piscine toboggan bassin"
   }
 ]
