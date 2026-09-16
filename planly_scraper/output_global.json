@@ -20697,31 +20697,64 @@
     "rainy_day_activity": true,
     "conseil_planly": "En famille, profitez de la terrasse face à l'océan pour un déjeuner avec les enfants — la carte galettes-crêpes convient à tous les âges. En couple, réservez en avance pour un dîner au coucher du soleil sur l'Atlantique.",
     "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "Menu enfant (jusqu'à 10 ans)",
+            "price": 9.5
+          },
+          {
+            "label": "Formule du midi (mardi au vendredi de 12h à 14h)",
+            "price": 13.0
+          },
+          {
+            "label": "Galette sur-mesure 1 ingrédient",
+            "price": 6.5
+          },
+          {
+            "label": "Galette sur-mesure 2 ingrédients",
+            "price": 8.5
+          },
+          {
+            "label": "Galette sur-mesure 3 ingrédients",
+            "price": 11.5
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Prix à la carte pour les galettes, salades et bowls; boissons en supplément",
+        "source_url": "https://userdocs.zenchef.com/360144/0fg2RoLTnurPFJWX1NBVDLw7oMOK8efyvdliHbos.pdf",
+        "valid_period": null,
+        "evidence": "1 galette enfant (jambon, fromage) + 1 crêpe sucre ou pot de glace + 1 sirop à l'eau 9,50 €",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
       "cuisine_type": "Crêperie",
-      "hours_text": "Mar - Jeu 12h00 - 21h30 | Ven - Sam 12h00 - 21h45 | Dimanche 12h00 - 21h30",
+      "hours_text": "Lundi fermé. Mardi-jeudi 12h00-21h30. Vendredi-samedi 12h00-21h45. Dimanche 12h00-21h30.",
       "closing_days": "Lundi",
       "products": [
-        "Crêpes salées",
-        "Crêpes sucrées",
-        "Salades",
-        "Bowls",
-        "Desserts maison"
+        "Crêpes salées et sucrées",
+        "Galettes de sarrasin",
+        "Salades et bowls",
+        "Cidre artisanal bio",
+        "Glace confectionnée par maître artisan glacier"
       ],
       "booking": "conseillée",
       "booking_url": "https://www.lapancarte.fr",
       "services": {
         "terrace": true,
         "view": "Face mer, face à l'océan",
-        "kids_menu": null,
+        "kids_menu": true,
         "vegetarian": null,
         "takeaway": null,
         "covered": null,
         "shop": null
       },
       "know": [
-        "Fermeture prévue du 14 au 21 décembre 2025 inclus",
-        "Terrasse face à l'océan avec cidre artisanal bio et glace confectionnée par un Maître Artisan Glacier",
-        "Ambiance boisée et végétale, cuisine faite maison en collaboration avec des artisans et producteurs locaux"
+        "Empreinte bancaire demandée à la réservation (garantie, aucun prélèvement automatique).",
+        "Fermé du 14 au 21 décembre 2025 inclus pour congés.",
+        "Terrasse face à l'océan, ambiance boisée et végétale, produits locaux et artisanaux."
       ],
       "official_source": {
         "url": "https://www.lapancarte.fr/.",
@@ -20729,7 +20762,7 @@
       }
     },
     "specific_status": {
-      "pricing": "empty",
+      "pricing": "auto",
       "cuisine_type": "auto",
       "hours_text": "auto",
       "closing_days": "auto",
@@ -20823,18 +20856,18 @@
     "conseil_planly": "En couple, réservez une table en terrasse côté mer pour profiter du coucher de soleil sur l'Atlantique. En famille, venez tôt pour éviter l'attente et laisser les enfants observer les bateaux depuis la promenade.",
     "specific": {
       "cuisine_type": "Fruits de mer, cuisine française",
-      "hours_text": "Lundi à dimanche 09:00 - 19:00",
+      "hours_text": "09:00 AM - 07:00 PM tous les jours",
       "products": [
         "Tataki de thon",
         "Moules frites",
         "Crêpes",
-        "Burger",
+        "Fruits de mer frais",
         "Filet de poisson aux agrumes"
       ],
       "booking": "conseillée",
       "services": {
         "terrace": true,
-        "view": "Vue sur la plage et la mer",
+        "view": "Vue sur la mer et la promenade",
         "kids_menu": true,
         "vegetarian": true,
         "takeaway": true,
@@ -20842,9 +20875,9 @@
         "shop": null
       },
       "know": [
-        "Restaurant situé sur la promenade de l'Amiral Lafargue avec vue directe sur la mer et la plage.",
-        "Réservations recommandées pour le déjeuner et le dîner en raison de l'affluence.",
-        "Accès aux personnes en fauteuil roulant : entrée, parking, toilettes et places assises accessibles."
+        "Restaurant situé 11 Prom. de l'Amiral Lafargue, Les Sables-d'Olonne, directement en bord de mer.",
+        "Ambiance décontractée et raffinée, accueil chaleureux, service attentif sans précipitation.",
+        "Portions généreuses, menu enfants disponible, réservations recommandées pour le déjeuner et le dîner."
       ],
       "social": {
         "facebook": "https://www.facebook.com/placejoys",
@@ -21950,21 +21983,33 @@
     "rainy_day_activity": true,
     "conseil_planly": "En couple, réservez une table en terrasse pour profiter de la vue sur l'océan au coucher du soleil. En famille, venez à déjeuner pour savourer la choucroute de la mer, la spécialité maison plébiscitée par les habitués.",
     "specific": {
-      "cuisine_type": "Bar-Restaurant fruits de mer",
+      "pricing": {
+        "options": [
+          {
+            "label": "MENU PAPOTES",
+            "price": 12
+          }
+        ],
+        "avg_price": 12,
+        "source_url": "https://www.boot2web.com/docs/carte-la-ptite-cale.pdf",
+        "source_label": "carte du site (photo)",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "Bar-Restaurant, fruits de mer",
       "hours_text": "Mercredi à dimanche : 9h00-15h00 et 19h00-23h00",
-      "closing_days": "Lundi et mardi",
+      "closing_days": "Lundi, Mardi",
       "products": [
         "Tartares",
         "Burgers",
         "Viandes et poissons frais de la criée",
         "Choucroute de la Mer",
-        "Desserts maison et coupes glacées"
+        "Desserts maison"
       ],
       "booking": "conseillée",
       "booking_url": "https://www.la-ptite-cale.fr/",
       "services": {
         "terrace": true,
-        "view": "Vue sur la baie des Sables d'Olonne et l'océan",
+        "view": "Vue imprenable sur la baie des Sables d'Olonne, vue sur l'océan",
         "kids_menu": null,
         "vegetarian": null,
         "takeaway": null,
@@ -21972,9 +22017,9 @@
         "shop": null
       },
       "know": [
-        "Terrasse avec vue imprenable sur la baie des Sables d'Olonne",
+        "Terrasse sur le remblai avec vue sur la baie des Sables d'Olonne",
         "Carte de saison faite maison avec produits frais et locaux",
-        "Possibilité de privatiser le lieu pour événements particuliers et professionnels"
+        "Possibilité de privatiser pour événements particuliers et professionnels"
       ],
       "social": {
         "facebook": "https://www.facebook.com/profile.php",
@@ -21986,7 +22031,7 @@
       }
     },
     "specific_status": {
-      "pricing": "empty",
+      "pricing": "auto",
       "cuisine_type": "auto",
       "hours_text": "auto",
       "closing_days": "auto",
@@ -22113,11 +22158,11 @@
     "conseil_planly": "En couple, optez pour le tartare de saumon mi-cuit et une sélection de sushis à partager face au quai — une escale japonaise avec vue sur le port. En famille, la carte variée conviendra à tous, même aux plus petits.",
     "specific": {
       "cuisine_type": "Asiatique, Japonais, Sushis",
-      "hours_text": "Lundi 18:30-22:30 | Mardi-Dimanche 11:30-14:30 et 18:30-22:30",
+      "hours_text": "Lundi 18:30-22:30 | Mardi à Dimanche 11:30-14:30 et 18:30-22:30",
       "products": [
         "Sushis",
-        "Recettes traditionnelles asiatiques",
-        "Plats vegan",
+        "Plats traditionnels",
+        "Plats végans",
         "Plats épicés"
       ],
       "services": {
@@ -22131,8 +22176,8 @@
       },
       "know": [
         "Recettes savoureuses préparées de manière traditionnelle à partir d'ingrédients choisis avec soin",
-        "Ambiance conviviale, adapté aux amateurs comme aux découvreurs de recettes asiatiques",
-        "Accueil enfants et plats vegan disponibles"
+        "Ambiance conviviale, tables adaptées aux amateurs comme aux découvreurs de gastronomie asiatique",
+        "Services proposés : plats faits maison, plats traditionnels, végans, épicés, accueil enfant"
       ],
       "social": {
         "instagram": "https://www.instagram.com/umi._sushi",
@@ -23317,26 +23362,25 @@
     "specific": {
       "cuisine_type": "Pizzas à emporter",
       "products": [
-        "Pizzas générales",
-        "Pizzas viande",
+        "Pizzas",
+        "Pâte fine et croustillante",
+        "Ingrédients frais et de qualité",
         "Pizzas végétariennes",
-        "Pizzas fromage",
-        "Pizzas classiques"
+        "Pizzas viande"
       ],
-      "booking": "non",
       "services": {
-        "terrace": null,
+        "terrace": false,
         "view": null,
-        "kids_menu": null,
+        "kids_menu": false,
         "vegetarian": true,
         "takeaway": true,
         "covered": null,
         "shop": false
       },
       "know": [
-        "Aucun établissement nommé 'Pizza Bar 12h03' aux Sables-d'Olonne n'apparaît dans les pages fournies.",
-        "Les pages contiennent des pizzerias situées à Saint-Prix, Mane, Oisy-le-Verger, Longperrier, Chavanod et Morteau.",
-        "Les données demandées sur 'Pizza Bar 12h03' à Les Sables-d'Olonne sont absentes de la documentation fournie."
+        "Aucune information spécifique sur 'Pizza Bar 12h03' (Les Sables-d'Olonne) n'est présente dans les pages fournies.",
+        "Les pages contiennent des annuaires génériques de pizzerias à emporter en France, mais pas de fiche dédiée à cet établissement.",
+        "Impossible d'extraire des données tarifaires, horaires ou services pour ce restaurant spécifique."
       ],
       "official_source": {
         "url": "https://pizzas-a-emporter.restaurants-de-france.fr",
@@ -23350,7 +23394,7 @@
       "closing_days": "empty",
       "market_days": "empty",
       "products": "auto",
-      "booking": "auto",
+      "booking": "empty",
       "booking_url": "empty",
       "services": "auto",
       "know": "auto",
@@ -24065,52 +24109,23 @@
     "rainy_day_activity": false,
     "conseil_planly": "Passez en semaine vers 13h pour profiter du plein air sans foule et goûter les huîtres du jour dans leur plus simple expression. Pensez à réserver le week-end, ça part vite !",
     "specific": {
-      "cuisine_type": "fruits de mer, ostréiculture",
-      "hours_text": "Magasin : 9h-18h lun, mer, jeu, ven, sam ; 9h-16h30 dim. Dégustation : 11h-14h30 et 18h-19h30 tous les jours",
-      "closing_days": "mardi (magasin)",
-      "products": [
-        "Huîtres",
-        "Crevettes",
-        "Bulots",
-        "Rillettes d'huîtres",
-        "Vins vendéens"
-      ],
-      "booking": "obligatoire",
-      "services": {
-        "terrace": true,
-        "view": "Vue imprenable sur les parcs à huîtres",
-        "kids_menu": null,
-        "vegetarian": null,
-        "takeaway": null,
-        "covered": null,
-        "shop": true
-      },
-      "know": [
-        "La dégustation sur place est ouverte de mi-avril à septembre, avec services supplémentaires en juillet-août en soirée. Réservation téléphonique obligatoire au 02 51 90 21 83.",
-        "La boutique ostréicole est ouverte toute l'année avec produits locaux (rillettes, terrines, soupes, vins, sels aromatisés).",
-        "Reprise en 2025 par trois gérants (Alban Cousseau, Benoît Le Guen, Sébastien Bourdel) qui perpétuent le savoir-faire local en circuit court."
-      ],
-      "social": {
-        "facebook": "https://www.facebook.com/people/La-Cabane-du-Payr%C3%A9/61572839566079",
-        "instagram": "https://www.instagram.com/lacabanedupayre"
-      },
       "official_source": {
-        "url": "https://lacabanedupayre.fr",
+        "url": null,
         "verified_at": "2026-09-16"
       }
     },
     "specific_status": {
       "pricing": "empty",
-      "cuisine_type": "auto",
-      "hours_text": "auto",
-      "closing_days": "auto",
+      "cuisine_type": "empty",
+      "hours_text": "empty",
+      "closing_days": "empty",
       "market_days": "empty",
-      "products": "auto",
-      "booking": "auto",
+      "products": "empty",
+      "booking": "empty",
       "booking_url": "empty",
-      "services": "auto",
-      "know": "auto",
-      "social": "auto"
+      "services": "empty",
+      "know": "empty",
+      "social": "empty"
     },
     "parking_main": null,
     "parking_others": [],

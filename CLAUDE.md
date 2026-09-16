@@ -126,9 +126,13 @@ Prototype mobile avec :
 ### 2026-09-16 — Manger & terroir (19 POIs)
 - Maquette validée → `_MANGER_FIELDS` + `MANGER_PROMPT` + `process_manger` (famille Restaurants, Marchés & Terroir, Dégustations) sur le pipeline commun
 - Champs : pricing (options = formules/menus, avg_price vérifié comme les autres prix), cuisine_type, hours_text, closing_days, market_days, products, booking, booking_url, services, know, social
-- **Couverture** : prix pour 8 POIs sur 19 (les autres sites ne publient pas leur carte → badge € / €€ de Google), type de cuisine 17/19, horaires 12/19, réseaux sociaux 13/19. Seul les Halles de La Chaume n'ont rien. Coût DataForSEO 0,38 $
+- **Couverture après lecture des cartes PDF et photo : 10 POIs sur 19, dont 6 restaurants sur 10** (La Pancarte via ses PDF, La P'tite Cale via son scan lu par Vision). Sans prix : Les Régates (site boutique), UMI Sushi, Pizza Bar 12h03 et La Cabane du Ptitgas (aucun site)
+- Tripadvisor écarté pour les prix : l'API DataForSEO ne donne qu'un niveau (`price_rate` « $$ - $$$ ») et le type de cuisine (`category`), pas de fourchette en euros — Google fournit déjà le niveau pour 9 restaurants sur 10
+- Couverture initiale (avant cartes) : prix pour 8 POIs sur 19 (les autres sites ne publient pas leur carte → badge € / €€ de Google), type de cuisine 17/19, horaires 12/19, réseaux sociaux 13/19. Seul les Halles de La Chaume n'ont rien. Coût DataForSEO 0,38 $
 - App : fiche `_mt*` = bandeau (type, budget, services ou jours, distance), horaires, « Bon à savoir », bloc « Ce qu'on y mange » (formules et prix), bloc « Quand y aller » pour les marchés (jours, halle couverte, produits), carte « Y aller » (réservation, fermeture, estimation pour le groupe si prix moyen), pastilles services + liens Instagram/Facebook
 - Test de rendu : `scratchpad/test_mt_render.js` (comme `test_st_render.js` et `test_pl_render.js`)
+- **Lecture des cartes (3 niveaux, famille Manger uniquement)** : `_fetch_page` lit désormais les **PDF** (pypdf) et normalise les prix sortis espacés (« 6 , 0 0 € » → « 6,00 € ») ; les liens .pdf sont acceptés même hors domaine (Zenchef, boot2web) ; si aucun prix n'est trouvé, `_read_menu_images` envoie à **Claude Vision** les images de carte du site et les pages des **PDF scannés** rendues en images (pymupdf). Dépendances ajoutées : `pypdf`, `pymupdf`
+- Pistes écartées pour les prix : Tripadvisor et TheFork (leurs CGU interdisent l'extraction), photos de carte postées par des clients (souvent périmées)
 
 ### 2026-09-16 — Avis : plus aucun texte republié
 - **Règle** : le texte des avis appartient à son auteur (confirmé par écrit par DataForSEO : leurs CGU n'accordent aucun droit sur les avis ni sur les images). L'app n'affiche plus d'extrait.

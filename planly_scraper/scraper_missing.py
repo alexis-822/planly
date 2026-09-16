@@ -1244,7 +1244,26 @@ def _fetch_page(url: str, robots) -> dict | None:
     except Exception as e:
         log.warning(f"    Fetch échoué {url[:80]}: {str(e)[:80]}")
         return None
-    if "html" not in r.headers.get("content-type", "") and "xml" not in r.headers.get("content-type", ""):
+    ctype = r.headers.get("content-type", "")
+    if "pdf" in ctype or url.lower().endswith(".pdf"):
+        # beaucoup de restaurants publient leur carte en PDF, parfois hébergée ailleurs
+        try:
+            import pypdf
+            pages = pypdf.PdfReader(io.BytesIO(r.content)).pages[:6]
+            text = re.sub(r"\s+", " ", " ".join((pg.extract_text() or "") for pg in pages)).strip()
+            # les PDF sortent souvent espacés caractère par caractère : "6 , 0 0 €" → "6,00 €"
+            for _ in range(2):
+                text = re.sub(r"(?<=\d)\s+(?=[\d,.])", "", text)
+                text = re.sub(r"(?<=[,.])\s+(?=\d)", "", text)
+            text = re.sub(r"(?<=[\d,.])\s+(?=€)", " ", text)
+        except Exception as e:
+            log.warning(f"    PDF illisible {url[:70]}: {str(e)[:60]}")
+            return None
+        if not text:
+            return None
+        log.info(f"    PDF : {url[:90]}")
+        return {"url": url, "html": "", "content": text[:20000]}
+    if "html" not in ctype and "xml" not in ctype:
         return None
     log.info(f"    Page : {url[:90]}")
     return {"url": url, "html": r.text, "content": _html_to_text(r.text)[:20000]}
@@ -1265,6 +1284,9 @@ def official_candidate_urls(home_page: dict, robots) -> list[str]:
     def add(url, label=""):
         url = url.split("#")[0].rstrip("/")
         if lang_re.match(urllib.parse.urlsplit(url).path):  # mêmes pages traduites : inutile de les relire
+            return
+        if url.lower().endswith(".pdf"):  # carte en PDF, souvent hébergée hors du domaine
+            scores[url] = max(9, scores.get(url, 0))
             return
         if _same_site(url, domain) and url != home.rstrip("/"):
             s = _score_url(url, label)
@@ -1326,6 +1348,89 @@ def _find_official_site(poi: dict) -> str:
     return ""
 
 
+MENU_IMG_RE = re.compile(r"carte|menu|ardoise|formule", re.I)
+MENU_IMG_PROMPT = """Cette image est-elle une carte ou un menu de restaurant avec des prix ?
+Si oui, relève uniquement les formules et menus (pas les plats à l'unité), avec leur prix exact.
+Réponds en JSON : {"is_menu": true/false, "options": [{"label": "ex: Formule du midi", "price": nombre}], "avg_price": nombre ou null}
+Si l'image n'est pas une carte lisible : {"is_menu": false, "options": [], "avg_price": null}"""
+
+
+def _menu_image_urls(page: dict, limit: int = 3) -> list[str]:
+    urls = []
+    for tag in re.findall(r"<img[^>]+>", page.get("html") or "", re.I):
+        src = re.search(r'src=["\']([^"\']+)["\']', tag)
+        if not src or not MENU_IMG_RE.search(tag):
+            continue
+        u = urllib.parse.urljoin(page["url"], src.group(1))
+        if u not in urls and re.search(r"\.(jpe?g|png|webp)(\?|$)", u, re.I):
+            urls.append(u)
+    return urls[:limit]
+
+
+def _menu_pdf_urls(page: dict, limit: int = 2) -> list[str]:
+    urls = []
+    for href in re.findall(r'href=["\']([^"\']+\.pdf)["\']', page.get("html") or "", re.I):
+        u = urllib.parse.urljoin(page["url"], href)
+        if u not in urls:
+            urls.append(u)
+    return urls[:limit]
+
+
+def _pdf_page_images(url: str, max_pages: int = 2) -> list[str]:
+    """Carte publiée en PDF scanné : on rend les pages en images pour Claude Vision."""
+    import tempfile
+    try:
+        r = requests.get(url, headers={"User-Agent": OFFICIAL_UA}, timeout=25)
+        r.raise_for_status()
+        import pymupdf
+        doc = pymupdf.open(stream=r.content, filetype="pdf")
+        paths = []
+        for page in list(doc)[:max_pages]:
+            tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".png")
+            tmp.write(page.get_pixmap(dpi=150).tobytes("png"))
+            tmp.close()
+            paths.append(tmp.name)
+        log.info(f"    PDF scanné → {len(paths)} image(s) : {url[:70]}")
+        return paths
+    except Exception as e:
+        log.warning(f"    PDF scanné illisible {url[:60]} : {str(e)[:60]}")
+        return []
+
+
+def _read_menu_images(client, pages: list) -> dict | None:
+    """Carte publiée en image ou en PDF scanné sur le site du lieu : Claude Vision en lit les prix."""
+    from enrich_images import download_to_temp, image_to_base64
+    for page in pages:
+        candidates = [(u, None) for u in _menu_image_urls(page)]
+        for pdf_url in _menu_pdf_urls(page):
+            candidates += [(pdf_url, path) for path in _pdf_page_images(pdf_url)]
+        for url, local in candidates:
+            path = local or download_to_temp(url)
+            if not path:
+                continue
+            try:
+                b64, media_type = image_to_base64(path)
+                msg = client.messages.create(
+                    model=CLAUDE_MODEL_EXTRACT, max_tokens=800, system=HAIKU_SYSTEM_STRICT,
+                    messages=[{"role": "user", "content": [
+                        {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": b64}},
+                        {"type": "text", "text": MENU_IMG_PROMPT}]}])
+                raw = re.sub(r"^```[a-z]*\s*|\s*```$", "", msg.content[0].text.strip())
+                m = re.search(r"\{[\s\S]*\}", raw)
+                data = json.loads(m.group(0)) if m else {}
+            except Exception as e:
+                log.warning(f"    carte en image illisible : {str(e)[:70]}")
+                data = {}
+            finally:
+                if os.path.exists(path):
+                    os.unlink(path)
+            opts = [o for o in (data.get("options") or []) if isinstance(o, dict) and _to_float(o.get("price"))]
+            if data.get("is_menu") and opts:
+                log.info(f"    carte lue en image : {len(opts)} formule(s) — {url[:70]}")
+                return {"options": opts[:6], "avg_price": data.get("avg_price"), "source_url": url}
+    return None
+
+
 def _to_float(value) -> float | None:
     try:
         return float(str(value).replace("€", "").replace(",", ".").strip())
@@ -1364,7 +1469,7 @@ def _is_empty(value) -> bool:
 
 
 def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: str,
-                           is_complete, label_log: str, source_tag: str) -> dict:
+                           is_complete, label_log: str, source_tag: str, try_menu_images: bool = False) -> dict:
     """Itère site officiel → recherche Google sur le domaine officiel → office de tourisme / commune,
     jusqu'à obtenir des tarifs vérifiés (chiffres présents dans la page source) et des horaires."""
     today = datetime.date.today().isoformat()
@@ -1445,6 +1550,14 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
                 time.sleep(1)
                 pages.append(_fetch_page(url, robots))
             extract(site_label, pages)
+            if try_menu_images and not (found.get("pricing") or {}).get("options"):
+                img = _read_menu_images(client, [p for p in pages if p and p.get("html")])
+                if img:
+                    pr = found.get("pricing") or {}
+                    pr.update({k: v for k, v in img.items() if v})
+                    pr.setdefault("source_label", "carte du site (photo)")
+                    pr.setdefault("verified_at", today)
+                    found["pricing"] = pr
 
     # 2. Recherche Google limitée au domaine officiel — toujours lancée quand la typologie
     #    a une requête ciblée (pages de jeux, carte d'un restaurant…), même si l'essentiel est déjà trouvé
@@ -1504,7 +1617,7 @@ def process_manger(client, poi: dict, report: list) -> dict:
         return bool((found.get("hours_text") or found.get("market_days") or poi.get("opening_hours")) and prix)
 
     return _run_official_pipeline(client, poi, report, list(_MANGER_FIELDS), MANGER_PROMPT,
-                                  is_complete, "M&T", "manger_terroir")
+                                  is_complete, "M&T", "manger_terroir", try_menu_images=True)
 
 
 def process_sorties(client, poi: dict, report: list) -> dict:
