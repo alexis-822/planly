@@ -89,6 +89,31 @@ def make_budget(p):
             return "\u20ac\u20ac Mod\u00e9r\u00e9", "paid"
         return "\u20ac\u20ac\u20ac Premium", "paid"
     pricing = (p.get("specific") or {}).get("pricing") or {}
+    # des prix publiés valent mieux qu'un "non communiqué" : on se cale sur le plus bas
+    montants = [o.get("price") for o in (pricing.get("options") or []) if isinstance(o, dict)]
+    montants.append(pricing.get("avg_price"))
+    dpr = pricing.get("dish_price_range")
+    if isinstance(dpr, dict):
+        montants += [dpr.get("min"), dpr.get("max")]
+    chiffres = []
+    for m in montants:
+        try:
+            m = float(m)
+        except (TypeError, ValueError):
+            continue
+        if m > 0:
+            chiffres.append(m)
+    if chiffres:
+        # la médiane, pas le minimum : sinon une option enfant ou une petite box
+        # fait passer un escape game à 25 € ou un casino pour "petit budget"
+        chiffres.sort()
+        mi = len(chiffres) // 2
+        median = chiffres[mi] if len(chiffres) % 2 else (chiffres[mi - 1] + chiffres[mi]) / 2
+        if median <= 15:
+            return "€ Petit budget", "paid"
+        if median <= 35:
+            return "€€ Modéré", "paid"
+        return "€€€ Premium", "paid"
     if pricing.get("free_entry") and p.get("subcategory") not in PAYANT_SUBCATS:
         return "\u20ac Gratuit", "free"
     if p.get("subcategory") in PAYANT_SUBCATS:
@@ -144,6 +169,27 @@ def _extract_peak_hours(hours_str):
     # 3. Fallback : premier horaire trouvé
     patterns = re.findall(pat, hours_str)
     return patterns[0].strip() if patterns else None
+
+
+# Extractions qui reviennent en anglais ("French coastal dining") : la catégorie
+# Google est alors plus juste, et déjà en français.
+_CUISINE_EN = ("dining", "seafood", "coastal", "casual", "food", "cooking")
+
+
+def cuisine_label(p, specific):
+    """Type de cuisine affiché : l'extraction si elle est exploitable, sinon la catégorie Google."""
+    raw = (specific.get("cuisine_type") or "").strip()
+    low = raw.lower()
+    if raw and not any(w in low for w in _CUISINE_EN):
+        return raw
+    google = (p.get("category_google") or "").strip()
+    if not google:
+        return raw or None
+    extra = [c for c in (p.get("additional_categories") or []) if c and c.lower() != google.lower()]
+    # "Pizza" seul est trop maigre : on ajoute la 2e catégorie ("Pizza · Bar")
+    if extra and len(google) < 18:
+        return google + " · " + extra[0]
+    return google
 
 
 def make_beach_data(specific):
@@ -302,7 +348,10 @@ def convert_poi(p):
         pill_txt = conseil_txt if len(conseil_txt) <= pill_max else conseil_txt[:pill_max].rsplit(" ", 1)[0] + "…"
         ia_pill = "\U0001f4a1 " + pill_txt
 
-    specific = p.get("specific", {}) or {}
+    specific = dict(p.get("specific", {}) or {})
+    label = cuisine_label(p, specific)
+    if label:
+        specific["cuisine_type"] = label
     beach = make_beach_data(specific) if p.get("subcategory") == "Plages & Côte" else None
 
     return {

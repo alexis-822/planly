@@ -314,5 +314,3938 @@
       "https://www.facebook.com/les.sables.d.olonne/posts/-le-saviez-vous-le-lac-de-tanchet-est-%C3%A0-lorigine-un-simple-r%C3%A9servoir-deau-potabl/786677446833199/",
       "https://www.onf.fr/vivre-la-foret/que-faire-en-foret/balade-activites-en-foret/%2B/12cc::la-foret-domaniale-dolonne-un-rendez-vous-loree-des-dunes-de-sable.html"
     ]
+  },
+  {
+    "poi": "circuit_mecamax",
+    "field": "age_min",
+    "value": 3,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "circuit_mecamax",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Kart électrique en autonomie",
+        "age_min": 3,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Karting",
+        "age_min": 7,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Quad",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Promenade accompagnée sur un sentier de 5 hectares",
+        "age_min": 7,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "circuit_mecamax",
+    "field": "indoor_outdoor",
+    "value": "extérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "circuit_mecamax",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "circuit_mecamax",
+    "field": "season",
+    "value": "Ouvert 7j/7",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "circuit_mecamax",
+    "field": "hours_text",
+    "value": "Automne/Hiver période scolaire : mercredi-vendredi 10h-12h et 14h-18h, samedi 10h-18h, dimanche 12h-18h. Automne/Hiver vacances scolaires : lundi-samedi 10h-18h, dimanche 12h-18h. Printemps/Été période scolaire : mercredi-vendredi 10h-12h et 14h-19h, samedi 10h-19h, dimanche 12h-19h. Printemps/Été vacances scolaires : lundi-samedi 10h-19h, dimanche 12h-19h. Grandes vacances (1-7 juillet) 10h-19h, (8 juillet-29 août) 10h-minuit.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "atlantic_kart_system",
+    "field": "pricing",
+    "value": {
+      "free_entry": null,
+      "adult": 21,
+      "child": 16,
+      "child_age_min": 7,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Tarifs affichés pour une série de 10min. Plusieurs catégories de karts : 270cc (à partir de 14 ans à 21€), 390cc (à partir de 16 ans à 26€), 200cc junior (18€), Karting Kid (à partir de 7 ans à 16€). Séries 5 et 10 non nominatives sans limite de durée. Baptême biplace à 24€ la série de 10min (à partir de 5 ans).",
+      "source_url": "http://www.akskart.fr/",
+      "valid_period": null,
+      "evidence": "Karting Kid (à partir de 7 ans) Série(s) 10min Tarifs 1 16€ 5 70€ 10 120€",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "atlantic_kart_system",
+    "field": "age_min",
+    "value": 5,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "atlantic_kart_system",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Karting 270cc",
+        "age_min": 14,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 10,
+        "extra_price": null
+      },
+      {
+        "name": "Karting 390cc",
+        "age_min": 16,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 10,
+        "extra_price": null
+      },
+      {
+        "name": "Karting 200cc (junior)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 10,
+        "extra_price": null
+      },
+      {
+        "name": "Karting Kid",
+        "age_min": 7,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 10,
+        "extra_price": null
+      },
+      {
+        "name": "Baptême Karting Biplace",
+        "age_min": 5,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 10,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "atlantic_kart_system",
+    "field": "indoor_outdoor",
+    "value": "extérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "age_min",
+    "value": 1,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Bowling",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Trampoline Parc",
+        "age_min": 7,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 30,
+        "extra_price": null
+      },
+      {
+        "name": "Baby Jump (Trampoline)",
+        "age_min": 2,
+        "age_max": 6,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Kids Parc",
+        "age_min": 1,
+        "age_max": 12,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Vague de Surf",
+        "age_min": 7,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 40,
+        "extra_price": null
+      },
+      {
+        "name": "Quiz Boxing",
+        "age_min": 3,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      },
+      {
+        "name": "Escape Game (Magic School et Fort Boyard)",
+        "age_min": 4,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Jeux de Bar (Shuffleboard, Ping-pong, Cornhole, Billard, Baby-foot, Fléchettes, Palets, Jeux d'arcade)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "indoor_outdoor",
+    "value": "intérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "season",
+    "value": "Toute l'année. Ouvert tous les jours fériés sauf 25 décembre.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "hours_text",
+    "value": "Lundi-jeudi 10h00-00h00 | Vendredi-samedi 10h00-02h00 | Dimanche 10h00-20h00 (*horaires spécifiques pour certaines activités, fermeture plus tardive en veille de jour férié et vacances scolaires)",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_sablotins",
+    "field": "pricing",
+    "value": {
+      "adult": null,
+      "child": 8.5,
+      "child_age_min": 3,
+      "child_age_max": 14,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Tarif matinée enfant 3-14 ans : 8,50€ ; après-midi : 9,50€. Enfants 1-2 ans : 7,50€ (matinée et après-midi identiques). Gratuit pour 2 accompagnateurs adultes, puis 2€ par accompagnateur supplémentaire. Accès extérieur en supplément : +3€ matinée (moins de 3 ans et 3-14 ans), +5€ après-midi (3-14 ans). Laser Game en supplément : +4€ (1 partie) ou +6€ (2 parties).",
+      "source_url": "https://sablotins.com/horaires-tarifs",
+      "valid_period": null,
+      "evidence": "3 à 14 Ans Matinée En intérieur 8.5€ Après-Midi En intérieur 9.5€",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_sablotins",
+    "field": "age_min",
+    "value": 1,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_sablotins",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Espace intérieur (jeux pour tous les âges)",
+        "age_min": 1,
+        "age_max": 14,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Laser Game (SabloLaser)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": 4
+      },
+      {
+        "name": "Espace extérieur (accrofilet, trampolines, luge)",
+        "age_min": 1,
+        "age_max": 14,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_sablotins",
+    "field": "indoor_outdoor",
+    "value": "mixte",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_sablotins",
+    "field": "booking",
+    "value": "non",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_sablotins",
+    "field": "season",
+    "value": "Toute l'année. Hors vacances scolaires : ouvert mercredi, samedi, dimanche et 1er vendredi matin de chaque mois. Vacances scolaires et jours fériés : ouvert tous les jours. Vacances d'été : ouvert du mardi au dimanche, lundi en cas de mauvais temps.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_sablotins",
+    "field": "hours_text",
+    "value": "De 10:00 à 12:30 et de 14:00 à 18:30",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "l_ile_aux_jeux",
+    "field": "pricing",
+    "value": {
+      "adult": null,
+      "child": 7.5,
+      "child_age_min": null,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Entrée matinée enfant 7,50€ ; entrée après-midi enfant 9,50€ ; entrée 1 heure enfant 7,50€ ; enfant non marcheur allant dans les jeux 2€ ; adultes accompagnants gratuit ; carte 10 entrées matinée 65€, après-midi 85€ (Les Sables). Carte 10 entrées Challans : matinée 65€, après-midi 80€, assistante maternelle matin 45€, après-midi 65€.",
+      "source_url": "https://www.ile-aux-jeux.com/index.php/tarifs-resa-les-sables-olonne/",
+      "valid_period": null,
+      "evidence": "PAR ENFANT – Entrée matinée : 7,50 € – Entrée après-midi : 9,50 € – Entrée 1 heure : 7,50 € – Entrée enfant non marcheur allant dans les jeux : 2€ [...] GRATUIT Pour les adultes accompagnants.",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "l_ile_aux_jeux",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Jeux gonflables",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Structures tubulaires",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Trampolines",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Piscines à balles",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Piste de patinettes",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Baby-foot",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Jeux de société",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Tricycles",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "l_ile_aux_jeux",
+    "field": "indoor_outdoor",
+    "value": "intérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "l_ile_aux_jeux",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "l_ile_aux_jeux",
+    "field": "season",
+    "value": "Ouvert à l'année. Mercredis, samedis, dimanches et jours fériés. Tous les jours pendant les vacances scolaires des trois zones A, B et C. Fermé le 25 décembre et 1er janvier, ainsi que les dimanches d'été sauf s'il pleut.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "l_ile_aux_jeux",
+    "field": "hours_text",
+    "value": "De 10h à 12h30 et de 14h à 18h30",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "mission_decouverte",
+    "field": "age_min",
+    "value": 18,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "mission_decouverte",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Escape game urbain",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 105,
+        "extra_price": null
+      },
+      {
+        "name": "Escape game sensoriel",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      },
+      {
+        "name": "Escape game enfants",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "mission_decouverte",
+    "field": "indoor_outdoor",
+    "value": "mixte",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "mission_decouverte",
+    "field": "booking",
+    "value": "obligatoire",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "mission_decouverte",
+    "field": "season",
+    "value": "Toute l'année, 7j/7 sur réservation",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "mission_decouverte",
+    "field": "hours_text",
+    "value": "Missions extérieures : juin-septembre 10h-18h, septembre-octobre 10h-17h, novembre-mars 10h-15h, avril-mai 10h-17h. Enquête sensorielle hors vacances : lun fermé, mar-jeu 14h-20h, ven 14h-22h, sam 10h-22h, dim 10h-20h. Enquête sensorielle vacances : lun-mer 10h-20h, jeu-sam 10h-22h, dim 10h-20h.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "vague_de_jeux",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Scénario 1 - Recrutement (Escape Game Apéro)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      },
+      {
+        "name": "Scénario 2 - Infiltration (Escape Game Apéro)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      },
+      {
+        "name": "Kid's Party (Escape Game Enfant)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 45,
+        "extra_price": null
+      },
+      {
+        "name": "Le Cube Wheriz (Jeu d'Observation)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 5,
+        "extra_price": null
+      },
+      {
+        "name": "Totem Sacré (Jeu de Piste)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      },
+      {
+        "name": "Le Manoir (Coffre Escape Game)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      },
+      {
+        "name": "Le Mystère du Serpent D'Or (Coffre Escape Game)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "vague_de_jeux",
+    "field": "indoor_outdoor",
+    "value": "mixte",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "vague_de_jeux",
+    "field": "season",
+    "value": "05/04/2026 au 01/11/2026",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "pricing",
+    "value": {
+      "adult": 27,
+      "child": null,
+      "child_age_min": 3,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Tarifs variables par tranche d'âge (3-5 ans: 15€, 6 ans: 17€, 7-8 ans: 22€, 9-11 ans: 25€, 12 ans+: 27€). Accrobranche + Trampo'filet inclus. Gratuit pour les personnes ne pratiquant pas d'activités. Adulte accompagnant parcours verts: 17€. Réduction -10% mentionnée. Tarif groupe à partir de 10 personnes.",
+      "source_url": "https://www.exploraparc.com/tarifs",
+      "valid_period": null,
+      "evidence": "12 ANS + ET ADULTE 13 PARCOURS + TRAMPO'FILET 27€ -10%",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "age_min",
+    "value": 3,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Accrobranche",
+        "age_min": 3,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Trampo'filet",
+        "age_min": 2,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Escap'Aventure",
+        "age_min": 6,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": 59
+      },
+      {
+        "name": "Escap'Box",
+        "age_min": 9,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": 59
+      },
+      {
+        "name": "Laser Tag",
+        "age_min": 8,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 30,
+        "extra_price": 15
+      },
+      {
+        "name": "Tir à l'arc",
+        "age_min": 8,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": 15
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "shows",
+    "value": [
+      {
+        "name": "Concert Sous les branches",
+        "time": "20:30"
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "indoor_outdoor",
+    "value": "mixte",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "season",
+    "value": "Ouvert tous les jours à partir de 10h selon calendrier mentionné (septembre-octobre 2026 mentionnés). Ouvert mercredi au dimanche selon horaire en banneau.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "hours_text",
+    "value": "Généralement 10h - 19h en haute saison, 14h - 19h mercredi-dimanche hors saison. Snack & Bar jusqu'à 21h, minuit jeudis et samedis.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "chateau_des_aventuriers",
+    "field": "pricing",
+    "value": {
+      "adult": 26.5,
+      "child": 21.5,
+      "child_age_min": 3,
+      "child_age_max": 11,
+      "free_under_age": 3,
+      "family_ticket": null,
+      "notes": "Pass Grande Aventure (accès tout le parc sans Maison Hantée). Pass Grands Frissons : 31,50€ adulte / 26,50€ enfant (avec Maison Hantée). Billet Découverte : 17,50€ adulte / 13,50€ enfant (1 aventure au choix). Pass Saison : 53€ adulte / 43€ enfant. Personnes handicapées : 20% de réduction sur place. Réduction jusqu'à 3€ en achetant en ligne. Tarifs 2026.",
+      "source_url": "https://chateau-aventuriers.com/preparer-sa-visite/tarifs",
+      "valid_period": "2026",
+      "evidence": "Pass grande aventure TOUT LE PARC sans la maison hantée + accès libres au château et aux animations (2) Plein Tarif (à partir de 12 ans) 26,50 € Tarif réduit (de 3 à 11 ans) 21,50 € Enfants (-3 ans) Gratuit",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "chateau_des_aventuriers",
+    "field": "age_min",
+    "value": 3,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "chateau_des_aventuriers",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Le Trésor du Pirate",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 90,
+        "extra_price": null
+      },
+      {
+        "name": "Sur la Piste des Dinos",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 90,
+        "extra_price": null
+      },
+      {
+        "name": "Enquête au Château",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      },
+      {
+        "name": "La Maison Hantée - Mission 2",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      },
+      {
+        "name": "Western City",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Il était une fois",
+        "age_min": 2,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Visite du Château de la Guignardière",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "chateau_des_aventuriers",
+    "field": "indoor_outdoor",
+    "value": "mixte",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "chateau_des_aventuriers",
+    "field": "booking",
+    "value": "non",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "chateau_des_aventuriers",
+    "field": "season",
+    "value": "Du 4 avril au 1er novembre 2026. Western City : 4 juillet au 31 août. Calendrier des périodes bleues, vertes, jaunes et grises.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "chateau_des_aventuriers",
+    "field": "hours_text",
+    "value": "Du 4 avril au 12 juin : 11h-18h. Du 13 juin au 31 août : 10h-20h. Du 2 septembre au 1er novembre : 11h-18h. Fermeture guichets à 18h.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Rope Canyon",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Explorer Camp",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Rushwater Canyon",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Silver Lake",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Accrobranche",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Water Jump",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Paintball",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 120,
+        "extra_price": null
+      },
+      {
+        "name": "Duel Arena",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 120,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "indoor_outdoor",
+    "value": "extérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "season",
+    "value": "avril à novembre",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "hours_text",
+    "value": "Haute saison (juillet-août) : 10h-19h. Basse saison (avril-mai-juin, septembre-octobre) : 11h-18h en semaine, samedi 10h-19h. Horaires variables selon conditions météorologiques.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "zoo_des_sables_d_olonne",
+    "field": "age_min",
+    "value": 3,
+    "source": "site officiel"
+  },
+  {
+    "poi": "zoo_des_sables_d_olonne",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Atelier pédagogique",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 30,
+        "extra_price": 35
+      },
+      {
+        "name": "Visite guidée",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 120,
+        "extra_price": 65
+      }
+    ],
+    "source": "site officiel"
+  },
+  {
+    "poi": "zoo_des_sables_d_olonne",
+    "field": "indoor_outdoor",
+    "value": "extérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "zoo_des_sables_d_olonne",
+    "field": "booking",
+    "value": "obligatoire",
+    "source": "site officiel"
+  },
+  {
+    "poi": "zoo_des_sables_d_olonne",
+    "field": "season",
+    "value": "Du 7 février au 11 novembre 2026 et vacances de Noël",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "zoo_des_sables_d_olonne",
+    "field": "hours_text",
+    "value": "Février/Mars : 13h30-18h30. Avril/Mai/Juin : 9h30-19h. Juillet/Août : 9h30-19h30. Septembre : 9h30-19h. Octobre : 13h30-18h30. Novembre : 13h30-17h30. Vacances de Noël : 13h-17h (fermé 25/12 et 01/01). Billetterie fermée 1h30 avant fermeture.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "anes_passions",
+    "field": "pricing",
+    "value": {
+      "adult": 8,
+      "child": 6,
+      "child_age_min": null,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Visite guidée : 6€ enfant, 8€ adulte. Le p'tit fermier : 9€ par enfant + 1 accompagnateur gratuit, 6€ par accompagnateur supplémentaire. Ân'verserie : 10€ par enfant (min 4, max 8). Paiement en espèces uniquement (pas de carte bancaire).",
+      "source_url": "https://anepassion.wixsite.com/website/page-vierge-3-1",
+      "valid_period": "2025",
+      "evidence": "TARIFS 2025 ATTENTION TOUTES NOS PRESTATIONS SONT SUR RESERVATION ​ * Le p'tit fermier 9€ par enfant 1 accompagnateur gratuit 6€ par accompagnateur supplémentaire ​ * Visite guidée 6€ par enfant 8€ par adulte Tarif famille (2 adultes + 2 enfants)",
+      "stale": true,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "anes_passions",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Le p'tit fermier",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Visite guidée",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Visite libre",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "anes_passions",
+    "field": "booking",
+    "value": "obligatoire",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "anes_passions",
+    "field": "season",
+    "value": "Ouverture uniquement les week-ends, exceptionnellement ouvert en juillet, août et septembre",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "anes_passions",
+    "field": "hours_text",
+    "value": "Ouverture uniquement les week-ends. Ouvert vendredi 15 août 2025.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "aquarium_de_vendee",
+    "field": "pricing",
+    "value": {
+      "adult": 15.8,
+      "child": 11.8,
+      "child_age_min": 3,
+      "child_age_max": 12,
+      "free_under_age": 3,
+      "family_ticket": null,
+      "notes": "Tarifs réduits pour personnes handicapées et PMR disponibles uniquement sur place sur présentation d'un justificatif. Toutes les animations comprises dans le prix de visite.",
+      "source_url": "https://www.aquarium-vendee.com/tarifs-aquarium-vendee",
+      "valid_period": "2026",
+      "evidence": "PUBLIC ADULTE (À PARTIR DE 18 ANS) 15,80 € / ENFANT (DE 3 À 12 ANS) 11,80 € / ENFANT (DE MOINS DE 3 ANS*) GRATUIT",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "aquarium_de_vendee",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Nourrissages des animaux",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 15,
+        "extra_price": 0
+      },
+      {
+        "name": "Découverte Univers Atlantique et Méditerranéen",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": 0
+      },
+      {
+        "name": "Découverte Univers Indo-Pacifique",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": 0
+      },
+      {
+        "name": "Découverte Univers Tropical",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": 0
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "aquarium_de_vendee",
+    "field": "shows",
+    "value": [
+      {
+        "name": "Nourrissage bassin Les Sables d'Olonne",
+        "time": null
+      },
+      {
+        "name": "Nourrissage bassin Les Maldives",
+        "time": null
+      }
+    ],
+    "source": "site officiel"
+  },
+  {
+    "poi": "aquarium_de_vendee",
+    "field": "indoor_outdoor",
+    "value": "intérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "aquarium_de_vendee",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "aquarium_de_vendee",
+    "field": "season",
+    "value": "Ouvert toute l'année, sauf 1er janvier et 25 décembre",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "aquarium_de_vendee",
+    "field": "hours_text",
+    "value": "Toute l'année : 10h-12h30 et 14h-18h. Du 1er juillet au 31 août : 9h30-19h en continu. Fermeture grilles 18h (toute l'année) et 19h (juillet-août). Clôture billetterie 1h avant fermeture.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "vague_de_jeux",
+    "field": "booking",
+    "value": "obligatoire",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "age_min",
+    "value": 1,
+    "source": "site officiel"
+  },
+  {
+    "poi": "anes_passions",
+    "field": "indoor_outdoor",
+    "value": "extérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "circuit_mecamax",
+    "field": "pricing",
+    "value": {
+      "adult": 17,
+      "child": 14,
+      "child_age_min": 7,
+      "child_age_max": 13,
+      "free_under_age": 3,
+      "family_ticket": null,
+      "notes": "Tarifs Kart Kid Family et Kart Adult en réservation en ligne. Tarifs plein: Kid Family 17€, Adult 21€. Enfants 5-13 ans peuvent bénéficier d'une place devant un adulte en quad gratuitement. Hors juillet-août pour anniversaires.",
+      "source_url": "https://mecamax.com/karting/",
+      "valid_period": null,
+      "evidence": "Kart Kid Family 1 Session de 10min à partir de 14 € TTC * *Tarif avec réservation en ligne Plein Tarif 17€. Kart Adult La session de 10min à partir de 17 € TTC * *Tarif avec réservation en ligne Plein tarif 21€.",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "circuit_mecamax",
+    "field": "amenities",
+    "value": {
+      "snack": true,
+      "kids_zone": true,
+      "picnic_area": null,
+      "stroller_ok": null,
+      "rules": [
+        "Casques, charlottes, combinaisons et combinaisons de pluie prêtés",
+        "Taille minimum 1.40m pour Kart Adult",
+        "Kart Racing 2T: E-card membre avec niveau de pilotage suffisant requis (chrono sous 49.000s)"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "pricing",
+    "value": {
+      "adult": 9.9,
+      "child": 9.9,
+      "child_age_min": null,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Tarif bowling par partie (activité principale). Du lundi au jeudi: 8.90€/pers/partie. Vendredi, weekends, jours fériés et vacances scolaires (zone B): 9.90€/pers/partie. Location de chaussures incluse. Tarifs variables selon activités (Trampoline: 10-22€/pers selon durée; Kids Parc: 6-9€/pers; Vague de surf: 30€/pers; Quiz Boxing: 20€/pers; Escape Game: 25€/pers).",
+      "source_url": "https://www.up2play.fr/lessablesdolonne/horaires-tarifs/",
+      "valid_period": null,
+      "evidence": "Du lundi au jeudi /pers. /partie 8.90€ Vendredi, weekends, jours fériés et vacances scolaires (zone B) /pers. /partie 9.90€ Location de chaussures incluse",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "shows",
+    "value": [
+      {
+        "name": "Soirée danse Salsa, Bachata, Kizomba - Initiation gratuite",
+        "time": "20:30"
+      },
+      {
+        "name": "Soirée danse Salsa, Bachata, Kizomba - Piste de danse",
+        "time": "21:30"
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "up2play",
+    "field": "amenities",
+    "value": {
+      "snack": true,
+      "kids_zone": true,
+      "picnic_area": false,
+      "stroller_ok": null,
+      "rules": [
+        "Chaussettes anti-dérapantes obligatoires au Trampoline Parc",
+        "Chaussettes obligatoires au Kids Parc",
+        "Brief inclus à la Vague de Surf",
+        "Décharge obligatoire par un majeur pour Trampoline",
+        "Les enfants de plus d'1m50 et adultes non autorisés dans structures Kids Parc",
+        "Pas de réservation pour Bowling",
+        "Accès gratuit au complexe"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_sablotins",
+    "field": "amenities",
+    "value": {
+      "snack": true,
+      "kids_zone": null,
+      "picnic_area": false,
+      "stroller_ok": null,
+      "rules": [
+        "Chaussettes obligatoires pour tous les enfants",
+        "Chaussures bien ajustées indispensables pour activités extérieures",
+        "Enfants obligatoirement accompagnés d'un adulte",
+        "Nourriture et boissons extérieures interdites (sauf nourriture bébé, eau, fruits)",
+        "Parc fermé et sécurisé",
+        "Défibrillateur et premiers soins disponibles",
+        "Toilettes accessibles aux PMR avec table à langer",
+        "Accessible aux personnes à mobilité réduite"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "l_ile_aux_jeux",
+    "field": "amenities",
+    "value": {
+      "snack": true,
+      "kids_zone": true,
+      "picnic_area": false,
+      "stroller_ok": null,
+      "rules": [
+        "Goûters et boissons personnels non autorisés à l'intérieur du parc",
+        "Snack disponible sur place avec pichets de sirop, bouteilles d'eau, sodas, gaufres, paquets de gâteaux, barres chocolatées, sachets de bonbons"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "mission_decouverte",
+    "field": "amenities",
+    "value": {
+      "snack": null,
+      "kids_zone": null,
+      "picnic_area": null,
+      "stroller_ok": true,
+      "rules": [
+        "Arriver 5 minutes avant l'heure de réservation",
+        "Chaussures confortables obligatoires",
+        "Adaptor sa tenue à la météo",
+        "Retard de 15 min ou plus: temps de jeu réduit",
+        "Retard de 30 min ou plus: annulation sans remboursement",
+        "Équipe minimum 2 joueurs",
+        "Interdiction de casser ou détériorer les objets",
+        "Restitution du matériel fourni obligatoire"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "explora_parc",
+    "field": "amenities",
+    "value": {
+      "snack": true,
+      "kids_zone": true,
+      "picnic_area": null,
+      "stroller_ok": null,
+      "rules": [
+        "Port du masque obligatoire au sol et facultatif sur les parcours (protocole sanitaire)",
+        "Regroupement de 6 personnes maximum autorisé sur le site (protocole sanitaire)",
+        "Réservation obligatoire pour Accrobranche (le jour même impossible)",
+        "Réservation recommandée pour autres activités"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "chateau_des_aventuriers",
+    "field": "amenities",
+    "value": {
+      "snack": true,
+      "kids_zone": true,
+      "picnic_area": true,
+      "stroller_ok": true,
+      "rules": [
+        "Poussettes : accessibles aux parcours extérieurs uniquement, non accessibles aux parcours intérieurs",
+        "Chiens bienvenus sur parcours extérieurs",
+        "Parking gratuit",
+        "Pique-niques autorisés",
+        "Recharge gratuite",
+        "Western City peut fermer sans préavis en cas d'intempéries (pluie, vents > 38 km/h) ou fortes chaleurs",
+        "Paiements sur place : CB, espèces, chèques vacances, chèques vacances connect",
+        "Paiements billetterie en ligne : CB uniquement"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "pricing",
+    "value": {
+      "adult": 37,
+      "child": 29,
+      "child_age_min": 5,
+      "child_age_max": 10,
+      "free_under_age": 3,
+      "family_ticket": null,
+      "notes": "Tarifs haute saison (juillet-août). Billet 1 jour daté. Gratuit pour 60 ans et +. Pass 2 jours : adulte 55€ (-50% jour 2), enfant 43€. Pass saison adulte 95€, enfant 75€. Tarif basse saison : adulte 24-29€ (zone unique), enfant 17-20€.",
+      "source_url": "https://ofunpark.fr/tarifs-et-offres/tarifs",
+      "valid_period": "2026",
+      "evidence": "Billet 1 jour | Adulte 11/59 ans 37€ | Enfant 5/10 ans 29€ | Bout'Chou 3/4 ans 17€ | L'entrée est offerte pour les 60 ans et + et les moins de 3 ans",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "shows",
+    "value": [
+      {
+        "name": "Soirées concerts",
+        "time": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "o_fun_park",
+    "field": "amenities",
+    "value": {
+      "snack": true,
+      "kids_zone": null,
+      "picnic_area": true,
+      "stroller_ok": null,
+      "rules": [
+        "Maillot de bain conseillé pour activités aquatiques",
+        "Vêtements adaptés et chaussures fermées pour accrobranche",
+        "Certaines épreuves Duel Arena se déroulent dans l'eau, prévoir tenue de rechange"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "zoo_des_sables_d_olonne",
+    "field": "pricing",
+    "value": {
+      "adult": 20.0,
+      "child": 16.0,
+      "child_age_min": 3,
+      "child_age_max": 10,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Tarif demandeur d'emploi : 18€ (justificatif obligatoire). Tarif handicapé : 18€ adulte / 14,50€ enfant (carte d'invalidité). Groupes à partir de 20 personnes : 16,50€ adulte / 13,40€ enfant. Zoo Pass 2026 : 39€ adulte / 31,50€ enfant (nominatif, accès illimité saison février-début novembre, 5% remise à partir de 3 cartes).",
+      "source_url": "https://www.zoodessables.fr/tarifs-et-informations",
+      "valid_period": "2026",
+      "evidence": "ADULTE (à partir de 11 ans) ENFANT (3 à 10 ans inclus) DEMANDEUR D'EMPLOI (Présentation d'un justificatif obligatoire) INDIVIDUEL 20.00€ 16.00€ 18.00€",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "zoo_des_sables_d_olonne",
+    "field": "amenities",
+    "value": {
+      "snack": true,
+      "kids_zone": null,
+      "picnic_area": null,
+      "stroller_ok": null,
+      "rules": [
+        "Parc sans tabac sauf zones prévues à cet effet",
+        "Animaux de compagnie non acceptés sauf chiens d'assistance"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "aquarium_de_vendee",
+    "field": "amenities",
+    "value": {
+      "snack": null,
+      "kids_zone": null,
+      "picnic_area": false,
+      "stroller_ok": false,
+      "rules": [
+        "Circuit entièrement couvert et climatisé",
+        "Accès PMR (plain-pied, ascenseurs, sanitaires adaptés)",
+        "Boucles magnétiques à l'accueil",
+        "Chiens guides d'aveugle acceptés uniquement",
+        "Autres animaux interdits",
+        "Interdit de manger ou boire dans le circuit",
+        "En période estivale, draisiennes, tricycles, chariots, remorques à vélo et poussettes plus de 2 places non autorisés. Porte-bébés recommandés.",
+        "Parking privé gratuit",
+        "Stationnement vélo sécurisé"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_floralies",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Balades en poney",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Rencontre avec les animaux (âne, baudet du Poitou, chèvres)",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Ruche pédagogique",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Tyrolienne",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Parcours d'agilité",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Boîte à lire Floralies",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Expositions de photographies",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      },
+      {
+        "name": "Expositions patrimoniales",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": null,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_floralies",
+    "field": "indoor_outdoor",
+    "value": "extérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_floralies",
+    "field": "season",
+    "value": "Ouvert toute l'année",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_floralies",
+    "field": "hours_text",
+    "value": "Du 1er juin au 30 septembre de 10h à 20h, Le reste de l'année de 10h à 17h",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_floralies",
+    "field": "amenities",
+    "value": {
+      "snack": null,
+      "kids_zone": true,
+      "picnic_area": true,
+      "stroller_ok": null,
+      "rules": [
+        "Les chiens sont acceptés, tenus en laisse"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "atlantic_kart_system",
+    "field": "booking",
+    "value": "non",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "atlantic_kart_system",
+    "field": "season",
+    "value": "Ouvert toute l'année. Horaires réduits de février à décembre (fermeture certains jours), complets en juillet-août et vacances scolaires (7j/7)",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "atlantic_kart_system",
+    "field": "hours_text",
+    "value": "Février-mars et octobre-décembre : sam-dim 14h-18h. Avril-juin : lun-mer 14h-19h, ven-dim 14h-19h (jeudi fermé). Juillet-août : tous les jours 10h-19h. Septembre : lun-mer 14h-19h, ven-dim 14h-19h (jeudi fermé). 7j/7 en vacances scolaires.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "atlantic_kart_system",
+    "field": "amenities",
+    "value": {
+      "snack": null,
+      "kids_zone": null,
+      "picnic_area": null,
+      "stroller_ok": null,
+      "rules": [
+        "Système électronique permettant de réduire la vitesse ou arrêter les machines"
+      ]
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "mission_decouverte",
+    "field": "pricing",
+    "value": {
+      "free_entry": null,
+      "adult": 23,
+      "child": null,
+      "child_age_min": null,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Tarifs pour l'Enquête Sensorielle par joueur (équipe de 5). Missions Extérieures: 18€/joueur (équipe de 5). Tarifs variables selon taille d'équipe (2 à 5 joueurs). Prix en euros, non soumis à TVA.",
+      "source_url": "https://www.missiondecouverte.fr/horaires-tarifs/",
+      "valid_period": null,
+      "evidence": "TARIFS MISSIONS EXTÉRIEURES Équipe de 5 : 18,00€/joueur soit 90€/équipe. Équipe de 4 : 18,75€/joueur soit 75€/équipe Équipe de 3 : 20,00€/joueur soit 60€/équipe Équipe de 2 : 22,50€/joueur soit 45€/équipe ENQUÊTE SENSORIELLE Équipe de 5 : 23€/joueur soit 115€/équipe. Équipe de 4 : 25€/joueur soit 100€/équipe Équipe de 3 : 28€/joueur soit 84€/équipe",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "vague_de_jeux",
+    "field": "pricing",
+    "value": {
+      "free_entry": null,
+      "adult": null,
+      "child": null,
+      "child_age_min": null,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "from_price": 15,
+      "options": [
+        {
+          "label": "Scénario 1 - Recrutement (Escape Game Apéro, 3-100 personnes, 60-90 min)",
+          "price": 25
+        },
+        {
+          "label": "Scénario 2 - Infiltration (Escape Game Apéro, 3-8 personnes, 60-90 min)",
+          "price": 25
+        },
+        {
+          "label": "Kid's Party (Escape Game Enfant, 3-8 personnes, 45-60 min)",
+          "price": 15
+        },
+        {
+          "label": "Totem Sacré (Jeu de Piste, jusqu'à 30 joueurs, 60-90 min)",
+          "price": 20
+        },
+        {
+          "label": "Le Manoir (Coffre Escape Game, 3-8 personnes, 60-90 min)",
+          "price": 80
+        }
+      ],
+      "notes": "Tarif unique 80€ pour Le Manoir et Le Mystère du Serpent D'Or. Le Cube, La Tente (Saint Graal, Musée, Médaille d'Or, Noël) et Harcèlement Alerte sur devis. Tarifs « à partir de » par personne pour les autres jeux.",
+      "source_url": "https://vaguedejeux.fr/",
+      "valid_period": null,
+      "evidence": "A partir de 25€ / personne; A partir de 15€ / personne; A partir de 20€ / personne; Tarif unique 80€; Sur Devis",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "vague_de_jeux",
+    "field": "age_min",
+    "value": 8,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "age_min",
+    "value": 10,
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "activities",
+    "value": [
+      {
+        "name": "Paintball",
+        "age_min": null,
+        "age_max": null,
+        "height_min_cm": null,
+        "duration_min": 60,
+        "extra_price": null
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "shows",
+    "value": [
+      {
+        "name": "Session paintball",
+        "time": "10:00"
+      },
+      {
+        "name": "Session paintball",
+        "time": "14:00"
+      },
+      {
+        "name": "Session paintball",
+        "time": "17:00"
+      }
+    ],
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "indoor_outdoor",
+    "value": "extérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "season",
+    "value": "Ouvert toute l'année. Juillet/Août uniquement sur le terrain de La Faute-Sur-Mer.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "hours_text",
+    "value": "3 sessions par jour : 10H, 14H et 17H (juillet/août). Pour les autres périodes, sur réservation.",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "amenities",
+    "value": {
+      "snack": null,
+      "kids_zone": null,
+      "picnic_area": true,
+      "stroller_ok": null,
+      "rules": []
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_floralies",
+    "field": "pricing",
+    "value": {
+      "free_entry": true,
+      "adult": 0,
+      "child": 0,
+      "child_age_min": null,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": "Entrée gratuite toute l'année",
+      "source_url": "https://www.vendee-tourisme.com/parc-des-floralies/la-tranche-sur-mer/loipdl085v513v1x",
+      "valid_period": null,
+      "evidence": "Le parc des Floralies est ouvert toute l'année au public. Son entrée est gratuite.",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_des_floralies",
+    "field": "booking",
+    "value": "non",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_philippe_perrocheau",
+    "field": "pricing",
+    "value": {
+      "free_entry": true,
+      "adult": 0,
+      "child": 0,
+      "child_age_min": null,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "notes": null,
+      "source_url": "https://www.vendee-tourisme.com/parc-philippe-perrocheau/coex/pcupdl085v51e3on",
+      "valid_period": null,
+      "evidence": "Le parc Philippe Perrocheau (anciennement le Jardin des Olfacties) vous accueille gratuitement et tous les jours pour une promenade originale et familiale.",
+      "stale": false,
+      "source_label": "office de tourisme",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_philippe_perrocheau",
+    "field": "indoor_outdoor",
+    "value": "extérieur",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "parc_philippe_perrocheau",
+    "field": "season",
+    "value": "tous les jours",
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "axeyon_paintball",
+    "field": "pricing",
+    "value": {
+      "free_entry": null,
+      "adult": null,
+      "child": null,
+      "child_age_min": null,
+      "child_age_max": null,
+      "free_under_age": null,
+      "family_ticket": null,
+      "from_price": 20,
+      "options": [
+        {
+          "label": "Forfait 100 Billes · 1H",
+          "price": 20
+        },
+        {
+          "label": "Forfait 200 Billes · 1H30",
+          "price": 25
+        },
+        {
+          "label": "Forfait 300 Billes · 2H",
+          "price": 30
+        },
+        {
+          "label": "Forfait 500 Billes · 3H",
+          "price": 45
+        }
+      ],
+      "notes": "Les forfaits comprennent la location du matériel, l'accès aux différents terrains ainsi que l'encadrement et l'assurance. Billes supplémentaires disponibles. Joueurs équipés : droit d'entrée 5€ (terrain forêt + air) ou 10€ (accès total + air). Tarifs groupe à partir de 15 personnes sur demande.",
+      "source_url": "https://www.axeyon-paintball.ovh/tarifs",
+      "valid_period": "2022-2026",
+      "evidence": "Forfait 100 Billes 20€ Temps de jeu : 1H Forfait 200 Billes 25€ Temps de jeu : 1H30 Forfait 300 Billes 30€ Temps de jeu : 2H Forfait 500 Billes 45€ Temps de jeu : 3H",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-14"
+    },
+    "source": "parcs_loisirs"
+  },
+  {
+    "poi": "cinema_le_grand_palace",
+    "field": "pricing",
+    "value": {
+      "free_entry": null,
+      "adult": 10,
+      "child": 5.5,
+      "child_age_max": 12,
+      "from_price": null,
+      "options": [
+        {
+          "label": "Tarif réduit (mercredi, étudiants, familles nombreuses, handicapés, +65 ans)",
+          "price": 8
+        },
+        {
+          "label": "Carnet de 10 Pass Ciné",
+          "price": 70
+        }
+      ],
+      "notes": "Pass Ciné valable 6 mois, non nominatif. Ciné Chèque, Pass Culture et EOSC acceptés (hors supplément 3D et séances spéciales). Chèques Vacances ANCV acceptés. Chèques non acceptés.",
+      "source_url": "https://www.lessablesdolonne.fr/sit/multiplexe-cinema-le-grand-palace-loipdl085v519gss/",
+      "valid_period": null,
+      "evidence": "Tarifs : 10€/tarif normal 8€/tarif réduit pour tous le mercredi (sauf jour férié), étudiants, familles nombreuses, handicapé (tous les jours), + 65 ans (du lundi au vendredi sauf jour férié). 5,50€/ -12 ans (sur présentation d'un justificatif d'âge, tous les jours, hors supplément 3D et séances spéciales). Carnet de 10 Pass Ciné : 70€, valable 6 mois, non nominatif.",
+      "stale": false,
+      "source_label": "office de tourisme",
+      "verified_at": "2026-09-16"
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cinema_le_grand_palace",
+    "field": "hours_text",
+    "value": "Ouvert tous les jours (lundi au dimanche). Ouverture des caisses une demi-heure avant la première séance de la journée.",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cinema_le_grand_palace",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cinema_le_grand_palace",
+    "field": "know",
+    "value": [
+      "Cinéma local à Les Sables-d'Olonne proposant des films à l'affiche variés.",
+      "Réservation de billets possible en ligne via TicketingCiné.",
+      "Retrouvez les Conditions Générales de Vente et Mentions Légales sur le site."
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cinema_le_grand_palace",
+    "field": "facilities",
+    "value": [
+      {
+        "name": "Réservation en ligne",
+        "detail": "Via TicketingCiné"
+      }
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cinema_le_grand_palace",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": null,
+      "live_music": false,
+      "happy_hour": null,
+      "restaurant_on_site": null,
+      "dress_code": null,
+      "id_required": null,
+      "screens": 7,
+      "versions": "VOST",
+      "snack": null,
+      "pmr": true
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "bar_rooftop_ventura",
+    "field": "pricing",
+    "value": {
+      "free_entry": null,
+      "adult": null,
+      "child": null,
+      "child_age_max": null,
+      "from_price": null,
+      "options": [
+        {
+          "label": "Brunch buffet",
+          "price": 45
+        },
+        {
+          "label": "Brunch enfant (moins de 12 ans)",
+          "price": 20
+        }
+      ],
+      "notes": "Brunch tous les dimanches. Entrée libre pour les concerts. Food & drinks sur place.",
+      "source_url": "https://vertime-lessables.com/fr/page/rooftop-bar-ventura-vertime-les-sables-d-olonne-vendee.22842.html",
+      "valid_period": null,
+      "evidence": "Buffet à 45€ par personne (20€ pour les moins de 12 ans)",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "bar_rooftop_ventura",
+    "field": "hours_text",
+    "value": "10h à 23h30 tous les jours",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "bar_rooftop_ventura",
+    "field": "closing_time",
+    "value": "23h30",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "bar_rooftop_ventura",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "bar_rooftop_ventura",
+    "field": "know",
+    "value": [
+      "Bar rooftop avec programmation riche et coucher de soleil tous les soirs",
+      "Situé à l'hôtel Vertime, face à Port-Olona aux Sables-d'Olonne",
+      "Lieu de rassemblement convivial pour manger, rire et vivre avec plaisir"
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "bar_rooftop_ventura",
+    "field": "facilities",
+    "value": [
+      {
+        "name": "Piscine",
+        "detail": "35 m², 10h à 20h, avril à septembre, clients hébergés"
+      },
+      {
+        "name": "Serre végétalisée",
+        "detail": "Se métamorphose en jardin d'hiver en basse saison"
+      }
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "bar_rooftop_ventura",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "océan, coucher de soleil",
+      "live_music": null,
+      "happy_hour": null,
+      "restaurant_on_site": true,
+      "dress_code": null,
+      "id_required": null,
+      "screens": null,
+      "versions": null,
+      "snack": null,
+      "pmr": null
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "the_goat",
+    "field": "hours_text",
+    "value": "Ouvert à l'année",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "the_goat",
+    "field": "know",
+    "value": [
+      "Bistrot/bar à vin situé au 11 quai Guiné aux Sables-d'Olonne.",
+      "Établissement ouvert à l'année.",
+      "Contact: ohmygoat85@gmail.com, présent sur Facebook et Instagram."
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "hours_text",
+    "value": "Lundi, mardi, mercredi, jeudi, dimanche et jour férié : 9h à 3h. Vendredi, samedi et veille de jour férié : 9h à 4h.",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "closing_time",
+    "value": "4h",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "age_min",
+    "value": 18,
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "know",
+    "value": [
+      "Accès réservé aux personnes majeures, pièce d'identité obligatoire.",
+      "150 machines à sous de 0,01€ à 2€, jeux de table et loisirs (mini-golf, bowling, cinéma, dancefloor, escape game).",
+      "Restaurant et bars sur place, parking gratuit, wifi gratuit."
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "facilities",
+    "value": [
+      {
+        "name": "Machines à sous",
+        "detail": "150 machines, mise 0,01€ à 2€"
+      },
+      {
+        "name": "Black jack électronique",
+        "detail": "14 postes (7 intérieur, 7 terrasse), mise mini 2€, ouvert 9h à 3h"
+      },
+      {
+        "name": "Roulette anglaise électronique",
+        "detail": "46 postes dont 8 en terrasse fumeur, mise mini 0,50€, ouvert 9h à 3h"
+      },
+      {
+        "name": "Black jack",
+        "detail": "Ouvert 20h30 à 3h (ou 4h samedi), mise mini 10€"
+      },
+      {
+        "name": "Roulette anglaise",
+        "detail": "1 table, mise mini 2€, ouvert 20h30 à 3h (ou 4h samedi)"
+      },
+      {
+        "name": "Boule",
+        "detail": "1 table, mise mini 1€, samedi 20h30 à 4h uniquement"
+      }
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "vue sur les jardins",
+      "live_music": false,
+      "happy_hour": null,
+      "restaurant_on_site": true,
+      "dress_code": "tenue correcte exigée",
+      "id_required": true,
+      "screens": null,
+      "versions": null,
+      "snack": true,
+      "pmr": null
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "pricing",
+    "value": {
+      "free_entry": true,
+      "adult": 0,
+      "child": 0,
+      "child_age_max": null,
+      "from_price": null,
+      "options": [
+        {
+          "label": "La Box Easy",
+          "price": 5.0
+        },
+        {
+          "label": "La Box Player",
+          "price": 30.0
+        }
+      ],
+      "notes": "Entrée gratuite. Options : coffrets cadeaux avec tickets de jeu et consommations.",
+      "source_url": "http://www.casino-sables-dolonne.fr/",
+      "valid_period": null,
+      "evidence": "Coffret La Box Easy 5.00 € 5€ en ticket de jeu1 boisson sans alcool offerte. Coffret La Box Player 30.00 € 30€ de ticket de jeu1 boisson offerte (hors champagne)",
+      "family_ticket": null,
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "hours_text",
+    "value": "Du dimanche au jeudi de 9h à 3h. Du vendredi au samedi de 9h à 4h. Table de Boule et Black Jack : dimanche-jeudi 20h-2h, vendredi-samedi 21h-3h. Restaurant en service continu tous les jours.",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "closing_time",
+    "value": "4h",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "age_min",
+    "value": 18,
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "booking",
+    "value": "non",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "know",
+    "value": [
+      "Entrée gratuite. Carte de fidélité BiHappy gratuite et anonyme permettant d'accéder directement en salle sans pièce d'identité.",
+      "75 machines à sous, 1 table de Boule 2000, 1 table de Blackjack, 6 postes de roulette anglaise électronique, 7 postes de Blackjack électronique.",
+      "Taux de redistribution : 92,87% des sommes jouées reversées. Restaurant Le Plat'O Resto sur place, ouvert tous les jours en service continu."
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "facilities",
+    "value": [
+      {
+        "name": "Machines à sous",
+        "detail": "75 machines, mise à partir de 0,01€"
+      },
+      {
+        "name": "Table de Boule 2000",
+        "detail": "1 table, du dimanche au jeudi 20h-2h, vendredi-samedi 21h-3h"
+      },
+      {
+        "name": "Table de Blackjack",
+        "detail": "1 table, du dimanche au jeudi 20h-2h, vendredi-samedi 21h-3h"
+      },
+      {
+        "name": "Roulette anglaise électronique",
+        "detail": "6 postes"
+      },
+      {
+        "name": "Blackjack électronique",
+        "detail": "7 postes"
+      },
+      {
+        "name": "Restaurant Le Plat'O Resto",
+        "detail": "Ouvert tous les jours en service continu"
+      }
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": "Sur le front de mer de l'Atlantique",
+      "live_music": null,
+      "happy_hour": null,
+      "restaurant_on_site": true,
+      "dress_code": null,
+      "id_required": false,
+      "screens": null,
+      "versions": null,
+      "snack": true,
+      "pmr": null
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "centre_aqualudique_aqualonne",
+    "field": "hours_text",
+    "value": "Variable selon la période (scolaire, petites vacances, grandes vacances) et l'établissement (Aqualonne, Piscine du Remblai, Piscine des Chirons)",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "centre_aqualudique_aqualonne",
+    "field": "closing_time",
+    "value": "20h15",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "centre_aqualudique_aqualonne",
+    "field": "know",
+    "value": [
+      "Trois établissements distincts : Aqualonne (centre aqua ludique avec toboggans), Piscine du Remblai (eau de mer chauffée à 29°), Piscine des Chirons (apprentissage natation)",
+      "Horaires variables selon la période scolaire, petites vacances et grandes vacances",
+      "Nombreuses activités proposées : école de natation, aqua fitness, long'côte, bébés nageurs, espace bien-être"
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "centre_aqualudique_aqualonne",
+    "field": "facilities",
+    "value": [
+      {
+        "name": "Bassin sportif",
+        "detail": null
+      },
+      {
+        "name": "Bassin ludique",
+        "detail": null
+      },
+      {
+        "name": "Toboggans",
+        "detail": null
+      },
+      {
+        "name": "Banquette à bulles et à jets",
+        "detail": null
+      },
+      {
+        "name": "Pataugeoire",
+        "detail": null
+      },
+      {
+        "name": "Espace balnéo",
+        "detail": "Piscine du Remblai"
+      }
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "centre_aqualudique_aqualonne",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "Face à l'océan (Piscine du Remblai)",
+      "live_music": null,
+      "happy_hour": null,
+      "restaurant_on_site": null,
+      "dress_code": null,
+      "id_required": null,
+      "screens": null,
+      "versions": null,
+      "snack": null,
+      "pmr": null
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "les_voiles_de_cayola",
+    "field": "hours_text",
+    "value": "Lun–Dim · 12h – 14h30 · 19h – 22h30 (restaurant) ; Lun–Dim · 11h – 00h (bar lounge)",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "les_voiles_de_cayola",
+    "field": "closing_time",
+    "value": "0h",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "les_voiles_de_cayola",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "les_voiles_de_cayola",
+    "field": "know",
+    "value": [
+      "Restaurant & bar en bord de mer perché au-dessus de l'anse de Cayola avec vue panoramique sur l'océan.",
+      "Possibilité de privatisation pour mariages, séminaires, repas en famille et cocktails (jusqu'à 200 convives selon l'événement).",
+      "Carte célébrant les produits de la mer et les saisons au restaurant ; tapas et planches à partager au bar lounge."
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "les_voiles_de_cayola",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "Vue panoramique sur l'océan et la baie",
+      "live_music": null,
+      "happy_hour": null,
+      "restaurant_on_site": true,
+      "dress_code": null,
+      "id_required": null,
+      "screens": null,
+      "versions": null,
+      "snack": true,
+      "pmr": null
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cote_ouest_thalasso_spa_mgallery",
+    "field": "hours_text",
+    "value": "Lundi au vendredi de 9h00 à 19h00, samedi de 9h00 à 18h00",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cote_ouest_thalasso_spa_mgallery",
+    "field": "closing_time",
+    "value": "19h00",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cote_ouest_thalasso_spa_mgallery",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cote_ouest_thalasso_spa_mgallery",
+    "field": "know",
+    "value": [
+      "Établissement 4 étoiles Thalasso & Spa face à la baie des Sables-d'Olonne, adossé à la pinède.",
+      "Propose 97 chambres et suites, restaurant, bar lounge, thalasso, spa beauté, club fitness, piscine intérieure avec parcours hydromarin et plage privée avec piscine extérieure chauffée.",
+      "Ouvert toute l'année avec thème décoration inspiré des paquebots des années 30."
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cote_ouest_thalasso_spa_mgallery",
+    "field": "facilities",
+    "value": [
+      {
+        "name": "Piscine intérieure",
+        "detail": "avec parcours hydromarin"
+      },
+      {
+        "name": "Piscine extérieure",
+        "detail": "chauffée à fond de sable, plage privée"
+      },
+      {
+        "name": "Thalasso & Spa",
+        "detail": "soins Sothys et Phytomer"
+      },
+      {
+        "name": "Salle de Fitness",
+        "detail": "avec coaching personnalisé"
+      },
+      {
+        "name": "Cryothérapie",
+        "detail": null
+      },
+      {
+        "name": "Restaurant",
+        "detail": "face à la mer, dont SUN DECK rooftop"
+      }
+    ],
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "cote_ouest_thalasso_spa_mgallery",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "Vue mer et baie des Sables-d'Olonne",
+      "live_music": null,
+      "happy_hour": null,
+      "restaurant_on_site": true,
+      "dress_code": null,
+      "id_required": null,
+      "screens": null,
+      "versions": null,
+      "snack": null,
+      "pmr": true
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "bar_rooftop_ventura",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/profile.php",
+      "instagram": "https://www.instagram.com/hotelvertime.lessables"
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "pricing",
+    "value": {
+      "free_entry": null,
+      "adult": 8,
+      "child": 5,
+      "child_age_max": 14,
+      "from_price": null,
+      "options": [
+        {
+          "label": "Tarif réduit (membres Club JOA, retraités, +65 ans, famille nombreuse, PMR, étudiants, demandeurs d'emploi)",
+          "price": 7
+        },
+        {
+          "label": "Carte abonnement rechargeable",
+          "price": 1.5
+        },
+        {
+          "label": "Carte 5 places",
+          "price": 28.5
+        },
+        {
+          "label": "Carte 10 places",
+          "price": 55
+        },
+        {
+          "label": "Carte art & essai 6 places",
+          "price": 25.8
+        }
+      ],
+      "notes": "L'entrée du cinéma est indépendante du casino, accessible à toute la famille et aux personnes à mobilité réduite.",
+      "source_url": "https://www.joa.fr/casinos/fouras/loisirs/cinema",
+      "valid_period": null,
+      "evidence": "Plein Tarif : 8 € Tarif Réduit : 7 € ( Membre Club JOA , retraité, + de 65 ans, famille nombreuse, personne à mobilité réduite, carte étudiant, demandeur d'emploi) Tarif -14 ans : 5 €",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "booking",
+    "value": "non",
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_joa_les_pins",
+    "field": "social",
+    "value": {
+      "instagram": "https://www.instagram.com/casino.joa.lespins",
+      "facebook": "https://www.facebook.com/CasinoJOA.LesPins"
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "casino_les_sables_d_olonne",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/casino.lessables",
+      "instagram": "https://www.instagram.com/les_atlantes"
+    },
+    "source": "sorties_detente"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Menu Passion",
+          "price": 49.5
+        },
+        {
+          "label": "Menu Révélation",
+          "price": 79.5
+        },
+        {
+          "label": "Menu des Petits (moins de 10 ans)",
+          "price": 24.0
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "Carte à la carte avec ardoise du jour, plateaux de fruits de mer à composer, vins à la carte",
+      "source_url": "https://restaurant-la-cotriade.com/la-carte-et-les-menus",
+      "valid_period": null,
+      "evidence": "Menu Passion 49,50€ Servi tous les jours, midi et soir",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "cuisine_type",
+    "value": "Poissons et fruits de mer",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "hours_text",
+    "value": "Ouvert midi et soir tous les jours en saison d'été, 2ème service à 21h15 ou 21h30 au plus tard certains soirs",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "closing_days",
+    "value": "Mardi 1er septembre, puis tous les lundis de septembre",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "products",
+    "value": [
+      "Thon rouge Bluefin",
+      "Homard bleu du vivier",
+      "Plateau de fruits de mer",
+      "La Belle Cotriade (bouillabaisse bretonne revisitée)",
+      "Poissons frais de criée (bar, turbot, dorade, Saint-Pierre)"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "booking_url",
+    "value": "https://restaurant-la-cotriade.com/",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "Face au port de pêche et au chenal, terrasse ombragée",
+      "kids_menu": true,
+      "vegetarian": null,
+      "takeaway": true,
+      "covered": null,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "know",
+    "value": [
+      "Restaurant Michelin 2026 (5e année consécutive), situé au cœur du port de pêche des Sables-d'Olonne",
+      "Cuisine ouverte : vous choisissez le poisson directement sur l'étal garni de glace face au port, puis le chef le prépare",
+      "Petits chiens autorisés en intérieur dans leur panier, autres chiens bienvenus en terrasse"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cotriade",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/lacotriadelessablesdolonne",
+      "instagram": "https://www.instagram.com/lacotriadelessablesdolonne"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "cuisine_type",
+    "value": "Crêperie",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "hours_text",
+    "value": "Lundi fermé. Mardi-jeudi 12h00-21h30. Vendredi-samedi 12h00-21h45. Dimanche 12h00-21h30.",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "closing_days",
+    "value": "Lundi",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "products",
+    "value": [
+      "Crêpes salées et sucrées",
+      "Galettes de sarrasin",
+      "Salades et bowls",
+      "Cidre artisanal bio",
+      "Glace confectionnée par maître artisan glacier"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "booking_url",
+    "value": "https://www.lapancarte.fr",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "Face mer, face à l'océan",
+      "kids_menu": true,
+      "vegetarian": null,
+      "takeaway": null,
+      "covered": null,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "know",
+    "value": [
+      "Empreinte bancaire demandée à la réservation (garantie, aucun prélèvement automatique).",
+      "Fermé du 14 au 21 décembre 2025 inclus pour congés.",
+      "Terrasse face à l'océan, ambiance boisée et végétale, produits locaux et artisanaux."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "les_regates",
+    "field": "cuisine_type",
+    "value": "Traditionnel",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "les_regates",
+    "field": "hours_text",
+    "value": "09:00 AM - 07:00 PM daily",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "les_regates",
+    "field": "products",
+    "value": [
+      "Choucroute de poissons"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "les_regates",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "les_regates",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "sweeping coastal views, sea views of the beach",
+      "kids_menu": true,
+      "vegetarian": true,
+      "takeaway": true,
+      "covered": null,
+      "shop": false
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "les_regates",
+    "field": "know",
+    "value": [
+      "Restaurant traditionnel situé 5 11 promenade Lafargue aux Sables-d'Olonne",
+      "Spécialité : la choucroute de poissons",
+      "Contact : 02 51 32 56 96 pour réservation"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "les_regates",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/placejoys",
+      "instagram": "https://www.instagram.com/placejoys"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "L'Escapade - Entrée & plat ou plat & dessert",
+          "price": 32
+        },
+        {
+          "label": "L'Escapade - Entrée, poisson ou viande & dessert",
+          "price": 39
+        },
+        {
+          "label": "L'Escapade - Entrée, poisson, viande & dessert",
+          "price": 49
+        },
+        {
+          "label": "L'Odyssée - Entrée, poisson ou viande, pré-dessert & dessert",
+          "price": 59
+        },
+        {
+          "label": "L'Odyssée - Entrée, poisson, viande, pré-dessert & dessert",
+          "price": 69
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "Fromage travaillé optionnel +8€. Accords mets et vins disponibles en découverte ou prestige. Menu enfant 25€ jusqu'à 10 ans.",
+      "source_url": "https://lacertus-restaurant.fr/",
+      "valid_period": null,
+      "evidence": "Entrée & plat ou plat & dessert : 32 €",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "cuisine_type",
+    "value": "Gastronomie, cuisine de saison",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "hours_text",
+    "value": "Midi: 12h15-13h30, Soir: 19h15-20h30",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "closing_days",
+    "value": "Mardi, mercredi, jeudi midi",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "products",
+    "value": [
+      "Huître",
+      "Poisson de la criée",
+      "Andouillette",
+      "Cassoulet",
+      "Mogette"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "booking",
+    "value": "obligatoire",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": null,
+      "kids_menu": true,
+      "vegetarian": null,
+      "takeaway": null,
+      "covered": null,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "know",
+    "value": [
+      "Réservation obligatoire, uniquement le soir. Le midi, service sans réservation fermé mardi, mercredi et jeudi.",
+      "Restaurant gastronomique avec cuisine évolutive de saison basée sur les producteurs et fournisseurs locaux.",
+      "Lacertus signifie maquereau en latin, poisson populaire et local apprécié sur les côtes vendéennes."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "lacertus",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/profile.php",
+      "instagram": "https://www.instagram.com/lacertus_restaurant"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "cuisine_type",
+    "value": "Bar-Restaurant, fruits de mer",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "hours_text",
+    "value": "Mercredi à dimanche : 9h00-15h00 et 19h00-23h00",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "closing_days",
+    "value": "Lundi, Mardi",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "products",
+    "value": [
+      "Tartares",
+      "Burgers",
+      "Viandes et poissons frais de la criée",
+      "Choucroute de la Mer",
+      "Desserts maison"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "booking_url",
+    "value": "https://www.la-ptite-cale.fr/",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "Vue imprenable sur la baie des Sables d'Olonne, vue sur l'océan",
+      "kids_menu": null,
+      "vegetarian": null,
+      "takeaway": null,
+      "covered": null,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "know",
+    "value": [
+      "Terrasse sur le remblai avec vue sur la baie des Sables d'Olonne",
+      "Carte de saison faite maison avec produits frais et locaux",
+      "Possibilité de privatiser pour événements particuliers et professionnels"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/profile.php",
+      "instagram": "https://www.instagram.com/laptitecale_lessables"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "umi_sushi",
+    "field": "cuisine_type",
+    "value": "Asiatique, Japonais, Sushis",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "umi_sushi",
+    "field": "hours_text",
+    "value": "Lundi 18:30-22:30 ; Mardi-Dimanche 11:30-14:30 et 18:30-22:30",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "umi_sushi",
+    "field": "products",
+    "value": [
+      "Sushis et maki",
+      "Poke bowl",
+      "Ramen et udon",
+      "Brochettes",
+      "Sashimi"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "umi_sushi",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": null,
+      "kids_menu": true,
+      "vegetarian": true,
+      "takeaway": null,
+      "covered": null,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "umi_sushi",
+    "field": "know",
+    "value": [
+      "Cuisine traditionnelle asiatique avec plats faits maison préparés avec ingrédients choisis.",
+      "Propose plats végans, épicés et accueil spécifique pour enfants.",
+      "Large sélection de menus individuels ou collectifs (jusqu'à 94,90€ pour 4 personnes)."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "umi_sushi",
+    "field": "social",
+    "value": {
+      "instagram": "https://www.instagram.com/umi._sushi",
+      "facebook": "https://www.facebook.com/profile.php?id=61558170561353"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_bar_12h03",
+    "field": "cuisine_type",
+    "value": "Pizzeria",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_bar_12h03",
+    "field": "products",
+    "value": [
+      "Pizzas à emporter",
+      "Pâte fine et croustillante",
+      "Ingrédients frais"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_bar_12h03",
+    "field": "booking",
+    "value": "non",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_bar_12h03",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": null,
+      "kids_menu": null,
+      "vegetarian": null,
+      "takeaway": true,
+      "covered": null,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_bar_12h03",
+    "field": "know",
+    "value": [
+      "Aucune information spécifique sur « Pizza Bar 12h03 » à Les Sables-d'Olonne n'apparaît dans les pages fournies.",
+      "Les pages contiennent uniquement des annuaires génériques de pizzerias à emporter en France et des fiches d'autres établissements.",
+      "Impossible d'extraire des données sur cet établissement."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_cosy",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Soirée Pizzas à Volonté adulte",
+          "price": 15
+        },
+        {
+          "label": "Soirée Pizzas à Volonté enfant",
+          "price": 5
+        },
+        {
+          "label": "Croque-Monsieur Bouillon Cosy",
+          "price": 10
+        },
+        {
+          "label": "Boeuf-Bourguignon Bouillon Cosy",
+          "price": 13
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "Menu Enfant offert dès 20€ d'achat (restaurants participants uniquement). Livraison 3€.",
+      "source_url": "https://pizzerias.pizzacosy.fr/les-sables-dolonne/?utm_source=google&utm_medium=organic&utm_campaign=mybusiness-website",
+      "valid_period": null,
+      "evidence": "Tous les mardis soir, c'est soirée pizzas à volonté à 15€ et 5€ pour les enfants ! Nos deux nouvelles recettes BOUILLON COSY, à prix complètement accessibles : 10€* la Croque-Monsieur, et 13€* la Boeuf-Bourguignon",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_cosy",
+    "field": "cuisine_type",
+    "value": "Pizzeria",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_cosy",
+    "field": "products",
+    "value": [
+      "Pizzas",
+      "Croque-Monsieur Bouillon Cosy",
+      "Boeuf-Bourguignon Bouillon Cosy",
+      "Menu Enfant",
+      "Soirée Pizzas à Volonté"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_cosy",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_cosy",
+    "field": "booking_url",
+    "value": "https://pizzerias.pizzacosy.fr/reservation",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_cosy",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": null,
+      "kids_menu": true,
+      "vegetarian": null,
+      "takeaway": true,
+      "covered": null,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_cosy",
+    "field": "know",
+    "value": [
+      "20 places assises intérieures et 32 places assises extérieures.",
+      "Livraison 3€ à Les Sables-d'Olonne, La Chaume, Olonne-sur-Mer, Le Château-d'Olonne ou en point de rencontre sur la plage.",
+      "Soirée Pizzas à Volonté tous les mardis soir uniquement sur place."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_cosy",
+    "field": "social",
+    "value": {
+      "instagram": "https://www.instagram.com/reel/DdUF3sElfnq",
+      "facebook": "https://www.facebook.com/pizzacosyfrance"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Entrée, plat & dessert",
+          "price": 55
+        },
+        {
+          "label": "Entrée, plat, interlude & dessert",
+          "price": 64
+        },
+        {
+          "label": "Les deux entrées, plat, interlude & dessert",
+          "price": 77
+        },
+        {
+          "label": "Menu Face à la Mer (7 temps)",
+          "price": 110
+        },
+        {
+          "label": "Accord mets et vins 3 verres (de 10 cl)",
+          "price": 33
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "Accord mets et vins disponible en 3, 4 ou 6 verres (6 verres à 55€)",
+      "source_url": "https://lequaidessaveurs.net/menu-saveurs",
+      "valid_period": null,
+      "evidence": "Entrée, plat, interlude & dessert : 64 € Les deux entrées, plat, interlude & dessert : 77 €",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "cuisine_type",
+    "value": "Gastronomique, fruits de mer",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "hours_text",
+    "value": "Ouverture le soir du mercredi au dimanche. Ouverture le midi du jeudi au dimanche.",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "closing_days",
+    "value": "Lundi et mardi",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "products",
+    "value": [
+      "Filet de poisson de la criée",
+      "Homard",
+      "Gravlax de lotte",
+      "Quasi de veau",
+      "Pastèque"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "booking_url",
+    "value": "https://lequaidessaveurs.net/",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "know",
+    "value": [
+      "Restaurant gastronomique dirigé par le Chef Maxime Dourdin et son épouse Estelle.",
+      "Menus à 7 temps mettant en avant les produits de la mer et créations culinaires.",
+      "Prise de commande jusqu'à 13h le midi et 20h45 le soir pour les menus."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "le_quai_des_saveurs",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/RESTAURANT.LEQUAI.DES.SAVEURS.LESSABLESDOLONNE",
+      "instagram": "https://www.instagram.com/lequai.des.saveurs"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "cuisine_type",
+    "value": "Fruits de mer, huîtres",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "hours_text",
+    "value": "Boutique ouverte toute l'année. Dégustation sur place de mi-avril à septembre, juillet et août également le soir.",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "closing_days",
+    "value": "mardi",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "products",
+    "value": [
+      "Huîtres de l'estuaire du Payré",
+      "Rillettes d'huîtres",
+      "Bulots",
+      "Crevettes grises",
+      "Palourdes"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "booking",
+    "value": "obligatoire",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "services",
+    "value": {
+      "terrace": true,
+      "view": "Vue imprenable sur les parcs à huîtres",
+      "kids_menu": null,
+      "vegetarian": null,
+      "takeaway": null,
+      "covered": null,
+      "shop": true
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "know",
+    "value": [
+      "Réservation obligatoire par téléphone au 02 51 90 21 83 pour la dégustation sur place.",
+      "Dégustation et terrasse ouverts de mi-avril à septembre, avec soirées en juillet-août.",
+      "Boutique ostréicole ouverte toute l'année avec produits locaux (terrines, soupes, vins vendéens, sels aromatisés)."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/people/La-Cabane-du-Payr%C3%A9/61572839566079",
+      "instagram": "https://www.instagram.com/lacabanedupayre"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_arago",
+    "field": "cuisine_type",
+    "value": "marché couvert et forain",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_arago",
+    "field": "hours_text",
+    "value": "Marché alimentaire couvert : tous les jours 7h30 à 13h. Marché forain extérieur : mardi, vendredi et dimanche 8h à 13h30",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_arago",
+    "field": "market_days",
+    "value": "Marché forain : mardi, vendredi et dimanche",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_arago",
+    "field": "products",
+    "value": [
+      "Délices de la mer",
+      "Produits de la terre",
+      "Produits du terroir"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_arago",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": null,
+      "kids_menu": null,
+      "vegetarian": null,
+      "takeaway": null,
+      "covered": true,
+      "shop": true
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_arago",
+    "field": "know",
+    "value": [
+      "Localisation : Boulevard Arago, 85100 Les Sables d'Olonne, à une dizaine de minutes à pied de la plage",
+      "L'édifice construit selon les plans de Montegilardi fait partie du patrimoine d'avant-garde de la ville",
+      "Marché alimentaire couvert ouvert tous les jours le matin, marché forain extérieur 3 jours par semaine"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_de_bretignolles_sur_mer",
+    "field": "cuisine_type",
+    "value": "marché",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_de_bretignolles_sur_mer",
+    "field": "market_days",
+    "value": [
+      "Place des Halles – face à l'église : jeudi / dimanche",
+      "Les Halles (avril à septembre) : mardi / mercredi / jeudi / vendredi / samedi / dimanche",
+      "Les Halles (octobre à mars) : jeudi / samedi / dimanche",
+      "La Parée (juillet/août) : lundi"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_de_bretignolles_sur_mer",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": null,
+      "kids_menu": null,
+      "vegetarian": null,
+      "takeaway": null,
+      "covered": true,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_de_bretignolles_sur_mer",
+    "field": "know",
+    "value": [
+      "Aucune information sur le Marché de Brétignolles-sur-Mer n'est présente dans les pages fournies",
+      "La page fournie concerne uniquement la Fédération Nationale des Marchés de France (site marchesdefrance.fr)",
+      "Données insuffisantes pour compléter ce formulaire"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "marche_de_bretignolles_sur_mer",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/F%C3%A9d%C3%A9ration-Nationale-des-Syndicats-des-Commer%C3%A7ants-des-March%C3%A9s-de-France-308167020058013"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Gros Sel FOU 500g",
+          "price": 4.0
+        },
+        {
+          "label": "Gros Sel 500g AUX PETITS LEGUMES",
+          "price": 4.0
+        },
+        {
+          "label": "Gros Sel 500g FORESTIER AUX PETITS CHAMPIGNONS",
+          "price": 4.0
+        },
+        {
+          "label": "Gros Sel 500g AUX 3 ALGUES",
+          "price": 4.0
+        },
+        {
+          "label": "Assortiment GROS SEL Aromatisés (4x100g)",
+          "price": 5.1
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": null,
+      "source_url": "http://www.seldeliledolonne.com/",
+      "valid_period": null,
+      "evidence": "GROS SEL FOU 500g 4,00 €",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "cuisine_type",
+    "value": "producteur de sel marin, marais salant",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "hours_text",
+    "value": "Cabane de vente : du 1er juin 2026 au 30 septembre 2026, tous les jours (lundi au dimanche) de 9h à 19h. Marché : mercredi et samedi de 8h à 13h",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "market_days",
+    "value": "mercredi et samedi aux Halles Éphémères des Sables d'Olonne",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "products",
+    "value": [
+      "Gros Sel Marin",
+      "Gros Sel Aromatisé",
+      "Fleur de Sel",
+      "Sel Fin",
+      "Salicornes"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "booking",
+    "value": "non",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": "marais salants",
+      "kids_menu": null,
+      "vegetarian": null,
+      "takeaway": true,
+      "covered": null,
+      "shop": true
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "know",
+    "value": [
+      "Exploitants : Julien Lardeux et Yohan-Paul Eveno, sauniers exploitant 80 aires salantes selon des méthodes traditionnelles",
+      "Cabane de vente en marais ouverte juin-septembre, présence marché toute l'année aux Halles Éphémères des Sables d'Olonne",
+      "Pas de visites guidées proposées ; découverte libre et gratuite des marais par sentiers de promenade"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "sel_de_l_ile_d_olonne",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/selileolonne"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "vignobles_mourat",
+    "field": "pricing",
+    "value": {
+      "options": [],
+      "avg_price": null,
+      "free_entry": true,
+      "notes": "Visite et dégustation à 15h d'avril à septembre. Contact préalable souhaité.",
+      "source_url": null,
+      "valid_period": "avril à septembre",
+      "evidence": "Tarifs Gratuit",
+      "adult": 0,
+      "child": 0,
+      "family_ticket": null,
+      "stale": false,
+      "source_label": "office de tourisme",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "vignobles_mourat",
+    "field": "cuisine_type",
+    "value": "cave viticole",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "vignobles_mourat",
+    "field": "hours_text",
+    "value": "Visite et dégustation à 15h d'avril à septembre. Du mardi au samedi en journée complète sur réservation (avril à septembre).",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "vignobles_mourat",
+    "field": "products",
+    "value": [
+      "vins Loire Méridionale"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "vignobles_mourat",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "vignobles_mourat",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": "vignoble, coteaux",
+      "kids_menu": null,
+      "vegetarian": null,
+      "takeaway": false,
+      "covered": null,
+      "shop": true
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "vignobles_mourat",
+    "field": "know",
+    "value": [
+      "Site officiel des Vignobles Mourat situé en Loire Méridionale, Mareuil-sur-Lay.",
+      "Les vignobles sont basés sur des valeurs d'ouverture au monde et de patrimoine culturel régional.",
+      "Proposent dégustations, œnotourisme et visite des vignobles en vidéo."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "vignobles_mourat",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/vignoblesmourat",
+      "instagram": "https://www.instagram.com/vignoblesmourat"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "famille_mary",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Miel d'amandier à la pesée",
+          "price": 15.95
+        },
+        {
+          "label": "Miel de forêt de Vendée à la pesée",
+          "price": 18.95
+        },
+        {
+          "label": "Miel bio de châtaignier d'Isère à la pesée",
+          "price": 26.9
+        },
+        {
+          "label": "Préparation miel & gelée royale à la pesée",
+          "price": 48.0
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "Tarifs à la pesée en €/kg, sous réserve de disponibilité",
+      "source_url": "https://www.famillemary.fr/les-sables-d-olonne",
+      "valid_period": null,
+      "evidence": "Miel d'amandier* – 15,95 €/kg",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "famille_mary",
+    "field": "cuisine_type",
+    "value": "boutique de produits de la ruche",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "famille_mary",
+    "field": "hours_text",
+    "value": "mardi - samedi : 10h – 12h30 / 14h30 – 19h",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "famille_mary",
+    "field": "closing_days",
+    "value": "lundi, dimanche",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "famille_mary",
+    "field": "products",
+    "value": [
+      "Miel de Vendée",
+      "Miel associé à la fleur de sel des Sables-d'Olonne",
+      "Gelée royale",
+      "Propolis",
+      "Pollen"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "famille_mary",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": "À quelques pas de la plage",
+      "kids_menu": null,
+      "vegetarian": null,
+      "takeaway": true,
+      "covered": null,
+      "shop": true
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "famille_mary",
+    "field": "know",
+    "value": [
+      "Boutique à quelques pas de la plage ouverte toute l'année",
+      "Dégustations de miels et découvertes de produits de la ruche sur place",
+      "Spécialité locale : miel de Vendée avec fleur de sel des Sables-d'Olonne"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "famille_mary",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/famillemaryFR",
+      "instagram": "https://www.instagram.com/famille_mary"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "conserverie_la_sablaise",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Atelier Calendrier de l'Avent",
+          "price": 12
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "Prix par enfant",
+      "source_url": "https://lasablaise.fr/produit/atelier-calendrier-avent-mercredi-18-novembre-2026",
+      "valid_period": null,
+      "evidence": "Tarif : 12€/enfant",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "conserverie_la_sablaise",
+    "field": "cuisine_type",
+    "value": "conserverie de fruits de mer",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "conserverie_la_sablaise",
+    "field": "products",
+    "value": [
+      "Sardines aux tomates séchées à l'huile d'olive",
+      "Soupe de Poissons MSC",
+      "Rillettes et tartinables de poisson",
+      "Marinades de poisson",
+      "Cœur de thon blanc fumé"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "conserverie_la_sablaise",
+    "field": "booking",
+    "value": "conseillée",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "conserverie_la_sablaise",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": null,
+      "kids_menu": true,
+      "vegetarian": null,
+      "takeaway": null,
+      "covered": null,
+      "shop": true
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "conserverie_la_sablaise",
+    "field": "know",
+    "value": [
+      "Conserverie familiale implantée depuis 30 ans à Olonne-sur-Mer sur la côte atlantique.",
+      "Atelier enfants « Calendrier de l'Avent de la mer » au Comptoir de la Sablaise, réservation via l'office de tourisme.",
+      "Vente en ligne et en boutique de produits 100% français : soupes, conserves, tartinables, marinades et sauces."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "conserverie_la_sablaise",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/ConserverieLaSablaise",
+      "instagram": "https://www.instagram.com/conserverie_la_sablaise"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "domaine_saint_nicolas",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Tarif indiv. adulte",
+          "price": 5
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "À partir de 18 ans. Réservation obligatoire.",
+      "source_url": "https://www.payssaintgilles-tourisme.fr/agenda/visitez-nos-entreprises-domaine-saint-nicolas/",
+      "valid_period": "2026",
+      "evidence": "Tarif indiv. adulte Min. 5€",
+      "stale": false,
+      "source_label": "office de tourisme",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "domaine_saint_nicolas",
+    "field": "cuisine_type",
+    "value": "cave viticole",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "domaine_saint_nicolas",
+    "field": "hours_text",
+    "value": "10h00 à 11h15",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "domaine_saint_nicolas",
+    "field": "products",
+    "value": [
+      "vins"
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "domaine_saint_nicolas",
+    "field": "booking",
+    "value": "obligatoire",
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "domaine_saint_nicolas",
+    "field": "services",
+    "value": {
+      "terrace": null,
+      "view": "terroir dans les vignes",
+      "kids_menu": false,
+      "vegetarian": null,
+      "takeaway": null,
+      "covered": null,
+      "shop": null
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "domaine_saint_nicolas",
+    "field": "know",
+    "value": [
+      "Visite guidée du domaine viticole SAS Vignobles Michon dans le cadre des Journées Régionales de la Visite d'Entreprise.",
+      "Découverte du métier de vigneron : visite du terroir dans les vignes, présentation du chai, explication de la Biodynamie.",
+      "Jauge limitée à 15 personnes par session. Créneaux disponibles 21, 22, 23 et 24 octobre 2026 à 10h."
+    ],
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_pancarte",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Menu enfant (jusqu'à 10 ans)",
+          "price": 9.5
+        },
+        {
+          "label": "Formule du midi (mardi au vendredi de 12h à 14h)",
+          "price": 13.0
+        },
+        {
+          "label": "Galette sur-mesure 1 ingrédient",
+          "price": 6.5
+        },
+        {
+          "label": "Galette sur-mesure 2 ingrédients",
+          "price": 8.5
+        },
+        {
+          "label": "Galette sur-mesure 3 ingrédients",
+          "price": 11.5
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "Prix à la carte pour les galettes, salades et bowls; boissons en supplément",
+      "source_url": "https://userdocs.zenchef.com/360144/0fg2RoLTnurPFJWX1NBVDLw7oMOK8efyvdliHbos.pdf",
+      "valid_period": null,
+      "evidence": "1 galette enfant (jambon, fromage) + 1 crêpe sucre ou pot de glace + 1 sirop à l'eau 9,50 €",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_p_tite_cale",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "MENU PAPOTES",
+          "price": 12
+        }
+      ],
+      "avg_price": 12,
+      "source_url": "https://www.boot2web.com/docs/carte-la-ptite-cale.pdf",
+      "source_label": "carte du site (photo)",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "la_cabane_du_ptitgas",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "6 Huîtres n°2",
+          "price": 8.2
+        },
+        {
+          "label": "6 Huîtres n°3",
+          "price": 7.5
+        },
+        {
+          "label": "6 Huîtres n°4",
+          "price": 6.2
+        },
+        {
+          "label": "12 Huîtres n°1",
+          "price": 7.0
+        },
+        {
+          "label": "Rillettes d'Huîtres de la Cabane du Payré",
+          "price": 9.0
+        }
+      ],
+      "avg_price": null,
+      "free_entry": null,
+      "notes": "Les huîtres sont servis avec du citron ainsi que du beurre et nos fruits de mer avec de la mayonnaise Morin ou du beurre.",
+      "source_url": "https://lacabanedupayre.fr/wp-content/uploads/2026/04/carte-La-Cabane-du-Payre-2026.pdf.pdf.pdf",
+      "valid_period": "2026",
+      "evidence": "6 Huîtres n°1 6.00€, 12 Huîtres n°1 7.00€, Rillettes d'Huîtres de la Cabane du Payré 9,00€",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "pizza_bar_12h03",
+    "field": "social",
+    "value": {
+      "instagram": "https://www.instagram.com/pizzabar12h03"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "umi_sushi",
+    "field": "pricing",
+    "value": {
+      "options": [
+        {
+          "label": "Poke bowl vegetarien",
+          "price": 12.9
+        },
+        {
+          "label": "Poke bowl saumon",
+          "price": 14.9
+        },
+        {
+          "label": "Soupe de udon au boeuf et legumes",
+          "price": 12.9
+        },
+        {
+          "label": "Ramen au Porc",
+          "price": 17.9
+        },
+        {
+          "label": "Menu Chirashi saumon cru",
+          "price": 15.9
+        }
+      ],
+      "avg_price": null,
+      "dish_price_range": {
+        "min": 12.9,
+        "max": 94.9
+      },
+      "free_entry": null,
+      "notes": "Menus complets incluant soupe, salade et/ou riz selon formule. Boissons en supplément.",
+      "source_url": "https://www.umisushi85.fr/menu/",
+      "valid_period": null,
+      "evidence": "Poke bowl vegetarien 12.90",
+      "stale": false,
+      "source_label": "site officiel",
+      "verified_at": "2026-09-16"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "halles_de_la_chaume",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/p/Le-march%C3%A9-de-la-chaume-61578164421523"
+    },
+    "source": "manger_terroir"
+  },
+  {
+    "poi": "murielle_patrick_guyau",
+    "field": "social",
+    "value": {
+      "facebook": "https://www.facebook.com/p/Murielle-et-Patrick-GUYAU-100063295446031"
+    },
+    "source": "manger_terroir"
   }
 ]

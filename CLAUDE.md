@@ -142,6 +142,20 @@ Prototype mobile avec :
 - **Photos : point ouvert.** Les 102 photos viennent de Google Images → à remplacer avant tout lancement public (accord des lieux, Wikimedia Commons, photothèques d'offices de tourisme, ou Google Places API en direct sans stockage)
 - Avis manquants rattrapables : Port de Bourgenay (cid absent), Vouvant, AxeYon Paintball, Parc Philippe Perrocheau — script prêt (`scratchpad/refetch_reviews.py`), pas encore lancé
 
+### 2026-09-17 — Prix des restaurants, liens Google, faux sites officiels
+- **Liens « Voir les avis » réparés** : `inject_pois.py` construisait `https://www.google.com/maps/search/?query=place_id:xxx`, que Maps interprétait comme une adresse → page d'erreur. On passe par le **cid** (`https://maps.google.com/?cid=...`), qui ouvre directement la fiche : 80 POIs sur 84 (les 4 autres n'ont ni cid ni place_id)
+- **App installée sur l'écran d'accueil** : `target="_blank"` y est ignoré, les liens externes ne s'ouvraient pas. Un handler global en capture les intercepte et appelle `window.open`
+- **`dish_price_range`** (famille Manger) : quand un restaurant n'affiche que des plats à l'unité, on relève le prix du **plat principal** le moins cher et du plus cher — ni entrées, ni desserts, ni boissons, ni plateaux à partager. Les deux bornes doivent figurer dans la page. Fiche : badge « 12,90–24,90 € », ligne « Plats à la carte », et estimation pour le groupe dans « Y aller » quand il n'y a pas de prix moyen
+- **Garde-fou plateau à partager** : une fourchette dont le haut dépasse 60 € ou 3,5× le bas est écartée (UMI Sushi sortait 12,90–94,90 € à cause du « Menu Bateaux » pour 4 personnes → 379 € annoncés pour un groupe)
+- **Annuaires déguisés en site officiel** : `lesregates.shop` reprend le nom du restaurant mais c'est un gabarit d'annuaire (même page Facebook « placejoys » pour tous ses lieux). `_is_directory_clone` le repère au contenu (« Add Your Place », « How It Works »… 2 marqueurs minimum) et ignore le site. Données déjà stockées depuis ces faux sites : purgées
+- **Mots trop communs** (`GENERIC_TOKENS`) : « Pizza Bar 12h03 » tombait sur `pizzas-a-emporter.restaurants-de-france.fr` parce que « pizza » figure dans le domaine — le pipeline crawlait ensuite des pages de Saint-Prix ou Barneville-Carteret. Ces mots ne peuvent plus servir à identifier un site ; les annuaires nationaux rejoignent `AGGREGATORS`
+- **`_find_official_site`** lance une 2e requête sans « site officiel » : cette expression ne remonte que des annuaires, le vrai domaine n'apparaît qu'en recherche nue (`restaurantlesregates.fr`)
+- **`_price_in_text`** accepte un montant écrit à deux décimales sans symbole € (« 2.00 ») : la notation est trop précise pour être une coïncidence. Avant, un prix entier sans € faisait annuler toute la fourchette
+- **Type de cuisine** (`cuisine_label` dans inject_pois.py) : la catégorie Google prend le relais quand l'extraction est vide ou revient en anglais — Pizza Bar 12h03 → « Pizza · Bar », Les Régates → « Restaurant français » au lieu de « French coastal dining »
+- **Couverture Manger & terroir : 12 POIs sur 19, dont 8 restaurants sur 10.** Sans ordre de prix : Les Régates et Pizza Bar 12h03 (rien de publié nulle part), 4 marchés sur 5, Vignobles Mourat
+- Fiches encore vides : **Halles de La Chaume** (aucune source trouvée, ni site ni horaires) et **Murielle & Patrick Guyau**
+- Tests de rendu : `test_mt_render.js`, `test_st_render.js`, `test_pl_render.js` — 0 erreur
+
 ### Avant (historique)
 - 34 POIs dans output_global.json (11 plages + 17 nature/promenades/ports + 6 Villages & Sites)
 - 33 POIs injectés dans planly-full.html (≥85% complets)

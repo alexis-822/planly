@@ -1135,7 +1135,7 @@ Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
   "pricing": {{
     "options": [{{"label": "ex: Formule du midi, Menu dégustation, Dégustation 3 vins", "price": nombre}}] (6 maximum, [] si aucun),
     "avg_price": prix moyen par personne à la carte en euros (nombre) ou null,
-    "dish_price_range": {{"min": nombre, "max": nombre}} quand la carte ne propose que des plats à l'unité (prix du plat le moins cher et du plus cher, hors boissons), sinon null,
+    "dish_price_range": {{"min": nombre, "max": nombre}} = prix du plat principal le moins cher et du plus cher, sinon null,
     "free_entry": true si l'entrée ou la dégustation est gratuite, sinon null,
     "notes": précision courte (boissons comprises, supplément...) ou null,
     "source_url": URL de la page des tarifs ou de la carte, ou null,
@@ -1154,7 +1154,11 @@ Extrais UNIQUEMENT ce qui est écrit dans ces pages. Réponds avec ce JSON :
 }}
 
 - Recopie les prix exactement tels qu'écrits, sans calcul.
-- Ne recopie jamais la carte des plats : seulement les formules et menus avec leur prix.
+- Ne recopie pas toute la carte : dans options, seulement les formules et menus.
+- Si le lieu n'affiche que des plats à l'unité, laisse options vide et renseigne
+  dish_price_range. Ne compte que les plats principaux : ni entrées, ni desserts, ni
+  accompagnements, ni boissons, ni plateaux ou menus à partager pour plusieurs personnes.
+  Recopie les deux prix tels qu'écrits, avec leurs centimes.
 - N'invente ni horaire ni jour de fermeture : null si ce n'est pas écrit.
 - Marchés : market_days et products sont l'essentiel, covered dit si la halle est couverte.
 - Dégustations : options = les formules de dégustation, shop = boutique sur place."""
@@ -1317,7 +1321,16 @@ def official_candidate_urls(home_page: dict, robots) -> list[str]:
 
 AGGREGATORS = ("tripadvisor.", "thefork.", "lafourchette.", "petitfute.", "yelp.", "pagesjaunes.",
                "facebook.", "instagram.", "google.", "linktr.ee", "booking.com", "expedia.", "mapstr.",
-               "opentable.", "michelin.", "annuaire-entreprises", "societe.com", "infogreffe.", "youtube.")
+               "opentable.", "michelin.", "annuaire-entreprises", "societe.com", "infogreffe.", "youtube.",
+               "restaurants-de-france.", "maville.com", "justacote.", "cylex", "118000.", "linternaute.")
+
+# Mots trop communs pour identifier un site : "Pizza Bar 12h03" tombait sur
+# pizzas-a-emporter.restaurants-de-france.fr parce que "pizza" est dans le domaine.
+GENERIC_TOKENS = {"pizza", "pizzas", "sushi", "sushis", "resto", "restaurant", "brasserie", "creperie",
+                  "crepe", "bistrot", "bistro", "cafe", "glacier", "plage", "casino", "cinema",
+                  "piscine", "thalasso", "marche", "halle", "halles", "domaine", "cave", "moulin",
+                  "jardin", "parc", "musee", "chateau", "port", "ferme", "maison", "table", "grill",
+                  "burger", "traiteur", "boulangerie", "hotel", "camping", "centre", "club"}
 
 
 SOCIAL_RE = re.compile(r"https?://(?:[a-z-]+\.)?(facebook|instagram)\.com/(profile\.php\?id=\d+|[^\"'<>\s?#]+)", re.I)
@@ -1337,18 +1350,36 @@ def _social_links(html: str, seed: str = "") -> dict:
 def _find_official_site(poi: dict) -> str:
     """Cherche le site officiel quand Google ne le donne pas : un mot du nom doit être dans le domaine."""
     tokens = [t for t in re.split(r"[^a-z0-9]+", unicodedata.normalize("NFKD", poi.get("name", "").lower())
-                                  .encode("ascii", "ignore").decode()) if len(t) > 3]
+                                  .encode("ascii", "ignore").decode())
+              if len(t) > 3 and t not in GENERIC_TOKENS]
     if not tokens:
         return ""
-    for s in search_organic(f"{poi.get('name', '')} {poi.get('commune', '')} site officiel", depth=10):
-        host = _host(s["url"])
-        if any(a in host for a in AGGREGATORS) or INSTITUTIONAL_RE.search(host):
-            continue
-        flat = re.sub(r"[^a-z0-9]", "", host)
-        if any(t in flat for t in tokens):
-            log.info(f"  [site officiel trouvé] {host}")
-            return f"https://{host}"
+    # "site officiel" ne remonte souvent que des annuaires ; la recherche nue trouve
+    # parfois le vrai domaine (restaurantlesregates.fr n'apparaît que comme ça)
+    for query in (f"{poi.get('name', '')} {poi.get('commune', '')} site officiel",
+                  f"{poi.get('name', '')} {poi.get('commune', '')}"):
+        for s in search_organic(query, depth=10):
+            host = _host(s["url"])
+            if any(a in host for a in AGGREGATORS) or INSTITUTIONAL_RE.search(host):
+                continue
+            flat = re.sub(r"[^a-z0-9]", "", host)
+            if any(t in flat for t in tokens):
+                log.info(f"  [site officiel trouvé] {host}")
+                return f"https://{host}"
     return ""
+
+
+CLONE_MARKERS = (r"add your (place|business|restaurant)", r"how it works", r"claim (this|your) (listing|business)",
+                 r"explore (france|destinations)", r"write a review", r"ajoutez? votre (etablissement|restaurant)",
+                 r"revendiquer cette fiche", r"inscrivez votre")
+
+
+def _is_directory_clone(page: dict) -> bool:
+    """Annuaire déguisé en site du lieu : lesregates.shop reprend le nom du restaurant
+    mais c'est un gabarit d'annuaire (mêmes réseaux sociaux pour tous ses "clients")."""
+    text = (page.get("content") or "")[:4000]
+    hits = sum(1 for m in CLONE_MARKERS if re.search(m, text, re.I))
+    return hits >= 2
 
 
 MENU_IMG_RE = re.compile(r"carte|menu|ardoise|formule", re.I)
@@ -1459,10 +1490,10 @@ def _price_in_text(value, text: str) -> bool:
     if any(re.search(rf"(?<![\d,.]){re.escape(v)}(?![\d])\s?(?:€|euros?\b|eur\b)|€\s?{re.escape(v)}(?![\d,.])", t, re.I)
            for v in variants):
         return True
-    # certaines cartes omettent le symbole € : "soupe miso 2.50". On l'accepte seulement
-    # pour un montant à centimes, trop précis pour être une coïncidence.
-    return bool(cents) and any(re.search(rf"(?<![\d,.]){re.escape(v)}(?![\d])", t)
-                               for v in (f"{euros},{cents:02d}", f"{euros}.{cents:02d}"))
+    # certaines cartes omettent le symbole € : "soupe miso 2.50". On l'accepte quand le
+    # montant est écrit à deux décimales, notation trop précise pour être une coïncidence.
+    return any(re.search(rf"(?<![\d,.]){re.escape(v)}(?![\d])", t)
+               for v in (f"{euros},{cents:02d}", f"{euros}.{cents:02d}"))
 
 
 def _stale_year(pricing: dict) -> int | None:
@@ -1484,7 +1515,7 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
     found, tried = {}, set()
     website = (poi.get("website") or "").strip()
     social_seed = website if SOCIAL_RE.search(website) else ""
-    if any(d in website for d in NOT_OFFICIAL_DOMAINS):
+    if any(d in website for d in NOT_OFFICIAL_DOMAINS + AGGREGATORS):
         website = ""
     if not website:
         website = _find_official_site(poi)
@@ -1540,6 +1571,13 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
             if isinstance(dpr, dict) and not (_price_in_text(dpr.get("min"), text)
                                               and _price_in_text(dpr.get("max"), text)):
                 pr["dish_price_range"] = None
+            dpr = pr.get("dish_price_range")
+            if isinstance(dpr, dict):
+                lo, hi = _to_float(dpr.get("min")), _to_float(dpr.get("max"))
+                # un "plat" à 94,90 € est un plateau à partager : la fourchette ne veut
+                # plus rien dire pour une personne, on préfère ne rien afficher
+                if not lo or not hi or hi > 60 or hi > 3.5 * lo:
+                    pr["dish_price_range"] = None
             pr["options"] = [o for o in (pr.get("options") or [])
                              if isinstance(o, dict) and _price_in_text(o.get("price"), text)][:5]
         if pr and pr.get("adult") is None and pr.get("child") is None and not pr.get("family_ticket") \
@@ -1561,6 +1599,9 @@ def _run_official_pipeline(client, poi: dict, report: list, keys: list, prompt: 
     # 1. Site officiel : accueil + pages les plus pertinentes (liens et sitemap)
     if home:
         home_page = _fetch_page(home, robots)
+        if home_page and _is_directory_clone(home_page):
+            log.info(f"    {domain} est un annuaire déguisé, site ignoré")
+            home, domain, home_page = "", "", None
         if home_page:
             social = _social_links(home_page["html"], social_seed)
             if social:

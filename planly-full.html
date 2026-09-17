@@ -1637,7 +1637,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609162038"></script>
+<script src="pois.js?v=202609172024"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2723,7 +2723,7 @@ function _mtMealBlock(p,sp){
   var avg=_plNum(pr.avg_price),dpr=pr.dish_price_range||null;
   var dMin=dpr?_plNum(dpr.min):null,dMax=dpr?_plNum(dpr.max):null;
   if(!opts.length&&avg==null&&dMin==null)return'';
-  var sub=sp.cuisine_type?_escHtml(String(sp.cuisine_type)):'Formules publiées par le lieu';
+  var sub=sp.cuisine_type?_escHtml(String(sp.cuisine_type)):(opts.length?'Formules publiées par le lieu':'Prix des plats à la carte');
   return'<div class="pl-block meal"><div class="pl-block-hd">'+MT_ICON_MEAL
     +'<div class="pl-block-info"><div class="pl-block-title">Ce qu\'on y mange</div><div class="pl-block-sub">'+sub+'</div></div>'
     +(avg!=null?'<div class="pl-block-badge">~'+_plEuro(avg)+' / pers</div>'
@@ -2735,7 +2735,9 @@ function _mtMealBlock(p,sp){
     +(pr.notes?'<div class="st-item-detail" style="padding:2px 2px 0">'+_escHtml(String(pr.notes))+'</div>':'')
     +'</div></div>';
 }
-function _mtMarketBlock(sp){
+function _mtMarketBlock(sp,subcat){
+  // réservé aux marchés : un restaurant a lui aussi des "produits", mais pas de jour de marché
+  if(subcat!=='Marchés & Terroir')return'';
   var days=sp.market_days?String(sp.market_days):'',prods=(sp.products||[]).slice(0,6);
   if(!days&&!prods.length)return'';
   var sv=sp.services||{};
@@ -2749,9 +2751,12 @@ function _mtMarketBlock(sp){
 }
 function _mtBookCard(p,sp){
   var rows=[],pr=sp.pricing||{},avg=_plNum(pr.avg_price),g=_plGroup(),n=g.adults+g.kids.length;
+  var dpr=pr.dish_price_range||null,dMin=dpr?_plNum(dpr.min):null,dMax=dpr?_plNum(dpr.max):null;
   if(sp.booking)rows.push(['Réservation',String(sp.booking).charAt(0).toUpperCase()+String(sp.booking).slice(1)]);
   if(sp.closing_days)rows.push(['Fermeture',String(sp.closing_days)]);
   if(avg!=null)rows.push(['Pour vous '+n+', à la carte','~'+_plEuro(avg*n)]);
+  // pas de prix moyen publié : on encadre avec les plats principaux, hors boissons
+  else if(dMin!=null&&dMax!=null)rows.push(['Pour vous '+n+', les plats',_plEuro(dMin*n)+'–'+_plEuro(dMax*n)]);
   if(!rows.length)return'';
   var url=sp.booking_url||(sp.official_source&&sp.official_source.url)||'';
   var v=(sp.official_source&&sp.official_source.verified_at)?sp.official_source.verified_at.split('-').reverse().join('/'):'';
@@ -2955,7 +2960,7 @@ function _renderPoiBody(p,mode){
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];
     sectionLabel=sub==='Restaurants'?'Le restaurant':sub==='Marchés & Terroir'?'Le marché':'La dégustation';
-    specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+_mtMealBlock(p,sp)+_mtMarketBlock(sp)+_mtBookCard(p,sp);
+    specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+_mtMealBlock(p,sp)+_mtMarketBlock(sp,p.subcategory)+_mtBookCard(p,sp);
     var mtPills=[];
     if(mv.terrace)mtPills.push('<span class="bch-pill bch-ps">☀️ Terrasse</span>');
     if(mv.view)mtPills.push('<span class="bch-pill bch-pi">🌊 '+_escHtml(String(mv.view).slice(0,30))+'</span>');

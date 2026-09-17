@@ -20331,7 +20331,13 @@
       }
     ],
     "place_topics": null,
-    "booking_url": null,
+    "booking_url": [
+      {
+        "type": "menu",
+        "title": "restaurant-la-cotriade.com",
+        "url": "https://restaurant-la-cotriade.com/la-carte-et-les-menus/"
+      }
+    ],
     "cid": "13596341850109345554",
     "place_id": "ChIJ_c3YWPtnBEgREn-LTODor7w",
     "wikipedia_description": "La cotriade ou cotriade bretonne (du breton kaoteriad) est une spécialité culinaire traditionnelle de soupe de poisson, de la cuisine bretonne, originaire du Morbihan, à base de divers poissons, crustacés et fruits de mer.",
@@ -20451,7 +20457,94 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/54/db/46/la-cotriade.jpg?w=700&h=700&s=1",
       "https://cdt85.media.tourinsoft.eu/upload/35322-lacotriade1.jpg",
       "https://restaurant-la-cotriade.com/medias/3-St-Pierre-1-768x1024.jpg"
-    ]
+    ],
+    "category_google": "Restaurant de fruits de mer",
+    "additional_categories": [
+      "Restaurant de poisson",
+      "Restaurant gastronomique"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable",
+        "serves_cocktails_notable",
+        "serves_dessert_notable",
+        "serves_wine_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_parking",
+        "has_wheelchair_accessible_seating",
+        "has_wheelchair_accessible_restroom"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_beer",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_vegetarian",
+        "serves_healthy",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_restroom"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_cozy",
+        "feels_quiet",
+        "feels_upscale",
+        "feels_romantic"
+      ],
+      "crowd": [
+        "welcomes_families",
+        "suitable_for_groups",
+        "welcomes_lgbtq",
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "recommends_reservations_lunch",
+        "requires_reservations",
+        "recommends_reservations_dinner",
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ],
+      "children": [
+        "has_high_chairs",
+        "welcomes_children",
+        "has_childrens_menu"
+      ],
+      "parking": [
+        "has_parking_lot_free",
+        "has_parking_lot_paid",
+        "has_parking_street_paid"
+      ],
+      "pets": [
+        "welcomes_dogs",
+        "allows_dogs_outside"
+      ]
+    }
   },
   {
     "id": "la_pancarte",
@@ -20783,7 +20876,72 @@
       "https://cdt85.media.tourinsoft.eu/upload/la-pancarte-07.jpg",
       "https://www.lapancarte.fr/i/la-pancarte-640279/3/6/0/1/4/4/1/5/1/9/1/6/7/1714256897_482/3811daa10e2c296cbcde7d55af9a22c0.jpg",
       "https://cdt85.media.tourinsoft.eu/upload/LA-PANCARTE-07-1-.jpg"
-    ]
+    ],
+    "category_google": "Crêperie",
+    "additional_categories": [
+      "Bistro",
+      "Marchand de glaces"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable",
+        "serves_dessert_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_beer",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_healthy",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_breakfast",
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_restroom"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_cozy",
+        "feels_quiet"
+      ],
+      "crowd": [
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "recommends_reservations_lunch",
+        "recommends_reservations_dinner",
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc",
+        "accepts_sodexo_meal_voucher",
+        "accepts_meal_coupons"
+      ],
+      "children": [
+        "welcomes_children",
+        "has_childrens_menu"
+      ]
+    }
   },
   {
     "id": "les_regates",
@@ -20818,7 +20976,13 @@
     ],
     "reviews": [],
     "place_topics": null,
-    "booking_url": null,
+    "booking_url": [
+      {
+        "type": "menu",
+        "title": "facebook.com",
+        "url": "https://www.facebook.com/lesregatesrestaurant/menu"
+      }
+    ],
     "cid": "1368211732573977009",
     "place_id": "ChIJi3lwcPxnBEgRsfmXWVLd_BI",
     "wikipedia_description": null,
@@ -20855,51 +21019,33 @@
     "rainy_day_activity": true,
     "conseil_planly": "En couple, réservez une table en terrasse côté mer pour profiter du coucher de soleil sur l'Atlantique. En famille, venez tôt pour éviter l'attente et laisser les enfants observer les bateaux depuis la promenade.",
     "specific": {
-      "cuisine_type": "Fruits de mer, cuisine française",
-      "hours_text": "09:00 AM - 07:00 PM tous les jours",
+      "cuisine_type": "Traditionnel",
       "products": [
-        "Tataki de thon",
-        "Moules frites",
-        "Crêpes",
-        "Fruits de mer frais",
-        "Filet de poisson aux agrumes"
+        "Choucroute de poissons"
       ],
       "booking": "conseillée",
-      "services": {
-        "terrace": true,
-        "view": "Vue sur la mer et la promenade",
-        "kids_menu": true,
-        "vegetarian": true,
-        "takeaway": true,
-        "covered": null,
-        "shop": null
-      },
       "know": [
-        "Restaurant situé 11 Prom. de l'Amiral Lafargue, Les Sables-d'Olonne, directement en bord de mer.",
-        "Ambiance décontractée et raffinée, accueil chaleureux, service attentif sans précipitation.",
-        "Portions généreuses, menu enfants disponible, réservations recommandées pour le déjeuner et le dîner."
+        "Restaurant traditionnel situé 5 11 promenade Lafargue aux Sables-d'Olonne",
+        "Spécialité : la choucroute de poissons",
+        "Contact : 02 51 32 56 96 pour réservation"
       ],
-      "social": {
-        "facebook": "https://www.facebook.com/placejoys",
-        "instagram": "https://www.instagram.com/placejoys"
-      },
       "official_source": {
-        "url": "https://lesregates.shop/",
+        "url": null,
         "verified_at": "2026-09-16"
       }
     },
     "specific_status": {
       "pricing": "empty",
       "cuisine_type": "auto",
-      "hours_text": "auto",
+      "hours_text": "empty",
       "closing_days": "empty",
       "market_days": "empty",
       "products": "auto",
       "booking": "auto",
       "booking_url": "empty",
-      "services": "auto",
+      "services": "empty",
       "know": "auto",
-      "social": "auto"
+      "social": "empty"
     },
     "parking_main": null,
     "parking_others": [],
@@ -20910,7 +21056,89 @@
       "https://rankeat.fr/wp-content/uploads/2025/07/les-regates-photo-google-1-1751738520.jpg",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/f8/20/c1/caption.jpg?w=1100&h=1100&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/e9/07/61/photo0jpg.jpg?w=1200&h=1200&s=1"
-    ]
+    ],
+    "category_google": "Restaurant français",
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable",
+        "serves_cocktails_notable",
+        "serves_dessert_notable",
+        "serves_beer_notable",
+        "serves_wine_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_parking",
+        "has_wheelchair_accessible_seating",
+        "has_wheelchair_accessible_restroom"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_beer",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_vegetarian",
+        "serves_small_plates",
+        "serves_healthy",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_breakfast",
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_bar_onsite",
+        "has_restroom",
+        "has_wi_fi"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_cozy",
+        "feels_quiet"
+      ],
+      "crowd": [
+        "welcomes_families",
+        "suitable_for_groups",
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "recommends_reservations_dinner",
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_check",
+        "pay_mobile_nfc",
+        "accepts_sodexo_meal_voucher",
+        "accepts_meal_coupons"
+      ],
+      "children": [
+        "welcomes_children",
+        "has_childrens_menu"
+      ],
+      "parking": [
+        "has_parking_lot_paid"
+      ],
+      "pets": [
+        "welcomes_dogs"
+      ]
+    }
   },
   {
     "id": "lacertus",
@@ -21228,7 +21456,78 @@
       "https://lacertus-restaurant.fr/wp-content/uploads/2023/05/restaurant-gastro-lacertus.jpg",
       "https://rankeat.fr/wp-content/uploads/2025/07/restaurant-lacertus-photo-google-1-1751738524.jpg",
       "https://lacertus-restaurant.fr/wp-content/uploads/2023/05/restaurant-sables-olonne-gastronomique-lacertus-vendee.jpg"
-    ]
+    ],
+    "category_google": "Restaurant",
+    "attributes_available": {
+      "service_options": [
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable",
+        "serves_cocktails_notable",
+        "serves_dessert_notable",
+        "serves_wine_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_parking"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_beer",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_small_plates",
+        "serves_organic",
+        "serves_healthy",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_restroom",
+        "has_restroom_unisex"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_cozy",
+        "feels_quiet",
+        "feels_romantic"
+      ],
+      "crowd": [
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "recommends_reservations_lunch",
+        "recommends_reservations_dinner",
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ],
+      "children": [
+        "has_childrens_menu"
+      ],
+      "parking": [
+        "has_parking_lot_paid"
+      ],
+      "pets": [
+        "welcomes_dogs"
+      ]
+    }
   },
   {
     "id": "la_p_tite_cale",
@@ -22052,7 +22351,92 @@
       "https://boot2web.com/HDD/styles/pg_galerie_1/public/2021-07/_MG_9905.jpg?itok=zQ8mojib",
       "https://boot2web.com/HDD/styles/pg_galerie_1/public/2021-08/IMG_6242.jpg?itok=KbFql1Kr",
       "https://check.fr/wp-content/uploads/2023/01/E-66.jpg"
-    ]
+    ],
+    "category_google": "Restaurant",
+    "additional_categories": [
+      "Bar"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "has_onsite_services",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable",
+        "serves_cocktails_notable",
+        "serves_dessert_notable",
+        "serves_wine_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_seating"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_beer",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_vegetarian",
+        "serves_vegan",
+        "serves_healthy",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_breakfast",
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_bar_onsite",
+        "has_restroom"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_hip",
+        "feels_cozy",
+        "feels_quiet",
+        "feels_romantic"
+      ],
+      "crowd": [
+        "welcomes_families",
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "recommends_reservations_lunch",
+        "recommends_reservations_dinner",
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ],
+      "children": [
+        "has_high_chairs",
+        "welcomes_children",
+        "has_childrens_menu"
+      ],
+      "parking": [
+        "has_parking_lot_free",
+        "has_parking_lot_paid"
+      ],
+      "pets": [
+        "welcomes_dogs",
+        "allows_dogs_outside",
+        "allows_dogs_inside"
+      ]
+    }
   },
   {
     "id": "umi_sushi",
@@ -22118,7 +22502,13 @@
       }
     ],
     "place_topics": null,
-    "booking_url": null,
+    "booking_url": [
+      {
+        "type": "menu",
+        "title": "umisushi85.fr",
+        "url": "http://www.umisushi85.fr/"
+      }
+    ],
     "cid": "13791067134072659327",
     "place_id": "ChIJoRyGOHRnBEgRfx33f322Y78",
     "wikipedia_description": null,
@@ -22158,12 +22548,13 @@
     "conseil_planly": "En couple, optez pour le tartare de saumon mi-cuit et une sélection de sushis à partager face au quai — une escale japonaise avec vue sur le port. En famille, la carte variée conviendra à tous, même aux plus petits.",
     "specific": {
       "cuisine_type": "Asiatique, Japonais, Sushis",
-      "hours_text": "Lundi 18:30-22:30 | Mardi à Dimanche 11:30-14:30 et 18:30-22:30",
+      "hours_text": "Lundi 18:30-22:30 ; Mardi-Dimanche 11:30-14:30 et 18:30-22:30",
       "products": [
-        "Sushis",
-        "Plats traditionnels",
-        "Plats végans",
-        "Plats épicés"
+        "Sushis et maki",
+        "Poke bowl",
+        "Ramen et udon",
+        "Brochettes",
+        "Sashimi"
       ],
       "services": {
         "terrace": null,
@@ -22175,21 +22566,55 @@
         "shop": null
       },
       "know": [
-        "Recettes savoureuses préparées de manière traditionnelle à partir d'ingrédients choisis avec soin",
-        "Ambiance conviviale, tables adaptées aux amateurs comme aux découvreurs de gastronomie asiatique",
-        "Services proposés : plats faits maison, plats traditionnels, végans, épicés, accueil enfant"
+        "Cuisine traditionnelle asiatique avec plats faits maison préparés avec ingrédients choisis.",
+        "Propose plats végans, épicés et accueil spécifique pour enfants.",
+        "Large sélection de menus individuels ou collectifs (jusqu'à 94,90€ pour 4 personnes)."
       ],
       "social": {
         "instagram": "https://www.instagram.com/umi._sushi",
-        "facebook": "https://www.facebook.com/profile.php"
+        "facebook": "https://www.facebook.com/profile.php?id=61558170561353"
       },
       "official_source": {
         "url": "https://www.umisushi85.fr/",
         "verified_at": "2026-09-16"
+      },
+      "pricing": {
+        "options": [
+          {
+            "label": "Poke bowl vegetarien",
+            "price": 12.9
+          },
+          {
+            "label": "Poke bowl saumon",
+            "price": 14.9
+          },
+          {
+            "label": "Soupe de udon au boeuf et legumes",
+            "price": 12.9
+          },
+          {
+            "label": "Ramen au Porc",
+            "price": 17.9
+          },
+          {
+            "label": "Menu Chirashi saumon cru",
+            "price": 15.9
+          }
+        ],
+        "avg_price": null,
+        "dish_price_range": null,
+        "free_entry": null,
+        "notes": "Menus complets incluant soupe, salade et/ou riz selon formule. Boissons en supplément.",
+        "source_url": "https://www.umisushi85.fr/menu/",
+        "valid_period": null,
+        "evidence": "Poke bowl vegetarien 12.90",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
       }
     },
     "specific_status": {
-      "pricing": "empty",
+      "pricing": "auto",
       "cuisine_type": "auto",
       "hours_text": "auto",
       "closing_days": "empty",
@@ -22210,7 +22635,73 @@
       "https://static.actu.fr/uploads/2024/04/acb735ff72266a0c735ff722684c73v.jpg",
       "https://www.maville.com/photosmvi/2024/04/22/P34146182D6259177G.jpg",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/34/14/ea/3a/caption.jpg?w=1200&h=1200&s=1"
-    ]
+    ],
+    "category_google": "Restaurant",
+    "additional_categories": [
+      "Restaurant japonais"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "has_takeout",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_parking"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_beer",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_small_plates",
+        "serves_healthy",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_restroom"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_cozy",
+        "feels_quiet"
+      ],
+      "crowd": [
+        "popular_with_students",
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ],
+      "parking": [
+        "has_parking_lot_paid"
+      ],
+      "pets": [
+        "welcomes_dogs",
+        "allows_dogs_outside"
+      ]
+    }
   },
   {
     "id": "pizza_bar_12h03",
@@ -23360,45 +23851,26 @@
     "rainy_day_activity": true,
     "conseil_planly": "En famille ou entre amis, optez pour la terrasse en fin d'après-midi pour profiter de la vue sur l'océan tout en partageant pizzas et planches apéro. En solo, le comptoir bar est parfait pour une pause conviviale avec un cocktail maison.",
     "specific": {
-      "cuisine_type": "Pizzas à emporter",
-      "products": [
-        "Pizzas",
-        "Pâte fine et croustillante",
-        "Ingrédients frais et de qualité",
-        "Pizzas végétariennes",
-        "Pizzas viande"
-      ],
-      "services": {
-        "terrace": false,
-        "view": null,
-        "kids_menu": false,
-        "vegetarian": true,
-        "takeaway": true,
-        "covered": null,
-        "shop": false
+      "social": {
+        "instagram": "https://www.instagram.com/pizzabar12h03"
       },
-      "know": [
-        "Aucune information spécifique sur 'Pizza Bar 12h03' (Les Sables-d'Olonne) n'est présente dans les pages fournies.",
-        "Les pages contiennent des annuaires génériques de pizzerias à emporter en France, mais pas de fiche dédiée à cet établissement.",
-        "Impossible d'extraire des données tarifaires, horaires ou services pour ce restaurant spécifique."
-      ],
       "official_source": {
-        "url": "https://pizzas-a-emporter.restaurants-de-france.fr",
+        "url": null,
         "verified_at": "2026-09-16"
       }
     },
     "specific_status": {
       "pricing": "empty",
-      "cuisine_type": "auto",
+      "cuisine_type": "empty",
       "hours_text": "empty",
       "closing_days": "empty",
       "market_days": "empty",
-      "products": "auto",
+      "products": "empty",
       "booking": "empty",
       "booking_url": "empty",
-      "services": "auto",
-      "know": "auto",
-      "social": "empty"
+      "services": "empty",
+      "know": "empty",
+      "social": "auto"
     },
     "parking_main": null,
     "parking_others": [],
@@ -23409,6 +23881,11 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/98/ca/59/caption.jpg?w=1100&h=1100&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/9e/72/e3/caption.jpg?w=1100&h=1100&s=1",
       "https://static.actu.fr/uploads/2022/03/e3e341afe132658e341afe132f2f34v.jpg"
+    ],
+    "category_google": "Pizza",
+    "additional_categories": [
+      "Bar",
+      "Pizzas à emporter"
     ]
   },
   {
@@ -23444,7 +23921,13 @@
     ],
     "reviews": [],
     "place_topics": null,
-    "booking_url": null,
+    "booking_url": [
+      {
+        "type": "menu",
+        "title": "drive.google.com",
+        "url": "https://drive.google.com/file/d/1VZ_bXhey_vFvaknpb1PvX3L1SXbsDgRd/view"
+      }
+    ],
     "cid": "16342591411837426879",
     "place_id": "ChIJOTno7KFnBEgRv1zrY02MzOI",
     "wikipedia_description": null,
@@ -23567,7 +24050,91 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/bb/ce/57/caption.jpg?w=1100&h=1100&s=1",
       "https://pizzerias.pizzacosy.fr/wp-content/uploads/sb-instagram-feed-images/800842938_18340126402248082_6792214812206855116_nfull.webp",
       "https://img02.restaurantguru.com/c6b5-Pizza-Cosy-Les-Sables-dOlonne-interior.jpg"
-    ]
+    ],
+    "category_google": "Pizzeria",
+    "additional_categories": [
+      "Restaurant familial",
+      "Restaurant italien",
+      "Livraison de repas à domicile",
+      "Livraison de pizzas",
+      "Pizzas à emporter",
+      "Restaurant"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "has_no_contact_delivery",
+        "has_delivery",
+        "has_takeout",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_parking",
+        "has_wheelchair_accessible_seating"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_beer",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_vegetarian",
+        "serves_vegan",
+        "quick_bite",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_breakfast",
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_restroom"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_hip",
+        "feels_cozy",
+        "feels_quiet"
+      ],
+      "crowd": [
+        "welcomes_families",
+        "popular_with_students",
+        "suitable_for_groups",
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "accepts_cheque_dejeuner_meal_voucher",
+        "pay_mobile_nfc",
+        "accepts_sodexo_meal_voucher",
+        "accepts_ticket_restaurant_meal_voucher",
+        "accepts_meal_coupons"
+      ],
+      "children": [
+        "welcomes_children",
+        "has_childrens_menu"
+      ],
+      "parking": [
+        "has_parking_street_free",
+        "has_parking_lot_paid"
+      ]
+    }
   },
   {
     "id": "le_quai_des_saveurs",
@@ -23871,7 +24438,89 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/12/37/97/supreme-de-pintade-declinaison.jpg?w=1200&h=1200&s=1",
       "https://prod-pics.guide.michelin.com/api/public/content/12660645c38141d391c7cfe6136f30ef.jpeg?format=auto&w=1920",
       "https://cdt85.media.tourinsoft.eu/upload/2024-GAS-LeQuaiDesSaveurs-2.jpg"
-    ]
+    ],
+    "category_google": "Restaurant gastronomique",
+    "additional_categories": [
+      "Restaurant français",
+      "Restaurant"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable",
+        "serves_cocktails_notable",
+        "serves_dessert_notable",
+        "serves_tea_notable",
+        "serves_wine_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_seating",
+        "has_wheelchair_accessible_restroom"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_organic",
+        "serves_healthy",
+        "has_private_dining_room",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_restroom",
+        "has_wi_fi"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_cozy",
+        "feels_quiet",
+        "feels_upscale",
+        "feels_romantic"
+      ],
+      "crowd": [
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "recommends_reservations_lunch",
+        "requires_reservations",
+        "recommends_reservations_dinner",
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_check"
+      ],
+      "children": [
+        "has_childrens_menu"
+      ],
+      "parking": [
+        "has_parking_lot_free",
+        "has_parking_street_free"
+      ],
+      "pets": [
+        "welcomes_dogs",
+        "allows_dogs_inside"
+      ]
+    }
   },
   {
     "id": "la_cabane_du_ptitgas",
@@ -24109,23 +24758,85 @@
     "rainy_day_activity": false,
     "conseil_planly": "Passez en semaine vers 13h pour profiter du plein air sans foule et goûter les huîtres du jour dans leur plus simple expression. Pensez à réserver le week-end, ça part vite !",
     "specific": {
+      "pricing": {
+        "options": [
+          {
+            "label": "6 Huîtres n°2",
+            "price": 8.2
+          },
+          {
+            "label": "6 Huîtres n°3",
+            "price": 7.5
+          },
+          {
+            "label": "6 Huîtres n°4",
+            "price": 6.2
+          },
+          {
+            "label": "12 Huîtres n°1",
+            "price": 7.0
+          },
+          {
+            "label": "Rillettes d'Huîtres de la Cabane du Payré",
+            "price": 9.0
+          }
+        ],
+        "avg_price": null,
+        "free_entry": null,
+        "notes": "Les huîtres sont servis avec du citron ainsi que du beurre et nos fruits de mer avec de la mayonnaise Morin ou du beurre.",
+        "source_url": "https://lacabanedupayre.fr/wp-content/uploads/2026/04/carte-La-Cabane-du-Payre-2026.pdf.pdf.pdf",
+        "valid_period": "2026",
+        "evidence": "6 Huîtres n°1 6.00€, 12 Huîtres n°1 7.00€, Rillettes d'Huîtres de la Cabane du Payré 9,00€",
+        "stale": false,
+        "source_label": "site officiel",
+        "verified_at": "2026-09-16"
+      },
+      "cuisine_type": "Fruits de mer, huîtres",
+      "hours_text": "Boutique ouverte toute l'année. Dégustation sur place de mi-avril à septembre, juillet et août également le soir.",
+      "closing_days": "mardi",
+      "products": [
+        "Huîtres de l'estuaire du Payré",
+        "Rillettes d'huîtres",
+        "Bulots",
+        "Crevettes grises",
+        "Palourdes"
+      ],
+      "booking": "obligatoire",
+      "services": {
+        "terrace": true,
+        "view": "Vue imprenable sur les parcs à huîtres",
+        "kids_menu": null,
+        "vegetarian": null,
+        "takeaway": null,
+        "covered": null,
+        "shop": true
+      },
+      "know": [
+        "Réservation obligatoire par téléphone au 02 51 90 21 83 pour la dégustation sur place.",
+        "Dégustation et terrasse ouverts de mi-avril à septembre, avec soirées en juillet-août.",
+        "Boutique ostréicole ouverte toute l'année avec produits locaux (terrines, soupes, vins vendéens, sels aromatisés)."
+      ],
+      "social": {
+        "facebook": "https://www.facebook.com/people/La-Cabane-du-Payr%C3%A9/61572839566079",
+        "instagram": "https://www.instagram.com/lacabanedupayre"
+      },
       "official_source": {
-        "url": null,
+        "url": "https://lacabanedupayre.fr",
         "verified_at": "2026-09-16"
       }
     },
     "specific_status": {
-      "pricing": "empty",
-      "cuisine_type": "empty",
-      "hours_text": "empty",
-      "closing_days": "empty",
+      "pricing": "auto",
+      "cuisine_type": "auto",
+      "hours_text": "auto",
+      "closing_days": "auto",
       "market_days": "empty",
-      "products": "empty",
-      "booking": "empty",
+      "products": "auto",
+      "booking": "auto",
       "booking_url": "empty",
-      "services": "empty",
-      "know": "empty",
-      "social": "empty"
+      "services": "auto",
+      "know": "auto",
+      "social": "auto"
     },
     "parking_main": null,
     "parking_others": [],
@@ -24136,7 +24847,71 @@
       "https://www.petitfute.com/medias/professionnel/2095059/premium/originale/687dfd4e6656d.png",
       "https://media.ouest-france.fr/v1/pictures/MjAyMzA4NWY3ZjZiYTMzNGMzMTE4YzQ5ZGZiMTRjMDQzZjQ5YWQ?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=71f4fdbab94ed58c15a5142ebca5a55a53fee3116ad38d96ebadce5f3113b4d2",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/ff/05/54/parc-de-production.jpg?w=1200&h=1200&s=1"
-    ]
+    ],
+    "category_google": "Bar-restaurant à huîtres",
+    "additional_categories": [
+      "Restaurant",
+      "Mareyeur"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_parking",
+        "has_wheelchair_accessible_seating"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_coffee",
+        "serves_small_plates",
+        "serves_healthy",
+        "quick_bite",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_lunch",
+        "has_catering",
+        "has_seating",
+        "has_table_service"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_cozy",
+        "feels_quiet"
+      ],
+      "crowd": [
+        "popular_with_students",
+        "suitable_for_groups",
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ],
+      "children": [
+        "welcomes_children"
+      ],
+      "parking": [
+        "has_parking_lot_free",
+        "has_parking_street_free"
+      ],
+      "pets": [
+        "welcomes_dogs"
+      ]
+    }
   },
   {
     "id": "marche_arago",
@@ -24289,6 +25064,10 @@
       "https://gites-lerelaydelasource.fr/wp-content/uploads/2025/12/marche_arago_sables_d_olonne_8988.jpg",
       "https://www.hotel-lesrochesnoires.com/userfiles/marche_arago_les_sables.jpg",
       "http://www.atlantichotel.fr/userfiles/Articles/MarcheLesSablesdOlon.jpg"
+    ],
+    "category_google": "Marché",
+    "additional_categories": [
+      "Épicerie"
     ]
   },
   {
@@ -24396,6 +25175,9 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/p/Le-march%C3%A9-de-la-chaume-61578164421523"
       }
     },
     "specific_status": {
@@ -24409,7 +25191,7 @@
       "booking_url": "empty",
       "services": "empty",
       "know": "empty",
-      "social": "empty"
+      "social": "auto"
     },
     "parking_main": null,
     "parking_others": [],
@@ -24420,7 +25202,28 @@
       "https://static.actu.fr/uploads/2025/07/4ae9ed19977863ee9ed19977802f9ev-960x640.jpeg",
       "https://static.actu.fr/uploads/2025/07/de49ba4997786e259ba499778c659bv-960x640.jpeg",
       "https://media.ouest-france.fr/v1/pictures/MjAyNTAzNGI2N2Y1M2JlN2IxZTk5N2QwYzY0ODI1M2RiMDg1NTI?width=1260&height=708&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=408c5c65b804c87819d303a524e9eec83706d2fe43d0682f246291e471e6e8bf"
-    ]
+    ],
+    "category_google": "Marché alimentaire",
+    "attributes_available": {
+      "highlights": [
+        "has_produce_notable"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_parking"
+      ],
+      "offerings": [
+        "serves_food"
+      ],
+      "planning": [
+        "quick_visit"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ]
+    }
   },
   {
     "id": "marche_de_bretignolles_sur_mer",
@@ -24575,7 +25378,8 @@
       "https://cdn.prod.website-files.com/670699913d1c35f8e754ee53/688cd3e3afe103724f14196c_MarcheBretignollessurMer7.jpg",
       "https://www.payssaintgilles-tourisme.fr/wp-content/uploads/wpetourisme/S40A4265.jpg",
       "https://static.actu.fr/uploads/2024/03/thumbnail-paysages-123.jpg"
-    ]
+    ],
+    "category_google": "Marché"
   },
   {
     "id": "murielle_patrick_guyau",
@@ -24645,6 +25449,9 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/p/Murielle-et-Patrick-GUYAU-100063295446031"
       }
     },
     "specific_status": {
@@ -24658,7 +25465,7 @@
       "booking_url": "empty",
       "services": "empty",
       "know": "empty",
-      "social": "empty"
+      "social": "auto"
     },
     "parking_main": null,
     "parking_others": [],
@@ -24669,7 +25476,29 @@
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/db/99/6a/caption.jpg?w=1100&h=1100&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/8e/39/b3/caption.jpg?w=1000&h=1000&s=1",
       "https://franceweek-end.com/wp-content/uploads/2019/10/20191011_154948.jpg"
-    ]
+    ],
+    "category_google": "Magasin",
+    "additional_categories": [
+      "Fournisseur d'huîtres",
+      "Marché aux poissons et fruits de mer"
+    ],
+    "attributes_available": {
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_parking"
+      ],
+      "planning": [
+        "quick_visit"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card"
+      ],
+      "parking": [
+        "has_parking_lot_free",
+        "has_onsite_parking"
+      ]
+    }
   },
   {
     "id": "sel_de_l_ile_d_olonne",
@@ -24949,6 +25778,11 @@
       "https://www.guide-de-la-vendee.com/_bibli/annonces/3594/hd/sel-de-l-ile-d-olonne-09.webp?v=original",
       "https://www.guide-de-la-vendee.com/_bibli/annonces/3595/hd/sel-de-l-ile-d-olonne-artisans-10.webp?v=original",
       "https://static.wixstatic.com/media/4896fc_a08a798bfcd6404aae08c2b5976b2767~mv2.jpg/v1/fill/w_980,h_1307,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4896fc_a08a798bfcd6404aae08c2b5976b2767~mv2.jpg"
+    ],
+    "category_google": "Épicerie",
+    "additional_categories": [
+      "Fabrication d'aliments",
+      "Magasin bio"
     ]
   },
   {
@@ -25120,7 +25954,22 @@
       "https://vignobles-mourat.fr/wp-content/uploads/2016/10/10-terrasse-chais-vignobles-mourat.jpg"
     ],
     "price_adult": 0.0,
-    "price_child": 0.0
+    "price_child": 0.0,
+    "category_google": "Vignoble",
+    "additional_categories": [
+      "Restaurant"
+    ],
+    "attributes_available": {
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_parking",
+        "has_wheelchair_accessible_restroom"
+      ],
+      "parking": [
+        "has_parking_lot_free",
+        "has_parking_street_free"
+      ]
+    }
   },
   {
     "id": "famille_mary",
@@ -25306,7 +26155,35 @@
     "photos_original_urls": [
       "https://lessablesdolonne.shop/wp-content/uploads/2023/06/famille-mary-couverture.jpg",
       "https://photos.infolocale.fr/infoLocale/openagenda/2026/10/85/9615484/_1.jpg"
-    ]
+    ],
+    "category_google": "Magasin d'alimentation naturelle",
+    "additional_categories": [
+      "Magasin de cosmétiques",
+      "Herboristerie",
+      "Miellerie",
+      "Magasin de vitamines et compléments alimentaires"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_in_store_pickup",
+        "has_in_store_shopping"
+      ],
+      "highlights": [
+        "has_produce_notable"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_parking"
+      ],
+      "planning": [
+        "quick_visit"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ]
+    }
   },
   {
     "id": "conserverie_la_sablaise",
@@ -25595,6 +26472,11 @@
       "https://lasablaise.fr/wp-content/uploads/2022/03/23032022-LA-SABLAISE-MAG-LES-HALLES-44-1-1024x684.jpg",
       "https://lasablaise.fr/wp-content/uploads/2023/12/La-Sablaise-Ambiance-Soupes_RVB-PAGE-GAMME-scaled.jpg",
       "https://cdt85.media.tourinsoft.eu/upload/2026-PROD-ConserverieLaSablaiseSIT3-Antoine-Martineau.jpg"
+    ],
+    "category_google": "Conserverie",
+    "additional_categories": [
+      "Épicerie fine",
+      "Producteur agroalimentaire"
     ]
   },
   {
@@ -35224,7 +36106,8 @@
     "photos_original_urls": [
       "https://check.fr/wp-content/uploads/2023/01/checkfr-10245-l-etoile-de-mer-les-sables-d-olonne-2.jpg",
       "https://img02.restaurantguru.com/cd80-LEtoile-de-Mer-Les-Sables-dOlonne-picture.jpg"
-    ]
+    ],
+    "category_google": "Bar"
   },
   {
     "id": "bar_rooftop_ventura",
@@ -35413,7 +36296,89 @@
       "https://www.lessablesdolonne.com/media/vertime-piscine.jpg"
     ],
     "price_adult": null,
-    "price_child": null
+    "price_child": null,
+    "category_google": "Bar",
+    "additional_categories": [
+      "Restaurant brunch",
+      "Borne de recharge de véhicules électriques",
+      "Piscine extérieure",
+      "Parking",
+      "Parking pour vélos",
+      "Complexe hôtelier",
+      "Restaurant",
+      "Séminaire"
+    ],
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "has_onsite_services",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "has_live_music",
+        "serves_cocktails_notable",
+        "serves_beer_notable",
+        "serves_wine_notable",
+        "has_karaoke_nights",
+        "has_live_performances",
+        "has_seating_rooftop"
+      ],
+      "popular_for": [
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_entrance",
+        "has_wheelchair_accessible_parking",
+        "has_wheelchair_accessible_seating",
+        "has_wheelchair_accessible_restroom"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "has_dancing",
+        "serves_beer",
+        "serves_cocktails",
+        "serves_food",
+        "serves_food_at_bar",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_restroom"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_hip",
+        "feels_cozy"
+      ],
+      "crowd": [
+        "suitable_for_groups",
+        "welcomes_lgbtq",
+        "is_transgender_safespace",
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ],
+      "children": [
+        "welcomes_children"
+      ],
+      "parking": [
+        "has_parking_lot_paid",
+        "has_onsite_parking"
+      ],
+      "pets": [
+        "welcomes_dogs"
+      ]
+    }
   },
   {
     "id": "the_goat",
@@ -36493,7 +37458,58 @@
       "https://check.fr/wp-content/uploads/2026/06/checkfr-20243-site_photo_4_6a0f21c6b216f1.54146637.jpg",
       "https://www.businessmarches.com/wp-content/uploads/2024/06/448026962_10230112352486579_8837788422277131906_n.jpg",
       "https://www.businessmarches.com/wp-content/uploads/2026/07/751563683_10239820344380309_4336722677483049635_n-1140x694.jpg"
-    ]
+    ],
+    "category_google": "Bar",
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "has_live_music",
+        "serves_cocktails_notable",
+        "serves_beer_notable",
+        "has_bar_games",
+        "has_karaoke_nights",
+        "has_live_performances",
+        "suitable_for_watching_sports"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "has_dancing",
+        "serves_beer",
+        "serves_cocktails",
+        "has_arcade_games",
+        "serves_food",
+        "serves_food_at_bar",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "has_seating"
+      ],
+      "amenities": [
+        "has_restroom",
+        "has_wi_fi"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_hip",
+        "feels_cozy"
+      ],
+      "crowd": [
+        "suitable_for_groups",
+        "popular_with_tourists"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ],
+      "parking": [
+        "has_parking_lot_paid"
+      ]
+    }
   },
   {
     "id": "bikini_beach",
@@ -36558,7 +37574,13 @@
       }
     ],
     "place_topics": null,
-    "booking_url": null,
+    "booking_url": [
+      {
+        "type": "menu",
+        "title": "facebook.com",
+        "url": "https://www.facebook.com/lebikinibeach/menu"
+      }
+    ],
     "cid": "13076195556681545026",
     "place_id": "ChIJ71LFHctnBEgRQnWLAZT6d7U",
     "wikipedia_description": "Bikini Beach est un film destiné aux adolescents, réalisé en 1964 par William Asher, avec Frankie Avalon et Annette Funicello. C'est le 3e film d'une série de sept produits par American International Pictures (AIP), initiée en 1963 avec Beach Party..",
@@ -36620,7 +37642,75 @@
     "photos_original_urls": [
       "https://static.actu.fr/uploads/2024/08/569bd34f63c663a9bd34f63c60e9bdv-960x640.jpg",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/25/c2/38/bikini-beach.jpg?w=1100&h=1100&s=1"
-    ]
+    ],
+    "category_google": "Restaurant",
+    "attributes_available": {
+      "service_options": [
+        "has_seating_outdoors",
+        "serves_dine_in"
+      ],
+      "highlights": [
+        "serves_coffee_notable",
+        "serves_cocktails_notable"
+      ],
+      "popular_for": [
+        "serves_lunch_popular",
+        "serves_dinner_popular",
+        "suitable_for_solo_dining"
+      ],
+      "accessibility": [
+        "has_wheelchair_accessible_restroom"
+      ],
+      "offerings": [
+        "serves_alcohol",
+        "serves_beer",
+        "serves_coffee",
+        "serves_cocktails",
+        "serves_small_plates",
+        "quick_bite",
+        "serves_liquor",
+        "serves_wine"
+      ],
+      "dining_options": [
+        "serves_breakfast",
+        "serves_lunch",
+        "serves_dinner",
+        "has_catering",
+        "serves_dessert",
+        "has_seating",
+        "has_table_service"
+      ],
+      "amenities": [
+        "has_bar_onsite",
+        "has_restroom"
+      ],
+      "atmosphere": [
+        "feels_casual",
+        "feels_hip",
+        "feels_cozy",
+        "feels_romantic"
+      ],
+      "crowd": [
+        "popular_with_students",
+        "suitable_for_groups",
+        "popular_with_tourists"
+      ],
+      "planning": [
+        "accepts_reservations"
+      ],
+      "payments": [
+        "pay_credit_card",
+        "pay_debit_card",
+        "pay_mobile_nfc"
+      ],
+      "children": [
+        "welcomes_children"
+      ],
+      "parking": [
+        "has_parking_lot_free",
+        "has_parking_lot_paid"
+      ]
+    }
   },
   {
     "id": "casino_joa_les_pins",
