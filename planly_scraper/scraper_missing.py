@@ -1343,6 +1343,11 @@ def _social_links(html: str, seed: str = "") -> dict:
     for url, net, path in [(m.group(0), m.group(1).lower(), m.group(2)) for m in SOCIAL_RE.finditer(seed + " " + (html or ""))]:
         if net in out or SOCIAL_SKIP.search(url) or len(path) < 2:
             continue
+        # "profile.php" sans identifiant ne mène nulle part ; un reel ou un post
+        # n'est pas le compte du lieu
+        if ("profile.php" in url.lower() and "id=" not in url.lower()) \
+                or re.match(r"(reel|p|explore|stories)/", path, re.I):
+            continue
         out[net] = url.rstrip("/")
     return out
 

@@ -15,8 +15,8 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="vendor/leaflet.css"/>
 <style>
 :root{
@@ -774,6 +774,12 @@ body{
 .bch-btn-avis{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;}
 .bch-rsum{background:white;border-radius:10px;padding:12px 14px;border:0.5px solid #e8e4da;font-size:14px;color:#444441;line-height:1.65;}
 .bch-rsum-src{font-size:11px;color:#A8A8A3;margin-top:8px;}
+/* Réseaux sociaux : des liens, pas des badges — même bleu que "Voir sur Google" */
+.soc-row{display:flex;flex-wrap:wrap;gap:8px;}
+.soc-lnk{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:10px 16px;
+  background:white;border:0.5px solid #e8e4da;border-radius:22px;text-decoration:none;
+  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#185FA5;}
+.soc-go{font-size:12px;opacity:0.55;}
 .bch-avis-card{background:white;border-radius:10px;padding:10px 12px;margin-bottom:8px;border:0.5px solid #e8e4da;font-size:14px;color:#444441;font-style:italic;line-height:1.6;}
 .bch-avis-top{display:flex;align-items:center;gap:6px;margin-bottom:5px;font-style:normal;}
 .bch-av{width:22px;height:22px;border-radius:50%;background:#B5D4F4;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#0C447C;flex-shrink:0;}
@@ -1637,7 +1643,7 @@ body{
 </div>
 
 <script src="tides.js"></script>
-<script src="pois.js?v=202609172024"></script>
+<script src="pois.js?v=202609172031"></script>
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
@@ -2765,6 +2771,17 @@ function _mtBookCard(p,sp){
     +'<div class="pl-price-ft"><div class="pl-price-src">Site officiel'+(v?', vérifié le '+v:'')+'</div>'
     +(url?'<a class="pl-btn" href="'+_escHtml(url)+'" target="_blank" rel="noopener">'+(sp.booking_url?'Réserver':'Site officiel')+'</a>':'')+'</div></div>';
 }
+// Liens externes : regroupés avec "Voir sur Google", jamais mêlés aux badges
+// d'info — un badge ne se clique pas, un lien doit se voir comme un lien.
+function _socialRow(sp){
+  var s=sp.social||{},out=[];
+  if(s.instagram)out.push(['📸','Instagram',s.instagram]);
+  if(s.facebook)out.push(['👍','Facebook',s.facebook]);
+  if(!out.length)return'';
+  return'<div class="bch-slbl">Leur actualité</div><div class="soc-row">'
+    +out.map(function(o){return'<a class="soc-lnk" href="'+_escHtml(o[2])+'" target="_blank" rel="noopener">'
+      +o[0]+' '+o[1]+'<span class="soc-go">↗</span></a>';}).join('')+'</div>';
+}
 function _renderPoiBody(p,mode){
   var body=document.querySelector('.bs-poi-body');
   if(!body)return;
@@ -2969,9 +2986,6 @@ function _renderPoiBody(p,mode){
     if(mv.takeaway)mtPills.push('<span class="bch-pill bch-pn">🥡 À emporter</span>');
     if(mv.covered)mtPills.push('<span class="bch-pill bch-pi">☔ Halle couverte</span>');
     if(mv.shop)mtPills.push('<span class="bch-pill bch-ps">🛍 Boutique sur place</span>');
-    var mSoc=sp.social||{};
-    if(mSoc.instagram)mtPills.push('<a class="bch-pill bch-pn" href="'+_escHtml(mSoc.instagram)+'" target="_blank" rel="noopener" style="text-decoration:none">📸 Instagram</a>');
-    if(mSoc.facebook)mtPills.push('<a class="bch-pill bch-pn" href="'+_escHtml(mSoc.facebook)+'" target="_blank" rel="noopener" style="text-decoration:none">👍 Facebook</a>');
     (p.quickSpecs||[]).forEach(function(s){
       var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
       mtPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
@@ -3011,9 +3025,6 @@ function _renderPoiBody(p,mode){
     if(sv.pmr)stPills.push('<span class="bch-pill bch-pi">♿ Accès PMR</span>');
     if(sv.id_required)stPills.push('<span class="bch-pill bch-pw">🪪 Pièce d\'identité obligatoire</span>');
     if(sv.dress_code)stPills.push('<span class="bch-pill bch-pw">👔 '+_escHtml(String(sv.dress_code))+'</span>');
-    var soc=sp.social||{};
-    if(soc.instagram)stPills.push('<a class="bch-pill bch-pn" href="'+_escHtml(soc.instagram)+'" target="_blank" rel="noopener" style="text-decoration:none">📸 Instagram</a>');
-    if(soc.facebook)stPills.push('<a class="bch-pill bch-pn" href="'+_escHtml(soc.facebook)+'" target="_blank" rel="noopener" style="text-decoration:none">👍 Facebook</a>');
     (p.quickSpecs||[]).forEach(function(s){
       var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
       stPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
@@ -3123,6 +3134,7 @@ function _renderPoiBody(p,mode){
     +'<span class="bch-avis-count">'+(reviewsCount?reviewsCount+' avis':'')+'</span></div>'
     +(googleUrl?'<a class="bch-btn-avis" href="'+_escHtml(googleUrl)+'" target="_blank" rel="noopener">Voir sur Google</a>':'')+'</div>'
     +(reviewsSummary?'<div class="bch-rsum">'+_escHtml(reviewsSummary)+'<div class="bch-rsum-src">Résumé automatique des avis Google</div></div>':'')
+    +_socialRow(sp)
     +((p.location&&p.location.lat)?'<div class="bch-slbl">'+_mapLbl(p)+'</div>'
       +'<div class="poi-mini-map-wrap"><div id="poi-mini-map" class="poi-mini-map"></div>'
       +'<button class="poi-mini-map-expand" onclick="_openMapForPoi('+p.location.lat+','+p.location.lng+')">⊞ Agrandir</button>'

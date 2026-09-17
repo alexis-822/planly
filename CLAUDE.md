@@ -154,7 +154,9 @@ Prototype mobile avec :
 - **Type de cuisine** (`cuisine_label` dans inject_pois.py) : la catégorie Google prend le relais quand l'extraction est vide ou revient en anglais — Pizza Bar 12h03 → « Pizza · Bar », Les Régates → « Restaurant français » au lieu de « French coastal dining »
 - **Couverture Manger & terroir : 12 POIs sur 19, dont 8 restaurants sur 10.** Sans ordre de prix : Les Régates et Pizza Bar 12h03 (rien de publié nulle part), 4 marchés sur 5, Vignobles Mourat
 - Fiches encore vides : **Halles de La Chaume** (aucune source trouvée, ni site ni horaires) et **Murielle & Patrick Guyau**
-- Tests de rendu : `test_mt_render.js`, `test_st_render.js`, `test_pl_render.js` — 0 erreur
+- **Réseaux sociaux** : les pastilles Instagram/Facebook étaient des liens au milieu de badges non cliquables (même classe `bch-pill`) — rien ne signalait qu'on pouvait cliquer. Elles sortent de la rangée de badges et forment un bloc « Leur actualité » placé avec les autres liens externes, juste après les avis (`_socialRow`, classes `soc-*`, cible tactile 44 px)
+- 5 liens morts supprimés et bloqués à la source dans `_social_links` : `facebook.com/profile.php` **sans identifiant** (Lacertus, La P'tite Cale, Bar Rooftop Ventura), un lien vers un reel au lieu du compte (Pizza Cosy), la page d'une fédération au lieu du marché (Brétignolles). Restent 25 liens sur 16 POIs. Note : Facebook répond 400 à un script (blocage anti-robot), la validation automatique n'est possible que sur Instagram
+- Tests de rendu : `test_mt_render.js`, `test_st_render.js`, `test_pl_render.js`, `test_social_render.js` — 0 erreur
 
 ### Avant (historique)
 - 34 POIs dans output_global.json (11 plages + 17 nature/promenades/ports + 6 Villages & Sites)

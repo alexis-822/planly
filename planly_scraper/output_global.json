@@ -1320,7 +1320,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "scraped_at": "2026-03-31T13:57:17.405671+00:00",
     "enriched_at": "2026-03-31T13:57:17.405671+00:00",
@@ -1560,7 +1561,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -1792,7 +1794,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -2024,7 +2027,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -2264,7 +2268,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "manual",
@@ -2505,7 +2510,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -2745,7 +2751,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -2985,7 +2992,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -3224,7 +3232,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -3467,7 +3476,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -4910,7 +4920,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -5151,7 +5162,8 @@
       "facilities_playground": null,
       "facilities_beach_games": null,
       "facilities_sun_loungers": null,
-      "facilities_beach_shop": null
+      "facilities_beach_shop": null,
+      "social": null
     },
     "specific_status": {
       "beach_type": "auto",
@@ -5571,7 +5583,8 @@
         ]
       },
       "superficie_ha": 1000,
-      "sentiers_km_total": 60
+      "sentiers_km_total": 60,
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -5938,7 +5951,8 @@
         ],
         "vtt": []
       },
-      "wildlife_observable": true
+      "wildlife_observable": true,
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -6347,7 +6361,8 @@
             "display_category": "normal"
           }
         ]
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -7878,7 +7893,8 @@
           }
         ]
       },
-      "wildlife_observable": true
+      "wildlife_observable": true,
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -8104,7 +8120,8 @@
       "tide_sensitive": null,
       "historical_period": "150 ans d'histoire, depuis 1959 pour Yeu Continent",
       "guided_visit": true,
-      "free_entry": false
+      "free_entry": false,
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -8346,7 +8363,8 @@
       "ferry_pricing": null,
       "historical_period": "18ème siècle à nos jours",
       "guided_visit": true,
-      "free_entry": true
+      "free_entry": true,
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -9778,7 +9796,8 @@
       "orientation": "O",
       "view_description": "Vue sur le Remblai, la Grande Plage et l'horizon atlantique",
       "altitude_m": 36,
-      "ideal_weather": "beau"
+      "ideal_weather": "beau",
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -11213,7 +11232,8 @@
       "has_orientation_panel": true,
       "ideal_weather": "tempete",
       "altitude_m": 5,
-      "orientation": "O"
+      "orientation": "O",
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -12639,7 +12659,8 @@
       "storm_interest": true,
       "view_description": "Faille naturelle dans la roche où les vagues s'engouffrent avec force",
       "ideal_weather": "beau",
-      "orientation": "O"
+      "orientation": "O",
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -12868,7 +12889,8 @@
       "view_description": "Panoramas sur l'Atlantique, falaises et rivage vendéen",
       "altitude_m": 9,
       "orientation": "O",
-      "ideal_weather": "beau"
+      "ideal_weather": "beau",
+      "social": null
     },
     "specific_status": {
       "terrain_type": "manual",
@@ -13047,7 +13069,8 @@
       "refreshment_stop": null,
       "trail_link": null,
       "best_time": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "social": null
     },
     "specific_status": {
       "distance_km": "manual",
@@ -13268,7 +13291,8 @@
       "refreshment_stop": null,
       "trail_link": null,
       "best_time": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "social": null
     },
     "specific_status": {
       "distance_km": "manual",
@@ -13505,7 +13529,8 @@
       "refreshment_stop": null,
       "trail_link": null,
       "best_time": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "social": null
     },
     "specific_status": {
       "distance_km": "manual",
@@ -14945,7 +14970,8 @@
       "refreshment_stop": null,
       "trail_link": null,
       "best_time": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "social": null
     },
     "specific_status": {
       "distance_km": "manual",
@@ -15183,7 +15209,8 @@
       "refreshment_stop": null,
       "trail_link": null,
       "best_time": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "social": null
     },
     "specific_status": {
       "distance_km": "manual",
@@ -15383,7 +15410,8 @@
       "refreshment_stop": null,
       "trail_link": null,
       "best_time": null,
-      "tide_sensitive": null
+      "tide_sensitive": null,
+      "social": null
     },
     "specific_status": {
       "distance_km": "manual",
@@ -15592,7 +15620,8 @@
     "specific": {
       "historical_period": "Moyen Âge (XI-XIII siècles)",
       "guided_visit": true,
-      "free_entry": false
+      "free_entry": false,
+      "social": null
     },
     "specific_status": {
       "historical_period": "auto",
@@ -15730,7 +15759,8 @@
     "specific": {
       "historical_period": "Révolution (ancien nom 'L'île perdue'), XIXème siècle (nom 'Penotte' apparu)",
       "guided_visit": false,
-      "free_entry": true
+      "free_entry": true,
+      "social": null
     },
     "specific_status": {
       "historical_period": "auto",
@@ -15868,7 +15898,8 @@
     "specific": {
       "historical_period": "XIe siècle à XVIIe siècle",
       "guided_visit": true,
-      "free_entry": false
+      "free_entry": false,
+      "social": null
     },
     "specific_status": {
       "historical_period": "auto",
@@ -17205,7 +17236,8 @@
     "rainy_day_activity": false,
     "conseil_planly": "Combinez la visite avec les autres dolmens du secteur dans un rayon d'1 km — idéal à vélo pour les familles ! Prévoyez une belle journée pour profiter pleinement du site en plein air.",
     "specific": {
-      "historical_period": "Néolithique"
+      "historical_period": "Néolithique",
+      "social": null
     },
     "specific_status": {
       "historical_period": "auto",
@@ -17306,7 +17338,8 @@
     "specific": {
       "historical_period": "De l'Antiquité à l'époque contemporaine, avec apogée au XVIII siècle comme port commercial",
       "guided_visit": true,
-      "free_entry": false
+      "free_entry": false,
+      "social": null
     },
     "specific_status": {
       "historical_period": "auto",
@@ -17390,7 +17423,8 @@
     "specific": {
       "historical_period": "Moyen Âge (XIe-XIIIe siècles), avec origines vers 1016-1019",
       "guided_visit": true,
-      "free_entry": true
+      "free_entry": true,
+      "social": null
     },
     "specific_status": {
       "historical_period": "auto",
@@ -17523,7 +17557,9 @@
     "animals_captive": false,
     "rainy_day_activity": false,
     "conseil_planly": "Combinez la visite avec le phare de La Chaume tout proche et une balade sur la promenade pour profiter du panorama sur l'océan. Vérifiez au préalable les dates d'expositions temporaires, souvent gratuites et inattendues !",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -17607,7 +17643,9 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Combinez la visite avec une balade dans le quartier pittoresque de la Chaume et une traversée en bac depuis les Sables-d'Olonne pour une immersion complète. En été, renseignez-vous sur la programmation du Souffleur d'Arundel pour une soirée mémorable en famille ou en couple.",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -17690,7 +17728,9 @@
     "animals_captive": false,
     "rainy_day_activity": false,
     "conseil_planly": "Combinez la visite de l'abbaye avec une balade en barque dans le Marais poitevin tout proche pour une journée inoubliable. En famille, prévoyez la visite guidée pour captiver les enfants avec les légendes médiévales du site.",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -17804,7 +17844,9 @@
     "animals_captive": false,
     "rainy_day_activity": false,
     "conseil_planly": "Venez le premier dimanche du mois pour admirer les voitures de collection en plus des sculptures et de la vue sur l'océan. En couple, le coucher de soleil depuis le fort est un moment romantique inoubliable.",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -17887,7 +17929,9 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Profitez d'une journée pluvieuse ou d'une halte culturelle entre deux sessions de plage pour découvrir ce joyau roman méconnu. En couple ou en solo, prenez le temps d'observer les détails sculptés de la façade et de ressentir le calme apaisant du lieu.",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -18012,7 +18056,9 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "Optez pour la visite guidée, les guides passionnés vous feront découvrir les œuvres et les secrets de l'abbaye avec une énergie contagieuse. En famille, les enfants seront surpris par l'immensité des combles et leur charpente impressionnante !",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -19180,7 +19226,9 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En famille, profitez du jeu de piste pour rendre la visite encore plus ludique pour les enfants ! Prenez bien votre temps devant chaque vitrine : les détails et couleurs des spécimens méritent une observation attentive.",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -19287,7 +19335,9 @@
     "animals_captive": false,
     "rainy_day_activity": false,
     "conseil_planly": "En famille, optez pour la sortie en barque pour une expérience inoubliable sur les marais. En couple, la sortie vélo guidée avec dégustation offre un moment de partage unique et savoureux.",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -20254,7 +20304,9 @@
     "animals_captive": false,
     "rainy_day_activity": true,
     "conseil_planly": "En famille, commencez par le musée des enfants sur l'arbre avant d'explorer les grandes salles immersives — prévoyez au moins 2h pour profiter de tout ! En couple ou solo, ne manquez pas l'exposition sur la Vendée sous l'Occupation et les ambiances sonores saisissantes de chaque espace.",
-    "specific": {},
+    "specific": {
+      "social": null
+    },
     "specific_status": {},
     "parking_main": null,
     "parking_others": [],
@@ -20852,7 +20904,8 @@
       "official_source": {
         "url": "https://www.lapancarte.fr/.",
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -21032,7 +21085,8 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "empty",
@@ -21426,7 +21480,6 @@
         "Lacertus signifie maquereau en latin, poisson populaire et local apprécié sur les côtes vendéennes."
       ],
       "social": {
-        "facebook": "https://www.facebook.com/profile.php",
         "instagram": "https://www.instagram.com/lacertus_restaurant"
       },
       "official_source": {
@@ -22321,7 +22374,6 @@
         "Possibilité de privatiser pour événements particuliers et professionnels"
       ],
       "social": {
-        "facebook": "https://www.facebook.com/profile.php",
         "instagram": "https://www.instagram.com/laptitecale_lessables"
       },
       "official_source": {
@@ -24020,7 +24072,6 @@
         "Soirée Pizzas à Volonté tous les mardis soir uniquement sur place."
       ],
       "social": {
-        "instagram": "https://www.instagram.com/reel/DdUF3sElfnq",
         "facebook": "https://www.facebook.com/pizzacosyfrance"
       },
       "official_source": {
@@ -25040,7 +25091,8 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "empty",
@@ -25348,9 +25400,7 @@
         "La page fournie concerne uniquement la Fédération Nationale des Marchés de France (site marchesdefrance.fr)",
         "Données insuffisantes pour compléter ce formulaire"
       ],
-      "social": {
-        "facebook": "https://www.facebook.com/F%C3%A9d%C3%A9ration-Nationale-des-Syndicats-des-Commer%C3%A7ants-des-March%C3%A9s-de-France-308167020058013"
-      },
+      "social": null,
       "official_source": {
         "url": "http://www.marchesdefrance.fr/",
         "verified_at": "2026-09-16"
@@ -26584,7 +26634,8 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -26780,7 +26831,8 @@
       "official_source": {
         "url": "http://www.mecamax.com/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -26995,7 +27047,8 @@
       "official_source": {
         "url": "http://www.akskart.fr/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -27335,7 +27388,8 @@
       "official_source": {
         "url": "https://www.up2play.fr/lessablesdolonne/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -27610,7 +27664,8 @@
       "official_source": {
         "url": "http://www.sablotins.com/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -27905,7 +27960,8 @@
       "official_source": {
         "url": "https://www.ile-aux-jeux.com/index.php/le-parc-les-sables-olonne/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -29095,7 +29151,8 @@
       "official_source": {
         "url": "http://www.missiondecouverte.fr/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -30532,7 +30589,8 @@
       "official_source": {
         "url": "https://www.vaguedejeux.fr/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -30695,7 +30753,8 @@
       "official_source": {
         "url": "http://axeyon-paintball.ovh/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -30941,7 +31000,8 @@
       "official_source": {
         "url": "https://www.exploraparc.com/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -31252,7 +31312,8 @@
       "official_source": {
         "url": "http://www.chateau-aventuriers.com/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -31496,7 +31557,8 @@
       "official_source": {
         "url": "https://ofunpark.fr/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -31741,7 +31803,8 @@
       "official_source": {
         "url": "http://www.zoodessables.fr/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -31926,7 +31989,8 @@
       "official_source": {
         "url": "https://anepassion.wixsite.com/website",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -33066,7 +33130,8 @@
       "official_source": {
         "url": "https://www.aquarium-vendee.com/",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -33376,7 +33441,8 @@
       "official_source": {
         "url": "https://www.vendee-tourisme.com/parc-des-floralies/la-tranche-sur-mer/loipdl085v513v1x",
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -34783,7 +34849,8 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-14"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -35844,7 +35911,8 @@
       "official_source": {
         "url": "http://cinema-legrandpalace.fr/",
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "auto",
@@ -35958,7 +36026,8 @@
       "official_source": {
         "url": "https://lesvoilesdecayola.com",
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "empty",
@@ -36085,7 +36154,8 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "empty",
@@ -36266,7 +36336,6 @@
         "pmr": null
       },
       "social": {
-        "facebook": "https://www.facebook.com/profile.php",
         "instagram": "https://www.instagram.com/hotelvertime.lessables"
       },
       "official_source": {
@@ -37436,7 +37505,8 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "empty",
@@ -37621,7 +37691,8 @@
       "official_source": {
         "url": null,
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "empty",
@@ -39379,7 +39450,8 @@
       "official_source": {
         "url": "https://hotel-coteouest.com",
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "empty",
@@ -39554,7 +39626,8 @@
       "official_source": {
         "url": "https://piscines-des-sablesdolonne.fr/piscine-aqualonne/",
         "verified_at": "2026-09-16"
-      }
+      },
+      "social": null
     },
     "specific_status": {
       "pricing": "empty",
