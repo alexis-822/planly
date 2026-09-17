@@ -20,12 +20,50 @@
 <link rel="stylesheet" href="vendor/leaflet.css"/>
 <style>
 :root{
+  /* ── Socle historique : ne pas renommer, 99 usages pour --brand* seul ── */
   --brand:#428CE3;--brand-l:#EAF2FC;--brand-d:#2B6FBE;
   --bg:#FCF8ED;--bg-d:#F0E9D4;
   --tx:#1A1A18;--txm:#6B6B67;--txl:#A8A8A3;
   --wh:#FFFFFF;--br:rgba(26,26,24,0.10);
   --hl:rgba(96,168,250,0.6);
   --max:520px;
+
+  /* ── Palette dérivée du bleu Planly ──────────────────────────────────
+     Règle de lisibilité, mesurée et non supposée : --brand (#428CE3) ne
+     pèse que 3,3:1 sur le fond crème. Il porte donc les APLATS, TRAITS et
+     JAUGES, jamais du petit texte. --brand-d porte le texte bleu (4,9:1),
+     --deep les fonds sélectionnés avec du blanc dessus (10,9:1) — à la
+     place du quasi-noir utilisé jusqu'ici, qui écrasait la marque. */
+  --deep:#123E6B;          /* états sélectionnés, onglet actif, toast */
+  --on-deep:#FFFFFF;       /* ce qui s'écrit sur --deep */
+
+  /* ── Encres et filets : nomme les gris qui traînaient en dur ── */
+  --tx2:#444441;           /* texte secondaire dense (6 usages en dur) */
+  --tx3:#888780;           /* légendes, unités (11 usages en dur) */
+  --line:#E8E4DA;          /* filet de séparation (14 usages en dur) */
+  --line-2:#F0EDE4;        /* filet très discret, intérieur de bloc */
+
+  /* ── États : le vert, l'ambre et le rouge DISENT quelque chose.
+     Ils ne servent jamais de décor — c'est ce qui manquait. ── */
+  --ok:#15803D;--ok-soft:#EAF3DE;
+  --warn:#8A5410;--warn-soft:#FAEEDA;
+  --bad:#B71C1C;--bad-soft:#FCEBEB;
+  --nature:#2D5A1B;--nature-soft:#EAF3DE;   /* blocs Forêts & Nature */
+
+  /* ── Échelle typographique : 6 niveaux au lieu de 21 tailles.
+     Le danger corrigé : 13 px (51 règles) et 12 px (42) se ressemblaient
+     trop pour hiérarchiser quoi que ce soit. ── */
+  --t1:28px;   /* nom de lieu, titre d'écran — Fraunces 300 */
+  --t2:19px;   /* titre de section, chiffre clé — Fraunces 600 */
+  --t3:15px;   /* libellé fort, entrée de liste — DM Sans 600 */
+  --t4:14px;   /* texte courant — DM Sans 400 */
+  --t5:12.5px; /* précision, sous-ligne — DM Sans 400 */
+  --t6:11px;   /* étiquette de rubrique — DM Sans 700, capitales */
+
+  /* ── Rayons et relief : 3 rayons au lieu de 16, 1 ombre au lieu de 20.
+     Le relief se mérite : il désigne ce qui flotte réellement. ── */
+  --r1:8px;--r2:14px;--r3:999px;
+  --sh:0 8px 28px rgba(26,26,24,.12);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{background:var(--bg);}
