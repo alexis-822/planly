@@ -27,14 +27,25 @@ def parse_day(row_html, base_date, day_index):
     height_texts = [t for t in split_br(m.group(2)) if t][:4]
     coeff_texts  = split_br(m.group(3))[:4]
 
-    types = ["BM", "PM", "BM", "PM"]
+    # Le type se déduit de la HAUTEUR, jamais de la position : une journée ne
+    # commence pas toujours par une basse mer. L'ancienne liste en dur
+    # ["BM","PM","BM","PM"] produisait 55 % de libellés faux (des "BM" à 5,30 m).
+    hauteurs = []
+    for i in range(len(time_texts)):
+        h_raw = height_texts[i] if i < len(height_texts) else None
+        hauteurs.append(round(float(h_raw.replace("m", "").replace(",", ".")), 2) if h_raw else None)
+    connues = [h for h in hauteurs if h is not None]
+    seuil = (min(connues) + max(connues)) / 2 if connues else 0
+
     tides = []
     for i, t in enumerate(time_texts):
-        h_raw = height_texts[i] if i < len(height_texts) else None
-        h_val = round(float(h_raw.replace("m", "").replace(",", ".")), 2) if h_raw else None
+        h_val = hauteurs[i]
         coeff_raw = coeff_texts[i] if i < len(coeff_texts) else ""
         coeff_val = int(coeff_raw) if coeff_raw and coeff_raw.isdigit() else None
-        tides.append({"type": types[i], "time": t, "height": h_val, "coeff": coeff_val})
+        tides.append({
+            "type": ("PM" if h_val > seuil else "BM") if h_val is not None else None,
+            "time": t, "height": h_val, "coeff": coeff_val,
+        })
     return tides
 
 def fetch_all_days(port_id):

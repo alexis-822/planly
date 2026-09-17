@@ -2182,12 +2182,17 @@ function _getPort(commune){return _MAREE_PORT[commune]||125;}
 var _tideCache=(function(){
   var cache={};
   if(typeof TIDES_DATA!=='undefined'){
-    var todayStr=new Date().toISOString().slice(0,10);
+    // Date locale, pas toISOString() : en UTC, après minuit l'été, on basculait
+    // sur la veille.
+    var _n=new Date();
+    var todayStr=_n.getFullYear()+'-'+String(_n.getMonth()+1).padStart(2,'0')+'-'+String(_n.getDate()).padStart(2,'0');
     Object.keys(TIDES_DATA).forEach(function(id){
       var d=TIDES_DATA[id];
       if(d.days){
-        // Nouveau format multi-jours : prend aujourd'hui, ou le premier jour dispo
-        cache[parseInt(id)]=d.days[todayStr]||d.days[Object.keys(d.days).sort()[0]]||[];
+        // Aucun repli sur un autre jour : afficher les marées d'il y a huit jours
+        // en les présentant comme celles du jour est pire que de ne rien montrer.
+        // Si le fichier est périmé, le bloc marée ne s'affiche pas.
+        cache[parseInt(id)]=d.days[todayStr]||[];
       } else {
         cache[parseInt(id)]=d.tides&&d.tides.length?d.tides:[];
       }

@@ -1,365 +1,365 @@
-// Generated 2026-09-09 by fetch_tides.py
+// Generated 2026-09-17 by fetch_tides.py
 var TIDES_DATA = {
   "124": {
     "nom": "Saint-Gilles-Croix-de-Vie",
-    "generated": "2026-09-09",
+    "generated": "2026-09-17",
     "days": {
-      "2026-09-09": [
+      "2026-09-17": [
         {
           "type": "BM",
-          "time": "04h21",
-          "height": 4.83,
-          "coeff": 76
-        },
-        {
-          "type": "PM",
-          "time": "10h02",
-          "height": 1.26,
+          "time": "03h04",
+          "height": 1.78,
           "coeff": null
         },
         {
+          "type": "PM",
+          "time": "08h33",
+          "height": 4.43,
+          "coeff": 56
+        },
+        {
           "type": "BM",
-          "time": "16h37",
-          "height": 5.17,
-          "coeff": 83
+          "time": "15h24",
+          "height": 1.92,
+          "coeff": null
         },
         {
           "type": "PM",
-          "time": "22h36",
-          "height": 0.89,
+          "time": "20h50",
+          "height": 4.18,
+          "coeff": 49
+        }
+      ],
+      "2026-09-18": [
+        {
+          "type": "BM",
+          "time": "03h44",
+          "height": 2.14,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "09h18",
+          "height": 4.13,
+          "coeff": 41
+        },
+        {
+          "type": "BM",
+          "time": "16h12",
+          "height": 2.26,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "21h42",
+          "height": 3.84,
+          "coeff": 35
+        }
+      ],
+      "2026-09-19": [
+        {
+          "type": "BM",
+          "time": "04h37",
+          "height": 2.45,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "10h48",
+          "height": 3.86,
+          "coeff": 28
+        },
+        {
+          "type": "BM",
+          "time": "17h19",
+          "height": 2.51,
           "coeff": null
         }
       ],
-      "2026-09-10": [
-        {
-          "type": "BM",
-          "time": "05h01",
-          "height": 5.06,
-          "coeff": 90
-        },
+      "2026-09-20": [
         {
           "type": "PM",
-          "time": "10h50",
-          "height": 0.91,
+          "time": "00h16",
+          "height": 3.64,
+          "coeff": 24
+        },
+        {
+          "type": "BM",
+          "time": "05h55",
+          "height": 2.63,
           "coeff": null
         },
         {
-          "type": "BM",
-          "time": "17h14",
-          "height": 5.38,
-          "coeff": 95
+          "type": "PM",
+          "time": "13h03",
+          "height": 3.86,
+          "coeff": 22
         },
         {
-          "type": "PM",
-          "time": "23h20",
-          "height": 0.65,
+          "type": "BM",
+          "time": "18h50",
+          "height": 2.55,
           "coeff": null
         }
       ],
-      "2026-09-11": [
-        {
-          "type": "BM",
-          "time": "05h35",
-          "height": 5.22,
-          "coeff": 98
-        },
+      "2026-09-21": [
         {
           "type": "PM",
-          "time": "11h33",
-          "height": 0.69,
+          "time": "01h59",
+          "height": 3.76,
+          "coeff": 24
+        },
+        {
+          "type": "BM",
+          "time": "07h30",
+          "height": 2.55,
           "coeff": null
         },
         {
+          "type": "PM",
+          "time": "14h16",
+          "height": 4.06,
+          "coeff": 29
+        },
+        {
           "type": "BM",
-          "time": "17h47",
-          "height": 5.47,
-          "coeff": 101
+          "time": "20h13",
+          "height": 2.33,
+          "coeff": null
         }
       ],
-      "2026-09-12": [
+      "2026-09-22": [
+        {
+          "type": "PM",
+          "time": "02h56",
+          "height": 4.0,
+          "coeff": 35
+        },
         {
           "type": "BM",
-          "time": "00h01",
-          "height": 0.56,
+          "time": "08h38",
+          "height": 2.27,
           "coeff": null
         },
         {
           "type": "PM",
-          "time": "06h05",
-          "height": 5.28,
-          "coeff": 102
+          "time": "15h06",
+          "height": 4.34,
+          "coeff": 42
         },
         {
           "type": "BM",
-          "time": "12h14",
-          "height": 0.61,
+          "time": "21h08",
+          "height": 1.99,
           "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "18h18",
-          "height": 5.46,
-          "coeff": 101
         }
       ],
-      "2026-09-13": [
+      "2026-09-23": [
+        {
+          "type": "PM",
+          "time": "03h35",
+          "height": 4.27,
+          "coeff": 50
+        },
         {
           "type": "BM",
-          "time": "00h40",
-          "height": 0.62,
+          "time": "09h25",
+          "height": 1.93,
           "coeff": null
         },
         {
           "type": "PM",
-          "time": "06h33",
-          "height": 5.26,
-          "coeff": 100
+          "time": "15h43",
+          "height": 4.63,
+          "coeff": 57
         },
         {
           "type": "BM",
-          "time": "12h53",
-          "height": 0.69,
+          "time": "21h49",
+          "height": 1.64,
           "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "18h47",
-          "height": 5.33,
-          "coeff": 97
-        }
-      ],
-      "2026-09-14": [
-        {
-          "type": "BM",
-          "time": "01h17",
-          "height": 0.8,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "07h01",
-          "height": 5.15,
-          "coeff": 93
-        },
-        {
-          "type": "BM",
-          "time": "13h30",
-          "height": 0.9,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "19h15",
-          "height": 5.12,
-          "coeff": 89
-        }
-      ],
-      "2026-09-15": [
-        {
-          "type": "BM",
-          "time": "01h52",
-          "height": 1.08,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "07h29",
-          "height": 4.96,
-          "coeff": 83
-        },
-        {
-          "type": "BM",
-          "time": "14h07",
-          "height": 1.2,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "19h45",
-          "height": 4.85,
-          "coeff": 77
         }
       ]
     }
   },
   "125": {
     "nom": "Les Sables-d'Olonne",
-    "generated": "2026-09-09",
+    "generated": "2026-09-17",
     "days": {
-      "2026-09-09": [
+      "2026-09-17": [
         {
           "type": "BM",
-          "time": "04h18",
-          "height": 4.95,
-          "coeff": 76
-        },
-        {
-          "type": "PM",
-          "time": "09h59",
-          "height": 1.36,
+          "time": "03h00",
+          "height": 1.86,
           "coeff": null
         },
         {
+          "type": "PM",
+          "time": "08h31",
+          "height": 4.52,
+          "coeff": 56
+        },
+        {
           "type": "BM",
-          "time": "16h35",
-          "height": 5.3,
-          "coeff": 83
+          "time": "15h20",
+          "height": 2.0,
+          "coeff": null
         },
         {
           "type": "PM",
-          "time": "22h33",
-          "height": 0.97,
-          "coeff": null
+          "time": "20h45",
+          "height": 4.26,
+          "coeff": 49
         }
       ],
-      "2026-09-10": [
+      "2026-09-18": [
         {
           "type": "BM",
-          "time": "04h59",
-          "height": 5.18,
-          "coeff": 90
+          "time": "03h40",
+          "height": 2.23,
+          "coeff": null
         },
         {
           "type": "PM",
-          "time": "10h47",
-          "height": 1.01,
+          "time": "09h14",
+          "height": 4.22,
+          "coeff": 41
+        },
+        {
+          "type": "BM",
+          "time": "16h08",
+          "height": 2.36,
           "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "21h33",
+          "height": 3.93,
+          "coeff": 35
+        }
+      ],
+      "2026-09-19": [
+        {
+          "type": "BM",
+          "time": "04h32",
+          "height": 2.56,
+          "coeff": null
+        },
+        {
+          "type": "PM",
+          "time": "10h39",
+          "height": 3.96,
+          "coeff": 28
         },
         {
           "type": "BM",
           "time": "17h13",
-          "height": 5.51,
-          "coeff": 95
-        },
-        {
-          "type": "PM",
-          "time": "23h17",
-          "height": 0.72,
+          "height": 2.62,
           "coeff": null
         }
       ],
-      "2026-09-11": [
-        {
-          "type": "BM",
-          "time": "05h34",
-          "height": 5.33,
-          "coeff": 98
-        },
+      "2026-09-20": [
         {
           "type": "PM",
-          "time": "11h30",
-          "height": 0.78,
+          "time": "00h26",
+          "height": 3.72,
+          "coeff": 24
+        },
+        {
+          "type": "BM",
+          "time": "05h49",
+          "height": 2.76,
           "coeff": null
         },
         {
-          "type": "BM",
-          "time": "17h48",
-          "height": 5.6,
-          "coeff": 101
+          "type": "PM",
+          "time": "13h07",
+          "height": 3.97,
+          "coeff": 22
         },
         {
-          "type": "PM",
-          "time": "23h58",
-          "height": 0.61,
+          "type": "BM",
+          "time": "18h42",
+          "height": 2.68,
           "coeff": null
         }
       ],
-      "2026-09-12": [
-        {
-          "type": "BM",
-          "time": "06h05",
-          "height": 5.39,
-          "coeff": 102
-        },
+      "2026-09-21": [
         {
           "type": "PM",
-          "time": "12h11",
-          "height": 0.69,
+          "time": "02h01",
+          "height": 3.86,
+          "coeff": 24
+        },
+        {
+          "type": "BM",
+          "time": "07h26",
+          "height": 2.7,
           "coeff": null
         },
         {
+          "type": "PM",
+          "time": "14h17",
+          "height": 4.18,
+          "coeff": 29
+        },
+        {
           "type": "BM",
-          "time": "18h19",
-          "height": 5.57,
-          "coeff": 101
+          "time": "20h10",
+          "height": 2.47,
+          "coeff": null
         }
       ],
-      "2026-09-13": [
+      "2026-09-22": [
+        {
+          "type": "PM",
+          "time": "02h58",
+          "height": 4.11,
+          "coeff": 35
+        },
         {
           "type": "BM",
-          "time": "00h36",
-          "height": 0.67,
+          "time": "08h38",
+          "height": 2.41,
           "coeff": null
         },
         {
           "type": "PM",
-          "time": "06h35",
-          "height": 5.35,
-          "coeff": 100
+          "time": "15h06",
+          "height": 4.45,
+          "coeff": 42
         },
         {
           "type": "BM",
-          "time": "12h49",
-          "height": 0.76,
+          "time": "21h05",
+          "height": 2.13,
           "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "18h48",
-          "height": 5.44,
-          "coeff": 97
         }
       ],
-      "2026-09-14": [
+      "2026-09-23": [
+        {
+          "type": "PM",
+          "time": "03h37",
+          "height": 4.39,
+          "coeff": 50
+        },
         {
           "type": "BM",
-          "time": "01h13",
-          "height": 0.86,
+          "time": "09h26",
+          "height": 2.06,
           "coeff": null
         },
         {
           "type": "PM",
-          "time": "07h03",
-          "height": 5.23,
-          "coeff": 93
+          "time": "15h44",
+          "height": 4.74,
+          "coeff": 57
         },
         {
           "type": "BM",
-          "time": "13h26",
-          "height": 0.96,
+          "time": "21h46",
+          "height": 1.77,
           "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "19h16",
-          "height": 5.21,
-          "coeff": 89
-        }
-      ],
-      "2026-09-15": [
-        {
-          "type": "BM",
-          "time": "01h49",
-          "height": 1.14,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "07h30",
-          "height": 5.04,
-          "coeff": 83
-        },
-        {
-          "type": "BM",
-          "time": "14h03",
-          "height": 1.26,
-          "coeff": null
-        },
-        {
-          "type": "PM",
-          "time": "19h44",
-          "height": 4.93,
-          "coeff": 77
         }
       ]
     }
