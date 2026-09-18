@@ -3803,36 +3803,23 @@ function _renderPoiBody(p,mode){
     // condition de sécurité et la présence d'un bar.
     var frRows=[], frSavoir=[];
     if(bchSupervised){
-      // La maquette détaille la surveillance en trois lignes. Les données les
-      // portent déjà — supervised_hours contient « 10h30-19h en juillet-août,
-      // 14h-18h30 en juin » — et l'app les écrasait en une seule.
-      // Les horaires détaillés sont écrits de deux façons dans les données :
-      // « 10h30-19h en juillet-août, 14h-18h30 en juin » se découpe en lignes,
-      // mais « Semaine 14h-18h30 ; Juillet-Août : 12h-19h » ne s'y prête pas.
-      // Dans ce second cas une seule ligne, sinon on affichait la même
-      // information deux fois — une en valeur, une en précision.
-      // Les horaires de surveillance s'écrivent de deux façons dans les
-      // données : « 10h30-19h en juillet-août, 14h-18h30 en juin » se découpe
-      // en périodes, « Juin : week-ends 12h-19h ; Semaine 14h-18h30 » non.
-      // On découpe SEGMENT PAR SEGMENT : ceux qui portent « en » ou « : »
-      // deviennent une ligne nommée, les autres restent tels quels. Une règle
-      // tout-ou-rien faisait perdre la moitié de l'information sur 4 plages —
-      // et c'est une information de sécurité.
-      var _sh=String(sp.supervised_hours||'');
-      var _parts=_sh.split(/[,;]/).map(function(x){return x.trim();}).filter(Boolean);
-      if(_parts.length){
-        _parts.forEach(function(seg){
-          var m=seg.match(/^(.+?)\s+en\s+(.+)$/);        // « 12h-19h en juin »
-          var d=seg.match(/^([^:]{2,22})\s*:\s*(.+)$/);  // « Juin : 12h-19h »
-          // Le vert garde ici son sens : une plage surveillée est une
-          // information de sécurité, pas un agrément.
-          if(m)frRows.push(_frRow('i-clock','En '+m[2],'',m[1],'on'));
-          else if(d)frRows.push(_frRow('i-clock',d[1],'',d[2],'on'));
-          else frRows.push(_frRow('i-clock','Surveillance','',seg,'on'));
-        });
-      } else {
-        frRows.push(_frRow('i-swim','Surveillance','',bch.hours||survDisplay||'oui','on'));
-      }
+      // UNE seule ligne « Surveillance », comme la maquette. J'ai essayé trois
+      // fois de découper supervised_hours en périodes — mais c'est une PHRASE,
+      // pas une liste : « Juin : week-ends 12h-19h, semaine 14h-18h30 ;
+      // Juillet-Août : 12h-19h ». Le découpage fabriquait des étiquettes qui
+      // changeaient d'une plage à l'autre (« En juillet-août », « Juin »,
+      // « En semaine juin-septembre ») et laissait « Surveillance » au milieu
+      // quand un segment résistait : trois lignes pour une information.
+      // L'horaire court va à droite, la phrase entière passe en précision.
+      var _sh=String(sp.supervised_hours||'').trim();
+      var _court=bch.hours&&String(bch.hours).length<=14?String(bch.hours):'';
+      // La phrase CONTIENT presque toujours l'horaire court : « 10h30-19h en
+      // juillet-août » porte déjà « 10h30-19h ». L'afficher aussi à droite le
+      // répétait sur la même ligne. Quand la phrase le contient, elle seule
+      // suffit ; la valeur ne sert que lorsqu'il n'y a pas de phrase.
+      var _detail=(_sh&&_sh!==_court)?_sh:'';
+      var _valeur=(_detail&&_court&&_detail.indexOf(_court)!==-1)?'':(_court||survDisplay||'Oui');
+      frRows.push(_frRow('i-swim','Surveillance',_detail,_valeur,'on'));
       var _deb=sp.supervised_start, _fin=sp.supervised_end;
       if(_deb&&_fin)frRows.push(_frRow('i-cal','Saison surveillée','',_deb+' → '+_fin));
       else if(bch.period)frRows.push(_frRow('i-cal','Saison surveillée','',bch.period));
