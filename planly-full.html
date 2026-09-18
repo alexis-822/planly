@@ -1523,14 +1523,21 @@ body{
 .pl-price-for{font-size:var(--t5);color:var(--tx3);line-height:var(--lh);}
 .pl-price-who{font-size:var(--t5);color:var(--tx3);margin-top:4px;line-height:var(--lh);}
 .pl-price-deal{display:flex;align-items:center;gap:8px;margin-top:12px;padding:9px 12px;border-radius:10px;background:var(--ok-soft);color:var(--ok);font-size:var(--t5);line-height:var(--lh);}
-.pl-price-lines{display:flex;flex-direction:column;gap:var(--s3);margin-top:12px;padding-top:10px;border-top:0.5px solid var(--line-2);font-size:var(--t5);color:var(--tx2);line-height:var(--lh);}
+/* Le détail ligne à ligne ne s'impose plus : on lit d'abord le total, et on
+   déplie si on veut savoir d'où il vient — tarif enfant, billet famille. */
+.pl-price-lines{display:none;flex-direction:column;gap:var(--s3);margin-top:12px;padding-top:10px;border-top:0.5px solid var(--line-2);font-size:var(--t5);color:var(--tx2);line-height:var(--lh);}
+.pl-price.ouvert .pl-price-lines{display:flex;}
+.pl-price-i{margin-left:auto;align-self:center;flex:0 0 auto;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:none;background:none;color:var(--tx3);cursor:pointer;padding:0;border-radius:50%;}
+.pl-price-i .ic{width:19px;height:19px;}
+.pl-price-i:hover,.pl-price.ouvert .pl-price-i{color:var(--brand);}
 .pl-price-line{display:flex;justify-content:space-between;gap:10px;}
 .pl-price-line b{font-weight:600;color:var(--tx);white-space:nowrap;}
 .pl-price-line.free b{color:var(--ok);}
 .pl-price-line.old,.pl-price-line.old b{color:var(--txl);font-weight:400;}
 .pl-price-line.old b{text-decoration:line-through;}
 .pl-price-line.unk b{color:var(--warn);font-weight:500;}
-.pl-price-note{font-size:var(--t5);color:var(--tx3);margin-top:8px;line-height:var(--lh);}
+.pl-price-note{display:none;font-size:var(--t5);color:var(--tx3);margin-top:8px;line-height:var(--lh);}
+.pl-price.ouvert .pl-price-note{display:block;}
 .pl-price-ft{display:flex;align-items:center;gap:10px;margin-top:12px;padding-top:12px;border-top:0.5px solid var(--line-2);}
 .pl-price-src{flex:1;font-size:var(--t6);color:var(--txl);line-height:var(--lh);}
 .pl-price-src b{display:block;font-size:var(--t5);font-weight:500;color:var(--warn);margin-bottom:2px;line-height:var(--lh);}
@@ -3378,8 +3385,22 @@ function _plHoursBar(p){
   return'<div class="pl-hours">'+PL_ICON_CLOCK+'<div><b>Horaires</b> · '+_escHtml(String(sp.hours_text||(sp.booking==='obligatoire'?'sur réservation uniquement':'voir le site officiel')))
     +(sp.season?'<br><span style="font-size:12px">Saison : '+_escHtml(String(sp.season))+'</span>':'')+'</div></div>';
 }
+// La maquette montre le prix, pas sa décomposition. Le détail reste à portée
+// d'un « i » — c'est là que se lisent les tarifs privilégiés : gratuité des
+// petits, tarif enfant, billet famille. Un bouton, jamais un lien javascript :
+// l'app intercepte tous les liens et n'en ouvrirait qu'une page blanche.
+function _plPriceToggle(b){
+  var c=b.parentNode&&b.parentNode.parentNode;
+  if(!c)return;
+  var ouvert=c.classList.toggle('ouvert');
+  b.setAttribute('aria-expanded',ouvert?'true':'false');
+  b.setAttribute('aria-label',ouvert?'Masquer le détail des tarifs':'Voir le détail des tarifs');
+}
 function _plPriceBlock(sp){
   var pr=sp.pricing||{},src=sp.official_source||{};
+  var infoBtn='<button class="pl-price-i" type="button" aria-expanded="false"'
+    +' aria-label="Voir le détail des tarifs" onclick="_plPriceToggle(this)">'
+    +'<svg class="ic"><use href="#i-info"/></svg></button>';
   var srcUrl=pr.source_url||src.url||'';
   var booking=sp.booking==='obligatoire'||sp.booking==='conseillée';
   var btn=srcUrl?'<a class="pl-btn" href="'+_escHtml(srcUrl)+'" target="_blank" rel="noopener">'+(booking?'Réserver':pr.source_label&&pr.source_label!=='site officiel'?'Voir la source':'Site officiel')+'</a>':'';
@@ -3397,7 +3418,7 @@ function _plPriceBlock(sp){
     var nb=g.adults+g.kids.length;
     var minP=fromP!=null?fromP:Math.min.apply(null,opts.map(function(o){return _plNum(o.price);}));
     return'<div class="pl-price">'+hd
-      +'<div class="pl-price-total"><div class="pl-price-big">dès '+_plEuro(minP*nb)+'</div><div class="pl-price-for">'+(nb===1?'pour toi':'pour vous '+nb)+'</div></div>'
+      +'<div class="pl-price-total"><div class="pl-price-big">dès '+_plEuro(minP*nb)+'</div><div class="pl-price-for">'+(nb===1?'pour toi':'pour vous '+nb)+'</div>'+(opts.length||pr.notes?infoBtn:'')+'</div>'
       +'<div class="pl-price-who">À partir de '+_plEuro(minP)+' par personne</div>'
       +(opts.length?'<div class="pl-price-lines">'+opts.map(function(o){return'<div class="pl-price-line"><span>'+_escHtml(String(o.label||''))+'</span><b>'+_plEuro(_plNum(o.price))+'</b></div>';}).join('')+'</div>':'')
       +(pr.notes?'<div class="pl-price-note">'+_escHtml(String(pr.notes))+'</div>':'')
@@ -3448,7 +3469,7 @@ function _plPriceBlock(sp){
   var n=g.adults+g.kids.length;
   var who=g.adults+' adulte'+(g.adults>1?'s':'')+(g.kids.length?' · enfant'+(g.kids.length>1?'s':'')+' de '+_plAgesTxt(g.kids):'');
   return'<div class="pl-price">'+hd
-    +'<div class="pl-price-total"><div class="pl-price-big">'+(unknown||adult==null?'dès ':'')+_plEuro(total)+'</div><div class="pl-price-for">'+(n===1?'pour toi':'pour vous '+n)+'</div></div>'
+    +'<div class="pl-price-total"><div class="pl-price-big">'+(unknown||adult==null?'dès ':'')+_plEuro(total)+'</div><div class="pl-price-for">'+(n===1?'pour toi':'pour vous '+n)+'</div>'+infoBtn+'</div>'
     +'<div class="pl-price-who">'+who+'</div>'+deal
     +'<div class="pl-price-lines">'+lines.map(function(l){return'<div class="pl-price-line'+(l.cls?' '+l.cls:'')+'"><span>'+l.lbl+'</span><b>'+l.val+'</b></div>';}).join('')+'</div>'
     +(pr.notes?'<div class="pl-price-note">'+_escHtml(String(pr.notes))+'</div>':'')
@@ -3894,7 +3915,8 @@ function _renderPoiBody(p,mode){
     // « Facile » s'affichait seule, sans étiquette, sous une icône d'haltère.
     var frtAutres=_frFromSpecs(p.quickSpecs,
       ['ombre',sp.shade_level,'terrain',sp.terrain_type,'poussette','vélo','faune',
-       'pique-nique','jeux','difficulté',sp.difficulty,_frtDiffLabel&&frtDiff?_frtDiffLabel(frtDiff):'']);
+       'pique-nique','jeux','difficulté',sp.difficulty,_frtDiffLabel&&frtDiff?_frtDiffLabel(frtDiff):'']
+      .concat(_dejaDit(frtSavoir,ribbonItems)));
     sectionLabel='';
     pillsHtml=((pills.length||frtAutres.length)?'<div class="bch-slbl">'+_frtTitre(p)+'</div>'
         +_frRows(pills.concat(frtAutres)):'')
@@ -3959,7 +3981,7 @@ function _renderPoiBody(p,mode){
     if(sp.bike_allowed)balSavoir.push(_frRow('i-bike','Vélo autorisé','Partagé avec les piétons',''));
     if(sp.loop===false)balSavoir.push(_frRow('i-arrows','Aller-retour','Prévoir le retour par le même chemin',''));
     pillsHtml=(function(){
-      var a=pills.concat(_frFromSpecs(p.quickSpecs));
+      var a=pills.concat(_frFromSpecs(p.quickSpecs,_dejaDit(pills.concat(balSavoir),ribbonItems)));
       return (a.length?'<div class="bch-slbl">La balade</div>'+_frRows(a):'')
         +(balSavoir.length?'<div class="bch-slbl mineur">Ce qu\'il faut savoir</div>'+_frRows(balSavoir):'');
     })();
@@ -4032,7 +4054,7 @@ function _renderPoiBody(p,mode){
     if(mv.takeaway)mtPills.push(_frRow('i-takeaway','À emporter','','oui'));
     if(mv.covered)mtPills.push(_frRow('i-umbrella','Halle couverte','','oui'));
     if(mv.shop)mtPills.push(_frRow('i-shop','Boutique','Sur place','oui'));
-    pillsHtml=_frRows(mtPills.concat(_frFromSpecs(p.quickSpecs)));
+    pillsHtml=_frRows(mtPills.concat(_frFromSpecs(p.quickSpecs,_dejaDit(mtPills,ribbonItems))));
 
   }else if(ST_SUBCATS.indexOf(sub)!==-1){
     var sv=sp.services||{},stAge=_plNum(sp.age_min);
@@ -4067,7 +4089,7 @@ function _renderPoiBody(p,mode){
     if(sv.pmr)stPills.push(_frRow('i-pmr','Accès PMR','','oui','on'));
     if(sv.id_required)stPills.push(_frRow('i-id','Papiers','À présenter à l\'entrée','obligatoire','warn'));
     if(sv.dress_code)stPills.push(_frRow('i-shirt','Tenue','',_escHtml(String(sv.dress_code)),'warn'));
-    pillsHtml=_frRows(stPills.concat(_frFromSpecs(p.quickSpecs)));
+    pillsHtml=_frRows(stPills.concat(_frFromSpecs(p.quickSpecs,_dejaDit(stPills,ribbonItems))));
 
   }else if(PL_SUBCATS.indexOf(sub)!==-1){
     var plAgeMin=_plNum(sp.age_min);
@@ -4098,7 +4120,7 @@ function _renderPoiBody(p,mode){
         _escHtml(r.charAt(0).toUpperCase()+r.slice(1)),
         /chaussette/i.test(r)?'À prévoir dans le sac':'À savoir avant de venir',''));
     });
-    pillsHtml=_frRows(plPills.concat(_frFromSpecs(p.quickSpecs)));
+    pillsHtml=_frRows(plPills.concat(_frFromSpecs(p.quickSpecs,_dejaDit(plPills,ribbonItems))));
     var plKids=_plGroup().kids;
     if(!attention&&plKids.length&&(sp.activities||[]).length){
       attention=plKids.map(function(age){
@@ -4171,7 +4193,8 @@ function _renderPoiBody(p,mode){
     // parce que la quickSpec porte le même libellé que ma ligne nommée.
     var patAutres=_frFromSpecs(p.quickSpecs,
       ['époque',sp.historical_period,'visite guidée','visite','terrain',sp.terrain_type,
-       'difficulté',sp.difficulty,'ombre','vélo','poussette','entrée libre','panoramique']);
+       'difficulté',sp.difficulty,'ombre','vélo','poussette','entrée libre','panoramique']
+      .concat(_dejaDit(patSavoir,ribbonItems)));
     pillsHtml=(patFerry.length?'<div class="bch-slbl">La traversée'
         +(fp&&fp.compagnie?'<b>'+_escHtml(String(fp.compagnie))+'</b>':'')+'</div>'
         +'<div class="bch-ssub">Aller-retour dans la journée</div>'+_frRows(patFerry):'')
@@ -5389,6 +5412,29 @@ function _frRows(rows){
 // Les quickSpecs venues des données n'ont qu'un libellé et un niveau : elles
 // deviennent des lignes sans valeur, ce qui les range sous les faits nommés
 // plutôt que de les mêler à eux.
+// Ce que la fiche a DÉJÀ écrit, relu dans le balisage des lignes construites
+// plus haut et dans le bandeau. Jusqu'ici chaque typologie tenait sa liste de
+// mots à la main : quatre des six n'en avaient aucune, et c'est précisément
+// là que « Poussette OK » s'affichait sous « Poussette praticable » et
+// « Très facile » sous « Difficulté ». Une liste oubliée est un doublon ;
+// une relecture ne s'oublie pas.
+function _dejaDit(rows,ribbon){
+  var out=[];
+  (rows||[]).forEach(function(h){
+    String(h||'').replace(/class="[nmv][^"]*">([^<]*)</g,function(t,txt){out.push(txt);return t;});
+  });
+  (ribbon||[]).forEach(function(r){
+    if(!r)return;
+    out.push(String(r.lbl||''));
+    out.push(String(r.val||'').replace(/<[^>]+>/g,''));
+  });
+  return out;
+}
+function _dejaVu(mot,vus){
+  if(!mot||!vus)return false;
+  var m=String(mot).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return new RegExp('(^|[^a-zà-ÿ0-9])'+m+'([^a-zà-ÿ0-9]|$)','i').test(vus);
+}
 // Les quickSpecs répètent souvent ce que les lignes nommées disent déjà :
 // « Vélo OK » sous « Vélo ···· autorisé », « Facile » sous « Difficulté ».
 // On écarte celles dont le libellé est déjà couvert par une ligne existante.
@@ -5403,8 +5449,9 @@ function _frFromSpecs(specs,dejaDits){
     // — « Facile », « Boucle » — passait au travers et s'affichait seule,
     // sans étiquette, sous une icône qui ne lui allait pas.
     var noyau=lbl.toLowerCase().replace(/\s*(ok|autoris[ée]e?|possible|admis)\s*$/,'').trim();
-    if(noyau&&vus.indexOf(noyau)!==-1)return '';
-    if(vus.indexOf(lbl.toLowerCase())!==-1)return '';
+    // On cherche le mot entier : « bar » ne doit pas se reconnaître dans
+    // « barrière », ni « port » dans « portique ». indexOf le faisait.
+    if(_dejaVu(noyau,vus)||_dejaVu(lbl.toLowerCase(),vus))return '';
     // Une spec SANS icône vient du repli sur les tags de make_quick_specs :
     // « Aventure », « Sensations », « Parcours acrobatiques », « Patrimoine ».
     // Ce sont des mots-clés de référencement, pas des faits — ni valeur, ni
