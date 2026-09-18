@@ -962,6 +962,25 @@ body{
 .bch-cdot{width:16px;height:2px;background:var(--brand);border-radius:1px;flex-shrink:0;}
 .bch-ctxt{font-size:var(--t4);color:var(--brand-d);line-height:1.6;}
 /* Pills */
+/* ══ LIGNE DE FAIT ══ — le motif qui hiérarchise, repris de la maquette.
+   Une pastille dit « il y a des douches ». Une ligne dit « Douches ······ sur
+   le remblai ». La première est un badge parmi d'autres badges de même poids ;
+   la seconde a une étiquette, une valeur, et un filet qui la sépare de la
+   suivante. C'est exactement l'écart que tu appelais « tout au même niveau ».
+   Même motif que .cmp-r de l'onglet camping, mais sans ses variables locales. */
+.fr-rows{display:flex;flex-direction:column;margin-bottom:var(--s5);}
+.fr-row{display:flex;gap:var(--s3);align-items:flex-start;padding:var(--s3) 0;
+  border-top:1px solid var(--line-2);}
+.fr-row:first-child{border-top:0;padding-top:0;}
+.fr-row>.ic{color:var(--tx3);margin-top:2px;flex:none;}
+.fr-row .b{flex:1;min-width:0;}
+.fr-row .n{font-size:var(--t5);font-weight:600;line-height:1.4;color:var(--tx);}
+.fr-row .m{font-size:var(--t6);color:var(--tx3);margin-top:var(--s1);line-height:var(--lh);}
+.fr-row .v{font-size:var(--t5);font-weight:700;white-space:nowrap;text-align:right;
+  font-variant-numeric:tabular-nums;line-height:var(--lh);padding-top:1px;color:var(--tx);}
+.fr-row .v.on{color:var(--ok);}
+.fr-row .v.warn{color:var(--warn);}
+
 .bch-pills-row{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s4);}
 .bch-pill{border-radius:22px;padding:var(--s2) var(--s3);font-size:var(--t5);display:inline-flex;align-items:center;gap:var(--s2);line-height:var(--lh);}
 .bch-pi{background:var(--brand-l);color:#0C447C;}
@@ -3285,20 +3304,38 @@ function _renderPoiBody(p,mode){
     ];
     sectionLabel='La plage';
     specialBlock='<div id="bch-marine-wrap"><div class="bch-marine" style="text-align:center;font-size:11px;color:#185FA5;padding:16px">⏳ Chargement données marines...</div></div>';
-    var piPills=[],psPills=[],pwPills=[];
-    if(bchSupervised)piPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-swim"/></svg> Surveillée</span>');
-    if(bch.showers)piPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-shower"/></svg> Douches</span>');
+    // Les faits de la plage en LIGNES et non en pastilles : chacune porte une
+    // étiquette, une précision et une valeur à droite, séparée d'un filet.
+    // Une rangée de badges de même poids ne hiérarchise rien.
+    var frRows=[];
+    function _frRow(ic,nom,precision,valeur,cls){
+      frRows.push('<div class="fr-row">'
+        +(ic?'<svg class="ic"><use href="#'+ic+'"/></svg>':'')
+        +'<div class="b"><div class="n">'+nom+'</div>'
+        +(precision?'<div class="m">'+precision+'</div>':'')+'</div>'
+        +(valeur?'<span class="v'+(cls?' '+cls:'')+'">'+valeur+'</span>':'')
+        +'</div>');
+    }
+    if(bchSupervised)_frRow('i-swim','Surveillance',bch.supervision_season||'',survDisplay||'oui','on');
+    else _frRow('i-swim','Surveillance','Baignade non surveillée','non','warn');
+    if(bch.showers)_frRow('i-shower','Douches','','sur place','on');
     var hasPmr=(p.quickSpecs||[]).some(function(s){return/pmr|wheelchair|handicap/i.test(s.label||'');});
-    if(hasPmr)piPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-pmr"/></svg> Accès PMR</span>');
-    if(bch.naturist)psPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-parasol"/></svg> Naturisme</span>');
-    if(bch.beach_bar)psPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-glass"/></svg> Bar de plage</span>');
-    if(bch.dogs)psPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-dog"/></svg> Chiens OK</span>');
-    if(/modér/i.test(bchWave))pwPills.push('<span class="bch-pill bch-pw"><svg class="ic"><use href="#i-wave"/></svg> Vagues modérées</span>');
-    else if(/sportif|fort/i.test(bchWave))pwPills.push('<span class="bch-pill bch-pw"><svg class="ic"><use href="#i-wave"/></svg> Mer sportive</span>');
-    if(bch.tide_sensitive)pwPills.push('<span class="bch-pill bch-pw"><svg class="ic"><use href="#i-tide"/></svg> Sensible aux marées</span>');
-    pillsHtml=(piPills.length?'<div class="bch-pills-row">'+piPills.join('')+'</div>':'')
-      +(psPills.length?'<div class="bch-pills-row">'+psPills.join('')+'</div>':'')
-      +(pwPills.length?'<div class="bch-pills-row">'+pwPills.join('')+'</div>':'');
+    if(hasPmr)_frRow('i-pmr','Accès PMR','','oui','on');
+    if(bch.beach_bar)_frRow('i-glass','Bar de plage','Ouvert en saison','oui','on');
+    if(bch.naturist)_frRow('i-parasol','Naturisme','','autorisé');
+    if(bch.dogs)_frRow('i-dog','Chiens','','admis','on');
+    if(bchType)_frRow('i-beach','Profil de plage','',bchType);
+    // Le libellé et non la valeur brute : « modéré » seul perd la nuance que
+    // « Vagues modérées » portait, et le harnais l'a relevé sur 9 fiches.
+    if(bchWave){
+      var waveLbl=/sportif|fort/i.test(bchWave)?'Mer sportive'
+        :/modér/i.test(bchWave)?'Vagues modérées'
+        :/calme|faible/i.test(bchWave)?'Mer calme'
+        :bchWave.charAt(0).toUpperCase()+bchWave.slice(1);
+      _frRow('i-wave','Profil de mer','',waveLbl,/sportif|fort/i.test(bchWave)?'warn':'');
+    }
+    if(bch.tide_sensitive)_frRow('i-tide','Sensible aux marées','Vérifier les horaires avant de partir','','warn');
+    pillsHtml=frRows.length?'<div class="fr-rows">'+frRows.join('')+'</div>':'';
 
   }else if(sub==='Forêts & Nature'){
     // Ribbon : difficulté (colorée), durée estimée, superficie, distance voiture
@@ -3591,11 +3628,16 @@ function _renderPoiBody(p,mode){
   // Assemble body HTML
   body.innerHTML='<div class="bch-body">'
     +ribbonHtml
-    // Le Conseil Planly remonte avant la preuve : c'est la seule chose qu'aucune
-    // carte concurrente ne donne, et il répond à « est-ce que ça vaut le coup pour nous ».
+    // Les conditions du jour d'abord : une marée montante à 16h35 décide de
+    // l'heure à laquelle on part. Le bloc marine ne concerne que les plages ;
+    // pour les autres typologies, specialBlock reste à sa place, après le
+    // conseil, car il n'y porte pas de condition urgente.
+    +(sub==='Plages & Côte'?specialBlock:'')
+    // Le Conseil Planly avant la preuve : c'est la seule chose qu'aucune carte
+    // concurrente ne donne, et il répond à « est-ce que ça vaut le coup pour nous ».
     +(conseil?'<div class="bch-conseil"><div class="bch-ctit"><div class="bch-cdot"></div>Le Conseil Planly</div>'
       +'<div class="bch-ctxt">'+conseil+'</div>'+attnBlock+'</div>':attnBlock)
-    +specialBlock
+    +(sub==='Plages & Côte'?'':specialBlock)
     +(sectionLabel?'<div class="bch-slbl">'+sectionLabel+'</div>':'')
     +pillsHtml
     +'<div class="bch-desc">'+_airDesc(descLong)+'</div>'
@@ -3607,7 +3649,7 @@ function _renderPoiBody(p,mode){
     +_socialRow(sp)
     +((p.location&&p.location.lat)?'<div class="bch-slbl">'+_mapLbl(p)+'</div>'
       +'<div class="poi-mini-map-wrap"><div id="poi-mini-map" class="poi-mini-map"></div>'
-      +'<button class="poi-mini-map-expand" onclick="_openMapForPoi('+p.location.lat+','+p.location.lng+')">⊞ Agrandir</button>'
+      +'<button class="poi-mini-map-expand" onclick="_openMapForPoi('+p.location.lat+','+p.location.lng+')"><svg class="ic sm"><use href="#i-arrows"/></svg> Agrandir</button>'
       +'</div>':'')
     +'<div class="bch-slbl">Parking conseillé</div>'
     +pkHtml
@@ -4838,7 +4880,7 @@ function renderActivites(){
       +'<div class="lcard-pill"><svg class="ic"><use href="#i-star"/></svg> '+p.note+'</div>'
       +'<div class="lcard-pill">⏱ '+dur+'</div>'
       +'</div>'
-      +'<button class="lcard-like on" onclick="event.stopPropagation();toggleListLike('+i+',this)">♥</button>'
+      +'<button class="lcard-like on" onclick="event.stopPropagation();toggleListLike('+i+',this)"><svg class="ic"><use href="#i-heart-full"/></svg></button>'
       +'</div></div></div>';
   }
   scroll.innerHTML=groupOrder.map(function(key,gi){
