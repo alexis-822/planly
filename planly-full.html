@@ -429,6 +429,134 @@ body{
 .act-empty-title{font-family:'Fraunces',serif;font-size:var(--t2);font-weight:300;color:var(--tx);text-align:center;line-height:var(--lh-t);}
 .act-empty-sub{font-size:var(--t5);color:var(--txm);text-align:center;line-height:1.5;}
 .act-subtitle{font-size:var(--t5);color:var(--txm);margin-top:4px;line-height:var(--lh);}
+
+/* ══ ONGLET CAMPING ══ — transposé de la maquette validée.
+   Le motif porteur : une ligne = icône + libellé + précision, valeur à droite,
+   filet fin entre les lignes. C'est ce qui hiérarchise, pas la couleur. */
+.camping-view{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg);min-height:0;
+  --kid:#7A4E9E;--kid-soft:#F0E9F7;--cmp-warn:#8A5410;--cmp-warn-soft:#FBF0DC;--cmp-ok-soft:#E4EFE0;}
+.camping-view.open{display:flex;}
+.cmp-scroll{flex:1;overflow-y:auto;scrollbar-width:none;
+  padding-bottom:calc(var(--s5) + env(safe-area-inset-bottom,0px));}
+.cmp-scroll::-webkit-scrollbar{display:none;}
+
+/* En-tête photo */
+.cmp-hero{position:relative;height:168px;flex-shrink:0;}
+.cmp-hero img{width:100%;height:100%;object-fit:cover;display:block;}
+.cmp-hero::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,0) 42%,rgba(0,0,0,.68) 100%);}
+.cmp-hero-t{position:absolute;left:var(--s5);right:var(--s5);bottom:var(--s4);z-index:1;}
+.cmp-hero h2{margin:0;color:#fff;font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:var(--t2);
+  line-height:var(--lh-t);letter-spacing:-.015em;text-shadow:0 2px 12px rgba(0,0,0,.5);}
+.cmp-hero-s{color:rgba(255,255,255,.92);font-size:var(--t6);margin-top:var(--s1);display:flex;
+  align-items:center;gap:var(--s2);text-shadow:0 1px 8px rgba(0,0,0,.55);line-height:var(--lh);}
+
+/* Sous-onglets */
+.cmp-tabs{display:flex;gap:var(--s2);padding:var(--s4) var(--s5) 0;flex-shrink:0;background:var(--bg);}
+.cmp-tab{flex:1;text-align:center;font-size:var(--t6);font-weight:600;padding:11px var(--s2);
+  border-radius:999px;box-shadow:inset 0 0 0 1px var(--br);color:var(--txm);cursor:pointer;
+  font-family:'DM Sans',sans-serif;line-height:var(--lh);-webkit-tap-highlight-color:transparent;}
+.cmp-tab.on{background:var(--deep);color:var(--on-deep);box-shadow:none;}
+.cmp-pane{padding:var(--s5) var(--s5) 0;}
+
+/* Ce qui se passe aujourd'hui */
+.cmp-today{background:var(--brand-l);border-radius:18px;padding:var(--s5) var(--s5) var(--s4);margin-bottom:var(--s6);}
+.cmp-today-h{font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--deep);margin-bottom:var(--s3);line-height:var(--lh);}
+.cmp-today-l{display:flex;align-items:center;gap:var(--s3);padding:var(--s2) 0;font-size:13.5px;
+  color:var(--tx2,var(--txm));line-height:var(--lh);}
+.cmp-today-l b{color:var(--tx);font-weight:700;min-width:54px;font-variant-numeric:tabular-nums;}
+.cmp-dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex:none;}
+.cmp-dot.off{background:var(--txl);}
+
+/* Quatre raccourcis */
+.cmp-big{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-bottom:var(--s2);}
+.cmp-big a{background:var(--wh);box-shadow:inset 0 0 0 1px var(--br);border-radius:18px;
+  padding:var(--s4);text-decoration:none;color:var(--tx);display:flex;flex-direction:column;
+  gap:var(--s2);-webkit-tap-highlight-color:transparent;}
+.cmp-big a .ic{color:var(--deep);width:22px;height:22px;}
+.cmp-big .n{font-size:14.5px;font-weight:700;line-height:var(--lh-t);}
+.cmp-big .m{font-size:var(--t6);color:var(--txm);line-height:var(--lh);}
+
+/* Titre de rubrique + mention à droite */
+.cmp-lbl{font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txm);
+  margin:var(--s6) 0 var(--s5);padding-top:var(--s5);border-top:1px solid var(--line-2,var(--br));
+  display:flex;align-items:center;gap:var(--s2);line-height:var(--lh);}
+.cmp-pane .cmp-lbl:first-of-type{margin-top:var(--s2);padding-top:0;border-top:0;}
+.cmp-lbl b{margin-left:auto;letter-spacing:0;text-transform:none;font-weight:600;font-size:11.5px;color:var(--ok);}
+.cmp-lbl b.pay{color:var(--cmp-warn);}
+
+/* La ligne : le motif qui porte toute la hiérarchie */
+.cmp-r{display:flex;gap:var(--s3);align-items:flex-start;padding:var(--s3) 0;
+  border-top:1px solid var(--line-2,var(--br));}
+.cmp-r:first-of-type{border-top:0;padding-top:0;}
+.cmp-r>.ic{color:var(--txm);margin-top:2px;flex:none;}
+.cmp-r .b{flex:1;min-width:0;}
+.cmp-r .n{font-size:14.5px;font-weight:600;line-height:1.4;color:var(--tx);}
+.cmp-r .m{font-size:13px;color:var(--txm);margin-top:var(--s1);line-height:var(--lh);}
+.cmp-r .v{font-size:13px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums;
+  text-align:right;line-height:var(--lh);padding-top:2px;color:var(--tx);}
+.cmp-r .v.on{color:var(--ok);}
+
+/* Pastilles de sport et d'équipement */
+.cmp-chips{display:flex;flex-wrap:wrap;gap:var(--s2);}
+.cmp-chips span{font-size:13px;padding:10px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--br);
+  color:var(--txm);display:inline-flex;align-items:center;gap:var(--s2);line-height:1.4;}
+.cmp-chips .ic{width:15px;height:15px;}
+
+/* Règle à respecter */
+.cmp-rule{font-size:13px;color:var(--cmp-warn);background:var(--cmp-warn-soft);border-radius:14px;
+  padding:var(--s4);margin-top:var(--s5);line-height:1.6;display:flex;gap:var(--s3);align-items:flex-start;}
+.cmp-rule .ic{width:15px;height:15px;flex:none;margin-top:3px;}
+
+/* Animation : heure à gauche, titre, âge à droite */
+.cmp-ani{display:flex;gap:var(--s3);padding:var(--s4) 0;border-top:1px solid var(--line-2,var(--br));
+  align-items:flex-start;}
+.cmp-ani:first-of-type{border-top:0;padding-top:0;}
+.cmp-ani .t{flex:none;font-size:var(--t6);font-weight:700;border-radius:10px;padding:var(--s2) 10px;
+  font-variant-numeric:tabular-nums;background:var(--brand-l);color:var(--deep);min-width:54px;
+  text-align:center;line-height:1.35;}
+.cmp-ani.kid .t{background:var(--kid-soft);color:var(--kid);}
+.cmp-ani .n{font-size:14.5px;font-weight:600;line-height:1.4;color:var(--tx);}
+.cmp-ani .m{font-size:13px;color:var(--txm);margin-top:var(--s1);line-height:var(--lh);}
+.cmp-ani .age{flex:none;font-size:11.5px;font-weight:700;color:var(--kid);background:var(--kid-soft);
+  border-radius:999px;padding:5px 10px;white-space:nowrap;line-height:var(--lh);}
+
+/* Plan du camping */
+.cmp-plan{border-radius:18px;overflow:hidden;background:#fff;position:relative;
+  box-shadow:inset 0 0 0 1px var(--br);}
+.cmp-plan img{width:100%;display:block;}
+.cmp-pin{position:absolute;width:26px;height:26px;border-radius:50%;background:var(--deep);color:#fff;
+  font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);border:2px solid #fff;line-height:1;}
+.cmp-pin.you{background:var(--brand);width:auto;padding:0 9px;border-radius:999px;}
+.cmp-leg{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin-top:var(--s4);}
+.cmp-leg span{display:flex;align-items:center;gap:var(--s2);font-size:var(--t6);color:var(--txm);line-height:var(--lh);}
+.cmp-leg i{width:20px;height:20px;border-radius:6px;background:var(--deep);color:var(--on-deep);
+  font-size:10.5px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  font-style:normal;flex:none;}
+.cmp-leg i.you{background:var(--brand);width:auto;padding:0 6px;}
+
+/* Offre du partenaire */
+.cmp-promo{background:var(--deep);color:var(--on-deep);border-radius:18px;padding:var(--s5);margin-top:var(--s6);}
+.cmp-promo .k{font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;opacity:.75;line-height:var(--lh);}
+.cmp-promo .v{font-family:'Fraunces',Georgia,serif;font-size:21px;font-weight:600;margin-top:var(--s2);line-height:var(--lh-t);}
+.cmp-promo .m{font-size:var(--t6);opacity:.85;margin-top:var(--s1);line-height:var(--lh);}
+
+/* Feuille du plan, ouverte depuis l'accueil */
+.cmp-sheet{position:fixed;left:0;right:0;bottom:0;top:auto;max-height:92vh;background:var(--bg);
+  border-radius:22px 22px 0 0;z-index:60;transform:translateY(102%);transition:transform .32s cubic-bezier(.32,.72,0,1);
+  display:flex;flex-direction:column;box-shadow:0 -8px 32px rgba(0,0,0,.22);}
+.cmp-sheet.open{transform:translateY(0);}
+.cmp-sheet-hd{flex-shrink:0;padding:var(--s4) var(--s5) var(--s3);display:flex;align-items:center;
+  justify-content:space-between;gap:var(--s3);border-bottom:1px solid var(--br);}
+.cmp-sheet-hd h3{margin:0;font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:var(--t3);
+  color:var(--tx);line-height:var(--lh-t);}
+.cmp-sheet-x{width:32px;height:32px;border-radius:50%;background:var(--bg-d);display:flex;
+  align-items:center;justify-content:center;color:var(--txm);flex:none;cursor:pointer;}
+.cmp-sheet-bd{flex:1;overflow-y:auto;padding:var(--s5) var(--s5) calc(var(--s6) + env(safe-area-inset-bottom,0px));
+  scrollbar-width:none;}
+.cmp-sheet-bd::-webkit-scrollbar{display:none;}
 .act-clear-btn{font-size:var(--t5);color:var(--bad);font-weight:500;cursor:pointer;padding:4px 8px;border-radius:8px;border:1px solid rgba(239,68,68,.3);background:rgba(239,68,68,.07);-webkit-tap-highlight-color:transparent;line-height:var(--lh);}
 .act-view-toggle{display:flex;background:var(--bg-d);border-radius:20px;padding:3px;gap:2px;}
 .act-view-btn{padding:5px 14px;border-radius:16px;font-size:var(--t5);font-weight:500;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;color:var(--txm);background:transparent;transition:all .18s;-webkit-tap-highlight-color:transparent;white-space:nowrap;line-height:var(--lh);}
@@ -1425,6 +1553,27 @@ body{
   <symbol id="i-slot" viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M6 9h8M6 13h3M11 13h3"/><path d="M17 9h2a2 2 0 0 1 2 2v3"/><circle cx="21" cy="16" r="1.4"/></symbol>
   <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+  <!-- Onglet camping -->
+  <symbol id="i-wash" viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="3"/><circle cx="12" cy="14" r="4.5"/><path d="M8 6h3"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a15 15 0 0 1 19 0M6 12.5a10 10 0 0 1 12 0M9.5 16a5 5 0 0 1 5 0"/><path d="M12 19.5h.01"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24"><path d="M3 20V9l9-5 9 5v11"/><path d="M3 20h18M9 20v-6h6v6"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></symbol>
+  <symbol id="i-bread" viewBox="0 0 24 24"><path d="M4 10a3 3 0 0 1 3-3h10a3 3 0 0 1 0 6v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 10v8M12 10v8"/></symbol>
+  <symbol id="i-spa" viewBox="0 0 24 24"><path d="M12 21c0-5 3-9 8-10-1 5-4 8-8 10z"/><path d="M12 21c0-5-3-9-8-10 1 5 4 8 8 10z"/><path d="M12 21V9"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2.5"/><path d="M3 11h18M7 17v2M17 17v2"/><circle cx="7.5" cy="14" r="1"/><circle cx="16.5" cy="14" r="1"/></symbol>
+  <symbol id="i-football" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.4 2.5-1.3 4h-4.2l-1.3-4z"/><path d="M12 3v4.5M4.2 9.6l4.4 2.4M19.8 9.6l-4.4 2.4M7.7 20.1L9.9 16M16.3 20.1L14.1 16"/></symbol>
+  <symbol id="i-basketball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/><path d="M5.6 5.6c3.6 3.6 3.6 9.2 0 12.8M18.4 5.6c-3.6 3.6-3.6 9.2 0 12.8"/></symbol>
+  <symbol id="i-volley" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3c-2.5 4-2.5 9.5 3 12M3.6 9.5c4.5-.8 9.5 1.5 10.8 7.6M20.5 14.5c-3.3-3.2-8.7-4.2-13.4-1"/></symbol>
+  <symbol id="i-handball" viewBox="0 0 24 24"><circle cx="15" cy="4.5" r="1.9"/><path d="M13 9l-3.5 3 2.5 3 1 6M9.5 12L5 13M12 12l5-3"/><circle cx="19" cy="8" r="2"/></symbol>
+  <symbol id="i-pingpong" viewBox="0 0 24 24"><path d="M14.5 3a6.5 6.5 0 0 0-9 9l7 7 4-4-1.5-1.5 3-3a6.5 6.5 0 0 0-3.5-7.5z"/><circle cx="19" cy="18" r="2"/></symbol>
+  <symbol id="i-petanque" viewBox="0 0 24 24"><circle cx="8" cy="15" r="5"/><circle cx="17.5" cy="17" r="3"/><circle cx="15" cy="7" r="1.6"/><path d="M5.5 12.5l2 2"/></symbol>
+  <symbol id="i-golf" viewBox="0 0 24 24"><path d="M11 21V4l7 3.5-7 3.5"/><ellipse cx="9" cy="20" rx="6" ry="2"/></symbol>
+  <symbol id="i-tennis" viewBox="0 0 24 24"><ellipse cx="9.5" cy="8.5" rx="6" ry="6.5" transform="rotate(-30 9.5 8.5)"/><path d="M5 12l-2.5 8M13.5 14l6 6"/><path d="M5.5 5.5l8 6M12.5 4l-6 9"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-6.5 0-4.5-4-6-5-10-3 2-4 4.5-4 6.5-1.5-.5-2-2-2-3.5-2 1.8-3 4-3 7C5 19.2 8 22 12 22z"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18v-8h13a5 5 0 0 1 5 5v3"/><path d="M3 14h18M3 18v2M21 18v2"/><circle cx="7.5" cy="12" r="1.6"/></symbol>
+  <symbol id="i-fridge" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M6 10h12M9 6v2M9 13v3"/></symbol>
+  <symbol id="i-stretch" viewBox="0 0 24 24"><circle cx="12" cy="4" r="1.9"/><path d="M12 8v6M12 14l-3 7M12 14l3 7M6 9l6 1 6-1"/></symbol>
+  <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M6 8v8M3 10v4M18 8v8M21 10v4M6 12h12"/></symbol>
 </svg>
 
 <div id="onboarding-view">
@@ -1472,14 +1621,14 @@ body{
 
       <div class="toggle-row" id="tr-camping" onclick="toggleRow('camping')" style="margin-top:22px">
         <div class="toggle-row-left">
-          <span class="toggle-row-icon">⛺</span>
+          <span class="toggle-row-icon"><svg class="ic"><use href="#i-tent"/></svg></span>
           <div><div class="toggle-row-txt">Séjour en camping</div><div class="toggle-row-sub">On associe ton hébergement</div></div>
         </div>
         <div class="toggle" id="tog-camping"><div class="toggle-thumb"></div></div>
       </div>
       <div class="expandable" id="exp-camping">
         <div class="expandable-inner">
-          <div class="camping-inner"><span>🏕️</span><input type="text" placeholder="Nom du camping partenaire…"></div>
+          <div class="camping-inner"><svg class="ic"><use href="#i-tent"/></svg><input type="text" id="camping-nom" placeholder="Nom du camping partenaire…" oninput="setCampingNom(this.value)"></div>
         </div>
       </div>
     </div>
@@ -1648,6 +1797,24 @@ body{
     <div class="act-scroll" id="act-scroll"></div>
   </div>
 
+  <!-- VUE CAMPING — l'identité du camping reste à l'écran, le reste défile -->
+  <div class="camping-view" id="camping-view">
+    <div class="cmp-hero" id="cmp-hero"></div>
+    <div class="cmp-tabs" id="cmp-tabs"></div>
+    <div class="cmp-scroll" id="cmp-scroll"></div>
+  </div>
+
+  <!-- FEUILLE DU PLAN — ouverte depuis l'accueil du camping -->
+  <div class="cmp-sheet" id="cmp-plan-sheet">
+    <div class="cmp-sheet-hd">
+      <h3>Le plan du camping</h3>
+      <div class="cmp-sheet-x" onclick="cmpClosePlan()" role="button" aria-label="Fermer">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </div>
+    </div>
+    <div class="cmp-sheet-bd" id="cmp-plan-body"></div>
+  </div>
+
   <!-- NAV BOTTOM -->
   <div class="bottom-nav">
     <div class="nav-item active" id="nav-explorer" onclick="navShow('explorer')">
@@ -1657,6 +1824,11 @@ body{
     <div class="nav-item" id="nav-activites" onclick="navShow('activites')">
       <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg><div class="nav-act-badge" id="nav-act-badge"></div></div>
       <div class="nav-lbl">Mes activités</div>
+    </div>
+    <!-- N'apparaît que si « Séjour en camping » est coché à l'onboarding -->
+    <div class="nav-item" id="nav-camping" onclick="navShow('camping')" style="display:none">
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 5L3 19h18z"/><path d="M12 5v14M12 19l-4-6M12 19l4-6"/></svg></div>
+      <div class="nav-lbl">Mon camping</div>
     </div>
     <div class="nav-item">
       <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
@@ -1870,6 +2042,12 @@ function toggleRow(key){
   tr.classList.toggle('open',!open);
   tog.classList.toggle('on',!open);
   exp.classList.toggle('open',!open);
+  // Le camping commande un onglet entier : on retient le choix et on l'applique
+  if(key==='camping'){
+    USER_PROFILE.camping=!open;
+    saveCamping();
+    if(typeof cmpSyncNav==='function')cmpSyncNav();
+  }
   if(key==='pmr'&&!open){
     setTimeout(function(){
       document.getElementById('exp-pmr').scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -2053,7 +2231,9 @@ var USER_PROFILE={
   envies:[],
   animal:false,
   pmr:false,
-  exclusions:[]
+  exclusions:[],
+  camping:false,
+  campingNom:''
 };
 
 // ── COMMUNES VENDÉE (85) — 253 communes au 1er janvier 2025 ──
@@ -4248,20 +4428,281 @@ function clearSearch(){
 
 // ── NAVIGATION VUES ──
 var currentNav='explorer';
+// ══ ONGLET CAMPING ══
+// Démonstration bâtie sur La Dune des Sables (Chadotel, Les Sables-d'Olonne).
+// `reel` : relevé sur leur site ou leurs PDF. `demo` : inventé pour la démonstration,
+// à remplacer par leurs données avant tout usage réel. `aconfirmer` : relevé sur la
+// page d'un autre camping du groupe — probablement commun, mais rien ne le garantit.
+var CAMPING={
+  nom:"La Dune des Sables", sousTitre:"5 étoiles · emplacement M24 · jusqu'au 24 septembre",
+  telReception:'02 51 32 31 21', telResto:'07 78 56 32 49',
+  photos:{accueil:'images/camping/camping.jpg',services:'images/camping/restaurant.jpg',
+          animations:'images/camping/activite.jpg',plan:'images/camping/plan.jpg'},
+  aujourdhui:[
+    {on:true, q:'Ouvert', t:'Piscine chauffée, jusqu’19h'},
+    {on:true, q:'Ouvert', t:'Bar et terrasse, jusqu’à minuit'},
+    {on:false,q:'18h30',  t:'Le restaurant ouvre pour le service du soir'},
+    {on:false,q:'21h00',  t:'Sabor Latino, concert et initiation danse'}
+  ],
+  dehors:[
+    {ic:'i-sun', n:'20 °C, couvert', m:'Pluie improbable cet après-midi · coucher du soleil à 20h14'},
+    {ic:'i-wave',n:'Basse mer à 15h20', m:'Pêche à pied possible côté Paracou · pleine mer à 20h45'}
+  ],
+  alentours:[
+    {ic:'i-bike',n:'Plage de la Paracou', m:'Accès direct par la piste cyclable', v:'500 m'},
+    {ic:'i-bus', n:'Arrêt Oléane, ligne B', m:'Centre-ville et gare des Sables', v:'800 m'}
+  ],
+  services:[
+    {titre:'Manger et boire', lignes:[
+      {ic:'i-fork', n:'Restaurant', m:'Pizzas, burgers, salades et ardoises de saison. Sur place ou à emporter. Réservations au 07 78 56 32 49.', v:'12h–14h<br>18h30–22h'},
+      {ic:'i-glass',n:'Bar et terrasse', m:'Café le matin, cocktail le soir, formules petit-déjeuner et glaces toute la journée.', v:'8h30–00h', ok:true}
+    ]},
+    {titre:'Quelques prix', mention:'à confirmer', payant:true, lignes:[
+      {n:'Pizza margherita', m:'Pâte fraîche, cuite au feu de bois', v:'11,50 €'},
+      {n:'Burger de la Dune', m:'Bœuf, cheddar, frites maison', v:'14,90 €'},
+      {n:'Ardoise de la mer', m:'Produits du jour, à partager', v:'18,00 €'},
+      {n:'Formule petit-déjeuner', m:'Pain du Moulin de La Chaume, boisson chaude, jus', v:'7,50 €'},
+      {n:'Glace artisanale Le Kiosque', m:'Deux boules', v:'4,00 €'}
+    ]},
+    {titre:'Courses sur place', lignes:[
+      {ic:'i-cart', n:'Point alimentation', m:'Produits de base, presse, gaz, souvenirs', v:'sur place', ok:true},
+      {ic:'i-bread',n:'Dépôt de pain', m:'Pain du Moulin de La Chaume, à commander la veille', v:'le matin'}
+    ]},
+    {titre:'Se baigner', mention:'compris', lignes:[
+      {ic:'i-swim',n:'250 m² de bassins face à l’océan', m:'Piscine extérieure chauffée, 3 toboggans avec bassin de réception, piscine couverte, jacuzzi', v:'10h–19h', ok:true},
+      {ic:'i-baby',n:'Pataugeoire couverte chauffée', m:'Mini-toboggan et jeux d’eau', v:'10h–19h', ok:true}
+    ], regle:'Réservé aux vacanciers du camping. Bracelet obligatoire en juillet-août.<br><b>Seuls les maillots de bain sont autorisés</b> — shorts et robes de bain interdits.'},
+    {titre:'Jouer', mention:'compris', chips:[
+      ['i-football','Football'],['i-basketball','Basket'],['i-volley','Volley'],['i-handball','Handball'],
+      ['i-pingpong','Ping-pong'],['i-petanque','Pétanque'],['i-slide','Aire de jeux'],
+      ['i-dumbbell','Salle de remise en forme'],['i-stretch','Fitness plein air']
+    ]},
+    {titre:'En supplément', mention:'payant', payant:true, lignes:[
+      {ic:'i-golf',  n:'Mini-golf', v:'2 € le club'},
+      {ic:'i-tennis',n:'Tennis et padel', v:'sur réservation'},
+      {ic:'i-flame', n:'Barbecue à gaz', v:'5 €/jour<br>22 €/semaine'},
+      {ic:'i-dog',   n:'Animal, un seul par emplacement', m:'Chiens de 1ʳᵉ et 2ᵉ catégories refusés', v:'4 à 6,50 €<br>par jour'},
+      {ic:'i-baby',  n:'Kit bébé', m:'Baignoire, chaise, lit', v:'5 €/jour'},
+      {ic:'i-bed',   n:'Location de draps', v:'14 € lit 2 pers.<br>12 € lit 1 pers.'},
+      {ic:'i-fridge',n:'Réfrigérateur', v:'6 €/jour'}
+    ]},
+    {titre:'Le quotidien', lignes:[
+      {ic:'i-wash',n:'Laverie', v:'payant'},
+      {ic:'i-wifi',n:'Wifi', m:'Première connexion gratuite', v:'oui', ok:true},
+      {ic:'i-bike',n:'Location de vélos', v:'payant'},
+      {ic:'i-spa', n:'Espace bien-être', m:'Les massages de la Chaume', v:'sur RDV'},
+      {ic:'i-pmr', n:'Accès PMR', m:'Mobil-home adapté, installations accessibles', v:'oui', ok:true}
+    ]}
+  ],
+  animations:[
+    {titre:'Le matin', mention:'Chadokids 4-12 ans, gratuit', lignes:[
+      {kid:true, t:'10h00', n:'Chasse au trésor du marais', m:'Énigmes dans le camping, lot à la clé', age:'7–12 ans'},
+      {kid:true, t:'10h00', n:'Éveil et petits jeux', m:'Espace réservé, près de la salle du club', age:'4–6 ans'},
+      {t:'11h00', n:'Aquachado', m:'Gym aquatique dans le grand bassin'}
+    ]},
+    {titre:'L’après-midi', lignes:[
+      {kid:true, t:'15h00', n:'Atelier crêpes', m:'Sous le préau, goûter offert', age:'4–12 ans'},
+      {t:'15h00', n:'Tournoi de pétanque', m:'Inscription au bar'},
+      {t:'16h00', n:'Tournoi de ping-pong', m:'En doublettes'},
+      {kid:true, t:'16h30', n:'Mini-disco', m:'Terrasse du bar, parents bienvenus', age:'4–10 ans'}
+    ]},
+    {titre:'En accès libre toute la journée', chips:[
+      ['i-football','Football'],['i-basketball','Basket'],['i-volley','Volley'],['i-handball','Handball'],
+      ['i-pingpong','Ping-pong'],['i-petanque','Pétanque'],['i-slide','Aire de jeux'],['i-swim','Piscines']
+    ]},
+    {titre:'Les soirées', mention:'programme officiel', lignes:[
+      {t:'Ce soir<br>21h', n:'Sabor Latino', m:'Concert et initiation à la danse latine'},
+      {t:'Samedi<br>21h', n:'DJ Seb — soirée mousse', m:'À l’espace aquatique, prévoir le maillot'},
+      {t:'Dimanche<br>21h', n:'Hypnose Eliott', m:'Spectacle en salle d’animation'},
+      {t:'Lundi<br>21h', n:'Les Fabuleuses', m:'Revue cabaret, transformistes et plumes'}
+    ]}
+  ],
+  promo:{k:'Offre du partenaire', v:'−15 % au restaurant', m:'Sur présentation de l’écran, du lundi au jeudi soir. Un usage par séjour.'},
+  plan:{
+    pins:[{x:'8%',y:'52%',n:'1'},{x:'20%',y:'44%',n:'2'},{x:'31%',y:'40%',n:'5'},
+          {x:'46%',y:'33%',n:'10'},{x:'62%',y:'47%',n:'M24',you:true}],
+    legende:[['1','Réception'],['2','Bar et restaurant'],['5','Club enfants'],
+             ['10','Terrain multisport'],['M24','Votre emplacement',true]],
+    depuis:[
+      {ic:'i-swim',n:'Espace aquatique', m:'Par l’allée centrale', v:'2 min'},
+      {ic:'i-desk',n:'Réception et point alimentation', m:'À l’entrée du camping', v:'4 min'},
+      {ic:'i-fork',n:'Bar et restaurant', m:'Terrasse face à la piscine', v:'3 min'},
+      {ic:'i-bike',n:'Plage de la Paracou', m:'Piste cyclable depuis la sortie', v:'500 m'}
+    ]
+  }
+};
+
+var _cmpTab='accueil';
+function _cmpIc(id,cls){return '<svg class="ic'+(cls?' '+cls:'')+'"><use href="#'+id+'"/></svg>';}
+
+// Une ligne : icône, libellé, précision, valeur à droite. Le motif qui porte la hiérarchie.
+function _cmpLigne(l){
+  return '<div class="cmp-r">'
+    +(l.ic?_cmpIc(l.ic):'')
+    +'<div class="b"><div class="n">'+l.n+'</div>'
+    +(l.m?'<div class="m">'+l.m+'</div>':'')+'</div>'
+    +(l.v?'<span class="v'+(l.ok?' on':'')+'">'+l.v+'</span>':'')
+    +'</div>';
+}
+function _cmpTitre(s){
+  return '<p class="cmp-lbl">'+s.titre
+    +(s.mention?'<b'+(s.payant?' class="pay"':'')+'>'+s.mention+'</b>':'')+'</p>';
+}
+function _cmpChips(cs){
+  return '<div class="cmp-chips">'+cs.map(function(c){
+    return '<span>'+_cmpIc(c[0])+' '+c[1]+'</span>';}).join('')+'</div>';
+}
+function _cmpSection(s){
+  var h=_cmpTitre(s);
+  if(s.chips)h+=_cmpChips(s.chips);
+  if(s.lignes)h+=s.lignes.map(_cmpLigne).join('');
+  if(s.regle)h+='<div class="cmp-rule">'+_cmpIc('i-alert')+'<div>'+s.regle+'</div></div>';
+  return h;
+}
+function _cmpAnim(a){
+  return '<div class="cmp-ani'+(a.kid?' kid':'')+'"><span class="t">'+a.t+'</span>'
+    +'<div class="b"><div class="n">'+a.n+'</div>'
+    +(a.m?'<div class="m">'+a.m+'</div>':'')+'</div>'
+    +(a.age?'<span class="age">'+a.age+'</span>':'')+'</div>';
+}
+function _cmpSectionAnim(s){
+  var h=_cmpTitre(s);
+  if(s.chips)h+=_cmpChips(s.chips);
+  if(s.lignes)h+=s.lignes.map(_cmpAnim).join('');
+  return h;
+}
+
+function cmpSetTab(t){_cmpTab=t;cmpRender();var sc=document.getElementById('cmp-scroll');if(sc)sc.scrollTop=0;}
+
+function cmpRender(){
+  var c=CAMPING, nom=(USER_PROFILE&&USER_PROFILE.campingNom)||c.nom;
+  var photo=c.photos[_cmpTab]||c.photos.accueil;
+  var sousTitre=_cmpTab==='services'?[_cmpIc('i-desk','sm'),'Manger · se baigner · jouer · le quotidien']
+    :_cmpTab==='animations'?[_cmpIc('i-heart','sm'),_cmpDateDuJour()]
+    :[_cmpIc('i-tent','sm'),c.sousTitre];
+  var titre=_cmpTab==='services'?'Les services':_cmpTab==='animations'?'Les animations':nom;
+
+  document.getElementById('cmp-hero').innerHTML=
+    '<img src="'+photo+'" alt="">'
+    +'<div class="cmp-hero-t"><h2>'+titre+'</h2>'
+    +'<div class="cmp-hero-s">'+sousTitre[0]+sousTitre[1]+'</div></div>';
+
+  document.getElementById('cmp-tabs').innerHTML=
+    [['accueil','Accueil'],['services','Services'],['animations','Animations']].map(function(t){
+      return '<div class="cmp-tab'+(_cmpTab===t[0]?' on':'')+'" onclick="cmpSetTab(\''+t[0]+'\')">'+t[1]+'</div>';
+    }).join('');
+
+  var h='';
+  if(_cmpTab==='accueil'){
+    h+='<div class="cmp-today"><div class="cmp-today-h">'+_cmpDateDuJour()+'</div>'
+      +c.aujourdhui.map(function(l){
+        return '<div class="cmp-today-l"><span class="cmp-dot'+(l.on?'':' off')+'"></span>'
+          +'<b>'+l.q+'</b> '+l.t+'</div>';}).join('')+'</div>';
+    h+='<div class="cmp-big">'
+      +'<a href="#" onclick="cmpOpenPlan();return false">'+_cmpIc('i-map','lg')
+        +'<span class="n">Le plan</span><span class="m">Où est la piscine depuis le M24</span></a>'
+      +'<a href="#" onclick="cmpSetTab(\'animations\');return false">'+_cmpIc('i-heart','lg')
+        +'<span class="n">Animations</span><span class="m">4 rendez-vous aujourd’hui</span></a>'
+      +'<a href="tel:'+c.telResto.replace(/ /g,'')+'">'+_cmpIc('i-fork','lg')
+        +'<span class="n">Réserver une table</span><span class="m">'+c.telResto+'</span></a>'
+      +'<a href="tel:'+c.telReception.replace(/ /g,'')+'">'+_cmpIc('i-desk','lg')
+        +'<span class="n">Réception</span><span class="m">'+c.telReception+'</span></a>'
+      +'</div>';
+    h+=_cmpSection({titre:'Dehors en ce moment',lignes:c.dehors});
+    h+=_cmpSection({titre:'Sans reprendre la voiture',lignes:c.alentours});
+  } else if(_cmpTab==='services'){
+    h+=c.services.map(_cmpSection).join('');
+  } else {
+    h+=c.animations.map(_cmpSectionAnim).join('');
+    h+='<div class="cmp-promo"><div class="k">'+c.promo.k+'</div>'
+      +'<div class="v">'+c.promo.v+'</div><div class="m">'+c.promo.m+'</div></div>';
+  }
+  document.getElementById('cmp-scroll').innerHTML='<div class="cmp-pane">'+h+'</div>';
+}
+
+function _cmpDateDuJour(){
+  var J=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  var M=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+  var d=new Date();
+  var s=J[d.getDay()]+' '+d.getDate()+' '+M[d.getMonth()];
+  return s.charAt(0).toUpperCase()+s.slice(1);
+}
+
+function cmpOpenPlan(){
+  var p=CAMPING.plan;
+  document.getElementById('cmp-plan-body').innerHTML=
+    '<div class="cmp-plan"><img src="'+CAMPING.photos.plan+'" alt="Plan du camping">'
+    +p.pins.map(function(x){
+      return '<span class="cmp-pin'+(x.you?' you':'')+'" style="left:'+x.x+';top:'+x.y+'">'+x.n+'</span>';
+    }).join('')+'</div>'
+    +'<div class="cmp-leg">'+p.legende.map(function(l){
+      return '<span><i'+(l[2]?' class="you"':'')+'>'+l[0]+'</i>'+l[1]+'</span>';}).join('')+'</div>'
+    +_cmpSection({titre:'Depuis votre emplacement',lignes:p.depuis});
+  document.getElementById('cmp-plan-sheet').classList.add('open');
+  document.getElementById('overlay').classList.add('open');
+}
+function cmpClosePlan(){
+  document.getElementById('cmp-plan-sheet').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+}
+
+// Le reste du profil n'est pas encore persisté ; le camping doit l'être, sinon
+// l'onglet disparaîtrait à chaque rechargement alors que le séjour, lui, dure.
+function saveCamping(){
+  try{
+    localStorage.setItem('planly_camping',JSON.stringify({
+      on:!!USER_PROFILE.camping, nom:USER_PROFILE.campingNom||''
+    }));
+  }catch(e){}
+}
+function setCampingNom(v){
+  USER_PROFILE.campingNom=(v||'').trim();
+  saveCamping();
+  if(currentNav==='camping')cmpRender();
+}
+function restoreCamping(){
+  try{
+    var r=JSON.parse(localStorage.getItem('planly_camping')||'null');
+    if(r&&r.on){
+      USER_PROFILE.camping=true;
+      USER_PROFILE.campingNom=r.nom||'';
+      var tr=document.getElementById('tr-camping'), tog=document.getElementById('tog-camping'),
+          exp=document.getElementById('exp-camping'), inp=document.getElementById('camping-nom');
+      if(tr)tr.classList.add('open');
+      if(tog)tog.classList.add('on');
+      if(exp)exp.classList.add('open');
+      if(inp)inp.value=USER_PROFILE.campingNom;
+    }
+  }catch(e){}
+  cmpSyncNav();
+}
+
+// Affiche ou masque l'onglet selon le profil, et le rend si on y est déjà
+function cmpSyncNav(){
+  var nc=document.getElementById('nav-camping');
+  if(!nc)return;
+  var actif=!!(USER_PROFILE&&USER_PROFILE.camping);
+  nc.style.display=actif?'':'none';
+  if(!actif&&currentNav==='camping')navShow('explorer');
+}
+
 function navShow(view){
   currentNav=view;
-  var isAct=view==='activites';
-  document.getElementById('nav-explorer').classList.toggle('active',!isAct);
+  var isAct=view==='activites', isCmp=view==='camping', isExp=!isAct&&!isCmp;
+  document.getElementById('nav-explorer').classList.toggle('active',isExp);
   document.getElementById('nav-activites').classList.toggle('active',isAct);
+  var nc=document.getElementById('nav-camping');if(nc)nc.classList.toggle('active',isCmp);
   document.getElementById('activites-view').classList.toggle('open',isAct);
-  document.getElementById('app-header').style.display=isAct?'none':'';
-  var mz=document.querySelector('.main-zone');if(mz)mz.style.display=isAct?'none':'';
+  var cv=document.getElementById('camping-view');if(cv)cv.classList.toggle('open',isCmp);
+  document.getElementById('app-header').style.display=isExp?'':'none';
+  var mz=document.querySelector('.main-zone');if(mz)mz.style.display=isExp?'':'none';
   document.getElementById('srch-view').classList.remove('open');
   clearSearch();
   // Bouton carte : visible seulement en Explorer
   var mapBtn=document.getElementById('map-btn-float');
-  if(mapBtn)mapBtn.classList.toggle('hidden',isAct);
+  if(mapBtn)mapBtn.classList.toggle('hidden',!isExp);
   if(isAct)renderActivites();
+  if(isCmp)cmpRender();
 }
 
 // ── VUE ACTIVITÉS ──
@@ -4885,6 +5326,8 @@ updateSlider(4);
 renderList();
 // Initialiser le badge activités
 (function(){_updateActBadge();})();
+// Le séjour en camping survit au rechargement : on le relit et on rouvre l'onglet
+(function(){restoreCamping();})();
 
 // PWA
 if('serviceWorker' in navigator){
