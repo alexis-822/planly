@@ -598,6 +598,15 @@ body{
 .bch-tide.pm .bch-tide-h{color:var(--brand-d);}
 .bch-tide-m{font-size:var(--t6);color:var(--tx3);margin-top:2px;line-height:1.4;
   font-variant-numeric:tabular-nums;}
+/* Sous 360 px, « PLEINE MER » se replie sur deux lignes et désaligne les
+   quatre colonnes. Mesuré : le texte ne débordait pas, il se repliait — ma
+   première vérification testait le débordement et ratait ce cas. */
+@media (max-width:359px){
+  .bch-tides{gap:var(--s1);}
+  .bch-tide-k{font-size:9px;letter-spacing:.02em;}
+  .bch-tide-k .lg{display:none;}
+  .bch-tide-h{font-size:var(--t5);}
+}
 
 .tide-swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
   scrollbar-width:none;-webkit-overflow-scrolling:touch;
