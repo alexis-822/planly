@@ -1164,6 +1164,10 @@ body{
    parcours ». La maquette la pose au niveau du titre, pas en badge détaché. */
 .bch-slbl b{margin-left:auto;font-family:'DM Sans',sans-serif;font-size:var(--t5);
   font-weight:600;color:var(--tx3);letter-spacing:0;}
+/* La provenance sous une section : « D'après le site officiel, vérifié le… ».
+   La maquette la pose sous chaque bloc de faits, en petit et en retrait. */
+.bch-ssrc{font-size:var(--t6);color:var(--tx3);line-height:var(--lh);
+  margin:calc(-1 * var(--s3)) 0 var(--s5);}
 .bch-slbl{display:flex;align-items:baseline;gap:var(--s3);}
 
 /* Section labels — ligne décorative + contraste */
@@ -3428,9 +3432,10 @@ function _plActivitiesBlock(sp){
 function _plShowsBlock(sp){
   var shows=sp.shows||[];
   if(!shows.length)return'';
-  return'<div class="pl-block show"><div class="pl-block-hd">'+PL_ICON_FISH+'<div class="pl-block-info"><div class="pl-block-title">À ne pas manquer</div><div class="pl-block-sub">Les animations à heure fixe</div></div>'
-    +(sp.indoor_outdoor==='intérieur'?'<div class="pl-block-badge">100 % intérieur</div>':'')+'</div>'
-    +'<div class="pl-list">'+shows.map(function(s){return'<div class="pl-item"><div class="pl-show-time">'+_escHtml(String(s.time||'').replace(':','h'))+'</div><div class="pl-item-name">'+_escHtml(String(s.name||''))+'</div></div>';}).join('')+'</div></div>';
+  return'<div class="bch-slbl">À ne pas manquer'
+    +(sp.indoor_outdoor==='intérieur'?'<b>100 % intérieur</b>':'')+'</div>'
+    +'<div class="bch-ssub">Les animations à heure fixe</div>'
+    +'<div class="pl-list">'+shows.map(function(s){return'<div class="pl-item"><div class="pl-show-time">'+_escHtml(String(s.time||'').replace(':','h'))+'</div><div class="pl-item-name">'+_escHtml(String(s.name||''))+'</div></div>';}).join('')+'</div>';
 }
 // ── ST helpers (Sorties & Détente) ──
 // En app installée (écran d'accueil), <a target="_blank"> est souvent ignoré : on ouvre via window.open
@@ -3453,22 +3458,29 @@ function _stKnowBlock(sp){
   var k=(sp.know||[]).filter(Boolean).slice(0,3);
   if(!k.length)return'';
   var src=(sp.official_source&&sp.official_source.verified_at)?sp.official_source.verified_at.split('-').reverse().join('/'):'';
-  return'<div class="st-know"><div class="st-know-hd">Bon à savoir</div>'
-    +k.map(function(t){return'<div class="st-know-row"><div class="st-know-dot"></div><div>'+_escHtml(String(t))+'</div></div>';}).join('')
-    +'<div class="st-know-src">D\'après le site officiel du lieu'+(src?' · vérifié le '+src:'')+'</div></div>';
+  // « Ce qu'il faut savoir » comme partout ailleurs : un titre de section et
+  // des lignes, au lieu d'un cadre blanc arrondi à puces rondes. C'est la
+  // section qui manquait sur la plupart des fiches.
+  return'<div class="bch-slbl">Ce qu\'il faut savoir</div>'
+    +_frRows(k.map(function(t){return _frRow('i-info',_escHtml(String(t)),'','');}))
+    +'<div class="bch-ssrc">D\'après le site officiel du lieu'+(src?' · vérifié le '+src:'')+'</div>';
 }
 function _stFacilitiesBlock(sp,sub){
   var f=(sp.facilities||[]).filter(function(x){return x&&x.name;}).slice(0,6);
   if(!f.length||sub==='Bars & Ambiance')return'';
   var spa=sub==='Piscines & Spa';
-  var title=sub==='Casino & Jeux'?'Les jeux':spa?'Les installations':'Le cinéma';
-  return'<div class="pl-block '+(spa?'show':'night')+'"><div class="pl-block-hd">'+(spa?ST_ICON_WATER:ST_ICON_NIGHT)
-    +'<div class="pl-block-info"><div class="pl-block-title">'+title+'</div><div class="pl-block-sub">D\'après le site officiel</div></div>'
-    +(sp.age_min?'<div class="pl-block-badge">'+sp.age_min+' ans et +</div>':'')+'</div>'
+  // « Le cinéma » était déjà le titre de la section principale : deux titres
+  // identiques se suivaient sur la même fiche.
+  var title=sub==='Casino & Jeux'?'Les jeux':spa?'Les installations':'Les salles';
+  // Dernier pl-block converti : les jeux d'un casino, les installations d'un
+  // spa, les salles d'un cinéma prennent la forme de section commune.
+  return'<div class="bch-slbl">'+title
+    +(sp.age_min?'<b>'+sp.age_min+' ans et +</b>':'')+'</div>'
+    +'<div class="bch-ssub">D\'après le site officiel</div>'
     +'<div class="pl-list">'+f.map(function(x){
       return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(x.name))+'</div>'
         +(x.detail?'<div class="st-item-detail">'+_escHtml(String(x.detail))+'</div>':'')+'</div></div>';
-    }).join('')+'</div></div>';
+    }).join('')+'</div>';
 }
 function _stBudgetCard(p,sp){
   var pr=sp.pricing||null,url=(pr&&pr.source_url)||(sp.official_source&&sp.official_source.url)||'';
@@ -3652,7 +3664,9 @@ function _ficheHeader(p,sp,ribbonItems,mode){
 
 // Convertit ce qui restait du bandeau en lignes de fait, à poser en tête du
 // bloc de la typologie. La distance est écartée : elle est déjà dans la méta.
-var _REPS_ICONES={'Affluence':'i-group','Difficulté':'i-dumbbell','Sentiers':'i-map',
+// « Difficulté » sur une forêt ou une balade parle d'effort de marche, pas de
+// musculation : un haltère n'y disait rien.
+var _REPS_ICONES={'Affluence':'i-group','Difficulté':'i-boot','Sentiers':'i-map',
   'Superficie':'i-tree','Sur place':'i-clock','Pluie':'i-umbrella','Âge':'i-baby',
   'Budget':'i-card','Ferme à':'i-clock','Salles':'i-film','Restaurant':'i-fork',
   'Ambiance':'i-cocktail','Longueur':'i-walk','Type':'i-loop','Altitude':'i-cliff',
