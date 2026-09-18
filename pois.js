@@ -13012,7 +13012,7 @@ var POIS = [
   "commune": "Les Sables-d'Olonne",
   "cat": "🎬 Sorties & Détente",
   "note": "4.2",
-  "budgetBadge": "€€ Modéré",
+  "budgetBadge": "Prix non communiqué",
   "budgetClass": "paid",
   "trajet": {
    "voiture": "? min",

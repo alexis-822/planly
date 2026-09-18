@@ -3707,6 +3707,11 @@ function _mtMealBlock(p,sp){
 // Hall ». On jetait une information complète pour en montrer un moignon.
 var _JOURS_SEM=['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
 function _joursMarche(md){
+  // Plusieurs calendriers — quatre lieux et quatre saisons à Brétignolles —
+  // ne se résument pas en un mot. J'y affichais « 7j/7 » : aucune source ne
+  // le dit, c'était ma synthèse présentée comme un fait. Le bandeau se tait,
+  // le bloc en dessous montre les quatre calendriers tels qu'ils sont.
+  if(Array.isArray(md)&&md.length>1)return'';
   var t=(Array.isArray(md)?md.join(' ; '):String(md||'')).toLowerCase();
   var vus=_JOURS_SEM.filter(function(j){return t.indexOf(j)!==-1;});
   if(!vus.length)return'';
@@ -4138,7 +4143,11 @@ function _renderPoiBody(p,mode){
     var mServ=sp.hours_text&&/midi|soir/i.test(sp.hours_text)?'Midi et soir'
       :(_joursMarche(sp.market_days)||(sp.market_days&&_JOURS.test(String(sp.market_days))?_tronque(sp.market_days,14):'—'));
     ribbonItems=[
-      {val:sp.cuisine_type?_tronque(sp.cuisine_type,14):(sub==='Marchés & Terroir'?'Marché':'—'),lbl:'Type',cls:sp.cuisine_type?' bl':''},
+      // Pas de coupe ici : ces valeurs deviennent des LIGNES, pas des colonnes
+      // de bandeau, et une ligne porte un texte long sans peine — _frRow le
+      // fait passer en précision au-delà de 24 signes. « Boutique de produits
+      // de la ruche » s'affichait « Boutique de… » sans raison.
+      {val:sp.cuisine_type?String(sp.cuisine_type):(sub==='Marchés & Terroir'?'Marché':'—'),lbl:'Type',cls:sp.cuisine_type?' bl':''},
       {val:mAvg!=null?'~'+_plEuro(mAvg):(mEuros?mEuros[0]:'—'),lbl:'Budget',cls:''},
       {val:mServ,lbl:sub==='Marchés & Terroir'?'Jours':'Services',cls:''},
       {val:distMin+' min',lbl:'Distance',cls:''}
@@ -4147,7 +4156,9 @@ function _renderPoiBody(p,mode){
     specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+_mtMealBlock(p,sp)+_mtMarketBlock(sp,p.subcategory,!!(p.openingHours&&Object.keys(p.openingHours).length))+_mtBookCard(p,sp);
     var mtPills=[];
     if(mv.terrace)mtPills.push(_frRow('i-sun','Terrasse','','oui'));
-    if(mv.view)mtPills.push(_frRow('i-wave','Vue','',_escHtml(_tronque(mv.view,30))));
+    // Même raison qu'au-dessus : « Vue imprenable sur la baie des Sables
+    // d'Olonne, vue sur l'océan » perdait sa moitié pour rien.
+    if(mv.view)mtPills.push(_frRow('i-wave','Vue','',_escHtml(String(mv.view))));
     if(mv.kids_menu)mtPills.push(_frRow('i-baby','Menu enfant','','oui'));
     if(mv.vegetarian)mtPills.push(_frRow('i-veggie','Options végétariennes','','oui'));
     if(mv.takeaway)mtPills.push(_frRow('i-takeaway','À emporter','','oui'));
@@ -4180,7 +4191,7 @@ function _renderPoiBody(p,mode){
       specialBlock='<div class="st-warn"><svg class="ic"><use href="#i-alert"/></svg> Interdit aux moins de '+stAge+' ans : à éviter avec tes enfants.</div>'+specialBlock;
     var stPills=[];
     if(sv.terrace)stPills.push(_frRow('i-sun','Terrasse','','oui'));
-    if(sv.view)stPills.push(_frRow('i-sunrise','Vue','',_escHtml(_tronque(sv.view,40))));
+    if(sv.view)stPills.push(_frRow('i-sunrise','Vue','',_escHtml(String(sv.view))));
     if(sv.live_music)stPills.push(_frRow('i-music','Musique live','','oui'));
     if(sv.happy_hour)stPills.push(_frRow('i-glass','Happy hour','',_escHtml(String(sv.happy_hour))));
     if(sv.restaurant_on_site)stPills.push(_frRow('i-fork','Restaurant','Sur place','oui'));
