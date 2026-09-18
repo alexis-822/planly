@@ -581,6 +581,38 @@ body{
    données, étaient calculés, puis jetés sans jamais atteindre l'écran.
    Quatre colonnes par jour : ce qui compte, c'est de comparer les horaires
    d'un coup d'œil pour choisir quand descendre sur l'estran. */
+/* Un jour à la fois, qu'on fait défiler du doigt — comme la maquette, qui
+   ne montre jamais plusieurs journées empilées. */
+.tide-swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  margin:0 calc(-1 * var(--s5));padding:0 var(--s5);gap:var(--s5);}
+.tide-swipe::-webkit-scrollbar{display:none;}
+.tide-page{flex:0 0 100%;scroll-snap-align:center;min-width:0;}
+.tide-dots{display:flex;justify-content:center;gap:6px;margin-top:var(--s5);}
+.tide-dot{width:6px;height:6px;border-radius:50%;background:var(--line);transition:background .2s;}
+.tide-dot.on{background:var(--brand-d);}
+.tide-nav{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);
+  margin-bottom:var(--s4);}
+.tide-arrow{width:34px;height:34px;border-radius:50%;background:var(--bg-d);border:0;
+  display:flex;align-items:center;justify-content:center;color:var(--tx2);flex:none;
+  cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.tide-arrow:disabled{opacity:.3;cursor:default;}
+/* Matin et après-midi : la journée se décide en deux moitiés, pas en moyenne */
+.meteo-half{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);margin-top:var(--s3);}
+.meteo-cell{background:var(--bg-d);border-radius:var(--r1);padding:var(--s3);}
+.meteo-cell .k{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--tx3);line-height:1.35;}
+.meteo-cell .v{display:flex;align-items:center;gap:var(--s2);margin-top:var(--s2);
+  font-size:var(--t4);font-weight:700;color:var(--tx);line-height:var(--lh-t);}
+.meteo-cell .m{font-size:var(--t6);color:var(--tx3);margin-top:2px;line-height:var(--lh);}
+.meteo-day{padding:var(--s4) 0;border-top:1px solid var(--line-2);}
+.meteo-day:first-of-type{border-top:0;padding-top:0;}
+.meteo-day-hd{display:flex;align-items:baseline;gap:var(--s3);}
+.meteo-day-n{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);font-weight:600;
+  color:var(--tx);line-height:var(--lh-t);}
+.meteo-day-t{margin-left:auto;font-size:var(--t4);font-weight:700;color:var(--tx);
+  font-variant-numeric:tabular-nums;}
+
 .tide-day{margin-bottom:var(--s6);}
 .tide-day-hd{display:flex;align-items:baseline;gap:var(--s3);font-family:'Fraunces',Georgia,serif;
   font-size:var(--t3);font-weight:600;color:var(--tx);margin-bottom:var(--s4);line-height:var(--lh-t);}
@@ -1499,7 +1531,8 @@ body{
 .bch-meta{font-size:var(--t5);color:var(--txm);margin-top:4px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;line-height:var(--lh);}
 .bch-meta b{color:var(--tx);font-weight:700;display:inline-flex;align-items:center;gap:4px;}
 .bch-meta i{font-style:normal;color:var(--txl);}
-.bch-acts{display:flex;gap:8px;margin-top:var(--s4);}
+/* Les commandes touchaient le bloc suivant : aucune marge basse, 0 px mesuré. */
+.bch-acts{display:flex;gap:var(--s2);margin-top:var(--s4);margin-bottom:var(--s5);}
 .bch-act{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 4px;
   border-radius:var(--r2);text-decoration:none;color:var(--brand-d);font-size:var(--t6);font-weight:700;
   background:var(--brand-l);border:0;font-family:'DM Sans',sans-serif;cursor:pointer;text-align:center;}
@@ -1640,6 +1673,12 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
        lui-même : ♥ aimé, ♡ pas aimé. Le sprite n'avait que le contour, il
        manquait donc de quoi dire « aimé » sans revenir à un caractère. -->
   <symbol id="i-heart-full" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4 4 0 0 1 12 8a4 4 0 0 1 7 2.8C19 15.6 12 20 12 20z" fill="currentColor" stroke="none"/></symbol>
+  <!-- Météo : il manquait de quoi distinguer les conditions. Avec seulement
+       soleil / nuage / pluie / orage, une semaine entière s'affichait
+       « Couvert ». -->
+  <symbol id="i-cloud-sun" viewBox="0 0 24 24"><circle cx="8" cy="7.5" r="3"/><path d="M8 1.5v1.5M8 12v1.5M1.5 7.5H3M13 7.5h1.5M3.4 2.9l1 1M12.6 2.9l-1 1M3.4 12.1l1-1"/><path d="M10 20H6.5a3.5 3.5 0 0 1-.3-7A5 5 0 0 1 16 13.5a3.2 3.2 0 0 1 .3 6.5H10z"/></symbol>
+  <symbol id="i-fog" viewBox="0 0 24 24"><path d="M7 14H5.5a3.5 3.5 0 0 1-.3-7A5 5 0 0 1 15 7.5a3.2 3.2 0 0 1 .3 6.5H14"/><path d="M4 17.5h16M6 20.5h12"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M7 13H5.5a3.5 3.5 0 0 1-.3-7A5 5 0 0 1 15 6.5a3.2 3.2 0 0 1 .3 6.5H14"/><path d="M8 17h.01M12 19h.01M16 17h.01M10 20h.01M14 20h.01"/></symbol>
   <!-- Canne : le sprite n'en avait pas, j'avais mis une botte faute de mieux -->
   <symbol id="i-cane" viewBox="0 0 24 24"><path d="M9 21V8a4 4 0 0 1 8 0v1.5"/><path d="M6 21h6"/></symbol>
   <!-- Pastilles de fiche : remplacent 📜 🎙️ ⚓ venus des données -->
@@ -2873,18 +2912,67 @@ function _dangerScore(H,P,W){
 // jetait — et téléchargeait déjà le vent chez open-meteo sans rien afficher.
 var _plageCourante=null;   // le lieu ouvert, pour retrouver son port
 var _meteoRecue=null;      // la réponse open-meteo, gardée pour la feuille
+var _tideDates=[];         // les jours affichés dans la feuille marées
 
-// Les codes OMM sont des nombres ; personne ne lit « 61 ».
+// Balayage entre les jours. Le doigt fait défiler, les flèches aussi, et le
+// titre suit : sans lui on ne saurait pas quel jour on regarde.
+function _tidePage(){
+  var sw=document.getElementById('tide-swipe');
+  if(!sw||!sw.clientWidth)return 0;
+  return Math.round(sw.scrollLeft/sw.clientWidth);
+}
+function _tideMaj(){
+  var i=Math.max(0,Math.min(_tideDates.length-1,_tidePage()));
+  var t=document.getElementById('tide-jour');
+  if(t&&_tideDates[i])t.textContent=_jourMot(_tideDates[i],i);
+  var dots=document.getElementById('tide-dots');
+  if(dots)[].forEach.call(dots.children,function(d,n){d.classList.toggle('on',n===i);});
+  var av=document.querySelectorAll('.tide-arrow');
+  if(av.length===2){av[0].disabled=(i<=0);av[1].disabled=(i>=_tideDates.length-1);}
+}
+function _tideGo(pas){
+  var sw=document.getElementById('tide-swipe');
+  if(!sw)return;
+  var i=Math.max(0,Math.min(_tideDates.length-1,_tidePage()+pas));
+  sw.scrollTo({left:i*sw.clientWidth,behavior:'smooth'});
+  setTimeout(_tideMaj,320);
+}
+
+// Les codes OMM sont des nombres ; personne ne lit « 61 ». L'ancienne lecture
+// confondait éclaircies et ciel couvert, d'où une semaine entière affichée
+// « Couvert » alors que le ciel se dégageait.
 function _cielMot(c){
-  if(c===0)return['Grand soleil','i-sun'];
-  if(c<=2)return['Quelques nuages','i-sun'];
-  if(c===3)return['Couvert','i-cloud'];
-  if(c<=48)return['Brouillard','i-cloud'];
-  if(c<=55)return['Bruine','i-rain'];
-  if(c<=65)return['Pluie','i-rain'];
-  if(c<=77)return['Neige','i-rain'];
-  if(c<=82)return['Averses','i-rain'];
+  if(c===0)return['Ciel dégagé','i-sun'];
+  if(c===1)return['Belles éclaircies','i-sun'];
+  if(c===2)return['Passages nuageux','i-cloud-sun'];
+  if(c===3)return['Ciel couvert','i-cloud'];
+  if(c===45||c===48)return['Brouillard','i-fog'];
+  if(c>=51&&c<=57)return['Bruine','i-rain'];
+  if(c>=61&&c<=67)return[c>=65?'Pluie soutenue':'Pluie','i-rain'];
+  if(c>=71&&c<=77)return['Neige','i-snow'];
+  if(c>=80&&c<=82)return[c===82?'Fortes averses':'Averses','i-rain'];
+  if(c>=85&&c<=86)return['Averses de neige','i-snow'];
   return['Orage','i-storm'];
+}
+// Le code dominant d'une tranche horaire, et non la moyenne de la journée :
+// un matin dégagé suivi d'un après-midi couvert donnait « Couvert » tout court.
+function _cielTranche(h,iso,deb,fin){
+  if(!h||!h.time)return null;
+  var codes=[],temps=[],pluies=[];
+  for(var i=0;i<h.time.length;i++){
+    if(h.time[i].slice(0,10)!==iso)continue;
+    var heure=parseInt(h.time[i].slice(11,13),10);
+    if(heure<deb||heure>fin)continue;
+    if(h.weather_code)codes.push(h.weather_code[i]);
+    if(h.temperature_2m)temps.push(h.temperature_2m[i]);
+    if(h.precipitation_probability)pluies.push(h.precipitation_probability[i]);
+  }
+  if(!codes.length)return null;
+  var freq={},pire=codes[0],n=0;
+  codes.forEach(function(c){freq[c]=(freq[c]||0)+1;if(freq[c]>n){n=freq[c];pire=c;}});
+  return {code:pire,
+    temp:Math.round(Math.max.apply(null,temps)),
+    pluie:pluies.length?Math.max.apply(null,pluies):null};
 }
 function _jourMot(iso,i){
   if(i===0)return"Aujourd'hui";
@@ -2911,25 +2999,37 @@ function _openTideSheet(){
       +'<div class="m">Les marées publiées ne couvrent plus la période. Elles sont relevées chaque semaine.</div>'
       +'</div></div></div>';
   } else {
-    bd.innerHTML=dates.map(function(d,i){
-      var t=jours[d]||[];
-      // Le coefficient n'est publié que sur les pleines mers : on le remonte au
-      // niveau du jour, c'est ce qui intéresse — au-delà de 70, ça marne fort.
-      var co=t.map(function(x){return x.coeff;}).filter(function(x){return x!=null;});
-      var coMax=co.length?Math.max.apply(null,co):null;
-      return '<div class="tide-day">'
-        +'<div class="tide-day-hd">'+_jourMot(d,i)
-        +(coMax?'<span class="tide-coeff">coef. '+coMax+'</span>':'')+'</div>'
-        +'<div class="tide-grid">'+t.map(function(x){
+    // Un jour à la fois, qu'on fait défiler du doigt — comme la maquette, qui
+    // ne montre jamais plusieurs journées empilées. Le coefficient se lit sous
+    // la pleine mer à laquelle il se rapporte, pas en badge détaché.
+    bd.innerHTML='<div class="tide-nav">'
+      +'<button type="button" class="tide-arrow" onclick="_tideGo(-1)" aria-label="Jour précédent">'
+      +'<svg class="ic"><use href="#i-chev-l"/></svg></button>'
+      +'<span class="tide-day-hd" id="tide-jour" style="margin:0;flex:1;justify-content:center">'
+      +_jourMot(dates[0],0)+'</span>'
+      +'<button type="button" class="tide-arrow" onclick="_tideGo(1)" aria-label="Jour suivant">'
+      +'<svg class="ic"><use href="#i-chev"/></svg></button></div>'
+      +'<div class="tide-swipe" id="tide-swipe">'+dates.map(function(d){
+        var t=jours[d]||[];
+        return '<div class="tide-page"><div class="tide-grid">'+t.map(function(x){
           return '<div class="tide-cell'+(x.type==='PM'?' pm':'')+'">'
             +'<div class="tide-k">'+(x.type==='PM'?'Pleine mer':'Basse mer')+'</div>'
             +'<div class="tide-h">'+(x.time||'—')+'</div>'
-            +'<div class="tide-m">'+(x.height!=null?String(x.height).replace('.',',')+' m':'')+'</div>'
+            +'<div class="tide-m">'+(x.height!=null?String(x.height).replace('.',',')+' m':'')
+            +(x.coeff!=null?'<br>coef. '+x.coeff:'')+'</div>'
             +'</div>';
         }).join('')+'</div></div>';
-    }).join('')
-    +'<div class="tide-src">Horaires du port de '+(port===124?'Brétignolles-sur-Mer':'Les Sables-d’Olonne')
-    +'. Un coefficient au-delà de 70 découvre largement l’estran.</div>';
+      }).join('')+'</div>'
+      +'<div class="tide-dots" id="tide-dots">'+dates.map(function(_,i){
+        return '<div class="tide-dot'+(i?'':' on')+'"></div>';}).join('')+'</div>'
+      +'<div class="tide-src">Horaires du port de '+(port===124?'Brétignolles-sur-Mer':'Les Sables-d’Olonne')
+      +'. Un coefficient au-delà de 70 découvre largement l’estran.</div>';
+    _tideDates=dates;
+    var sw=document.getElementById('tide-swipe');
+    if(sw){sw.scrollLeft=0;sw.onscroll=function(){_tideMaj();};}
+    // Appelée d'emblée : sans elle, la flèche de gauche restait active au
+    // premier jour et laissait croire qu'on pouvait remonter dans le passé.
+    _tideMaj();
   }
   document.getElementById('tide-sheet').classList.add('open');
   document.getElementById('overlay').classList.add('open');
@@ -2951,23 +3051,38 @@ function _openMeteoSheet(){
   } else {
     var port=_plageCourante?_getPort(_plageCourante.commune):125;
     var jours=_tideDays[port]||{};
-    bd.innerHTML='<div class="fr-rows">'+d.time.map(function(iso,i){
-      var ciel=_cielMot(d.weather_code[i]);
-      var pluie=d.precipitation_probability_max?d.precipitation_probability_max[i]:null;
+    var h=_meteoRecue&&_meteoRecue.hourly;
+    // Matin et après-midi séparément : aux Sables, un 18 septembre au ciel
+    // dégagé jusqu'à 11h et couvert ensuite s'affichait « Couvert » tout
+    // court, parce que le code dominant du jour écrase la matinée.
+    bd.innerHTML=d.time.map(function(iso,i){
+      var mat=_cielTranche(h,iso,7,12), apm=_cielTranche(h,iso,13,19);
       var tmax=Math.round(d.temperature_2m_max[i]), tmin=Math.round(d.temperature_2m_min[i]);
+      var demi=function(titre,t){
+        if(!t)return '';
+        var c=_cielMot(t.code);
+        return '<div class="meteo-cell"><div class="k">'+titre+'</div>'
+          +'<div class="v"><svg class="ic"><use href="#'+c[1]+'"/></svg>'+t.temp+'°</div>'
+          +'<div class="m">'+c[0]+(t.pluie?' · '+t.pluie+' % de pluie':'')+'</div></div>';
+      };
+      var duo=demi('Matin',mat)+demi('Après-midi',apm);
+      if(!duo){   // jour hors de la portée horaire : on retombe sur le résumé
+        var c=_cielMot(d.weather_code[i]);
+        duo='<div class="meteo-cell"><div class="k">Journée</div>'
+          +'<div class="v"><svg class="ic"><use href="#'+c[1]+'"/></svg>'+tmax+'°</div>'
+          +'<div class="m">'+c[0]+'</div></div>';
+      }
       // Les jours sans marée publiée sont signalés : mieux vaut le dire que
       // laisser croire que l'information manque par hasard.
       var marees=jours[iso]&&jours[iso].length;
-      var precision=[(pluie!=null?pluie+' % de pluie':''),
-                     (marees?'':'marées non publiées')].filter(Boolean).join(' · ');
-      return '<div class="fr-row">'
-        +'<svg class="ic"><use href="#'+ciel[1]+'"/></svg>'
-        +'<div class="b"><div class="n">'+_jourMot(iso,i)+'</div>'
-        +'<div class="m">'+ciel[0]+(precision?' · '+precision:'')+'</div></div>'
-        +'<span class="v">'+tmax+'°<span class="tide-min"> / '+tmin+'°</span></span>'
+      return '<div class="meteo-day"><div class="meteo-day-hd">'
+        +'<span class="meteo-day-n">'+_jourMot(iso,i)+'</span>'
+        +'<span class="meteo-day-t">'+tmax+'°<span class="tide-min"> / '+tmin+'°</span></span></div>'
+        +'<div class="meteo-half">'+duo+'</div>'
+        +(marees?'':'<div class="m" style="margin-top:var(--s2);color:var(--tx3);font-size:var(--t6)">Marées non publiées pour ce jour</div>')
         +'</div>';
-    }).join('')+'</div>'
-    +'<div class="tide-src">Prévisions open-meteo, mises à jour à chaque ouverture de la fiche.</div>';
+    }).join('')
+    +'<div class="tide-src">Prévisions open-meteo, relevées à l’ouverture de la fiche. Le matin couvre 7h–12h, l’après-midi 13h–19h.</div>';
   }
   document.getElementById('meteo-sheet').classList.add('open');
   document.getElementById('overlay').classList.add('open');
@@ -3531,17 +3646,20 @@ function _renderPoiBody(p,mode){
     // Les faits de la plage en LIGNES et non en pastilles : chacune porte une
     // étiquette, une précision et une valeur à droite, séparée d'un filet.
     // Une rangée de badges de même poids ne hiérarchise rien.
-    // Les faits de la plage en lignes, via la fonction partagée.
-    var frRows=[];
+    // Deux sections, comme la maquette : « La baignade » dit si l'on peut se
+    // baigner et quand ; « Ce qu'il faut savoir » dit ce qu'on trouve sur
+    // place. Tout mélanger sous un seul titre remettait au même niveau une
+    // condition de sécurité et la présence d'un bar.
+    var frRows=[], frSavoir=[];
     if(bchSupervised)frRows.push(_frRow('i-swim','Surveillance',bch.supervision_season||'',survDisplay||'oui','on'));
     else frRows.push(_frRow('i-swim','Surveillance','Baignade non surveillée','non','warn'));
-    if(bch.showers)frRows.push(_frRow('i-shower','Douches','','sur place','on'));
     var hasPmr=(p.quickSpecs||[]).some(function(s){return/pmr|wheelchair|handicap/i.test(s.label||'');});
-    if(hasPmr)frRows.push(_frRow('i-pmr','Accès PMR','','oui','on'));
-    if(bch.beach_bar)frRows.push(_frRow('i-glass','Bar de plage','Ouvert en saison','oui','on'));
-    if(bch.naturist)frRows.push(_frRow('i-parasol','Naturisme','','autorisé'));
-    if(bch.dogs)frRows.push(_frRow('i-dog','Chiens','','admis','on'));
-    if(bchType)frRows.push(_frRow('i-beach','Profil de plage','',bchType));
+    if(bch.showers)frSavoir.push(_frRow('i-shower','Douches','','sur place','on'));
+    if(hasPmr)frSavoir.push(_frRow('i-pmr','Accès PMR','','oui','on'));
+    if(bch.beach_bar)frSavoir.push(_frRow('i-glass','Bar de plage','Ouvert en saison','oui','on'));
+    if(bch.naturist)frSavoir.push(_frRow('i-parasol','Naturisme','','autorisé'));
+    if(bch.dogs)frSavoir.push(_frRow('i-dog','Chiens','','admis','on'));
+    if(bchType)frSavoir.push(_frRow('i-beach','Profil de plage','',bchType));
     if(bchWave){
       var waveLbl=/sportif|fort/i.test(bchWave)?'Mer sportive'
         :/modér/i.test(bchWave)?'Vagues modérées'
@@ -3550,7 +3668,10 @@ function _renderPoiBody(p,mode){
       frRows.push(_frRow('i-wave','Profil de mer','',waveLbl,/sportif|fort/i.test(bchWave)?'warn':''));
     }
     if(bch.tide_sensitive)frRows.push(_frRow('i-tide','Sensible aux marées','Vérifier les horaires avant de partir','','warn'));
-    pillsHtml=_frRows(frRows);
+    // Le bloc émet ses propres titres : sectionLabel est donc laissé vide.
+    sectionLabel='';
+    pillsHtml=(frRows.length?'<div class="bch-slbl">La baignade</div>'+_frRows(frRows):'')
+      +(frSavoir.length?'<div class="bch-slbl">Ce qu\'il faut savoir</div>'+_frRows(frSavoir):'');
 
   }else if(sub==='Forêts & Nature'){
     // Ribbon : difficulté (colorée), durée estimée, superficie, distance voiture
@@ -3836,16 +3957,14 @@ function _renderPoiBody(p,mode){
   // Assemble body HTML
   body.innerHTML='<div class="bch-body">'
     +ribbonHtml
-    // Les conditions du jour d'abord : une marée montante à 16h35 décide de
-    // l'heure à laquelle on part. Le bloc marine ne concerne que les plages ;
-    // pour les autres typologies, specialBlock reste à sa place, après le
-    // conseil, car il n'y porte pas de condition urgente.
-    +(sub==='Plages & Côte'?specialBlock:'')
-    // Le Conseil Planly avant la preuve : c'est la seule chose qu'aucune carte
-    // concurrente ne donne, et il répond à « est-ce que ça vaut le coup pour nous ».
+    // Le Conseil Planly d'abord, comme la maquette. J'avais remonté tout le
+    // bloc marine avant lui : le conseil se retrouvait poussé sous la
+    // température, la jauge et le tableau, hors de l'écran. Or c'est la seule
+    // chose qu'aucune carte concurrente ne donne, et il répond à « est-ce que
+    // ça vaut le coup pour nous ». Les conditions détaillées viennent après.
     +(conseil?'<div class="bch-conseil"><div class="bch-ctit"><div class="bch-cdot"></div>Le Conseil Planly</div>'
       +'<div class="bch-ctxt">'+conseil+'</div>'+attnBlock+'</div>':attnBlock)
-    +(sub==='Plages & Côte'?'':specialBlock)
+    +specialBlock
     +(sectionLabel?'<div class="bch-slbl">'+sectionLabel+'</div>':'')
     +pillsHtml
     +'<div class="bch-desc">'+_airDesc(descLong)+'</div>'
