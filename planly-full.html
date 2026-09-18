@@ -436,11 +436,13 @@ body{
 /* #explorer-view est fixe et noir : une vue qui s'insère dans son flux laisse
    la liste transparaître derrière. L'onglet camping couvre donc son parent. */
 .camping-view{display:none;flex-direction:column;overflow:hidden;background:var(--bg);
-  position:absolute;inset:0;z-index:5;
+  position:absolute;left:0;right:0;top:0;bottom:0;z-index:5;
   --kid:#7A4E9E;--kid-soft:#F0E9F7;--cmp-warn:#8A5410;--cmp-warn-soft:#FBF0DC;--cmp-ok-soft:#E4EFE0;}
 .camping-view.open{display:flex;}
+/* La zone défilante court jusqu'au bas du parent, sous la barre d'onglets :
+   sans cette marge, les dernières lignes se cachent derrière elle. */
 .cmp-scroll{flex:1;overflow-y:auto;scrollbar-width:none;
-  padding-bottom:calc(var(--s5) + env(safe-area-inset-bottom,0px));}
+  padding-bottom:calc(var(--s6) + 79px + env(safe-area-inset-bottom,0px));}
 .cmp-scroll::-webkit-scrollbar{display:none;}
 
 /* En-tête photo */
@@ -455,7 +457,9 @@ body{
   align-items:center;gap:var(--s2);text-shadow:0 1px 8px rgba(0,0,0,.55);line-height:var(--lh);}
 
 /* Sous-onglets */
-.cmp-tabs{display:flex;gap:var(--s2);padding:var(--s4) var(--s5) 0;flex-shrink:0;background:var(--bg);}
+/* Opaque et au-dessus : le contenu défile derrière, pas au travers */
+.cmp-tabs{display:flex;gap:var(--s2);padding:var(--s4) var(--s5);flex-shrink:0;
+  background:var(--bg);position:relative;z-index:2;}
 .cmp-tab{flex:1;text-align:center;font-size:var(--t6);font-weight:600;padding:11px var(--s2);
   border-radius:999px;box-shadow:inset 0 0 0 1px var(--br);color:var(--txm);cursor:pointer;
   font-family:'DM Sans',sans-serif;line-height:var(--lh);-webkit-tap-highlight-color:transparent;}
@@ -738,7 +742,9 @@ body{
 .map-card-voir{background:var(--brand);color:var(--wh);border:none;border-radius:10px;padding:6px 14px;font-size:var(--t5);font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;-webkit-tap-highlight-color:transparent;line-height:var(--lh);}
 
 /* ── NAV BOTTOM — fond beige ── */
-.bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:8px 8px calc(12px + env(safe-area-inset-bottom, 0px));background:var(--bg-d);flex-shrink:0;border-top:1px solid var(--tx);}
+/* Positionnée et prioritaire : une vue en absolute (camping) ne doit jamais
+   la recouvrir, sinon on ne peut plus sortir de l'onglet où l'on est. */
+.bottom-nav{display:flex;justify-content:space-around;align-items:center;padding:8px 8px calc(12px + env(safe-area-inset-bottom, 0px));background:var(--bg-d);flex-shrink:0;border-top:1px solid var(--tx);position:relative;z-index:10;}
 .nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
 .nav-icon{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;transition:background .2s;position:relative;}
 .nav-act-badge{position:absolute;top:-4px;right:-6px;min-width:16px;height:16px;border-radius:8px;background:var(--brand);color:var(--wh);font-size:var(--t6);font-weight:700;display:none;align-items:center;justify-content:center;padding:0 4px;line-height:var(--lh);border:1.5px solid var(--bg);}
