@@ -3608,7 +3608,7 @@ function _renderPoiBody(p,mode){
     var pills=[];
     if(sp.stroller_ok)pills.push(_frRow('i-stroller','Poussette','','praticable','on'));
     if(sp.bike_allowed)pills.push(_frRow('i-bike','Vélo','','autorisé','on'));
-    pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
+    pillsHtml=_frRows(pills.concat(_frFromSpecs(p.quickSpecs)));
 
   }else if(sub==='Points de vue'){
     // Ribbon : altitude | meilleur moment | accès | distance
@@ -3679,9 +3679,9 @@ function _renderPoiBody(p,mode){
     sectionLabel=sub==='Restaurants'?'Le restaurant':sub==='Marchés & Terroir'?'Le marché':'La dégustation';
     specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+_mtMealBlock(p,sp)+_mtMarketBlock(sp,p.subcategory)+_mtBookCard(p,sp);
     var mtPills=[];
-    if(mv.terrace)mtPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-sun"/></svg> Terrasse</span>');
-    if(mv.view)mtPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-wave"/></svg> '+_escHtml(String(mv.view).slice(0,30))+'</span>');
-    if(mv.kids_menu)mtPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-baby"/></svg> Menu enfant</span>');
+    if(mv.terrace)mtPills.push(_frRow('i-sun','Terrasse','','oui','on'));
+    if(mv.view)mtPills.push(_frRow('i-wave','Vue','',_escHtml(String(mv.view).slice(0,30))));
+    if(mv.kids_menu)mtPills.push(_frRow('i-baby','Menu enfant','','oui','on'));
     if(mv.vegetarian)mtPills.push(_frRow('i-veggie','Options végétariennes','','oui','on'));
     if(mv.takeaway)mtPills.push(_frRow('i-takeaway','À emporter','','oui','on'));
     if(mv.covered)mtPills.push(_frRow('i-umbrella','Halle couverte','','oui','on'));
@@ -3737,15 +3737,15 @@ function _renderPoiBody(p,mode){
     sectionLabel={'Aquariums':"L'aquarium",'Parcs botaniques':'Le jardin'}[sub]||'Le parc';
     specialBlock=_plHoursBar(p)+_plPriceBlock(sp)+_plActivitiesBlock(sp)+_plShowsBlock(sp);
     var am=sp.amenities||{},plPills=[];
-    if(sp.indoor_outdoor==='intérieur')plPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-umbrella"/></svg> Idéal par temps de pluie</span>');
-    else if(sp.indoor_outdoor==='mixte')plPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-umbrella"/></svg> En partie couvert</span>');
-    if(am.snack)plPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-burger"/></svg> Snack sur place</span>');
-    if(am.kids_zone)plPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-baby"/></svg> Espace tout-petits</span>');
-    if(am.picnic_area)plPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-basket"/></svg> Pique-nique</span>');
-    if(am.stroller_ok)plPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-stroller"/></svg> Poussette OK</span>');
+    if(sp.indoor_outdoor==='intérieur')plPills.push(_frRow('i-umbrella','Par temps de pluie','Entièrement couvert','idéal','on'));
+    else if(sp.indoor_outdoor==='mixte')plPills.push(_frRow('i-umbrella','Par temps de pluie','','en partie couvert'));
+    if(am.snack)plPills.push(_frRow('i-burger','Snack','Sur place','oui','on'));
+    if(am.kids_zone)plPills.push(_frRow('i-baby','Espace tout-petits','','oui','on'));
+    if(am.picnic_area)plPills.push(_frRow('i-basket','Aire de pique-nique','','oui','on'));
+    if(am.stroller_ok)plPills.push(_frRow('i-stroller','Poussette','','praticable','on'));
     (am.rules||[]).slice(0,3).forEach(function(r){
       r=String(r||'');
-      if(r)plPills.push('<span class="bch-pill bch-pw">'+(/chaussette/i.test(r)?'<svg class="ic"><use href="#i-socks"/></svg> ':'<svg class="ic"><use href="#i-alert"/></svg> ')+_escHtml(r.charAt(0).toUpperCase()+r.slice(1))+'</span>');
+      if(r)plPills.push(_frRow(/chaussette/i.test(r)?'i-socks':'i-alert','À prévoir',_escHtml(r.charAt(0).toUpperCase()+r.slice(1)),'','warn'));
     });
     pillsHtml=_frRows(plPills.concat(_frFromSpecs(p.quickSpecs)));
     var plKids=_plGroup().kids;
