@@ -3124,8 +3124,13 @@ function _diffLabel(d){
 }
 // ── PL helpers (Parcs & Loisirs) ──
 var PL_SUBCATS=['Jeux & Divertissement','Parcs animaliers','Aquariums','Parcs botaniques'];
-var PL_ICON_TICKET='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 5v2m0 10v2" stroke-dasharray="2 2"/><path d="M2 10a3 3 0 0 1 0 4"/><path d="M22 10a3 3 0 0 0 0 4"/></svg>';
-var PL_ICON_FISH='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c3-5 9-6.5 13-3l4-3v12l-4-3c-4 3.5-10 2-13-3z"/><circle cx="8.5" cy="11" r="0.9" fill="#fff" stroke="none"/></svg>';
+// Ces deux icônes étaient tracées en blanc en dur : elles vivaient sur un
+// bandeau coloré, supprimé à la refonte. Posées depuis sur fond crème, elles
+// devenaient invisibles — un rectangle vide devant « Les activités », une
+// fourchette fantôme devant « Ce qu'on y mange ». Elles héritent désormais la
+// couleur du texte, comme toutes les autres.
+var PL_ICON_TICKET='<svg class="ic lg"><use href="#i-ticket"/></svg>';
+var PL_ICON_FISH='<svg class="ic lg"><use href="#i-sparkle"/></svg>';
 var PL_ICON_CLOCK='<svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v4l2.8 1.8"/></svg>';
 function _plNum(v){if(v==null)return null;var n=parseFloat(String(v).replace(',','.'));return isNaN(n)?null:n;}
 function _plEuro(n){n=Math.round(n*100)/100;return(n%1?n.toFixed(2):String(n)).replace('.',',')+' €';}
@@ -3899,7 +3904,10 @@ function openPoiSheet(idx){
   track.innerHTML=p.imgs.map(function(s){return'<div class="bs-car-slide"><img src="'+s+'" alt=""></div>';}).join('');
   document.getElementById('bs-car-dots').innerHTML=p.imgs.map(function(_,i){return'<div class="bs-car-dot'+(i===0?' active':'')+'"></div>';}).join('');
   document.getElementById('bs-name').textContent=p.name;
-  document.getElementById('bs-cat').textContent=p.cat;
+  // p.cat porte l'emoji dans la donnée (« 🌊 Nature & Grand Air ») : c'est la
+  // catégorie affichée sous le titre de CHAQUE fiche, le dernier emoji en
+  // couleur encore visible à l'écran.
+  document.getElementById('bs-cat').textContent=_catSansEmoji(p.cat);
   // innerHTML et non textContent : le libellé porte l'icône en SVG
   document.getElementById('bs-notoriety').innerHTML=p.inco?'<svg class="ic"><use href="#i-star"/></svg> Incontournable':'<svg class="ic"><use href="#i-gem"/></svg> Pépite locale';
   // Beach class + marine data
@@ -3948,7 +3956,7 @@ function updateSlider(val){
   if(!sl)return;
   sl.style.backgroundSize=pct+'% 100%';
   ['pied','velo','voiture'].forEach(function(k){var h=document.getElementById('hint-'+k);if(h)h.textContent='~'+TD[k].steps[sliderVal-1].km;});
-  if(!transport){document.getElementById('slider-result').textContent='-- min';document.querySelector('#mob-mention .mob-mention-icon').textContent='🗺️';document.getElementById('mob-mention-txt').innerHTML='Sélectionnez un mode de transport pour voir les distances.';return;}
+  if(!transport){document.getElementById('slider-result').textContent='-- min';document.querySelector('#mob-mention .mob-mention-icon').innerHTML='<svg class="ic"><use href="#i-map"/></svg>';document.getElementById('mob-mention-txt').innerHTML='Sélectionnez un mode de transport pour voir les distances.';return;}
   var s=TD[transport].steps[sliderVal-1];
   document.getElementById('slider-result').textContent='~'+s.min+' min';
   document.querySelector('#mob-mention .mob-mention-icon').textContent=TD[transport].icon;
@@ -4073,7 +4081,14 @@ function _interleaveByCat(pois){
   return result;
 }
 
-function applyFilter(){renderList();}
+function applyFilter(){
+  renderList();
+  // Changer de filtre alors qu'on est au 3e ou 4e lieu laissait la liste où
+  // elle était : on croyait que rien ne s'était passé. Tous les changements
+  // de filtre passent ici — pastilles, sous-catégories, « Tous », panneau.
+  var lz=document.getElementById('list-zone');
+  if(lz)lz.scrollTop=0;
+}
 
 function mk(cls,txt){var e=document.createElement('div');e.className=cls;if(txt.indexOf('<')!==-1)e.innerHTML=txt;else e.textContent=txt;return e;}
 function selectTous(){activeTuile=null;activeL1=null;pillLevel=0;renderPillsL0();applyFilter();}
@@ -5514,7 +5529,10 @@ function _renderMapPillsL2(key){
     if(cats.length===0)return;
     var el=document.createElement('div');
     el.className='map-fpill'+(_mapSubcat===lbl?' on':'');
-    el.textContent=lbl;
+    // innerHTML et non textContent : les libellés de PL1 portent une icône SVG
+    // depuis le passage aux icônes au trait. textContent imprimait les balises
+    // en toutes lettres dans la rangée de filtres de la carte.
+    el.innerHTML=lbl;
     el.onclick=(function(l){return function(){
       _mapSubcat=(_mapSubcat===l?null:l);
       _renderMapPillsL2(key);
