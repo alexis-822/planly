@@ -5405,11 +5405,19 @@ function _frFromSpecs(specs,dejaDits){
     var noyau=lbl.toLowerCase().replace(/\s*(ok|autoris[ée]e?|possible|admis)\s*$/,'').trim();
     if(noyau&&vus.indexOf(noyau)!==-1)return '';
     if(vus.indexOf(lbl.toLowerCase())!==-1)return '';
-    var ic=/^i-[a-z0-9-]+$/.test(s.icon||'')?s.icon:_icoDepuisMot(lbl);
+    // Une spec SANS icône vient du repli sur les tags de make_quick_specs :
+    // « Aventure », « Sensations », « Parcours acrobatiques », « Patrimoine ».
+    // Ce sont des mots-clés de référencement, pas des faits — ni valeur, ni
+    // précision, rien à dire. Ce sont les mêmes 173 lignes qui portaient les
+    // punaises ce matin, et une liste étiquette/valeur n'a rien à en faire.
+    // Huit fiches n'ont que ça et perdront leur section : mieux vaut une
+    // fiche sans section qu'une fiche remplie de mots vides. La source est
+    // tarie en parallèle dans inject_pois.py.
+    if(!/^i-[a-z0-9-]+$/.test(s.icon||''))return '';
     // Les données marquent « positive » des agréments ordinaires — douches,
     // vélo, terrasse. Le vert y perdait son sens : il ne reste que l'ambre,
     // qui signale une contrainte réelle.
-    return _frRow(ic,lbl,'','',s.cls==='warning'?'warn':'');
+    return _frRow(s.icon,lbl,'','',s.cls==='warning'?'warn':'');
   }).filter(Boolean);
 }
 

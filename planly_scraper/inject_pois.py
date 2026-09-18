@@ -267,10 +267,12 @@ def make_quick_specs(p):
     if acc.get("wheelchair"):
         specs.append({"label": "Acc\u00e8s PMR", "icon": "i-pmr", "cls": "positive"})
 
-    # Fallback: use tags
-    if len(specs) < 2:
-        for t in (p.get("tags") or [])[:4 - len(specs)]:
-            specs.append({"label": t.capitalize(), "icon": "", "cls": ""})
+    # Pas de repli sur les tags : ils produisent des mots-cles de
+    # referencement (« Aventure », « Sensations », « Parcours acrobatiques »,
+    # « Patrimoine ») et non des faits. Sans valeur ni precision, ils n'ont
+    # rien a faire dans une liste etiquette/valeur — c'est ce que portaient
+    # les 173 punaises supprimees le 18 septembre. Mieux vaut une fiche avec
+    # deux faits vrais qu'une fiche avec six mots-cles.
 
     return specs[:4]
 
