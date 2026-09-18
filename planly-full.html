@@ -3558,7 +3558,7 @@ function _mtMealBlock(p,sp){
     +'<div class="pl-list">'
     +opts.map(function(o){return'<div class="fr-row"><div class="b"><div class="n">'+_escHtml(String(o.label||''))+'</div></div><span class="v">'+_plEuro(_plNum(o.price))+'</span></div>';}).join('')
     // pas de formule publiée : on donne au moins la fourchette des plats à la carte
-    +(!opts.length&&dMin!=null?'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">Plats à la carte</div><div class="st-item-detail">du moins cher au plus cher</div></div><div class="mt-price">'+_plEuro(dMin)+(dMax!=null&&dMax!==dMin?'–'+_plEuro(dMax):'')+'</div></div>':'')
+    +(!opts.length&&dMin!=null?'<div class="fr-row"><div class="b"><div class="n">Plats à la carte</div><div class="m">du moins cher au plus cher</div></div><span class="v">'+_plEuro(dMin)+(dMax!=null&&dMax!==dMin?'–'+_plEuro(dMax):'')+'</span></div>':'')
     +(pr.notes?'<div class="st-item-detail" style="padding:2px 2px 0">'+_escHtml(String(pr.notes))+'</div>':'')
     // Une seule fermeture : celle de pl-list. La seconde fermait le pl-block
     // supprimé, et refermait donc bch-body au milieu de la fiche — le
@@ -3575,8 +3575,8 @@ function _mtMarketBlock(sp,subcat){
     +'<div class="pl-block-info"><div class="pl-block-title">Quand y aller</div><div class="pl-block-sub">'+(sv.covered?'Halle couverte':'En plein air')+'</div></div>'
     +(days?'<div class="pl-block-badge">'+_escHtml(days).slice(0,28)+'</div>':'')+'</div>'
     +'<div class="pl-list">'
-    +(sp.hours_text?'<div class="pl-item"><div class="mt-day">Horaires</div><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(sp.hours_text))+'</div></div></div>':'')
-    +(prods.length?'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">Ce qu\'on y trouve</div><div class="st-item-detail">'+_escHtml(prods.map(String).join(' · '))+'</div></div></div>':'')
+    +(sp.hours_text?'<div class="fr-row"><div class="b"><div class="n">Horaires</div></div><span class="v">'+_escHtml(String(sp.hours_text))+'</span></div>':'')
+    +(prods.length?'<div class="fr-row"><div class="b"><div class="n">Ce qu\'on y trouve</div><div class="m">'+_escHtml(prods.map(String).join(' · '))+'</div></div></div>':'')
     +'</div></div>';
 }
 function _mtBookCard(p,sp){
