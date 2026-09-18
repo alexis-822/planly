@@ -1155,6 +1155,11 @@ body{
 /* Section label beach */
 .bch-slbl{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);font-weight:600;color:var(--tx);letter-spacing:-.01em;margin:var(--s6) 0 var(--s4);padding-top:var(--s5);border-top:1px solid var(--line);line-height:var(--lh-t);}
 .bch-body>.bch-slbl:first-child{margin-top:0;padding-top:0;border-top:0;}
+/* Le sous-titre d'une section, comme la maquette : « Panorama de la côte
+   sauvage vendéenne » sous « La vue », « Poste de secours en front de mer »
+   sous « La baignade ». Il précise ce que le titre annonce. */
+.bch-ssub{font-size:var(--t5);color:var(--tx3);line-height:var(--lh);
+  margin:calc(-1 * var(--s3)) 0 var(--s4);}
 
 /* Section labels — ligne décorative + contraste */
 .bs-section-lbl{
@@ -3818,13 +3823,10 @@ function _renderPoiBody(p,mode){
     var bestLbl={lever:'<svg class="ic"><use href="#i-sunrise"/></svg> Lever',journée:'<svg class="ic"><use href="#i-sun"/></svg> Journée',coucher:'<svg class="ic"><use href="#i-sunset"/></svg> Coucher',matin:'<svg class="ic"><use href="#i-sunrise"/></svg> Matin',nuit:'<svg class="ic"><use href="#i-moon"/></svg> Nuit'};
     var bt=sp.best_time?(bestLbl[sp.best_time.toLowerCase()]||sp.best_time):'—';
     var altVal=sp.altitude_m!=null?(sp.altitude_m+' m'):'—';
-    ribbonItems=[
-      {val:altVal,lbl:'Altitude',cls:''},
-      {val:bt,lbl:'Meilleur moment',cls:''},
-      {val:_diffLabel(sp.difficulty),lbl:'Accès',cls:''},
-      {val:distMin+' min',lbl:'Distance',cls:''}
-    ];
-    sectionLabel='Le point de vue';
+    // Altitude, meilleur moment et accès deviennent des lignes de « La vue » :
+    // les laisser dans le bandeau les affichait deux fois.
+    ribbonItems=[];
+    sectionLabel='';
 
     // Orientation label
     var orientLbl={'N':'Nord','NE':'Nord-Est','E':'Est','SE':'Sud-Est','S':'Sud','SO':'Sud-Ouest','O':'Ouest','NO':'Nord-Ouest','360':'360°'};
@@ -3833,41 +3835,32 @@ function _renderPoiBody(p,mode){
     var meteoLbl={beau:'<svg class="ic"><use href="#i-sun"/></svg> Beau temps',vent:'<svg class="ic"><use href="#i-wind"/></svg> Venteux',nuageux:'<svg class="ic"><use href="#i-cloud"/></svg> Nuageux',tempete:'<svg class="ic"><use href="#i-storm"/></svg> Tempête',all:'<svg class="ic"><use href="#i-rainbow"/></svg> Toujours'};
     var meteoVal=sp.ideal_weather?(meteoLbl[sp.ideal_weather]||sp.ideal_weather):'—';
 
-    // Header badge : panoramique ou orientation
-    var pdvBadge=sp.panoramic?'<svg class="ic"><use href="#i-panorama"/></svg> 360°':(sp.orientation?('↗ '+sp.orientation):'');
-    // Sub-header : view_description
+    // Le bloc bleu à en-tête, trois colonnes et pastilles cède la place aux
+    // deux sections de la maquette : « La vue » dit ce qu'on voit et quand,
+    // « Ce qu'il faut savoir » dit comment y accéder et ce qui s'y passe.
+    var pdvVue=[], pdvSavoir=[];
+    if(sp.panoramic)pdvVue.push(_frRow('i-panorama','Vue panoramique','','360°','on'));
+    if(orientVal!=='—')pdvVue.push(_frRow('i-nav','Orientation','',orientVal));
+    if(bt!=='—')pdvVue.push(_frRow('i-sun','Meilleur moment','',bt));
+    if(meteoVal!=='—')pdvVue.push(_frRow('i-cloud','Météo idéale','',meteoVal));
+    if(sp.has_orientation_panel)pdvVue.push(_frRow('i-map','Table d\'orientation','','oui','on'));
+    if(altVal!=='—')pdvVue.push(_frRow('i-cliff','Altitude',sp.terrain_type||'',altVal));
+
+    // « Spectaculaire par gros temps » était un pied de bloc isolé : il devient
+    // le premier point à savoir, avec sa mise en garde.
+    if(sp.storm_interest)pdvSavoir.push(_frRow('i-storm','Spectaculaire par gros temps',
+      'La mer se déchaîne contre les rochers — restez en retrait',''));
+    var pdvDiff=_diffLabel(sp.difficulty);
+    if(pdvDiff&&pdvDiff!=='—')pdvSavoir.push(_frRow('i-walk','Accès',''+pdvDiff,''));
+    if(sp.nb_steps)pdvSavoir.push(_frRow('i-stairs',sp.nb_steps+' marches','Jusqu\'au belvédère',''));
+    if(p.accessibility&&p.accessibility.pmr)pdvSavoir.push(_frRow('i-pmr','Accès PMR','Belvédère de plain-pied',''));
+
     var pdvSub=sp.view_description||'';
-
-    // 3-item info row
-    var pdvInfosHtml='<div class="pdv-infos">'
-      +'<div class="pdv-info-item"><div class="pdv-info-val">'+orientVal+'</div><div class="pdv-info-lbl">Orientation</div></div>'
-      +'<div class="pdv-info-item"><div class="pdv-info-val">'+bt+'</div><div class="pdv-info-lbl">Idéal</div></div>'
-      +'<div class="pdv-info-item"><div class="pdv-info-val">'+meteoVal+'</div><div class="pdv-info-lbl">Météo</div></div>'
-      +'</div>';
-
-    // Storm footer (only if storm_interest=true)
-    var pdvStormHtml=sp.storm_interest?'<div class="pdv-storm"><span class="pdv-storm-icon">⛈</span><span class="pdv-storm-txt">Spectaculaire par temps de tempête ou grand vent</span></div>':'';
-
-    // Pills block
-    var pdvPills=[];
-    if(sp.panoramic)pdvPills.push('<svg class="ic"><use href="#i-panorama"/></svg> Vue panoramique');
-    if(sp.has_orientation_panel)pdvPills.push('<svg class="ic"><use href="#i-map"/></svg> Table d\'orientation');
-    if(sp.nb_steps)pdvPills.push('<svg class="ic"><use href="#i-stairs"/></svg> '+sp.nb_steps+' marches');
-    if(p.accessibility&&p.accessibility.pmr)pdvPills.push('<svg class="ic"><use href="#i-pmr"/></svg> Accessible PMR');
-    var pdvPillsHtml=pdvPills.length?'<div class="pdv-pills">'+pdvPills.map(function(t){return'<span class="pdv-pill">'+t+'</span>';}).join('')+'</div>':'';
-
-    specialBlock='<div class="pdv-block">'
-      +'<div class="pdv-header">'
-      +'<div class="pdv-header-icon">📸</div>'
-      +'<div class="pdv-header-info"><div class="pdv-header-title">Point de vue</div>'+(pdvSub?'<div class="pdv-header-sub">'+pdvSub+'</div>':'')+'</div>'
-      +(pdvBadge?'<div class="pdv-header-badge">'+pdvBadge+'</div>':'')
-      +'</div>'
-      +pdvInfosHtml
-      +pdvStormHtml
-      +pdvPillsHtml
-      +'</div>';
-
-    pillsHtml='';
+    specialBlock='';
+    pillsHtml=(pdvVue.length?'<div class="bch-slbl">La vue</div>'
+        +(pdvSub?'<div class="bch-ssub">'+_escHtml(pdvSub)+'</div>':'')
+        +_frRows(pdvVue):'')
+      +(pdvSavoir.length?'<div class="bch-slbl">Ce qu\'il faut savoir</div>'+_frRows(pdvSavoir):'');
 
   }else if(MT_SUBCATS.indexOf(sub)!==-1){
     var mv=sp.services||{},mPr=sp.pricing||{},mAvg=_plNum(mPr.avg_price);
