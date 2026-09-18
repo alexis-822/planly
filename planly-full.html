@@ -571,6 +571,31 @@ body{
 .cmp-sheet-bd{flex:1;overflow-y:auto;padding:var(--s5) var(--s5) calc(var(--s6) + env(safe-area-inset-bottom,0px));
   scrollbar-width:none;}
 .cmp-sheet-bd::-webkit-scrollbar{display:none;}
+
+/* ══ TABLE DES MARÉES ══ — les hauteurs et coefficients existaient dans les
+   données, étaient calculés, puis jetés sans jamais atteindre l'écran.
+   Quatre colonnes par jour : ce qui compte, c'est de comparer les horaires
+   d'un coup d'œil pour choisir quand descendre sur l'estran. */
+.tide-day{margin-bottom:var(--s6);}
+.tide-day-hd{display:flex;align-items:baseline;gap:var(--s3);font-family:'Fraunces',Georgia,serif;
+  font-size:var(--t3);font-weight:600;color:var(--tx);margin-bottom:var(--s4);line-height:var(--lh-t);}
+.tide-coeff{margin-left:auto;font-family:'DM Sans',sans-serif;font-size:var(--t6);font-weight:700;
+  color:var(--brand-d);background:var(--brand-l);border-radius:var(--r3);padding:3px 10px;
+  letter-spacing:0;line-height:var(--lh);}
+.tide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);}
+.tide-cell{padding:var(--s3) var(--s2);border-radius:var(--r1);background:var(--bg-d);text-align:center;}
+.tide-cell.pm{background:var(--brand-l);}
+.tide-k{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--tx3);line-height:1.35;}
+.tide-cell.pm .tide-k{color:var(--brand-d);}
+.tide-h{font-size:var(--t4);font-weight:700;color:var(--tx);margin-top:var(--s1);
+  font-variant-numeric:tabular-nums;line-height:var(--lh-t);}
+.tide-m{font-size:var(--t6);color:var(--tx3);margin-top:2px;font-variant-numeric:tabular-nums;
+  line-height:var(--lh);}
+.tide-min{font-weight:400;color:var(--tx3);}
+.tide-src{font-size:var(--t6);color:var(--tx3);line-height:var(--lh);margin-top:var(--s5);
+  padding-top:var(--s4);border-top:1px solid var(--line-2);}
+@media (max-width:360px){.tide-grid{grid-template-columns:repeat(2,1fr);}}
 .act-clear-btn{font-size:var(--t5);color:var(--bad);font-weight:500;cursor:pointer;padding:4px 8px;border-radius:8px;border:1px solid rgba(239,68,68,.3);background:rgba(239,68,68,.07);-webkit-tap-highlight-color:transparent;line-height:var(--lh);}
 .act-view-toggle{display:flex;background:var(--bg-d);border-radius:20px;padding:3px;gap:2px;}
 .act-view-btn{padding:5px 14px;border-radius:16px;font-size:var(--t5);font-weight:500;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;color:var(--txm);background:transparent;transition:all .18s;-webkit-tap-highlight-color:transparent;white-space:nowrap;line-height:var(--lh);}
@@ -1864,6 +1889,28 @@ body{
   </div>
 
   <!-- FEUILLE DU PLAN — ouverte depuis l'accueil du camping -->
+  <!-- FEUILLE MARÉES — les hauteurs et coefficients étaient calculés puis jetés -->
+  <div class="cmp-sheet" id="tide-sheet">
+    <div class="cmp-sheet-hd">
+      <h3 id="tide-sheet-t">Les marées</h3>
+      <div class="cmp-sheet-x" onclick="_closeTideSheet()" role="button" aria-label="Fermer">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </div>
+    </div>
+    <div class="cmp-sheet-bd" id="tide-sheet-bd"></div>
+  </div>
+
+  <!-- FEUILLE MÉTÉO — 7 jours, pour choisir son jour de sortie -->
+  <div class="cmp-sheet" id="meteo-sheet">
+    <div class="cmp-sheet-hd">
+      <h3>La météo</h3>
+      <div class="cmp-sheet-x" onclick="_closeMeteoSheet()" role="button" aria-label="Fermer">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </div>
+    </div>
+    <div class="cmp-sheet-bd" id="meteo-sheet-bd"></div>
+  </div>
+
   <div class="cmp-sheet" id="cmp-plan-sheet">
     <div class="cmp-sheet-hd">
       <h3>Le plan du camping</h3>
@@ -2615,6 +2662,8 @@ function fetchMarineData(p,inst){
 var _MAREE_PORT={'Brétignolles-sur-Mer':124};
 function _getPort(commune){return _MAREE_PORT[commune]||125;}
 // Tides chargées depuis tides.js (généré par fetch_tides.py)
+// Tous les jours disponibles, par port — alimenté par _tideCache juste après.
+var _tideDays={};
 var _tideCache=(function(){
   var cache={};
   if(typeof TIDES_DATA!=='undefined'){
@@ -2629,6 +2678,10 @@ var _tideCache=(function(){
         // en les présentant comme celles du jour est pire que de ne rien montrer.
         // Si le fichier est périmé, le bloc marée ne s'affiche pas.
         cache[parseInt(id)]=d.days[todayStr]||[];
+        // Les jours suivants sont gardés à part : la feuille Marées les propose
+        // pour qu'on puisse choisir SON jour de sortie, ce que le seul jour
+        // courant ne permettait pas.
+        _tideDays[parseInt(id)]=d.days;
       } else {
         cache[parseInt(id)]=d.tides&&d.tides.length?d.tides:[];
       }
@@ -2804,7 +2857,119 @@ function _dangerScore(H,P,W){
 }
 // Verdict de baignade selon le score de danger : 0-2 sur, 3-5 prudence, 6+ deconseille
 
+// ══ FEUILLES MARÉES ET MÉTÉO ══
+// Les deux boutons de la fiche plage ne menaient nulle part : « Marées »
+// pointait sur une ancre #marees inexistante, et il n'y avait pas de météo du
+// tout. Or l'app calculait déjà hauteurs et coefficients de marée — puis les
+// jetait — et téléchargeait déjà le vent chez open-meteo sans rien afficher.
+var _plageCourante=null;   // le lieu ouvert, pour retrouver son port
+var _meteoRecue=null;      // la réponse open-meteo, gardée pour la feuille
+
+// Les codes OMM sont des nombres ; personne ne lit « 61 ».
+function _cielMot(c){
+  if(c===0)return['Grand soleil','i-sun'];
+  if(c<=2)return['Quelques nuages','i-sun'];
+  if(c===3)return['Couvert','i-cloud'];
+  if(c<=48)return['Brouillard','i-cloud'];
+  if(c<=55)return['Bruine','i-rain'];
+  if(c<=65)return['Pluie','i-rain'];
+  if(c<=77)return['Neige','i-rain'];
+  if(c<=82)return['Averses','i-rain'];
+  return['Orage','i-storm'];
+}
+function _jourMot(iso,i){
+  if(i===0)return"Aujourd'hui";
+  var J=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  var M=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+  var d=new Date(iso+'T12:00:00');
+  if(i===1)return'Demain';
+  return J[d.getDay()].charAt(0).toUpperCase()+J[d.getDay()].slice(1)+' '+d.getDate()+' '+M[d.getMonth()];
+}
+
+function _openTideSheet(){
+  var bd=document.getElementById('tide-sheet-bd');
+  if(!bd)return;
+  var port=_plageCourante?_getPort(_plageCourante.commune):125;
+  var jours=_tideDays[port]||{};
+  var dates=Object.keys(jours).sort().filter(function(d){
+    var n=new Date();
+    var auj=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');
+    return d>=auj;
+  }).slice(0,7);
+  if(!dates.length){
+    bd.innerHTML='<div class="fr-rows"><div class="fr-row"><div class="b">'
+      +'<div class="n">Horaires indisponibles</div>'
+      +'<div class="m">Les marées publiées ne couvrent plus la période. Elles sont relevées chaque semaine.</div>'
+      +'</div></div></div>';
+  } else {
+    bd.innerHTML=dates.map(function(d,i){
+      var t=jours[d]||[];
+      // Le coefficient n'est publié que sur les pleines mers : on le remonte au
+      // niveau du jour, c'est ce qui intéresse — au-delà de 70, ça marne fort.
+      var co=t.map(function(x){return x.coeff;}).filter(function(x){return x!=null;});
+      var coMax=co.length?Math.max.apply(null,co):null;
+      return '<div class="tide-day">'
+        +'<div class="tide-day-hd">'+_jourMot(d,i)
+        +(coMax?'<span class="tide-coeff">coef. '+coMax+'</span>':'')+'</div>'
+        +'<div class="tide-grid">'+t.map(function(x){
+          return '<div class="tide-cell'+(x.type==='PM'?' pm':'')+'">'
+            +'<div class="tide-k">'+(x.type==='PM'?'Pleine mer':'Basse mer')+'</div>'
+            +'<div class="tide-h">'+(x.time||'—')+'</div>'
+            +'<div class="tide-m">'+(x.height!=null?String(x.height).replace('.',',')+' m':'')+'</div>'
+            +'</div>';
+        }).join('')+'</div></div>';
+    }).join('')
+    +'<div class="tide-src">Horaires du port de '+(port===124?'Brétignolles-sur-Mer':'Les Sables-d’Olonne')
+    +'. Un coefficient au-delà de 70 découvre largement l’estran.</div>';
+  }
+  document.getElementById('tide-sheet').classList.add('open');
+  document.getElementById('overlay').classList.add('open');
+}
+function _closeTideSheet(){
+  document.getElementById('tide-sheet').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+}
+
+function _openMeteoSheet(){
+  var bd=document.getElementById('meteo-sheet-bd');
+  if(!bd)return;
+  var d=_meteoRecue&&_meteoRecue.daily;
+  if(!d||!d.time){
+    bd.innerHTML='<div class="fr-rows"><div class="fr-row"><div class="b">'
+      +'<div class="n">Météo indisponible</div>'
+      +'<div class="m">Les prévisions n’ont pas pu être récupérées. Réessaie dans un instant.</div>'
+      +'</div></div></div>';
+  } else {
+    var port=_plageCourante?_getPort(_plageCourante.commune):125;
+    var jours=_tideDays[port]||{};
+    bd.innerHTML='<div class="fr-rows">'+d.time.map(function(iso,i){
+      var ciel=_cielMot(d.weather_code[i]);
+      var pluie=d.precipitation_probability_max?d.precipitation_probability_max[i]:null;
+      var tmax=Math.round(d.temperature_2m_max[i]), tmin=Math.round(d.temperature_2m_min[i]);
+      // Les jours sans marée publiée sont signalés : mieux vaut le dire que
+      // laisser croire que l'information manque par hasard.
+      var marees=jours[iso]&&jours[iso].length;
+      var precision=[(pluie!=null?pluie+' % de pluie':''),
+                     (marees?'':'marées non publiées')].filter(Boolean).join(' · ');
+      return '<div class="fr-row">'
+        +'<svg class="ic"><use href="#'+ciel[1]+'"/></svg>'
+        +'<div class="b"><div class="n">'+_jourMot(iso,i)+'</div>'
+        +'<div class="m">'+ciel[0]+(precision?' · '+precision:'')+'</div></div>'
+        +'<span class="v">'+tmax+'°<span class="tide-min"> / '+tmin+'°</span></span>'
+        +'</div>';
+    }).join('')+'</div>'
+    +'<div class="tide-src">Prévisions open-meteo, mises à jour à chaque ouverture de la fiche.</div>';
+  }
+  document.getElementById('meteo-sheet').classList.add('open');
+  document.getElementById('overlay').classList.add('open');
+}
+function _closeMeteoSheet(){
+  document.getElementById('meteo-sheet').classList.remove('open');
+  document.getElementById('overlay').classList.remove('open');
+}
+
 function _renderBeachMarine(marineD,windD,tides){
+  _meteoRecue=windD;
   var el=document.getElementById('bch-marine-wrap');
   if(!el)return;
   var mt=marineD&&marineD.hourly;
@@ -2908,14 +3073,21 @@ function _renderBeachMarine(marineD,windD,tides){
 }
 
 function fetchBeachData(p){
+  // Retenu pour les feuilles Marées et Météo, qui s'ouvrent après coup.
+  _plageCourante=p;
   var portId=_getPort(p.commune);
   var lat=(p.location&&p.location.lat)||46.4952;
   var lng=(p.location&&p.location.lng)||-1.7888;
   var url='https://marine-api.open-meteo.com/v1/marine?latitude='+lat+'&longitude='+lng
     +'&hourly=wave_height,wave_period,sea_surface_temperature&timezone=Europe%2FParis&forecast_days=2'
     +'&models=best_match';
+  // La même API donne la météo, pas seulement le vent : température, code ciel,
+  // probabilité de pluie, sur 7 jours. On la demande une fois et on s'en sert
+  // deux fois — pour le verdict de baignade et pour la feuille Météo.
   var windUrl='https://api.open-meteo.com/v1/forecast?latitude='+lat+'&longitude='+lng
-    +'&hourly=wind_speed_10m&timezone=Europe%2FParis&forecast_days=2';
+    +'&hourly=wind_speed_10m,temperature_2m,weather_code,precipitation_probability'
+    +'&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset'
+    +'&timezone=Europe%2FParis&forecast_days=7';
   Promise.all([
     fetch(url).then(function(r){return r.json();}).catch(function(){return null;}),
     fetch(windUrl).then(function(r){return r.json();}).catch(function(){return null;})
@@ -3248,7 +3420,15 @@ function _ficheActions(p,sp){
   if(pk.lat)a.push(['i-nav','Itinéraire','https://maps.google.com/?q='+pk.lat+','+pk.lng,true]);
   else if(p.location&&p.location.lat)a.push(['i-nav','Itinéraire','https://maps.google.com/?q='+p.location.lat+','+p.location.lng,true]);
   if(book)a.push(['i-cal','Réserver',book,false]);
-  if(p.subcategory==='Plages & Côte')a.push(['i-tide','Marées','#marees',false]);
+  // Sur une plage, la marée et la météo décident de l'heure à laquelle on part.
+  // L'avis Google, lui, se consulte une fois — il reste accessible plus bas,
+  // au bloc « Voir sur Google ». Les deux boutons ouvrent une vraie feuille :
+  // « #marees » ne menait nulle part, une commande qui n'ouvre rien est pire
+  // qu'une commande absente.
+  if(p.subcategory==='Plages & Côte'){
+    a.push(['i-tide','Marées','javascript:void _openTideSheet()',false]);
+    a.push(['i-sun','Météo','javascript:void _openMeteoSheet()',false]);
+  }
   if(src)a.push(['i-globe','Site',src,false]);
   if(p.googleUrl)a.push(['i-star','Avis',p.googleUrl,false]);
   return a.slice(0,3);
