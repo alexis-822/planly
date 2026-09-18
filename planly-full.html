@@ -3459,6 +3459,11 @@ function _ficheHeader(p,sp,ribbonItems,mode){
   if(p.reviewsCount)m.push(p.reviewsCount+' avis');
   if(p.subcategory)m.push(_escHtml(p.subcategory));
   if(p.distance&&p.distance.km)m.push(String(p.distance.km).replace('.',',')+' km');
+  // Le temps de trajet vivait dans le bandeau à 4 colonnes, supprimé parce
+  // qu'il répétait les lignes de fait. Il rejoint la ligne de méta, à côté
+  // des kilomètres : c'est sa place, et rien n'est perdu.
+  var _tr=(p.distance&&p.distance.min&&p.distance.min[mode]);
+  if(_tr)m.push(_tr+' min');
   h+='<div class="bch-meta">'+m.join('<i>·</i>')+'</div>';
   var acts=_ficheActions(p,sp);
   if(acts.length)h+='<div class="bch-acts">'+acts.map(function(a,i){
@@ -3471,12 +3476,26 @@ function _ficheHeader(p,sp,ribbonItems,mode){
       +(a[2].charAt(0)==='#'?'':' target="_blank" rel="noopener"')+'>'
       +'<svg class="ic"><use href="#'+a[0]+'"/></svg>'+a[1]+'</a>';
   }).join('')+'</div>';
-  var reps=(ribbonItems||[]).filter(function(r){return r&&r.val&&r.val!=='—';});
-  if(reps.length)h+='<div class="bch-reps">'+reps.map(function(r){
-    return'<div class="bch-rep"><div class="bch-rep-l">'+r.lbl+'</div>'
-      +'<div class="bch-rep-v'+(r.cls||'')+'">'+r.val+'</div></div>';
-  }).join('')+'</div>';
+  // Le bandeau à 4 colonnes n'est plus dessiné ici : il répétait ce que les
+  // lignes de fait disent mieux — sur une plage, « SURVEILL. » et « TYPE »
+  // figuraient deux fois. Ses valeurs deviennent des lignes, via _repsEnLignes.
   return h;
+}
+
+// Convertit ce qui restait du bandeau en lignes de fait, à poser en tête du
+// bloc de la typologie. La distance est écartée : elle est déjà dans la méta.
+var _REPS_ICONES={'Affluence':'i-group','Difficulté':'i-dumbbell','Sentiers':'i-map',
+  'Superficie':'i-tree','Sur place':'i-clock','Pluie':'i-umbrella','Âge':'i-baby',
+  'Budget':'i-card','Ferme à':'i-clock','Salles':'i-film','Restaurant':'i-fork',
+  'Ambiance':'i-cocktail','Longueur':'i-walk','Type':'i-loop','Altitude':'i-cliff',
+  'Accès':'i-walk','Meilleur moment':'i-sun'};
+function _repsEnLignes(ribbonItems){
+  return (ribbonItems||[]).filter(function(r){
+    return r&&r.val&&r.val!=='—'&&r.lbl!=='Distance';
+  }).map(function(r){
+    var cls=/\bgr\b/.test(r.cls||'')?'on':/\brd\b/.test(r.cls||'')?'warn':'';
+    return _frRow(_REPS_ICONES[r.lbl]||'','' +r.lbl,'',r.val,cls);
+  });
 }
 function _renderPoiBody(p,mode){
   var body=document.querySelector('.bs-poi-body');
@@ -3501,11 +3520,11 @@ function _renderPoiBody(p,mode){
     var bchSupervised=!!bch.supervised;
     var survDisplay=bchSupervised?(bch.period||'Oui'):'Non';
     var bchWave=(bch.wave_profile||'').toLowerCase();
+    // Surveillance et type de plage sont dits par les lignes de fait juste
+    // en dessous : les garder ici les affichait deux fois sur le même écran.
+    // Seule l'affluence est propre au bandeau, elle devient une ligne.
     ribbonItems=[
-      {val:survDisplay,lbl:'Surveill.',cls:bchSupervised?' bl':''},
-      {val:affLabel,lbl:'Affluence',cls:affCls?' '+affCls:''},
-      {val:bchType,lbl:'Type',cls:''},
-      {val:distMin+' min',lbl:'Distance',cls:''}
+      {val:affLabel,lbl:'Affluence',cls:affCls?' '+affCls:''}
     ];
     sectionLabel='La plage';
     specialBlock='<div id="bch-marine-wrap"><div class="bch-marine" style="text-align:center;font-size:11px;color:#185FA5;padding:16px">⏳ Chargement données marines...</div></div>';
@@ -3778,6 +3797,15 @@ function _renderPoiBody(p,mode){
   // En-tête : état, repères, actions — puis les chiffres de la typologie.
   // Rien n'est perdu du ruban : ses quatre valeurs deviennent la rangée de repères.
   var ribbonHtml=_ficheHeader(p,sp,ribbonItems,mode);
+  // Ce qui reste du bandeau ouvre le bloc de la typologie, en lignes de fait.
+  // Si la typologie n'a pas encore de lignes, on les crée pour ne rien perdre.
+  var _repsRows=_repsEnLignes(ribbonItems);
+  if(_repsRows.length){
+    if(pillsHtml.indexOf('fr-rows')!==-1)
+      pillsHtml=pillsHtml.replace('<div class="fr-rows">','<div class="fr-rows">'+_repsRows.join(''));
+    else
+      pillsHtml=_frRows(_repsRows)+pillsHtml;
+  }
 
   // Parking HTML
   var pkLat=pk.lat||0,pkLng=pk.lng||0,pkNom=pk.nom||'Parking';
