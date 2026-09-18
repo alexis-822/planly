@@ -1516,15 +1516,18 @@ body{
   <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16v2M20 16v2"/><path d="M3 16v-3.5L5 7h14l2 5.5V16z"/><circle cx="7.5" cy="16" r="1.5"/><circle cx="16.5" cy="16" r="1.5"/></symbol>
   <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17l4-9h4l4 9M9 8h5M12 17h-2.5"/></symbol>
   <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="13" cy="4" r="1.8"/><path d="M12 8l-2 5 3 2 1 6M10 13l-3 2M14 10l3 2"/></symbol>
-  <!-- Une tente et non un triangle d'alerte : le tracé précédent se lisait
-       comme le panneau « danger », y compris devant le nom du camping. -->
-  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 3L3 20h18z"/><path d="M12 3v17"/><path d="M12 20l-3.5-6.5M12 20l3.5-6.5"/><path d="M1.5 20h21"/></symbol>
+  <!-- Une tente et non un panneau routier. Ce qui la distingue d'un triangle
+       « danger » : les deux pans DÉBORDENT du sol et se croisent au sommet,
+       comme des mâts. Un triangle fermé, même orné d'une porte, reste un
+       panneau — deux tentatives l'ont prouvé. -->
+  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M9 2.5L3 20.5"/><path d="M15 2.5l6 18"/><path d="M1.5 20.5h21"/><path d="M8 2.5l7 18M16 2.5l-7 18"/></symbol>
   <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
   <symbol id="i-family" viewBox="0 0 24 24"><circle cx="7" cy="6" r="2.4"/><circle cx="17" cy="6" r="2.4"/><path d="M3 19v-3a4 4 0 0 1 8 0v3M13 19v-3a4 4 0 0 1 8 0v3"/></symbol>
   <symbol id="i-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 20v-2.5A4.5 4.5 0 0 1 7.5 13h3a4.5 4.5 0 0 1 4.5 4.5V20"/><path d="M16 11a3 3 0 1 0-1.5-5.6M18 20v-2.5a4.5 4.5 0 0 0-1.3-3.2"/></symbol>
-  <!-- Chien, pas chat : les oreilles tombent le long de la tête et le museau
-       avance. L'ancien tracé montait deux oreilles pointues sur une face ronde. -->
-  <symbol id="i-dog" viewBox="0 0 24 24"><path d="M5.5 4.5v6"/><path d="M5.5 4.5c2 0 3 1.5 3 3.5"/><path d="M18.5 4.5v6"/><path d="M18.5 4.5c-2 0-3 1.5-3 3.5"/><path d="M8.5 8h7a3 3 0 0 1 3 3v2a6.5 6.5 0 0 1-13 0v-2a3 3 0 0 1 3-3z"/><path d="M9.5 13h.01M14.5 13h.01"/><path d="M12 16.5v1M10.5 18.5c.5.6 2.5.6 3 0"/></symbol>
+  <!-- Une empreinte de patte, pas un chien. Trois tentatives de silhouette ont
+       donné un chat puis une table : à 18 px, un animal entier n'a pas la place
+       de se lire. L'empreinte est lisible en petit et ne prête à aucune confusion. -->
+  <symbol id="i-dog" viewBox="0 0 24 24"><ellipse cx="6" cy="9" rx="2" ry="2.6"/><ellipse cx="10.5" cy="6" rx="2" ry="2.7"/><ellipse cx="15.5" cy="6" rx="2" ry="2.7"/><ellipse cx="20" cy="9" rx="2" ry="2.6"/><path d="M13 12c2.6 0 5 2 5 4.4 0 2-1.6 3.1-3.4 3.1-.9 0-1.2-.4-1.6-.4s-.7.4-1.6.4c-1.8 0-3.4-1.1-3.4-3.1C8 14 10.4 12 13 12z"/></symbol>
   <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></symbol>
   <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol>
@@ -1763,12 +1766,12 @@ body{
     <div class="pills-row">
       <div class="pills-scroll" id="pills-scroll">
         <div class="pill tous" onclick="selectTous()">Tous</div>
-        <div class="pill" onclick="drillDown('air')">🌿 Nature</div>
-        <div class="pill" onclick="drillDown('sport')">🏃 Sport</div>
-        <div class="pill" onclick="drillDown('patri')">🏛️ Patrimoine</div>
-        <div class="pill" onclick="drillDown('vivre')">🍽️ Art de vivre</div>
-        <div class="pill" onclick="drillDown('parcs')">🎡 Loisirs</div>
-        <div class="pill" onclick="drillDown('sorties')">🎬 Sorties</div>
+        <div class="pill" onclick="drillDown('air')"><svg class="ic sm"><use href="#i-tree"/></svg> Nature</div>
+        <div class="pill" onclick="drillDown('sport')"><svg class="ic sm"><use href="#i-walk"/></svg> Sport</div>
+        <div class="pill" onclick="drillDown('patri')"><svg class="ic sm"><use href="#i-castle"/></svg> Patrimoine</div>
+        <div class="pill" onclick="drillDown('vivre')"><svg class="ic sm"><use href="#i-fork"/></svg> Art de vivre</div>
+        <div class="pill" onclick="drillDown('parcs')"><svg class="ic sm"><use href="#i-play"/></svg> Loisirs</div>
+        <div class="pill" onclick="drillDown('sorties')"><svg class="ic sm"><use href="#i-film"/></svg> Sorties</div>
       </div>
     </div>
     <div class="header-dots" id="header-dots"></div>
@@ -1877,10 +1880,10 @@ body{
       <div class="f-section">
         <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><line x1="7" y1="7" x2="13" y2="13"/><line x1="13" y1="7" x2="7" y2="13"/></svg></div>Je veux éviter…</div>
         <div class="excl-list">
-          <div class="excl-row" onclick="toggleExcl(this,0)"><div class="excl-left"><div class="excl-icon">🧗</div><div><div class="excl-main">Vertige / Hauteur</div><div class="excl-sub">Falaises, phares, tours</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
-          <div class="excl-row" onclick="toggleExcl(this,1)"><div class="excl-left"><div class="excl-icon">👥</div><div><div class="excl-main">Foule</div><div class="excl-sub">Sites très touristiques</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
-          <div class="excl-row" onclick="toggleExcl(this,2)"><div class="excl-left"><div class="excl-icon">📦</div><div><div class="excl-main">Espaces clos</div><div class="excl-sub">Grottes, souterrains</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
-          <div class="excl-row" onclick="toggleExcl(this,3)"><div class="excl-left"><div class="excl-icon">🐾</div><div><div class="excl-main">Animaux en captivité</div><div class="excl-sub">Zoos, aquariums</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
+          <div class="excl-row" onclick="toggleExcl(this,0)"><div class="excl-left"><div class="excl-icon"><svg class="ic"><use href="#i-cliff"/></svg></div><div><div class="excl-main">Vertige / Hauteur</div><div class="excl-sub">Falaises, phares, tours</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
+          <div class="excl-row" onclick="toggleExcl(this,1)"><div class="excl-left"><div class="excl-icon"><svg class="ic"><use href="#i-group"/></svg></div><div><div class="excl-main">Foule</div><div class="excl-sub">Sites très touristiques</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
+          <div class="excl-row" onclick="toggleExcl(this,2)"><div class="excl-left"><div class="excl-icon"><svg class="ic"><use href="#i-ban"/></svg></div><div><div class="excl-main">Espaces clos</div><div class="excl-sub">Grottes, souterrains</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
+          <div class="excl-row" onclick="toggleExcl(this,3)"><div class="excl-left"><div class="excl-icon"><svg class="ic"><use href="#i-lion"/></svg></div><div><div class="excl-main">Animaux en captivité</div><div class="excl-sub">Zoos, aquariums</div></div></div><div class="excl-tog"><div class="excl-tog-thumb"></div></div></div>
         </div>
         <div class="excl-summary" id="excl-summary"></div>
       </div>
@@ -1888,8 +1891,8 @@ body{
       <div class="f-section">
         <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 1l7 4v6a8 8 0 01-4 7l-4 2-4-2a8 8 0 01-4-7V5l7-4z"/><line x1="7" y1="10" x2="13" y2="10"/></svg></div>Quel type de lieu ?</div>
         <div class="noto-grid">
-          <div class="noto-card" id="noto-inco" onclick="toggleNoto('inco')"><div class="noto-icon">⭐</div><div class="noto-lbl">Incontournables</div><div class="noto-sub">Les classiques</div></div>
-          <div class="noto-card" id="noto-pepite" onclick="toggleNoto('pepite')"><div class="noto-icon">🔍</div><div class="noto-lbl">Pépites</div><div class="noto-sub">Lieux secrets</div></div>
+          <div class="noto-card" id="noto-inco" onclick="toggleNoto('inco')"><div class="noto-icon"><svg class="ic lg"><use href="#i-star"/></svg></div><div class="noto-lbl">Incontournables</div><div class="noto-sub">Les classiques</div></div>
+          <div class="noto-card" id="noto-pepite" onclick="toggleNoto('pepite')"><div class="noto-icon"><svg class="ic lg"><use href="#i-gem"/></svg></div><div class="noto-lbl">Pépites</div><div class="noto-sub">Lieux secrets</div></div>
         </div>
       </div>
       <div class="f-divider"></div>
@@ -2769,7 +2772,7 @@ function _dangerScore(H,P,W){
   if(W>40)score+=1;
   return score;
 }
-// Verdict : 0-2 ✅ · 3-5 <svg class="ic"><use href="#i-alert"/></svg> · 6+ ❌
+// Verdict de baignade selon le score de danger : 0-2 sur, 3-5 prudence, 6+ deconseille
 
 function _renderBeachMarine(marineD,windD,tides){
   var el=document.getElementById('bch-marine-wrap');
@@ -2824,22 +2827,22 @@ function _renderBeachMarine(marineD,windD,tides){
   var bchSupervised=!!(window._currentBeach&&window._currentBeach.supervised);
   var survSuffix=bchSupervised?' · Surveillée':'';
   if(score<=2){
-    verdictBg='#EAF3DE';verdictIcon='✅';verdictColor='#27500A';
+    verdictBg='#EAF3DE';verdictIcon='<svg class="ic"><use href="#i-check"/></svg>';verdictColor='#27500A';
     verdictTxt='Baignade idéale';
     verdictSub='Mer calme'+survSuffix+', idéale en famille';
   } else if(score<=5){
-    verdictBg='#FAEEDA';verdictIcon='⚠️';verdictColor='#633806';
+    verdictBg='#FAEEDA';verdictIcon='<svg class="ic"><use href="#i-alert"/></svg>';verdictColor='#633806';
     verdictTxt='Baignade avec prudence';
     verdictSub='Vagues présentes · Surveiller les enfants';
   } else {
-    verdictBg='#FCEBEB';verdictIcon='❌';verdictColor='#791F1F';
+    verdictBg='#FCEBEB';verdictIcon='<svg class="ic"><use href="#i-ban"/></svg>';verdictColor='#791F1F';
     verdictTxt='Baignade déconseillée';
     verdictSub='Forts courants possibles';
   }
   el.innerHTML='<div class="bch-marine">'
     +'<div class="bch-marine-header">'
       +'<div class="bch-marine-header-left">'
-        +'<div class="bch-marine-header-icon">🌊</div>'
+        +'<div class="bch-marine-header-icon"><svg class="ic lg"><use href="#i-wave"/></svg></div>'
         +'<div>'
           +'<div class="bch-marine-header-main">Marée '+direction+' '+arrow+'</div>'
           +'<div class="bch-marine-header-sub">'+merLabel+' · '+wavesLabel+'</div>'
