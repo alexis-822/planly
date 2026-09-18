@@ -16,3 +16,4 @@ __pycache__/
 
 # Claude
 .claude/
+node_modules/
