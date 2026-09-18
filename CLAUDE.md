@@ -260,6 +260,72 @@ consommes) n'est pas applique. La barre de prix epinglee (`.bs-price-pin`, CSS
 present, aucun rendu) reste a faire. Un bloc de fiche mort (~250 lignes de CSS
 `bs-*` + `_renderTypeBlock` jamais appele) n'est pas encore supprime.
 
+### 2026-09-18 (suite) — La fiche rejoint la maquette
+
+**La pastille cede la place a la LIGNE, sur les SEPT typologies.** Plus une
+seule `bch-pill` dans le fichier, contre une trentaine le matin. Motif
+`.fr-row` / `_frRow()` / `_frRows()` declare au niveau du fichier. Une pastille
+dit « il y a des douches » ; une ligne dit « Douches ······ sur place ».
+
+**Le bandeau a 4 colonnes est supprime.** Il repetait les lignes : sur une
+plage, « SURVEILL. » et « TYPE » figuraient deux fois. Ses valeurs propres
+(affluence, superficie, age, budget, fermeture, difficulte) deviennent des
+lignes via `_repsEnLignes()`, le temps de trajet rejoint la ligne de meta a
+cote des kilometres. Les maquettes n'ont pas de bandeau.
+
+**Deux sections sur la fiche plage**, comme la maquette : « La baignade » (si
+l'on peut se baigner et quand) et « Ce qu'il faut savoir » (ce qu'on trouve sur
+place). Cette seconde prend la forme titre gras + precision dessous, SANS
+valeur a droite. `supervised_hours` contenait « 10h30-19h en juillet-aout,
+14h-18h30 en juin » dans un seul champ, ecrase en une ligne : trois lignes
+desormais, plus la saison surveillee.
+
+**Le tableau des marees entre dans la fiche**, sous la jauge de temperature :
+4 echeances, heure + hauteur + coefficient. Ces valeurs etaient calculees
+depuis toujours puis jetees. Tient sur 320, 360 et 390 px sans debordement
+(mesure).
+
+**Marees et meteo : deux boutons morts deviennent vivants.** `#marees` ne
+menait nulle part. « Avis » cede sa place a « Meteo » sur les plages (l'avis
+reste accessible plus bas). Feuille marees : un jour a la fois, coefficient
+sous la pleine mer, flèches + balayage + points (`_tideGo`, `_tideMaj`,
+`_tideDates`). Feuille meteo : 7 jours, **matin et apres-midi separement**.
+
+**Le code meteo dominant du jour ecrasait la matinee.** Aux Sables le
+18 septembre : degage jusqu'a 11h, couvert ensuite — l'app affichait « Couvert »
+tout court. `_cielTranche()` lit desormais les donnees HORAIRES (deja
+telechargees) par demi-journee. `_cielMot()` passe de 5 a 11 conditions ;
+i-cloud-sun, i-fog, i-snow ajoutes au sprite.
+
+**Le Conseil Planly etait descendu trop bas** : j'avais remonte tout le bloc
+marine avant lui. Il reprend sa place sous les commandes.
+
+**Trois bugs signales par l'utilisateur, tous reels** : `class="ic"` imprime en
+toutes lettres dans la vue carte (un `textContent` recevant un libelle PL1
+porteur de SVG) ; le changement de filtre ne remontait pas la liste
+(`applyFilter` remet `list-zone.scrollTop`) ; deux icones de bloc tracees en
+`stroke="#fff"` en dur, invisibles depuis la suppression de leur bandeau colore.
+
+**Un bouton d'action n'est pas un lien.** `href="javascript:…"` etait happe par
+l'intercepteur global de liens (pose pour l'app installee sur l'ecran
+d'accueil). Prefixe `js:` → rendu en `<button>`. Lecon de methode : mes tests
+appelaient `_openTideSheet()` en direct au lieu de CLIQUER — le mecanisme
+marchait, le chemin reel non.
+
+**Contrastes** : `--txl` pesait 2,25:1 (33 usages) → 3,4:1 ; `--tx3` → 4,1:1.
+
+**Le cache qui trompe** : le service worker est en *network-first*, il n'est
+jamais en cause. C'est le `max-age=600` de GitHub Pages. Verifier avec
+`?v=<timestamp>` avant de conclure a un bug.
+
+**Restant** : la ligne de provenance de la maquette (« Releve aupres de la
+commune le… ») n'a aucune source dans les donnees — non affichee plutot
+qu'inventee. Le second niveau de fond (`--ground`/`--sheet`, jetons poses,
+0 usage) n'est pas applique. `.bs-price-pin` (CSS present, aucun rendu) reste a
+faire. Le bloc de fiche mort (~250 lignes de CSS `bs-*` + `_renderTypeBlock`
+jamais appele) n'est pas supprime. Sur une foret, le bloc des sentiers passe
+avant les faits du lieu.
+
 ### Avant (historique)
 - 34 POIs dans output_global.json (11 plages + 17 nature/promenades/ports + 6 Villages & Sites)
 - 33 POIs injectés dans planly-full.html (≥85% complets)
