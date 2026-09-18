@@ -1511,8 +1511,11 @@ body{
    fiche. Le Marché Arago y tassait deux phrases sur une seule ligne. */
 .pl-hours.bloc{cursor:default;}
 .pl-hours-l{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);margin-top:7px;font-weight:400;color:var(--tx2);}
-.pl-hours-l b{font-weight:500;color:var(--tx);text-align:right;flex:0 1 auto;}
-.pl-hours-l span{flex:1 1 auto;min-width:0;}
+/* Sans min-width:0, un élément flex refuse de descendre sous la largeur de son
+   texte : « tous les jours 7h30 à 13h » sortait de l'écran par la droite au
+   lieu de passer à la ligne. Le Marché Arago était coupé net au bord. */
+.pl-hours-l b{font-weight:500;color:var(--tx);text-align:right;flex:0 1 auto;min-width:0;overflow-wrap:anywhere;}
+.pl-hours-l span{flex:1 1 auto;min-width:0;overflow-wrap:anywhere;}
 .pl-week{display:none;width:100%;margin-top:6px;padding-top:8px;border-top:1px solid rgba(21,128,61,.15);}
 .pl-hours.open .pl-week{display:block;}
 .pl-week-row{display:flex;justify-content:space-between;gap:10px;font-size:var(--t5);padding:3px 0;line-height:var(--lh);}
