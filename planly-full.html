@@ -1287,6 +1287,33 @@ body{
 .mt-price{font-size:var(--t4);font-weight:700;color:#7A3B12;flex-shrink:0;}
 .mt-day{font-size:var(--t5);font-weight:700;color:#3F6B2B;width:78px;flex-shrink:0;}
 
+
+/* ── En-tête de fiche : état, repères, actions — la maquette validée.
+   Remplace le ruban de quatre chiffres encadrés. Rythme d'espacement sur
+   une base de 4 px, un seul élément en relief : la barre de prix en pied. ── */
+.bch-state{font-size:var(--t5);font-weight:700;color:var(--ok);display:flex;align-items:center;gap:7px;}
+.bch-state.shut{color:var(--warn);}
+.bch-state span{font-weight:400;color:var(--txm);}
+.bch-meta{font-size:var(--t5);color:var(--txm);margin-top:4px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
+.bch-meta b{color:var(--tx);font-weight:700;display:inline-flex;align-items:center;gap:4px;}
+.bch-meta i{font-style:normal;color:var(--txl);}
+.bch-acts{display:flex;gap:8px;margin-top:16px;}
+.bch-act{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 4px;
+  border-radius:var(--r2);text-decoration:none;color:var(--brand-d);font-size:var(--t6);font-weight:700;
+  background:var(--brand-l);border:0;font-family:'DM Sans',sans-serif;cursor:pointer;text-align:center;}
+.bch-act.q{background:transparent;box-shadow:inset 0 0 0 1px var(--line);}
+.bch-act:active{transform:scale(.97);}
+.bch-reps{display:flex;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);}
+.bch-rep{flex:1;min-width:0;padding-right:10px;}
+.bch-rep-l{font-size:var(--t6);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--txl);}
+.bch-rep-v{font-size:var(--t4);font-weight:700;color:var(--tx);margin-top:3px;line-height:1.25;}
+.bch-rep-v.bl{color:var(--brand-d);}
+.bch-rep-v.gr{color:var(--ok);}
+/* Barre de prix épinglée : le seul élément plein de l'écran */
+.bs-price-pin{flex:1;min-width:0;}
+.bs-price-fig{font-family:'Fraunces',serif;font-size:var(--t2);font-weight:600;line-height:1.1;
+  color:var(--tx);font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
+.bs-price-who{font-size:var(--t6);color:var(--tx3);margin-top:2px;}
 </style>
 </head>
 <body>
@@ -1386,6 +1413,13 @@ body{
   <symbol id="i-flower" viewBox="0 0 24 24"><circle cx="12" cy="9" r="2.2"/><path d="M12 6.8a2.2 2.2 0 1 0 0-.1M9.8 9a2.2 2.2 0 1 0-.1 0M14.2 9a2.2 2.2 0 1 0 .1 0M12 11.2a2.2 2.2 0 1 0 0 .1"/><path d="M12 13v8M12 17l3-2M12 19l-3-2"/></symbol>
   <symbol id="i-cocktail" viewBox="0 0 24 24"><path d="M4 5h16l-8 8z"/><path d="M12 13v7M8 20h8M17 5l2-3"/><circle cx="19" cy="2" r="1"/></symbol>
   <symbol id="i-village" viewBox="0 0 24 24"><path d="M3 21v-8l5-4 5 4v8z"/><path d="M13 21v-6l4-3 4 3v6"/><path d="M7 21v-4h2v4M17 21v-3h2v3"/></symbol>
+  <symbol id="i-kayak" viewBox="0 0 24 24"><path d="M3 20c3.5-3.5 5.5-8 5.5-12M21 4c-3.5 3.5-5.5 8-5.5 12"/><path d="M6 8c4 0 8 4 12 8"/><path d="M4 4l2 2M20 20l-2-2"/></symbol>
+  <symbol id="i-plus-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-bottle" viewBox="0 0 24 24"><path d="M10 2h4v4l2 3v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V9l2-3z"/><path d="M8 13h8"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 3h3l2.5 12h11L21 7H6"/><circle cx="9" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></symbol>
+  <symbol id="i-slot" viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M6 9h8M6 13h3M11 13h3"/><path d="M17 9h2a2 2 0 0 1 2 2v3"/><circle cx="21" cy="16" r="1.4"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
 </svg>
 
 <div id="onboarding-view">
@@ -2690,7 +2724,7 @@ function _plHoursBar(p){
     var today=PL_WEEK[(new Date().getDay()+6)%7],slots=_plDaySlots(tt,today),closed=slots==='Fermé';
     var week=PL_WEEK.map(function(d){return'<div class="pl-week-row'+(d===today?' today':'')+'"><span>'+PL_DAYS_FR[d]+'</span><span>'+_plDaySlots(tt,d)+'</span></div>';}).join('');
     return'<div class="pl-hours'+(closed?' closed':'')+'" onclick="this.classList.toggle(\'open\')">'+PL_ICON_CLOCK
-      +'<div style="flex:1"><b>'+(closed?'Fermé aujourd\'hui':'Ouvert aujourd\'hui')+'</b>'+(closed?'':' · '+slots)+'</div><div class="pl-hours-more">Semaine ›</div>'
+      +'<div style="flex:1"><b>'+(closed?'Fermé ce jour':'Ouvert ce jour')+'</b>'+(closed?'':' · '+slots)+'</div><div class="pl-hours-more">Semaine ›</div>'
       +'<div class="pl-week">'+week+(sp.season?'<div class="pl-week-row"><span>Saison</span><span>'+_escHtml(String(sp.season))+'</span></div>':'')+'</div></div>';
   }
   if(!sp.hours_text&&!sp.season){
@@ -2937,6 +2971,59 @@ function _socialRow(sp){
   return'<div class="bch-slbl">Leur actualité</div><div class="soc-row">'
     +out.map(function(o){return'<a class="soc-lnk" href="'+_escHtml(o[2])+'" target="_blank" rel="noopener">'
       +o[0]+' '+o[1]+'<span class="soc-go">↗</span></a>';}).join('')+'</div>';
+}
+
+// ── En-tête de fiche : ce que la maquette validée met en haut ──
+// Ligne d'état (ouvert/fermé, surveillance, accès libre), ligne de repères
+// (note, avis, type, distance), rangée d'actions, puis les chiffres propres
+// à la typologie. Les quatre valeurs de l'ancien ruban sont conservées.
+function _ficheEtat(p,sp){
+  var tt=p.openingHours;
+  if(tt&&Object.keys(tt).length){
+    var j=PL_WEEK[(new Date().getDay()+6)%7],s=_plDaySlots(tt,j);
+    if(s==='Fermé')return{txt:'Fermé ce jour',sub:'',shut:true};
+    var fin=s.split('–').pop().trim();
+    return{txt:'Ouvert',sub:'ferme à '+fin,shut:false};
+  }
+  if(p.subcategory==='Plages & Côte'&&p.beach&&p.beach.supervised)
+    return{txt:'Surveillée',sub:(p.beach.hours||p.beach.period||''),shut:false};
+  if(sp.hours_text)return{txt:'Horaires',sub:String(sp.hours_text).slice(0,44),shut:false};
+  return{txt:'Accès libre',sub:'',shut:false};
+}
+function _ficheActions(p,sp){
+  var a=[],src=(sp.official_source&&sp.official_source.url)||p.website||'';
+  var book=sp.booking_url||'';
+  var pk=p.parking||{};
+  if(pk.lat)a.push(['i-nav','Itinéraire','https://maps.google.com/?q='+pk.lat+','+pk.lng,true]);
+  else if(p.location&&p.location.lat)a.push(['i-nav','Itinéraire','https://maps.google.com/?q='+p.location.lat+','+p.location.lng,true]);
+  if(book)a.push(['i-cal','Réserver',book,false]);
+  if(p.subcategory==='Plages & Côte')a.push(['i-tide','Marées','#marees',false]);
+  if(src)a.push(['i-globe','Site',src,false]);
+  if(p.googleUrl)a.push(['i-star','Avis',p.googleUrl,false]);
+  return a.slice(0,3);
+}
+function _ficheHeader(p,sp,ribbonItems,mode){
+  var e=_ficheEtat(p,sp);
+  var h='<div class="bch-state'+(e.shut?' shut':'')+'">'+_escHtml(e.txt)
+    +(e.sub?' <span>· '+_escHtml(e.sub)+'</span>':'')+'</div>';
+  var m=[];
+  if(p.note&&p.note!=='?')m.push('<b><svg class="ic xs"><use href="#i-star"/></svg>'+p.note+'</b>');
+  if(p.reviewsCount)m.push(p.reviewsCount+' avis');
+  if(p.subcategory)m.push(_escHtml(p.subcategory));
+  if(p.distance&&p.distance.km)m.push(String(p.distance.km).replace('.',',')+' km');
+  h+='<div class="bch-meta">'+m.join('<i>·</i>')+'</div>';
+  var acts=_ficheActions(p,sp);
+  if(acts.length)h+='<div class="bch-acts">'+acts.map(function(a,i){
+    return'<a class="bch-act'+(i?' q':'')+'" href="'+_escHtml(a[2])+'"'
+      +(a[2].charAt(0)==='#'?'':' target="_blank" rel="noopener"')+'>'
+      +'<svg class="ic"><use href="#'+a[0]+'"/></svg>'+a[1]+'</a>';
+  }).join('')+'</div>';
+  var reps=(ribbonItems||[]).filter(function(r){return r&&r.val&&r.val!=='—';});
+  if(reps.length)h+='<div class="bch-reps">'+reps.map(function(r){
+    return'<div class="bch-rep"><div class="bch-rep-l">'+r.lbl+'</div>'
+      +'<div class="bch-rep-v'+(r.cls||'')+'">'+r.val+'</div></div>';
+  }).join('')+'</div>';
+  return h;
 }
 function _renderPoiBody(p,mode){
   var body=document.querySelector('.bs-poi-body');
@@ -3242,11 +3329,9 @@ function _renderPoiBody(p,mode){
     pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
   }
 
-  // Ribbon HTML
-  var ribbonHtml='<div class="bch-ribbon">'
-    +ribbonItems.map(function(item){
-      return'<div class="bch-ri"><div class="bch-rv'+(item.cls||'')+'">'+item.val+'</div><div class="bch-rl">'+item.lbl+'</div></div>';
-    }).join('')+'</div>';
+  // En-tête : état, repères, actions — puis les chiffres de la typologie.
+  // Rien n'est perdu du ruban : ses quatre valeurs deviennent la rangée de repères.
+  var ribbonHtml=_ficheHeader(p,sp,ribbonItems,mode);
 
   // Parking HTML
   var pkLat=pk.lat||0,pkLng=pk.lng||0,pkNom=pk.nom||'Parking';
