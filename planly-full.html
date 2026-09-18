@@ -3887,14 +3887,22 @@ function _renderPoiBody(p,mode){
       :/réserve|baie/i.test(p.name)?'La réserve'
       :'La forêt';
     // Pills
-    var pills=[];
+    // La forêt n'avait qu'une section quand toutes les autres typologies en
+    // ont deux : ce qu'est le lieu, puis ce qui se prépare avant d'y aller.
+    var pills=[], frtSavoir=[];
     if(sp.shade_level)pills.push(_frRow('i-tree','Ombre','',_escHtml(String(sp.shade_level))));
-    if(sp.stroller_ok)pills.push(_frRow('i-stroller','Poussette','','praticable'));
-    if(sp.bike_allowed)pills.push(_frRow('i-bike','Vélo','','autorisé'));
-    if(sp.wildlife_observable)pills.push(_frRow('i-deer','Faune','Observable en étant discret','oui'));
-    if(sp.picnic_tables)pills.push(_frRow('i-picnic','Tables de pique-nique','','sur place'));
-    if(sp.playground)pills.push(_frRow('i-slide','Aire de jeux','','sur place'));
-    pillsHtml=_frRows(pills.concat(_frFromSpecs(p.quickSpecs)));
+    if(sp.terrain_type)pills.push(_frRow('i-boot','Terrain','',_escHtml(String(sp.terrain_type))));
+    if(sp.stroller_ok)frtSavoir.push(_frRow('i-stroller','Poussette praticable','Chemins roulants',''));
+    else if(sp.stroller_ok===false)frtSavoir.push(_frRow('i-stroller','Poussette déconseillée','Sol meuble ou racines',''));
+    if(sp.bike_allowed)frtSavoir.push(_frRow('i-bike','Vélo autorisé','Partagé avec les marcheurs',''));
+    if(sp.wildlife_observable)frtSavoir.push(_frRow('i-deer','Faune observable','Restez discret et à distance',''));
+    if(sp.picnic_tables)frtSavoir.push(_frRow('i-picnic','Tables de pique-nique','Sur place',''));
+    if(sp.playground)frtSavoir.push(_frRow('i-slide','Aire de jeux','Sur place',''));
+    var frtAutres=_frFromSpecs(p.quickSpecs,['ombre','terrain','poussette','vélo','faune','pique-nique','jeux']);
+    sectionLabel='';
+    pillsHtml=((pills.length||frtAutres.length)?'<div class="bch-slbl">'+_frtTitre(p)+'</div>'
+        +_frRows(pills.concat(frtAutres)):'')
+      +(frtSavoir.length?'<div class="bch-slbl mineur">Ce qu\'il faut savoir</div>'+_frRows(frtSavoir):'');
     // Trails block
     var frtTrails=sp.trails_display||sp.trails||[];
     var frtRando=[],frtVtt=[];
@@ -5276,6 +5284,43 @@ function _frRow(ic,nom,precision,valeur,cls){
     +(valeur?'<span class="v'+(cls?' '+cls:'')+'">'+valeur+'</span>':'')
     +'</div>';
 }
+// « Forêts & Nature » couvre un lac, un marais et une réserve : le titre de
+// section suit le lieu plutôt que la sous-catégorie.
+function _frtTitre(p){
+  var n=p.name||'';
+  if(/lac|étang|plan d/i.test(n))return 'Le plan d\'eau';
+  if(/marais/i.test(n))return 'Le marais';
+  if(/réserve|baie/i.test(n))return 'La réserve';
+  if(/dune/i.test(n))return 'Les dunes';
+  return 'La forêt';
+}
+
+// Les specs venues des tags n'ont plus d'icône depuis que la punaise a été
+// retirée : 141 lignes muettes au dernier audit. On en déduit une du libellé
+// plutôt que de laisser un blanc dans une colonne d'icônes.
+function _icoDepuisMot(lbl){
+  var s=String(lbl||'').toLowerCase();
+  if(/ch[âa]teau|fort|donjon|tour/.test(s))return 'i-castle';
+  if(/phare/.test(s))return 'i-cliff';
+  if(/mus[ée]e|expo|patrimoine|histoire|abbaye|prieur/.test(s))return 'i-scroll';
+  if(/plage|sable|mer|vue mer|c[ôo]te/.test(s))return 'i-wave';
+  if(/for[êe]t|arbre|bois|nature|jardin|botaniq/.test(s))return 'i-tree';
+  if(/v[ée]lo/.test(s))return 'i-bike';
+  if(/march|randonn|sentier|balade|parcours/.test(s))return 'i-boot';
+  if(/enfant|famille|b[ée]b[ée]|poussette/.test(s))return 'i-family';
+  if(/pmr|fauteuil|accessib/.test(s))return 'i-pmr';
+  if(/restaurant|manger|cuisine|crêp|pizz|sushi/.test(s))return 'i-fork';
+  if(/bar|cocktail|ap[ée]ro|vin|d[ée]gust/.test(s))return 'i-cocktail';
+  if(/jeu|jouer|bowling|escape|tramp|laser/.test(s))return 'i-play';
+  if(/piscine|baignade|nager|spa/.test(s))return 'i-swim';
+  if(/animal|animaux|zoo|chien/.test(s))return 'i-dog';
+  if(/panorama|point de vue|belv[ée]d/.test(s))return 'i-panorama';
+  if(/gratuit|prix|tarif|billet/.test(s))return 'i-card';
+  if(/parking|voiture/.test(s))return 'i-car';
+  if(/port|bateau|ferry|nautis/.test(s))return 'i-anchor';
+  return 'i-pin';
+}
+
 function _frRows(rows){
   var r=rows.filter(Boolean);
   return r.length?'<div class="fr-rows">'+r.join('')+'</div>':'';
@@ -5299,7 +5344,7 @@ function _frFromSpecs(specs,dejaDits){
     var noyau=lbl.toLowerCase().replace(/\s*(ok|autoris[ée]e?|possible|admis)\s*$/,'').trim();
     if(noyau&&vus.indexOf(noyau)!==-1)return '';
     if(vus.indexOf(lbl.toLowerCase())!==-1)return '';
-    var ic=/^i-[a-z0-9-]+$/.test(s.icon||'')?s.icon:'';
+    var ic=/^i-[a-z0-9-]+$/.test(s.icon||'')?s.icon:_icoDepuisMot(lbl);
     // Les données marquent « positive » des agréments ordinaires — douches,
     // vélo, terrasse. Le vert y perdait son sens : il ne reste que l'ambre,
     // qui signale une contrainte réelle.
