@@ -583,6 +583,22 @@ body{
    d'un coup d'œil pour choisir quand descendre sur l'estran. */
 /* Un jour à la fois, qu'on fait défiler du doigt — comme la maquette, qui
    ne montre jamais plusieurs journées empilées. */
+/* Le tableau des marées DANS la fiche, sous les conditions de mer, comme la
+   maquette : quatre échéances d'un coup d'œil. Les hauteurs et coefficients
+   étaient calculés puis jetés — les enfermer derrière un bouton ne suffit pas,
+   c'est ce qu'on regarde en premier sur une plage. */
+.bch-tides{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);
+  margin-top:var(--s4);padding-top:var(--s4);border-top:1px solid var(--line-2);}
+.bch-tide{text-align:center;}
+.bch-tide-k{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--tx3);line-height:1.35;}
+.bch-tide.pm .bch-tide-k{color:var(--brand-d);}
+.bch-tide-h{font-size:var(--t4);font-weight:700;color:var(--tx);margin-top:var(--s1);
+  font-variant-numeric:tabular-nums;line-height:var(--lh-t);}
+.bch-tide.pm .bch-tide-h{color:var(--brand-d);}
+.bch-tide-m{font-size:var(--t6);color:var(--tx3);margin-top:2px;line-height:1.4;
+  font-variant-numeric:tabular-nums;}
+
 .tide-swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
   scrollbar-width:none;-webkit-overflow-scrolling:touch;
   margin:0 calc(-1 * var(--s5));padding:0 var(--s5);gap:var(--s5);}
@@ -3192,6 +3208,18 @@ function _renderBeachMarine(marineD,windD,tides){
         +'<span style="color:#3B6D11">18° Agréable</span>'
         +'<span style="color:#BA7517">24° Chaude</span>'
       +'</div>'
+      // Les quatre échéances du jour, comme la maquette. Hauteurs et
+      // coefficients étaient déjà calculés puis jetés : les enfermer derrière
+      // le bouton Marées ne suffisait pas, c'est ce qu'on regarde en premier
+      // sur une plage. Le bouton garde son rôle — les jours suivants.
+      +((tides&&tides.length)?'<div class="bch-tides">'+tides.slice(0,4).map(function(t){
+        return '<div class="bch-tide'+(t.type==='PM'?' pm':'')+'">'
+          +'<div class="bch-tide-k">'+(t.type==='PM'?'Pleine mer':'Basse mer')+'</div>'
+          +'<div class="bch-tide-h">'+(t.time||'—')+'</div>'
+          +'<div class="bch-tide-m">'+(t.height!=null?String(t.height).replace('.',',')+' m':'')
+          +(t.coeff!=null?'<br>c. '+t.coeff:'')+'</div>'
+          +'</div>';
+      }).join('')+'</div>':'')
     +'</div>'
   +'</div>';
 }
@@ -3651,15 +3679,36 @@ function _renderPoiBody(p,mode){
     // place. Tout mélanger sous un seul titre remettait au même niveau une
     // condition de sécurité et la présence d'un bar.
     var frRows=[], frSavoir=[];
-    if(bchSupervised)frRows.push(_frRow('i-swim','Surveillance',bch.supervision_season||'',survDisplay||'oui','on'));
+    if(bchSupervised){
+      // La maquette détaille la surveillance en trois lignes. Les données les
+      // portent déjà — supervised_hours contient « 10h30-19h en juillet-août,
+      // 14h-18h30 en juin » — et l'app les écrasait en une seule.
+      var _sh=String(sp.supervised_hours||'');
+      var _parts=_sh.split(',').map(function(x){return x.trim();}).filter(Boolean);
+      if(_parts.length>1){
+        _parts.forEach(function(seg){
+          var m=seg.match(/^(.+?)\s+en\s+(.+)$/);
+          if(m)frRows.push(_frRow('i-clock','En '+m[2],'',m[1],'on'));
+          else frRows.push(_frRow('i-clock','Surveillance','',seg,'on'));
+        });
+      } else {
+        frRows.push(_frRow('i-swim','Surveillance','',bch.hours||survDisplay||'oui','on'));
+      }
+      var _deb=sp.supervised_start, _fin=sp.supervised_end;
+      if(_deb&&_fin)frRows.push(_frRow('i-cal','Saison surveillée','',_deb+' → '+_fin,'on'));
+      else if(bch.period)frRows.push(_frRow('i-cal','Saison surveillée','',bch.period,'on'));
+    }
     else frRows.push(_frRow('i-swim','Surveillance','Baignade non surveillée','non','warn'));
     var hasPmr=(p.quickSpecs||[]).some(function(s){return/pmr|wheelchair|handicap/i.test(s.label||'');});
-    if(bch.showers)frSavoir.push(_frRow('i-shower','Douches','','sur place','on'));
-    if(hasPmr)frSavoir.push(_frRow('i-pmr','Accès PMR','','oui','on'));
-    if(bch.beach_bar)frSavoir.push(_frRow('i-glass','Bar de plage','Ouvert en saison','oui','on'));
-    if(bch.naturist)frSavoir.push(_frRow('i-parasol','Naturisme','','autorisé'));
-    if(bch.dogs)frSavoir.push(_frRow('i-dog','Chiens','','admis','on'));
-    if(bchType)frSavoir.push(_frRow('i-beach','Profil de plage','',bchType));
+    // « Ce qu'il faut savoir » : titre gras puis précision dessous, SANS valeur
+    // à droite — comme la maquette. Forcer une valeur sur « Douches sur place »
+    // obligeait à couper la phrase en deux moitiés qui se répondent mal.
+    if(bch.showers)frSavoir.push(_frRow('i-shower','Douches sur place','Rinçage en accès libre',''));
+    if(hasPmr)frSavoir.push(_frRow('i-pmr','Accès PMR','Cheminement adapté',''));
+    if(bch.beach_bar)frSavoir.push(_frRow('i-glass','Bar de plage','Ouvert en saison',''));
+    if(bch.naturist)frSavoir.push(_frRow('i-parasol','Naturisme autorisé','Zone signalée sur place',''));
+    if(bch.dogs)frSavoir.push(_frRow('i-dog','Chiens admis','Tenus en laisse',''));
+    if(bchType)frSavoir.push(_frRow('i-beach',bchType,'Nature du sable',''));
     if(bchWave){
       var waveLbl=/sportif|fort/i.test(bchWave)?'Mer sportive'
         :/modér/i.test(bchWave)?'Vagues modérées'
