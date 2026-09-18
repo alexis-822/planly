@@ -1322,7 +1322,14 @@ def official_candidate_urls(home_page: dict, robots) -> list[str]:
 AGGREGATORS = ("tripadvisor.", "thefork.", "lafourchette.", "petitfute.", "yelp.", "pagesjaunes.",
                "facebook.", "instagram.", "google.", "linktr.ee", "booking.com", "expedia.", "mapstr.",
                "opentable.", "michelin.", "annuaire-entreprises", "societe.com", "infogreffe.", "youtube.",
-               "restaurants-de-france.", "maville.com", "justacote.", "cylex", "118000.", "linternaute.")
+               "restaurants-de-france.", "maville.com", "justacote.", "cylex", "118000.", "linternaute.",
+               # Le Marche de Bretignolles avait pour "site officiel" le site de la
+               # Federation Nationale des Marches de France : un annuaire national,
+               # comme restaurants-de-france. L'extracteur y a honnetement repondu
+               # qu'il n'y trouvait rien, et ces trois phrases d'echec se sont
+               # affichees sur la fiche a la place des informations du marche.
+               "marchesdefrance.", "marches-de-france.", "jours-de-marche.",
+               "marchesdenoel.", "tourisme-vendee.")
 
 # Mots trop communs pour identifier un site : "Pizza Bar 12h03" tombait sur
 # pizzas-a-emporter.restaurants-de-france.fr parce que "pizza" est dans le domaine.

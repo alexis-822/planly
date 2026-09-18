@@ -882,7 +882,7 @@ var POIS = [
   },
   "duration": 90,
   "distance": {
-   "km": 16.0,
+   "km": 16,
    "min": {
     "voiture": 21
    }
@@ -1597,7 +1597,7 @@ var POIS = [
     {
      "name": "Côte et Forêt d'Olonne",
      "type": "rando",
-     "distance_km": 8.0,
+     "distance_km": 8,
      "duration_min": 105,
      "difficulty": 2,
      "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/cote-et-foret-d-olonne"
@@ -1653,7 +1653,7 @@ var POIS = [
     {
      "name": "Aire de la Tantouille - Plage des Granges",
      "type": "rando",
-     "distance_km": 13.0,
+     "distance_km": 13,
      "duration_min": 195,
      "difficulty": 2,
      "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/aire-de-la-tantouille-plage-des-granges"
@@ -1698,7 +1698,7 @@ var POIS = [
      {
       "name": "Côte et Forêt d'Olonne",
       "type": "rando",
-      "distance_km": 8.0,
+      "distance_km": 8,
       "duration_min": 105,
       "difficulty": 2,
       "trail_url": "https://www.alltrails.com/fr/randonnee/france/vendee/cote-et-foret-d-olonne",
@@ -2467,7 +2467,7 @@ var POIS = [
   "subcategory": "Villages & Sites",
   "pricing": {
    "adult": 43.6,
-   "child": 24.0,
+   "child": 24,
    "is_free": false
   },
   "duration": 360,
@@ -2531,15 +2531,15 @@ var POIS = [
     "depart_saint_gilles": {
      "ar_journee": {
       "adulte": 43.6,
-      "preferentiel_60_etudiant": 38.0,
-      "enfant_4_17": 24.0,
-      "bebe": 6.0
+      "preferentiel_60_etudiant": 38,
+      "enfant_4_17": 24,
+      "bebe": 6
      },
      "aller_simple": {
       "adulte": 21.8,
-      "preferentiel_60_etudiant": 19.0,
-      "enfant_4_17": 12.0,
-      "bebe": 3.0
+      "preferentiel_60_etudiant": 19,
+      "enfant_4_17": 12,
+      "bebe": 3
      }
     },
     "depart_fromentine": {
@@ -2604,7 +2604,7 @@ var POIS = [
   },
   "duration": 90,
   "distance": {
-   "km": 69.0,
+   "km": 69,
    "min": {
     "voiture": 92
    }
@@ -3293,7 +3293,7 @@ var POIS = [
   },
   "beach": null,
   "specific": {
-   "distance_km": 3.0,
+   "distance_km": 3,
    "difficulty": "très facile",
    "stroller_ok": true,
    "bike_allowed": true,
@@ -3512,7 +3512,7 @@ var POIS = [
   },
   "beach": null,
   "specific": {
-   "distance_km": 8.0,
+   "distance_km": 8,
    "difficulty": "modéré",
    "stroller_ok": false,
    "bike_allowed": false,
@@ -3624,7 +3624,7 @@ var POIS = [
   },
   "beach": null,
   "specific": {
-   "distance_km": 2.0,
+   "distance_km": 2,
    "difficulty": "très facile",
    "stroller_ok": true,
    "bike_allowed": true,
@@ -3737,7 +3737,7 @@ var POIS = [
   },
   "beach": null,
   "specific": {
-   "distance_km": 2.0,
+   "distance_km": 2,
    "difficulty": "très facile",
    "stroller_ok": true,
    "bike_allowed": true,
@@ -4062,7 +4062,7 @@ var POIS = [
   },
   "duration": 30,
   "distance": {
-   "km": 32.0,
+   "km": 32,
    "min": {
     "voiture": 43
    }
@@ -5498,7 +5498,7 @@ var POIS = [
      },
      {
       "label": "Menu des Petits (moins de 10 ans)",
-      "price": 24.0
+      "price": 24
      }
     ],
     "avg_price": null,
@@ -5649,7 +5649,7 @@ var POIS = [
      },
      {
       "label": "Formule du midi (mardi au vendredi de 12h à 14h)",
-      "price": 13.0
+      "price": 13
      },
      {
       "label": "Galette sur-mesure 1 ingrédient",
@@ -5976,7 +5976,7 @@ var POIS = [
   },
   "duration": 90,
   "distance": {
-   "km": 1.0,
+   "km": 1,
    "min": {
     "voiture": 1
    }
@@ -6494,7 +6494,7 @@ var POIS = [
   },
   "duration": 90,
   "distance": {
-   "km": 1.0,
+   "km": 1,
    "min": {
     "voiture": 1
    }
@@ -7383,11 +7383,11 @@ var POIS = [
      },
      {
       "label": "12 Huîtres n°1",
-      "price": 7.0
+      "price": 7
      },
      {
       "label": "Rillettes d'Huîtres de la Cabane du Payré",
-      "price": 9.0
+      "price": 9
      }
     ],
     "avg_price": null,
@@ -7942,7 +7942,7 @@ var POIS = [
   },
   "duration": 90,
   "distance": {
-   "km": 9.0,
+   "km": 9,
    "min": {
     "voiture": 12
    }
@@ -8006,19 +8006,19 @@ var POIS = [
     "options": [
      {
       "label": "Gros Sel FOU 500g",
-      "price": 4.0
+      "price": 4
      },
      {
       "label": "Gros Sel 500g AUX PETITS LEGUMES",
-      "price": 4.0
+      "price": 4
      },
      {
       "label": "Gros Sel 500g FORESTIER AUX PETITS CHAMPIGNONS",
-      "price": 4.0
+      "price": 4
      },
      {
       "label": "Gros Sel 500g AUX 3 ALGUES",
-      "price": 4.0
+      "price": 4
      },
      {
       "label": "Assortiment GROS SEL Aromatisés (4x100g)",
@@ -8402,7 +8402,7 @@ var POIS = [
      },
      {
       "label": "Préparation miel & gelée royale à la pesée",
-      "price": 48.0
+      "price": 48
      }
     ],
     "avg_price": null,
@@ -8724,8 +8724,8 @@ var POIS = [
   "category": "jeux",
   "subcategory": "Jeux & Divertissement",
   "pricing": {
-   "adult": 17.0,
-   "child": 14.0,
+   "adult": 17,
+   "child": 14,
    "is_free": false
   },
   "duration": 90,
@@ -8890,8 +8890,8 @@ var POIS = [
   "category": "jeux",
   "subcategory": "Jeux & Divertissement",
   "pricing": {
-   "adult": 21.0,
-   "child": 16.0,
+   "adult": 21,
+   "child": 16,
    "is_free": false
   },
   "duration": 60,
@@ -9861,7 +9861,7 @@ var POIS = [
   "category": "jeux",
   "subcategory": "Jeux & Divertissement",
   "pricing": {
-   "adult": 23.0,
+   "adult": 23,
    "child": 0,
    "is_free": false
   },
@@ -10111,7 +10111,7 @@ var POIS = [
   "subcategory": "Jeux & Divertissement",
   "pricing": {
    "adult": 0,
-   "child": 15.0,
+   "child": 15,
    "is_free": false
   },
   "duration": 90,
@@ -10317,7 +10317,7 @@ var POIS = [
   },
   "duration": 120,
   "distance": {
-   "km": 47.0,
+   "km": 47,
    "min": {
     "voiture": 63
    }
@@ -10468,7 +10468,7 @@ var POIS = [
   "category": "jeux",
   "subcategory": "Jeux & Divertissement",
   "pricing": {
-   "adult": 27.0,
+   "adult": 27,
    "child": 15,
    "is_free": false
   },
@@ -10956,8 +10956,8 @@ var POIS = [
   "category": "jeux",
   "subcategory": "Jeux & Divertissement",
   "pricing": {
-   "adult": 37.0,
-   "child": 29.0,
+   "adult": 37,
+   "child": 29,
    "is_free": false
   },
   "duration": 180,
@@ -11159,8 +11159,8 @@ var POIS = [
   "category": "animaux",
   "subcategory": "Parcs animaliers",
   "pricing": {
-   "adult": 20.0,
-   "child": 16.0,
+   "adult": 20,
+   "child": 16,
    "is_free": false
   },
   "duration": 90,
@@ -11226,8 +11226,8 @@ var POIS = [
   "beach": null,
   "specific": {
    "pricing": {
-    "adult": 20.0,
-    "child": 16.0,
+    "adult": 20,
+    "child": 16,
     "child_age_min": 3,
     "child_age_max": 10,
     "free_under_age": null,
@@ -11373,8 +11373,8 @@ var POIS = [
   "category": "animaux",
   "subcategory": "Parcs animaliers",
   "pricing": {
-   "adult": 8.0,
-   "child": 6.0,
+   "adult": 8,
+   "child": 6,
    "is_free": false
   },
   "duration": 60,
@@ -12329,7 +12329,7 @@ var POIS = [
   "category": "cinema",
   "subcategory": "Cinéma",
   "pricing": {
-   "adult": 10.0,
+   "adult": 10,
    "child": 5.5,
    "is_free": false
   },
@@ -12746,7 +12746,7 @@ var POIS = [
   },
   "duration": 90,
   "distance": {
-   "km": 1.0,
+   "km": 1,
    "min": {
     "voiture": 1
    }
@@ -13012,7 +13012,7 @@ var POIS = [
   "commune": "Les Sables-d'Olonne",
   "cat": "🎬 Sorties & Détente",
   "note": "4.2",
-  "budgetBadge": "€ Petit budget",
+  "budgetBadge": "€€ Modéré",
   "budgetClass": "paid",
   "trajet": {
    "voiture": "? min",
@@ -13028,8 +13028,8 @@ var POIS = [
   "category": "casino",
   "subcategory": "Casino & Jeux",
   "pricing": {
-   "adult": 8.0,
-   "child": 5.0,
+   "adult": 8,
+   "child": 5,
    "is_free": false
   },
   "duration": 120,
@@ -13095,40 +13095,9 @@ var POIS = [
   "beach": null,
   "specific": {
    "pricing": {
-    "free_entry": null,
-    "adult": 8,
-    "child": 5,
-    "child_age_max": 14,
-    "from_price": null,
-    "options": [
-     {
-      "label": "Tarif réduit (membres Club JOA, retraités, +65 ans, famille nombreuse, PMR, étudiants, demandeurs d'emploi)",
-      "price": 7
-     },
-     {
-      "label": "Carte abonnement rechargeable",
-      "price": 1.5
-     },
-     {
-      "label": "Carte 5 places",
-      "price": 28.5
-     },
-     {
-      "label": "Carte 10 places",
-      "price": 55
-     },
-     {
-      "label": "Carte art & essai 6 places",
-      "price": 25.8
-     }
-    ],
-    "notes": "L'entrée du cinéma est indépendante du casino, accessible à toute la famille et aux personnes à mobilité réduite.",
-    "source_url": "https://www.joa.fr/casinos/fouras/loisirs/cinema",
-    "valid_period": null,
-    "evidence": "Plein Tarif : 8 € Tarif Réduit : 7 € ( Membre Club JOA , retraité, + de 65 ans, famille nombreuse, personne à mobilité réduite, carte étudiant, demandeur d'emploi) Tarif -14 ans : 5 €",
-    "stale": false,
-    "source_label": "site officiel",
-    "verified_at": "2026-09-16"
+    "is_free": true,
+    "adult": null,
+    "child": null
    },
    "hours_text": "Lundi, mardi, mercredi, jeudi, dimanche et jour férié : 9h à 3h. Vendredi, samedi et veille de jour férié : 9h à 4h.",
    "closing_time": "4h",
@@ -13222,7 +13191,7 @@ var POIS = [
   },
   "duration": 90,
   "distance": {
-   "km": 1.0,
+   "km": 1,
    "min": {
     "voiture": 1
    }
@@ -13291,11 +13260,11 @@ var POIS = [
     "options": [
      {
       "label": "La Box Easy",
-      "price": 5.0
+      "price": 5
      },
      {
       "label": "La Box Player",
-      "price": 30.0
+      "price": 30
      }
     ],
     "notes": "Entrée gratuite. Options : coffrets cadeaux avec tickets de jeu et consommations.",

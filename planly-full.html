@@ -1506,6 +1506,13 @@ body{
 .pl-hours.closed{background:transparent;border-color:transparent;color:var(--tx2);}
 .pl-hours.closed b,.pl-hours.closed svg{color:var(--warn);}
 .pl-hours-more{font-size:var(--t5);font-weight:500;line-height:var(--lh);}
+/* Un texte d'horaires en plusieurs phrases devient plusieurs lignes : le
+   « quoi » à gauche, le « quand » à droite, comme partout ailleurs dans la
+   fiche. Le Marché Arago y tassait deux phrases sur une seule ligne. */
+.pl-hours.bloc{cursor:default;}
+.pl-hours-l{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3);margin-top:7px;font-weight:400;color:var(--tx2);}
+.pl-hours-l b{font-weight:500;color:var(--tx);text-align:right;flex:0 1 auto;}
+.pl-hours-l span{flex:1 1 auto;min-width:0;}
 .pl-week{display:none;width:100%;margin-top:6px;padding-top:8px;border-top:1px solid rgba(21,128,61,.15);}
 .pl-hours.open .pl-week{display:block;}
 .pl-week-row{display:flex;justify-content:space-between;gap:10px;font-size:var(--t5);padding:3px 0;line-height:var(--lh);}
@@ -3365,6 +3372,29 @@ function _plDaySlots(tt,day){
   var s=tt[day]||[];
   return s.length?s.map(function(x){return x.open.hour===0&&!x.open.minute&&x.close.hour===24?'24h/24':_plHm(x.open)+' – '+_plHm(x.close);}).join(', '):'Fermé';
 }
+function _horairesLongs(sp){return String((sp||{}).hours_text||'').length>44;}
+// Une phrase par ligne, et quand la phrase dit « quoi : quand », le quoi passe
+// à gauche et le quand à droite. Mis en commun parce que deux blocs en ont
+// besoin : « Cabane de vente : du 1er juin au 30 septembre » se perdait à Sel
+// de l'Île, où Google fournit déjà les horaires de semaine et où le bloc
+// horaires se taisait donc sur la saison.
+function _horairesEnLignes(txt,season){
+  // On coupe sur le point suivi d'une majuscule — jamais sur « 7h30 à 13h. »
+  // au milieu d'une énumération.
+  var seg=String(txt||'').split(/\.\s+(?=[A-ZÉÈÀÎÔ])|\s*;\s*/)
+    .map(function(s){return s.replace(/\s*\.\s*$/,'').trim();}).filter(Boolean);
+  if(season)seg.push('Saison : '+String(season));
+  return seg.map(function(s){
+    // L'espace AVANT le deux-points est obligatoire : c'est la forme
+    // typographique française, et surtout la seule qui ne confonde pas avec
+    // une heure. Sans lui, « Lundi 18:30-22:30 » se coupait en étiquette
+    // « Lundi 18 » et valeur « 30-22:30 » — UMI Sushi y perdait son midi.
+    var c=s.match(/^([^:]{3,34}?)\s+:\s+(.+)$/);
+    return '<div class="pl-hours-l">'+(c
+      ?'<span>'+_escHtml(c[1].trim())+'</span><b>'+_escHtml(c[2].trim())+'</b>'
+      :'<span>'+_escHtml(s)+'</span>')+'</div>';
+  }).join('');
+}
 function _plHoursBar(p){
   var sp=p.specific||{},tt=p.openingHours;
   if(tt&&Object.keys(tt).length){
@@ -3381,9 +3411,10 @@ function _plHoursBar(p){
   // lieu n'a pas d'horaires Google : le répéter ici donnait deux fois la même
   // phrase à quelques centimètres d'écart. On ne garde le bloc que s'il
   // apporte la saison, que la ligne d'état ne montre pas.
-  if(sp.hours_text&&!sp.season)return'';
-  return'<div class="pl-hours">'+PL_ICON_CLOCK+'<div><b>Horaires</b> · '+_escHtml(String(sp.hours_text||(sp.booking==='obligatoire'?'sur réservation uniquement':'voir le site officiel')))
-    +(sp.season?'<br><span style="font-size:12px">Saison : '+_escHtml(String(sp.season))+'</span>':'')+'</div></div>';
+  if(sp.hours_text&&!sp.season&&!_horairesLongs(sp))return'';
+  var txt=String(sp.hours_text||(sp.booking==='obligatoire'?'sur réservation uniquement':'voir le site officiel'));
+  return'<div class="pl-hours bloc">'+PL_ICON_CLOCK
+    +'<div style="flex:1;min-width:0"><b>Horaires</b>'+_horairesEnLignes(txt,sp.season)+'</div></div>';
 }
 // La maquette montre le prix, pas sa décomposition. Le détail reste à portée
 // d'un « i » — c'est là que se lisent les tarifs privilégiés : gratuité des
@@ -3534,8 +3565,28 @@ document.addEventListener('click',function(e){
 var ST_SUBCATS=['Bars & Ambiance','Casino & Jeux','Cinéma','Piscines & Spa'];
 var ST_ICON_NIGHT='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-6 7v7"/><path d="M9 21h6"/><path d="M13 18v3"/></svg>';
 var ST_ICON_WATER='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c2 0 2 1.5 4 1.5S9 15 11 15s2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M3 19c2 0 2 1.5 4 1.5S9 19 11 19s2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M8 11V6a2 2 0 1 1 4 0"/></svg>';
+// Couper à la longueur exacte tranche les mots en deux — « Boutique de pr »
+// sur Famille Mary, « Place des Hall » sur Brétignolles. Pire : deux de ces
+// coupes venaient APRÈS l'échappement et pouvaient trancher une entité HTML
+// (« &amp; » réduit à « &am »). On coupe au dernier espace, avant d'échapper.
+function _tronque(txt,n){
+  var s=String(txt==null?'':txt).trim();
+  if(s.length<=n)return s;
+  var t=s.slice(0,n),esp=t.lastIndexOf(' ');
+  if(esp>n*0.5)t=t.slice(0,esp);
+  return t.replace(/[\s,;:.·–-]+$/,'')+'…';
+}
+// L'extracteur rend parfois ses excuses au lieu d'un fait : « Aucune
+// information n'est présente dans les pages fournies », « Données
+// insuffisantes pour compléter ce formulaire ». Le marché de Brétignolles
+// n'affichait QUE cela. Publier les excuses de la machine est pire que de ne
+// rien publier : la fiche garde sa photo, son conseil, sa carte et se tait.
+var _AVEUX=/pages? fournies?|donn[ée]es insuffisantes|aucune information|impossible de d[ée]terminer|compl[ée]ter ce formulaire|ne (?:sont|est) pas (?:pr[ée]cis|mentionn|indiqu)/i;
+function _sansAveux(liste){
+  return (liste||[]).filter(Boolean).filter(function(t){return !_AVEUX.test(String(t));});
+}
 function _stKnowBlock(sp){
-  var k=(sp.know||[]).filter(Boolean).slice(0,3);
+  var k=_sansAveux(sp.know).slice(0,3);
   if(!k.length)return'';
   var src=(sp.official_source&&sp.official_source.verified_at)?sp.official_source.verified_at.split('-').reverse().join('/'):'';
   // « Ce qu'il faut savoir » comme partout ailleurs : un titre de section et
@@ -3647,17 +3698,48 @@ function _mtMealBlock(p,sp){
     // restaurant perdait ses lignes, sa carte et son parking.
     +'</div>';
 }
-function _mtMarketBlock(sp,subcat){
+// market_days est souvent une LISTE — quatre lieux et quatre calendriers à
+// Brétignolles, saisons comprises. Le code faisait String() dessus : la liste
+// se collait en une chaîne à virgules, tronquée à 14 signes en « Place des
+// Hall ». On jetait une information complète pour en montrer un moignon.
+var _JOURS_SEM=['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
+function _joursMarche(md){
+  var t=(Array.isArray(md)?md.join(' ; '):String(md||'')).toLowerCase();
+  var vus=_JOURS_SEM.filter(function(j){return t.indexOf(j)!==-1;});
+  if(!vus.length)return'';
+  if(vus.length===7)return'7j/7';
+  if(vus.length>=5)return vus.length+' j/sem.';
+  return vus.map(function(j){return j.charAt(0).toUpperCase()+j.slice(1,3);}).join(' · ');
+}
+function _mtMarketBlock(sp,subcat,horairesGoogle){
   // réservé aux marchés : un restaurant a lui aussi des "produits", mais pas de jour de marché
   if(subcat!=='Marchés & Terroir')return'';
-  var days=sp.market_days?String(sp.market_days):'',prods=(sp.products||[]).slice(0,6);
-  if(!days&&!prods.length)return'';
+  var md=sp.market_days,liste=Array.isArray(md)?md.map(String).filter(Boolean):[];
+  var days=liste.length?'':(md?String(md):''),prods=_sansAveux(sp.products).slice(0,6);
+  if(!days&&!liste.length&&!prods.length)return'';
+  // « Les Halles (avril à septembre) : mardi / ... / dimanche » : le lieu et
+  // sa saison à gauche, les jours à droite. Une ligne par calendrier.
+  var joursHtml=liste.map(function(j){
+    var c=j.match(/^(.{3,44}?)\s+:\s+(.+)$/);
+    return c?_frRow('i-cal',_escHtml(c[1].trim()),'',_escHtml(c[2].trim()))
+            :_frRow('i-cal',_escHtml(j),'','');
+  }).join('');
   var sv=sp.services||{};
   return'<div class="pl-block market"><div class="pl-block-hd">'+MT_ICON_MARKET
     +'<div class="pl-block-info"><div class="pl-block-title">Quand y aller</div><div class="pl-block-sub">'+(sv.covered?'Halle couverte':'En plein air')+'</div></div>'
-    +(days?'<div class="pl-block-badge">'+_escHtml(days).slice(0,28)+'</div>':'')+'</div>'
+    +(days?'<div class="pl-block-badge">'+_escHtml(_tronque(days,28))+'</div>':'')+'</div>'
     +'<div class="pl-list">'
-    +(sp.hours_text?'<div class="fr-row"><div class="b"><div class="n">Horaires</div></div><span class="v">'+_escHtml(String(sp.hours_text))+'</span></div>':'')
+    +joursHtml
+    // Troisième endroit qui rendait les horaires, et le plus dense : tout le
+    // texte en valeur d'une seule ligne. On ne le rend QUE si personne d'autre
+    // ne le porte — c'est-à-dire quand Google fournit les horaires de semaine,
+    // auquel cas le bloc horaires affiche la semaine et tait la saison. Sans
+    // cette condition, Sel de l'Île perdait sa cabane de vente de juin à
+    // septembre, et le Marché Arago les affichait deux fois.
+    +(sp.hours_text&&horairesGoogle
+      ?'<div class="pl-hours bloc" style="padding-top:2px"><div style="flex:1;min-width:0">'
+        +_horairesEnLignes(sp.hours_text,'')+'</div></div>'
+      :'')
     +(prods.length?'<div class="fr-row"><div class="b"><div class="n">Ce qu\'on y trouve</div><div class="m">'+_escHtml(prods.map(String).join(' · '))+'</div></div></div>':'')
     +'</div></div>';
 }
@@ -3673,7 +3755,7 @@ function _mtBookCard(p,sp){
   var url=sp.booking_url||(sp.official_source&&sp.official_source.url)||'';
   var v=(sp.official_source&&sp.official_source.verified_at)?sp.official_source.verified_at.split('-').reverse().join('/'):'';
   return'<div class="pl-price"><div class="pl-price-hd"><div class="pl-price-title">Y aller</div></div>'
-    +'<div class="pl-price-lines">'+rows.map(function(r){return'<div class="pl-price-line"><span>'+r[0]+'</span><b>'+_escHtml(String(r[1])).slice(0,40)+'</b></div>';}).join('')+'</div>'
+    +'<div class="pl-price-lines">'+rows.map(function(r){return'<div class="pl-price-line"><span>'+r[0]+'</span><b>'+_escHtml(_tronque(r[1],40))+'</b></div>';}).join('')+'</div>'
     +'<div class="pl-price-ft"><div class="pl-price-src">Site officiel'+(v?', vérifié le '+v:'')+'</div>'
     +(url?'<a class="pl-btn" href="'+_escHtml(url)+'" target="_blank" rel="noopener">'+(sp.booking_url?'Réserver':'Site officiel')+'</a>':'')+'</div></div>';
 }
@@ -3707,7 +3789,16 @@ function _ficheEtat(p,sp){
   // depuis que le bloc qui les répétait a été retiré. Couper à 44 signes
   // faisait perdre « Mardi-Dimanche 11:30-14:30 » à UMI Sushi et ses jours
   // de marché forain au Marché Arago.
-  if(sp.hours_text)return{txt:'Horaires',sub:String(sp.hours_text),shut:false};
+  // Court, l'horaire tient sur la ligne d'état. Long, il descend dans le bloc
+  // horaires qui sait le mettre en lignes : le Marché Arago déversait ici
+  // « Marché alimentaire couvert : tous les jours 7h30 à 13h. Marché forain
+  // extérieur : mardi, vendredi et dimanche 8h à 13h30 » — trois lignes
+  // débordantes derrière un « · », illisibles.
+  // Long, l'horaire descend dans le bloc — et la ligne d'état n'a alors PLUS
+  // RIEN à dire : elle affichait « Horaires » tout seul, en vert, une
+  // étiquette sans valeur. On ne rend pas une ligne vide, on ne la rend pas.
+  if(sp.hours_text)return _horairesLongs(sp)?{txt:'',sub:'',shut:false}
+    :{txt:'Horaires',sub:String(sp.hours_text),shut:false};
   return{txt:'Accès libre',sub:'',shut:false};
 }
 function _ficheActions(p,sp){
@@ -3735,8 +3826,8 @@ function _ficheActions(p,sp){
 }
 function _ficheHeader(p,sp,ribbonItems,mode){
   var e=_ficheEtat(p,sp);
-  var h='<div class="bch-state'+(e.shut?' shut':'')+'">'+_escHtml(e.txt)
-    +(e.sub?' <span>· '+_escHtml(e.sub)+'</span>':'')+'</div>';
+  var h=e.txt?'<div class="bch-state'+(e.shut?' shut':'')+'">'+_escHtml(e.txt)
+    +(e.sub?' <span>· '+_escHtml(e.sub)+'</span>':'')+'</div>':'';
   var m=[];
   if(p.note&&p.note!=='?')m.push('<b><svg class="ic xs"><use href="#i-star"/></svg>'+p.note+'</b>');
   if(p.reviewsCount)m.push(p.reviewsCount+' avis');
@@ -4037,18 +4128,23 @@ function _renderPoiBody(p,mode){
   }else if(MT_SUBCATS.indexOf(sub)!==-1){
     var mv=sp.services||{},mPr=sp.pricing||{},mAvg=_plNum(mPr.avg_price);
     var mEuros=(p.budgetBadge||'').match(/^€+/);
-    var mServ=sp.hours_text&&/midi|soir/i.test(sp.hours_text)?'Midi et soir':(sp.market_days?String(sp.market_days).slice(0,14):'—');
+    // « Jours → Place des Hall » : market_days contenait une ADRESSE, pas des
+    // jours, et la coupe à 14 la tranchait en plein mot. Un libellé « Jours »
+    // n'a de sens que devant des jours — sinon le bandeau se tait.
+    var _JOURS=/lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|tous les jours|quotidien|week-?end|matin/i;
+    var mServ=sp.hours_text&&/midi|soir/i.test(sp.hours_text)?'Midi et soir'
+      :(_joursMarche(sp.market_days)||(sp.market_days&&_JOURS.test(String(sp.market_days))?_tronque(sp.market_days,14):'—'));
     ribbonItems=[
-      {val:sp.cuisine_type?String(sp.cuisine_type).slice(0,14):(sub==='Marchés & Terroir'?'Marché':'—'),lbl:'Type',cls:sp.cuisine_type?' bl':''},
+      {val:sp.cuisine_type?_tronque(sp.cuisine_type,14):(sub==='Marchés & Terroir'?'Marché':'—'),lbl:'Type',cls:sp.cuisine_type?' bl':''},
       {val:mAvg!=null?'~'+_plEuro(mAvg):(mEuros?mEuros[0]:'—'),lbl:'Budget',cls:''},
       {val:mServ,lbl:sub==='Marchés & Terroir'?'Jours':'Services',cls:''},
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];
     sectionLabel=sub==='Restaurants'?'Le restaurant':sub==='Marchés & Terroir'?'Le marché':'La dégustation';
-    specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+_mtMealBlock(p,sp)+_mtMarketBlock(sp,p.subcategory)+_mtBookCard(p,sp);
+    specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+_mtMealBlock(p,sp)+_mtMarketBlock(sp,p.subcategory,!!(p.openingHours&&Object.keys(p.openingHours).length))+_mtBookCard(p,sp);
     var mtPills=[];
     if(mv.terrace)mtPills.push(_frRow('i-sun','Terrasse','','oui'));
-    if(mv.view)mtPills.push(_frRow('i-wave','Vue','',_escHtml(String(mv.view).slice(0,30))));
+    if(mv.view)mtPills.push(_frRow('i-wave','Vue','',_escHtml(_tronque(mv.view,30))));
     if(mv.kids_menu)mtPills.push(_frRow('i-baby','Menu enfant','','oui'));
     if(mv.vegetarian)mtPills.push(_frRow('i-veggie','Options végétariennes','','oui'));
     if(mv.takeaway)mtPills.push(_frRow('i-takeaway','À emporter','','oui'));
@@ -4081,7 +4177,7 @@ function _renderPoiBody(p,mode){
       specialBlock='<div class="st-warn"><svg class="ic"><use href="#i-alert"/></svg> Interdit aux moins de '+stAge+' ans : à éviter avec tes enfants.</div>'+specialBlock;
     var stPills=[];
     if(sv.terrace)stPills.push(_frRow('i-sun','Terrasse','','oui'));
-    if(sv.view)stPills.push(_frRow('i-sunrise','Vue','',_escHtml(String(sv.view).slice(0,40))));
+    if(sv.view)stPills.push(_frRow('i-sunrise','Vue','',_escHtml(_tronque(sv.view,40))));
     if(sv.live_music)stPills.push(_frRow('i-music','Musique live','','oui'));
     if(sv.happy_hour)stPills.push(_frRow('i-glass','Happy hour','',_escHtml(String(sv.happy_hour))));
     if(sv.restaurant_on_site)stPills.push(_frRow('i-fork','Restaurant','Sur place','oui'));
