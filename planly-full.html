@@ -1160,6 +1160,11 @@ body{
    sous « La baignade ». Il précise ce que le titre annonce. */
 .bch-ssub{font-size:var(--t5);color:var(--tx3);line-height:var(--lh);
   margin:calc(-1 * var(--s3)) 0 var(--s4);}
+/* La mention à droite du titre : « 8 activités », « ~18 € / pers », « 15
+   parcours ». La maquette la pose au niveau du titre, pas en badge détaché. */
+.bch-slbl b{margin-left:auto;font-family:'DM Sans',sans-serif;font-size:var(--t5);
+  font-weight:600;color:var(--tx3);letter-spacing:0;}
+.bch-slbl{display:flex;align-items:baseline;gap:var(--s3);}
 
 /* Section labels — ligne décorative + contraste */
 .bs-section-lbl{
@@ -3413,9 +3418,12 @@ function _plActivitiesBlock(sp){
   var sub=!kids.length?'Âges et tailles demandés':forAll?forAll+' activité'+(forAll>1?'s':'')+' pour '+(kids.length>1?'tous tes enfants':'ton enfant'):'Vérifie les âges demandés';
   var legend=kids.length?'<div class="pl-legend"><span><span class="pl-kid ok">'+kids[0]+'</span>Âge de tes enfants · vert = c\'est possible</span>'
     +(acts.some(function(a){return _plNum(a.height_min_cm);})?'<span><span class="pl-kid maybe">'+kids[0]+'</span>Orange = selon sa taille, à vérifier</span>':'')+'</div>':'';
-  return'<div class="pl-block act"><div class="pl-block-hd">'+PL_ICON_TICKET+'<div class="pl-block-info"><div class="pl-block-title">Les activités</div><div class="pl-block-sub">'+sub+'</div></div>'
-    +'<div class="pl-block-badge">'+acts.length+' activité'+(acts.length>1?'s':'')+'</div></div>'
-    +'<div class="pl-list">'+items.join('')+legend+'</div></div>';
+  // Titre + sous-titre + lignes, comme la maquette. Les pastilles d'âge
+  // vert/rouge restent : c'est le vrai apport de ce bloc, elles disent d'un
+  // coup d'œil si TON enfant peut faire l'activité.
+  return'<div class="bch-slbl">Les activités<b>'+acts.length+' activité'+(acts.length>1?'s':'')+'</b></div>'
+    +'<div class="bch-ssub">'+sub+'</div>'
+    +'<div class="pl-list">'+items.join('')+legend+'</div>';
 }
 function _plShowsBlock(sp){
   var shows=sp.shows||[];
@@ -3514,16 +3522,19 @@ function _mtMealBlock(p,sp){
   var dMin=dpr?_plNum(dpr.min):null,dMax=dpr?_plNum(dpr.max):null;
   if(!opts.length&&avg==null&&dMin==null)return'';
   var sub=sp.cuisine_type?_escHtml(String(sp.cuisine_type)):(opts.length?'Formules publiées par le lieu':'Prix des plats à la carte');
-  return'<div class="pl-block meal"><div class="pl-block-hd">'+MT_ICON_MEAL
-    +'<div class="pl-block-info"><div class="pl-block-title">Ce qu\'on y mange</div><div class="pl-block-sub">'+sub+'</div></div>'
-    +(avg!=null?'<div class="pl-block-badge">~'+_plEuro(avg)+' / pers</div>'
-      :dMin!=null&&dMax!=null?'<div class="pl-block-badge">'+_plEuro(dMin)+'–'+_plEuro(dMax)+'</div>':'')+'</div>'
+  return'<div class="bch-slbl">Ce qu\'on y mange'
+    +(avg!=null?'<b>~'+_plEuro(avg)+' / pers</b>'
+      :dMin!=null&&dMax!=null?'<b>'+_plEuro(dMin)+'–'+_plEuro(dMax)+'</b>':'')+'</div>'
+    +'<div class="bch-ssub">'+sub+'</div>'
     +'<div class="pl-list">'
     +opts.map(function(o){return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(o.label||''))+'</div></div><div class="mt-price">'+_plEuro(_plNum(o.price))+'</div></div>';}).join('')
     // pas de formule publiée : on donne au moins la fourchette des plats à la carte
     +(!opts.length&&dMin!=null?'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">Plats à la carte</div><div class="st-item-detail">du moins cher au plus cher</div></div><div class="mt-price">'+_plEuro(dMin)+(dMax!=null&&dMax!==dMin?'–'+_plEuro(dMax):'')+'</div></div>':'')
     +(pr.notes?'<div class="st-item-detail" style="padding:2px 2px 0">'+_escHtml(String(pr.notes))+'</div>':'')
-    +'</div></div>';
+    // Une seule fermeture : celle de pl-list. La seconde fermait le pl-block
+    // supprimé, et refermait donc bch-body au milieu de la fiche — le
+    // restaurant perdait ses lignes, sa carte et son parking.
+    +'</div>';
 }
 function _mtMarketBlock(sp,subcat){
   // réservé aux marchés : un restaurant a lui aussi des "produits", mais pas de jour de marché
@@ -3785,21 +3796,22 @@ function _renderPoiBody(p,mode){
       var frtSub=[];
       if(sp.sentiers_km_total)frtSub.push(sp.sentiers_km_total+' km de sentiers entretenus');
       if(sp.superficie_ha)frtSub.push(sp.superficie_ha+' ha');
-      var frtHeaderHtml='<div class="frt-header">'
-        +'<div class="frt-header-icon">🗺️</div>'
-        +'<div class="frt-header-info">'
-        +'<div class="frt-header-title">Sentiers balisés</div>'
-        +(frtSub.length?'<div class="frt-header-sub">'+frtSub.join(' · ')+'</div>':'')
-        +'</div>'
-        +'<div class="frt-header-badge">'+frtNbTotal+' parcours</div>'
-        +'</div>';
+      // Titre de section et sous-titre, comme partout ailleurs. L'en-tête à
+      // emoji, icône ronde et badge détaché était le dernier vestige de
+      // l'ancien gabarit sur cette typologie.
+      var frtHeaderHtml='<div class="bch-slbl">Sentiers balisés'
+        +'<b>'+frtNbTotal+' parcours</b></div>'
+        +(frtSub.length?'<div class="bch-ssub">'+frtSub.join(' · ')+'</div>':'');
       // Tabs
       var frtTabsHtml='<div class="frt-tabs">'
         +'<button class="frt-tab active" id="frt-tab-rando" onclick="frtSwitchTab(\'rando\')"><svg class="ic"><use href="#i-walk"/></svg> Randonnée '+(frtRando.length||'')+'</button>'
         +(frtVtt.length?'<button class="frt-tab" id="frt-tab-vtt" onclick="frtSwitchTab(\'vtt\')"><svg class="ic"><use href="#i-bike"/></svg> Vélo '+frtVtt.length+'</button>':'')
         +'</div>';
       var frtListHtml='<div id="frt-trails-list">'+_frtRenderTrailList(frtRando)+'</div>';
-      specialBlock='<div class="frt-block">'+frtHeaderHtml+frtTabsHtml+frtListHtml+'</div>';
+      // Plus d'enveloppe : .frt-block n'apportait qu'une marge et un filet
+      // haut, que le titre de section pose désormais lui-même. La garder
+      // doublait le filet sur chaque fiche de forêt.
+      specialBlock=frtHeaderHtml+frtTabsHtml+frtListHtml;
     }
 
   }else if(sub==='Balades & Promenades'){
