@@ -1161,6 +1161,15 @@ body{
 /* Section label beach */
 .bch-slbl{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);font-weight:600;color:var(--tx);letter-spacing:-.01em;margin:var(--s6) 0 var(--s4);padding-top:var(--s5);border-top:1px solid var(--line);line-height:var(--lh-t);}
 .bch-body>.bch-slbl:first-child{margin-top:0;padding-top:0;border-top:0;}
+/* Deux niveaux de titre, comme la maquette. Les sections NOMMÉES — « La vue »,
+   « Coffrets cadeaux », « Les jeux » — sont en Fraunces : elles portent la
+   matière propre du lieu. Les sections de SERVICE — « Ce qu'il faut savoir »,
+   « Horaires », « Se garer » — sont en petites capitales : elles reviennent sur
+   toutes les fiches et ne doivent pas peser autant. L'app les mettait au même
+   niveau, ce qui remettait à plat la hiérarchie qu'on venait de créer. */
+.bch-slbl.mineur{font-family:'DM Sans',sans-serif;font-size:11.5px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--tx3);}
+
 /* Le sous-titre d'une section, comme la maquette : « Panorama de la côte
    sauvage vendéenne » sous « La vue », « Poste de secours en front de mer »
    sous « La baignade ». Il précise ce que le titre annonce. */
@@ -3686,13 +3695,17 @@ function _ficheHeader(p,sp,ribbonItems,mode){
 var _REPS_ICONES={'Affluence':'i-group','Difficulté':'i-boot','Sentiers':'i-map',
   'Superficie':'i-tree','Sur place':'i-clock','Pluie':'i-umbrella','Âge':'i-baby',
   'Budget':'i-card','Ferme à':'i-clock','Salles':'i-film','Restaurant':'i-fork',
+  // Sans ces quatre-là, les lignes venues du bandeau restaient muettes.
+  'Note':'i-star','Durée':'i-clock','Billet famille':'i-family','Billets séparés':'i-ticket',
   'Ambiance':'i-cocktail','Longueur':'i-walk','Type':'i-loop','Altitude':'i-cliff',
   'Accès':'i-walk','Meilleur moment':'i-sun'};
 function _repsEnLignes(ribbonItems){
   return (ribbonItems||[]).filter(function(r){
     return r&&r.val&&r.val!=='—'&&r.lbl!=='Distance';
   }).map(function(r){
-    var cls=/\bgr\b/.test(r.cls||'')?'on':/\brd\b/.test(r.cls||'')?'warn':'';
+    // Une affluence « Normal » n'est pas une bonne nouvelle, c'est un état :
+    // le vert y était décoratif. Il ne reste que l'ambre, qui avertit.
+    var cls=/\brd\b/.test(r.cls||'')?'warn':'';
     return _frRow(_REPS_ICONES[r.lbl]||'','' +r.lbl,'',r.val,cls);
   });
 }
@@ -4030,12 +4043,14 @@ function _renderPoiBody(p,mode){
       var dep=fp.depart_saint_gilles||fp.depart_fromentine||null;
       var ar=dep&&(dep.ar_journee||dep.aller_retour)||null;
       if(ar){
-        if(_plNum(ar.adulte)!=null)patFerry.push(_frRow('','Adulte','',_plEuro(_plNum(ar.adulte))));
+        // Une icône par ligne, comme partout : les tarifs du ferry étaient les
+        // seules lignes muettes de la fiche.
+        if(_plNum(ar.adulte)!=null)patFerry.push(_frRow('i-ferry','Adulte','',_plEuro(_plNum(ar.adulte))));
         var enf=_plNum(ar.enfant_4_17)!=null?_plNum(ar.enfant_4_17):_plNum(ar.enfant);
-        if(enf!=null)patFerry.push(_frRow('','Enfant','4 à 17 ans',_plEuro(enf)));
+        if(enf!=null)patFerry.push(_frRow('i-family','Enfant','4 à 17 ans',_plEuro(enf)));
         var pref=_plNum(ar.preferentiel_60_etudiant);
-        if(pref!=null)patFerry.push(_frRow('','Tarif préférentiel','+60 ans, étudiant',_plEuro(pref)));
-        if(_plNum(ar.bebe)!=null)patFerry.push(_frRow('','Bébé','Moins de 4 ans',_plEuro(_plNum(ar.bebe))));
+        if(pref!=null)patFerry.push(_frRow('i-card','Tarif préférentiel','+60 ans, étudiant',_plEuro(pref)));
+        if(_plNum(ar.bebe)!=null)patFerry.push(_frRow('i-baby','Bébé','Moins de 4 ans',_plEuro(_plNum(ar.bebe))));
       }
       if(fp.reduction_carte_familles_nombreuses)
         patSavoir.push(_frRow('i-family','Familles nombreuses','Réduction sur présentation de la carte',''));
@@ -5145,7 +5160,26 @@ function _specIcon(v){
 // à toutes les typologies — elle était enfermée dans le bloc plage.
 //   ic : symbole du sprite · nom : l'étiquette · precision : la sous-ligne
 //   valeur : ce qui s'affiche à droite · cls : 'on' (vert) ou 'warn' (ambre)
+// Une valeur commence par une majuscule : « élevé », « faible », « moyen »
+// venaient des données en minuscule et juraient à côté de « Sable fin » ou
+// « Vagues modérées ». On ne touche ni aux heures, ni aux prix, ni aux mots
+// de service (« oui », « sur place »), qui se lisent mieux ainsi.
+var _MOTS_SERVICE=/^(oui|non|sur place|le matin|payant|compris|gratuit|autorisé|admis|proposée|praticable|obligatoire|sur réservation|sur RDV|en partie|idéal|dès|à partir)/;
+function _majuscule(v){
+  var s=String(v==null?'':v);
+  if(!s||/^[\d<]/.test(s)||_MOTS_SERVICE.test(s))return s;
+  return s.charAt(0).toUpperCase()+s.slice(1);
+}
 function _frRow(ic,nom,precision,valeur,cls){
+  valeur=_majuscule(valeur);
+  // Une valeur longue n'est pas une valeur, c'est une PRÉCISION : les horaires
+  // d'un marché faisaient 120 caractères dans la colonne de droite, où ils
+  // écrasaient leur étiquette. Au-delà de 24 signes, la valeur bascule sous le
+  // libellé — sauf si une précision y est déjà, auquel cas on les joint.
+  if(valeur&&String(valeur).length>24){
+    precision=precision?precision+' · '+valeur:valeur;
+    valeur='';
+  }
   return '<div class="fr-row">'
     +(ic?'<svg class="ic"><use href="#'+ic+'"/></svg>':'')
     +'<div class="b"><div class="n">'+nom+'</div>'
