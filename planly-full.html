@@ -1492,10 +1492,19 @@ body{
 .pdv-block + .bch-conseil{margin-top:16px;}
 
 /* ── PL — Parcs & Loisirs (horaires, prix groupe, activités, animations) ── */
-.pl-hours{display:flex;align-items:center;gap:8px;padding:12px 14px;border-radius:12px;background:var(--ok-soft);border:1px solid var(--ok-soft);color:var(--ok);font-size:var(--t5);line-height:var(--lh);margin-bottom:12px;}
+/* Dernier bloc coloré de la fiche : un pavé de texte vert sur fond vert, tout
+   en gras, qui jurait avec le reste passé à plat. Il redevient une ligne
+   ordinaire — seul l'état « ouvert / fermé » garde sa couleur, parce que lui
+   dit quelque chose. */
+.pl-hours{display:flex;align-items:flex-start;gap:var(--s3);padding:var(--s3) 0;
+  border-radius:0;background:transparent;border:0;border-top:1px solid var(--line-2);
+  color:var(--tx2);font-size:var(--t5);line-height:var(--lh);margin-bottom:var(--s4);}
+.pl-hours b{color:var(--ok);font-weight:600;}
 .pl-hours svg{flex-shrink:0;}
 .pl-hours{flex-wrap:wrap;cursor:pointer;}
-.pl-hours.closed{background:var(--bg);border-color:var(--warn-soft);color:var(--warn);}
+/* Fermé : seul l'état change de couleur, pas tout le pavé. */
+.pl-hours.closed{background:transparent;border-color:transparent;color:var(--tx2);}
+.pl-hours.closed b,.pl-hours.closed svg{color:var(--warn);}
 .pl-hours-more{font-size:var(--t5);font-weight:500;line-height:var(--lh);}
 .pl-week{display:none;width:100%;margin-top:6px;padding-top:8px;border-top:1px solid rgba(21,128,61,.15);}
 .pl-hours.open .pl-week{display:block;}
@@ -3487,8 +3496,26 @@ function _stKnowBlock(sp){
   // « Ce qu'il faut savoir » comme partout ailleurs : un titre de section et
   // des lignes, au lieu d'un cadre blanc arrondi à puces rondes. C'est la
   // section qui manquait sur la plupart des fiches.
+  // Une icône par sujet plutôt qu'un « i » générique sur chaque ligne : la
+  // maquette met un billet devant une réservation, un vélo devant un vélo.
+  var _icoSavoir=function(t){
+    var s=String(t).toLowerCase();
+    if(/r[ée]serv|complet|billet/.test(s))return 'i-ticket';
+    if(/chien|animal/.test(s))return 'i-dog';
+    if(/enfant|b[ée]b[ée]|famille/.test(s))return 'i-family';
+    if(/v[ée]lo/.test(s))return 'i-bike';
+    if(/parking|voiture|garer/.test(s))return 'i-car';
+    if(/horaire|ouvert|ferm[ée]|service/.test(s))return 'i-clock';
+    if(/prix|tarif|gratuit|€/.test(s))return 'i-card';
+    if(/plage|mer|mar[ée]e/.test(s))return 'i-wave';
+    if(/pluie|temps|ombre|soleil/.test(s))return 'i-cloud';
+    if(/interdit|obligatoire|attention|pr[ée]voir/.test(s))return 'i-alert';
+    if(/manger|restaurant|table|carte/.test(s))return 'i-fork';
+    if(/pmr|accessib|fauteuil/.test(s))return 'i-pmr';
+    return 'i-info';
+  };
   return'<div class="bch-slbl">Ce qu\'il faut savoir</div>'
-    +_frRows(k.map(function(t){return _frRow('i-info',_escHtml(String(t)),'','');}))
+    +_frRows(k.map(function(t){return _frRow(_icoSavoir(t),_escHtml(String(t)),'','');}))
     +'<div class="bch-ssrc">D\'après le site officiel du lieu'+(src?' · vérifié le '+src:'')+'</div>';
 }
 function _stFacilitiesBlock(sp,sub){
@@ -4027,7 +4054,12 @@ function _renderPoiBody(p,mode){
     if(am.stroller_ok)plPills.push(_frRow('i-stroller','Poussette','','praticable'));
     (am.rules||[]).slice(0,3).forEach(function(r){
       r=String(r||'');
-      if(r)plPills.push(_frRow(/chaussette/i.test(r)?'i-socks':'i-alert','À prévoir',_escHtml(r.charAt(0).toUpperCase()+r.slice(1)),'','warn'));
+      // Toutes les règles portaient la même étiquette « À prévoir » : deux
+      // règles sur un parc affichaient donc deux lignes identiques de nom.
+      // La règle EST le libellé, sa nature devient la précision.
+      if(r)plPills.push(_frRow(/chaussette/i.test(r)?'i-socks':'i-alert',
+        _escHtml(r.charAt(0).toUpperCase()+r.slice(1)),
+        /chaussette/i.test(r)?'À prévoir dans le sac':'À savoir avant de venir',''));
     });
     pillsHtml=_frRows(plPills.concat(_frFromSpecs(p.quickSpecs)));
     var plKids=_plGroup().kids;
@@ -4098,8 +4130,11 @@ function _renderPoiBody(p,mode){
     if(sp.bike_allowed)patSavoir.push(_frRow('i-bike','Vélo autorisé','Le meilleur moyen de circuler',''));
     if(sp.stroller_ok===false)patSavoir.push(_frRow('i-stroller','Poussette déconseillée','Terrain irrégulier',''));
 
+    // « Visite guidée » s'affichait deux fois — une avec sa valeur, une nue —
+    // parce que la quickSpec porte le même libellé que ma ligne nommée.
     var patAutres=_frFromSpecs(p.quickSpecs,
-      ['époque',sp.historical_period,'visite','terrain',sp.terrain_type,'difficulté',sp.difficulty,'ombre','vélo','poussette']);
+      ['époque',sp.historical_period,'visite guidée','visite','terrain',sp.terrain_type,
+       'difficulté',sp.difficulty,'ombre','vélo','poussette','entrée libre','panoramique']);
     pillsHtml=(patFerry.length?'<div class="bch-slbl">La traversée'
         +(fp&&fp.compagnie?'<b>'+_escHtml(String(fp.compagnie))+'</b>':'')+'</div>'
         +'<div class="bch-ssub">Aller-retour dans la journée</div>'+_frRows(patFerry):'')
