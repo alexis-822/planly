@@ -927,7 +927,7 @@ body{
 .bs-pill.pw{background:var(--warn-soft);color:var(--warn);border-color:transparent;}
 
 /* ── BEACH CARD — structure indépendante, correspond à la référence exacte ── */
-.bch-body{padding:var(--s4) var(--s4) var(--s6);background:var(--bg);}
+.bch-body{padding:var(--s5) 18px var(--s6);background:var(--bg);}
 /* Ribbon */
 .bch-ribbon{display:grid;grid-template-columns:repeat(4,1fr);background:white;border-radius:12px;overflow:hidden;margin-bottom:12px;border:0.5px solid var(--line);}
 .bch-ri{padding:12px 4px;text-align:center;}
@@ -937,13 +937,13 @@ body{
 .bch-rl{font-size:var(--t6);color:var(--tx3);text-transform:uppercase;letter-spacing:0.3px;line-height:var(--lh);}
 /* Bloc marine */
 .bch-marine{background:var(--brand-l);border-radius:14px;overflow:hidden;margin-bottom:14px;}
-.bch-marine-header{background:#B5D4F4;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;}
+.bch-marine-header{background:#B5D4F4;padding:var(--s3) var(--s4);display:flex;align-items:center;justify-content:space-between;}
 .bch-marine-header-left{display:flex;align-items:center;gap:8px;}
 .bch-marine-header-icon{font-size:var(--t3);line-height:var(--lh);}
 .bch-marine-header-main{font-size:var(--t5);font-weight:700;color:#0C447C;line-height:var(--lh);}
 .bch-marine-header-sub{font-size:var(--t6);color:#185FA5;margin-top:1px;line-height:var(--lh);}
 .bch-marine-header-time{background:rgba(255,255,255,0.7);border-radius:20px;padding:4px 12px;font-size:var(--t5);font-weight:700;color:#0C447C;white-space:nowrap;line-height:var(--lh);}
-.bch-marine-body{padding:12px 14px;}
+.bch-marine-body{padding:var(--s4);}
 .bch-marine-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:10px;}
 .bch-marine-temp-big{font-size:var(--t1);font-weight:800;line-height:1;}
 .bch-marine-temp-lbl{font-size:var(--t5);font-weight:600;margin-top:3px;line-height:var(--lh);}
@@ -962,8 +962,8 @@ body{
 .bch-cdot{width:16px;height:2px;background:var(--brand);border-radius:1px;flex-shrink:0;}
 .bch-ctxt{font-size:var(--t4);color:var(--brand-d);line-height:1.6;}
 /* Pills */
-.bch-pills-row{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s2);}
-.bch-pill{border-radius:22px;padding:var(--s2) 14px;font-size:var(--t5);display:inline-flex;align-items:center;gap:3px;line-height:var(--lh);}
+.bch-pills-row{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s4);}
+.bch-pill{border-radius:22px;padding:var(--s2) var(--s3);font-size:var(--t5);display:inline-flex;align-items:center;gap:var(--s2);line-height:var(--lh);}
 .bch-pi{background:var(--brand-l);color:#0C447C;}
 .bch-ps{background:var(--ok-soft);color:var(--ok);}
 .bch-pw{background:var(--warn-soft);color:var(--warn);}
@@ -978,7 +978,7 @@ body{
 .bch-avis-count{font-size:var(--t5);color:var(--tx3);line-height:var(--lh);}
 .bch-btn-avis{background:var(--brand-l);border:none;border-radius:20px;padding:5px 12px;font-size:var(--t6);color:#185FA5;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;line-height:var(--lh);}
 .bch-btn-avis{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;}
-.bch-rsum{background:white;border-radius:10px;padding:12px 14px;border:0.5px solid var(--line);font-size:var(--t4);color:var(--tx2);line-height:1.65;}
+.bch-rsum{background:var(--sheet);border-radius:var(--r2);padding:var(--s4);border:1px solid var(--line);font-size:var(--t4);color:var(--tx2);line-height:1.65;}
 .bch-rsum-src{font-size:var(--t6);color:var(--txl);margin-top:8px;line-height:var(--lh);}
 /* Réseaux sociaux : des liens, pas des badges — même bleu que "Voir sur Google" */
 .soc-row{display:flex;flex-wrap:wrap;gap:8px;}
@@ -1027,7 +1027,7 @@ body{
 
 /* Parking liste directe */
 .bch-pk-list{margin-bottom:14px;display:flex;flex-direction:column;gap:8px;}
-.bch-pk-item{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;cursor:pointer;background:white;}
+.bch-pk-item{display:flex;align-items:center;gap:var(--s3);padding:var(--s3) var(--s4);border-radius:12px;cursor:pointer;background:white;}
 .bch-pk-item.primary{border:1.5px solid var(--brand);}
 .bch-pk-item.secondary{border:0.5px solid var(--line);}
 .bch-pk-badge-blue{width:32px;height:32px;background:var(--brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:var(--t4);font-weight:700;color:white;flex-shrink:0;line-height:var(--lh);}
@@ -1047,7 +1047,8 @@ body{
 .bch-btn-avis{min-height:44px;font-size:var(--t5);font-weight:600;padding:10px 18px;border-radius:22px;line-height:var(--lh);}
 
 /* Section label beach */
-.bch-slbl{font-size:var(--t5);font-weight:700;color:var(--txm);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:10px;margin-top:20px;line-height:var(--lh);}
+.bch-slbl{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);font-weight:600;color:var(--tx);letter-spacing:-.01em;margin:var(--s6) 0 var(--s4);padding-top:var(--s5);border-top:1px solid var(--line);line-height:var(--lh-t);}
+.bch-body>.bch-slbl:first-child{margin-top:0;padding-top:0;border-top:0;}
 
 /* Section labels — ligne décorative + contraste */
 .bs-section-lbl{
@@ -1139,8 +1140,11 @@ body{
 
 /* ── BARRE D'ACTION ── */
 .bs-actions{
-  display:flex;gap:8px;
-  padding:12px 16px 18px;
+  display:flex;gap:var(--s2);
+  /* La zone sûre manquait ici alors qu'elle était présente sur la variante
+     plage : sur iPhone, le bouton passait sous l'indicateur d'accueil pour
+     toutes les autres fiches. */
+  padding:var(--s3) var(--s4) calc(var(--s4) + env(safe-area-inset-bottom,0px));
   border-top:1px solid var(--bg-d);
   background:var(--wh);flex-shrink:0;
 }
@@ -1303,7 +1307,7 @@ body{
 .frt-tab{flex:0 0 auto;padding:8px 13px;border-radius:var(--r3);border:1px solid var(--line);background:transparent;font-size:var(--t5);font-weight:600;color:var(--tx3);cursor:pointer;text-align:center;font-family:'DM Sans',sans-serif;line-height:var(--lh);}
 .frt-tab.active{background:var(--deep);border-color:transparent;color:var(--on-deep);}
 .frt-list{display:flex;flex-direction:column;gap:0;background:transparent;padding:0;}
-.frt-item{background:transparent;border-radius:0;padding:var(--s3) 0;display:flex;align-items:center;gap:11px;margin-top:0;border-top:1px solid var(--line-2);}
+.frt-item{background:transparent;border-radius:0;padding:var(--s3) 0;display:flex;align-items:center;gap:var(--s3);margin-top:0;border-top:1px solid var(--line-2);}
 .frt-item-rank{width:20px;height:auto;border-radius:0;background:transparent;color:var(--tx3);font-size:var(--t5);font-weight:700;display:flex;align-items:center;justify-content:flex-start;flex-shrink:0;line-height:var(--lh);}
 .frt-item-body{flex:1;min-width:0;}
 .frt-item-name{font-size:var(--t4);font-weight:600;color:var(--tx);white-space:normal;line-height:var(--lh);}
@@ -1371,7 +1375,7 @@ body{
 .pl-price-for{font-size:var(--t5);color:var(--tx3);line-height:var(--lh);}
 .pl-price-who{font-size:var(--t5);color:var(--tx3);margin-top:4px;line-height:var(--lh);}
 .pl-price-deal{display:flex;align-items:center;gap:8px;margin-top:12px;padding:9px 12px;border-radius:10px;background:var(--ok-soft);color:var(--ok);font-size:var(--t5);line-height:var(--lh);}
-.pl-price-lines{display:flex;flex-direction:column;gap:8px;margin-top:12px;padding-top:10px;border-top:0.5px solid var(--line-2);font-size:var(--t5);color:var(--tx2);line-height:var(--lh);}
+.pl-price-lines{display:flex;flex-direction:column;gap:var(--s3);margin-top:12px;padding-top:10px;border-top:0.5px solid var(--line-2);font-size:var(--t5);color:var(--tx2);line-height:var(--lh);}
 .pl-price-line{display:flex;justify-content:space-between;gap:10px;}
 .pl-price-line b{font-weight:600;color:var(--tx);white-space:nowrap;}
 .pl-price-line.free b{color:var(--ok);}
@@ -1398,7 +1402,7 @@ body{
 .pl-list{padding:0;display:flex;flex-direction:column;gap:0;}
 .pl-block.act .pl-list{background:transparent;}
 .pl-block.show .pl-list{background:transparent;}
-.pl-item{background:transparent;border-radius:0;border-top:1px solid var(--line-2);padding:var(--s3) 0;display:flex;align-items:center;gap:11px;}
+.pl-item{background:transparent;border-radius:0;border-top:1px solid var(--line-2);padding:var(--s3) 0;display:flex;align-items:center;gap:var(--s3);}
 .pl-item-body{flex:1;min-width:0;}
 .pl-item-name{font-size:var(--t4);font-weight:600;color:var(--tx);line-height:var(--lh);}
 .pl-item-meta{font-size:var(--t5);color:var(--tx3);margin-top:2px;line-height:var(--lh);}
@@ -1419,7 +1423,7 @@ body{
 .st-know{background:var(--wh);border-radius:14px;padding:var(--s4);margin-bottom:var(--s4);}
 .st-know-hd{font-size:var(--t5);font-weight:700;color:var(--tx);margin-bottom:12px;line-height:var(--lh);}
 .st-know-row{display:flex;gap:10px;align-items:flex-start;font-size:var(--t5);color:var(--tx2);line-height:1.5;}
-.st-know-row+.st-know-row{margin-top:10px;}
+.st-know-row+.st-know-row{margin-top:var(--s4);}
 .st-know-dot{width:6px;height:6px;border-radius:50%;background:#2E2A5B;margin-top:7px;flex-shrink:0;}
 .st-know-src{font-size:var(--t6);color:var(--txl);line-height:var(--lh);margin-top:12px;padding-top:10px;border-top:0.5px solid var(--line-2);}
 .st-warn{display:flex;align-items:center;gap:8px;padding:10px 13px;border-radius:12px;background:var(--bg);border:1px solid var(--warn-soft);color:var(--warn);font-size:var(--t5);line-height:1.45;margin-bottom:12px;}
@@ -1452,8 +1456,8 @@ body{
   background:var(--brand-l);border:0;font-family:'DM Sans',sans-serif;cursor:pointer;text-align:center;}
 .bch-act.q{background:transparent;box-shadow:inset 0 0 0 1px var(--line);}
 .bch-act:active{transform:scale(.97);}
-.bch-reps{display:flex;margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--line);}
-.bch-rep{flex:1;min-width:0;padding-right:10px;}
+.bch-reps{display:flex;gap:var(--s4);margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--line);}
+.bch-rep{flex:1;min-width:0;}
 .bch-rep-l{font-size:var(--t6);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--txl);line-height:var(--lh);}
 .bch-rep-v{font-size:var(--t4);font-weight:700;color:var(--tx);margin-top:3px;line-height:var(--lh);}
 .bch-rep-v.bl{color:var(--brand-d);}
@@ -3770,7 +3774,16 @@ function setView(v){}
 
 // ── PILLS ──
 var pillLevel=0,activeTuile=null,activeL1=null;
-var TUILES=[{id:'air',label:'Nature & Grand Air',emoji:'🌿'},{id:'sport',label:'Sport & Aventure',emoji:'🏃'},{id:'patri',label:'Patrimoine',emoji:'🏛️'},{id:'vivre',label:'Art de vivre',emoji:'🍽️'},{id:'parcs',label:'Parcs & Loisirs',emoji:'🎡'},{id:'sorties',label:'Sorties & Détente',emoji:'🎬'},{id:'events',label:'Événements',emoji:'🎪'}];
+// La rangée de catégories de l'explorer, celle qu'on a en permanence sous les
+// yeux. Le champ garde son nom `emoji` — il est lu à trois endroits — mais il
+// porte désormais l'id d'un symbole du sprite.
+var TUILES=[{id:'air',label:'Nature & Grand Air',emoji:'i-tree'},{id:'sport',label:'Sport & Aventure',emoji:'i-walk'},{id:'patri',label:'Patrimoine',emoji:'i-castle'},{id:'vivre',label:'Art de vivre',emoji:'i-fork'},{id:'parcs',label:'Parcs & Loisirs',emoji:'i-play'},{id:'sorties',label:'Sorties & Détente',emoji:'i-film'},{id:'events',label:'Événements',emoji:'i-note'}];
+// Rend le champ `emoji` d'une tuile, qu'il porte un id de sprite ou un caractère.
+function _tuileIc(v){return /^i-[a-z0-9-]+$/.test(v||'')?'<svg class="ic sm"><use href="#'+v+'"/></svg>':(v||'');}
+// Le badge de catégorie affiche p.cat, qui contient l'emoji DANS la donnée
+// (« 🌊 Nature & Grand Air »). On le retire à l'affichage plutôt que de
+// retoucher 84 lieux : la donnée reste lisible, la vignette redevient sobre.
+function _catSansEmoji(c){return String(c||'').replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}️]/gu,'').trim();}
 var PL1={air:['Toutes','<svg class="ic"><use href="#i-parasol"/></svg> Plages & Côte','<svg class="ic"><use href="#i-tree"/></svg> Forêts & Nature','<svg class="ic"><use href="#i-camera"/></svg> Points de vue','<svg class="ic"><use href="#i-walk"/></svg> Balades & Promenades'],sport:['Toutes','<svg class="ic"><use href="#i-boot"/></svg> Randonnée','<svg class="ic"><use href="#i-bike"/></svg> Vélo','<svg class="ic"><use href="#i-kayak"/></svg> Nautisme','<svg class="ic"><use href="#i-dumbbell"/></svg> Autres sports'],patri:['Toutes','<svg class="ic"><use href="#i-village"/></svg> Villages & Sites','<svg class="ic"><use href="#i-castle"/></svg> Châteaux & Monuments','<svg class="ic"><use href="#i-castle"/></svg> Musées & Culture'],vivre:['Toutes','<svg class="ic"><use href="#i-fork"/></svg> Restaurants','<svg class="ic"><use href="#i-basket"/></svg> Marchés & Terroir','<svg class="ic"><use href="#i-bottle"/></svg> Dégustations'],parcs:['Toutes','<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 5v2m0 10v2" stroke-dasharray="2 2"/><path d="M2 10a3 3 0 010 4"/><path d="M22 10a3 3 0 000 4"/></svg> Jeux & Divertissement','<svg class="ic"><use href="#i-lion"/></svg> Parcs animaliers','<svg class="ic"><use href="#i-fish"/></svg> Aquariums','<svg class="ic"><use href="#i-flower"/></svg> Parcs botaniques'],sorties:['Toutes','<svg class="ic"><use href="#i-film"/></svg> Cinéma','<svg class="ic"><use href="#i-cocktail"/></svg> Bars & Ambiance','<svg class="ic"><use href="#i-slot"/></svg> Casino & Jeux','<svg class="ic"><use href="#i-swim"/></svg> Piscines & Spa'],events:['Toutes','<svg class="ic"><use href="#i-note"/></svg> Concerts & Spectacles','<svg class="ic"><use href="#i-group"/></svg> Fêtes & Foires','<svg class="ic"><use href="#i-moon"/></svg> Marchés nocturnes']};
 
 // Mapping tuile/L1 → catégorie POI
@@ -3861,7 +3874,7 @@ function renderPillsL0(){
   var activeEl=null;
   TUILES.forEach(function(tu){
     var isActive=activeTuile===tu.id;
-    var e=mk('pill'+(isActive?' active':''),tu.emoji+' '+tu.label);
+    var e=mk('pill'+(isActive?' active':''),_tuileIc(tu.emoji)+' '+tu.label);
     e.onclick=(function(id){return function(){drillDown(id);};})(tu.id);
     w.appendChild(e);
     if(isActive)activeEl=e;
@@ -3938,7 +3951,7 @@ function renderList(){
       +'<div class="lcard-img-wrap" data-srcs="'+srcsAttr+'">'
       +'<img src="'+imgs[0]+'" alt="" loading="lazy">'
       +dotsHtml
-      +'<div class="lcard-cat">'+p.cat+'</div>'
+      +'<div class="lcard-cat">'+_catSansEmoji(p.cat)+'</div>'
       +inco
       +'</div>'
       +'<div class="lcard-body">'
@@ -4364,7 +4377,7 @@ function showSearchInitial(){
       var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
       return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
         +'<img src="'+img+'" alt="" loading="lazy">'
-        +'<div class="lcard-cat">'+p.cat+'</div>'
+        +'<div class="lcard-cat">'+_catSansEmoji(p.cat)+'</div>'
         +'<div class="lcard-inco"><svg class="ic"><use href="#i-star"/></svg> Incontournable</div>'
         +'<div class="lcard-body"><div class="lcard-name">'+p.name+'</div>'
         +'<div style="font-size:11px;color:var(--txm);margin-bottom:4px"><svg class="ic"><use href="#i-pin"/></svg> '+(p.commune||'')+'</div>'
@@ -4436,7 +4449,7 @@ function doSearch(q){
     var inco=p.inco?'<div class="lcard-inco"><svg class="ic"><use href="#i-star"/></svg> Incontournable</div>':'';
     return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
       +'<img src="'+img+'" alt="" loading="lazy">'
-      +'<div class="lcard-cat">'+p.cat+'</div>'
+      +'<div class="lcard-cat">'+_catSansEmoji(p.cat)+'</div>'
       +inco
       +'<div class="lcard-body">'
       +'<div class="lcard-name">'+p.name+'</div>'
@@ -4813,7 +4826,7 @@ function renderActivites(){
       +'<div class="lcard-img-wrap" data-srcs="'+srcsAttr+'">'
       +'<img src="'+imgs[0]+'" alt="" loading="lazy">'
       +dotsHtml
-      +'<div class="lcard-cat">'+p.cat+'</div>'
+      +'<div class="lcard-cat">'+_catSansEmoji(p.cat)+'</div>'
       +inco
       +'</div>'
       +'<div class="lcard-body">'
@@ -5233,7 +5246,7 @@ function _renderMapPillsL1(){
     if(tu.id==='events')return;
     var el=document.createElement('div');
     el.className='map-fpill'+(activeL1===tu.id?' on':'');
-    el.textContent=tu.emoji+' '+tu.label;
+    el.innerHTML=_tuileIc(tu.emoji)+' '+tu.label;
     el.onclick=(function(id){return function(){mapFilter(id);};})(tu.id);
     row.appendChild(el);
   });
