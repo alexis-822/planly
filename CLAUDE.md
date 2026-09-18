@@ -170,6 +170,96 @@ Prototype mobile avec :
 - **Jetons posés** dans `:root` sans rien renommer : `--deep`/`--on-deep` (états sélectionnés, à la place du noir), `--tx2`/`--tx3`/`--line`/`--line-2`, `--ok`/`--warn`/`--bad`/`--nature` et leurs fonds doux, échelle `--t1`→`--t6` (6 niveaux au lieu de 21 tailles), `--r1`→`--r3` (3 rayons au lieu de 16), `--sh` (1 ombre au lieu de 20)
 - **Référence de non-régression** : `scratchpad/capture_fiches.js` rend les 84 fiches dans Node avec un stub DOM et capture le texte affiché → `reference-fiches.json`. Sert à prouver, après chaque étape, qu'aucune information n'est perdue. État de départ : 84 fiches, 0 erreur, 0 vide, texte de 1 002 à 3 230 caractères
 
+### 2026-09-18 — Onglet camping, icones, hierarchie de la fiche
+
+**Onglet camping** (a deployer chez un camping pour test). Un 4e onglet apparait
+dans la barre du bas quand « Sejour en camping » est coche a l'onboarding, et
+disparait si on decoche. Trois sous-onglets — Accueil, Services, Animations —
+plus le plan du camping en feuille coulissante. Le choix est persiste
+(`planly_camping`) : c'est le premier element de profil a l'etre, un onglet qui
+disparaitrait a chaque rechargement n'aurait aucun sens pour un sejour d'une
+semaine. Le nom se pre-remplit avec La Dune des Sables, seul partenaire.
+Donnees : identite, piscine et ses regles, restaurant, services et soirees
+viennent de leurs sources officielles ; **les animations enfants, les plats et
+l'offre partenaire sont inventes**, et **les tarifs des services viennent d'un
+autre camping Chadotel** — affiche « a confirmer » a l'ecran, pas seulement en
+commentaire. Photos dans `images/camping/`.
+
+**Capture d'ecran automatisee.** Playwright + Chrome du systeme
+(`channel:'chrome'`) : l'app se photographie en 390 px sans intervention.
+Scripts dans le scratchpad : `capture_ecran.js`, `capture_camping.js`,
+`capture_typos.js`, `capture_feuilles.js`, `planche_icones.js` (planche des
+icones en grand), `controle.js` (syntaxe + sprite + coherence des filtres).
+**C'est ce qui a revele le premier bug** : `bs-notoriety` recevait du HTML par
+`.textContent`, donc chaque fiche affichait `<svg class="ic">…` en toutes
+lettres en travers de la photo. Le harnais de rendu textuel ne pouvait pas le
+voir.
+
+**Icones : 307 pastilles migrees.** Le melange de styles ne venait pas du
+gabarit mais des **donnees** : `pois.js` portait 173 punaises et 46 pictos
+fauteuil, poses a 8 px d'icones au trait dans la meme rangee. Corrige **des deux
+cotes** — `make_quick_specs` (inject_pois.py) ne produit plus d'emoji, et
+pois.js est migre sans rejouer la collecte (`scratchpad/icones_pois.py`). La
+punaise, collee a l'identique sur 173 pastilles, est supprimee : elle ne disait
+rien que le libelle ne disait deja. Sprite : 117 symboles. Emojis restants dans
+planly-full.html : **41, contre 175**.
+
+**Les icones se REGARDENT avant d'etre validees.** Trois tracas de tente et
+trois de chien ont ete necessaires : un triangle ferme se lit « danger » quoi
+qu'on mette dedans, et des oreilles dressees sur une face ronde font un chat
+quoi qu'on mette dessous. Le chien est devenu une empreinte de patte — a 18 px,
+un animal entier n'a pas la place de se lire.
+
+**Hierarchie de la fiche : la pastille cede la place a la LIGNE.** C'est la
+reponse au grief « tout est au meme niveau ». Une pastille dit « il y a des
+douches » ; une ligne dit « Douches ······ sur place » — etiquette a gauche,
+valeur grasse a droite, filet 1px entre. Motif `.fr-row` / `_frRow()` /
+`_frRows()`, declare au niveau du fichier et applique aux **six typologies** :
+plage, foret, manger, sorties, parcs, patrimoine. Les libelles de section
+deviennent des titres en Fraunces precedes d'un filet (« LA PLAGE » en
+capitales grises → « La plage »).
+
+**Marees et meteo : deux boutons morts deviennent vivants.** Le bouton Marees
+pointait sur `#marees`, **ancre inexistante** — il ne faisait rien depuis le
+debut. Et l'app calculait hauteurs et coefficients avant de les jeter. La
+feuille Marees montre 6 jours, 4 echeances par jour, heure + hauteur +
+coefficient (`_tideDays` garde tous les jours, `_tideCache` ne gardait que le
+jour courant). « Avis » cede sa place a « Meteo » sur les plages : 7 jours avec
+ciel, min/max et probabilite de pluie, et mention explicite des jours dont les
+marees ne sont pas publiees. L'appel open-meteo ne demandait que le vent (juge
+inutile) : il demande desormais la meteo, meme requete, meme cout.
+
+**Contrastes mesures, pas estimes.** `--txl` pesait **2,25:1** sur le fond creme
+— sous tous les seuils, y compris pour du gros texte — avec 33 usages dont les
+etiquettes en capitales des reperes. Releve a 3,4:1 (#8A8781). `--tx3` releve a
+4,1:1 (#7A7972).
+
+**Espacement** : 15 classes corrigees, padding sur jetons 26 → 35, gap 15 → 25.
+Les reperes n'avaient aucun `gap` et se touchaient ; `.bs-actions` manquait la
+zone sure de l'iPhone, presente sur la seule variante plage.
+
+**Trois pannes d'apostrophe dans la journee**, toutes de la meme cause : un
+script passe au shell perd un niveau d'antislash, la chaine JavaScript se ferme
+au milieu d'un mot, et le fichier ne compile plus. **Regle : les apostrophes
+francaises ne passent plus par un script** — outil d'edition, ou reformulation
+sans apostrophe. Le harnais `capture_fiches.js` a rattrape chaque panne avant
+tout commit, dont une regression que je m'etais infligee (un script avait
+reecrit le bloc plage sans accents, annulant une correction faite deux heures
+plus tot).
+
+**Non-regression** : 84 fiches, 0 erreur a chaque etape. Sauvegarde de pois.js
+avant migration dans le scratchpad.
+
+**Bourde reparee** : un `git add -A` a embarque `node_modules` (183 fichiers,
+353 000 lignes) dans le depot. Retire, `.gitignore` ajoute.
+
+**Restant** : `iaPill` et `cat` portent encore un emoji dans les donnees (84
+chacun) — `cat` est nettoye a l'affichage par `_catSansEmoji`, `iaPill` non.
+Le second niveau de fond (`--ground` / `--sheet`, jetons poses mais non
+consommes) n'est pas applique. La barre de prix epinglee (`.bs-price-pin`, CSS
+present, aucun rendu) reste a faire. Un bloc de fiche mort (~250 lignes de CSS
+`bs-*` + `_renderTypeBlock` jamais appele) n'est pas encore supprime.
+
 ### Avant (historique)
 - 34 POIs dans output_global.json (11 plages + 17 nature/promenades/ports + 6 Villages & Sites)
 - 33 POIs injectés dans planly-full.html (≥85% complets)

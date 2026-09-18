@@ -23,7 +23,8 @@
   /* ── Socle historique : ne pas renommer, 99 usages pour --brand* seul ── */
   --brand:#428CE3;--brand-l:#EAF2FC;--brand-d:#2B6FBE;
   --bg:#FCF8ED;--bg-d:#F0E9D4;
-  --tx:#1A1A18;--txm:#6B6B67;--txl:#A8A8A3;
+  /* --txl relevé de #A8A8A3 (2,25:1, illisible même en gros) à 3,4:1 */
+  --tx:#1A1A18;--txm:#6B6B67;--txl:#8A8781;
   --wh:#FFFFFF;--br:rgba(26,26,24,0.10);
   --hl:rgba(96,168,250,0.6);
   --max:520px;
@@ -39,7 +40,11 @@
 
   /* ── Encres et filets : nomme les gris qui traînaient en dur ── */
   --tx2:#444441;           /* texte secondaire dense (6 usages en dur) */
-  --tx3:#888780;           /* légendes, unités (11 usages en dur) */
+  /* Contrastes mesurés sur le fond crème, pas estimés. L'ancien --txl (#A8A8A3)
+     pesait 2,25:1 — sous tous les seuils, y compris pour du gros texte — et
+     portait 33 usages, dont les étiquettes en capitales des repères de fiche.
+     Les nouvelles valeurs : --tx3 à 4,1:1, --txl à 3,4:1. */
+  --tx3:#7A7972;           /* légendes, unités — 4,1:1 */
   --line:#E8E4DA;          /* filet de séparation (14 usages en dur) */
   --line-2:#F0EDE4;        /* filet très discret, intérieur de bloc */
 
@@ -1500,6 +1505,10 @@ body{
   background:var(--brand-l);border:0;font-family:'DM Sans',sans-serif;cursor:pointer;text-align:center;}
 .bch-act.q{background:transparent;box-shadow:inset 0 0 0 1px var(--line);}
 .bch-act:active{transform:scale(.97);}
+/* Marées et Météo sont des commandes, pas des liens : elles sortent en
+   <button>, qu'il faut déshabiller pour qu'il se présente comme ses voisins. */
+button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
+  cursor:pointer;-webkit-tap-highlight-color:transparent;}
 /* Les repères touchaient le bloc suivant — conditions de mer, horaires — sans
    aucune marge basse : deux blocs de nature différente collés l'un à l'autre. */
 .bch-reps{display:flex;gap:var(--s4);margin-top:var(--s5);margin-bottom:var(--s5);
@@ -3425,9 +3434,12 @@ function _ficheActions(p,sp){
   // au bloc « Voir sur Google ». Les deux boutons ouvrent une vraie feuille :
   // « #marees » ne menait nulle part, une commande qui n'ouvre rien est pire
   // qu'une commande absente.
+  // Préfixe « js: » = commande, pas lien. L'app intercepte tous les clics sur
+  // les <a> pour ouvrir les liens externes quand elle tourne depuis l'écran
+  // d'accueil : un href javascript: y était happé et ouvert comme une page.
   if(p.subcategory==='Plages & Côte'){
-    a.push(['i-tide','Marées','javascript:void _openTideSheet()',false]);
-    a.push(['i-sun','Météo','javascript:void _openMeteoSheet()',false]);
+    a.push(['i-tide','Marées','js:_openTideSheet()',false]);
+    a.push(['i-sun','Météo','js:_openMeteoSheet()',false]);
   }
   if(src)a.push(['i-globe','Site',src,false]);
   if(p.googleUrl)a.push(['i-star','Avis',p.googleUrl,false]);
@@ -3445,6 +3457,11 @@ function _ficheHeader(p,sp,ribbonItems,mode){
   h+='<div class="bch-meta">'+m.join('<i>·</i>')+'</div>';
   var acts=_ficheActions(p,sp);
   if(acts.length)h+='<div class="bch-acts">'+acts.map(function(a,i){
+    // Une commande sort un <button> : elle n'ouvre aucune adresse, et
+    // l'intercepteur de liens n'a donc rien à happer.
+    if(a[2].slice(0,3)==='js:')
+      return'<button type="button" class="bch-act'+(i?' q':'')+'" onclick="'+_escHtml(a[2].slice(3))+'">'
+        +'<svg class="ic"><use href="#'+a[0]+'"/></svg>'+a[1]+'</button>';
     return'<a class="bch-act'+(i?' q':'')+'" href="'+_escHtml(a[2])+'"'
       +(a[2].charAt(0)==='#'?'':' target="_blank" rel="noopener"')+'>'
       +'<svg class="ic"><use href="#'+a[0]+'"/></svg>'+a[1]+'</a>';
@@ -3532,13 +3549,13 @@ function _renderPoiBody(p,mode){
     sectionLabel='La forêt';
     // Pills
     var pills=[];
-    if(sp.shade_level)pills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-tree"/></svg> '+sp.shade_level+'</span>');
-    if(sp.stroller_ok)pills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-baby"/></svg> Poussette OK</span>');
-    if(sp.bike_allowed)pills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-bike"/></svg> Vélo OK</span>');
-    if(sp.wildlife_observable)pills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-deer"/></svg> Faune observable</span>');
-    if(sp.picnic_tables)pills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-picnic"/></svg> Tables pique-nique</span>');
-    if(sp.playground)pills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-slide"/></svg> Aire de jeux</span>');
-    pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
+    if(sp.shade_level)pills.push(_frRow('i-tree','Ombre','',_escHtml(String(sp.shade_level))));
+    if(sp.stroller_ok)pills.push(_frRow('i-stroller','Poussette','','praticable','on'));
+    if(sp.bike_allowed)pills.push(_frRow('i-bike','Vélo','','autorisé','on'));
+    if(sp.wildlife_observable)pills.push(_frRow('i-deer','Faune','Observable en étant discret','oui','on'));
+    if(sp.picnic_tables)pills.push(_frRow('i-picnic','Tables de pique-nique','','sur place','on'));
+    if(sp.playground)pills.push(_frRow('i-slide','Aire de jeux','','sur place','on'));
+    pillsHtml=_frRows(pills.concat(_frFromSpecs(p.quickSpecs)));
     // Trails block
     var frtTrails=sp.trails_display||sp.trails||[];
     var frtRando=[],frtVtt=[];
@@ -3589,8 +3606,8 @@ function _renderPoiBody(p,mode){
     ];
     sectionLabel='La balade';
     var pills=[];
-    if(sp.stroller_ok)pills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-baby"/></svg> Poussette OK</span>');
-    if(sp.bike_allowed)pills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-bike"/></svg> Vélo OK</span>');
+    if(sp.stroller_ok)pills.push(_frRow('i-stroller','Poussette','','praticable','on'));
+    if(sp.bike_allowed)pills.push(_frRow('i-bike','Vélo','','autorisé','on'));
     pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
 
   }else if(sub==='Points de vue'){
