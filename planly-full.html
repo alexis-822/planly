@@ -1596,8 +1596,11 @@ body{
    Remplace le ruban de quatre chiffres encadrés. Rythme d'espacement sur
    une base de 4 px, un seul élément en relief : la barre de prix en pied. ── */
 /* La ligne d'état porte désormais des horaires entiers, parfois longs : elle
-   doit pouvoir se replier sur deux ou trois lignes plutôt que déborder. */
+   doit pouvoir se replier sur deux ou trois lignes plutôt que déborder. Et
+   l'état — « Horaires », « Ouvert », « Surveillée » — s'aligne sur la PREMIÈRE
+   ligne : centré, il se retrouvait au milieu du paragraphe. */
 .bch-state span{white-space:normal;}
+.bch-state{display:flex;align-items:flex-start;gap:var(--s2);}
 .bch-state{font-size:var(--t5);font-weight:700;color:var(--ok);display:flex;align-items:center;gap:7px;line-height:var(--lh);}
 .bch-state.shut{color:var(--warn);}
 .bch-state span{font-weight:400;color:var(--txm);}
@@ -3534,7 +3537,7 @@ function _stKnowBlock(sp){
     if(/pmr|accessib|fauteuil/.test(s))return 'i-pmr';
     return 'i-info';
   };
-  return'<div class="bch-slbl">Ce qu\'il faut savoir</div>'
+  return'<div class="bch-slbl mineur">Ce qu\'il faut savoir</div>'
     +_frRows(k.map(function(t){return _frRow(_icoSavoir(t),_escHtml(String(t)),'','');}))
     +'<div class="bch-ssrc">D\'après le site officiel du lieu'+(src?' · vérifié le '+src:'')+'</div>';
 }
@@ -3658,7 +3661,7 @@ function _socialRow(sp){
   if(s.instagram)out.push(['📸','Instagram',s.instagram]);
   if(s.facebook)out.push(['👍','Facebook',s.facebook]);
   if(!out.length)return'';
-  return'<div class="bch-slbl">Leur actualité</div><div class="soc-row">'
+  return'<div class="bch-slbl mineur">Leur actualité</div><div class="soc-row">'
     +out.map(function(o){return'<a class="soc-lnk" href="'+_escHtml(o[2])+'" target="_blank" rel="noopener">'
       +o[0]+' '+o[1]+'<span class="soc-go">↗</span></a>';}).join('')+'</div>';
 }
@@ -3856,7 +3859,7 @@ function _renderPoiBody(p,mode){
     // Le bloc émet ses propres titres : sectionLabel est donc laissé vide.
     sectionLabel='';
     pillsHtml=(frRows.length?'<div class="bch-slbl">La baignade</div>'+_frRows(frRows):'')
-      +(frSavoir.length?'<div class="bch-slbl">Ce qu\'il faut savoir</div>'+_frRows(frSavoir):'');
+      +(frSavoir.length?'<div class="bch-slbl mineur">Ce qu\'il faut savoir</div>'+_frRows(frSavoir):'');
 
   }else if(sub==='Forêts & Nature'){
     // Ribbon : difficulté (colorée), durée estimée, superficie, distance voiture
@@ -3876,7 +3879,13 @@ function _renderPoiBody(p,mode){
       {val:frtSupVal,lbl:'Superficie',cls:''},
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];
-    sectionLabel='La forêt';
+    // « Forêts & Nature » couvre un lac, un marais et une réserve : quatre
+    // lieux dont un seul est une forêt. Le titre suit le lieu, sinon on
+    // annonçait « La forêt » au-dessus des faits d'un lac de 8 ha.
+    sectionLabel=/lac|étang/i.test(p.name)?'Le plan d\'eau'
+      :/marais/i.test(p.name)?'Le marais'
+      :/réserve|baie/i.test(p.name)?'La réserve'
+      :'La forêt';
     // Pills
     var pills=[];
     if(sp.shade_level)pills.push(_frRow('i-tree','Ombre','',_escHtml(String(sp.shade_level))));
@@ -3948,7 +3957,7 @@ function _renderPoiBody(p,mode){
     pillsHtml=(function(){
       var a=pills.concat(_frFromSpecs(p.quickSpecs));
       return (a.length?'<div class="bch-slbl">La balade</div>'+_frRows(a):'')
-        +(balSavoir.length?'<div class="bch-slbl">Ce qu\'il faut savoir</div>'+_frRows(balSavoir):'');
+        +(balSavoir.length?'<div class="bch-slbl mineur">Ce qu\'il faut savoir</div>'+_frRows(balSavoir):'');
     })();
 
   }else if(sub==='Points de vue'){
@@ -3997,7 +4006,7 @@ function _renderPoiBody(p,mode){
     pillsHtml=(pdvVue.length?'<div class="bch-slbl">La vue</div>'
         +(pdvSub?'<div class="bch-ssub">'+_escHtml(pdvSub)+'</div>':'')
         +_frRows(pdvVue):'')
-      +(pdvSavoir.length?'<div class="bch-slbl">Ce qu\'il faut savoir</div>'+_frRows(pdvSavoir):'');
+      +(pdvSavoir.length?'<div class="bch-slbl mineur">Ce qu\'il faut savoir</div>'+_frRows(pdvSavoir):'');
 
   }else if(MT_SUBCATS.indexOf(sub)!==-1){
     var mv=sp.services||{},mPr=sp.pricing||{},mAvg=_plNum(mPr.avg_price);
@@ -4164,7 +4173,7 @@ function _renderPoiBody(p,mode){
         +'<div class="bch-ssub">Aller-retour dans la journée</div>'+_frRows(patFerry):'')
       +((patLieu.length||patAutres.length)?'<div class="bch-slbl">Le lieu</div>'
         +_frRows(patLieu.concat(patAutres)):'')
-      +(patSavoir.length?'<div class="bch-slbl">Ce qu\'il faut savoir</div>'+_frRows(patSavoir):'');
+      +(patSavoir.length?'<div class="bch-slbl mineur">Ce qu\'il faut savoir</div>'+_frRows(patSavoir):'');
   }
 
   // En-tête : état, repères, actions — puis les chiffres de la typologie.
@@ -4226,11 +4235,11 @@ function _renderPoiBody(p,mode){
     +(googleUrl?'<a class="bch-btn-avis" href="'+_escHtml(googleUrl)+'" target="_blank" rel="noopener">Voir sur Google</a>':'')+'</div>'
     +(reviewsSummary?'<div class="bch-rsum">'+_escHtml(reviewsSummary)+'<div class="bch-rsum-src">Résumé automatique des avis Google</div></div>':'')
     +_socialRow(sp)
-    +((p.location&&p.location.lat)?'<div class="bch-slbl">'+_mapLbl(p)+'</div>'
+    +((p.location&&p.location.lat)?'<div class="bch-slbl mineur">'+_mapLbl(p)+'</div>'
       +'<div class="poi-mini-map-wrap"><div id="poi-mini-map" class="poi-mini-map"></div>'
       +'<button class="poi-mini-map-expand" onclick="_openMapForPoi('+p.location.lat+','+p.location.lng+')"><svg class="ic sm"><use href="#i-arrows"/></svg> Agrandir</button>'
       +'</div>':'')
-    +'<div class="bch-slbl">Parking conseillé</div>'
+    +'<div class="bch-slbl mineur">Parking conseillé</div>'
     +pkHtml
     +'</div>';
 }
