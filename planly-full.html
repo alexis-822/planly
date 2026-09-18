@@ -1595,6 +1595,9 @@ body{
 /* ── En-tête de fiche : état, repères, actions — la maquette validée.
    Remplace le ruban de quatre chiffres encadrés. Rythme d'espacement sur
    une base de 4 px, un seul élément en relief : la barre de prix en pied. ── */
+/* La ligne d'état porte désormais des horaires entiers, parfois longs : elle
+   doit pouvoir se replier sur deux ou trois lignes plutôt que déborder. */
+.bch-state span{white-space:normal;}
 .bch-state{font-size:var(--t5);font-weight:700;color:var(--ok);display:flex;align-items:center;gap:7px;line-height:var(--lh);}
 .bch-state.shut{color:var(--warn);}
 .bch-state span{font-weight:400;color:var(--txm);}
@@ -3364,6 +3367,11 @@ function _plHoursBar(p){
   if(!sp.hours_text&&!sp.season){
     return sp.booking==='obligatoire'?'<div class="pl-hours">'+PL_ICON_CLOCK+'<div><b>Horaires</b> · sur réservation uniquement</div></div>':'';
   }
+  // La ligne d'état en haut de fiche affiche déjà « Horaires · … » quand le
+  // lieu n'a pas d'horaires Google : le répéter ici donnait deux fois la même
+  // phrase à quelques centimètres d'écart. On ne garde le bloc que s'il
+  // apporte la saison, que la ligne d'état ne montre pas.
+  if(sp.hours_text&&!sp.season)return'';
   return'<div class="pl-hours">'+PL_ICON_CLOCK+'<div><b>Horaires</b> · '+_escHtml(String(sp.hours_text||(sp.booking==='obligatoire'?'sur réservation uniquement':'voir le site officiel')))
     +(sp.season?'<br><span style="font-size:12px">Saison : '+_escHtml(String(sp.season))+'</span>':'')+'</div></div>';
 }
@@ -3403,7 +3411,19 @@ function _plPriceBlock(sp){
   }
   var adultTxt=g.adults+' adulte'+(g.adults>1?'s':'');
   var total=adult==null?0:g.adults*adult,payingKids=0;
-  var lines=[adult==null?{lbl:adultTxt,val:'non précisé',cls:'unk'}:{lbl:adultTxt+' × '+_plEuro(adult),val:_plEuro(g.adults*adult)}];
+  // « non précisé » s'affichait en ambre alors que les notes du lieu disent
+  // souvent l'essentiel — « gratuit pour 2 accompagnateurs adultes » au Parc
+  // des Sablotins. On lit les notes avant de déclarer l'information absente.
+  var _notesAdulte=function(){
+    var n=String(pr.notes||'');
+    var m=n.match(/gratuit[^.;]{0,40}accompagnateur[^.;]{0,30}/i);
+    if(m)return{val:'Compris',cls:''};
+    m=n.match(/adulte[^.;]{0,12}:?\s*(\d+[,.]?\d*)\s*€/i);
+    if(m)return{val:_plEuro(parseFloat(m[1].replace(',','.'))),cls:''};
+    return{val:'Non précisé',cls:'unk'};
+  };
+  var _adu=adult==null?_notesAdulte():null;
+  var lines=[adult==null?{lbl:adultTxt,val:_adu.val,cls:_adu.cls}:{lbl:adultTxt+' × '+_plEuro(adult),val:_plEuro(g.adults*adult)}];
   var freeUnder=_plNum(pr.free_under_age),cMin=_plNum(pr.child_age_min),cMax=_plNum(pr.child_age_max);
   var unknown=0;
   g.kids.forEach(function(age){
@@ -3657,7 +3677,11 @@ function _ficheEtat(p,sp){
   }
   if(p.subcategory==='Plages & Côte'&&p.beach&&p.beach.supervised)
     return{txt:'Surveillée',sub:(p.beach.hours||p.beach.period||''),shut:false};
-  if(sp.hours_text)return{txt:'Horaires',sub:String(sp.hours_text).slice(0,44),shut:false};
+  // Pas de troncature : la ligne d'état est la SEULE à porter ces horaires
+  // depuis que le bloc qui les répétait a été retiré. Couper à 44 signes
+  // faisait perdre « Mardi-Dimanche 11:30-14:30 » à UMI Sushi et ses jours
+  // de marché forain au Marché Arago.
+  if(sp.hours_text)return{txt:'Horaires',sub:String(sp.hours_text),shut:false};
   return{txt:'Accès libre',sub:'',shut:false};
 }
 function _ficheActions(p,sp){
