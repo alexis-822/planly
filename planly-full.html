@@ -433,7 +433,10 @@ body{
 /* ══ ONGLET CAMPING ══ — transposé de la maquette validée.
    Le motif porteur : une ligne = icône + libellé + précision, valeur à droite,
    filet fin entre les lignes. C'est ce qui hiérarchise, pas la couleur. */
-.camping-view{display:none;flex-direction:column;flex:1;overflow:hidden;background:var(--bg);min-height:0;
+/* #explorer-view est fixe et noir : une vue qui s'insère dans son flux laisse
+   la liste transparaître derrière. L'onglet camping couvre donc son parent. */
+.camping-view{display:none;flex-direction:column;overflow:hidden;background:var(--bg);
+  position:absolute;inset:0;z-index:5;
   --kid:#7A4E9E;--kid-soft:#F0E9F7;--cmp-warn:#8A5410;--cmp-warn-soft:#FBF0DC;--cmp-ok-soft:#E4EFE0;}
 .camping-view.open{display:flex;}
 .cmp-scroll{flex:1;overflow-y:auto;scrollbar-width:none;
@@ -1827,7 +1830,7 @@ body{
     </div>
     <!-- N'apparaît que si « Séjour en camping » est coché à l'onboarding -->
     <div class="nav-item" id="nav-camping" onclick="navShow('camping')" style="display:none">
-      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 5L3 19h18z"/><path d="M12 5v14M12 19l-4-6M12 19l4-6"/></svg></div>
+      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 4L4 20h16z"/><path d="M12 4v16"/><path d="M2 20h20"/></svg></div>
       <div class="nav-lbl">Mon camping</div>
     </div>
     <div class="nav-item">
@@ -2045,6 +2048,13 @@ function toggleRow(key){
   // Le camping commande un onglet entier : on retient le choix et on l'applique
   if(key==='camping'){
     USER_PROFILE.camping=!open;
+    // Un seul camping partenaire pour l'instant : on le propose d'emblée plutôt
+    // que de laisser un champ vide que personne ne saurait remplir.
+    if(!open&&!USER_PROFILE.campingNom&&typeof CAMPING!=='undefined'){
+      USER_PROFILE.campingNom=CAMPING.nom;
+      var inp=document.getElementById('camping-nom');
+      if(inp)inp.value=CAMPING.nom;
+    }
     saveCamping();
     if(typeof cmpSyncNav==='function')cmpSyncNav();
   }
