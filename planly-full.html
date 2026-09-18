@@ -1576,6 +1576,10 @@ body{
   <symbol id="i-slot" viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M6 9h8M6 13h3M11 13h3"/><path d="M17 9h2a2 2 0 0 1 2 2v3"/><circle cx="21" cy="16" r="1.4"/></symbol>
   <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+  <!-- Cœur PLEIN. Les boutons « j'aime » distinguent l'état par le glyphe
+       lui-même : ♥ aimé, ♡ pas aimé. Le sprite n'avait que le contour, il
+       manquait donc de quoi dire « aimé » sans revenir à un caractère. -->
+  <symbol id="i-heart-full" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.2A4 4 0 0 1 12 8a4 4 0 0 1 7 2.8C19 15.6 12 20 12 20z" fill="currentColor" stroke="none"/></symbol>
   <!-- Canne : le sprite n'en avait pas, j'avais mis une botte faute de mieux -->
   <symbol id="i-cane" viewBox="0 0 24 24"><path d="M9 21V8a4 4 0 0 1 8 0v1.5"/><path d="M6 21h6"/></symbol>
   <!-- Pastilles de fiche : remplacent 📜 🎙️ ⚓ venus des données -->
@@ -2023,7 +2027,7 @@ body{
     <div class="bs-actions">
       
       <button class="bs-btn-primary" id="bs-btn-like" onclick="toggleAddPoi(this)">
-        <span class="btn-icon">♥</span>
+        <span class="btn-icon"><svg class="ic"><use href="#i-heart-full"/></svg></span>
         <span class="btn-txt">Ajouter à mes activités</span>
       </button>
     </div>
@@ -3690,11 +3694,11 @@ function openPoiSheet(idx){
   var btn=document.getElementById('bs-btn-like');
   if(isLiked(p.name)){
     btn.classList.add('added');
-    btn.querySelector('.btn-icon').textContent='✓';
+    btn.querySelector('.btn-icon').innerHTML='<svg class="ic"><use href="#i-check"/></svg>';
     btn.querySelector('.btn-txt').textContent=fromAct?'Retirer de mes activités':'Ajouté à mes activités';
   }else{
     btn.classList.remove('added');
-    btn.querySelector('.btn-icon').textContent='♥';
+    btn.querySelector('.btn-icon').innerHTML='<svg class="ic"><use href="#i-heart-full"/></svg>';
     btn.querySelector('.btn-txt').textContent='Ajouter à mes activités';
   }
   _updateFicheLikeBtn();
@@ -3767,11 +3771,11 @@ function setView(v){}
 // ── PILLS ──
 var pillLevel=0,activeTuile=null,activeL1=null;
 var TUILES=[{id:'air',label:'Nature & Grand Air',emoji:'🌿'},{id:'sport',label:'Sport & Aventure',emoji:'🏃'},{id:'patri',label:'Patrimoine',emoji:'🏛️'},{id:'vivre',label:'Art de vivre',emoji:'🍽️'},{id:'parcs',label:'Parcs & Loisirs',emoji:'🎡'},{id:'sorties',label:'Sorties & Détente',emoji:'🎬'},{id:'events',label:'Événements',emoji:'🎪'}];
-var PL1={air:['Toutes','<svg class="ic"><use href="#i-parasol"/></svg> Plages & Côte','🌲 Forêts & Nature','<svg class="ic"><use href="#i-camera"/></svg> Points de vue','<svg class="ic"><use href="#i-walk"/></svg> Balades & Promenades'],sport:['Toutes','<svg class="ic"><use href="#i-boot"/></svg> Randonnée','<svg class="ic"><use href="#i-bike"/></svg> Vélo','🛶 Nautisme','➕ Autres sports'],patri:['Toutes','🏘️ Villages & Sites','🏰 Châteaux & Monuments','<svg class="ic"><use href="#i-castle"/></svg> Musées & Culture'],vivre:['Toutes','<svg class="ic"><use href="#i-fork"/></svg> Restaurants','🛒 Marchés & Terroir','🍷 Dégustations'],parcs:['Toutes','<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 5v2m0 10v2" stroke-dasharray="2 2"/><path d="M2 10a3 3 0 010 4"/><path d="M22 10a3 3 0 000 4"/></svg> Jeux & Divertissement','🦁 Parcs animaliers','🐠 Aquariums','🌺 Parcs botaniques'],sorties:['Toutes','<svg class="ic"><use href="#i-film"/></svg> Cinéma','🍸 Bars & Ambiance','🎰 Casino & Jeux','<svg class="ic"><use href="#i-swim"/></svg> Piscines & Spa'],events:['Toutes','🎵 Concerts & Spectacles','<svg class="ic"><use href="#i-group"/></svg> Fêtes & Foires','<svg class="ic"><use href="#i-moon"/></svg> Marchés nocturnes']};
+var PL1={air:['Toutes','<svg class="ic"><use href="#i-parasol"/></svg> Plages & Côte','<svg class="ic"><use href="#i-tree"/></svg> Forêts & Nature','<svg class="ic"><use href="#i-camera"/></svg> Points de vue','<svg class="ic"><use href="#i-walk"/></svg> Balades & Promenades'],sport:['Toutes','<svg class="ic"><use href="#i-boot"/></svg> Randonnée','<svg class="ic"><use href="#i-bike"/></svg> Vélo','<svg class="ic"><use href="#i-kayak"/></svg> Nautisme','<svg class="ic"><use href="#i-dumbbell"/></svg> Autres sports'],patri:['Toutes','<svg class="ic"><use href="#i-village"/></svg> Villages & Sites','<svg class="ic"><use href="#i-castle"/></svg> Châteaux & Monuments','<svg class="ic"><use href="#i-castle"/></svg> Musées & Culture'],vivre:['Toutes','<svg class="ic"><use href="#i-fork"/></svg> Restaurants','<svg class="ic"><use href="#i-basket"/></svg> Marchés & Terroir','<svg class="ic"><use href="#i-bottle"/></svg> Dégustations'],parcs:['Toutes','<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 5v2m0 10v2" stroke-dasharray="2 2"/><path d="M2 10a3 3 0 010 4"/><path d="M22 10a3 3 0 000 4"/></svg> Jeux & Divertissement','<svg class="ic"><use href="#i-lion"/></svg> Parcs animaliers','<svg class="ic"><use href="#i-fish"/></svg> Aquariums','<svg class="ic"><use href="#i-flower"/></svg> Parcs botaniques'],sorties:['Toutes','<svg class="ic"><use href="#i-film"/></svg> Cinéma','<svg class="ic"><use href="#i-cocktail"/></svg> Bars & Ambiance','<svg class="ic"><use href="#i-slot"/></svg> Casino & Jeux','<svg class="ic"><use href="#i-swim"/></svg> Piscines & Spa'],events:['Toutes','<svg class="ic"><use href="#i-note"/></svg> Concerts & Spectacles','<svg class="ic"><use href="#i-group"/></svg> Fêtes & Foires','<svg class="ic"><use href="#i-moon"/></svg> Marchés nocturnes']};
 
 // Mapping tuile/L1 → catégorie POI
 var TUILE_CATS={air:['plage','nature','pointdevue','balade'],sport:[],patri:['patrimoine','culture'],vivre:['resto','marche','degustation'],parcs:['jeux','animaux','aquarium','jardin'],sorties:['bar','casino','cinema','spa'],events:[]};
-var L1_CATS={'<svg class="ic"><use href="#i-parasol"/></svg> Plages & Côte':['plage'],'🌲 Forêts & Nature':['nature'],'<svg class="ic"><use href="#i-camera"/></svg> Points de vue':['pointdevue'],'<svg class="ic"><use href="#i-walk"/></svg> Balades & Promenades':['balade'],'🏘️ Villages & Sites':['patrimoine'],'🏰 Châteaux & Monuments':['patrimoine'],'<svg class="ic"><use href="#i-castle"/></svg> Musées & Culture':['culture','patrimoine'],'<svg class="ic"><use href="#i-fork"/></svg> Restaurants':['resto'],'🛒 Marchés & Terroir':['marche'],'🍷 Dégustations':['degustation'],'<svg class="ic"><use href="#i-film"/></svg> Cinéma':['cinema'],'🍸 Bars & Ambiance':['bar'],'🎰 Casino & Jeux':['casino'],'<svg class="ic"><use href="#i-swim"/></svg> Piscines & Spa':['spa'],'🦁 Parcs animaliers':['animaux'],'🐠 Aquariums':['aquarium'],'🌺 Parcs botaniques':['jardin']};
+var L1_CATS={'<svg class="ic"><use href="#i-parasol"/></svg> Plages & Côte':['plage'],'<svg class="ic"><use href="#i-tree"/></svg> Forêts & Nature':['nature'],'<svg class="ic"><use href="#i-camera"/></svg> Points de vue':['pointdevue'],'<svg class="ic"><use href="#i-walk"/></svg> Balades & Promenades':['balade'],'<svg class="ic"><use href="#i-village"/></svg> Villages & Sites':['patrimoine'],'<svg class="ic"><use href="#i-castle"/></svg> Châteaux & Monuments':['patrimoine'],'<svg class="ic"><use href="#i-castle"/></svg> Musées & Culture':['culture','patrimoine'],'<svg class="ic"><use href="#i-fork"/></svg> Restaurants':['resto'],'<svg class="ic"><use href="#i-basket"/></svg> Marchés & Terroir':['marche'],'<svg class="ic"><use href="#i-bottle"/></svg> Dégustations':['degustation'],'<svg class="ic"><use href="#i-film"/></svg> Cinéma':['cinema'],'<svg class="ic"><use href="#i-cocktail"/></svg> Bars & Ambiance':['bar'],'<svg class="ic"><use href="#i-slot"/></svg> Casino & Jeux':['casino'],'<svg class="ic"><use href="#i-swim"/></svg> Piscines & Spa':['spa'],'<svg class="ic"><use href="#i-lion"/></svg> Parcs animaliers':['animaux'],'<svg class="ic"><use href="#i-fish"/></svg> Aquariums':['aquarium'],'<svg class="ic"><use href="#i-flower"/></svg> Parcs botaniques':['jardin']};
 L1_CATS[PL1.parcs[1]]=['jeux']; // libellé Jeux & Divertissement = SVG inline, clé reprise du tableau PL1
 
 function getFilteredPois(){
@@ -3890,7 +3894,7 @@ function toggleAddPoi(btn){
   var fromAct=document.getElementById('activites-view').classList.contains('open');
   if(!added){
     btn.classList.add('added');
-    btn.querySelector('.btn-icon').textContent='✓';
+    btn.querySelector('.btn-icon').innerHTML='<svg class="ic"><use href="#i-check"/></svg>';
     btn.querySelector('.btn-txt').textContent='Ajouté à mes activités';
     var inListMode=document.getElementById('list-zone').classList.contains('active');
     setTimeout(function(){
@@ -3901,7 +3905,7 @@ function toggleAddPoi(btn){
     },320);
   } else {
     btn.classList.remove('added');
-    btn.querySelector('.btn-icon').textContent='♥';
+    btn.querySelector('.btn-icon').innerHTML='<svg class="ic"><use href="#i-heart-full"/></svg>';
     btn.querySelector('.btn-txt').textContent='Ajouter à mes activités';
     likedPois=likedPois.filter(function(n){return n!==p.name;});
     localStorage.setItem('planly_likes',JSON.stringify(likedPois));
@@ -3947,7 +3951,7 @@ function renderList(){
       +'<div class="lcard-pill"><svg class="ic"><use href="#i-star"/></svg> '+p.note+'</div>'
       +'<div class="lcard-pill">⏱ '+dur+'</div>'
       +'</div>'
-      +'<button class="lcard-like'+(liked?' on':'')+'" onclick="event.stopPropagation();toggleListLike('+i+',this)">'+(liked?'♥':'♡')+'</button>'
+      +'<button class="lcard-like'+(liked?' on':'')+'" onclick="event.stopPropagation();toggleListLike('+i+',this)">'+(liked?'<svg class="ic"><use href="#i-heart-full"/></svg>':'<svg class="ic"><use href="#i-heart"/></svg>')+'</button>'
       +'</div></div></div>';
   }).join('');
   // Swipe horizontal sur les photos (Airbnb-style)
@@ -3976,10 +3980,10 @@ function toggleListLike(idx, btn){
   var liked=isLiked(name);
   if(liked){
     likedPois=likedPois.filter(function(n){return n!==name;});
-    btn.className='lcard-like';btn.textContent='♡';
+    btn.className='lcard-like';btn.innerHTML='<svg class="ic"><use href="#i-heart"/></svg>';
   } else {
     saveLike(idx);
-    btn.className='lcard-like on';btn.textContent='♥';
+    btn.className='lcard-like on';btn.innerHTML='<svg class="ic"><use href="#i-heart-full"/></svg>';
   }
   localStorage.setItem('planly_likes',JSON.stringify(likedPois));
   _updateActBadge();
@@ -4784,9 +4788,9 @@ function renderActivites(){
   var scroll=document.getElementById('act-scroll');
   if(liked.length===0){
     scroll.innerHTML='<div class="act-empty">'
-      +'<div class="act-empty-icon">♡</div>'
+      +'<div class="act-empty-icon"><svg class="ic"><use href="#i-heart"/></svg></div>'
       +'<div class="act-empty-title">Aucune activité pour l\'instant</div>'
-      +'<div class="act-empty-sub">Appuie sur ♥ pour sauvegarder des endroits.</div>'
+      +'<div class="act-empty-sub">Appuie sur le cœur pour sauvegarder des endroits.</div>'
       +'</div>';
     return;
   }
@@ -4853,15 +4857,20 @@ var _mapScrolling=false;
 var _mapScrollTimer;
 var _mapSubcat=null;   // filtre sous-catégorie (map uniquement)
 
-// Emoji badge (cartes texte) — toujours utilisé pour les badges dans les cards
+// Badge de sous-catégorie sur les cartes de la carte. Des icônes du sprite et
+// non des emojis : elles héritent la couleur du texte, ce qu'aucun emoji ne
+// sait faire — et surtout elles ne jurent plus avec le reste de la carte.
 var _subCatIcons={
-  'Plages & Côte':'🏖','Forêts & Nature':'🌲','Points de vue':'📸',
-  'Balades & Promenades':'🚶','Villages & Sites':'🏛','Ports & Nautisme':'⛵',
-  'Marais & Zones humides':'🦆','Châteaux & Monuments':'🏰','Îles':'🏝',
-  'Restaurants':'🍽','Bars':'🍸','Casino':'🎰','Nautisme':'🏄',
-  'Jeux & Divertissement':'🎢','Parcs animaliers':'🦁','Aquariums':'🐠','Parcs botaniques':'🌺'
+  'Plages & Côte':'i-parasol','Forêts & Nature':'i-tree','Points de vue':'i-camera',
+  'Balades & Promenades':'i-walk','Villages & Sites':'i-village','Ports & Nautisme':'i-anchor',
+  'Marais & Zones humides':'i-deer','Châteaux & Monuments':'i-castle','Îles':'i-ferry',
+  'Restaurants':'i-fork','Bars':'i-cocktail','Casino':'i-slot','Nautisme':'i-kayak',
+  'Jeux & Divertissement':'i-play','Parcs animaliers':'i-lion','Aquariums':'i-fish','Parcs botaniques':'i-flower'
 };
-function _subCatEmoji(p){return _subCatIcons[p.subcategory||'']||_subCatIcons[p.category||'']||'📍';}
+function _subCatEmoji(p){
+  var id=_subCatIcons[p.subcategory||'']||_subCatIcons[p.category||'']||'i-pin';
+  return '<svg class="ic sm"><use href="#'+id+'"/></svg>';
+}
 
 // Couleur + icône SVG par catégorie — style uniforme (stroke-width:2, round)
 var _catColors={plage:'#2D9CDB',nature:'#27AE60',pointdevue:'#9B51E0',balade:'#F2994A',port:'#1565C0',patrimoine:'#E2A32B',default:'#428CE3'};
@@ -5001,7 +5010,7 @@ function _updateFicheLikeBtn(){
   var btn=document.getElementById('bs-car-heart');
   if(!btn||currentIdx<0)return;
   var liked=isLiked(POIS[currentIdx].name);
-  btn.textContent=liked?'♥':'♡';
+  btn.innerHTML=liked?'<svg class="ic"><use href="#i-heart-full"/></svg>':'<svg class="ic"><use href="#i-heart"/></svg>';
   btn.classList.toggle('on',liked);
 }
 function _toggleFicheLike(){
@@ -5020,7 +5029,7 @@ function _toggleFicheLike(){
   var addBtn=document.getElementById('bs-btn-like');
   if(addBtn){
     addBtn.classList.toggle('added',nowLiked);
-    addBtn.querySelector('.btn-icon').textContent=nowLiked?'✓':'♥';
+    addBtn.querySelector('.btn-icon').innerHTML=nowLiked?'<svg class="ic"><use href="#i-check"/></svg>':'<svg class="ic"><use href="#i-heart-full"/></svg>';
     addBtn.querySelector('.btn-txt').textContent=nowLiked?'Ajouté à mes activités':'Ajouter à mes activités';
   }
   renderList();
@@ -5144,7 +5153,7 @@ function _buildMapCarousel(fp){
     return '<div class="map-card-item" data-fi="'+fi+'" onclick="_mapOpenFiche('+poiIdx+')">'
       +'<div class="map-card-thumb" data-srcs="'+srcsAttr+'" data-cur="0">'
       +'<img src="'+img+'" alt="" loading="lazy">'
-      +'<button class="map-card-hov'+(liked?' on':'')+'" onclick="event.stopPropagation();_mapToggleLike('+poiIdx+',this)">'+(liked?'♥':'♡')+'</button>'
+      +'<button class="map-card-hov'+(liked?' on':'')+'" onclick="event.stopPropagation();_mapToggleLike('+poiIdx+',this)">'+(liked?'<svg class="ic"><use href="#i-heart-full"/></svg>':'<svg class="ic"><use href="#i-heart"/></svg>')+'</button>'
       +'<div class="map-card-badge">'+em+' '+subcat+'</div>'
       +dotsHtml
       +'</div>'
@@ -5200,7 +5209,7 @@ function _mapToggleLike(poiIdx,btn){
   toggleListLike(poiIdx,btn);
   var liked=isLiked(POIS[poiIdx].name);
   btn.className='map-card-hov'+(liked?' on':'');
-  btn.textContent=liked?'♥':'♡';
+  btn.innerHTML=liked?'<svg class="ic"><use href="#i-heart-full"/></svg>':'<svg class="ic"><use href="#i-heart"/></svg>';
 }
 
 function _mapOpenFiche(poiIdx){
