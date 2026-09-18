@@ -447,6 +447,26 @@ body{
    filet fin entre les lignes. C'est ce qui hiérarchise, pas la couleur. */
 /* #explorer-view est fixe et noir : une vue qui s'insère dans son flux laisse
    la liste transparaître derrière. L'onglet camping couvre donc son parent. */
+/* Vue web interne : un site s'ouvre par-dessus la fiche, qui attend derrière.
+   Même grammaire que les autres feuilles — flèche Retour en haut à gauche. */
+.wv{position:fixed;inset:0;z-index:2000;display:none;flex-direction:column;background:var(--bg);}
+.wv.open{display:flex;}
+.wv-bar{display:flex;align-items:center;gap:var(--s3);flex-shrink:0;
+  padding:calc(env(safe-area-inset-top,0px) + 8px) var(--s4) 8px;
+  background:var(--wh);border-bottom:1px solid var(--line-2);}
+.wv-back,.wv-out{width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;
+  justify-content:center;border:none;background:none;color:var(--tx);cursor:pointer;
+  border-radius:50%;-webkit-tap-highlight-color:transparent;padding:0;}
+.wv-back:active,.wv-out:active{background:var(--bg);}
+.wv-host{flex:1;min-width:0;font-size:var(--t5);font-weight:500;color:var(--tx2);
+  text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:var(--lh);}
+/* Le voile de chargement se pose PAR-DESSUS le cadre : en flex:1 tous les
+   deux, ils se partageaient la hauteur et le site n'avait plus que la moitié
+   de l'écran. */
+.wv-body{position:relative;flex:1;min-height:0;}
+.wv-load{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:var(--t5);color:var(--tx3);background:var(--wh);z-index:1;}
+.wv-frame{position:absolute;inset:0;width:100%;height:100%;border:none;background:var(--wh);}
 .camping-view{display:none;flex-direction:column;overflow:hidden;background:var(--bg);
   position:absolute;left:0;right:0;top:0;bottom:0;z-index:5;
   --kid:#7A4E9E;--kid-soft:#F0E9F7;--cmp-warn:#8A5410;--cmp-warn-soft:#FBF0DC;--cmp-ok-soft:#E4EFE0;}
@@ -2093,6 +2113,25 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
   <!-- OVERLAY pour panneaux -->
   <div class="overlay" id="overlay" onclick="closeAll()"></div>
 
+  <!-- VUE WEB INTERNE — un site s'ouvre par-dessus la fiche, qui attend derrière.
+       Avant, window.open sortait de l'app et il fallait refermer par la croix
+       du système pour revenir. -->
+  <div class="wv" id="wv">
+    <div class="wv-bar">
+      <button type="button" class="wv-back" onclick="wvFermer()" aria-label="Revenir à la fiche">
+        <svg class="ic"><use href="#i-chev-l"/></svg></button>
+      <div class="wv-host" id="wv-host"></div>
+      <a class="wv-out" id="wv-out" href="#" target="_blank" rel="noopener"
+         aria-label="Ouvrir dans le navigateur">
+        <svg class="ic"><use href="#i-globe"/></svg></a>
+    </div>
+    <div class="wv-body">
+      <div class="wv-load" id="wv-load">Chargement…</div>
+      <iframe class="wv-frame" id="wv-frame" title="Site du lieu"
+              referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+    </div>
+  </div>
+
   <!-- PANNEAU SETTINGS — mode vue + filtres -->
   <div class="settings-sheet" id="settings-sheet">
     <div class="bs-handle-row" onclick="closeSettingsSheet()"><div class="bs-handle"></div></div>
@@ -3555,13 +3594,54 @@ function _plShowsBlock(sp){
     +'<div class="pl-list">'+shows.map(function(s){return'<div class="fr-row"><div class="pl-show-time">'+_escHtml(String(s.time||'').replace(':','h'))+'</div><div class="b"><div class="n">'+_escHtml(String(s.name||''))+'</div></div></div>';}).join('')+'</div>';
 }
 // ── ST helpers (Sorties & Détente) ──
-// En app installée (écran d'accueil), <a target="_blank"> est souvent ignoré : on ouvre via window.open
+// Un lien externe s'ouvrait par window.open : on quittait l'app, et il fallait
+// refermer par la croix du système pour retrouver sa fiche. Il s'ouvre
+// désormais DANS l'app, avec une flèche Retour — la fiche attend derrière.
+//
+// Sauf pour ces domaines : ils refusent d'être affichés en cadre
+// (X-Frame-Options / CSP frame-ancestors) et ne montreraient qu'une page
+// blanche. Un itinéraire, lui, DOIT partir vers l'app de navigation.
+var _WV_JAMAIS=/(^|\.)(google\.[a-z.]+|maps\.google|goo\.gl|facebook\.com|instagram\.com|twitter\.com|x\.com|apple\.com|waze\.com)$/i;
+function _wvRefuse(href){
+  try{
+    var u=new URL(href,location.href);
+    if(u.protocol!=='http:'&&u.protocol!=='https:')return true;   // tel:, mailto:, geo:
+    return _WV_JAMAIS.test(u.hostname);
+  }catch(e){return true;}
+}
+function wvOuvrir(href){
+  var f=document.getElementById('wv-frame'),v=document.getElementById('wv');
+  if(!f||!v)return false;
+  var u;try{u=new URL(href,location.href);}catch(e){return false;}
+  document.getElementById('wv-host').textContent=u.hostname.replace(/^www\./,'');
+  var out=document.getElementById('wv-out');if(out)out.href=href;
+  var load=document.getElementById('wv-load');if(load)load.style.display='flex';
+  f.src=href;
+  v.classList.add('open');
+  // Filet de sécurité : si le site refuse le cadre, rien ne se charge et la
+  // page reste blanche. Au-delà de 3,5 s sans chargement, on rend la main au
+  // navigateur plutôt que de laisser l'utilisateur devant du vide.
+  clearTimeout(window._wvMinuteur);
+  window._wvMinuteur=setTimeout(function(){
+    if(load&&load.style.display!=='none'){wvFermer();window.open(href,'_blank','noopener');}
+  },3500);
+  f.onload=function(){if(load)load.style.display='none';clearTimeout(window._wvMinuteur);};
+  return true;
+}
+function wvFermer(){
+  var f=document.getElementById('wv-frame'),v=document.getElementById('wv');
+  clearTimeout(window._wvMinuteur);
+  if(v)v.classList.remove('open');
+  if(f)f.src='about:blank';
+}
 document.addEventListener('click',function(e){
   var el=e.target;
   while(el&&el!==document.body){
     if(el.tagName==='A'&&el.getAttribute('target')==='_blank'&&el.href){
+      // Le lien « ouvrir dans le navigateur » de la vue web garde son rôle.
+      if(el.id==='wv-out')return;
       e.preventDefault();e.stopPropagation();
-      window.open(el.href,'_blank','noopener');
+      if(_wvRefuse(el.href)||!wvOuvrir(el.href))window.open(el.href,'_blank','noopener');
       return;
     }
     el=el.parentNode;
