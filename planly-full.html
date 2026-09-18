@@ -1486,7 +1486,11 @@ body{
 .pl-hours.open .pl-week{display:block;}
 .pl-week-row{display:flex;justify-content:space-between;gap:10px;font-size:var(--t5);padding:3px 0;line-height:var(--lh);}
 .pl-week-row.today{font-weight:700;}
-.pl-price{background:var(--wh);border-radius:14px;padding:var(--s4);margin-bottom:var(--s4);}
+/* Dernier cadre blanc arrondi de la fiche. Tout le reste est à plat, séparé
+   par des filets : un encadré ici ne désignait plus rien, il signalait juste
+   que ce bloc n'avait pas été repris. */
+.pl-price{background:transparent;border-radius:0;padding:var(--s5) 0 0;
+  margin-bottom:var(--s5);border-top:1px solid var(--line);}
 .pl-price-hd{display:flex;align-items:center;justify-content:space-between;gap:10px;}
 .pl-price-title{font-size:var(--t5);font-weight:700;color:var(--tx);line-height:var(--lh);}
 .pl-price-edit{font-size:var(--t5);font-weight:500;color:var(--brand);cursor:pointer;background:none;border:none;font-family:'DM Sans',sans-serif;padding:8px 0;line-height:var(--lh);}
@@ -3838,11 +3842,21 @@ function _renderPoiBody(p,mode){
       {val:loopLbl,lbl:'Type',cls:''},
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];
-    sectionLabel='La balade';
-    var pills=[];
-    if(sp.stroller_ok)pills.push(_frRow('i-stroller','Poussette','','praticable','on'));
-    if(sp.bike_allowed)pills.push(_frRow('i-bike','Vélo','','autorisé','on'));
-    pillsHtml=_frRows(pills.concat(_frFromSpecs(p.quickSpecs)));
+    // Deux sections comme partout : le parcours lui-même, puis ce qui se
+    // prépare avant de partir. La balade n'en avait qu'une.
+    sectionLabel='';
+    var pills=[], balSavoir=[];
+    if(sp.terrain_type)pills.push(_frRow('i-boot','Terrain','',_escHtml(String(sp.terrain_type))));
+    if(sp.shade_level)pills.push(_frRow('i-tree','Ombre','',_escHtml(String(sp.shade_level))));
+    if(sp.stroller_ok)balSavoir.push(_frRow('i-stroller','Poussette praticable','Chemin roulant sur tout le parcours',''));
+    else if(sp.stroller_ok===false)balSavoir.push(_frRow('i-stroller','Poussette déconseillée','Sable meuble ou passages étroits',''));
+    if(sp.bike_allowed)balSavoir.push(_frRow('i-bike','Vélo autorisé','Partagé avec les piétons',''));
+    if(sp.loop===false)balSavoir.push(_frRow('i-arrows','Aller-retour','Prévoir le retour par le même chemin',''));
+    pillsHtml=(function(){
+      var a=pills.concat(_frFromSpecs(p.quickSpecs));
+      return (a.length?'<div class="bch-slbl">La balade</div>'+_frRows(a):'')
+        +(balSavoir.length?'<div class="bch-slbl">Ce qu\'il faut savoir</div>'+_frRows(balSavoir):'');
+    })();
 
   }else if(sub==='Points de vue'){
     // Ribbon : altitude | meilleur moment | accès | distance
@@ -3988,8 +4002,49 @@ function _renderPoiBody(p,mode){
       {val:durLbl,lbl:'Durée',cls:''},
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];
-    sectionLabel='Le lieu';
-    pillsHtml=_frRows(_frFromSpecs(p.quickSpecs));
+    // Le bloc le plus pauvre de l'app : un titre et les quickSpecs. Les
+    // données portaient pourtant période historique, visite guidée, entrée
+    // libre, terrain — et pour l'Île d'Yeu un tarif de ferry complet que
+    // rien n'affichait. Trois sections désormais, comme la maquette.
+    sectionLabel='';
+    var patLieu=[], patSavoir=[], patFerry=[];
+
+    // « La traversée » : les tarifs du bateau décident du budget d'une île.
+    var fp=sp.ferry_pricing||null;
+    if(fp){
+      var dep=fp.depart_saint_gilles||fp.depart_fromentine||null;
+      var ar=dep&&(dep.ar_journee||dep.aller_retour)||null;
+      if(ar){
+        if(_plNum(ar.adulte)!=null)patFerry.push(_frRow('','Adulte','',_plEuro(_plNum(ar.adulte))));
+        var enf=_plNum(ar.enfant_4_17)!=null?_plNum(ar.enfant_4_17):_plNum(ar.enfant);
+        if(enf!=null)patFerry.push(_frRow('','Enfant','4 à 17 ans',_plEuro(enf)));
+        var pref=_plNum(ar.preferentiel_60_etudiant);
+        if(pref!=null)patFerry.push(_frRow('','Tarif préférentiel','+60 ans, étudiant',_plEuro(pref)));
+        if(_plNum(ar.bebe)!=null)patFerry.push(_frRow('','Bébé','Moins de 4 ans',_plEuro(_plNum(ar.bebe))));
+      }
+      if(fp.reduction_carte_familles_nombreuses)
+        patSavoir.push(_frRow('i-family','Familles nombreuses','Réduction sur présentation de la carte',''));
+    }
+
+    // « Le lieu » : ce qu'on y trouve.
+    if(sp.historical_period)patLieu.push(_frRow('i-scroll','Époque','',_escHtml(String(sp.historical_period))));
+    if(sp.guided_visit)patLieu.push(_frRow('i-mic','Visite guidée','','proposée','on'));
+    if(sp.terrain_type)patLieu.push(_frRow('i-boot','Terrain','',_escHtml(String(sp.terrain_type)).slice(0,40)));
+    if(sp.difficulty)patLieu.push(_frRow('i-walk','Difficulté','',_escHtml(String(sp.difficulty))));
+    if(sp.shade_level)patLieu.push(_frRow('i-tree','Ombre','',_escHtml(String(sp.shade_level))));
+
+    // « Ce qu'il faut savoir » : ce qui se prépare avant de partir.
+    if(sp.free_entry)patSavoir.push(_frRow('i-ticket','Entrée libre','Aucun billet à prendre',''));
+    if(sp.bike_allowed)patSavoir.push(_frRow('i-bike','Vélo autorisé','Le meilleur moyen de circuler',''));
+    if(sp.stroller_ok===false)patSavoir.push(_frRow('i-stroller','Poussette déconseillée','Terrain irrégulier',''));
+
+    var patAutres=_frFromSpecs(p.quickSpecs);
+    pillsHtml=(patFerry.length?'<div class="bch-slbl">La traversée'
+        +(fp&&fp.compagnie?'<b>'+_escHtml(String(fp.compagnie))+'</b>':'')+'</div>'
+        +'<div class="bch-ssub">Aller-retour dans la journée</div>'+_frRows(patFerry):'')
+      +((patLieu.length||patAutres.length)?'<div class="bch-slbl">Le lieu</div>'
+        +_frRows(patLieu.concat(patAutres)):'')
+      +(patSavoir.length?'<div class="bch-slbl">Ce qu\'il faut savoir</div>'+_frRows(patSavoir):'');
   }
 
   // En-tête : état, repères, actions — puis les chiffres de la typologie.
