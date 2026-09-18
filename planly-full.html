@@ -3766,6 +3766,9 @@ function _repsEnLignes(ribbonItems){
 function _renderPoiBody(p,mode){
   var body=document.querySelector('.bs-poi-body');
   if(!body)return;
+  // Remise à zéro de l'index de doublons : sans elle, une fiche masquerait
+  // les lignes de la suivante.
+  _frRowsReset();
   var sub=p.subcategory||'';
   var sp=p.specific||{};
   var bch=p.beach||{};
@@ -5312,9 +5315,56 @@ function _icoDepuisMot(lbl){
   return 'i-pin';
 }
 
+// Garde-fou commun aux huit typologies. Les quickSpecs venues des données
+// répètent souvent un fait déjà nommé : « Poussette OK » sous « Poussette
+// praticable », « Karting » sous l'activité « Karting », « Restaurant » trois
+// fois sur un casino. Chaque typologie tenait sa propre liste de mots à
+// écarter, maintenue à la main donc toujours incomplète.
+// Ici on retire une ligne NUE — sans précision ni valeur, donc sans apport
+// propre — dès qu'un mot significatif de son libellé figure déjà dans une
+// ligne posée avant elle. Une ligne qui porte une valeur n'est jamais touchée.
+var _MOTS_VIDES=/^(de|du|des|le|la|les|un|une|en|au|aux|et|ou|sur|sous|pour|par|avec|sans|dans|plus|tous|tout|ce|cet|cette|oui|non|place|sur-place)$/;
+// L'index vit le temps d'une FICHE, pas d'une section. Il y a dix-sept appels
+// séparés à _frRows : un index local repartait à zéro à chacun, et les
+// doublons qui traversent les sections — « Restaurant » posé par le bandeau
+// puis par les services d'un casino — n'étaient jamais vus.
+var _fichVus={}, _fichLibelles={};
+function _frRowsReset(){_fichVus={};_fichLibelles={};}
 function _frRows(rows){
-  var r=rows.filter(Boolean);
-  return r.length?'<div class="fr-rows">'+r.join('')+'</div>':'';
+  var r=rows.filter(Boolean), vus=_fichVus, libellesVus=_fichLibelles, garde=[];
+  var decoupe=function(t){
+    return String(t||'').toLowerCase().replace(/[«»"'’.,;:!?()]/g,' ')
+      .replace(/\s+(ok|autoris[ée]e?|admis|possible)\s*$/,'')
+      .split(/\s+/).filter(function(w){return w.length>3&&!_MOTS_VIDES.test(w);});
+  };
+  // Seuls les VRAIS libellés comptent. « Ce qu'il faut savoir » pose des
+  // phrases entières en guise de libellé — « réduire la vitesse ou arrêter
+  // les machines » — et leurs mots empoisonnaient l'index : la ligne
+  // « Vitesse » d'un karting, « Produits locaux » d'un restaurant ou
+  // « Marché » d'un marché se faisaient supprimer à tort. Au-delà de
+  // 28 signes, c'est de la prose : on ne l'indexe pas et on n'y touche pas.
+  var COURT=28;
+  r.forEach(function(html){
+    var s=String(html);
+    var nom=(s.match(/class="n">([^<]*)</)||[])[1]||'';
+    var val=(s.match(/class="v[^"]*">([^<]*)</)||[])[1]||'';
+    var aValeur=!!val.trim();
+    var aPrecision=/class="m">[^<]/.test(s);
+    var estPhrase=nom.length>COURT;
+    var cleLbl=nom.toLowerCase().trim();
+    // Même libellé déjà posé : « Restaurant » deux fois sur un casino,
+    // « Accès PMR » deux fois au cinéma. La première l'emporte.
+    if(!estPhrase&&cleLbl&&libellesVus[cleLbl])return;
+    var motsNom=estPhrase?[]:decoupe(nom);
+    // Une ligne NUE dont un mot figure déjà — en libellé OU en valeur — ne
+    // dit rien de neuf : « Crêperie » après « Type → Crêperie », « Laser
+    // Game » après l'activité du même nom.
+    if(!estPhrase&&!aValeur&&!aPrecision&&motsNom.some(function(w){return vus[w];}))return;
+    if(!estPhrase&&cleLbl)libellesVus[cleLbl]=1;
+    if(!estPhrase)motsNom.concat(decoupe(val)).forEach(function(w){vus[w]=1;});
+    garde.push(html);
+  });
+  return garde.length?'<div class="fr-rows">'+garde.join('')+'</div>':'';
 }
 // Les quickSpecs venues des données n'ont qu'un libellé et un niveau : elles
 // deviennent des lignes sans valeur, ce qui les range sous les faits nommés
