@@ -3459,7 +3459,8 @@ function openPoiSheet(idx){
   document.getElementById('bs-car-dots').innerHTML=p.imgs.map(function(_,i){return'<div class="bs-car-dot'+(i===0?' active':'')+'"></div>';}).join('');
   document.getElementById('bs-name').textContent=p.name;
   document.getElementById('bs-cat').textContent=p.cat;
-  document.getElementById('bs-notoriety').textContent=p.inco?'<svg class="ic"><use href="#i-star"/></svg> Incontournable':'<svg class="ic"><use href="#i-gem"/></svg> Pépite locale';
+  // innerHTML et non textContent : le libellé porte l'icône en SVG
+  document.getElementById('bs-notoriety').innerHTML=p.inco?'<svg class="ic"><use href="#i-star"/></svg> Incontournable':'<svg class="ic"><use href="#i-gem"/></svg> Pépite locale';
   // Beach class + marine data
   if(isBeach){window._currentBeach=p.beach||{};sheet.classList.add('beach-sheet');}
   else{sheet.classList.remove('beach-sheet');}
