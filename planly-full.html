@@ -3898,7 +3898,11 @@ function _renderPoiBody(p,mode){
     if(sp.wildlife_observable)frtSavoir.push(_frRow('i-deer','Faune observable','Restez discret et à distance',''));
     if(sp.picnic_tables)frtSavoir.push(_frRow('i-picnic','Tables de pique-nique','Sur place',''));
     if(sp.playground)frtSavoir.push(_frRow('i-slide','Aire de jeux','Sur place',''));
-    var frtAutres=_frFromSpecs(p.quickSpecs,['ombre','terrain','poussette','vélo','faune','pique-nique','jeux']);
+    // Sans « difficulté » et sa valeur dans les mots déjà dits, la quickSpec
+    // « Facile » s'affichait seule, sans étiquette, sous une icône d'haltère.
+    var frtAutres=_frFromSpecs(p.quickSpecs,
+      ['ombre',sp.shade_level,'terrain',sp.terrain_type,'poussette','vélo','faune',
+       'pique-nique','jeux','difficulté',sp.difficulty,_frtDiffLabel&&frtDiff?_frtDiffLabel(frtDiff):'']);
     sectionLabel='';
     pillsHtml=((pills.length||frtAutres.length)?'<div class="bch-slbl">'+_frtTitre(p)+'</div>'
         +_frRows(pills.concat(frtAutres)):'')
