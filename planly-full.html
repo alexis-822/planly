@@ -1063,8 +1063,14 @@ body{
 .fr-row .b{flex:1;min-width:0;}
 .fr-row .n{font-size:var(--t5);font-weight:600;line-height:1.4;color:var(--tx);}
 .fr-row .m{font-size:var(--t6);color:var(--tx3);margin-top:var(--s1);line-height:var(--lh);}
-.fr-row .v{font-size:var(--t5);font-weight:700;white-space:nowrap;text-align:right;
-  font-variant-numeric:tabular-nums;line-height:var(--lh);padding-top:1px;color:var(--tx);}
+/* La valeur ne se replie pas tant qu'elle est courte — un horaire, un prix,
+   un nombre doivent rester d'un bloc. Mais une valeur longue écrasait son
+   étiquette : « 150 ans d'histoire, depuis 1959 » passait PAR-DESSUS
+   « Époque ». Elle se replie donc au-delà d'une largeur raisonnable. */
+.fr-row .v{font-size:var(--t5);font-weight:700;text-align:right;max-width:58%;
+  font-variant-numeric:tabular-nums;line-height:var(--lh);padding-top:1px;color:var(--tx);
+  overflow-wrap:break-word;}
+.fr-row .v.court{white-space:nowrap;}
 .fr-row .v.on{color:var(--ok);}
 .fr-row .v.warn{color:var(--warn);}
 
@@ -1528,8 +1534,11 @@ body{
 .pl-block.show .pl-list{background:transparent;}
 .pl-item{background:transparent;border-radius:0;border-top:1px solid var(--line-2);padding:var(--s3) 0;display:flex;align-items:center;gap:var(--s3);}
 .pl-item-body{flex:1;min-width:0;}
-.pl-item-name{font-size:var(--t4);font-weight:600;color:var(--tx);line-height:var(--lh);}
-.pl-item-meta{font-size:var(--t5);color:var(--tx3);margin-top:2px;line-height:var(--lh);}
+/* Aligné sur .fr-row : le nom d'une activité était en 16 px quand les lignes
+   de fait sont en 14 px, si bien qu'une activité paraissait plus importante
+   que la section qui la contient. Même motif, même poids. */
+.pl-item-name{font-size:var(--t5);font-weight:600;color:var(--tx);line-height:1.4;}
+.pl-item-meta{font-size:var(--t6);color:var(--tx3);margin-top:var(--s1);line-height:var(--lh);}
 .pl-kids{display:flex;gap:4px;flex-shrink:0;}
 .pl-kid{width:26px;height:26px;border-radius:50%;font-size:var(--t5);font-weight:700;display:flex;align-items:center;justify-content:center;line-height:var(--lh);}
 .pl-kid.ok{background:var(--ok);color:var(--wh);}
@@ -3418,8 +3427,12 @@ function _plActivitiesBlock(sp){
     if(x)meta.push('supplément '+_plEuro(x));
     var st=kids.map(function(age){return _plKidStatus(age,a);});
     if(kids.length&&st.every(function(s){return s==='ok';}))forAll++;
-    return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(a.name||''))+'</div>'
-      +(meta.length?'<div class="pl-item-meta">'+_escHtml(meta.join(' · '))+'</div>':'')+'</div>'
+    // Même motif que les lignes de fait : icône, libellé, précision dessous,
+    // et à droite les pastilles d'âge plutôt qu'une valeur. Les activités
+    // gardaient l'ancien balisage, sans icône ni colonne de droite.
+    return'<div class="fr-row"><svg class="ic"><use href="#i-ticket"/></svg>'
+      +'<div class="b"><div class="n">'+_escHtml(String(a.name||''))+'</div>'
+      +(meta.length?'<div class="m">'+_escHtml(meta.join(' · '))+'</div>':'')+'</div>'
       +(kids.length?'<div class="pl-kids">'+kids.map(function(age,i){return'<div class="pl-kid '+st[i]+'">'+age+'</div>';}).join('')+'</div>':'')
       +'</div>';
   });
@@ -3439,7 +3452,7 @@ function _plShowsBlock(sp){
   return'<div class="bch-slbl">À ne pas manquer'
     +(sp.indoor_outdoor==='intérieur'?'<b>100 % intérieur</b>':'')+'</div>'
     +'<div class="bch-ssub">Les animations à heure fixe</div>'
-    +'<div class="pl-list">'+shows.map(function(s){return'<div class="pl-item"><div class="pl-show-time">'+_escHtml(String(s.time||'').replace(':','h'))+'</div><div class="pl-item-name">'+_escHtml(String(s.name||''))+'</div></div>';}).join('')+'</div>';
+    +'<div class="pl-list">'+shows.map(function(s){return'<div class="fr-row"><div class="pl-show-time">'+_escHtml(String(s.time||'').replace(':','h'))+'</div><div class="b"><div class="n">'+_escHtml(String(s.name||''))+'</div></div></div>';}).join('')+'</div>';
 }
 // ── ST helpers (Sorties & Détente) ──
 // En app installée (écran d'accueil), <a target="_blank"> est souvent ignoré : on ouvre via window.open
@@ -3482,8 +3495,8 @@ function _stFacilitiesBlock(sp,sub){
     +(sp.age_min?'<b>'+sp.age_min+' ans et +</b>':'')+'</div>'
     +'<div class="bch-ssub">D\'après le site officiel</div>'
     +'<div class="pl-list">'+f.map(function(x){
-      return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(x.name))+'</div>'
-        +(x.detail?'<div class="st-item-detail">'+_escHtml(String(x.detail))+'</div>':'')+'</div></div>';
+      return'<div class="fr-row"><div class="b"><div class="n">'+_escHtml(String(x.name))+'</div>'
+        +(x.detail?'<div class="m">'+_escHtml(String(x.detail))+'</div>':'')+'</div></div>';
     }).join('')+'</div>';
 }
 function _stBudgetCard(p,sp){
@@ -3543,7 +3556,7 @@ function _mtMealBlock(p,sp){
       :dMin!=null&&dMax!=null?'<b>'+_plEuro(dMin)+'–'+_plEuro(dMax)+'</b>':'')+'</div>'
     +'<div class="bch-ssub">'+sub+'</div>'
     +'<div class="pl-list">'
-    +opts.map(function(o){return'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">'+_escHtml(String(o.label||''))+'</div></div><div class="mt-price">'+_plEuro(_plNum(o.price))+'</div></div>';}).join('')
+    +opts.map(function(o){return'<div class="fr-row"><div class="b"><div class="n">'+_escHtml(String(o.label||''))+'</div></div><span class="v">'+_plEuro(_plNum(o.price))+'</span></div>';}).join('')
     // pas de formule publiée : on donne au moins la fourchette des plats à la carte
     +(!opts.length&&dMin!=null?'<div class="pl-item"><div class="pl-item-body"><div class="pl-item-name">Plats à la carte</div><div class="st-item-detail">du moins cher au plus cher</div></div><div class="mt-price">'+_plEuro(dMin)+(dMax!=null&&dMax!==dMin?'–'+_plEuro(dMax):'')+'</div></div>':'')
     +(pr.notes?'<div class="st-item-detail" style="padding:2px 2px 0">'+_escHtml(String(pr.notes))+'</div>':'')
@@ -3731,6 +3744,8 @@ function _renderPoiBody(p,mode){
       if(_parts.length>1){
         _parts.forEach(function(seg){
           var m=seg.match(/^(.+?)\s+en\s+(.+)$/);
+          // Le vert garde ici son sens : une plage surveillée est une
+          // information de sécurité, pas un agrément.
           if(m)frRows.push(_frRow('i-clock','En '+m[2],'',m[1],'on'));
           else frRows.push(_frRow('i-clock','Surveillance','',seg,'on'));
         });
@@ -3738,8 +3753,8 @@ function _renderPoiBody(p,mode){
         frRows.push(_frRow('i-swim','Surveillance','',bch.hours||survDisplay||'oui','on'));
       }
       var _deb=sp.supervised_start, _fin=sp.supervised_end;
-      if(_deb&&_fin)frRows.push(_frRow('i-cal','Saison surveillée','',_deb+' → '+_fin,'on'));
-      else if(bch.period)frRows.push(_frRow('i-cal','Saison surveillée','',bch.period,'on'));
+      if(_deb&&_fin)frRows.push(_frRow('i-cal','Saison surveillée','',_deb+' → '+_fin));
+      else if(bch.period)frRows.push(_frRow('i-cal','Saison surveillée','',bch.period));
     }
     else frRows.push(_frRow('i-swim','Surveillance','Baignade non surveillée','non','warn'));
     var hasPmr=(p.quickSpecs||[]).some(function(s){return/pmr|wheelchair|handicap/i.test(s.label||'');});
@@ -3787,11 +3802,11 @@ function _renderPoiBody(p,mode){
     // Pills
     var pills=[];
     if(sp.shade_level)pills.push(_frRow('i-tree','Ombre','',_escHtml(String(sp.shade_level))));
-    if(sp.stroller_ok)pills.push(_frRow('i-stroller','Poussette','','praticable','on'));
-    if(sp.bike_allowed)pills.push(_frRow('i-bike','Vélo','','autorisé','on'));
-    if(sp.wildlife_observable)pills.push(_frRow('i-deer','Faune','Observable en étant discret','oui','on'));
-    if(sp.picnic_tables)pills.push(_frRow('i-picnic','Tables de pique-nique','','sur place','on'));
-    if(sp.playground)pills.push(_frRow('i-slide','Aire de jeux','','sur place','on'));
+    if(sp.stroller_ok)pills.push(_frRow('i-stroller','Poussette','','praticable'));
+    if(sp.bike_allowed)pills.push(_frRow('i-bike','Vélo','','autorisé'));
+    if(sp.wildlife_observable)pills.push(_frRow('i-deer','Faune','Observable en étant discret','oui'));
+    if(sp.picnic_tables)pills.push(_frRow('i-picnic','Tables de pique-nique','','sur place'));
+    if(sp.playground)pills.push(_frRow('i-slide','Aire de jeux','','sur place'));
     pillsHtml=_frRows(pills.concat(_frFromSpecs(p.quickSpecs)));
     // Trails block
     var frtTrails=sp.trails_display||sp.trails||[];
@@ -3879,11 +3894,11 @@ function _renderPoiBody(p,mode){
     // deux sections de la maquette : « La vue » dit ce qu'on voit et quand,
     // « Ce qu'il faut savoir » dit comment y accéder et ce qui s'y passe.
     var pdvVue=[], pdvSavoir=[];
-    if(sp.panoramic)pdvVue.push(_frRow('i-panorama','Vue panoramique','','360°','on'));
+    if(sp.panoramic)pdvVue.push(_frRow('i-panorama','Vue panoramique','','360°'));
     if(orientVal!=='—')pdvVue.push(_frRow('i-nav','Orientation','',orientVal));
     if(bt!=='—')pdvVue.push(_frRow('i-sun','Meilleur moment','',bt));
     if(meteoVal!=='—')pdvVue.push(_frRow('i-cloud','Météo idéale','',meteoVal));
-    if(sp.has_orientation_panel)pdvVue.push(_frRow('i-map','Table d\'orientation','','oui','on'));
+    if(sp.has_orientation_panel)pdvVue.push(_frRow('i-map','Table d\'orientation','','oui'));
     if(altVal!=='—')pdvVue.push(_frRow('i-cliff','Altitude',sp.terrain_type||'',altVal));
 
     // « Spectaculaire par gros temps » était un pied de bloc isolé : il devient
@@ -3915,13 +3930,13 @@ function _renderPoiBody(p,mode){
     sectionLabel=sub==='Restaurants'?'Le restaurant':sub==='Marchés & Terroir'?'Le marché':'La dégustation';
     specialBlock=_plHoursBar(p)+_stKnowBlock(sp)+_mtMealBlock(p,sp)+_mtMarketBlock(sp,p.subcategory)+_mtBookCard(p,sp);
     var mtPills=[];
-    if(mv.terrace)mtPills.push(_frRow('i-sun','Terrasse','','oui','on'));
+    if(mv.terrace)mtPills.push(_frRow('i-sun','Terrasse','','oui'));
     if(mv.view)mtPills.push(_frRow('i-wave','Vue','',_escHtml(String(mv.view).slice(0,30))));
-    if(mv.kids_menu)mtPills.push(_frRow('i-baby','Menu enfant','','oui','on'));
-    if(mv.vegetarian)mtPills.push(_frRow('i-veggie','Options végétariennes','','oui','on'));
-    if(mv.takeaway)mtPills.push(_frRow('i-takeaway','À emporter','','oui','on'));
-    if(mv.covered)mtPills.push(_frRow('i-umbrella','Halle couverte','','oui','on'));
-    if(mv.shop)mtPills.push(_frRow('i-shop','Boutique','Sur place','oui','on'));
+    if(mv.kids_menu)mtPills.push(_frRow('i-baby','Menu enfant','','oui'));
+    if(mv.vegetarian)mtPills.push(_frRow('i-veggie','Options végétariennes','','oui'));
+    if(mv.takeaway)mtPills.push(_frRow('i-takeaway','À emporter','','oui'));
+    if(mv.covered)mtPills.push(_frRow('i-umbrella','Halle couverte','','oui'));
+    if(mv.shop)mtPills.push(_frRow('i-shop','Boutique','Sur place','oui'));
     pillsHtml=_frRows(mtPills.concat(_frFromSpecs(p.quickSpecs)));
 
   }else if(ST_SUBCATS.indexOf(sub)!==-1){
@@ -3948,12 +3963,12 @@ function _renderPoiBody(p,mode){
     if(stAge&&stKids.some(function(a){return a<stAge;}))
       specialBlock='<div class="st-warn"><svg class="ic"><use href="#i-alert"/></svg> Interdit aux moins de '+stAge+' ans : à éviter avec tes enfants.</div>'+specialBlock;
     var stPills=[];
-    if(sv.terrace)stPills.push(_frRow('i-sun','Terrasse','','oui','on'));
+    if(sv.terrace)stPills.push(_frRow('i-sun','Terrasse','','oui'));
     if(sv.view)stPills.push(_frRow('i-sunrise','Vue','',_escHtml(String(sv.view).slice(0,40))));
-    if(sv.live_music)stPills.push(_frRow('i-music','Musique live','','oui','on'));
+    if(sv.live_music)stPills.push(_frRow('i-music','Musique live','','oui'));
     if(sv.happy_hour)stPills.push(_frRow('i-glass','Happy hour','',_escHtml(String(sv.happy_hour))));
-    if(sv.restaurant_on_site)stPills.push(_frRow('i-fork','Restaurant','Sur place','oui','on'));
-    if(sv.snack)stPills.push(_frRow('i-snack','Snack','','oui','on'));
+    if(sv.restaurant_on_site)stPills.push(_frRow('i-fork','Restaurant','Sur place','oui'));
+    if(sv.snack)stPills.push(_frRow('i-snack','Snack','','oui'));
     if(sv.pmr)stPills.push(_frRow('i-pmr','Accès PMR','','oui','on'));
     if(sv.id_required)stPills.push(_frRow('i-id','Papiers','À présenter à l\'entrée','obligatoire','warn'));
     if(sv.dress_code)stPills.push(_frRow('i-shirt','Tenue','',_escHtml(String(sv.dress_code)),'warn'));
@@ -3973,12 +3988,12 @@ function _renderPoiBody(p,mode){
     sectionLabel={'Aquariums':"L'aquarium",'Parcs botaniques':'Le jardin'}[sub]||'Le parc';
     specialBlock=_plHoursBar(p)+_plPriceBlock(sp)+_plActivitiesBlock(sp)+_plShowsBlock(sp);
     var am=sp.amenities||{},plPills=[];
-    if(sp.indoor_outdoor==='intérieur')plPills.push(_frRow('i-umbrella','Par temps de pluie','Entièrement couvert','idéal','on'));
+    if(sp.indoor_outdoor==='intérieur')plPills.push(_frRow('i-umbrella','Par temps de pluie','Entièrement couvert','idéal'));
     else if(sp.indoor_outdoor==='mixte')plPills.push(_frRow('i-umbrella','Par temps de pluie','','en partie couvert'));
-    if(am.snack)plPills.push(_frRow('i-burger','Snack','Sur place','oui','on'));
-    if(am.kids_zone)plPills.push(_frRow('i-baby','Espace tout-petits','','oui','on'));
-    if(am.picnic_area)plPills.push(_frRow('i-basket','Aire de pique-nique','','oui','on'));
-    if(am.stroller_ok)plPills.push(_frRow('i-stroller','Poussette','','praticable','on'));
+    if(am.snack)plPills.push(_frRow('i-burger','Snack','Sur place','oui'));
+    if(am.kids_zone)plPills.push(_frRow('i-baby','Espace tout-petits','','oui'));
+    if(am.picnic_area)plPills.push(_frRow('i-basket','Aire de pique-nique','','oui'));
+    if(am.stroller_ok)plPills.push(_frRow('i-stroller','Poussette','','praticable'));
     (am.rules||[]).slice(0,3).forEach(function(r){
       r=String(r||'');
       if(r)plPills.push(_frRow(/chaussette/i.test(r)?'i-socks':'i-alert','À prévoir',_escHtml(r.charAt(0).toUpperCase()+r.slice(1)),'','warn'));
@@ -4027,9 +4042,21 @@ function _renderPoiBody(p,mode){
     }
 
     // « Le lieu » : ce qu'on y trouve.
-    if(sp.historical_period)patLieu.push(_frRow('i-scroll','Époque','',_escHtml(String(sp.historical_period))));
-    if(sp.guided_visit)patLieu.push(_frRow('i-mic','Visite guidée','','proposée','on'));
-    if(sp.terrain_type)patLieu.push(_frRow('i-boot','Terrain','',_escHtml(String(sp.terrain_type)).slice(0,40)));
+    // Un texte long est une PRÉCISION, pas une valeur : « varié (sentier
+    // côtier, lande, plages) » sous l'étiquette, jamais à droite où il
+    // écrasait le libellé ou se faisait tronquer.
+    var _lg=function(v){return String(v||'').length>22;};
+    if(sp.historical_period){
+      var ep=String(sp.historical_period);
+      patLieu.push(_lg(ep)?_frRow('i-scroll','Époque',_escHtml(ep),'')
+                          :_frRow('i-scroll','Époque','',_escHtml(ep)));
+    }
+    if(sp.guided_visit)patLieu.push(_frRow('i-mic','Visite guidée','','proposée'));
+    if(sp.terrain_type){
+      var te=String(sp.terrain_type);
+      patLieu.push(_lg(te)?_frRow('i-boot','Terrain',_escHtml(te),'')
+                          :_frRow('i-boot','Terrain','',_escHtml(te)));
+    }
     if(sp.difficulty)patLieu.push(_frRow('i-walk','Difficulté','',_escHtml(String(sp.difficulty))));
     if(sp.shade_level)patLieu.push(_frRow('i-tree','Ombre','',_escHtml(String(sp.shade_level))));
 
@@ -4038,7 +4065,8 @@ function _renderPoiBody(p,mode){
     if(sp.bike_allowed)patSavoir.push(_frRow('i-bike','Vélo autorisé','Le meilleur moyen de circuler',''));
     if(sp.stroller_ok===false)patSavoir.push(_frRow('i-stroller','Poussette déconseillée','Terrain irrégulier',''));
 
-    var patAutres=_frFromSpecs(p.quickSpecs);
+    var patAutres=_frFromSpecs(p.quickSpecs,
+      ['époque',sp.historical_period,'visite','terrain',sp.terrain_type,'difficulté',sp.difficulty,'ombre','vélo','poussette']);
     pillsHtml=(patFerry.length?'<div class="bch-slbl">La traversée'
         +(fp&&fp.compagnie?'<b>'+_escHtml(String(fp.compagnie))+'</b>':'')+'</div>'
         +'<div class="bch-ssub">Aller-retour dans la journée</div>'+_frRows(patFerry):'')
@@ -5132,11 +5160,23 @@ function _frRows(rows){
 // Les quickSpecs venues des données n'ont qu'un libellé et un niveau : elles
 // deviennent des lignes sans valeur, ce qui les range sous les faits nommés
 // plutôt que de les mêler à eux.
-function _frFromSpecs(specs){
+// Les quickSpecs répètent souvent ce que les lignes nommées disent déjà :
+// « Vélo OK » sous « Vélo ···· autorisé », « Facile » sous « Difficulté ».
+// On écarte celles dont le libellé est déjà couvert par une ligne existante.
+function _frFromSpecs(specs,dejaDits){
+  var vus=(dejaDits||[]).join(' ').toLowerCase();
   return (specs||[]).map(function(s){
+    var lbl=String(s.label||'');
+    if(!lbl)return '';
+    // « Vélo OK » est couvert par une ligne « Vélo » ; « Facile » par « Difficulté ».
+    var noyau=lbl.toLowerCase().replace(/\s*(ok|autoris[ée]|possible)\s*$/,'').trim();
+    if(noyau&&vus.indexOf(noyau)!==-1)return '';
     var ic=/^i-[a-z0-9-]+$/.test(s.icon||'')?s.icon:'';
-    return _frRow(ic,s.label||'','','',s.cls==='positive'?'on':s.cls==='warning'?'warn':'');
-  });
+    // Les données marquent « positive » des agréments ordinaires — douches,
+    // vélo, terrasse. Le vert y perdait son sens : il ne reste que l'ambre,
+    // qui signale une contrainte réelle.
+    return _frRow(ic,lbl,'','',s.cls==='warning'?'warn':'');
+  }).filter(Boolean);
 }
 
 // Une ligne : icône, libellé, précision, valeur à droite. Le motif qui porte la hiérarchie.
