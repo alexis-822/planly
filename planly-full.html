@@ -1475,7 +1475,10 @@ body{
   background:var(--brand-l);border:0;font-family:'DM Sans',sans-serif;cursor:pointer;text-align:center;}
 .bch-act.q{background:transparent;box-shadow:inset 0 0 0 1px var(--line);}
 .bch-act:active{transform:scale(.97);}
-.bch-reps{display:flex;gap:var(--s4);margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--line);}
+/* Les repères touchaient le bloc suivant — conditions de mer, horaires — sans
+   aucune marge basse : deux blocs de nature différente collés l'un à l'autre. */
+.bch-reps{display:flex;gap:var(--s4);margin-top:var(--s5);margin-bottom:var(--s5);
+  padding-top:var(--s4);border-top:1px solid var(--line);}
 .bch-rep{flex:1;min-width:0;}
 .bch-rep-l{font-size:var(--t6);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--txl);line-height:var(--lh);}
 .bch-rep-v{font-size:var(--t4);font-weight:700;color:var(--tx);margin-top:3px;line-height:var(--lh);}
@@ -3307,35 +3310,26 @@ function _renderPoiBody(p,mode){
     // Les faits de la plage en LIGNES et non en pastilles : chacune porte une
     // étiquette, une précision et une valeur à droite, séparée d'un filet.
     // Une rangée de badges de même poids ne hiérarchise rien.
+    // Les faits de la plage en lignes, via la fonction partagée.
     var frRows=[];
-    function _frRow(ic,nom,precision,valeur,cls){
-      frRows.push('<div class="fr-row">'
-        +(ic?'<svg class="ic"><use href="#'+ic+'"/></svg>':'')
-        +'<div class="b"><div class="n">'+nom+'</div>'
-        +(precision?'<div class="m">'+precision+'</div>':'')+'</div>'
-        +(valeur?'<span class="v'+(cls?' '+cls:'')+'">'+valeur+'</span>':'')
-        +'</div>');
-    }
-    if(bchSupervised)_frRow('i-swim','Surveillance',bch.supervision_season||'',survDisplay||'oui','on');
-    else _frRow('i-swim','Surveillance','Baignade non surveillée','non','warn');
-    if(bch.showers)_frRow('i-shower','Douches','','sur place','on');
+    if(bchSupervised)frRows.push(_frRow('i-swim','Surveillance',bch.supervision_season||'',survDisplay||'oui','on'));
+    else frRows.push(_frRow('i-swim','Surveillance','Baignade non surveillée','non','warn'));
+    if(bch.showers)frRows.push(_frRow('i-shower','Douches','','sur place','on'));
     var hasPmr=(p.quickSpecs||[]).some(function(s){return/pmr|wheelchair|handicap/i.test(s.label||'');});
-    if(hasPmr)_frRow('i-pmr','Accès PMR','','oui','on');
-    if(bch.beach_bar)_frRow('i-glass','Bar de plage','Ouvert en saison','oui','on');
-    if(bch.naturist)_frRow('i-parasol','Naturisme','','autorisé');
-    if(bch.dogs)_frRow('i-dog','Chiens','','admis','on');
-    if(bchType)_frRow('i-beach','Profil de plage','',bchType);
-    // Le libellé et non la valeur brute : « modéré » seul perd la nuance que
-    // « Vagues modérées » portait, et le harnais l'a relevé sur 9 fiches.
+    if(hasPmr)frRows.push(_frRow('i-pmr','Accès PMR','','oui','on'));
+    if(bch.beach_bar)frRows.push(_frRow('i-glass','Bar de plage','Ouvert en saison','oui','on'));
+    if(bch.naturist)frRows.push(_frRow('i-parasol','Naturisme','','autorisé'));
+    if(bch.dogs)frRows.push(_frRow('i-dog','Chiens','','admis','on'));
+    if(bchType)frRows.push(_frRow('i-beach','Profil de plage','',bchType));
     if(bchWave){
       var waveLbl=/sportif|fort/i.test(bchWave)?'Mer sportive'
         :/modér/i.test(bchWave)?'Vagues modérées'
         :/calme|faible/i.test(bchWave)?'Mer calme'
         :bchWave.charAt(0).toUpperCase()+bchWave.slice(1);
-      _frRow('i-wave','Profil de mer','',waveLbl,/sportif|fort/i.test(bchWave)?'warn':'');
+      frRows.push(_frRow('i-wave','Profil de mer','',waveLbl,/sportif|fort/i.test(bchWave)?'warn':''));
     }
-    if(bch.tide_sensitive)_frRow('i-tide','Sensible aux marées','Vérifier les horaires avant de partir','','warn');
-    pillsHtml=frRows.length?'<div class="fr-rows">'+frRows.join('')+'</div>':'';
+    if(bch.tide_sensitive)frRows.push(_frRow('i-tide','Sensible aux marées','Vérifier les horaires avant de partir','','warn'));
+    pillsHtml=_frRows(frRows);
 
   }else if(sub==='Forêts & Nature'){
     // Ribbon : difficulté (colorée), durée estimée, superficie, distance voiture
@@ -3491,15 +3485,11 @@ function _renderPoiBody(p,mode){
     if(mv.terrace)mtPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-sun"/></svg> Terrasse</span>');
     if(mv.view)mtPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-wave"/></svg> '+_escHtml(String(mv.view).slice(0,30))+'</span>');
     if(mv.kids_menu)mtPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-baby"/></svg> Menu enfant</span>');
-    if(mv.vegetarian)mtPills.push('<span class="bch-pill bch-pn"><svg class="ic"><use href="#i-veggie"/></svg> Options végétariennes</span>');
-    if(mv.takeaway)mtPills.push('<span class="bch-pill bch-pn"><svg class="ic"><use href="#i-takeaway"/></svg> À emporter</span>');
-    if(mv.covered)mtPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-umbrella"/></svg> Halle couverte</span>');
-    if(mv.shop)mtPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-shop"/></svg> Boutique sur place</span>');
-    (p.quickSpecs||[]).forEach(function(s){
-      var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      mtPills.push('<span class="bch-pill '+cls+'">'+_specIcon(s.icon)+s.label+'</span>');
-    });
-    pillsHtml=mtPills.length?'<div class="bch-pills-row">'+mtPills.join('')+'</div>':'';
+    if(mv.vegetarian)mtPills.push(_frRow('i-veggie','Options végétariennes','','oui','on'));
+    if(mv.takeaway)mtPills.push(_frRow('i-takeaway','À emporter','','oui','on'));
+    if(mv.covered)mtPills.push(_frRow('i-umbrella','Halle couverte','','oui','on'));
+    if(mv.shop)mtPills.push(_frRow('i-shop','Boutique','Sur place','oui','on'));
+    pillsHtml=_frRows(mtPills.concat(_frFromSpecs(p.quickSpecs)));
 
   }else if(ST_SUBCATS.indexOf(sub)!==-1){
     var sv=sp.services||{},stAge=_plNum(sp.age_min);
@@ -3525,20 +3515,16 @@ function _renderPoiBody(p,mode){
     if(stAge&&stKids.some(function(a){return a<stAge;}))
       specialBlock='<div class="st-warn"><svg class="ic"><use href="#i-alert"/></svg> Interdit aux moins de '+stAge+' ans : à éviter avec tes enfants.</div>'+specialBlock;
     var stPills=[];
-    if(sv.terrace)stPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-sun"/></svg> Terrasse</span>');
-    if(sv.view)stPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-sunrise"/></svg> '+_escHtml(String(sv.view).slice(0,40))+'</span>');
-    if(sv.live_music)stPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-music"/></svg> Musique live</span>');
-    if(sv.happy_hour)stPills.push('<span class="bch-pill bch-pw"><svg class="ic"><use href="#i-glass"/></svg> Happy hour '+_escHtml(String(sv.happy_hour))+'</span>');
-    if(sv.restaurant_on_site)stPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-fork"/></svg> Restaurant sur place</span>');
-    if(sv.snack)stPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-snack"/></svg> Snack</span>');
-    if(sv.pmr)stPills.push('<span class="bch-pill bch-pi"><svg class="ic"><use href="#i-pmr"/></svg> Accès PMR</span>');
-    if(sv.id_required)stPills.push('<span class="bch-pill bch-pw"><svg class="ic"><use href="#i-id"/></svg> Pièce d\'identité obligatoire</span>');
-    if(sv.dress_code)stPills.push('<span class="bch-pill bch-pw"><svg class="ic"><use href="#i-shirt"/></svg> '+_escHtml(String(sv.dress_code))+'</span>');
-    (p.quickSpecs||[]).forEach(function(s){
-      var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      stPills.push('<span class="bch-pill '+cls+'">'+_specIcon(s.icon)+s.label+'</span>');
-    });
-    pillsHtml=stPills.length?'<div class="bch-pills-row">'+stPills.join('')+'</div>':'';
+    if(sv.terrace)stPills.push(_frRow('i-sun','Terrasse','','oui','on'));
+    if(sv.view)stPills.push(_frRow('i-sunrise','Vue','',_escHtml(String(sv.view).slice(0,40))));
+    if(sv.live_music)stPills.push(_frRow('i-music','Musique live','','oui','on'));
+    if(sv.happy_hour)stPills.push(_frRow('i-glass','Happy hour','',_escHtml(String(sv.happy_hour))));
+    if(sv.restaurant_on_site)stPills.push(_frRow('i-fork','Restaurant','Sur place','oui','on'));
+    if(sv.snack)stPills.push(_frRow('i-snack','Snack','','oui','on'));
+    if(sv.pmr)stPills.push(_frRow('i-pmr','Accès PMR','','oui','on'));
+    if(sv.id_required)stPills.push(_frRow('i-id','Papiers','À présenter à l\'entrée','obligatoire','warn'));
+    if(sv.dress_code)stPills.push(_frRow('i-shirt','Tenue','',_escHtml(String(sv.dress_code)),'warn'));
+    pillsHtml=_frRows(stPills.concat(_frFromSpecs(p.quickSpecs)));
 
   }else if(PL_SUBCATS.indexOf(sub)!==-1){
     var plAgeMin=_plNum(sp.age_min);
@@ -3564,11 +3550,7 @@ function _renderPoiBody(p,mode){
       r=String(r||'');
       if(r)plPills.push('<span class="bch-pill bch-pw">'+(/chaussette/i.test(r)?'<svg class="ic"><use href="#i-socks"/></svg> ':'<svg class="ic"><use href="#i-alert"/></svg> ')+_escHtml(r.charAt(0).toUpperCase()+r.slice(1))+'</span>');
     });
-    (p.quickSpecs||[]).forEach(function(s){
-      var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      plPills.push('<span class="bch-pill '+cls+'">'+_specIcon(s.icon)+s.label+'</span>');
-    });
-    pillsHtml=plPills.length?'<div class="bch-pills-row">'+plPills.join('')+'</div>':'';
+    pillsHtml=_frRows(plPills.concat(_frFromSpecs(p.quickSpecs)));
     var plKids=_plGroup().kids;
     if(!attention&&plKids.length&&(sp.activities||[]).length){
       attention=plKids.map(function(age){
@@ -3588,11 +3570,7 @@ function _renderPoiBody(p,mode){
       {val:distMin+' min',lbl:'Distance',cls:''}
     ];
     sectionLabel='Le lieu';
-    var pills=(p.quickSpecs||[]).map(function(s){
-      var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      return'<span class="bch-pill '+cls+'">'+_specIcon(s.icon)+s.label+'</span>';
-    });
-    pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
+    pillsHtml=_frRows(_frFromSpecs(p.quickSpecs));
   }
 
   // En-tête : état, repères, actions — puis les chiffres de la typologie.
@@ -4639,6 +4617,35 @@ function _specIcon(v){
   if(!v)return '';
   if(/^i-[a-z0-9-]+$/.test(v))return '<svg class="ic"><use href="#'+v+'"/></svg> ';
   return v+' ';
+}
+
+// ══ LIGNE DE FAIT ══ — le motif qui hiérarchise une fiche.
+// Une pastille dit « il y a une terrasse ». Une ligne dit « Terrasse ···· oui ».
+// La première est un badge parmi d'autres de même poids ; la seconde a une
+// étiquette, une valeur et un filet. Écrite au niveau du fichier pour servir
+// à toutes les typologies — elle était enfermée dans le bloc plage.
+//   ic : symbole du sprite · nom : l'étiquette · precision : la sous-ligne
+//   valeur : ce qui s'affiche à droite · cls : 'on' (vert) ou 'warn' (ambre)
+function _frRow(ic,nom,precision,valeur,cls){
+  return '<div class="fr-row">'
+    +(ic?'<svg class="ic"><use href="#'+ic+'"/></svg>':'')
+    +'<div class="b"><div class="n">'+nom+'</div>'
+    +(precision?'<div class="m">'+precision+'</div>':'')+'</div>'
+    +(valeur?'<span class="v'+(cls?' '+cls:'')+'">'+valeur+'</span>':'')
+    +'</div>';
+}
+function _frRows(rows){
+  var r=rows.filter(Boolean);
+  return r.length?'<div class="fr-rows">'+r.join('')+'</div>':'';
+}
+// Les quickSpecs venues des données n'ont qu'un libellé et un niveau : elles
+// deviennent des lignes sans valeur, ce qui les range sous les faits nommés
+// plutôt que de les mêler à eux.
+function _frFromSpecs(specs){
+  return (specs||[]).map(function(s){
+    var ic=/^i-[a-z0-9-]+$/.test(s.icon||'')?s.icon:'';
+    return _frRow(ic,s.label||'','','',s.cls==='positive'?'on':s.cls==='warning'?'warn':'');
+  });
 }
 
 // Une ligne : icône, libellé, précision, valeur à droite. Le motif qui porte la hiérarchie.
