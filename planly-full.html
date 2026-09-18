@@ -77,6 +77,13 @@
   --lh:1.55;--lh-t:1.3;
   --r1:8px;--r2:14px;--r3:999px;
   --sh:0 8px 28px rgba(26,26,24,.12);
+
+  /* ── Deux plans au lieu d'un seul. L'app peignait tout sur le même crème :
+     rien ne se détachait de rien, ce qui est la traduction chromatique exacte
+     du « tout est au même niveau ». La maquette pose un fond de page plus
+     sourd et fait FLOTTER la carte dessus, plus claire et ombrée. ── */
+  --ground:#E9E3D5;        /* ce qui est DERRIÈRE : fond de page */
+  --sheet:#FDFBF4;         /* ce qui FLOTTE : la carte, la fiche */
 }
 
 /* ── Icônes : une seule classe pour les 52 symboles du sprite. Elles héritent
@@ -1562,6 +1569,10 @@ body{
   <symbol id="i-slot" viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M6 9h8M6 13h3M11 13h3"/><path d="M17 9h2a2 2 0 0 1 2 2v3"/><circle cx="21" cy="16" r="1.4"/></symbol>
   <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+  <!-- Pastilles de fiche : remplacent 📜 🎙️ ⚓ venus des données -->
+  <symbol id="i-scroll" viewBox="0 0 24 24"><path d="M6 3h11a2 2 0 0 1 2 2v13a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"/><path d="M4 6a2 2 0 0 0 2 2h1M9 8h6M9 12h6M9 16h4"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21M9 21h6"/></symbol>
+  <symbol id="i-anchor" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2"/><path d="M12 6.5V21"/><path d="M8 10h8"/><path d="M4 14a8 8 0 0 0 16 0"/></symbol>
   <!-- Onglet camping -->
   <symbol id="i-wash" viewBox="0 0 24 24"><rect x="4" y="2.5" width="16" height="19" rx="3"/><circle cx="12" cy="14" r="4.5"/><path d="M8 6h3"/></symbol>
   <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a15 15 0 0 1 19 0M6 12.5a10 10 0 0 1 12 0M9.5 16a5 5 0 0 1 5 0"/><path d="M12 19.5h.01"/></symbol>
@@ -3432,7 +3443,7 @@ function _renderPoiBody(p,mode){
     if(mv.shop)mtPills.push('<span class="bch-pill bch-ps"><svg class="ic"><use href="#i-shop"/></svg> Boutique sur place</span>');
     (p.quickSpecs||[]).forEach(function(s){
       var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      mtPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
+      mtPills.push('<span class="bch-pill '+cls+'">'+_specIcon(s.icon)+s.label+'</span>');
     });
     pillsHtml=mtPills.length?'<div class="bch-pills-row">'+mtPills.join('')+'</div>':'';
 
@@ -3471,7 +3482,7 @@ function _renderPoiBody(p,mode){
     if(sv.dress_code)stPills.push('<span class="bch-pill bch-pw"><svg class="ic"><use href="#i-shirt"/></svg> '+_escHtml(String(sv.dress_code))+'</span>');
     (p.quickSpecs||[]).forEach(function(s){
       var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      stPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
+      stPills.push('<span class="bch-pill '+cls+'">'+_specIcon(s.icon)+s.label+'</span>');
     });
     pillsHtml=stPills.length?'<div class="bch-pills-row">'+stPills.join('')+'</div>':'';
 
@@ -3501,7 +3512,7 @@ function _renderPoiBody(p,mode){
     });
     (p.quickSpecs||[]).forEach(function(s){
       var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      plPills.push('<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>');
+      plPills.push('<span class="bch-pill '+cls+'">'+_specIcon(s.icon)+s.label+'</span>');
     });
     pillsHtml=plPills.length?'<div class="bch-pills-row">'+plPills.join('')+'</div>':'';
     var plKids=_plGroup().kids;
@@ -3525,7 +3536,7 @@ function _renderPoiBody(p,mode){
     sectionLabel='Le lieu';
     var pills=(p.quickSpecs||[]).map(function(s){
       var cls=s.cls==='positive'?'bch-pi':s.cls==='warning'?'bch-pw':'bch-pn';
-      return'<span class="bch-pill '+cls+'">'+(s.icon?s.icon+' ':'')+s.label+'</span>';
+      return'<span class="bch-pill '+cls+'">'+_specIcon(s.icon)+s.label+'</span>';
     });
     pillsHtml=pills.length?'<div class="bch-pills-row">'+pills.join('')+'</div>':'';
   }
@@ -4550,6 +4561,17 @@ var CAMPING={
 
 var _cmpTab='accueil';
 function _cmpIc(id,cls){return '<svg class="ic'+(cls?' '+cls:'')+'"><use href="#'+id+'"/></svg>';}
+
+// Les pastilles de fiche recevaient un emoji en couleur venu des données, posé
+// à côté d'icônes au trait dans la même rangée : deux styles à 8 px d'écart.
+// Les données désignent désormais un symbole du sprite par son id. On tolère
+// encore l'ancienne forme, le temps que pois.js soit régénéré — sans quoi une
+// donnée non migrée afficherait « i-swim » en toutes lettres.
+function _specIcon(v){
+  if(!v)return '';
+  if(/^i-[a-z0-9-]+$/.test(v))return '<svg class="ic"><use href="#'+v+'"/></svg> ';
+  return v+' ';
+}
 
 // Une ligne : icône, libellé, précision, valeur à droite. Le motif qui porte la hiérarchie.
 function _cmpLigne(l){
