@@ -3471,6 +3471,7 @@ function _plActivitiesBlock(sp){
     // Même motif que les lignes de fait : icône, libellé, précision dessous,
     // et à droite les pastilles d'âge plutôt qu'une valeur. Les activités
     // gardaient l'ancien balisage, sans icône ni colonne de droite.
+    _frDeclare(String(a.name||''));   // l'activité entre dans l'index
     return'<div class="fr-row"><svg class="ic"><use href="#i-ticket"/></svg>'
       +'<div class="b"><div class="n">'+_escHtml(String(a.name||''))+'</div>'
       +(meta.length?'<div class="m">'+_escHtml(meta.join(' · '))+'</div>':'')+'</div>'
@@ -3554,6 +3555,7 @@ function _stFacilitiesBlock(sp,sub){
     +(sp.age_min?'<b>'+sp.age_min+' ans et +</b>':'')+'</div>'
     +'<div class="bch-ssub">D\'après le site officiel</div>'
     +'<div class="pl-list">'+f.map(function(x){
+      _frDeclare(String(x.name));     // l'installation entre dans l'index
       return'<div class="fr-row"><div class="b"><div class="n">'+_escHtml(String(x.name))+'</div>'
         +(x.detail?'<div class="m">'+_escHtml(String(x.detail))+'</div>':'')+'</div></div>';
     }).join('')+'</div>';
@@ -4183,12 +4185,19 @@ function _renderPoiBody(p,mode){
   var ribbonHtml=_ficheHeader(p,sp,ribbonItems,mode);
   // Ce qui reste du bandeau ouvre le bloc de la typologie, en lignes de fait.
   // Si la typologie n'a pas encore de lignes, on les crée pour ne rien perdre.
+  // Les lignes du bandeau étaient INJECTÉES par substitution de texte dans le
+  // bloc déjà rendu : elles ne passaient donc jamais par le garde-fou. Le
+  // casino posait « Restaurant → Oui » par le bandeau et « Restaurant → oui »
+  // par ses services, sans que l'index ne voie le premier. On les fait passer
+  // par _frRows, puis on recolle les deux blocs en un seul.
   var _repsRows=_repsEnLignes(ribbonItems);
   if(_repsRows.length){
-    if(pillsHtml.indexOf('fr-rows')!==-1)
-      pillsHtml=pillsHtml.replace('<div class="fr-rows">','<div class="fr-rows">'+_repsRows.join(''));
+    var _repsHtml=_frRows(_repsRows);
+    if(_repsHtml&&pillsHtml.indexOf('<div class="fr-rows">')!==-1)
+      pillsHtml=pillsHtml.replace('<div class="fr-rows">',
+        _repsHtml.replace(/<\/div>$/,'')+'</div><div class="fr-rows">');
     else
-      pillsHtml=_frRows(_repsRows)+pillsHtml;
+      pillsHtml=_repsHtml+pillsHtml;
   }
 
   // Parking HTML
@@ -5330,6 +5339,17 @@ var _MOTS_VIDES=/^(de|du|des|le|la|les|un|une|en|au|aux|et|ou|sur|sous|pour|par|
 // puis par les services d'un casino — n'étaient jamais vus.
 var _fichVus={}, _fichLibelles={};
 function _frRowsReset(){_fichVus={};_fichLibelles={};}
+// Les activités d'un parc et les installations d'un casino sont assemblées
+// par pl-list, qui ne passe pas par _frRows : l'index ne les voyait jamais,
+// et la quickSpec du même nom — « Accrobranche », « Karting », « Machines à
+// sous » — s'affichait ensuite sans obstacle. On les déclare à l'index.
+function _frDeclare(nom){
+  var n=String(nom||'').trim();
+  if(!n||n.length>28)return;
+  _fichLibelles[n.toLowerCase()]=1;
+  n.toLowerCase().replace(/[«»"'’.,;:!?()]/g,' ').split(/\s+/)
+    .forEach(function(w){if(w.length>3&&!_MOTS_VIDES.test(w))_fichVus[w]=1;});
+}
 function _frRows(rows){
   var r=rows.filter(Boolean), vus=_fichVus, libellesVus=_fichLibelles, garde=[];
   var decoupe=function(t){
