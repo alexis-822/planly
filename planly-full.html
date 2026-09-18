@@ -458,7 +458,10 @@ body{
 .cmp-scroll::-webkit-scrollbar{display:none;}
 
 /* En-tête photo */
-.cmp-hero{position:relative;height:168px;flex-shrink:0;}
+/* 168 px laissaient deviner la photo plutôt que la voir : le dégradé et le
+   titre en mangeaient la moitié. La hauteur suit l'écran (32 % de la hauteur
+   utile), bornée pour rester correcte d'un petit téléphone à une tablette. */
+.cmp-hero{position:relative;height:clamp(200px,32vh,290px);flex-shrink:0;}
 .cmp-hero img{width:100%;height:100%;object-fit:cover;display:block;}
 .cmp-hero::after{content:'';position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,0) 42%,rgba(0,0,0,.68) 100%);}
@@ -3805,7 +3808,14 @@ function _ficheEtat(p,sp){
   // Long, l'horaire descend dans le bloc — et la ligne d'état n'a alors PLUS
   // RIEN à dire : elle affichait « Horaires » tout seul, en vert, une
   // étiquette sans valeur. On ne rend pas une ligne vide, on ne la rend pas.
-  if(sp.hours_text)return _horairesLongs(sp)?{txt:'',sub:'',shut:false}
+  // Long, le détail descend dans le bloc horaires — mais la fiche garde une
+  // pastille : la rendre muette laissait 14 lieux sans aucun état, alors que
+  // le reste de l'app en affiche un. On ne PEUT pas dire « Ouvert » ici : sans
+  // horaires structurés jour par jour, ce serait une devinette, et un vert
+  // faux est pire que pas de vert. On dit donc ce qu'on sait : il y a des
+  // horaires, ils sont plus bas.
+  if(sp.hours_text)return _horairesLongs(sp)
+    ?{txt:'Horaires',sub:'voir plus bas',shut:false}
     :{txt:'Horaires',sub:String(sp.hours_text),shut:false};
   return{txt:'Accès libre',sub:'',shut:false};
 }
@@ -3837,6 +3847,10 @@ function _ficheHeader(p,sp,ribbonItems,mode){
   var h=e.txt?'<div class="bch-state'+(e.shut?' shut':'')+'">'+_escHtml(e.txt)
     +(e.sub?' <span>· '+_escHtml(e.sub)+'</span>':'')+'</div>':'';
   var m=[];
+  // La commune manquait : la fiche disait « Famille Mary · Art de vivre »
+  // sans jamais dire OÙ. Les cartes de liste l'affichent depuis toujours avec
+  // une épingle ; la fiche, qui est l'écran de décision, ne l'avait pas.
+  if(p.commune)m.push('<svg class="ic xs"><use href="#i-pin"/></svg>'+_escHtml(String(p.commune)));
   if(p.note&&p.note!=='?')m.push('<b><svg class="ic xs"><use href="#i-star"/></svg>'+p.note+'</b>');
   if(p.reviewsCount)m.push(p.reviewsCount+' avis');
   if(p.subcategory)m.push(_escHtml(p.subcategory));
@@ -5165,7 +5179,14 @@ function showSearchInitial(){
         +'<div class="lcard-inco"><svg class="ic"><use href="#i-star"/></svg> Incontournable</div>'
         +'<div class="lcard-body"><div class="lcard-name">'+p.name+'</div>'
         +'<div style="font-size:11px;color:var(--txm);margin-bottom:4px"><svg class="ic"><use href="#i-pin"/></svg> '+(p.commune||'')+'</div>'
-        +'<div class="lcard-desc">'+p.desc+'</div></div></div>';
+        +'<div class="lcard-desc">'+p.desc+'</div>'
+        // Ce gabarit rebâtit une .lcard à la main et avait oublié le cœur :
+        // depuis la recherche, on ne pouvait pas ajouter un lieu sans entrer
+        // dans sa fiche. Même bouton, même fonction que la liste normale.
+        +'<div class="lcard-footer"><div class="lcard-pills"></div>'
+        +'<button class="lcard-like'+(isLiked(p.name)?' on':'')+'" onclick="event.stopPropagation();toggleListLike('+i+',this)">'
+        +'<svg class="ic"><use href="#i-heart'+(isLiked(p.name)?'-full':'')+'"/></svg></button></div>'
+        +'</div></div>';
     }).join('')
     +'</div>';
 }
@@ -5239,9 +5260,17 @@ function doSearch(q){
       +'<div class="lcard-name">'+p.name+'</div>'
       +'<div style="font-size:11px;color:var(--txm);margin-bottom:4px;"><svg class="ic"><use href="#i-pin"/></svg> '+(p.commune||'')+'</div>'
       +'<div class="lcard-desc">'+p.desc+'</div>'
+      // Troisième gabarit qui rebâtit une .lcard à la main, et le seul que
+      // l'on voie vraiment en cherchant : il oubliait le cœur. Depuis la
+      // recherche, on ne pouvait donc pas ajouter un lieu à ses activités
+      // sans entrer dans sa fiche puis en ressortir.
+      +'<div class="lcard-footer">'
       +'<div class="lcard-pills">'
-      +'<div class="lcard-pill'+(p.budgetClass==='free'?' green':'')+'">'+p.budgetBadge+'</div>'
+      +(p.budgetBadge?'<div class="lcard-pill'+(p.budgetClass==='free'?' green':'')+'">'+p.budgetBadge+'</div>':'')
       +'<div class="lcard-pill"><svg class="ic"><use href="#i-star"/></svg> '+p.note+'</div>'
+      +'</div>'
+      +'<button class="lcard-like'+(isLiked(p.name)?' on':'')+'" onclick="event.stopPropagation();toggleListLike('+i+',this)">'
+      +'<svg class="ic"><use href="#i-heart'+(isLiked(p.name)?'-full':'')+'"/></svg></button>'
       +'</div></div></div>';
   }).join('');
 }

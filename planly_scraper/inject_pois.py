@@ -407,6 +407,12 @@ def main():
     essential = ["lat", "lng", "description_short", "description_long", "photos", "tags", "rating", "conseil_planly"]
     converted = []
     for p in data:
+        # Un lieu ferme definitivement ne revient pas dans l app a la prochaine
+        # regeneration. Le filtre ne regardait que le taux de remplissage :
+        # Anes Passions, ferme, restait complet a 100 % et serait revenu.
+        # On conserve ses donnees en base, on cesse seulement de le publier.
+        if p.get("permanently_closed"):
+            continue
         filled = sum(1 for f in essential if p.get(f))
         pct = filled / len(essential) * 100
         if pct >= 85:
