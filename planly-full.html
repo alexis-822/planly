@@ -1516,11 +1516,15 @@ body{
   <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16v2M20 16v2"/><path d="M3 16v-3.5L5 7h14l2 5.5V16z"/><circle cx="7.5" cy="16" r="1.5"/><circle cx="16.5" cy="16" r="1.5"/></symbol>
   <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17l4-9h4l4 9M9 8h5M12 17h-2.5"/></symbol>
   <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="13" cy="4" r="1.8"/><path d="M12 8l-2 5 3 2 1 6M10 13l-3 2M14 10l3 2"/></symbol>
-  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 5L3 19h18z"/><path d="M12 5v14M12 19l-4-6M12 19l4-6"/></symbol>
+  <!-- Une tente et non un triangle d'alerte : le tracé précédent se lisait
+       comme le panneau « danger », y compris devant le nom du camping. -->
+  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M12 3L3 20h18z"/><path d="M12 3v17"/><path d="M12 20l-3.5-6.5M12 20l3.5-6.5"/><path d="M1.5 20h21"/></symbol>
   <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
   <symbol id="i-family" viewBox="0 0 24 24"><circle cx="7" cy="6" r="2.4"/><circle cx="17" cy="6" r="2.4"/><path d="M3 19v-3a4 4 0 0 1 8 0v3M13 19v-3a4 4 0 0 1 8 0v3"/></symbol>
   <symbol id="i-group" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 20v-2.5A4.5 4.5 0 0 1 7.5 13h3a4.5 4.5 0 0 1 4.5 4.5V20"/><path d="M16 11a3 3 0 1 0-1.5-5.6M18 20v-2.5a4.5 4.5 0 0 0-1.3-3.2"/></symbol>
-  <symbol id="i-dog" viewBox="0 0 24 24"><path d="M5 6v5a7 7 0 0 0 14 0V6l-3 2h-8z"/><path d="M9 13h.01M15 13h.01M12 16c-1 0-1.6-.6-1.6-1.2h3.2C13.6 15.4 13 16 12 16z"/></symbol>
+  <!-- Chien, pas chat : les oreilles tombent le long de la tête et le museau
+       avance. L'ancien tracé montait deux oreilles pointues sur une face ronde. -->
+  <symbol id="i-dog" viewBox="0 0 24 24"><path d="M5.5 4.5v6"/><path d="M5.5 4.5c2 0 3 1.5 3 3.5"/><path d="M18.5 4.5v6"/><path d="M18.5 4.5c-2 0-3 1.5-3 3.5"/><path d="M8.5 8h7a3 3 0 0 1 3 3v2a6.5 6.5 0 0 1-13 0v-2a3 3 0 0 1 3-3z"/><path d="M9.5 13h.01M14.5 13h.01"/><path d="M12 16.5v1M10.5 18.5c.5.6 2.5.6 3 0"/></symbol>
   <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></symbol>
   <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol>
@@ -1569,6 +1573,8 @@ body{
   <symbol id="i-slot" viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M6 9h8M6 13h3M11 13h3"/><path d="M17 9h2a2 2 0 0 1 2 2v3"/><circle cx="21" cy="16" r="1.4"/></symbol>
   <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+  <!-- Canne : le sprite n'en avait pas, j'avais mis une botte faute de mieux -->
+  <symbol id="i-cane" viewBox="0 0 24 24"><path d="M9 21V8a4 4 0 0 1 8 0v1.5"/><path d="M6 21h6"/></symbol>
   <!-- Pastilles de fiche : remplacent 📜 🎙️ ⚓ venus des données -->
   <symbol id="i-scroll" viewBox="0 0 24 24"><path d="M6 3h11a2 2 0 0 1 2 2v13a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"/><path d="M4 6a2 2 0 0 0 2 2h1M9 8h6M9 12h6M9 16h4"/></symbol>
   <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><path d="M12 17.5V21M9 21h6"/></symbol>
@@ -1617,7 +1623,7 @@ body{
       <div class="sec-label">Destination</div>
       <div class="dest-wrap">
         <div class="search-bar" id="dest-search-bar">
-          <span style="font-size:18px">📍</span>
+          <svg class="ic"><use href="#i-pin"/></svg>
           <input type="text" id="dest-input" placeholder="Ex : Les Sables-d'Olonne…" autocomplete="off" oninput="onDestInput()" onfocus="onDestInput()">
         </div>
         <div class="dest-suggestions" id="dest-suggestions"></div>
@@ -1626,15 +1632,15 @@ body{
       <div class="sec-label" style="margin-top:22px">Comment tu te déplaces ?</div>
       <div class="mob-onboard">
         <div class="mob-onboard-card selected" id="mob-ob-voiture" onclick="selectMobilite('voiture')">
-          <div class="mob-onboard-emoji">🚗</div>
+          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-car"/></svg></div>
           <div class="mob-onboard-name">En voiture</div>
         </div>
         <div class="mob-onboard-card" id="mob-ob-velo" onclick="selectMobilite('velo')">
-          <div class="mob-onboard-emoji">🚲</div>
+          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-bike"/></svg></div>
           <div class="mob-onboard-name">À vélo</div>
         </div>
         <div class="mob-onboard-card" id="mob-ob-pied" onclick="selectMobilite('pied')">
-          <div class="mob-onboard-emoji">🚶</div>
+          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-walk"/></svg></div>
           <div class="mob-onboard-name">À pied / transports</div>
         </div>
       </div>
@@ -1665,30 +1671,30 @@ body{
 
       <div class="sec-label">Type de voyage</div>
       <div class="group-grid">
-        <div class="group-card" id="g-solo" onclick="selectGroup('solo')"><div class="group-emoji">🎒</div><div class="group-name">Solo</div><div class="group-sub">Je voyage seul(e)</div></div>
-        <div class="group-card" id="g-couple" onclick="selectGroup('couple')"><div class="group-emoji">💑</div><div class="group-name">En couple</div><div class="group-sub">2 adultes</div></div>
-        <div class="group-card" id="g-famille" onclick="selectGroup('famille')"><div class="group-emoji">👨‍👩‍👧</div><div class="group-name">En famille</div><div class="group-sub">Avec enfants</div></div>
-        <div class="group-card" id="g-amis" onclick="selectGroup('amis')"><div class="group-emoji">🎉</div><div class="group-name">Entre amis</div><div class="group-sub">Groupe d'adultes</div></div>
+        <div class="group-card" id="g-solo" onclick="selectGroup('solo')"><div class="group-emoji"><svg class="ic lg"><use href="#i-bag"/></svg></div><div class="group-name">Solo</div><div class="group-sub">Je voyage seul(e)</div></div>
+        <div class="group-card" id="g-couple" onclick="selectGroup('couple')"><div class="group-emoji"><svg class="ic lg"><use href="#i-heart"/></svg></div><div class="group-name">En couple</div><div class="group-sub">2 adultes</div></div>
+        <div class="group-card" id="g-famille" onclick="selectGroup('famille')"><div class="group-emoji"><svg class="ic lg"><use href="#i-family"/></svg></div><div class="group-name">En famille</div><div class="group-sub">Avec enfants</div></div>
+        <div class="group-card" id="g-amis" onclick="selectGroup('amis')"><div class="group-emoji"><svg class="ic lg"><use href="#i-group"/></svg></div><div class="group-name">Entre amis</div><div class="group-sub">Groupe d'adultes</div></div>
       </div>
 
       <div id="children-block">
         <div class="sec-label">Enfants</div>
         <div class="children-list" id="children-list"></div>
         <div class="add-child" onclick="addChild()">
-          <span style="font-size:20px;color:var(--txm)">＋</span>
+          <svg class="ic" style="color:var(--txm)"><use href="#i-plus"/></svg>
           <span>Ajouter un enfant</span>
         </div>
       </div>
 
       <div class="simple-row">
-        <span style="font-size:24px">🐕</span>
+        <svg class="ic lg" style="color:var(--txm)"><use href="#i-dog"/></svg>
         <div class="simple-row-txt"><div class="simple-row-main">On vient avec un animal</div><div class="simple-row-sub">On filtre les lieux pet-friendly</div></div>
         <div class="toggle" id="tog-animal" onclick="toggleSmall('tog-animal')"><div class="toggle-thumb"></div></div>
       </div>
 
       <div class="toggle-row" id="tr-pmr" onclick="toggleRow('pmr')">
         <div class="toggle-row-left">
-          <span class="toggle-row-icon">⚡</span>
+          <span class="toggle-row-icon"><svg class="ic"><use href="#i-pmr"/></svg></span>
           <div><div class="toggle-row-txt">Mobilité réduite ou fatigue facile</div><div class="toggle-row-sub">Contraintes de mobilité</div></div>
         </div>
         <div class="toggle" id="tog-pmr"><div class="toggle-thumb"></div></div>
@@ -1696,9 +1702,9 @@ body{
       <div class="expandable" id="exp-pmr">
         <div class="expandable-inner">
           <div class="pmr-detail">
-            <div class="pmr-item"><span class="pmr-item-txt">🦯 Canne / déambulateur</span><div class="toggle" id="tog-p1" onclick="toggleSmall('tog-p1')"><div class="toggle-thumb"></div></div></div>
-            <div class="pmr-item"><span class="pmr-item-txt">🦽 Fauteuil roulant</span><div class="toggle" id="tog-p2" onclick="toggleSmall('tog-p2')"><div class="toggle-thumb"></div></div></div>
-            <div class="pmr-item"><span class="pmr-item-txt">😮‍💨 Fatigue rapide</span><div class="toggle" id="tog-p3" onclick="toggleSmall('tog-p3')"><div class="toggle-thumb"></div></div></div>
+            <div class="pmr-item"><span class="pmr-item-txt"><svg class="ic sm"><use href="#i-cane"/></svg> Canne / déambulateur</span><div class="toggle" id="tog-p1" onclick="toggleSmall('tog-p1')"><div class="toggle-thumb"></div></div></div>
+            <div class="pmr-item"><span class="pmr-item-txt"><svg class="ic sm"><use href="#i-pmr"/></svg> Fauteuil roulant</span><div class="toggle" id="tog-p2" onclick="toggleSmall('tog-p2')"><div class="toggle-thumb"></div></div></div>
+            <div class="pmr-item"><span class="pmr-item-txt"><svg class="ic sm"><use href="#i-bolt"/></svg> Fatigue rapide</span><div class="toggle" id="tog-p3" onclick="toggleSmall('tog-p3')"><div class="toggle-thumb"></div></div></div>
             <div style="margin-top:10px">
               <div style="font-size:12px;color:var(--txm);margin-bottom:8px">Distance max / jour</div>
               <div class="chips-row"><div class="chip" onclick="toggleChip(this)">1–2 km</div><div class="chip sel" onclick="toggleChip(this)">3–5 km</div><div class="chip" onclick="toggleChip(this)">6–10 km</div></div>
@@ -1716,7 +1722,7 @@ body{
   <!-- S5 LOADER -->
   <div class="screen" id="s5">
     <div class="scroll-content" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:0;min-height:100%;">
-      <div class="loader-emoji">✨</div>
+      <div class="loader-emoji"><svg class="ic lg"><use href="#i-sparkle"/></svg></div>
       <div class="screen-title" style="text-align:center;margin-bottom:8px" id="loader-title">On prépare vos pépites…</div>
       <div class="screen-sub" style="text-align:center" id="loader-sub"></div>
       <div class="loader-dots"><span></span><span></span><span></span></div>

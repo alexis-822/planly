@@ -228,49 +228,49 @@ def make_quick_specs(p):
         bt_raw = (specific.get("beach_type") or "").lower().strip()
         bt_label = BEACH_TYPE_LABELS.get(bt_raw) or (bt_raw.capitalize() if bt_raw else None)
         if bt_label:
-            specs.append({"label": bt_label, "icon": "\U0001f3d6\ufe0f", "cls": ""})
+            specs.append({"label": bt_label, "icon": "i-parasol", "cls": ""})
         if specific.get("supervised"):
-            specs.append({"label": "Surveill\u00e9e", "icon": "\U0001f3ca", "cls": "positive"})
+            specs.append({"label": "Surveill\u00e9e", "icon": "i-swim", "cls": "positive"})
         if specific.get("showers"):
-            specs.append({"label": "Douches", "icon": "\U0001f6bf", "cls": "positive"})
+            specs.append({"label": "Douches", "icon": "i-shower", "cls": "positive"})
         wave = (specific.get("wave_profile") or "").lower()
         if wave in ("modéré", "modere", "sportif", "fort"):
             wave_label = "Mer sportive" if wave in ("sportif", "fort") else "Vagues mod\u00e9r\u00e9es"
-            specs.append({"label": wave_label, "icon": "\U0001f30a", "cls": "warning"})
+            specs.append({"label": wave_label, "icon": "i-wave", "cls": "warning"})
     elif subcat in ("For\u00eats & Nature", "Balades & Promenades"):
         diff = specific.get("difficulty")
         if diff:
             cls = "warning" if diff == "difficile" else ""
-            specs.append({"label": diff.capitalize(), "icon": "\U0001f4aa", "cls": cls})
+            specs.append({"label": diff.capitalize(), "icon": "i-dumbbell", "cls": cls})
         if specific.get("stroller_ok"):
-            specs.append({"label": "Poussette OK", "icon": "\U0001f476", "cls": "positive"})
+            specs.append({"label": "Poussette OK", "icon": "i-stroller", "cls": "positive"})
         if specific.get("bike_allowed"):
-            specs.append({"label": "V\u00e9lo OK", "icon": "\U0001f6b2", "cls": "positive"})
+            specs.append({"label": "V\u00e9lo OK", "icon": "i-bike", "cls": "positive"})
     elif subcat == "Villages & Sites":
         hp = specific.get("historical_period")
         if hp:
-            specs.append({"label": hp, "icon": "\U0001f4dc", "cls": ""})
+            specs.append({"label": hp, "icon": "i-scroll", "cls": ""})
         if specific.get("guided_visit"):
-            specs.append({"label": "Visite guid\u00e9e", "icon": "\U0001f399\ufe0f", "cls": "positive"})
+            specs.append({"label": "Visite guid\u00e9e", "icon": "i-mic", "cls": "positive"})
         if specific.get("free_entry"):
-            specs.append({"label": "Entr\u00e9e libre", "icon": "\U0001f39f\ufe0f", "cls": "positive"})
+            specs.append({"label": "Entr\u00e9e libre", "icon": "i-ticket", "cls": "positive"})
     elif subcat == "Points de vue":
         if specific.get("panoramic"):
-            specs.append({"label": "Panoramique", "icon": "\U0001f304", "cls": "positive"})
+            specs.append({"label": "Panoramique", "icon": "i-panorama", "cls": "positive"})
         diff = specific.get("difficulty")
         if diff:
-            specs.append({"label": diff.capitalize(), "icon": "\U0001f4aa", "cls": ""})
+            specs.append({"label": diff.capitalize(), "icon": "i-dumbbell", "cls": ""})
     elif subcat == "Ports & Littoral":
-        specs.append({"label": "Bord de mer", "icon": "\u2693", "cls": ""})
+        specs.append({"label": "Bord de mer", "icon": "i-anchor", "cls": ""})
 
     acc = p.get("accessibility", {}) or {}
     if acc.get("wheelchair"):
-        specs.append({"label": "Acc\u00e8s PMR", "icon": "\u267f", "cls": "positive"})
+        specs.append({"label": "Acc\u00e8s PMR", "icon": "i-pmr", "cls": "positive"})
 
     # Fallback: use tags
     if len(specs) < 2:
         for t in (p.get("tags") or [])[:4 - len(specs)]:
-            specs.append({"label": t.capitalize(), "icon": "\U0001f4cc", "cls": ""})
+            specs.append({"label": t.capitalize(), "icon": "", "cls": ""})
 
     return specs[:4]
 
