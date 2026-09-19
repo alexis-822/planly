@@ -2298,7 +2298,11 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
 <script>
 var MONTHS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
 var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
-var state={group:null,children:[],calOpen:false,calYear:2026,calMonth:6,calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:''};
+// Groupe par défaut : Solo. Sans valeur, l'onboarding démarrait sur aucune
+// carte sélectionnée — on ne savait pas qu'il fallait choisir, et rien ne
+// disait ce que l'app supposait. Solo est l'hypothèse la plus prudente : elle
+// ne compte ni conjoint ni enfants dans les prix.
+var state={group:'solo',children:[],calOpen:false,calYear:2026,calMonth:6,calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:''};
 var ALL_CATS=['air','hist','mov','viv','fun','fest','jeux'];
 ALL_CATS.forEach(function(id){state.cats[id]=false;});
 var AGE_LABELS=['Bébé','Bébé','Bébé','Tout-petit','Maternelle','Maternelle','Maternelle','Primaire','Primaire','Primaire','Primaire','Primaire','Collège','Collège','Collège','Lycée','Lycée','Lycée'];
@@ -5868,15 +5872,16 @@ function setCampingNom(v){
 function restoreCamping(){
   try{
     var r=JSON.parse(localStorage.getItem('planly_camping')||'null');
-    if(r&&r.on){
-      USER_PROFILE.camping=true;
-      USER_PROFILE.campingNom=r.nom||'';
-      var tr=document.getElementById('tr-camping'), tog=document.getElementById('tog-camping'),
-          exp=document.getElementById('exp-camping'), inp=document.getElementById('camping-nom');
-      if(tr)tr.classList.add('open');
-      if(tog)tog.classList.add('on');
-      if(exp)exp.classList.add('open');
-      if(inp)inp.value=USER_PROFILE.campingNom;
+    // On ne RECOCHE plus la case. L'onboarding se rejoue à chaque chargement
+    // — le reste du profil n'étant pas persisté — et l'utilisateur y retrouvait
+    // « Séjour en camping » déjà coché sans l'avoir demandé pour ce séjour-là.
+    // Déclarer son séjour est un choix, pas un souvenir. Seul le NOM survit :
+    // la case reste libre, et cocher suffit à retrouver le camping pré-rempli.
+    USER_PROFILE.camping=false;
+    if(r&&r.nom){
+      USER_PROFILE.campingNom=r.nom;
+      var inp=document.getElementById('camping-nom');
+      if(inp)inp.value=r.nom;
     }
   }catch(e){}
   cmpSyncNav();
@@ -6539,8 +6544,11 @@ updateSlider(4);
 renderList();
 // Initialiser le badge activités
 (function(){_updateActBadge();})();
-// Le séjour en camping survit au rechargement : on le relit et on rouvre l'onglet
+// Le NOM du camping survit au rechargement ; la case, elle, reste à cocher.
 (function(){restoreCamping();})();
+// La carte Solo doit se voir sélectionnée, pas seulement l'être dans l'état :
+// poser state.group sans le dire à l'écran aurait été pire que rien.
+(function(){if(typeof selectGroup==='function')selectGroup('solo');})();
 
 // PWA
 if('serviceWorker' in navigator){
