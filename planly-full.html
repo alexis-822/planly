@@ -3618,6 +3618,14 @@ function _wvRefuse(href){
   try{
     var u=new URL(href,location.href);
     if(u.protocol!=='http:'&&u.protocol!=='https:')return true;   // tel:, mailto:, geo:
+    // CONTENU MIXTE. Un navigateur refuse d'afficher une page http:// dans un
+    // cadre sur une page https:// — c'est une règle de sécurité, rien ne la
+    // contourne. 13 des 32 sites de lieux sont en http (le Zoo, le Quai des
+    // Saveurs, Mecamax, le Château des Aventuriers…) : le panneau restait sur
+    // « Chargement… » six secondes avant de rendre la main. On n'essaie plus.
+    // Invisible en local sur file://, d'où mes tests d'hier qui concluaient à
+    // tort que tout marchait : ce défaut ne se voit qu'en ligne.
+    if(u.protocol==='http:'&&location.protocol==='https:')return true;
     return _WV_JAMAIS.test(u.hostname);
   }catch(e){return true;}
 }
