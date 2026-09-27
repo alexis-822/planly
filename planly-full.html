@@ -4386,18 +4386,79 @@ function _mtMealBlock(p,sp){
 // se collait en une chaîne à virgules, tronquée à 14 signes en « Place des
 // Hall ». On jetait une information complète pour en montrer un moignon.
 var _JOURS_SEM=['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
-function _joursMarche(md){
-  // Plusieurs calendriers — quatre lieux et quatre saisons à Brétignolles —
-  // ne se résument pas en un mot. J'y affichais « 7j/7 » : aucune source ne
-  // le dit, c'était ma synthèse présentée comme un fait. Le bandeau se tait,
-  // le bloc en dessous montre les quatre calendriers tels qu'ils sont.
-  if(Array.isArray(md)&&md.length>1)return'';
-  var t=(Array.isArray(md)?md.join(' ; '):String(md||'')).toLowerCase();
-  var vus=_JOURS_SEM.filter(function(j){return t.indexOf(j)!==-1;});
-  if(!vus.length)return'';
-  if(vus.length===7)return'7j/7';
-  if(vus.length>=5)return vus.length+' j/sem.';
-  return vus.map(function(j){return j.charAt(0).toUpperCase()+j.slice(1,3);}).join(' · ');
+var _MOIS_FR=['janvier','fevrier','mars','avril','mai','juin',
+  'juillet','aout','septembre','octobre','novembre','decembre'];
+function _sansAcc(s){
+  return String(s==null?'':s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+}
+// Un marché n'est pas un lieu qu'on visite quand on veut : rater le jour, c'est
+// rater le lieu. Ses jours dormaient en texte libre dans market_days et
+// n'étaient jamais convertis. Chaque entrée est un CALENDRIER : un lieu, une
+// fenêtre de mois facultative, des jours de semaine.
+//   « Les Halles (avril à septembre) : mardi / mercredi / … »
+// Attention aux deux formes de saison : « avril à septembre » est une PLAGE,
+// « juillet/août » est une LISTE de deux mois. Et le « du » de « du lundi au
+// dimanche » est facultatif — sans ça, Sel de l'Île ne retenait que lundi et
+// dimanche au lieu de la semaine entière.
+function _marcheCalendriers(md,heures){
+  var lignes=Array.isArray(md)?md.slice():(md?[String(md)]:[]);
+  // Les horaires ne COMPLÈTENT un calendrier que si market_days en pose un.
+  // Sans ce garde-fou, les horaires d'un restaurant produiraient de faux
+  // « jours de marché » : « ouvert du mardi au dimanche » n'est pas un marché.
+  if(heures&&lignes.length)lignes=lignes.concat(String(heures).split(/\.\s+(?=[A-ZÉÈÀÎÔ])|\s*;\s*/));
+  var JJ=_JOURS_SEM.map(_sansAcc).join('|'),MM=_MOIS_FR.join('|'),out=[];
+  lignes.forEach(function(l){
+    var t=_sansAcc(l);
+    if(!t.trim())return;
+    var jours=[];
+    _JOURS_SEM.forEach(function(j,i){if(t.indexOf(_sansAcc(j))!==-1)jours.push(i);});
+    if(!jours.length&&/tous les jours|7\s*j\s*\/\s*7|quotidien/.test(t))jours=[0,1,2,3,4,5,6];
+    var pl=t.match(new RegExp('(?:du\\s+)?('+JJ+')\\s+au\\s+('+JJ+')'));
+    if(pl){
+      var a=_JOURS_SEM.map(_sansAcc).indexOf(pl[1]),b=_JOURS_SEM.map(_sansAcc).indexOf(pl[2]);
+      if(a>=0&&b>=0){jours=[];for(var k=a;;k=(k+1)%7){jours.push(k);if(k===b)break;}}
+    }
+    if(!jours.length)return;
+    var mois=null;
+    var liste=t.match(new RegExp('\\(('+MM+')\\s*[\\/,]\\s*('+MM+')\\)'));
+    var plage=t.match(new RegExp('('+MM+')(?:\\s+\\d{4})?\\s*(?:a|au)\\s*(?:le\\s+)?(?:\\d{1,2}\\s*(?:er)?\\s*)?('+MM+')'));
+    if(liste)mois=[_MOIS_FR.indexOf(liste[1]),_MOIS_FR.indexOf(liste[2])];
+    else if(plage){
+      var d=_MOIS_FR.indexOf(plage[1]),f=_MOIS_FR.indexOf(plage[2]);
+      mois=[];for(var m=d;;m=(m+1)%12){mois.push(m);if(m===f)break;}
+    }
+    out.push({lieu:String(l).split(/\s*[:(]/)[0].trim(),jours:jours,mois:mois});
+  });
+  return out;
+}
+// Les jours retenus pour UNE date donnée : les calendriers hors saison sont
+// écartés.
+// SANS date, on ne garde que les calendriers valables TOUTE L'ANNÉE. Fusionner
+// les saisons donnerait « 7j/7 » sur Brétignolles — quatre calendriers
+// saisonniers additionnés — et c'est précisément l'invention qu'il a fallu
+// retirer le 18/09 : aucune source ne dit qu'on y trouve un marché tous les
+// jours, c'était ma synthèse présentée comme un fait.
+function _marcheJoursLe(cals,date){
+  var m=(date&&typeof date.getMonth==='function')?date.getMonth():null,vus={};
+  (cals||[]).forEach(function(c){
+    if(m===null){if(c.mois)return;}
+    else if(c.mois&&c.mois.indexOf(m)===-1)return;
+    c.jours.forEach(function(x){vus[x]=true;});
+  });
+  return Object.keys(vus).map(Number).sort(function(a,b){return a-b;});
+}
+// Le bandeau disait « — » sur Brétignolles : quatre calendriers ne se
+// résumaient pas, faute de savoir les lire. Ils se lisent maintenant, et le
+// séjour choisi dans le tunnel décide de la saison retenue.
+function _joursMarche(md,heures){
+  var cals=_marcheCalendriers(md,heures);
+  if(!cals.length)return'';
+  var d=(typeof USER_PROFILE!=='undefined'&&USER_PROFILE.dates&&USER_PROFILE.dates.debut)||null;
+  var j=_marcheJoursLe(cals,d);
+  if(!j.length)return'';
+  if(j.length===7)return'7j/7';
+  if(j.length>=5)return j.length+' j/sem.';
+  return j.map(function(i){var n=_JOURS_SEM[i];return n.charAt(0).toUpperCase()+n.slice(1,3);}).join(' · ');
 }
 function _mtMarketBlock(sp,subcat,horairesGoogle){
   // réservé aux marchés : un restaurant a lui aussi des "produits", mais pas de jour de marché
@@ -4832,7 +4893,7 @@ function _renderPoiBody(p,mode){
     // n'a de sens que devant des jours — sinon le bandeau se tait.
     var _JOURS=/lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche|tous les jours|quotidien|week-?end|matin/i;
     var mServ=sp.hours_text&&/midi|soir/i.test(sp.hours_text)?'Midi et soir'
-      :(_joursMarche(sp.market_days)||(sp.market_days&&_JOURS.test(String(sp.market_days))?_tronque(sp.market_days,14):'—'));
+      :(_joursMarche(sp.market_days,sp.hours_text)||(sp.market_days&&_JOURS.test(String(sp.market_days))?_tronque(sp.market_days,14):'—'));
     ribbonItems=[
       // Pas de coupe ici : ces valeurs deviennent des LIGNES, pas des colonnes
       // de bandeau, et une ligne porte un texte long sans peine — _frRow le
