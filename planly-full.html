@@ -1110,16 +1110,19 @@ body{
 .vil-t .f .ko{background:rgba(180,72,60,.7);}
 .vil-t .c{display:block;font-size:9.5px;margin-top:5px;color:rgba(255,255,255,.82);
   line-height:1.35;text-shadow:0 1px 3px rgba(0,0,0,.5);}
-.vil-t .k{position:absolute;top:8px;right:8px;z-index:3;width:30px;height:30px;border-radius:50%;
-  border:1.5px solid rgba(255,255,255,.75);background:rgba(0,0,0,.3);
-  display:flex;align-items:center;justify-content:center;color:transparent;}
-.vil-t.on .k{background:var(--brand);border-color:var(--brand);color:#fff;}
+/* La bande « Ajouter » fait TOUTE la largeur de la tuile et 40 px de haut.
+   La pastille ronde de 30 px se ratait au doigt : on ouvrait le detail en
+   croyant cocher. Deux cibles, et la plus petite fait 40 px. */
+.vil-t .vil-add{position:absolute;left:0;right:0;bottom:0;z-index:4;height:40px;
+  border:0;border-top:1px solid rgba(255,255,255,.25);
+  background:rgba(0,0,0,.42);backdrop-filter:blur(4px);color:#fff;
+  font-family:'DM Sans',sans-serif;font-size:var(--t6);font-weight:600;
+  display:flex;align-items:center;justify-content:center;gap:5px;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.vil-t.on .vil-add{background:var(--brand);border-top-color:var(--brand);}
 .vil-t.on{outline:2.5px solid var(--brand);outline-offset:-2.5px;}
-.vil-c{grid-column:1 / -1;background:var(--wh);border:1.5px solid var(--brand);border-radius:14px;
-  padding:13px 14px;font-size:var(--t5);color:var(--txm);line-height:1.55;}
-.vil-c b{color:var(--tx);}
-.vil-c .t{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);color:var(--tx);display:block;margin-bottom:2px;}
-.vil-c .x{float:right;font-size:var(--t6);color:var(--brand-d);font-weight:600;}
+/* Le texte remonte au-dessus de la bande, sinon elle le recouvre. */
+.vil-t .d{bottom:40px;}
 .vil-b{margin-top:12px;padding:10px 12px;border-radius:11px;font-size:var(--t6);line-height:1.45;
   background:var(--bg-d);color:var(--txm);}
 .vil-b.ok{background:var(--ok-soft);color:var(--ok);font-weight:500;}
@@ -4144,8 +4147,41 @@ var VILLES={
     ]
   }
 };
-var _vilCoche={},_vilOuvert=null;
+// LES LIEUX D'UNE VILLE SONT DES POI COMME LES AUTRES. On les verse dans
+// POIS au chargement, marqués `provisoire` : la fiche ville ne fait que les
+// REGROUPER. Toucher une tuile ouvre donc la vraie fiche, par le même chemin
+// que n'importe quel lieu — et le jour où la collecte les remplit, il n'y a
+// qu'à retirer le drapeau.
+//
+// `provisoire` les tient hors de l'explorer, de la recherche et de la carte :
+// tant qu'ils n'ont ni note, ni avis, ni vraie photo, les montrer dans une
+// liste serait promettre ce qu'on n'a pas. `_pub()` est le filtre unique.
+function _pub(liste){
+  return (liste||[]).filter(function(p){return p&&!p.provisoire;});
+}
+function _villesVersPois(){
+  if(typeof POIS==='undefined'||POIS._villes)return;
+  POIS._villes=true;
+  Object.keys(VILLES).forEach(function(nom){
+    var hote=POIS.filter(function(x){return x.name===nom;})[0];
+    VILLES[nom].lieux.forEach(function(a){
+      a.idx=POIS.length;
+      POIS.push({
+        name:a.t, commune:(hote&&hote.commune)||nom, cat:a.ty, subcategory:a.sous||a.ty,
+        category:a.cat||'patrimoine', imgs:[a.img], duration:a.d||null,
+        budgetBadge:a.px, note:null, reviewsCount:0, inco:false,
+        desc:a.cle, descLong:String(a.plus||'').replace(/<[^>]+>/g,''),
+        // Coordonnées de la ville, faute des siennes : approximatif et dit
+        // comme tel. Un parcours optimisé exigera les vraies.
+        location:(hote&&hote.location)||null,
+        distance:(hote&&hote.distance)||null, trajet:(hote&&hote.trajet)||null,
+        quickSpecs:[], specific:{}, provisoire:true, villeHote:nom
+      });
+    });
+  });
+}
 function _villeBlock(p){
+  _villesVersPois();
   var v=p&&VILLES[p.name];
   var body=document.querySelector('.bs-poi-body');
   if(!body)return;
@@ -4159,26 +4195,25 @@ function _villeBlock(p){
 }
 function _vilRender(z,v){
   var h='',n=0,tot=0,flous=0;
-  v.lieux.forEach(function(a,i){
-    if(_vilCoche[i]){n++;if(a.d)tot+=a.d;else flous++;}
+  v.lieux.forEach(function(a){
+    if(isLiked(a.t)){n++;if(a.d)tot+=a.d;else flous++;}
   });
   v.lieux.forEach(function(a,i){
     var dur=a.d?'<span>'+a.d+' min</span>':'<span class="ko">durée inconnue</span>';
-    h+='<div class="vil-t'+(_vilCoche[i]?' on':'')+'" data-v="'+i+'">'
+    var pris=isLiked(a.t);
+    h+='<div class="vil-t'+(pris?' on':'')+'" data-v="'+i+'">'
       +'<img src="'+a.img+'" alt="" loading="lazy">'
-      +'<span class="k" data-vk="'+i+'"><svg class="ic sm"><use href="#i-check"/></svg></span>'
       +'<span class="d"><b>'+_escHtml(a.t)+'</b><span class="f">'+dur
-        +'<span>'+_escHtml(a.px)+'</span></span><i class="c">'+_escHtml(a.cle)+'</i></span></div>';
-    var fin=(i%2===1)||(i===v.lieux.length-1);
-    if(_vilOuvert!==null&&fin&&(_vilOuvert===i||_vilOuvert===i-1)){
-      var o=v.lieux[_vilOuvert];
-      h+='<div class="vil-c"><span class="x" data-vx="1">Fermer ✕</span>'
-        +'<span class="t">'+_escHtml(o.t)+'</span>'
-        +'<span style="color:var(--txl)">'+_escHtml(o.ty)+'</span><br>'+o.plus+'</div>';
-    }
+        +'<span>'+_escHtml(a.px)+'</span></span><i class="c">'+_escHtml(a.cle)+'</i></span>'
+      // La bande de selection fait toute la largeur de la tuile et 40 px de
+      // haut : la pastille de 30 px se ratait au doigt, et on ouvrait le
+      // detail en croyant cocher.
+      +'<button class="vil-add" data-vk="'+i+'">'
+        +'<svg class="ic sm"><use href="#i-'+(pris?'check':'plus')+'"/></svg>'
+        +(pris?'Retirer':'Ajouter')+'</button></div>';
   });
   var bil,cls='';
-  if(!n)bil='Deux heures sur place. Touchez une photo pour en savoir plus, la pastille pour cocher.';
+  if(!n)bil='Deux heures sur place. Touchez une photo pour ouvrir le lieu, « Ajouter » pour le retenir.';
   else{
     var reste=v.budget-tot;
     bil=tot+' min de visite';
@@ -4186,24 +4221,28 @@ function _vilRender(z,v){
     bil+=reste>=0?' — il vous reste '+reste+' min sur vos 2 h.':' — soit '+(-reste)+' min de trop pour 2 h.';
     cls=reste>=0?' ok':' ko';
   }
-  z.innerHTML='<div class="vil-h"><b>À voir sur place</b><i>'+n+' coché'+(n>1?'s':'')+'</i></div>'
-    +'<div class="vil-s">On reste dans la ville : touchez une photo, le détail s’ouvre ici même.</div>'
+  z.innerHTML='<div class="vil-h"><b>À voir sur place</b><i>'+n+' retenu'+(n>1?'s':'')+'</i></div>'
+    +'<div class="vil-s">Ces lieux sont regroupés ici, mais chacun a sa fiche : touchez une photo pour y entrer.</div>'
     +'<div class="vil-g">'+h+'</div>'
     +'<div class="vil-b'+cls+'">'+bil+'</div>'
-    +'<div class="vil-n"><b>Version de test.</b> Ces dix lieux sont réels (office de tourisme du Pays '
-    +'de Saint-Gilles) mais ne sont pas dans la base. Les photos montrent <b>d’autres lieux de '
-    +'Vendée</b>, choisies par type.</div>';
+    +'<div class="vil-n"><b>Pas encore collectés.</b> Ces dix lieux sont réels — relevés sur le site '
+    +'de l’office de tourisme du Pays de Saint-Gilles — mais ils n’ont ni note, ni avis, ni photo à '
+    +'eux : les images montrent <b>d’autres lieux de Vendée</b>, choisies par type. Ils n’apparaissent '
+    +'donc pas dans l’explorer ni dans la recherche.</div>';
   if(!z._pose){
     z._pose=true;
     z.addEventListener('click',function(e){
-      if(e.target.closest('[data-vx]')){_vilOuvert=null;_vilRender(z,v);return;}
       var k=e.target.closest('[data-vk]');
-      if(k){var j=k.getAttribute('data-vk');_vilCoche[j]=!_vilCoche[j];_vilRender(z,v);return;}
+      if(k){
+        var a=v.lieux[+k.getAttribute('data-vk')];
+        toggleLike(a.t);
+        _vilRender(z,v);
+        return;
+      }
       var t=e.target.closest('.vil-t');
       if(!t)return;
-      var i=+t.getAttribute('data-v');
-      _vilOuvert=(_vilOuvert===i)?null:i;
-      _vilRender(z,v);
+      var l=v.lieux[+t.getAttribute('data-v')];
+      if(l&&l.idx!=null)openPoiSheet(l.idx);
     });
   }
 }
@@ -5688,10 +5727,10 @@ var L1_CATS={'<svg class="ic"><use href="#i-parasol"/></svg> Plages & Côte':['p
 L1_CATS[PL1.parcs[1]]=['jeux']; // libellé Jeux & Divertissement = SVG inline, clé reprise du tableau PL1
 
 function getFilteredPois(){
-  if(!activeTuile)return POIS;
+  if(!activeTuile)return _pub(POIS);
   var cats=activeL1?L1_CATS[activeL1]||[]:TUILE_CATS[activeTuile]||[];
-  if(!cats.length)return POIS; // tuile sans données = affiche tout
-  return POIS.filter(function(p){return cats.indexOf(p.category)!==-1;});
+  if(!cats.length)return _pub(POIS); // tuile sans données = affiche tout
+  return _pub(POIS).filter(function(p){return cats.indexOf(p.category)!==-1;});
 }
 
 // ── ALGO DE PERTINENCE ──
@@ -5943,6 +5982,16 @@ function saveLike(idx){
   }
 }
 function isLiked(name){return likedPois.indexOf(name)!==-1;}
+// Bascule par NOM. La fiche d'une ville manipule ses lieux par leur nom, pas
+// par leur rang dans POIS : `toggleListLike` exigeait un index et un bouton.
+function toggleLike(name){
+  if(isLiked(name))likedPois=likedPois.filter(function(n){return n!==name;});
+  else likedPois.push(name);
+  localStorage.setItem('planly_likes',JSON.stringify(likedPois));
+  if(typeof _updateActBadge==='function')_updateActBadge();
+  var av=document.getElementById('activites-view');
+  if(av&&av.classList.contains('open')&&typeof renderActivites==='function')renderActivites();
+}
 
 // ── MOTEUR DE RECHERCHE v2 ──
 var STOPWORDS=['le','la','les','de','du','des','l','un','une','au','aux','en','et','a','sur','dans'];
@@ -6040,7 +6089,7 @@ function tokenScore(token,text){
 function findClosestKw(token){
   if(token.length<3)return null;
   var allKw=Object.keys(SYNONYMES);
-  POIS.forEach(function(p){
+  _pub(POIS).forEach(function(p){
     tokenize(p.name).forEach(function(t){if(allKw.indexOf(t)===-1)allKw.push(t);});
     tokenize(p.commune||'').forEach(function(t){if(allKw.indexOf(t)===-1)allKw.push(t);});
   });
@@ -6085,6 +6134,7 @@ function searchPois(q){
 
   var results=[];
   POIS.forEach(function(p,i){
+    if(p.provisoire)return;   // pas encore collecte : hors recherche
     var score=0;
 
     // Filtres profil (amél. 1)
@@ -6232,7 +6282,7 @@ function buildAutocomplete(q){
   });
 
   // 2. Villes (communes matchées)
-  POIS.forEach(function(p){
+  _pub(POIS).forEach(function(p){
     if(suggestions.length>=3)return;
     if(!p.commune||seenCommunes[p.commune])return;
     if(tokenScoreDirect(tok,p.commune)>0){
@@ -6305,7 +6355,7 @@ function showSearchInitial(){
     {label:'<svg class="ic"><use href="#i-boot"/></svg> Balade',val:'balade'},{label:'🔭 Vue',val:'vue'},
     {label:'<svg class="ic"><use href="#i-star"/></svg> Incontournable',val:'incontournable'},{label:'€ Gratuit',val:'gratuit'}
   ];
-  var incos=POIS.filter(function(p){return _notoRang(p)==='inco';}).slice(0,4);
+  var incos=_pub(POIS).filter(function(p){return _notoRang(p)==='inco';}).slice(0,4);
   scroll.innerHTML=
     '<div style="padding-bottom:20px">'
     +'<div style="font-size:11px;color:var(--txm);margin-bottom:10px;margin-top:16px;font-family:\'DM Sans\',sans-serif;font-weight:600;letter-spacing:.6px;text-transform:uppercase">Recherches rapides</div>'
@@ -7486,7 +7536,7 @@ function onMapSearch(q){
   }
   var nq=_searchNorm(trimmed);
   var qtoks=nq.split(/\s+/).filter(Boolean);
-  var matches=POIS.filter(function(p){
+  var matches=_pub(POIS).filter(function(p){
     var hay=_searchNorm(p.name+' '+(p.commune||'')+' '+(p.subcategory||'')+' '+(p.cat||'')+' '+(p.descLong||p.desc||''));
     return qtoks.every(function(tok){return hay.indexOf(tok)>=0;});
   }).slice(0,8);
