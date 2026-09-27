@@ -322,6 +322,17 @@ body{
 /* Le JS pose la classe « show » ; sans cette regle le bouton Valider restait
    invisible et le panneau ne pouvait pas se refermer. */
 .cal-confirm.show{display:block;}
+/* Une seule action a la fois. Calendrier ouvert, « Continuer » s'efface :
+   sinon le gros bouton bleu du bas recouvre le resume et « Valider », et
+   c'est lui qu'on voit alors qu'on est en train de choisir ses dates. */
+/* Le « > * » est indispensable : la regle generale rend les ENFANTS de la
+   bande cliquables. Sans le neutraliser ici, le bouton Continuer restait
+   au-dessus de « Valider », invisible mais happant le doigt. */
+#s1.cal-on .bottom-cta,#s1.cal-on .bottom-cta>*{opacity:0;pointer-events:none;}
+#s1.cal-on .bottom-cta{transform:translateY(8px);transition:opacity .22s,transform .22s;}
+#s1 .bottom-cta{transition:opacity .22s,transform .22s;}
+.cal-footer{padding:10px 14px 14px;}
+.cal-confirm.show{flex:1;padding:13px 20px;font-size:var(--t4);}
 /* Une case de calendrier est une CIBLE TACTILE : 38 px de haut, mais la
    colonne fait moins de 48 px sur un ecran de 390. On ne descend pas plus bas. */
 .cal-cell{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
@@ -2901,9 +2912,18 @@ function renderChildren(){
 function addChild(){state.children.push(5);renderChildren();}
 
 // CALENDRIER
+// Tant que le calendrier est ouvert, « Continuer » s'efface. Sinon deux
+// boutons se disputent le bas de l'ecran, le gros bleu gagne, et il recouvre
+// « Valider » et le resume arrivee/depart/duree. Une seule action a la fois :
+// on choisit ses dates, puis on continue.
+function _calCta(){
+  var s=document.getElementById('s1');
+  if(s)s.classList.toggle('cal-on',!!state.calOpen);
+}
 function toggleCal(){
   state.calOpen=!state.calOpen;
   document.getElementById('cal-panel').classList.toggle('open',state.calOpen);
+  _calCta();
   if(state.calOpen){
     // On rouvre sur le mois de l'arrivee deja choisie. Rouvrir sur le mois
     // courant obligerait a refaire tout le chemin en fleches pour corriger un
@@ -2911,11 +2931,17 @@ function toggleCal(){
     var ref=state.calStart||null;
     if(ref){state.calYear=ref.getFullYear();state.calMonth=ref.getMonth();}
     renderCal();updateCalSummary();
+    // Le panneau se deplie vers le bas : sans ca, son pied reste hors champ.
+    setTimeout(function(){
+      var p=document.getElementById('cal-panel');
+      if(p&&state.calOpen)p.scrollIntoView({behavior:'smooth',block:'end'});
+    },420);
   }
 }
 function closeCal(){
   state.calOpen=false;
   document.getElementById('cal-panel').classList.remove('open');
+  _calCta();
 }
 function calNav(dir){
   state.calMonth+=dir;
@@ -2965,11 +2991,20 @@ function updateCalSummary(){
   else{sa.classList.add('empty');sa.querySelector('.cal-sum-val').textContent='—';}
   if(state.calEnd){sd.classList.remove('empty');sd.querySelector('.cal-sum-val').textContent=fmt(state.calEnd);}
   else{sd.classList.add('empty');sd.querySelector('.cal-sum-val').textContent='—';}
+  // Le bouton du pied est TOUJOURS la. « Continuer » etant masque pendant que
+  // le calendrier est ouvert, un pied sans bouton enfermerait dans l'ecran.
+  confirm.classList.add('show');
   if(state.calStart&&state.calEnd){
     var n=Math.round((state.calEnd-state.calStart)/86400000);
     sn.classList.remove('empty');sn.querySelector('.cal-sum-val').textContent=n+' nuit'+(n>1?'s':'');
-    reset.style.display='block';confirm.classList.add('show');
-  }else{sn.classList.add('empty');sn.querySelector('.cal-sum-val').textContent='—';reset.style.display='none';confirm.classList.remove('show');}
+    reset.style.display='block';confirm.textContent='Valider ces dates';
+  }else{
+    sn.classList.add('empty');sn.querySelector('.cal-sum-val').textContent='—';
+    reset.style.display=state.calStart?'block':'none';
+    // Le bouton dit ce qu'il FAIT. Tant que le sejour n'est pas borne, il
+    // ferme — il ne valide rien.
+    confirm.textContent='Fermer';
+  }
 }
 function updateDatePill(){
   var pill=document.getElementById('date-pill');
