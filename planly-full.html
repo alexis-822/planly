@@ -211,6 +211,32 @@ body{
 .ob-pill.must{border-color:var(--deep);border-width:2px;}
 .ob-pill.must .st{background:var(--deep);border-color:var(--deep);color:var(--on-deep);}
 .ob-pill.vide{opacity:.45;cursor:default;}
+
+/* LES ENVIES SE CLASSENT. Une ligne numérotée qu'on déplace, pas une case. */
+.ob-rg{display:grid;grid-template-columns:26px 48px minmax(0,1fr) 22px;gap:11px;align-items:center;
+  background:var(--wh);border:1.5px solid var(--br);border-radius:15px;padding:9px 11px 9px 7px;
+  margin-bottom:8px;touch-action:none;user-select:none;-webkit-user-select:none;
+  -webkit-tap-highlight-color:transparent;cursor:grab;
+  transition:border-color .15s,background .15s;}
+.ob-rg .no{font-family:'Fraunces',Georgia,serif;font-size:var(--t2);font-weight:600;color:var(--txl);
+  text-align:center;line-height:1;font-variant-numeric:tabular-nums;}
+.ob-rg img,.ob-rg .ph{width:48px;height:48px;border-radius:10px;object-fit:cover;display:block;
+  background:var(--bg-d);}
+.ob-rg .b{min-width:0;}
+.ob-rg .b b{display:block;font-size:var(--t4);font-weight:600;color:var(--tx);line-height:1.25;}
+.ob-rg .b i{display:block;font-style:normal;font-size:var(--t6);color:var(--txl);margin-top:3px;
+  line-height:1.4;}
+.ob-rg .poign{color:var(--txl);display:flex;align-items:center;justify-content:center;}
+.ob-rg.haut{border-color:var(--brand);background:var(--brand-l);}
+.ob-rg.haut .no{color:var(--brand-d);}
+.ob-rg.vide{opacity:.5;}
+.ob-rg.trou{opacity:.25;}
+.ob-rg.leve{position:fixed;z-index:400;box-shadow:0 14px 34px rgba(0,0,0,.3);
+  transform:scale(1.03);pointer-events:none;border-color:var(--brand);background:var(--wh);
+  margin:0;}
+.ob-sep{display:flex;align-items:center;gap:9px;margin:14px 0 9px;
+  font-size:var(--t6);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--txl);}
+.ob-sep::after{content:'';flex:1;height:1px;background:var(--br);}
 .ob-sug{display:inline-block;margin-left:6px;font-size:var(--t6);font-weight:600;color:var(--warn);
   background:var(--warn-soft);border-radius:999px;padding:2px 8px;vertical-align:middle;line-height:1.5;}
 
@@ -1036,6 +1062,12 @@ body{
 /* Identité */
 .bs-identity{position:absolute;bottom:0;left:0;right:0;padding:14px 18px 16px;z-index:5;}
 .bs-notoriety{display:inline-flex;align-items:center;gap:4px;font-size:var(--t6);font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.03em;margin-bottom:6px;line-height:var(--lh);}
+/* Un lieu « ordinaire » ou dont on ne sait rien ne porte aucun libellé : sans
+   ceci, le bloc vide laissait quand même sa marge sous le titre. */
+.bs-notoriety:empty{display:none;}
+.bs-notoriety .ic{color:#F2C75C;}
+.bs-notoriety.pep .ic{color:#7FE0BC;}
+.bs-notoriety.sure .ic{color:rgba(255,255,255,.75);}
 .bs-identity-name{font-family:'Fraunces',serif;font-size:var(--t1);font-weight:300;color:var(--wh);line-height:1.1;margin-bottom:3px;}
 .bs-identity-cat{font-size:var(--t6);color:rgba(255,255,255,.6);font-weight:400;line-height:var(--lh);}
 
@@ -1879,6 +1911,9 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
   <symbol id="i-boot" viewBox="0 0 24 24"><path d="M7 3h4v9l7 3.5V20H4v-4z"/><path d="M11 9h4M4 17h14"/></symbol>
   <symbol id="i-loop" viewBox="0 0 24 24"><path d="M17 5H8a5 5 0 0 0 0 10h8a5 5 0 0 1 0 10H7"/><path d="M14 2l3 3-3 3"/></symbol>
   <symbol id="i-arrows" viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M7 8l-4 4 4 4M17 8l4 4-4 4"/></symbol>
+  <!-- Poignee de reordonnancement. i-arrows pointe a l HORIZONTALE : pose sur
+       une liste qu on monte et descend, il indiquait le mauvais axe. -->
+  <symbol id="i-arrows-v" viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M8 8l4-4 4 4M8 16l4 4 4-4"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.8-6.5 10-6.5S22 12 22 12s-3.8 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
   <symbol id="i-tide" viewBox="0 0 24 24"><path d="M2 16c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 11V3M9 6l3-3 3 3"/></symbol>
   <symbol id="i-parasol" viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 1 8 7H4a8 8 0 0 1 8-7z"/><path d="M12 11v9"/><path d="M12 4V2"/></symbol>
@@ -2143,16 +2178,16 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
   <!-- S4 LES ENVIES — deux niveaux : ce qui plaît, et les 3 indispensables -->
   <div class="screen" id="s4">
     <div class="scroll-content">
-      <div class="screen-title">Qu'est-ce qui vous <em><span class="hl">tente</span></em> ?</div>
+      <div class="screen-title">Vos <em><span class="hl">envies</span></em>, dans l'ordre</div>
       <div class="screen-sub" style="margin-bottom:14px">
-        Touchez ce qui vous plaît, sans compter.
+        On a proposé un ordre selon votre groupe. Bousculez-le.
       </div>
 
       <div class="ob-info" id="env-sug" style="display:none"><svg class="ic"><use href="#i-baby"/></svg><div></div></div>
 
       <div id="env-liste"></div>
 
-      <div class="ob-cnt"><b id="env-cnt">0/3</b><span id="env-cnt-txt">Touchez une pill pour la cocher, touchez-la encore pour en faire un coup de cœur.</span></div>
+      <div class="ob-cnt"><span id="env-cnt-txt">Maintenez une ligne appuyée pour la déplacer. Les trois premières pèsent le plus.</span></div>
 
       <div class="ob-rassure"><svg class="ic"><use href="#i-check"/></svg><div><b>Rien n'est écarté</b>Ce que vous ne cochez pas passe simplement après — jamais à la trappe. Une envie du moment se rattrape toujours par la recherche ou la carte.</div></div>
     </div>
@@ -2618,7 +2653,8 @@ var state={group:'solo',children:[],calOpen:false,
   calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:'',
   // Tunnel, écrans 3 à 8. Ces valeurs sont COLLECTÉES et rangées dans le
   // profil ; rien ne les lit encore côté classement.
-  organisation:'organise', envies:{}, sortie:10, sortiesJour:2, tempsMax:45, vetos:{}, dejaVenu:'une'};
+  organisation:'organise', envies:{}, ordreEnvies:null,
+  sortie:10, sortiesJour:2, tempsMax:45, vetos:{}, dejaVenu:'une'};
 var ALL_CATS=['air','hist','mov','viv','fun','fest','jeux'];
 ALL_CATS.forEach(function(id){state.cats[id]=false;});
 var AGE_LABELS=['Bébé','Bébé','Bébé','Tout-petit','Maternelle','Maternelle','Maternelle','Primaire','Primaire','Primaire','Primaire','Primaire','Collège','Collège','Collège','Lycée','Lycée','Lycée'];
@@ -2695,44 +2731,145 @@ function obSugBanner(){
   var d=el.querySelector('div');
   if(d)d.innerHTML='<b>Avec '+qui+', on suggère Parcs &amp; Loisirs</b>'
     +'C\'est la seule famille dont les lieux portent des âges : on peut vérifier que les activités sont ouvertes.';
-  if(state.envies.parcs===undefined)state.envies.parcs=1;
 }
-function obNbMust(){var n=0;for(var k in state.envies)if(state.envies[k]===2)n++;return n;}
+// ── LES ENVIES SE CLASSENT, ELLES NE SE COCHENT PLUS ────────────────────
+// Une case pose une question binaire — ça me tente, ça ne me tente pas —
+// alors que personne ne pense comme ça : tout tente un peu. Ce qui distingue,
+// c'est L'ORDRE. Et ça règle le défaut du système à deux niveaux : si l'écran
+// annonce « choisissez-en 3 », personne ne coche au premier niveau, donc le
+// premier niveau ne sert jamais. Ici il n'y a pas de niveaux, juste des rangs.
+//
+// On ne part JAMAIS d'une page blanche : l'ordre initial vient du groupe et de
+// l'âge des enfants. La personne CORRIGE une proposition au lieu de construire
+// de zéro — deux gestes suffisent souvent.
+function obOrdreDepart(){
+  var ids=OB_PILLS.map(function(p){return p.id;});
+  // Les pills sans aucun lieu en base finissent toujours en bas : les proposer
+  // en tête serait une promesse vide.
+  var pleines=ids.filter(function(id){return !obPillDe(id).vide;});
+  var vides=ids.filter(function(id){return obPillDe(id).vide;});
+  if(obSuggereParcs()){
+    // Seule famille dont les lieux portent des âges : on peut vérifier qu'une
+    // activité est ouverte à un enfant de 6 ans. C'est ce qui justifie la tête.
+    pleines=['parcs'].concat(pleines.filter(function(id){return id!=='parcs';}));
+  }else if(state.group==='couple'){
+    pleines=['vivre','patri'].concat(pleines.filter(function(id){return id!=='vivre'&&id!=='patri';}));
+  }
+  return pleines.concat(vides);
+}
+function obPillDe(id){
+  for(var i=0;i<OB_PILLS.length;i++)if(OB_PILLS[i].id===id)return OB_PILLS[i];
+  return {};
+}
+function obOrdre(){
+  if(!state.ordreEnvies||!state.ordreEnvies.length)state.ordreEnvies=obOrdreDepart();
+  return state.ordreEnvies;
+}
 function obPillsRender(){
   var z=document.getElementById('env-liste');
   if(!z)return;
   obSugBanner();
-  z.innerHTML=OB_PILLS.map(function(p){
-    var n=state.envies[p.id]||0;
-    var cls='ob-pill'+(p.vide?' vide':n===2?' must':n===1?' on':'');
-    var st=p.vide?'':(n===2?'★':n===1?'<svg class="ic sm"><use href="#i-check"/></svg>':'');
-    var img=p.vide?'<div class="ph"></div>':'<img src="'+p.img+'" alt="" loading="lazy">';
-    var sug=(p.id==='parcs'&&obSuggereParcs())?'<span class="ob-sug">suggéré</span>':'';
-    return '<div class="'+cls+'"'+(p.vide?'':' onclick="obPill(\''+p.id+'\')"')+'>'
-      +img+'<div class="b"><b>'+p.nom+sug+'</b><i>'+p.sous+(p.vide?' — bientôt':'')+'</i></div>'
-      +'<span class="st">'+st+'</span></div>';
+  z.innerHTML=obOrdre().map(function(id,i){
+    var p=obPillDe(id);
+    var cls='ob-rg'+(i<3?' haut':'')+(p.vide?' vide':'');
+    var img=p.vide?'<span class="ph"></span>':'<img src="'+p.img+'" alt="" loading="lazy">';
+    var sug=(id==='parcs'&&obSuggereParcs())?'<span class="ob-sug">suggéré</span>':'';
+    return (i===3?'<div class="ob-sep">Le reste, par ordre</div>':'')
+      +'<div class="'+cls+'" data-id="'+id+'">'
+      +'<span class="no">'+(i+1)+'</span>'+img
+      +'<div class="b"><b>'+p.nom+sug+'</b><i>'+p.sous+(p.vide?' — bientôt':'')+'</i></div>'
+      +'<span class="poign"><svg class="ic sm"><use href="#i-arrows-v"/></svg></span></div>';
   }).join('');
   obEnvCnt();
 }
-// Une touche coche, une seconde en fait un indispensable, une troisième
-// désélectionne. Aucune limite sur les cases : être ouvert à tout est
-// légitime. La contrainte porte sur les indispensables — on ne peut pas en
-// avoir huit, et c'est là que renoncer produit de l'information.
-function obPill(id){
-  var n=(state.envies[id]||0)+1;
-  if(n===2&&obNbMust()>=3)n=0;
-  if(n>2)n=0;
-  state.envies[id]=n;
+function obEnvCnt(){
+  var t=document.getElementById('env-cnt-txt'),c=document.getElementById('env-cnt');
+  if(c){
+    var tete=obOrdre().slice(0,3).map(function(id){return obPillDe(id).nom;});
+    c.textContent=tete.length?tete[0]:'';
+  }
+  if(t)t.textContent='Maintenez une ligne appuyée pour la déplacer. Les trois premières pèsent le plus.';
+}
+// GESTE : appui MAINTENU pour soulever. Un balayage bref doit continuer à faire
+// défiler l'écran — sans ce délai, le geste se bat avec le défilement et c'est
+// le défilement qui gagne, comme pour les curseurs.
+var _OB_HOLD=240, _OB_BOUGE=9;
+var _obT=null,_obSrc=null,_obClone=null,_obDy=0,_obLeve=false,_obX0=0,_obY0=0,_obId=null;
+function _obLever(){
+  _obLeve=true;
+  var r=_obSrc.getBoundingClientRect();
+  _obClone=_obSrc.cloneNode(true);
+  _obClone.classList.add('leve');
+  _obClone.style.left=r.left+'px';_obClone.style.top=r.top+'px';_obClone.style.width=r.width+'px';
+  document.body.appendChild(_obClone);
+  _obSrc.classList.add('trou');
+  _obDy=_obY0-r.top;
+  if(navigator.vibrate){try{navigator.vibrate(12);}catch(e){}}
+}
+// Le réordonnancement se fait EN DIRECT : sans ça on ne voit le résultat qu'au
+// lâcher, et on ne sait pas où l'on dépose.
+function _obBouge(y){
+  if(!_obClone)return;
+  _obClone.style.top=(y-_obDy)+'px';
+  var z=document.getElementById('env-liste');
+  if(!z)return;
+  var lignes=[].slice.call(z.querySelectorAll('.ob-rg'));
+  var iSrc=lignes.indexOf(_obSrc);
+  if(iSrc<0)return;
+  for(var k=0;k<lignes.length;k++){
+    if(k===iSrc)continue;
+    var r=lignes[k].getBoundingClientRect();
+    if(y>r.top&&y<r.bottom){
+      var o=obOrdre();
+      o.splice(k,0,o.splice(iSrc,1)[0]);
+      obPillsRender();
+      _obSrc=z.querySelector('.ob-rg[data-id="'+_obId+'"]');
+      if(_obSrc)_obSrc.classList.add('trou');
+      break;
+    }
+  }
+}
+function _obLache(){
+  if(_obClone){_obClone.parentNode.removeChild(_obClone);_obClone=null;}
+  if(_obSrc)_obSrc.classList.remove('trou');
+  _obSrc=null;_obLeve=false;_obId=null;
   obPillsRender();
 }
-function obEnvCnt(){
-  var c=document.getElementById('env-cnt'),t=document.getElementById('env-cnt-txt');
-  if(!c||!t)return;
-  var m=obNbMust();
-  c.textContent=m+'/3';
-  t.textContent=m===0?'Touchez une pill pour la cocher, touchez-la encore pour en faire un indispensable.'
-    :m<3?'Il vous en reste '+(3-m)+(m===2?', si vous en voyez un troisième.':', si vous en voyez d\'autres.')
-    :'Vos trois indispensables sont posés.';
+function obRangInit(){
+  var z=document.getElementById('env-liste');
+  if(!z||z._pose)return;
+  z._pose=true;
+  z.addEventListener('pointerdown',function(e){
+    var l=e.target.closest?e.target.closest('.ob-rg'):null;
+    if(!l)return;
+    _obSrc=l;_obId=l.getAttribute('data-id');
+    _obX0=e.clientX;_obY0=e.clientY;_obLeve=false;
+    _obT=setTimeout(function(){if(_obSrc)_obLever();},_OB_HOLD);
+  });
+  document.addEventListener('pointermove',function(e){
+    if(!_obSrc)return;
+    if(!_obLeve){
+      // Mouvement franc avant le délai : c'est un défilement, on abandonne.
+      if(Math.abs(e.clientX-_obX0)>_OB_BOUGE||Math.abs(e.clientY-_obY0)>_OB_BOUGE){
+        clearTimeout(_obT);_obSrc=null;_obId=null;
+      }
+      return;
+    }
+    e.preventDefault();
+    _obBouge(e.clientY);
+  },{passive:false});
+  document.addEventListener('pointerup',function(){
+    clearTimeout(_obT);
+    if(!_obSrc)return;
+    if(!_obLeve){_obSrc=null;_obId=null;return;}
+    _obLache();
+  });
+  document.addEventListener('pointercancel',function(){
+    clearTimeout(_obT);
+    if(_obClone){_obClone.parentNode.removeChild(_obClone);_obClone=null;}
+    if(_obSrc)_obSrc.classList.remove('trou');
+    _obSrc=null;_obLeve=false;_obId=null;
+  });
 }
 
 // Remplit la piste à gauche du pouce. Un curseur natif non peint ne dit pas
@@ -2836,7 +2973,7 @@ function goStep(n){
     }
   }
   if(n===3)obOrgSuite();
-  if(n===4)obPillsRender();
+  if(n===4){obRangInit();obPillsRender();}
   if(n===7)obTempsInfo();
   if(n===5) buildRecap();
   updateCounters();
@@ -3345,8 +3482,15 @@ function buildUserProfile(){
   // se comportent exactement comme avant. L'algorithme viendra ensuite, et il
   // trouvera ces champs déjà remplis.
   USER_PROFILE.organisation=state.organisation||'organise';
-  USER_PROFILE.pills=state.envies||{};
-  USER_PROFILE.indispensables=Object.keys(state.envies||{}).filter(function(k){return state.envies[k]===2;});
+  // L'ORDRE est la donnée, pas une liste de cases. Le rang donne un poids
+  // continu au classement : 1er = le plus lourd, puis dégressif. `pills` garde
+  // la forme d'un dictionnaire pour ce qui le lisait déjà — la valeur est
+  // désormais le poids, pas un niveau.
+  var _ord=obOrdre();
+  USER_PROFILE.ordreEnvies=_ord.slice();
+  USER_PROFILE.pills={};
+  _ord.forEach(function(id,i){USER_PROFILE.pills[id]=Math.max(0,_ord.length-i);});
+  USER_PROFILE.indispensables=_ord.slice(0,3);
   USER_PROFILE.sortie=state.sortie;
   USER_PROFILE.sortiesJour=state.sortiesJour;
   USER_PROFILE.tempsMaxMin=state.tempsMax;
@@ -5314,7 +5458,9 @@ function openPoiSheet(idx){
   // se voyait déclaré « Pépite locale ». Le tout-venant était donc présenté
   // comme une trouvaille. On n'affiche plus que ce qu'on peut établir, et
   // rien quand on ne peut rien établir.
-  document.getElementById('bs-notoriety').innerHTML=_notoLabel(p);
+  var _nb=document.getElementById('bs-notoriety'),_ng=_notoriete(p);
+  _nb.className='bs-notoriety'+(_ng==='pepite'?' pep':_ng==='sure'?' sure':'');
+  _nb.innerHTML=_notoLabel(p);
   // Beach class + marine data
   if(isBeach){window._currentBeach=p.beach||{};sheet.classList.add('beach-sheet');}
   else{sheet.classList.remove('beach-sheet');}
