@@ -2144,16 +2144,15 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
   <div class="screen" id="s4">
     <div class="scroll-content">
       <div class="screen-title">Qu'est-ce qui vous <em><span class="hl">tente</span></em> ?</div>
-      <div class="screen-sub" style="margin-bottom:16px">
-        <b>Cochez</b> ce qui vous plaît, sans compter.<br>
-        <b>★ Marquez</b> les 3 que vous voulez absolument faire.
+      <div class="screen-sub" style="margin-bottom:14px">
+        Touchez ce qui vous plaît, sans compter.
       </div>
 
       <div class="ob-info" id="env-sug" style="display:none"><svg class="ic"><use href="#i-baby"/></svg><div></div></div>
 
       <div id="env-liste"></div>
 
-      <div class="ob-cnt"><b id="env-cnt">0/3</b><span id="env-cnt-txt">Touchez une pill pour la cocher, touchez-la encore pour en faire un indispensable.</span></div>
+      <div class="ob-cnt"><b id="env-cnt">0/3</b><span id="env-cnt-txt">Touchez une pill pour la cocher, touchez-la encore pour en faire un coup de cœur.</span></div>
 
       <div class="ob-rassure"><svg class="ic"><use href="#i-check"/></svg><div><b>Rien n'est écarté</b>Ce que vous ne cochez pas passe simplement après — jamais à la trappe. Une envie du moment se rattrape toujours par la recherche ou la carte.</div></div>
     </div>
@@ -2461,8 +2460,8 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
       <div class="f-section">
         <div class="f-section-title"><div class="f-sico"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 1l7 4v6a8 8 0 01-4 7l-4 2-4-2a8 8 0 01-4-7V5l7-4z"/><line x1="7" y1="10" x2="13" y2="10"/></svg></div>Quel type de lieu ?</div>
         <div class="noto-grid">
-          <div class="noto-card" id="noto-inco" onclick="toggleNoto('inco')"><div class="noto-icon"><svg class="ic lg"><use href="#i-star"/></svg></div><div class="noto-lbl">Incontournables</div><div class="noto-sub">Les classiques</div></div>
-          <div class="noto-card" id="noto-pepite" onclick="toggleNoto('pepite')"><div class="noto-icon"><svg class="ic lg"><use href="#i-gem"/></svg></div><div class="noto-lbl">Pépites</div><div class="noto-sub">Lieux secrets</div></div>
+          <div class="noto-card" id="noto-inco" onclick="toggleNoto('inco')"><div class="noto-icon"><svg class="ic lg"><use href="#i-star"/></svg></div><div class="noto-lbl">Incontournables</div><div class="noto-sub">Deux fois plus d'avis que les lieux du même genre</div></div>
+          <div class="noto-card" id="noto-pepite" onclick="toggleNoto('pepite')"><div class="noto-icon"><svg class="ic lg"><use href="#i-gem"/></svg></div><div class="noto-lbl">Pépites</div><div class="noto-sub">Aussi bien notées, bien moins connues</div></div>
         </div>
       </div>
       <div class="f-divider"></div>
@@ -4385,6 +4384,104 @@ function _mtMealBlock(p,sp){
 // Brétignolles, saisons comprises. Le code faisait String() dessus : la liste
 // se collait en une chaîne à virgules, tronquée à 14 signes en « Place des
 // Hall ». On jetait une information complète pour en montrer un moignon.
+// ── NOTORIÉTÉ : ce qui fait qu'un lieu est « incontournable » ────────────
+// Le champ `inco` venait d'un prompt qui demandait à un modèle de choisir
+// entre « incontournable » et « pepite », SANS aucun critère et SANS
+// troisième option. Résultat : 44 lieux sur 83 déclarés incontournables, et
+// le Zoo des Sables — 8 621 avis, le plus commenté de la base — rangé en
+// pépite. Un mot choisi au jugé ne peut pas porter une étoile à l'écran.
+//
+// On le recalcule sur des preuves, et surtout on compare chaque lieu À SES
+// SEMBLABLES : un point de vue a 285 avis en moyenne dans la région, un musée
+// 1 220. Un seuil unique marquerait tous les musées et aucune plage.
+var _NOTO_MIN_AVIS=30;   // en dessous, une note ne veut rien dire (7 avis...)
+var _NOTO_MARGE=0.1;     // 3 centièmes d'écart, c'est du bruit, pas un verdict
+// « Deux fois la norme » était trop dur là où les écarts sont resserrés : le
+// Muséum du Coquillage (2 105 avis pour une norme à 1 220) ratait le badge
+// pour un facteur 1,7. À 1,5 on retient 32 lieux sur 83, dont le Passage du
+// Gois et l'Historial de la Vendée, que personne ne contesterait.
+var _NOTO_SEUIL=1.5;
+var _NOTO_CACHE=null;
+// FICHES GOOGLE PARTAGEES. Trois paires de lieux portent le MEME cid, donc le
+// meme compteur d'avis : la Grande Plage du Remblai et Le Remblai (la plage et
+// la promenade — on peut s'y promener sans descendre sur le sable), les Marais
+// Salants et leur circuit, Port Olona et Port de La Chaume. Au moins l'un des
+// deux est mal apparie. On ne juge pas la notoriete sur un compteur qu'on sait
+// faux : ces lieux retombent sur le filet de secours.
+var _NOTO_DOUBLONS=null;
+function _notoCid(p){
+  var m=String((p&&p.googleUrl)||'').match(/cid=(\d+)|place_id:([A-Za-z0-9_-]+)/);
+  return m?(m[1]||m[2]):null;
+}
+function _notoDouteux(p){
+  if(!_NOTO_DOUBLONS){
+    var vus={};_NOTO_DOUBLONS={};
+    (typeof POIS!=='undefined'?POIS:[]).forEach(function(x){
+      var c=_notoCid(x);
+      if(!c)return;
+      if(vus[c])_NOTO_DOUBLONS[c]=true;
+      vus[c]=true;
+    });
+  }
+  var c=_notoCid(p);
+  return !!(c&&_NOTO_DOUBLONS[c]);
+}
+function _notoNormes(){
+  if(_NOTO_CACHE)return _NOTO_CACHE;
+  var par={},tous=[];
+  (typeof POIS!=='undefined'?POIS:[]).forEach(function(p){
+    var k=p.subcategory||'?';
+    (par[k]=par[k]||[]).push(p);tous.push(p);
+  });
+  var av=function(p){return p.reviewsCount||0;};
+  var nt=function(p){return parseFloat(p.note)||0;};
+  // Médiane pour les avis : un seul lieu à 12 463 avis fausserait la moyenne
+  // de huit. Moyenne pour la note, qui n'a pas d'aberrante.
+  var med=function(a){var s=a.slice().sort(function(x,y){return x-y;});
+    return s.length?(s.length%2?s[(s.length-1)/2]:(s[s.length/2-1]+s[s.length/2])/2):0;};
+  var moy=function(a){return a.length?a.reduce(function(s,x){return s+x;},0)/a.length:0;};
+  var gA=med(tous.map(av)),gN=moy(tous.filter(function(p){return nt(p)>0;}).map(nt));
+  var n={};
+  Object.keys(par).forEach(function(k){
+    var v=par[k],notes=v.filter(function(p){return nt(p)>0;}).map(nt);
+    // Moins de 4 lieux : la médiane du genre n'est pas fiable, on prend la
+    // référence générale. Sans ça un lieu seul de son espèce se compare à
+    // lui-même, vaut toujours « la norme », et ne ressort jamais.
+    n[k]={avis:v.length>=4?med(v.map(av)):gA,note:notes.length>=4?moy(notes):gN};
+  });
+  _NOTO_CACHE={par:n,avis:gA,note:gN};
+  return _NOTO_CACHE;
+}
+// Renvoie 'inco' | 'pepite' | 'sure' | 'ordinaire' | 'inconnu'.
+function _notoriete(p){
+  if(!p)return'inconnu';
+  var N=_notoNormes(),r=N.par[p.subcategory||'?']||{avis:N.avis,note:N.note};
+  var a=p.reviewsCount||0,t=parseFloat(p.note)||0;
+  if(a<_NOTO_MIN_AVIS||_notoDouteux(p))return'inconnu';
+  if(a>=_NOTO_SEUIL*r.avis)return'inco';
+  if(t<r.note-_NOTO_MARGE)return'ordinaire';
+  if(a<=0.6*r.avis)return'pepite';
+  return'sure';
+}
+// L'ÉTOILE N'EST POSÉE QUE SUR UNE PREUVE. Un lieu sans avis — Saint-Gilles,
+// Vouvant, l'Île d'Yeu, dont la fiche Google n'a jamais été trouvée — garde
+// son rang au classement grâce à `inco`, mais ne porte aucun badge : on ne
+// montre pas à l'écran ce qu'on ne peut pas établir.
+function _estInco(p){return _notoriete(p)==='inco';}
+// Le libellé de la fiche. Vide quand on ne sait pas : mieux vaut ne rien dire
+// que de ranger un lieu ordinaire parmi les trouvailles.
+function _notoLabel(p){
+  var g=_notoriete(p);
+  if(g==='inco')return'<svg class="ic"><use href="#i-star"/></svg> Incontournable';
+  if(g==='pepite')return'<svg class="ic"><use href="#i-gem"/></svg> Pépite locale';
+  if(g==='sure')return'<svg class="ic"><use href="#i-check"/></svg> Valeur sûre';
+  return'';
+}
+function _notoRang(p){
+  var g=_notoriete(p);
+  if(g==='inconnu')return p&&p.inco?'inco':'sure';
+  return g;
+}
 var _JOURS_SEM=['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
 var _MOIS_FR=['janvier','fevrier','mars','avril','mai','juin',
   'juillet','aout','septembre','octobre','novembre','decembre'];
@@ -5212,8 +5309,12 @@ function openPoiSheet(idx){
   // catégorie affichée sous le titre de CHAQUE fiche, le dernier emoji en
   // couleur encore visible à l'écran.
   document.getElementById('bs-cat').textContent=_catSansEmoji(p.cat);
-  // innerHTML et non textContent : le libellé porte l'icône en SVG
-  document.getElementById('bs-notoriety').innerHTML=p.inco?'<svg class="ic"><use href="#i-star"/></svg> Incontournable':'<svg class="ic"><use href="#i-gem"/></svg> Pépite locale';
+  // innerHTML et non textContent : le libellé porte l'icône en SVG.
+  // Ce libellé était un BINAIRE : tout lieu qui n'était pas « Incontournable »
+  // se voyait déclaré « Pépite locale ». Le tout-venant était donc présenté
+  // comme une trouvaille. On n'affiche plus que ce qu'on peut établir, et
+  // rien quand on ne peut rien établir.
+  document.getElementById('bs-notoriety').innerHTML=_notoLabel(p);
   // Beach class + marine data
   if(isBeach){window._currentBeach=p.beach||{};sheet.classList.add('beach-sheet');}
   else{sheet.classList.remove('beach-sheet');}
@@ -5330,8 +5431,14 @@ function getFilteredPois(){
 // ── ALGO DE PERTINENCE ──
 function _scorePoi(p){
   var score=0;
-  // Qualité : note Google (poids principal)
-  var note=parseFloat(p.note)||3;
+  // Qualité : note Google (poids principal).
+  // Une note absente valait 3 — sous la plus mauvaise note réelle de la base
+  // (3,4). Ne pas savoir était donc puni plus sévèrement qu'être mauvais, et
+  // Saint-Gilles, Vouvant et l'Île d'Yeu, dont la fiche Google n'a jamais été
+  // trouvée, tombaient au fond du classement. On prend la note moyenne de leur
+  // typologie : l'ignorance ne vaut ni bonus ni malus.
+  var note=parseFloat(p.note);
+  if(!note){var _n=_notoNormes();note=(_n.par[p.subcategory||'?']||{}).note||_n.note;}
   score+=note*12; // 0–60 pts
   // Richesse de la fiche
   if(p.imgs&&p.imgs.length>=3)score+=8;
@@ -5354,8 +5461,15 @@ function _scorePoi(p){
     var hasPmr=qs.some(function(q){return q.label&&q.label.toLowerCase().indexOf('pmr')!==-1;});
     if(hasPmr)score+=20;
   }
-  // Incontournables gardent un léger bonus
-  if(p.inco)score+=6;
+  // NOTORIÉTÉ. Le classement accepte le filet de secours — un lieu sans avis
+  // dont la fiche Google n'a jamais été trouvée (Saint-Gilles, Vouvant, l'Île
+  // d'Yeu) ne doit pas tomber au fond pour une donnée manquante — alors que le
+  // BADGE, lui, exige une preuve. Voir _notoRang et _estInco.
+  var rang=_notoRang(p);
+  if(rang==='inco')score+=6;
+  else if(rang==='pepite')score+=4;
+  // Moins bien noté que ses semblables : on ne le retire pas, on le met en bas.
+  else if(rang==='ordinaire')score-=12;
   return score;
 }
 
@@ -5476,7 +5590,7 @@ function renderList(){
   zone.innerHTML=fp.map(function(p){
     var i=POIS.indexOf(p);
     var imgs=p.imgs&&p.imgs.length?p.imgs:[''];
-    var inco=p.inco?'<div class="lcard-inco">⭐</div>':'';
+    var inco=_estInco(p)?'<div class="lcard-inco">⭐</div>':'';
     var liked=isLiked(p.name);
     var dur=p.duration>=60?(Math.floor(p.duration/60)+'h'+(p.duration%60?p.duration%60:'')):(p.duration+'min');
     var dist=p.distance&&p.distance.km&&p.distance.km!=='?'?p.distance.km+' km':'';
@@ -5721,7 +5835,7 @@ function searchPois(q){
       var pmrOk=p.quickSpecs&&p.quickSpecs.some(function(s){return /pmr|wheelchair|handicap/i.test(s.label);});
       if(!pmrOk)return;score+=5;
     }
-    if(filters['_inco']){if(!p.inco)return;score+=10;}
+    if(filters['_inco']){if(_notoRang(p)!=='inco')return;score+=10;}
 
     // Filtre catégorie + fallback textuel sur nom/sous-cat
     if(targetCats){
@@ -5925,7 +6039,7 @@ function showSearchInitial(){
     {label:'<svg class="ic"><use href="#i-boot"/></svg> Balade',val:'balade'},{label:'🔭 Vue',val:'vue'},
     {label:'<svg class="ic"><use href="#i-star"/></svg> Incontournable',val:'incontournable'},{label:'€ Gratuit',val:'gratuit'}
   ];
-  var incos=POIS.filter(function(p){return p.inco;}).slice(0,4);
+  var incos=POIS.filter(function(p){return _notoRang(p)==='inco';}).slice(0,4);
   scroll.innerHTML=
     '<div style="padding-bottom:20px">'
     +'<div style="font-size:11px;color:var(--txm);margin-bottom:10px;margin-top:16px;font-family:\'DM Sans\',sans-serif;font-weight:600;letter-spacing:.6px;text-transform:uppercase">Recherches rapides</div>'
@@ -6017,7 +6131,7 @@ function doSearch(q){
     +results.map(function(r){
     var p=r.p;var i=r.i;
     var img=p.imgs&&p.imgs[0]?p.imgs[0]:'';
-    var inco=p.inco?'<div class="lcard-inco"><svg class="ic"><use href="#i-star"/></svg> Incontournable</div>':'';
+    var inco=_estInco(p)?'<div class="lcard-inco"><svg class="ic"><use href="#i-star"/></svg> Incontournable</div>':'';
     return '<div class="lcard" onclick="openPoiSheet('+i+')" style="position:relative">'
       +'<img src="'+img+'" alt="" loading="lazy">'
       +'<div class="lcard-cat">'+_catSansEmoji(p.cat)+'</div>'
@@ -6596,7 +6710,7 @@ function renderActivites(){
   function _actCard(p){
     var i=POIS.indexOf(p);
     var imgs=p.imgs&&p.imgs.length?p.imgs:[''];
-    var inco=p.inco?'<div class="lcard-inco">⭐</div>':'';
+    var inco=_estInco(p)?'<div class="lcard-inco">⭐</div>':'';
     var dur=p.duration>=60?(Math.floor(p.duration/60)+'h'+(p.duration%60?p.duration%60:'')):(p.duration+'min');
     var dist=p.distance&&p.distance.km&&p.distance.km!=='?'?p.distance.km+' km':'';
     var srcsAttr=imgs.join('|');
