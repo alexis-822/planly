@@ -214,7 +214,37 @@ body{
 .ob-sug{display:inline-block;margin-left:6px;font-size:var(--t6);font-weight:600;color:var(--warn);
   background:var(--warn-soft);border-radius:999px;padding:2px 8px;vertical-align:middle;line-height:1.5;}
 
-/* Plus aucun curseur dans le tunnel : tout se touche. */
+/* CURSEURS. Pourquoi ils glissaient mal au doigt : un input range natif place
+   dans un conteneur qui defile ne recoit pas le geste tout de suite. Le
+   navigateur attend de savoir si le doigt monte (defilement) ou glisse
+   (reglage), et tranche souvent en faveur du defilement — le curseur ne bouge
+   pas. `touch-action:none` lui retire cet arbitrage : le curseur prend le
+   geste des le premier pixel. Deuxieme cause : le pouce natif fait 16 px, on
+   ne vise pas ca avec un doigt. Il passe a 30 px. */
+.ob-rng{margin-top:10px;}
+.ob-rng input[type=range]{
+  -webkit-appearance:none;appearance:none;
+  width:100%;height:40px;margin:0;padding:0;background:none;
+  touch-action:none;cursor:pointer;-webkit-tap-highlight-color:transparent;
+}
+.ob-rng input[type=range]::-webkit-slider-runnable-track{
+  height:6px;border-radius:3px;
+  background:linear-gradient(to right,var(--brand) 0 var(--pct,50%),var(--br) var(--pct,50%) 100%);
+}
+.ob-rng input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:30px;height:30px;margin-top:-12px;border-radius:50%;
+  background:var(--brand);border:3px solid var(--wh);box-shadow:0 2px 8px rgba(0,0,0,.22);
+}
+.ob-rng input[type=range]:active::-webkit-slider-thumb{transform:scale(1.12);}
+.ob-rng input[type=range]::-moz-range-track{height:6px;border-radius:3px;background:var(--br);}
+.ob-rng input[type=range]::-moz-range-progress{height:6px;border-radius:3px;background:var(--brand);}
+.ob-rng input[type=range]::-moz-range-thumb{
+  width:26px;height:26px;border-radius:50%;background:var(--brand);
+  border:3px solid var(--wh);box-shadow:0 2px 8px rgba(0,0,0,.22);
+}
+.ob-rng input[type=range]:focus-visible{outline:2px solid var(--brand-d);outline-offset:4px;}
+.ob-rng-scale{display:flex;justify-content:space-between;margin-top:-2px;padding:0 2px;
+  font-size:var(--t6);color:var(--txl);}
 .ob-rng-val{margin-top:12px;font-family:'Fraunces',Georgia,serif;font-size:var(--t2);font-weight:600;color:var(--tx);
   line-height:1.2;}
 .ob-rng-val s{text-decoration:none;display:block;margin-top:4px;font-family:'DM Sans',sans-serif;
@@ -233,16 +263,6 @@ body{
   background:var(--bg-d);font-size:var(--t5);color:var(--txm);line-height:var(--lh);}
 .ob-cnt b{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);color:var(--tx);flex:0 0 auto;}
 
-/* Les dates : deux champs natifs. Le balisage du calendrier maison avait
-   disparu du HTML — seules ses fonctions restaient — et aucune date ne
-   pouvait donc être saisie. Le sélecteur du téléphone se manipule mieux au
-   doigt qu'une grille reconstruite. */
-.ob-dates{display:flex;gap:10px;}
-.ob-dates label{flex:1;display:block;background:var(--wh);border:1.5px solid var(--br);border-radius:14px;
-  padding:10px 12px;cursor:pointer;}
-.ob-dates label span{display:block;font-size:var(--t6);color:var(--txl);margin-bottom:3px;line-height:var(--lh);}
-.ob-dates input{width:100%;border:none;background:none;font-family:'DM Sans',sans-serif;
-  font-size:var(--t4);color:var(--tx);outline:none;padding:0;line-height:var(--lh);}
 .ob-hint{font-size:var(--t6);color:var(--txl);margin-top:8px;line-height:1.5;}
 
 /* Chaque étape se saute : on demande peu, mais on n'oblige à rien. */
@@ -299,6 +319,12 @@ body{
 .cal-footer{padding:8px 14px 14px;display:flex;gap:8px;align-items:center;justify-content:space-between;}
 .cal-reset-btn{font-size:var(--t5);color:var(--txl);cursor:pointer;text-decoration:underline;background:none;border:none;font-family:'DM Sans',sans-serif;line-height:var(--lh);}
 .cal-confirm{padding:10px 20px;background:var(--brand);color:var(--wh);border:none;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:var(--t5);font-weight:500;cursor:pointer;transition:background .2s;display:none;line-height:var(--lh);}
+/* Le JS pose la classe « show » ; sans cette regle le bouton Valider restait
+   invisible et le panneau ne pouvait pas se refermer. */
+.cal-confirm.show{display:block;}
+/* Une case de calendrier est une CIBLE TACTILE : 38 px de haut, mais la
+   colonne fait moins de 48 px sur un ecran de 390. On ne descend pas plus bas. */
+.cal-cell{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .cal-confirm.show{display:block;}
 .cal-confirm:hover{background:var(--brand-d);}
 
@@ -1926,35 +1952,41 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
       </div>
 
       <div class="sec-label" style="margin-top:22px">Vos dates</div>
-      <div class="ob-dates">
-        <label><span>Arrivée</span><input type="date" id="date-debut" onchange="obDate('debut',this.value)"></label>
-        <label><span>Départ</span><input type="date" id="date-fin" onchange="obDate('fin',this.value)"></label>
-      </div>
-      <div class="ob-hint" id="date-sum">Facultatif — mais elles commandent la saison, les marées et les horaires d'ouverture.</div>
-
-      <div class="sec-label" style="margin-top:22px">Le coin, vous le connaissez ?</div>
-      <div class="chips-row">
-        <div class="chip" onclick="obDeja(this,'jamais')">Jamais venu</div>
-        <div class="chip sel" onclick="obDeja(this,'une')">Une ou deux fois</div>
-        <div class="chip" onclick="obDeja(this,'souvent')">J'y reviens</div>
-      </div>
-      <div class="ob-hint">On ne retire jamais un classique : c'est la <b>proportion</b> de lieux connus qui change dans les premières suggestions.</div>
-
-      <div class="sec-label" style="margin-top:22px">Comment vous déplacez-vous ?</div>
-      <div class="mob-onboard">
-        <div class="mob-onboard-card selected" id="mob-ob-voiture" onclick="selectMobilite('voiture')">
-          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-car"/></svg></div>
-          <div class="mob-onboard-name">En voiture</div>
+      <div class="date-pill-wrap">
+        <div class="date-pill" id="date-pill" onclick="toggleCal()">
+          <div class="date-pill-left">
+            <span class="date-pill-icon"><svg class="ic"><use href="#i-cal"/></svg></span>
+            <div>
+              <div class="date-pill-main" id="date-pill-main">Quand ?</div>
+              <div class="date-pill-sub" id="date-pill-sub">Ajouter des dates</div>
+            </div>
+          </div>
+          <div class="date-pill-right" id="date-pill-right">Optionnel</div>
         </div>
-        <div class="mob-onboard-card" id="mob-ob-velo" onclick="selectMobilite('velo')">
-          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-bike"/></svg></div>
-          <div class="mob-onboard-name">À vélo</div>
-        </div>
-        <div class="mob-onboard-card" id="mob-ob-pied" onclick="selectMobilite('pied')">
-          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-walk"/></svg></div>
-          <div class="mob-onboard-name">À pied / transports</div>
+        <div class="cal-panel" id="cal-panel">
+          <div class="cal-header">
+            <div class="cal-nav" onclick="calNav(-1)"><svg class="ic xs"><use href="#i-chev-l"/></svg></div>
+            <div class="cal-month-lbl" id="cal-month-lbl">Juillet 2026</div>
+            <div class="cal-nav" onclick="calNav(1)"><svg class="ic xs"><use href="#i-chev"/></svg></div>
+          </div>
+          <div class="cal-dow">
+            <div class="cal-dow-cell">L</div><div class="cal-dow-cell">M</div><div class="cal-dow-cell">M</div>
+            <div class="cal-dow-cell">J</div><div class="cal-dow-cell">V</div><div class="cal-dow-cell">S</div>
+            <div class="cal-dow-cell">D</div>
+          </div>
+          <div class="cal-grid" id="cal-grid"></div>
+          <div class="cal-summary">
+            <div class="cal-sum-box empty" id="sum-a"><div class="cal-sum-lbl">Arrivée</div><div class="cal-sum-val">—</div></div>
+            <div class="cal-sum-box empty" id="sum-d"><div class="cal-sum-lbl">Départ</div><div class="cal-sum-val">—</div></div>
+            <div class="cal-sum-box empty" id="sum-n"><div class="cal-sum-lbl">Durée</div><div class="cal-sum-val">—</div></div>
+          </div>
+          <div class="cal-footer">
+            <button class="cal-reset-btn" id="cal-reset" style="display:none" onclick="resetCal()">Effacer</button>
+            <button class="cal-confirm" id="cal-confirm" onclick="closeCal()">Valider</button>
+          </div>
         </div>
       </div>
+      <div class="ob-hint">Facultatif — mais elles commandent la saison, les marées et les horaires d'ouverture.</div>
 
       <div class="toggle-row" id="tr-camping" onclick="toggleRow('camping')" style="margin-top:22px">
         <div class="toggle-row-left">
@@ -2030,6 +2062,46 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
     </div>
   </div>
 
+  <!-- S9 LE TERRAIN — sorti de l'écran 1, devenu trop long depuis le retour du
+       calendrier. Deux questions de même nature : comment vous abordez le coin.
+       La mobilité est demandée ici, bien avant l'écran du trajet qui s'en sert
+       pour dire « de route », « de vélo » ou « de marche ». -->
+  <div class="screen" id="s9">
+    <div class="scroll-content">
+      <div class="screen-title">Sur <em><span class="hl">place</span></em></div>
+      <div class="screen-sub">Deux questions qui changent ce qu'on vous met devant les yeux.</div>
+
+      <div class="sec-label">Le coin, vous le connaissez ?</div>
+      <div class="chips-row">
+        <div class="chip" onclick="obDeja(this,'jamais')">Jamais venu</div>
+        <div class="chip sel" onclick="obDeja(this,'une')">Une ou deux fois</div>
+        <div class="chip" onclick="obDeja(this,'souvent')">J'y reviens</div>
+      </div>
+      <div class="ob-hint">On ne retire jamais un classique : c'est la <b>proportion</b> de lieux connus qui change dans les premières suggestions.</div>
+
+      <div class="sec-label" style="margin-top:26px">Comment vous déplacez-vous ?</div>
+      <div class="mob-onboard">
+        <div class="mob-onboard-card selected" id="mob-ob-voiture" onclick="selectMobilite('voiture')">
+          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-car"/></svg></div>
+          <div class="mob-onboard-name">En voiture</div>
+        </div>
+        <div class="mob-onboard-card" id="mob-ob-velo" onclick="selectMobilite('velo')">
+          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-bike"/></svg></div>
+          <div class="mob-onboard-name">À vélo</div>
+        </div>
+        <div class="mob-onboard-card" id="mob-ob-pied" onclick="selectMobilite('pied')">
+          <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-walk"/></svg></div>
+          <div class="mob-onboard-name">À pied / transports</div>
+        </div>
+      </div>
+      <div class="ob-hint">Un même temps de trajet ne couvre pas la même étendue selon qu'on roule, qu'on pédale ou qu'on marche. On en tiendra compte plus loin.</div>
+    </div>
+    <div class="bottom-cta">
+      <button class="cta-btn" onclick="obNext()">Continuer →</button>
+      <button class="cta-back" onclick="obBack()">← Retour</button>
+    </div>
+  </div>
+
   <!-- S3 LE PIVOT — décide de la suite : seul « organisé » verra l'écran 6 -->
   <div class="screen" id="s3">
     <div class="scroll-content">
@@ -2089,14 +2161,12 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
       <div class="screen-title">Le matin, vous <em><span class="hl">sortez</span></em> vers…</div>
       <div class="screen-sub">Pas l'heure du réveil : celle où vous passez la porte. C'est elle qui donne la taille de vos journées.</div>
 
-      <div class="chips-row" id="sortie-chips">
-        <div class="chip" onclick="obSortie(this,7)">Avant 8 h</div>
-        <div class="chip" onclick="obSortie(this,8.5)">Vers 8 h 30</div>
-        <div class="chip sel" onclick="obSortie(this,10)">Vers 10 h</div>
-        <div class="chip" onclick="obSortie(this,11.5)">Vers 11 h 30</div>
-        <div class="chip" onclick="obSortie(this,14)">L'après-midi</div>
+      <div class="ob-rng">
+        <input type="range" min="7" max="14" step="0.5" value="10" id="rng-sortie"
+               aria-label="Heure de sortie le matin" oninput="obSortie(this)">
+        <div class="ob-rng-scale"><span>7 h</span><span>9 h</span><span>11 h</span><span>13 h</span></div>
+        <div class="ob-rng-val" id="sortie-val">Vers 10 h<s>≈ 3 sorties par jour</s></div>
       </div>
-      <div class="ob-rng-val" id="sortie-val" style="margin-top:14px">Vers 10 h<s>≈ 3 sorties par jour</s></div>
 
       <div class="sec-label" style="margin-top:26px">Et dans une journée, vous tenez…</div>
       <div class="chips-row">
@@ -2120,12 +2190,11 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
       <div class="screen-title">Jusqu'où seriez-vous prêt à <em><span class="hl">partir</span></em> ?</div>
       <div class="screen-sub">Pour aller voir un incontournable, vous accepteriez de faire combien de trajet ?</div>
 
-      <div class="chips-row" id="temps-chips">
-        <div class="chip" onclick="obTemps(this,15)">15 min</div>
-        <div class="chip" onclick="obTemps(this,30)">30 min</div>
-        <div class="chip sel" onclick="obTemps(this,45)">45 min</div>
-        <div class="chip" onclick="obTemps(this,60)">1 h</div>
-        <div class="chip" onclick="obTemps(this,75)">1 h 15</div>
+      <div class="ob-rng">
+        <input type="range" min="15" max="75" step="15" value="45" id="rng-temps"
+               aria-label="Temps de trajet accepte" oninput="obTemps(this)">
+        <div class="ob-rng-scale"><span>15 min</span><span>30</span><span>45</span><span>1 h</span><span>1 h 15</span></div>
+        <div class="ob-rng-val" id="temps-val">45 min<s>de trajet, au maximum</s></div>
       </div>
 
       <div class="ob-info"><svg class="ic"><use href="#i-clock"/></svg><div><b>Ce que ça change</b><span id="temps-info">Au-delà, on ne vous proposera rien — sauf une pépite exceptionnelle, et en vous prévenant du trajet.</span></div></div>
@@ -2532,7 +2601,11 @@ var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep
 // carte sélectionnée — on ne savait pas qu'il fallait choisir, et rien ne
 // disait ce que l'app supposait. Solo est l'hypothèse la plus prudente : elle
 // ne compte ni conjoint ni enfants dans les prix.
-var state={group:'solo',children:[],calOpen:false,calYear:2026,calMonth:6,calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:'',
+// Le calendrier s'ouvre sur LE MOIS COURANT, pas sur un juillet 2026 ecrit en
+// dur : personne ne cherche ses vacances dans un mois qu'il n'a pas demande.
+var state={group:'solo',children:[],calOpen:false,
+  calYear:new Date().getFullYear(),calMonth:new Date().getMonth(),
+  calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:'',
   // Tunnel, écrans 3 à 8. Ces valeurs sont COLLECTÉES et rangées dans le
   // profil ; rien ne les lit encore côté classement.
   organisation:'organise', envies:{}, sortie:10, sortiesJour:2, tempsMax:45, vetos:{}, dejaVenu:'une'};
@@ -2564,8 +2637,11 @@ var OB_PILLS=[
 // Le parcours n'a pas une longueur fixe. Seul celui qui ORGANISE a besoin de
 // dire à quelle heure il sort : il veut un horaire. Celui qui pioche a besoin
 // de la DURÉE, au moment d'ajouter une activité — pas d'une heure de départ.
+// L'ordre du tunnel. Les trois premiers ecrans sont les FAITS du sejour — ou
+// et quand (1), avec qui (2), sur place (9) — et le reste porte sur les gouts.
+// 9 vient apres 2 et non apres 1 : l'ecran 1 est deja long avec le calendrier.
 function obParcours(){
-  var p=[1,2,3,4];
+  var p=[1,2,9,3,4];
   if(state.organisation==='organise')p.push(6);
   p.push(7,8,5);
   return p;
@@ -2649,23 +2725,31 @@ function obEnvCnt(){
     :'Vos trois indispensables sont posés.';
 }
 
+// Remplit la piste à gauche du pouce. Un curseur natif non peint ne dit pas
+// d'un coup d'œil où l'on se situe sur la course.
+function _rngFill(el){
+  if(!el)return;
+  var mn=parseFloat(el.min),mx=parseFloat(el.max),v=parseFloat(el.value);
+  el.style.setProperty('--pct',(mx>mn?((v-mn)/(mx-mn))*100:0).toFixed(1)+'%');
+}
+function _heureMot(h){
+  if(h>=13.5)return 'L’après-midi';
+  var hh=Math.floor(h),mm=Math.round((h-hh)*60);
+  return 'Vers '+hh+' h'+(mm?' '+mm:'');
+}
 // L'heure de sortie donne la TAILLE de la journée : durée médiane de visite
 // 90 min, plus 40 min de trajet aller-retour, soit 130 min par sortie. La
 // journée court jusqu'au dîner (19 h), moins 1 h 30 de déjeuner si l'on part
-// avant midi. À 8 h on tient 4 sorties, à 11 h 30 on en tient 2.
-// Des pastilles et non un curseur : un input range natif se glisse mal au
-// doigt sur un écran qui défile, et on ne le prouve pas en le testant à la
-// souris ou au clavier.
-function obSortie(el,h){
+// avant midi. À 7 h on tient 4 sorties, à 11 h 30 on en tient 2.
+function obSortie(el){
+  var h=parseFloat(el&&el.value!=null?el.value:state.sortie);
   state.sortie=h;
-  if(el&&el.parentNode)
-    [].forEach.call(el.parentNode.children,function(c){c.classList.toggle('sel',c===el);});
+  _rngFill(el);
   var out=document.getElementById('sortie-val');
   if(!out)return;
   var dispo=19-h-(h<12.5?1.5:0);
   var n=Math.max(1,Math.floor(dispo*60/130));
-  out.innerHTML=_escHtml(el?String(el.textContent||'').trim():'Vers 10 h')
-    +'<s>≈ '+n+' sortie'+(n>1?'s':'')+' par jour</s>';
+  out.innerHTML=_escHtml(_heureMot(h))+'<s>≈ '+n+' sortie'+(n>1?'s':'')+' par jour</s>';
 }
 function obSorties(el,n){
   state.sortiesJour=n;
@@ -2673,14 +2757,22 @@ function obSorties(el,n){
   [].forEach.call(p.children,function(c){c.classList.toggle('sel',c===el);});
 }
 // En TEMPS et non en kilomètres : c'est le trajet qu'on subit, pas la
-// distance. Et des choix francs plutôt qu'un curseur — un input range natif
-// se glisse mal au doigt sur un écran qui défile.
+// distance, et un même temps ne couvre pas la même étendue à pied ou en
+// voiture. Paliers de 15 min.
 function obTempsLbl(m){return m<60?m+' min':(m===60?'1 h':'1 h '+(m-60));}
-function obTemps(el,min){
-  state.tempsMax=min;
-  var p=el.parentNode;
-  [].forEach.call(p.children,function(c){c.classList.toggle('sel',c===el);});
+function obTemps(el){
+  state.tempsMax=parseInt(el&&el.value!=null?el.value:state.tempsMax,10);
+  _rngFill(el);
+  var out=document.getElementById('temps-val');
+  if(out)out.innerHTML=_escHtml(obTempsLbl(state.tempsMax))+'<s>de trajet, au maximum</s>';
   obTempsInfo();
+}
+// Les deux curseurs doivent être peints dès l'affichage de leur écran, sinon
+// la piste reste à moitié bleue quelle que soit la valeur réelle.
+function obRngSync(){
+  var a=document.getElementById('rng-sortie'),b=document.getElementById('rng-temps');
+  if(a){a.value=state.sortie;obSortie(a);}
+  if(b){b.value=state.tempsMax;obTemps(b);}
 }
 function obTempsInfo(){
   var el=document.getElementById('temps-info');
@@ -2694,18 +2786,6 @@ function obTempsInfo(){
 // calendrier maison avait disparu du HTML, seules ses fonctions restaient.
 // Deux champs natifs valent mieux — le sélecteur du téléphone se manipule
 // bien mieux au doigt qu'une grille reconstruite.
-function obDate(quoi,v){
-  var d=v?new Date(v+'T00:00:00'):null;
-  if(quoi==='debut')state.calStart=d;else state.calEnd=d;
-  var el=document.getElementById('date-sum');
-  if(!el)return;
-  if(state.calStart&&state.calEnd&&state.calEnd>state.calStart){
-    var n=Math.round((state.calEnd-state.calStart)/86400000);
-    el.innerHTML='<b>'+(n+1)+' jours, '+n+' nuit'+(n>1?'s':'')+'</b> — on en tiendra compte pour la saison, les marées et les ouvertures.';
-  }else{
-    el.textContent='Facultatif — mais elles commandent la saison, les marées et les horaires d\'ouverture.';
-  }
-}
 // Un habitué ne veut pas forcément éviter les classiques : c'est la
 // PROPORTION de lieux connus qui change, jamais leur présence.
 function obDeja(el,v){
@@ -2729,6 +2809,7 @@ function goStep(n){
   var ecran=document.getElementById('s'+n);
   if(!ecran)return;
   ecran.classList.add('active');
+  if(n===6||n===7)obRngSync();
   // La barre se redessine à chaque étape : le parcours n'a plus une longueur
   // fixe, celui qui pioche saute l'heure de sortie.
   var p=obParcours(),i=p.indexOf(n),total=p.length-1;   // le loader ne compte pas
@@ -2823,7 +2904,14 @@ function addChild(){state.children.push(5);renderChildren();}
 function toggleCal(){
   state.calOpen=!state.calOpen;
   document.getElementById('cal-panel').classList.toggle('open',state.calOpen);
-  if(state.calOpen)renderCal();
+  if(state.calOpen){
+    // On rouvre sur le mois de l'arrivee deja choisie. Rouvrir sur le mois
+    // courant obligerait a refaire tout le chemin en fleches pour corriger un
+    // depart en decembre.
+    var ref=state.calStart||null;
+    if(ref){state.calYear=ref.getFullYear();state.calMonth=ref.getMonth();}
+    renderCal();updateCalSummary();
+  }
 }
 function closeCal(){
   state.calOpen=false;
