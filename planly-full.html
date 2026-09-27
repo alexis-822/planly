@@ -220,7 +220,7 @@ body{
   /* pan-y et non none : « none » interdit au doigt de faire defiler des qu il
      se pose sur une ligne, et les lignes remplissent l ecran — il ne restait
      presque rien pour defiler. Seule LA POIGNEE retient le geste. */
-  touch-action:pan-y;
+  touch-action:auto;
   transition:border-color .15s,background .15s;}
 .ob-rg .no{font-family:'Fraunces',Georgia,serif;font-size:var(--t2);font-weight:600;color:var(--txl);
   text-align:center;line-height:1;font-variant-numeric:tabular-nums;}
@@ -230,12 +230,17 @@ body{
 .ob-rg .b b{display:block;font-size:var(--t4);font-weight:600;color:var(--tx);line-height:1.25;}
 .ob-rg .b i{display:block;font-style:normal;font-size:var(--t6);color:var(--txl);margin-top:3px;
   line-height:1.4;}
-/* LA POIGNEE est la seule zone qui retient le geste : on l attrape et on
-   deplace, partout ailleurs le doigt fait defiler. 34x44, zone tactile sure. */
-.ob-rg .poign{color:var(--txl);display:flex;align-items:center;justify-content:center;
-  width:34px;height:44px;margin:-6px 0;touch-action:none;cursor:grab;
-  border-radius:9px;background:var(--bg-d);}
-.ob-rg .poign:active{cursor:grabbing;background:var(--br);}
+/* DEUX FLECHES au lieu d un glisser. Le glisser au doigt se bat avec le
+   defilement et exige de viser ; deux boutons ne demandent rien. */
+.ob-rg .fl{display:flex;flex-direction:column;gap:3px;}
+.ob-rg .fb{width:34px;height:29px;padding:0;border:1px solid var(--br);background:var(--bg);
+  border-radius:8px;color:var(--txm);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  transition:background .12s,border-color .12s;}
+.ob-rg .fb:active:not(:disabled){background:var(--brand);border-color:var(--brand);color:var(--wh);}
+/* Desactive plutot que masque : une rangee de boutons qui change de forme se
+   lit moins bien qu un bouton simplement eteint. */
+.ob-rg .fb:disabled{opacity:.28;cursor:default;}
 .ob-rg.haut{border-color:var(--brand);background:var(--brand-l);}
 .ob-rg.haut .no{color:var(--brand-d);}
 .ob-rg.vide{opacity:.5;}
@@ -1920,9 +1925,10 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
   <symbol id="i-boot" viewBox="0 0 24 24"><path d="M7 3h4v9l7 3.5V20H4v-4z"/><path d="M11 9h4M4 17h14"/></symbol>
   <symbol id="i-loop" viewBox="0 0 24 24"><path d="M17 5H8a5 5 0 0 0 0 10h8a5 5 0 0 1 0 10H7"/><path d="M14 2l3 3-3 3"/></symbol>
   <symbol id="i-arrows" viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M7 8l-4 4 4 4M17 8l4 4-4 4"/></symbol>
-  <!-- Poignee de reordonnancement. i-arrows pointe a l HORIZONTALE : pose sur
-       une liste qu on monte et descend, il indiquait le mauvais axe. -->
-  <symbol id="i-arrows-v" viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M8 8l4-4 4 4M8 16l4 4 4-4"/></symbol>
+  <!-- Monter / descendre dans un classement. i-chev et i-chev-l pointent a
+       l horizontale : sur une liste verticale, ils indiquaient le mauvais axe. -->
+  <symbol id="i-chev-h" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></symbol>
+  <symbol id="i-chev-b" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.8-6.5 10-6.5S22 12 22 12s-3.8 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
   <symbol id="i-tide" viewBox="0 0 24 24"><path d="M2 16c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 11V3M9 6l3-3 3 3"/></symbol>
   <symbol id="i-parasol" viewBox="0 0 24 24"><path d="M12 4a8 8 0 0 1 8 7H4a8 8 0 0 1 8-7z"/><path d="M12 11v9"/><path d="M12 4V2"/></symbol>
@@ -2792,7 +2798,12 @@ function obPillsRender(){
       +'<div class="'+cls+'" data-id="'+id+'">'
       +'<span class="no">'+(i+1)+'</span>'+img
       +'<div class="b"><b>'+p.nom+sug+'</b><i>'+p.sous+(p.vide?' — bientôt':'')+'</i></div>'
-      +'<span class="poign"><svg class="ic sm"><use href="#i-arrows-v"/></svg></span></div>';
+      +'<span class="fl">'
+        +'<button class="fb" '+(i===0?'disabled':'')+' onclick="obMonte(\''+id+'\')" aria-label="Monter">'
+          +'<svg class="ic sm"><use href="#i-chev-h"/></svg></button>'
+        +'<button class="fb" '+(i===obOrdre().length-1?'disabled':'')+' onclick="obDescend(\''+id+'\')" aria-label="Descendre">'
+          +'<svg class="ic sm"><use href="#i-chev-b"/></svg></button>'
+      +'</span></div>';
   }).join('');
   obEnvCnt();
 }
@@ -2802,97 +2813,28 @@ function obEnvCnt(){
     var tete=obOrdre().slice(0,3).map(function(id){return obPillDe(id).nom;});
     c.textContent=tete.length?tete[0]:'';
   }
-  if(t)t.textContent='Attrapez la poignée à droite pour déplacer une ligne. Les trois premières pèsent le plus.';
+  if(t)t.textContent='Les flèches montent et descendent une envie. Les trois premières pèsent le plus.';
 }
-// GESTE : on attrape LA POIGNÉE, et le glisser part aussitôt. Pas de délai
-// d'appui maintenu — la poignée est une cible sans ambiguïté, attendre 240 ms
-// dessus ne fait que donner l'impression que rien ne répond. Partout ailleurs
-// sur la ligne, le doigt fait défiler normalement (touch-action:pan-y).
-var _obSrc=null,_obClone=null,_obDy=0,_obId=null;
-
-// Renumérote SANS reconstruire : `obPillsRender` refait tout le balisage,
-// images comprises, et le rejouer à chaque déplacement saccadait le geste.
-// Ici on déplace les nœuds existants et on ne retouche que les chiffres.
-function _obRenum(){
-  var z=document.getElementById('env-liste');
-  if(!z)return;
-  var lignes=[].slice.call(z.querySelectorAll('.ob-rg'));
-  var sep=z.querySelector('.ob-sep');
-  lignes.forEach(function(l,i){
-    var n=l.querySelector('.no');
-    if(n&&n.textContent!==String(i+1))n.textContent=i+1;
-    l.classList.toggle('haut',i<3);
-  });
-  // Le séparateur suit : il marque toujours la frontière après le 3e.
-  if(sep&&lignes[3]&&sep.nextSibling!==lignes[3])z.insertBefore(sep,lignes[3]);
+// DEUX FLÈCHES, PAS UN GLISSER. Le glisser-déposer au doigt est le geste le
+// plus fragile d'une interface mobile : il se bat avec le défilement, il exige
+// de viser une poignée, et il ne pardonne pas un doigt large. Sur sept lignes,
+// monter de trois rangs coûte trois appuis — et rien ne peut mal tourner.
+// Un bouton désactivé aux extrémités plutôt que masqué : une rangée de boutons
+// qui change de forme se lit moins bien qu'un bouton simplement éteint.
+function obMonte(id){_obDeplace(id,-1);}
+function obDescend(id){_obDeplace(id,1);}
+function _obDeplace(id,sens){
+  var o=obOrdre(),i=o.indexOf(id),j=i+sens;
+  if(i<0||j<0||j>=o.length)return;
+  state.envieTouchee=true;   // l'ordre devient le sien, on ne le recalcule plus
+  o[i]=o[j];o[j]=id;
+  obPillsRender();
+  // On garde le doigt sur le même bouton : sans ça, deux appuis de suite
+  // visent deux lignes différentes et l'on remonte puis redescend.
+  var el=document.querySelector('.ob-rg[data-id="'+id+'"]');
+  if(el&&el.scrollIntoView)el.scrollIntoView({block:'nearest'});
 }
-function _obLever(e){
-  var r=_obSrc.getBoundingClientRect();
-  _obClone=_obSrc.cloneNode(true);
-  _obClone.classList.add('leve');
-  _obClone.style.left=r.left+'px';_obClone.style.top=r.top+'px';_obClone.style.width=r.width+'px';
-  document.body.appendChild(_obClone);
-  _obSrc.classList.add('trou');
-  _obDy=e.clientY-r.top;
-  if(navigator.vibrate){try{navigator.vibrate(10);}catch(x){}}
-}
-// Le réordonnancement se fait EN DIRECT : sans ça on ne voit le résultat qu'au
-// lâcher, et on ne sait pas où l'on dépose.
-function _obBouge(y){
-  if(!_obClone)return;
-  _obClone.style.top=(y-_obDy)+'px';
-  var z=document.getElementById('env-liste');
-  if(!z)return;
-  var lignes=[].slice.call(z.querySelectorAll('.ob-rg'));
-  var iSrc=lignes.indexOf(_obSrc);
-  if(iSrc<0)return;
-  for(var k=0;k<lignes.length;k++){
-    if(k===iSrc)continue;
-    var r=lignes[k].getBoundingClientRect();
-    // On n'échange qu'au franchissement du MILIEU de la ligne voisine :
-    // basculer dès le bord la fait clignoter d'avant en arrière.
-    var mi=r.top+r.height/2;
-    if((k>iSrc&&y>mi)||(k<iSrc&&y<mi)){
-      state.envieTouchee=true;   // l'ordre devient le sien, on ne le recalcule plus
-      var o=obOrdre();
-      o.splice(k,0,o.splice(iSrc,1)[0]);
-      if(k>iSrc)z.insertBefore(_obSrc,lignes[k].nextSibling);
-      else z.insertBefore(_obSrc,lignes[k]);
-      _obRenum();
-      break;
-    }
-  }
-}
-function _obLache(){
-  if(_obClone&&_obClone.parentNode)_obClone.parentNode.removeChild(_obClone);
-  _obClone=null;
-  if(_obSrc)_obSrc.classList.remove('trou');
-  _obSrc=null;_obId=null;
-  _obRenum();
-  obEnvCnt();
-}
-function obRangInit(){
-  var z=document.getElementById('env-liste');
-  if(!z||z._pose)return;
-  z._pose=true;
-  z.addEventListener('pointerdown',function(e){
-    var poign=e.target.closest?e.target.closest('.poign'):null;
-    if(!poign)return;          // ailleurs sur la ligne : on laisse defiler
-    var l=poign.closest('.ob-rg');
-    if(!l)return;
-    e.preventDefault();
-    _obSrc=l;_obId=l.getAttribute('data-id');
-    _obLever(e);
-    if(poign.setPointerCapture){try{poign.setPointerCapture(e.pointerId);}catch(x){}}
-  });
-  document.addEventListener('pointermove',function(e){
-    if(!_obSrc)return;
-    e.preventDefault();
-    _obBouge(e.clientY);
-  },{passive:false});
-  document.addEventListener('pointerup',function(){if(_obSrc)_obLache();});
-  document.addEventListener('pointercancel',function(){if(_obSrc)_obLache();});
-}
+function obRangInit(){}   // plus rien à brancher : les boutons portent leur appel
 
 // Remplit la piste à gauche du pouce. Un curseur natif non peint ne dit pas
 // d'un coup d'œil où l'on se situe sur la course.
