@@ -151,7 +151,13 @@ body{
   position:absolute;bottom:0;left:0;right:0;
   background:linear-gradient(0deg,var(--bg) 70%,transparent);
   padding:24px 20px 28px;
+  /* Le dégradé est une DÉCORATION, large de 100 à 170 px selon le nombre de
+     boutons. Sans ceci il captait les touchers : un contrôle placé dessous ne
+     répondait pas, et un doigt sur la partie haute déclenchait « Continuer ».
+     Seuls les boutons reçoivent le toucher. */
+  pointer-events:none;
 }
+.bottom-cta>*{pointer-events:auto;}
 .cta-btn{
   width:100%;padding:16px;
   background:var(--brand);color:var(--wh);
@@ -208,10 +214,7 @@ body{
 .ob-sug{display:inline-block;margin-left:6px;font-size:var(--t6);font-weight:600;color:var(--warn);
   background:var(--warn-soft);border-radius:999px;padding:2px 8px;vertical-align:middle;line-height:1.5;}
 
-/* Curseurs : l'heure de sortie et le rayon se règlent, ils ne se cochent pas. */
-.ob-rng{margin-top:6px;}
-.ob-rng input[type=range]{width:100%;margin:0;accent-color:var(--brand);height:28px;}
-.ob-rng-scale{display:flex;justify-content:space-between;margin-top:2px;font-size:var(--t6);color:var(--txl);}
+/* Plus aucun curseur dans le tunnel : tout se touche. */
 .ob-rng-val{margin-top:12px;font-family:'Fraunces',Georgia,serif;font-size:var(--t2);font-weight:600;color:var(--tx);
   line-height:1.2;}
 .ob-rng-val s{text-decoration:none;display:block;margin-top:4px;font-family:'DM Sans',sans-serif;
@@ -229,6 +232,18 @@ body{
 .ob-cnt{display:flex;align-items:center;gap:10px;margin-top:15px;padding:11px 14px;border-radius:12px;
   background:var(--bg-d);font-size:var(--t5);color:var(--txm);line-height:var(--lh);}
 .ob-cnt b{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);color:var(--tx);flex:0 0 auto;}
+
+/* Les dates : deux champs natifs. Le balisage du calendrier maison avait
+   disparu du HTML — seules ses fonctions restaient — et aucune date ne
+   pouvait donc être saisie. Le sélecteur du téléphone se manipule mieux au
+   doigt qu'une grille reconstruite. */
+.ob-dates{display:flex;gap:10px;}
+.ob-dates label{flex:1;display:block;background:var(--wh);border:1.5px solid var(--br);border-radius:14px;
+  padding:10px 12px;cursor:pointer;}
+.ob-dates label span{display:block;font-size:var(--t6);color:var(--txl);margin-bottom:3px;line-height:var(--lh);}
+.ob-dates input{width:100%;border:none;background:none;font-family:'DM Sans',sans-serif;
+  font-size:var(--t4);color:var(--tx);outline:none;padding:0;line-height:var(--lh);}
+.ob-hint{font-size:var(--t6);color:var(--txl);margin-top:8px;line-height:1.5;}
 
 /* Chaque étape se saute : on demande peu, mais on n'oblige à rien. */
 .cta-skip{display:block;width:100%;text-align:center;margin-top:10px;padding:8px;background:none;border:none;
@@ -1898,8 +1913,8 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
   <!-- S1 SÉJOUR -->
   <div class="screen active" id="s1">
     <div class="scroll-content">
-      <div class="screen-title">Ton <em><span class="hl">séjour</span></em></div>
-      <div class="screen-sub">Dis-nous où tu vas, on s'occupe du reste.</div>
+      <div class="screen-title">Votre <em><span class="hl">séjour</span></em></div>
+      <div class="screen-sub">Dites-nous où vous allez, on s'occupe du reste.</div>
 
       <div class="sec-label">Destination</div>
       <div class="dest-wrap">
@@ -1910,7 +1925,22 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
         <div class="dest-suggestions" id="dest-suggestions"></div>
       </div>
 
-      <div class="sec-label" style="margin-top:22px">Comment tu te déplaces ?</div>
+      <div class="sec-label" style="margin-top:22px">Vos dates</div>
+      <div class="ob-dates">
+        <label><span>Arrivée</span><input type="date" id="date-debut" onchange="obDate('debut',this.value)"></label>
+        <label><span>Départ</span><input type="date" id="date-fin" onchange="obDate('fin',this.value)"></label>
+      </div>
+      <div class="ob-hint" id="date-sum">Facultatif — mais elles commandent la saison, les marées et les horaires d'ouverture.</div>
+
+      <div class="sec-label" style="margin-top:22px">Le coin, vous le connaissez ?</div>
+      <div class="chips-row">
+        <div class="chip" onclick="obDeja(this,'jamais')">Jamais venu</div>
+        <div class="chip sel" onclick="obDeja(this,'une')">Une ou deux fois</div>
+        <div class="chip" onclick="obDeja(this,'souvent')">J'y reviens</div>
+      </div>
+      <div class="ob-hint">On ne retire jamais un classique : c'est la <b>proportion</b> de lieux connus qui change dans les premières suggestions.</div>
+
+      <div class="sec-label" style="margin-top:22px">Comment vous déplacez-vous ?</div>
       <div class="mob-onboard">
         <div class="mob-onboard-card selected" id="mob-ob-voiture" onclick="selectMobilite('voiture')">
           <div class="mob-onboard-emoji"><svg class="ic lg"><use href="#i-car"/></svg></div>
@@ -1929,7 +1959,7 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
       <div class="toggle-row" id="tr-camping" onclick="toggleRow('camping')" style="margin-top:22px">
         <div class="toggle-row-left">
           <span class="toggle-row-icon"><svg class="ic"><use href="#i-tent"/></svg></span>
-          <div><div class="toggle-row-txt">Séjour en camping</div><div class="toggle-row-sub">On associe ton hébergement</div></div>
+          <div><div class="toggle-row-txt">Séjour en camping</div><div class="toggle-row-sub">On associe votre hébergement</div></div>
         </div>
         <div class="toggle" id="tog-camping"><div class="toggle-thumb"></div></div>
       </div>
@@ -1947,8 +1977,8 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
   <!-- S2 GROUPE -->
   <div class="screen" id="s2">
     <div class="scroll-content">
-      <div class="screen-title">Ton <em><span class="hl">groupe</span></em></div>
-      <div class="screen-sub">Qui part avec toi ?</div>
+      <div class="screen-title">Votre <em><span class="hl">groupe</span></em></div>
+      <div class="screen-sub">Qui part avec vous ?</div>
 
       <div class="sec-label">Type de voyage</div>
       <div class="group-grid">
@@ -2059,11 +2089,14 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
       <div class="screen-title">Le matin, vous <em><span class="hl">sortez</span></em> vers…</div>
       <div class="screen-sub">Pas l'heure du réveil : celle où vous passez la porte. C'est elle qui donne la taille de vos journées.</div>
 
-      <div class="ob-rng">
-        <input type="range" min="7" max="14" step="0.5" value="10.5" id="rng-sortie" oninput="obSortie(this.value)">
-        <div class="ob-rng-scale"><span>7 h</span><span>9 h</span><span>11 h</span><span>13 h</span></div>
-        <div class="ob-rng-val" id="sortie-val">10 h 30<s>≈ 2 sorties par jour</s></div>
+      <div class="chips-row" id="sortie-chips">
+        <div class="chip" onclick="obSortie(this,7)">Avant 8 h</div>
+        <div class="chip" onclick="obSortie(this,8.5)">Vers 8 h 30</div>
+        <div class="chip sel" onclick="obSortie(this,10)">Vers 10 h</div>
+        <div class="chip" onclick="obSortie(this,11.5)">Vers 11 h 30</div>
+        <div class="chip" onclick="obSortie(this,14)">L'après-midi</div>
       </div>
+      <div class="ob-rng-val" id="sortie-val" style="margin-top:14px">Vers 10 h<s>≈ 3 sorties par jour</s></div>
 
       <div class="sec-label" style="margin-top:26px">Et dans une journée, vous tenez…</div>
       <div class="chips-row">
@@ -2072,7 +2105,7 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
         <div class="chip" onclick="obSorties(this,3)">3 et plus</div>
       </div>
 
-      <div class="ob-info"><svg class="ic"><use href="#i-clock"/></svg><div><b>Pourquoi on le demande</b>À 8 h on tient 4 sorties, à 10 h 30 on en tient 2. Sur une semaine, ça fait 14 activités ou 28 — ce n'est pas le même programme.</div></div>
+      <div class="ob-info"><svg class="ic"><use href="#i-clock"/></svg><div><b>Pourquoi on le demande</b>En partant avant 8 h on tient 4 sorties ; en ne sortant que l'après-midi, 2. Sur une semaine, ça fait 28 activités ou 14 — ce n'est pas le même programme.</div></div>
     </div>
     <div class="bottom-cta">
       <button class="cta-btn" onclick="obNext()">Continuer →</button>
@@ -2084,16 +2117,20 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
   <!-- S7 LE RAYON — une volonté, pas un tri de catalogue -->
   <div class="screen" id="s7">
     <div class="scroll-content">
-      <div class="screen-title">Vous iriez <em><span class="hl">jusqu'où</span></em> ?</div>
-      <div class="screen-sub">Une plage sublime à 50 km reste une plage à 50 km. Dites-nous ce que vous acceptez de faire comme route.</div>
+      <div class="screen-title">Jusqu'où seriez-vous prêt à <em><span class="hl">partir</span></em> ?</div>
+      <div class="screen-sub">Pour aller voir un incontournable, vous accepteriez de faire combien de trajet ?</div>
 
-      <div class="ob-rng">
-        <input type="range" min="10" max="80" step="10" value="30" id="rng-rayon" oninput="obRayon(this.value)">
-        <div class="ob-rng-scale"><span>10</span><span>30</span><span>50</span><span>80 km</span></div>
-        <div class="ob-rng-val" id="rayon-val">30 km<s>Au-delà, on ne vous proposera rien — sauf une pépite exceptionnelle, en vous prévenant de la route</s></div>
+      <div class="chips-row" id="temps-chips">
+        <div class="chip" onclick="obTemps(this,15)">15 min</div>
+        <div class="chip" onclick="obTemps(this,30)">30 min</div>
+        <div class="chip sel" onclick="obTemps(this,45)">45 min</div>
+        <div class="chip" onclick="obTemps(this,60)">1 h</div>
+        <div class="chip" onclick="obTemps(this,75)">1 h 15</div>
       </div>
 
-      <div class="ob-info"><svg class="ic"><use href="#i-car"/></svg><div><b>Adapté à votre déplacement</b><span id="rayon-mode">En voiture, 30 km font environ 35 minutes.</span></div></div>
+      <div class="ob-info"><svg class="ic"><use href="#i-clock"/></svg><div><b>Ce que ça change</b><span id="temps-info">Au-delà, on ne vous proposera rien — sauf une pépite exceptionnelle, et en vous prévenant du trajet.</span></div></div>
+
+      <div class="ob-hint" style="margin-top:14px">Une demi-heure ne mène pas au même endroit selon qu'on roule, qu'on pédale ou qu'on marche : c'est votre mode de déplacement qui décide de ce qu'elle couvre.</div>
     </div>
     <div class="bottom-cta">
       <button class="cta-btn" onclick="obNext()">Continuer →</button>
@@ -2498,7 +2535,7 @@ var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep
 var state={group:'solo',children:[],calOpen:false,calYear:2026,calMonth:6,calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:'',
   // Tunnel, écrans 3 à 8. Ces valeurs sont COLLECTÉES et rangées dans le
   // profil ; rien ne les lit encore côté classement.
-  organisation:'organise', envies:{}, sortie:10.5, sortiesJour:2, rayon:30, vetos:{}, dejaVenu:'une'};
+  organisation:'organise', envies:{}, sortie:10, sortiesJour:2, tempsMax:45, vetos:{}, dejaVenu:'une'};
 var ALL_CATS=['air','hist','mov','viv','fun','fest','jeux'];
 ALL_CATS.forEach(function(id){state.cats[id]=false;});
 var AGE_LABELS=['Bébé','Bébé','Bébé','Tout-petit','Maternelle','Maternelle','Maternelle','Primaire','Primaire','Primaire','Primaire','Primaire','Collège','Collège','Collège','Lycée','Lycée','Lycée'];
@@ -2613,35 +2650,68 @@ function obEnvCnt(){
 }
 
 // L'heure de sortie donne la TAILLE de la journée : durée médiane de visite
-// 90 min, plus 40 min de trajet aller-retour. À 8 h on tient 4 sorties, à
-// 10 h 30 on en tient 2 — sur une semaine, 28 activités ou 14.
-function obSortie(v){
-  var h=parseFloat(v);state.sortie=h;
-  var el=document.getElementById('sortie-val');
-  if(!el)return;
-  var hh=Math.floor(h),mm=Math.round((h-hh)*60);
-  var n=Math.floor(Math.max(0,12.5-h)*60/130)+Math.floor(5*60/130);
-  el.innerHTML=hh+' h'+(mm?' '+mm:'')+'<s>≈ '+n+' sortie'+(n>1?'s':'')+' par jour</s>';
+// 90 min, plus 40 min de trajet aller-retour, soit 130 min par sortie. La
+// journée court jusqu'au dîner (19 h), moins 1 h 30 de déjeuner si l'on part
+// avant midi. À 8 h on tient 4 sorties, à 11 h 30 on en tient 2.
+// Des pastilles et non un curseur : un input range natif se glisse mal au
+// doigt sur un écran qui défile, et on ne le prouve pas en le testant à la
+// souris ou au clavier.
+function obSortie(el,h){
+  state.sortie=h;
+  if(el&&el.parentNode)
+    [].forEach.call(el.parentNode.children,function(c){c.classList.toggle('sel',c===el);});
+  var out=document.getElementById('sortie-val');
+  if(!out)return;
+  var dispo=19-h-(h<12.5?1.5:0);
+  var n=Math.max(1,Math.floor(dispo*60/130));
+  out.innerHTML=_escHtml(el?String(el.textContent||'').trim():'Vers 10 h')
+    +'<s>≈ '+n+' sortie'+(n>1?'s':'')+' par jour</s>';
 }
 function obSorties(el,n){
   state.sortiesJour=n;
   var p=el.parentNode;
   [].forEach.call(p.children,function(c){c.classList.toggle('sel',c===el);});
 }
-// Ce curseur ne trie pas un catalogue : il dit jusqu'où on accepte de bouger.
-function obRayon(v){
-  state.rayon=parseInt(v,10);
-  var el=document.getElementById('rayon-val');
-  if(el)el.innerHTML=state.rayon+' km<s>Au-delà, on ne vous proposera rien — sauf une pépite exceptionnelle, en vous prévenant de la route</s>';
-  obRayonMode();
+// En TEMPS et non en kilomètres : c'est le trajet qu'on subit, pas la
+// distance. Et des choix francs plutôt qu'un curseur — un input range natif
+// se glisse mal au doigt sur un écran qui défile.
+function obTempsLbl(m){return m<60?m+' min':(m===60?'1 h':'1 h '+(m-60));}
+function obTemps(el,min){
+  state.tempsMax=min;
+  var p=el.parentNode;
+  [].forEach.call(p.children,function(c){c.classList.toggle('sel',c===el);});
+  obTempsInfo();
 }
-function obRayonMode(){
-  var el=document.getElementById('rayon-mode');
+function obTempsInfo(){
+  var el=document.getElementById('temps-info');
   if(!el)return;
-  var km=state.rayon||30,m=state.mobilite||'voiture';
-  var vit={voiture:52,velo:15,pied:4.5}[m]||52;
-  var lbl={voiture:'En voiture',velo:'À vélo',pied:'À pied ou en transports'}[m]||'En voiture';
-  el.textContent=lbl+', '+km+' km font environ '+Math.round(km/vit*60)+' minutes.';
+  var lbl={voiture:'de route',velo:'de vélo',pied:'de marche ou de transports'}[state.mobilite||'voiture']||'de trajet';
+  el.textContent='Au-delà de '+obTempsLbl(state.tempsMax||45)+' '+lbl
+    +', on ne vous proposera rien — sauf une pépite exceptionnelle, et en vous prévenant du trajet.';
+}
+
+// Les dates étaient demandées puis jetées, et pour cause : le balisage du
+// calendrier maison avait disparu du HTML, seules ses fonctions restaient.
+// Deux champs natifs valent mieux — le sélecteur du téléphone se manipule
+// bien mieux au doigt qu'une grille reconstruite.
+function obDate(quoi,v){
+  var d=v?new Date(v+'T00:00:00'):null;
+  if(quoi==='debut')state.calStart=d;else state.calEnd=d;
+  var el=document.getElementById('date-sum');
+  if(!el)return;
+  if(state.calStart&&state.calEnd&&state.calEnd>state.calStart){
+    var n=Math.round((state.calEnd-state.calStart)/86400000);
+    el.innerHTML='<b>'+(n+1)+' jours, '+n+' nuit'+(n>1?'s':'')+'</b> — on en tiendra compte pour la saison, les marées et les ouvertures.';
+  }else{
+    el.textContent='Facultatif — mais elles commandent la saison, les marées et les horaires d\'ouverture.';
+  }
+}
+// Un habitué ne veut pas forcément éviter les classiques : c'est la
+// PROPORTION de lieux connus qui change, jamais leur présence.
+function obDeja(el,v){
+  state.dejaVenu=v;
+  var p=el.parentNode;
+  [].forEach.call(p.children,function(c){c.classList.toggle('sel',c===el);});
 }
 // Les restrictions rétrogradent, elles ne suppriment jamais : une déduction
 // peut se tromper, et un lieu retiré ne se rattrape pas.
@@ -2676,7 +2746,7 @@ function goStep(n){
   }
   if(n===3)obOrgSuite();
   if(n===4)obPillsRender();
-  if(n===7)obRayonMode();
+  if(n===7)obTempsInfo();
   if(n===5) buildRecap();
   updateCounters();
   window.scrollTo(0,0);
@@ -3157,7 +3227,8 @@ function buildUserProfile(){
   USER_PROFILE.indispensables=Object.keys(state.envies||{}).filter(function(k){return state.envies[k]===2;});
   USER_PROFILE.sortie=state.sortie;
   USER_PROFILE.sortiesJour=state.sortiesJour;
-  USER_PROFILE.rayonKm=state.rayon;
+  USER_PROFILE.tempsMaxMin=state.tempsMax;
+  USER_PROFILE.dejaVenu=state.dejaVenu;
   USER_PROFILE.vetos=state.vetos||{};
   // Les dates étaient demandées puis jetées : elles n'arrivaient jamais au
   // profil. Elles commandent la saison, les marées et les ouvertures.
