@@ -213,10 +213,14 @@ body{
 .ob-pill.vide{opacity:.45;cursor:default;}
 
 /* LES ENVIES SE CLASSENT. Une ligne numérotée qu'on déplace, pas une case. */
-.ob-rg{display:grid;grid-template-columns:26px 48px minmax(0,1fr) 22px;gap:11px;align-items:center;
-  background:var(--wh);border:1.5px solid var(--br);border-radius:15px;padding:9px 11px 9px 7px;
-  margin-bottom:8px;touch-action:none;user-select:none;-webkit-user-select:none;
-  -webkit-tap-highlight-color:transparent;cursor:grab;
+.ob-rg{display:grid;grid-template-columns:26px 48px minmax(0,1fr) 34px;gap:11px;align-items:center;
+  background:var(--wh);border:1.5px solid var(--br);border-radius:15px;padding:9px 7px 9px 7px;
+  margin-bottom:8px;user-select:none;-webkit-user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  /* pan-y et non none : « none » interdit au doigt de faire defiler des qu il
+     se pose sur une ligne, et les lignes remplissent l ecran — il ne restait
+     presque rien pour defiler. Seule LA POIGNEE retient le geste. */
+  touch-action:pan-y;
   transition:border-color .15s,background .15s;}
 .ob-rg .no{font-family:'Fraunces',Georgia,serif;font-size:var(--t2);font-weight:600;color:var(--txl);
   text-align:center;line-height:1;font-variant-numeric:tabular-nums;}
@@ -226,7 +230,12 @@ body{
 .ob-rg .b b{display:block;font-size:var(--t4);font-weight:600;color:var(--tx);line-height:1.25;}
 .ob-rg .b i{display:block;font-style:normal;font-size:var(--t6);color:var(--txl);margin-top:3px;
   line-height:1.4;}
-.ob-rg .poign{color:var(--txl);display:flex;align-items:center;justify-content:center;}
+/* LA POIGNEE est la seule zone qui retient le geste : on l attrape et on
+   deplace, partout ailleurs le doigt fait defiler. 34x44, zone tactile sure. */
+.ob-rg .poign{color:var(--txl);display:flex;align-items:center;justify-content:center;
+  width:34px;height:44px;margin:-6px 0;touch-action:none;cursor:grab;
+  border-radius:9px;background:var(--bg-d);}
+.ob-rg .poign:active{cursor:grabbing;background:var(--br);}
 .ob-rg.haut{border-color:var(--brand);background:var(--brand-l);}
 .ob-rg.haut .no{color:var(--brand-d);}
 .ob-rg.vide{opacity:.5;}
@@ -2653,7 +2662,7 @@ var state={group:'solo',children:[],calOpen:false,
   calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:'',
   // Tunnel, écrans 3 à 8. Ces valeurs sont COLLECTÉES et rangées dans le
   // profil ; rien ne les lit encore côté classement.
-  organisation:'organise', envies:{}, ordreEnvies:null,
+  organisation:'organise', envies:{}, ordreEnvies:null, envieTouchee:false,
   sortie:10, sortiesJour:2, tempsMax:45, vetos:{}, dejaVenu:'une'};
 var ALL_CATS=['air','hist','mov','viv','fun','fest','jeux'];
 ALL_CATS.forEach(function(id){state.cats[id]=false;});
@@ -2761,8 +2770,13 @@ function obPillDe(id){
   for(var i=0;i<OB_PILLS.length;i++)if(OB_PILLS[i].id===id)return OB_PILLS[i];
   return {};
 }
+// Tant que personne n'a déplacé de ligne, l'ordre se RECALCULE : on peut
+// revenir en arrière changer le groupe, et la proposition doit suivre. Sinon
+// « Parcs & Loisirs » s'affiche « suggéré » tout en restant quatrième, parce
+// que l'ordre avait été figé pour un profil solo.
 function obOrdre(){
-  if(!state.ordreEnvies||!state.ordreEnvies.length)state.ordreEnvies=obOrdreDepart();
+  if(!state.ordreEnvies||!state.ordreEnvies.length||!state.envieTouchee)
+    state.ordreEnvies=obOrdreDepart();
   return state.ordreEnvies;
 }
 function obPillsRender(){
@@ -2788,23 +2802,39 @@ function obEnvCnt(){
     var tete=obOrdre().slice(0,3).map(function(id){return obPillDe(id).nom;});
     c.textContent=tete.length?tete[0]:'';
   }
-  if(t)t.textContent='Maintenez une ligne appuyée pour la déplacer. Les trois premières pèsent le plus.';
+  if(t)t.textContent='Attrapez la poignée à droite pour déplacer une ligne. Les trois premières pèsent le plus.';
 }
-// GESTE : appui MAINTENU pour soulever. Un balayage bref doit continuer à faire
-// défiler l'écran — sans ce délai, le geste se bat avec le défilement et c'est
-// le défilement qui gagne, comme pour les curseurs.
-var _OB_HOLD=240, _OB_BOUGE=9;
-var _obT=null,_obSrc=null,_obClone=null,_obDy=0,_obLeve=false,_obX0=0,_obY0=0,_obId=null;
-function _obLever(){
-  _obLeve=true;
+// GESTE : on attrape LA POIGNÉE, et le glisser part aussitôt. Pas de délai
+// d'appui maintenu — la poignée est une cible sans ambiguïté, attendre 240 ms
+// dessus ne fait que donner l'impression que rien ne répond. Partout ailleurs
+// sur la ligne, le doigt fait défiler normalement (touch-action:pan-y).
+var _obSrc=null,_obClone=null,_obDy=0,_obId=null;
+
+// Renumérote SANS reconstruire : `obPillsRender` refait tout le balisage,
+// images comprises, et le rejouer à chaque déplacement saccadait le geste.
+// Ici on déplace les nœuds existants et on ne retouche que les chiffres.
+function _obRenum(){
+  var z=document.getElementById('env-liste');
+  if(!z)return;
+  var lignes=[].slice.call(z.querySelectorAll('.ob-rg'));
+  var sep=z.querySelector('.ob-sep');
+  lignes.forEach(function(l,i){
+    var n=l.querySelector('.no');
+    if(n&&n.textContent!==String(i+1))n.textContent=i+1;
+    l.classList.toggle('haut',i<3);
+  });
+  // Le séparateur suit : il marque toujours la frontière après le 3e.
+  if(sep&&lignes[3]&&sep.nextSibling!==lignes[3])z.insertBefore(sep,lignes[3]);
+}
+function _obLever(e){
   var r=_obSrc.getBoundingClientRect();
   _obClone=_obSrc.cloneNode(true);
   _obClone.classList.add('leve');
   _obClone.style.left=r.left+'px';_obClone.style.top=r.top+'px';_obClone.style.width=r.width+'px';
   document.body.appendChild(_obClone);
   _obSrc.classList.add('trou');
-  _obDy=_obY0-r.top;
-  if(navigator.vibrate){try{navigator.vibrate(12);}catch(e){}}
+  _obDy=e.clientY-r.top;
+  if(navigator.vibrate){try{navigator.vibrate(10);}catch(x){}}
 }
 // Le réordonnancement se fait EN DIRECT : sans ça on ne voit le résultat qu'au
 // lâcher, et on ne sait pas où l'on dépose.
@@ -2819,57 +2849,49 @@ function _obBouge(y){
   for(var k=0;k<lignes.length;k++){
     if(k===iSrc)continue;
     var r=lignes[k].getBoundingClientRect();
-    if(y>r.top&&y<r.bottom){
+    // On n'échange qu'au franchissement du MILIEU de la ligne voisine :
+    // basculer dès le bord la fait clignoter d'avant en arrière.
+    var mi=r.top+r.height/2;
+    if((k>iSrc&&y>mi)||(k<iSrc&&y<mi)){
+      state.envieTouchee=true;   // l'ordre devient le sien, on ne le recalcule plus
       var o=obOrdre();
       o.splice(k,0,o.splice(iSrc,1)[0]);
-      obPillsRender();
-      _obSrc=z.querySelector('.ob-rg[data-id="'+_obId+'"]');
-      if(_obSrc)_obSrc.classList.add('trou');
+      if(k>iSrc)z.insertBefore(_obSrc,lignes[k].nextSibling);
+      else z.insertBefore(_obSrc,lignes[k]);
+      _obRenum();
       break;
     }
   }
 }
 function _obLache(){
-  if(_obClone){_obClone.parentNode.removeChild(_obClone);_obClone=null;}
+  if(_obClone&&_obClone.parentNode)_obClone.parentNode.removeChild(_obClone);
+  _obClone=null;
   if(_obSrc)_obSrc.classList.remove('trou');
-  _obSrc=null;_obLeve=false;_obId=null;
-  obPillsRender();
+  _obSrc=null;_obId=null;
+  _obRenum();
+  obEnvCnt();
 }
 function obRangInit(){
   var z=document.getElementById('env-liste');
   if(!z||z._pose)return;
   z._pose=true;
   z.addEventListener('pointerdown',function(e){
-    var l=e.target.closest?e.target.closest('.ob-rg'):null;
+    var poign=e.target.closest?e.target.closest('.poign'):null;
+    if(!poign)return;          // ailleurs sur la ligne : on laisse defiler
+    var l=poign.closest('.ob-rg');
     if(!l)return;
+    e.preventDefault();
     _obSrc=l;_obId=l.getAttribute('data-id');
-    _obX0=e.clientX;_obY0=e.clientY;_obLeve=false;
-    _obT=setTimeout(function(){if(_obSrc)_obLever();},_OB_HOLD);
+    _obLever(e);
+    if(poign.setPointerCapture){try{poign.setPointerCapture(e.pointerId);}catch(x){}}
   });
   document.addEventListener('pointermove',function(e){
     if(!_obSrc)return;
-    if(!_obLeve){
-      // Mouvement franc avant le délai : c'est un défilement, on abandonne.
-      if(Math.abs(e.clientX-_obX0)>_OB_BOUGE||Math.abs(e.clientY-_obY0)>_OB_BOUGE){
-        clearTimeout(_obT);_obSrc=null;_obId=null;
-      }
-      return;
-    }
     e.preventDefault();
     _obBouge(e.clientY);
   },{passive:false});
-  document.addEventListener('pointerup',function(){
-    clearTimeout(_obT);
-    if(!_obSrc)return;
-    if(!_obLeve){_obSrc=null;_obId=null;return;}
-    _obLache();
-  });
-  document.addEventListener('pointercancel',function(){
-    clearTimeout(_obT);
-    if(_obClone){_obClone.parentNode.removeChild(_obClone);_obClone=null;}
-    if(_obSrc)_obSrc.classList.remove('trou');
-    _obSrc=null;_obLeve=false;_obId=null;
-  });
+  document.addEventListener('pointerup',function(){if(_obSrc)_obLache();});
+  document.addEventListener('pointercancel',function(){if(_obSrc)_obLache();});
 }
 
 // Remplit la piste à gauche du pouce. Un curseur natif non peint ne dit pas
