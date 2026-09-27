@@ -1,5 +1,4 @@
-// Genere par inject_pois.py, icones migrees vers le sprite
-var POIS = [
+var POIS=[
  {
   "imgs": [
    "planly_scraper/images/grande_plage_du_remblai/photo_1.jpg?v=202609172031",
@@ -5126,101 +5125,6 @@ var POIS = [
     }
    ]
   },
-  "veto": null
- },
- {
-  "imgs": [
-   "https://placehold.co/700x400/e0e0e0/999?text=Photo+manquante"
-  ],
-  "name": "Les Salines — angle écomusée",
-  "commune": "L'Île-d'Olonne",
-  "cat": "🏛️ Patrimoine",
-  "note": "4.7",
-  "budgetBadge": "€ Gratuit",
-  "budgetClass": "free",
-  "trajet": {
-   "voiture": "? min",
-   "pied": "? min",
-   "velo": "? min"
-  },
-  "iaPill": "💡 En famille, optez pour la sortie en barque pour une expérience inoubliable sur les…",
-  "iaWarn": false,
-  "desc": "Plongez dans l'histoire du sel à Oléron : visites guidées, sorties en barque et dégustation dans un ",
-  "inco": false,
-  "accroche": "Plongez dans l'histoire du sel à Oléron : visites guidées, sorties en barque et ",
-  "descLong": "Niché au cœur de l'île d'Oléron, l'écomusée des Salines vous invite à découvrir l'histoire fascinante de la production du sel. Visites guidées à pied, à vélo ou en barque permettent d'explorer les marais salants et d'apprendre les secrets du paludier. Les guides passionnés transmettent leur savoir avec enthousiasme, agrémentant les visites de dégustations de sel et d'épices. Sur place, une boutique propose des produits locaux à ramener en souvenir. Un incontournable pour petits et grands, accessible en voiture avec parking à proximité.",
-  "category": "culture",
-  "subcategory": "Musées & Culture",
-  "pricing": {
-   "adult": 0,
-   "child": 0,
-   "is_free": false
-  },
-  "duration": 90,
-  "distance": {
-   "km": 107.3,
-   "min": {
-    "voiture": 143
-   }
-  },
-  "affluence": {
-   "label": "Normal",
-   "color": "green"
-  },
-  "instant": null,
-  "quickSpecs": [
-   {
-    "label": "Écomusée",
-    "icon": "",
-    "cls": ""
-   },
-   {
-    "label": "Sel",
-    "icon": "",
-    "cls": ""
-   },
-   {
-    "label": "Salines",
-    "icon": "",
-    "cls": ""
-   },
-   {
-    "label": "Visite guidée",
-    "icon": "",
-    "cls": ""
-   }
-  ],
-  "reviewsCount": 25,
-  "googleUrl": "https://maps.google.com/?cid=4782889005931337191",
-  "reviewsSummary": null,
-  "parking": {
-   "nom": "Parking à proximité",
-   "lat": 45.861646799999995,
-   "lng": -1.2302438,
-   "autres": [
-    {
-     "nom": "Rechercher un parking proche",
-     "dist": "",
-     "lat": 45.861646799999995,
-     "lng": -1.2302438,
-     "gmaps_search": true
-    }
-   ]
-  },
-  "location": {
-   "lat": 45.861646799999995,
-   "lng": -1.2302438
-  },
-  "conseil": {
-   "positif": "En famille, optez pour la sortie en barque pour une expérience inoubliable sur les marais. En couple, la sortie vélo guidée avec dégustation offre un moment de partage unique et savoureux.",
-   "attention": null,
-   "verdict": "Bonne visite !"
-  },
-  "beach": null,
-  "specific": {
-   "social": null
-  },
-  "openingHours": null,
   "veto": null
  },
  {

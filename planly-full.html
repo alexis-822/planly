@@ -1086,6 +1086,46 @@ body{
 .bs-identity-cat{font-size:var(--t6);color:rgba(255,255,255,.6);font-weight:400;line-height:var(--lh);}
 
 /* Body scrollable */
+/* LA FICHE D'UNE VILLE. Une ville n'est pas un lieu où l'on entre : c'est un
+   point d'entrée vers ce qu'il y a dedans. On arrive pour deux heures, on veut
+   savoir QUOI VOIR et cocher, sans lire dix fiches. */
+.vil{padding:16px 16px 4px;}
+.vil-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;}
+.vil-h b{font-family:'Fraunces',Georgia,serif;font-size:var(--t2);font-weight:400;color:var(--tx);}
+.vil-h i{font-style:normal;font-size:var(--t6);color:var(--brand-d);font-weight:600;}
+.vil-s{font-size:var(--t6);color:var(--txm);margin-bottom:13px;line-height:1.45;}
+.vil-g{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.vil-t{position:relative;aspect-ratio:3/4;border-radius:15px;overflow:hidden;cursor:pointer;
+  background:var(--bg-d);-webkit-tap-highlight-color:transparent;
+  box-shadow:0 1px 6px rgba(26,26,24,.10);}
+.vil-t img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.vil-t::after{content:'';position:absolute;inset:38% 0 0 0;
+  background:linear-gradient(transparent,rgba(0,0,0,.2) 34%,rgba(0,0,0,.8));}
+.vil-t .d{position:absolute;left:0;right:0;bottom:0;padding:10px;z-index:2;color:#fff;}
+.vil-t .d b{display:block;font-size:var(--t5);font-weight:600;line-height:1.2;
+  text-shadow:0 1px 3px rgba(0,0,0,.5);}
+.vil-t .f{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;}
+.vil-t .f span{font-size:9.5px;font-weight:600;line-height:1.4;border-radius:999px;padding:2px 7px;
+  background:rgba(255,255,255,.22);border:.5px solid rgba(255,255,255,.3);}
+.vil-t .f .ko{background:rgba(180,72,60,.7);}
+.vil-t .c{display:block;font-size:9.5px;margin-top:5px;color:rgba(255,255,255,.82);
+  line-height:1.35;text-shadow:0 1px 3px rgba(0,0,0,.5);}
+.vil-t .k{position:absolute;top:8px;right:8px;z-index:3;width:30px;height:30px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.75);background:rgba(0,0,0,.3);
+  display:flex;align-items:center;justify-content:center;color:transparent;}
+.vil-t.on .k{background:var(--brand);border-color:var(--brand);color:#fff;}
+.vil-t.on{outline:2.5px solid var(--brand);outline-offset:-2.5px;}
+.vil-c{grid-column:1 / -1;background:var(--wh);border:1.5px solid var(--brand);border-radius:14px;
+  padding:13px 14px;font-size:var(--t5);color:var(--txm);line-height:1.55;}
+.vil-c b{color:var(--tx);}
+.vil-c .t{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);color:var(--tx);display:block;margin-bottom:2px;}
+.vil-c .x{float:right;font-size:var(--t6);color:var(--brand-d);font-weight:600;}
+.vil-b{margin-top:12px;padding:10px 12px;border-radius:11px;font-size:var(--t6);line-height:1.45;
+  background:var(--bg-d);color:var(--txm);}
+.vil-b.ok{background:var(--ok-soft);color:var(--ok);font-weight:500;}
+.vil-b.ko{background:var(--bad-soft,#FAEAE7);color:var(--bad);font-weight:500;}
+.vil-n{font-size:10px;color:var(--txl);margin-top:9px;line-height:1.45;
+  padding:8px 10px;background:var(--bg-d);border-radius:9px;}
 .bs-poi-body{overflow-y:auto;flex:1;scrollbar-width:none;}
 .bs-poi-body::-webkit-scrollbar{display:none;}
 
@@ -4049,6 +4089,122 @@ function renderPoiBody(p,mode){
     var body=document.querySelector('.bs-poi-body');
     if(body)body.innerHTML='<div style="padding:20px;color:red;font-size:12px">Erreur: '+e.message+'<br>'+e.stack+'</div>';
     console.error('renderPoiBody error:',e);
+  }
+  try{_villeBlock(p);}catch(e){console.error('ville:',e);}
+}
+/* ══════════════════════════════════════════════════════════════════════
+   LA FICHE D UNE VILLE
+   Une ville n'est pas un lieu où l'on entre : c'est un point d'entrée vers
+   ce qu'il y a dedans. On arrive pour deux heures, on veut savoir QUOI VOIR
+   et cocher, sans lire dix fiches.
+
+   Les dix lieux sont RÉELS, relevés à la main sur le site de l'office de
+   tourisme du Pays de Saint-Gilles — sans une requête DataForSEO. Mais ils
+   ne sont PAS dans la base : ni note, ni avis, ni photo. Les images sont
+   celles d'AUTRES lieux de Vendée, choisies par type, et c'est écrit à
+   l'écran. Quatre des dix n'ont aucune durée publiée : la pastille le dit
+   plutôt que de la deviner.
+
+   LES DIX LIEUX NE SONT PAS ENCORE COLLECTES — voir la note affichee en bas du bloc.
+   ══════════════════════════════════════════════════════════════════════ */
+var VILLES={
+  'Saint-Gilles-Croix-de-Vie':{
+    budget:120,
+    lieux:[
+      {t:'Le port de pêche',ty:'Port',d:25,px:'Gratuit',cle:'Une cinquantaine de bateaux',
+       img:'planly_scraper/images/port_de_la_chaume/photo_1.jpg',
+       plus:'Spécialisé dans le poisson bleu — sardines, maquereaux, chinchards. <b>4 000 tonnes par an.</b> Le retour de pêche et la criée se regardent depuis le quai.'},
+      {t:'Église Sainte-Croix',ty:'Église',d:20,px:'Gratuit',cle:'1894 · roman-byzantin',
+       img:'planly_scraper/images/eglise_saint_nicolas_de_brem/photo_1.jpg',
+       plus:'Un marché se tient sur son parvis <b>le mercredi et le samedi matin</b> — de quoi enchaîner les deux.'},
+      {t:'L’Atelier de la Sardine',ty:'Musée',d:0,px:'Entrée libre',cle:'Musée et boutique',
+       img:'planly_scraper/images/musee_de_l_abbaye_sainte_croix/photo_1.jpg',
+       plus:'L’histoire de la pêche à la sardine en scénographie moderne. <b>Aucune durée publiée</b> : impossible de le placer dans un programme minuté.'},
+      {t:'Le Grand Phare',ty:'Phare',d:5,px:'Gratuit',cle:'1875 · 17 mètres',
+       img:'planly_scraper/images/phare_de_la_petite_jetee/photo_1.jpg',
+       plus:'Cinq minutes suffisent. C’est typiquement ce qu’on ajoute entre deux visites plus longues.'},
+      {t:'La Tour Joséphine',ty:'Monument',d:10,px:'Gratuit',cle:'1851',
+       img:'planly_scraper/images/tour_d_arundel/photo_1.jpg',
+       plus:'C’est de là que partent <b>les embarcadères pour l’Île d’Yeu</b>. Utile à savoir si la traversée est au programme d’un autre jour.'},
+      {t:'Le remblai de la Grande Plage',ty:'Promenade',d:0,px:'Gratuit',cle:'3,6 km · aménagé en 1925',
+       img:'planly_scraper/images/grande_plage_du_remblai/photo_1.jpg',
+       plus:'Vue panoramique sur toute la baie. <b>Aucune durée publiée</b> — et pour cause : on y passe dix minutes ou deux heures.'},
+      {t:'Le quartier de la Petite Île',ty:'Quartier historique',d:90,px:'Gratuit',cle:'Dit « le Maroc »',
+       img:'planly_scraper/images/l_ile_penotte/photo_1.jpg',
+       plus:'Rues étroites et maisons en <b>pierre de lest</b> — celle que les bateaux rapportaient à vide. À lui seul il occupe 1 h 30 : il ne tient pas dans deux heures avec le reste.'},
+      {t:'Église Saint-Gilles',ty:'Église',d:20,px:'Gratuit',cle:'IXᵉ siècle · restaurée en 1971',
+       img:'planly_scraper/images/prieure_saint_nicolas/photo_1.jpg',
+       plus:'Son marché se tient <b>le mardi, le jeudi et le dimanche</b> — les jours complémentaires de celui de Sainte-Croix.'},
+      {t:'La Maison du Pêcheur',ty:'Musée',d:0,px:'Non communiqué',cle:'Réplique d’une maison de 1920',
+       img:'planly_scraper/images/vouvant/photo_1.jpg',
+       plus:'<b>Ni durée ni tarif publiés.</b> La ligne reste honnête, mais la fiche est maigre tant qu’on n’a pas collecté.'},
+      {t:'Plage de Boisvinet',ty:'Plage',d:0,px:'Gratuit',cle:'Familiale · sentier côtier classé',
+       img:'planly_scraper/images/plage_de_sauveterre/photo_1.jpg',
+       plus:'Le sentier côtier qui la borde est <b>classé depuis 1926</b> et court sur 3 km.'}
+    ]
+  }
+};
+var _vilCoche={},_vilOuvert=null;
+function _villeBlock(p){
+  var v=p&&VILLES[p.name];
+  var body=document.querySelector('.bs-poi-body');
+  if(!body)return;
+  var vieux=body.querySelector('.vil');
+  if(vieux)vieux.parentNode.removeChild(vieux);
+  if(!v)return;
+  var z=document.createElement('div');
+  z.className='vil';
+  body.insertBefore(z,body.firstChild);
+  _vilRender(z,v);
+}
+function _vilRender(z,v){
+  var h='',n=0,tot=0,flous=0;
+  v.lieux.forEach(function(a,i){
+    if(_vilCoche[i]){n++;if(a.d)tot+=a.d;else flous++;}
+  });
+  v.lieux.forEach(function(a,i){
+    var dur=a.d?'<span>'+a.d+' min</span>':'<span class="ko">durée inconnue</span>';
+    h+='<div class="vil-t'+(_vilCoche[i]?' on':'')+'" data-v="'+i+'">'
+      +'<img src="'+a.img+'" alt="" loading="lazy">'
+      +'<span class="k" data-vk="'+i+'"><svg class="ic sm"><use href="#i-check"/></svg></span>'
+      +'<span class="d"><b>'+_escHtml(a.t)+'</b><span class="f">'+dur
+        +'<span>'+_escHtml(a.px)+'</span></span><i class="c">'+_escHtml(a.cle)+'</i></span></div>';
+    var fin=(i%2===1)||(i===v.lieux.length-1);
+    if(_vilOuvert!==null&&fin&&(_vilOuvert===i||_vilOuvert===i-1)){
+      var o=v.lieux[_vilOuvert];
+      h+='<div class="vil-c"><span class="x" data-vx="1">Fermer ✕</span>'
+        +'<span class="t">'+_escHtml(o.t)+'</span>'
+        +'<span style="color:var(--txl)">'+_escHtml(o.ty)+'</span><br>'+o.plus+'</div>';
+    }
+  });
+  var bil,cls='';
+  if(!n)bil='Deux heures sur place. Touchez une photo pour en savoir plus, la pastille pour cocher.';
+  else{
+    var reste=v.budget-tot;
+    bil=tot+' min de visite';
+    if(flous)bil+=' + '+flous+' lieu'+(flous>1?'x':'')+' sans durée connue';
+    bil+=reste>=0?' — il vous reste '+reste+' min sur vos 2 h.':' — soit '+(-reste)+' min de trop pour 2 h.';
+    cls=reste>=0?' ok':' ko';
+  }
+  z.innerHTML='<div class="vil-h"><b>À voir sur place</b><i>'+n+' coché'+(n>1?'s':'')+'</i></div>'
+    +'<div class="vil-s">On reste dans la ville : touchez une photo, le détail s’ouvre ici même.</div>'
+    +'<div class="vil-g">'+h+'</div>'
+    +'<div class="vil-b'+cls+'">'+bil+'</div>'
+    +'<div class="vil-n"><b>Version de test.</b> Ces dix lieux sont réels (office de tourisme du Pays '
+    +'de Saint-Gilles) mais ne sont pas dans la base. Les photos montrent <b>d’autres lieux de '
+    +'Vendée</b>, choisies par type.</div>';
+  if(!z._pose){
+    z._pose=true;
+    z.addEventListener('click',function(e){
+      if(e.target.closest('[data-vx]')){_vilOuvert=null;_vilRender(z,v);return;}
+      var k=e.target.closest('[data-vk]');
+      if(k){var j=k.getAttribute('data-vk');_vilCoche[j]=!_vilCoche[j];_vilRender(z,v);return;}
+      var t=e.target.closest('.vil-t');
+      if(!t)return;
+      var i=+t.getAttribute('data-v');
+      _vilOuvert=(_vilOuvert===i)?null:i;
+      _vilRender(z,v);
+    });
   }
 }
 function _diffLabel(d){
