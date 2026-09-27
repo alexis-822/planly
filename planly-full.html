@@ -176,6 +176,65 @@ body{
 .sec-label{font-size:var(--t6);font-weight:500;color:var(--txl);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;margin-top:22px;line-height:var(--lh);}
 .sec-label:first-of-type{margin-top:0;}
 
+/* ══ TUNNEL — écrans 3 à 7 ══
+   Maquette validée : https://claude.ai/code/artifact/55bfd8c0-5d65-4b73-8c8f-dd1fde161235
+   Ces écrans COLLECTENT seulement. Rien n'est branché sur le classement pour
+   l'instant : l'algorithme viendra après, et l'explorer se comporte comme avant. */
+
+/* Le pivot : trois façons de partir, en grandes cartes qu'on lit d'un coup. */
+.ob-choice{background:var(--wh);border:1.5px solid var(--br);border-radius:16px;padding:15px 16px;
+  cursor:pointer;transition:all .2s;margin-bottom:10px;display:flex;gap:13px;align-items:flex-start;}
+.ob-choice.selected{border-color:var(--brand);background:var(--brand-soft,rgba(66,140,227,.07));}
+.ob-choice .ic{flex:0 0 auto;margin-top:2px;color:var(--txl);}
+.ob-choice.selected .ic{color:var(--brand);}
+.ob-choice b{display:block;font-size:var(--t4);font-weight:600;color:var(--tx);line-height:var(--lh);}
+.ob-choice i{display:block;font-style:normal;font-size:var(--t5);color:var(--txm);margin-top:3px;line-height:1.5;}
+
+/* Les 7 pills en rangées : les sous-pills ont la place de se lire. */
+.ob-pill{display:flex;align-items:center;gap:12px;padding:9px;border-radius:15px;background:var(--wh);
+  border:1.5px solid var(--br);margin-bottom:9px;cursor:pointer;transition:all .18s;}
+.ob-pill img,.ob-pill .ph{width:56px;height:56px;border-radius:11px;object-fit:cover;flex:0 0 auto;display:block;
+  background:var(--bg-d);}
+.ob-pill .b{flex:1;min-width:0;}
+.ob-pill .b b{display:block;font-size:var(--t4);font-weight:600;color:var(--tx);line-height:1.25;}
+.ob-pill .b i{display:block;font-style:normal;font-size:var(--t6);color:var(--txl);margin-top:3px;line-height:1.45;}
+.ob-pill .st{flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--br);
+  display:flex;align-items:center;justify-content:center;color:var(--txl);font-size:var(--t4);}
+.ob-pill.on{border-color:var(--brand);}
+.ob-pill.on .st{background:var(--brand);border-color:var(--brand);color:var(--wh);}
+.ob-pill.must{border-color:var(--deep);border-width:2px;}
+.ob-pill.must .st{background:var(--deep);border-color:var(--deep);color:var(--on-deep);}
+.ob-pill.vide{opacity:.45;cursor:default;}
+.ob-sug{display:inline-block;margin-left:6px;font-size:var(--t6);font-weight:600;color:var(--warn);
+  background:var(--warn-soft);border-radius:999px;padding:2px 8px;vertical-align:middle;line-height:1.5;}
+
+/* Curseurs : l'heure de sortie et le rayon se règlent, ils ne se cochent pas. */
+.ob-rng{margin-top:6px;}
+.ob-rng input[type=range]{width:100%;margin:0;accent-color:var(--brand);height:28px;}
+.ob-rng-scale{display:flex;justify-content:space-between;margin-top:2px;font-size:var(--t6);color:var(--txl);}
+.ob-rng-val{margin-top:12px;font-family:'Fraunces',Georgia,serif;font-size:var(--t2);font-weight:600;color:var(--tx);
+  line-height:1.2;}
+.ob-rng-val s{text-decoration:none;display:block;margin-top:4px;font-family:'DM Sans',sans-serif;
+  font-size:var(--t5);font-weight:400;color:var(--txm);line-height:var(--lh);}
+
+/* Ce qui lève l'angoisse de choisir : rien ne disparaît. */
+.ob-rassure{display:flex;gap:10px;align-items:flex-start;margin-top:16px;padding:12px 13px;border-radius:12px;
+  background:var(--ok-soft);color:var(--ok);font-size:var(--t5);line-height:1.55;}
+.ob-rassure b{display:block;font-weight:600;margin-bottom:2px;}
+.ob-rassure .ic{flex:0 0 auto;margin-top:1px;}
+.ob-info{display:flex;gap:10px;align-items:flex-start;margin-top:14px;padding:12px 13px;border-radius:12px;
+  background:var(--bg-d);color:var(--txm);font-size:var(--t5);line-height:1.55;}
+.ob-info b{display:block;font-weight:600;color:var(--tx);margin-bottom:2px;}
+.ob-info .ic{flex:0 0 auto;margin-top:1px;color:var(--txl);}
+.ob-cnt{display:flex;align-items:center;gap:10px;margin-top:15px;padding:11px 14px;border-radius:12px;
+  background:var(--bg-d);font-size:var(--t5);color:var(--txm);line-height:var(--lh);}
+.ob-cnt b{font-family:'Fraunces',Georgia,serif;font-size:var(--t3);color:var(--tx);flex:0 0 auto;}
+
+/* Chaque étape se saute : on demande peu, mais on n'oblige à rien. */
+.cta-skip{display:block;width:100%;text-align:center;margin-top:10px;padding:8px;background:none;border:none;
+  font-family:'DM Sans',sans-serif;font-size:var(--t5);color:var(--txl);text-decoration:underline;
+  text-underline-offset:3px;cursor:pointer;line-height:var(--lh);}
+
 /* SEARCH */
 .search-bar{display:flex;align-items:center;gap:10px;background:var(--wh);border:1.5px solid var(--br);border-radius:14px;padding:14px 16px;transition:border-color .2s;margin-bottom:4px;}
 .search-bar:focus-within{border-color:var(--brand);}
@@ -1936,8 +1995,142 @@ button.bch-act{border:0;font-family:inherit;font-size:inherit;color:inherit;
       </div>
     </div>
     <div class="bottom-cta">
-      <button class="cta-btn" onclick="goStep(5)">Découvrir mes pépites →</button>
-      <button class="cta-back" onclick="goStep(1)">← Retour</button>
+      <button class="cta-btn" onclick="obNext()">Continuer →</button>
+      <button class="cta-back" onclick="obBack()">← Retour</button>
+    </div>
+  </div>
+
+  <!-- S3 LE PIVOT — décide de la suite : seul « organisé » verra l'écran 6 -->
+  <div class="screen" id="s3">
+    <div class="scroll-content">
+      <div class="screen-title">Des vacances <em><span class="hl">réussies</span></em>, pour vous, c'est quand…</div>
+      <div class="screen-sub">Soyez honnête, personne ne vous regarde. Cette réponse décide de ce qu'on vous demandera ensuite.</div>
+
+      <div class="ob-choice selected" id="org-organise" onclick="obOrganisation('organise')">
+        <svg class="ic lg"><use href="#i-cal"/></svg>
+        <div><b>Tout est organisé</b><i>Ce que je fais, les horaires à peu près. J'aime savoir où je vais.</i></div>
+      </div>
+      <div class="ob-choice" id="org-pioche" onclick="obOrganisation('pioche')">
+        <svg class="ic lg"><use href="#i-star"/></svg>
+        <div><b>J'ai des idées sous le coude</b><i>Une présélection, et je pioche selon l'humeur et la météo.</i></div>
+      </div>
+      <div class="ob-choice" id="org-libre" onclick="obOrganisation('libre')">
+        <svg class="ic lg"><use href="#i-walk"/></svg>
+        <div><b>Je ne décide rien à l'avance</b><i>On verra sur place. C'est ça, les vacances.</i></div>
+      </div>
+
+      <div class="ob-info" id="org-suite"><svg class="ic"><use href="#i-info"/></svg><div></div></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="cta-btn" onclick="obNext()">Continuer →</button>
+      <button class="cta-back" onclick="obBack()">← Retour</button>
+    </div>
+  </div>
+
+  <!-- S4 LES ENVIES — deux niveaux : ce qui plaît, et les 3 indispensables -->
+  <div class="screen" id="s4">
+    <div class="scroll-content">
+      <div class="screen-title">Qu'est-ce qui vous <em><span class="hl">tente</span></em> ?</div>
+      <div class="screen-sub" style="margin-bottom:16px">
+        <b>Cochez</b> ce qui vous plaît, sans compter.<br>
+        <b>★ Marquez</b> les 3 que vous voulez absolument faire.
+      </div>
+
+      <div class="ob-info" id="env-sug" style="display:none"><svg class="ic"><use href="#i-baby"/></svg><div></div></div>
+
+      <div id="env-liste"></div>
+
+      <div class="ob-cnt"><b id="env-cnt">0/3</b><span id="env-cnt-txt">Touchez une pill pour la cocher, touchez-la encore pour en faire un indispensable.</span></div>
+
+      <div class="ob-rassure"><svg class="ic"><use href="#i-check"/></svg><div><b>Rien n'est écarté</b>Ce que vous ne cochez pas passe simplement après — jamais à la trappe. Une envie du moment se rattrape toujours par la recherche ou la carte.</div></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="cta-btn" onclick="obNext()">Continuer →</button>
+      <button class="cta-skip" onclick="obSkip()">Passer — on vous montrera de tout</button>
+      <button class="cta-back" onclick="obBack()">← Retour</button>
+    </div>
+  </div>
+
+  <!-- S6 L'HEURE DE SORTIE — profil « organisé » uniquement.
+       Elle ne sert pas à vérifier les horaires d'un lieu : elle donne la
+       TAILLE des journées, donc le nombre d'activités du programme. -->
+  <div class="screen" id="s6">
+    <div class="scroll-content">
+      <div class="screen-title">Le matin, vous <em><span class="hl">sortez</span></em> vers…</div>
+      <div class="screen-sub">Pas l'heure du réveil : celle où vous passez la porte. C'est elle qui donne la taille de vos journées.</div>
+
+      <div class="ob-rng">
+        <input type="range" min="7" max="14" step="0.5" value="10.5" id="rng-sortie" oninput="obSortie(this.value)">
+        <div class="ob-rng-scale"><span>7 h</span><span>9 h</span><span>11 h</span><span>13 h</span></div>
+        <div class="ob-rng-val" id="sortie-val">10 h 30<s>≈ 2 sorties par jour</s></div>
+      </div>
+
+      <div class="sec-label" style="margin-top:26px">Et dans une journée, vous tenez…</div>
+      <div class="chips-row">
+        <div class="chip" onclick="obSorties(this,1)">1 sortie</div>
+        <div class="chip sel" onclick="obSorties(this,2)">2 sorties</div>
+        <div class="chip" onclick="obSorties(this,3)">3 et plus</div>
+      </div>
+
+      <div class="ob-info"><svg class="ic"><use href="#i-clock"/></svg><div><b>Pourquoi on le demande</b>À 8 h on tient 4 sorties, à 10 h 30 on en tient 2. Sur une semaine, ça fait 14 activités ou 28 — ce n'est pas le même programme.</div></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="cta-btn" onclick="obNext()">Continuer →</button>
+      <button class="cta-skip" onclick="obSkip()">Passer — je verrai au jour le jour</button>
+      <button class="cta-back" onclick="obBack()">← Retour</button>
+    </div>
+  </div>
+
+  <!-- S7 LE RAYON — une volonté, pas un tri de catalogue -->
+  <div class="screen" id="s7">
+    <div class="scroll-content">
+      <div class="screen-title">Vous iriez <em><span class="hl">jusqu'où</span></em> ?</div>
+      <div class="screen-sub">Une plage sublime à 50 km reste une plage à 50 km. Dites-nous ce que vous acceptez de faire comme route.</div>
+
+      <div class="ob-rng">
+        <input type="range" min="10" max="80" step="10" value="30" id="rng-rayon" oninput="obRayon(this.value)">
+        <div class="ob-rng-scale"><span>10</span><span>30</span><span>50</span><span>80 km</span></div>
+        <div class="ob-rng-val" id="rayon-val">30 km<s>Au-delà, on ne vous proposera rien — sauf une pépite exceptionnelle, en vous prévenant de la route</s></div>
+      </div>
+
+      <div class="ob-info"><svg class="ic"><use href="#i-car"/></svg><div><b>Adapté à votre déplacement</b><span id="rayon-mode">En voiture, 30 km font environ 35 minutes.</span></div></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="cta-btn" onclick="obNext()">Continuer →</button>
+      <button class="cta-skip" onclick="obSkip()">Passer — la distance ne me dérange pas</button>
+      <button class="cta-back" onclick="obBack()">← Retour</button>
+    </div>
+  </div>
+
+  <!-- S8 LES RESTRICTIONS — elles rétrogradent, elles ne suppriment jamais -->
+  <div class="screen" id="s8">
+    <div class="scroll-content">
+      <div class="screen-title">Un truc à <em><span class="hl">éviter</span></em> ?</div>
+      <div class="screen-sub">Autant le dire maintenant plutôt qu'une fois en haut du phare.</div>
+
+      <div class="ob-pill" id="veto-vertige" onclick="obVeto('vertige')">
+        <div class="b"><b>Le vertige</b><i>Falaises, phares, belvédères</i></div>
+        <span class="st"></span>
+      </div>
+      <div class="ob-pill" id="veto-foule" onclick="obVeto('foule')">
+        <div class="b"><b>La foule</b><i>Les lieux que tout le monde connaît</i></div>
+        <span class="st"></span>
+      </div>
+      <div class="ob-pill" id="veto-clos" onclick="obVeto('clos')">
+        <div class="b"><b>Les espaces clos</b><i>Grottes, souterrains, salles sans fenêtre</i></div>
+        <span class="st"></span>
+      </div>
+      <div class="ob-pill" id="veto-captivite" onclick="obVeto('captivite')">
+        <div class="b"><b>Les animaux en cage</b><i>Zoos, aquariums</i></div>
+        <span class="st"></span>
+      </div>
+
+      <div class="ob-rassure"><svg class="ic"><use href="#i-check"/></svg><div><b>Ces lieux descendent, ils ne disparaissent pas</b>Une déduction peut se tromper, et un lieu supprimé ne se rattrape jamais. Ils passent en fin de liste, rien de plus.</div></div>
+    </div>
+    <div class="bottom-cta">
+      <button class="cta-btn" onclick="obNext()">Voir mes pépites →</button>
+      <button class="cta-skip" onclick="obSkip()">Passer — rien à éviter</button>
+      <button class="cta-back" onclick="obBack()">← Retour</button>
     </div>
   </div>
 
@@ -2302,29 +2495,192 @@ var MONTHS_SHORT=['Jan.','Fév.','Mars','Avr.','Mai','Juin','Juil.','Août','Sep
 // carte sélectionnée — on ne savait pas qu'il fallait choisir, et rien ne
 // disait ce que l'app supposait. Solo est l'hypothèse la plus prudente : elle
 // ne compte ni conjoint ni enfants dans les prix.
-var state={group:'solo',children:[],calOpen:false,calYear:2026,calMonth:6,calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:''};
+var state={group:'solo',children:[],calOpen:false,calYear:2026,calMonth:6,calStart:null,calEnd:null,cats:{},mobilite:'voiture',destination:'',
+  // Tunnel, écrans 3 à 8. Ces valeurs sont COLLECTÉES et rangées dans le
+  // profil ; rien ne les lit encore côté classement.
+  organisation:'organise', envies:{}, sortie:10.5, sortiesJour:2, rayon:30, vetos:{}, dejaVenu:'une'};
 var ALL_CATS=['air','hist','mov','viv','fun','fest','jeux'];
 ALL_CATS.forEach(function(id){state.cats[id]=false;});
 var AGE_LABELS=['Bébé','Bébé','Bébé','Tout-petit','Maternelle','Maternelle','Maternelle','Primaire','Primaire','Primaire','Primaire','Primaire','Collège','Collège','Collège','Lycée','Lycée','Lycée'];
 
+// ══ TUNNEL — écrans 3 à 8 ══════════════════════════════════════════════
+// Maquette validée : artefact « Les fiches par typologie », groupe « Le tunnel ».
+// Ces écrans ne font que COLLECTER. Rien n'est branché sur le classement pour
+// l'instant : l'explorer et le tri se comportent exactement comme avant.
+var OB_PILLS=[
+  {id:'air',    nom:'Nature & Grand Air', sous:'Plages & Côte · Forêts & Nature · Points de vue · Balades',
+   img:'planly_scraper/images/grande_plage_du_remblai/photo_1.jpg'},
+  {id:'patri',  nom:'Patrimoine',         sous:'Villages & Sites · Châteaux & Monuments · Musées & Culture',
+   img:'planly_scraper/images/chateau_de_talmont/photo_1.jpg'},
+  {id:'vivre',  nom:'Art de vivre',       sous:'Restaurants · Marchés & Terroir · Dégustations',
+   img:'planly_scraper/images/la_cotriade/photo_1.jpg'},
+  {id:'parcs',  nom:'Parcs & Loisirs',    sous:'Jeux · Parcs animaliers · Aquariums · Parcs botaniques',
+   img:'planly_scraper/images/explora_parc/photo_1.jpg'},
+  {id:'sorties',nom:'Sorties & Détente',  sous:'Cinéma · Bars & Ambiance · Casino & Jeux · Piscines & Spa',
+   img:'planly_scraper/images/casino_les_sables_d_olonne/photo_1.jpg'},
+  // Ces deux-là n'ont aucun lieu en base : on les montre grisées plutôt que de
+  // laisser croire qu'on a quelque chose derrière.
+  {id:'sport',  nom:'Sport & Aventure',   sous:'Randonnée · Vélo · Nautisme · Autres sports', vide:true},
+  {id:'events', nom:'Événements',         sous:'Concerts & Spectacles · Fêtes & Foires · Marchés nocturnes', vide:true}
+];
+
+// Le parcours n'a pas une longueur fixe. Seul celui qui ORGANISE a besoin de
+// dire à quelle heure il sort : il veut un horaire. Celui qui pioche a besoin
+// de la DURÉE, au moment d'ajouter une activité — pas d'une heure de départ.
+function obParcours(){
+  var p=[1,2,3,4];
+  if(state.organisation==='organise')p.push(6);
+  p.push(7,8,5);
+  return p;
+}
+function obCourant(){var a=document.querySelector('.screen.active');return a?parseInt(a.id.slice(1),10):1;}
+function obNext(){var p=obParcours(),i=p.indexOf(obCourant());goStep(p[Math.min(i+1,p.length-1)]);}
+function obBack(){var p=obParcours(),i=p.indexOf(obCourant());goStep(p[Math.max(i-1,0)]);}
+function obSkip(){obNext();}
+
+function obOrganisation(v){
+  state.organisation=v;
+  ['organise','pioche','libre'].forEach(function(k){
+    var el=document.getElementById('org-'+k);
+    if(el)el.classList.toggle('selected',k===v);
+  });
+  obOrgSuite();
+}
+function obOrgSuite(){
+  var el=document.getElementById('org-suite');
+  if(!el)return;
+  var t={
+    organise:'On vous demandera à quelle heure vous sortez le matin : c\'est elle qui donne la taille de vos journées.',
+    pioche:'Pas d\'heure de départ à donner. Vous verrez la durée de chaque activité au moment de l\'ajouter à votre programme.',
+    libre:'Ni heure ni rythme demandés. Juste de quoi ordonner les lieux à votre goût.'
+  }[state.organisation||'organise'];
+  var d=el.querySelector('div');
+  if(d)d.innerHTML='<b>Ce que ça change</b>'+t;
+}
+
+// Parcs & Loisirs est la SEULE famille dont les lieux portent des âges
+// (13 sur 15 ont des activités datées) : c'est le seul endroit où suggérer
+// quelque chose à une famille repose sur des données et non sur une intuition.
+function obSuggereParcs(){return state.group==='famille'&&state.children&&state.children.length>0;}
+function obSugBanner(){
+  var el=document.getElementById('env-sug');
+  if(!el)return;
+  if(!obSuggereParcs()){el.style.display='none';return;}
+  el.style.display='';
+  var a=state.children.slice().sort(function(x,y){return x-y;});
+  var qui=a.length>1?'des enfants de '+a.join(' et ')+' ans':'un enfant de '+a[0]+' ans';
+  var d=el.querySelector('div');
+  if(d)d.innerHTML='<b>Avec '+qui+', on suggère Parcs &amp; Loisirs</b>'
+    +'C\'est la seule famille dont les lieux portent des âges : on peut vérifier que les activités sont ouvertes.';
+  if(state.envies.parcs===undefined)state.envies.parcs=1;
+}
+function obNbMust(){var n=0;for(var k in state.envies)if(state.envies[k]===2)n++;return n;}
+function obPillsRender(){
+  var z=document.getElementById('env-liste');
+  if(!z)return;
+  obSugBanner();
+  z.innerHTML=OB_PILLS.map(function(p){
+    var n=state.envies[p.id]||0;
+    var cls='ob-pill'+(p.vide?' vide':n===2?' must':n===1?' on':'');
+    var st=p.vide?'':(n===2?'★':n===1?'<svg class="ic sm"><use href="#i-check"/></svg>':'');
+    var img=p.vide?'<div class="ph"></div>':'<img src="'+p.img+'" alt="" loading="lazy">';
+    var sug=(p.id==='parcs'&&obSuggereParcs())?'<span class="ob-sug">suggéré</span>':'';
+    return '<div class="'+cls+'"'+(p.vide?'':' onclick="obPill(\''+p.id+'\')"')+'>'
+      +img+'<div class="b"><b>'+p.nom+sug+'</b><i>'+p.sous+(p.vide?' — bientôt':'')+'</i></div>'
+      +'<span class="st">'+st+'</span></div>';
+  }).join('');
+  obEnvCnt();
+}
+// Une touche coche, une seconde en fait un indispensable, une troisième
+// désélectionne. Aucune limite sur les cases : être ouvert à tout est
+// légitime. La contrainte porte sur les indispensables — on ne peut pas en
+// avoir huit, et c'est là que renoncer produit de l'information.
+function obPill(id){
+  var n=(state.envies[id]||0)+1;
+  if(n===2&&obNbMust()>=3)n=0;
+  if(n>2)n=0;
+  state.envies[id]=n;
+  obPillsRender();
+}
+function obEnvCnt(){
+  var c=document.getElementById('env-cnt'),t=document.getElementById('env-cnt-txt');
+  if(!c||!t)return;
+  var m=obNbMust();
+  c.textContent=m+'/3';
+  t.textContent=m===0?'Touchez une pill pour la cocher, touchez-la encore pour en faire un indispensable.'
+    :m<3?'Il vous en reste '+(3-m)+(m===2?', si vous en voyez un troisième.':', si vous en voyez d\'autres.')
+    :'Vos trois indispensables sont posés.';
+}
+
+// L'heure de sortie donne la TAILLE de la journée : durée médiane de visite
+// 90 min, plus 40 min de trajet aller-retour. À 8 h on tient 4 sorties, à
+// 10 h 30 on en tient 2 — sur une semaine, 28 activités ou 14.
+function obSortie(v){
+  var h=parseFloat(v);state.sortie=h;
+  var el=document.getElementById('sortie-val');
+  if(!el)return;
+  var hh=Math.floor(h),mm=Math.round((h-hh)*60);
+  var n=Math.floor(Math.max(0,12.5-h)*60/130)+Math.floor(5*60/130);
+  el.innerHTML=hh+' h'+(mm?' '+mm:'')+'<s>≈ '+n+' sortie'+(n>1?'s':'')+' par jour</s>';
+}
+function obSorties(el,n){
+  state.sortiesJour=n;
+  var p=el.parentNode;
+  [].forEach.call(p.children,function(c){c.classList.toggle('sel',c===el);});
+}
+// Ce curseur ne trie pas un catalogue : il dit jusqu'où on accepte de bouger.
+function obRayon(v){
+  state.rayon=parseInt(v,10);
+  var el=document.getElementById('rayon-val');
+  if(el)el.innerHTML=state.rayon+' km<s>Au-delà, on ne vous proposera rien — sauf une pépite exceptionnelle, en vous prévenant de la route</s>';
+  obRayonMode();
+}
+function obRayonMode(){
+  var el=document.getElementById('rayon-mode');
+  if(!el)return;
+  var km=state.rayon||30,m=state.mobilite||'voiture';
+  var vit={voiture:52,velo:15,pied:4.5}[m]||52;
+  var lbl={voiture:'En voiture',velo:'À vélo',pied:'À pied ou en transports'}[m]||'En voiture';
+  el.textContent=lbl+', '+km+' km font environ '+Math.round(km/vit*60)+' minutes.';
+}
+// Les restrictions rétrogradent, elles ne suppriment jamais : une déduction
+// peut se tromper, et un lieu retiré ne se rattrape pas.
+function obVeto(k){
+  state.vetos[k]=!state.vetos[k];
+  var el=document.getElementById('veto-'+k);
+  if(!el)return;
+  el.classList.toggle('on',!!state.vetos[k]);
+  var st=el.querySelector('.st');
+  if(st)st.innerHTML=state.vetos[k]?'<svg class="ic sm"><use href="#i-check"/></svg>':'';
+}
+
 function goStep(n){
   document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');});
-  document.getElementById('s'+n).classList.add('active');
-  // Mettre à jour progress
-  var labels=['','Étape 1 sur 2','Étape 2 sur 2','','',''];
-  document.getElementById('step-label').textContent=labels[n]||'';
-  var progressBar=document.getElementById('progress-bar');
-  var stepLabel=document.getElementById('step-label');
-  if(n===5){progressBar.style.display='none';stepLabel.style.display='none';}
-  else{progressBar.style.display='';stepLabel.style.display='';}
-  for(var i=1;i<=2;i++){
-    var seg=document.getElementById('ps'+i);
-    seg.className='prog-seg'+(i<n?' done':i===n?' active':'');
+  var ecran=document.getElementById('s'+n);
+  if(!ecran)return;
+  ecran.classList.add('active');
+  // La barre se redessine à chaque étape : le parcours n'a plus une longueur
+  // fixe, celui qui pioche saute l'heure de sortie.
+  var p=obParcours(),i=p.indexOf(n),total=p.length-1;   // le loader ne compte pas
+  var bar=document.getElementById('progress-bar'),lbl=document.getElementById('step-label');
+  if(n===5){bar.style.display='none';lbl.style.display='none';}
+  else{
+    bar.style.display='';lbl.style.display='';
+    lbl.textContent='Étape '+(i+1)+' sur '+total;
+    bar.innerHTML='';
+    for(var k=0;k<total;k++){
+      var seg=document.createElement('div');
+      seg.className='prog-seg'+(k<i?' done':k===i?' active':'');
+      bar.appendChild(seg);
+    }
   }
+  if(n===3)obOrgSuite();
+  if(n===4)obPillsRender();
+  if(n===7)obRayonMode();
   if(n===5) buildRecap();
   updateCounters();
   window.scrollTo(0,0);
-  document.getElementById('s'+n).scrollTo(0,0);
+  ecran.scrollTo(0,0);
 }
 
 function toggleRow(key){
@@ -2792,6 +3148,20 @@ function buildUserProfile(){
   USER_PROFILE.animal=document.getElementById('tog-animal')&&document.getElementById('tog-animal').classList.contains('on');
   USER_PROFILE.pmr=document.getElementById('tog-pmr')&&document.getElementById('tog-pmr').classList.contains('on');
   USER_PROFILE.exclusions=exclActive?exclActive.slice():[];
+  // ── Tunnel, écrans 3 à 8 ──
+  // Collecté et rangé ici, RIEN ne le lit encore : l'explorer et le classement
+  // se comportent exactement comme avant. L'algorithme viendra ensuite, et il
+  // trouvera ces champs déjà remplis.
+  USER_PROFILE.organisation=state.organisation||'organise';
+  USER_PROFILE.pills=state.envies||{};
+  USER_PROFILE.indispensables=Object.keys(state.envies||{}).filter(function(k){return state.envies[k]===2;});
+  USER_PROFILE.sortie=state.sortie;
+  USER_PROFILE.sortiesJour=state.sortiesJour;
+  USER_PROFILE.rayonKm=state.rayon;
+  USER_PROFILE.vetos=state.vetos||{};
+  // Les dates étaient demandées puis jetées : elles n'arrivaient jamais au
+  // profil. Elles commandent la saison, les marées et les ouvertures.
+  USER_PROFILE.dates={debut:state.calStart||null,fin:state.calEnd||null};
 }
 
 // ── UPDATE CTX PILL dans l'Explorer ──
@@ -6557,6 +6927,10 @@ renderList();
 // La carte Solo doit se voir sélectionnée, pas seulement l'être dans l'état :
 // poser state.group sans le dire à l'écran aurait été pire que rien.
 (function(){if(typeof selectGroup==='function')selectGroup('solo');})();
+// La barre de progression était figée à deux segments dans le HTML. Le
+// parcours en compte sept — six si l'on pioche — et seul goStep le sait :
+// on le laisse dessiner le premier écran comme il dessinera les suivants.
+(function(){if(typeof goStep==='function')goStep(1);})();
 
 // PWA
 if('serviceWorker' in navigator){
